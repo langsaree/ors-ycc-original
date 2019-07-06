@@ -63,6 +63,7 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
 .o {
 	color: #000;
   font-size: 24px;
+  font-size: 12px;
 }
 
 .BorderBorder 
@@ -76,9 +77,7 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
 	text-align: left;
 }
 
-.o {
-	font-size: 12px;
-}
+
 
     </style>
 
@@ -107,10 +106,6 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
 
           <div class="Menu">
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
               <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">
                 <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a
                 href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php"
@@ -135,17 +130,17 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
 
                 <span class="BlockHeader"><span>Online Register</span></span>
                 <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-
+                <?php echo $message; ?>		
                 </table>
 
-	<?php echo $message; ?>		
+	
 	<?php 	
 ######################################   To show login form if user do not login ###################################
 	
 	echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
-                <td>sadasd</td>
+                <td></td>
               </tr>
               <tr>
                 <td><div align="left"><span class="style9">ล็อกอิน::</span></div></td>
@@ -159,18 +154,18 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
               </tr>
             </table>
            
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+    <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td><span class="style9">รหัสผ่าน::</span></td>
               </tr>
             </table>
             <p>&nbsp;</p>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+    <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td><input type="password" name="password" /></td>
               </tr>
             </table>
-            <table width="161" border="0" align="left" cellpadding="0" cellspacing="0">
+    <table width="161" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
