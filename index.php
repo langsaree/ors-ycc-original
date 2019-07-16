@@ -1,7 +1,7 @@
 <?php
-session_start();
+Session_start();
 include('db.php');
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if(!isset($_Session["username"])) // To check login user if already login then hide login form
 	{
     
      $username = "";
@@ -18,15 +18,15 @@ if(!session_is_registered(username)) // To check login user if already login the
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);  //เพิ่ม i ข้างหลัง mysqli
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+					  $_SESSION['logined'] = true;
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
+					  //session_register("username");
+                      //session_register("password");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  header("location:std_profile.php");
@@ -63,7 +63,7 @@ if(!session_is_registered(username)) // To check login user if already login the
 .o {
 	color: #000;
 }
-oo {
+.o {
 	font-size: 24px;
 }
 .BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
@@ -71,7 +71,7 @@ oo {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: left;
 }
-oo {
+.o {
 	font-size: 12px;
 }
 -->
@@ -110,7 +110,7 @@ s
             </table>
 
 	<?php echo $message; ?>		
-	<? 	
+	<?php
 ######################################   To show login form if user do not login ###################################
 	
 	echo	'<form action="" method="post">
@@ -228,7 +228,7 @@ s
 
 
 ';
-		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
+		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
@@ -270,7 +270,7 @@ s
   </tr>
 </table>
 
-<?
+<?php
 $sql_view = "select * from course where status='1' ";
 $result_view = mysql_query($sql_view);
 while($row=mysql_fetch_array($result_view))
@@ -305,7 +305,7 @@ while($row=mysql_fetch_array($result_view))
                 <td><a href="course_detail.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
-               <? } ?>
+               <?php } ?>
           </table>
             <p align="center">&nbsp;</p>
         </div>

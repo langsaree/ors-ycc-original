@@ -1,5 +1,5 @@
 <?php
-session_start();
+Session_start();
 if(!session_is_registered(username))
 	{		
 include('db.php');
