@@ -9,17 +9,17 @@ $db_password="root";
 //$login="SELECT * FROM admin WHERE username='$username' and password='$password'";
 //$login2="SELECT * FROM student WHERE username='$username' and password='$password'";
 //$login3="SELECT * FROM lecture WHERE username='$username' and password='$password'";
-$connection = mysql_connect($db_host, $db_username, $db_password);
-if (!$connection)
+$conn = mysqli_connect($db_host, $db_username, $db_password);
+if (!$conn)
 {
-die("Could not connect with db".mysql_error());
+die("Could not connect with db".mysqli_error());
 }
 $db_select = mysql_select_db($db_database);
-mysql_query ("SET NAMES 'utf8'");
-//mysql_query(" SET NAMES 'tis620'; ");
-//mysql_query(" SET character_set_results='tis620'; ");
+mysqli_query ("SET NAMES 'utf8'");
+//mysqli_query(" SET NAMES 'tis620'; ");
+//mysqli_query(" SET character_set_results='tis620'; ");
 if(!$db_select)
 {
-die("Could not select db".mysql_error());
+die("Could not select db".mysqli_error());
 } 
 ?>

@@ -129,8 +129,8 @@ a:active {
  <? 
 include ('db.php');
 $sql = "select * from student where username='$username' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?>       

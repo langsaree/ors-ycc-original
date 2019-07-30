@@ -1,11 +1,11 @@
  <?
    include('db.php');
-   //mysql_query ("SET NAMES 'utf8'");
+   //mysqli_query ("SET NAMES 'utf8'");
 
    $sql	 = "select * from register ";
-   $result = mysql_query($sql);
+   $result = mysqli_query($sql);
    if (!$result)
-   {die ("can not connect db".mysql_error());
+   {die ("can not connect db".mysqli_error());
    }
    while ($result_row = mysql_fetch_row($result))
    {

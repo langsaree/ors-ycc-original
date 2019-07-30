@@ -20,8 +20,8 @@ if(!session_is_registered(username))
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -238,8 +238,8 @@ if(!session_is_registered(username))
             <p>
   <?
 $sql_view = "select * from course where cos_id='$cos_id' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
+$result_view = mysqli_query($sql_view);
+while($row=mysqli_fetch_array($result_view))
 {
 ?>
               

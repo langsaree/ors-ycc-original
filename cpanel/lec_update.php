@@ -82,8 +82,8 @@ body {
 <?
 include ('db.php');
 $sql = "select * from lecture where lec_id='$lec_id'";
-$result = mysql_query($sql);
-while($result_row = mysql_fetch_array($result))
+$result = mysqli_query($sql);
+while($result_row = mysqli_fetch_array($result))
 {  
 ?>          
           

@@ -1,20 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" afterPath="$PROJECT_DIR$/ann.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" afterPath="$PROJECT_DIR$/college.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/count1-100.php" beforeDir="false" afterPath="$PROJECT_DIR$/count1-100.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/course_detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_active.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_del.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_del.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/p_searchx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/p_searchx.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_addx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_addx.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/psearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/psearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pstd_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pstd_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_active.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view _status.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view _status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/view_registered.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_view_cos.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_view_cos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_view_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_view_student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/login_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p_register.php" beforeDir="false" afterPath="$PROJECT_DIR$/p_register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/register_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_course_bk.php" beforeDir="false" afterPath="$PROJECT_DIR$/register_course_bk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_login_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_profile.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Oh4mrL3pYp5Pl3bRKnKAc59VBN" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ors-ycc-original_refactoring-testing-debugging-addingfeatures/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -22,11 +128,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557132654756</updated>
+      <workItem from="1564416703003" duration="3977000" />
+      <workItem from="1564469705171" duration="6163000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

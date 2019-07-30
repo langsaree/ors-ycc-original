@@ -21,8 +21,8 @@ if(!session_is_registered(username)) // To check login user if already login the
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -317,8 +317,8 @@ if(!session_is_registered(username)) // To check login user if already login the
                 <tr>
  <?
 $sql = "select * from course where cos_id='$cos_id' ";
-$result = mysql_query($sql);
-while ($rows = mysql_fetch_array($result)) {
+$result = mysqli_query($sql);
+while ($rows = mysqli_fetch_array($result)) {
 //$id = $rows["cos_id"];
 //$name = $rows["cos_name"];
 
@@ -332,8 +332,8 @@ while ($rows = mysql_fetch_array($result)) {
                       <option>-- select --</option>
                        <?		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
+			             $result3=mysqli_query($sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
 			 	              if($data[cos_group]==$data3[0]){
 					             echo "<option value='$data3[cos_group]' selected>$data3[cos_group]";
 				              }else{
@@ -353,8 +353,8 @@ while ($rows = mysql_fetch_array($result)) {
                   <option>-- select --</option> 
                    <?		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
+			             $result3=mysqli_query($sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
 			 	              if($data[cos_id]==$data3[0]){
 					             echo "<option value='$data3[cos_id]' selected>$data3[cos_id]";
 				              }else{
@@ -374,8 +374,8 @@ while ($rows = mysql_fetch_array($result)) {
                   <option>-- select --</option> 
                   <?		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
+			             $result3=mysqli_query($sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
 			 	              if($data[cos_name]==$data3[0]){
 					             echo "<option value='$data3[cos_name]' selected>$data3[cos_name]";
 				              }else{

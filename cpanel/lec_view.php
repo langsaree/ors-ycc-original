@@ -97,9 +97,9 @@ body {
 include ('db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
-$result = mysql_query($sql);
+$result = mysqli_query($sql);
 #while($result_row = mysql_fetch_row($result))  
-while($row=mysql_fetch_array($result))
+while($row=mysqli_fetch_array($result))
 {
 ?>
                <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_id]; ?></td>

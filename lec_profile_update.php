@@ -120,12 +120,12 @@ input:focus, textarea:focus {
 				$phone=$_POST['phone'];
 				
 				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysql_query($sql);
+				$do=mysqli_query($sql);
 				if($do){
 					echo "<script>location='lec_profile.php';</script>";
 				}
 				else{
-					 mysql_error();
+					 mysqli_error();
 				}
 			}
 			?>
@@ -134,8 +134,8 @@ input:focus, textarea:focus {
              <? 
 			
 			$sql = "select * from lecture where username='$username'";
-            $result=mysql_query($sql);
-            ($row=mysql_fetch_array($result));
+            $result=mysqli_query($sql);
+            ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
