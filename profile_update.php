@@ -44,13 +44,13 @@ if(isset($ok)){
 	
 	$query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
 
-       $do = mysql_query($query);
+       $do = mysqli_query($query);
        if ($do)
          { 
           header("location:std_profile.php");
 		 }	
 		 else{	 
-	   die("Could not select db".mysql_error());
+	   die("Could not select db".mysqli_error());
 	   //header("location:std_profile.php");
 	   }}
     else
@@ -214,8 +214,8 @@ input, textarea {
            <tr>
 <? 
 $sql = "select * from student where std_id='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?>
@@ -264,8 +264,8 @@ while($row=mysql_fetch_array($result))
                       <select name="fname" size="1" id="fname">
 					  <? 
                       $sql3="select * from mrmrs";
-			          $result3=mysql_query($sql3);			 
-			          while($data3=mysql_fetch_array($result3)){
+			          $result3=mysqli_query($sql3);			 
+			          while($data3=mysqli_fetch_array($result3)){
 			 	          if($data[id]==$data3[0]){
 					           echo "<option value='$data3[name]' selected>$data3[name]";
 				         }else{
@@ -464,8 +464,8 @@ while($row=mysql_fetch_array($result))
                       <select name="job" id="job">
                       <?		
 			 $sql3="select * from joblist";
-			 $result3=mysql_query($sql3);			 
-			 while($data3=mysql_fetch_array($result3)){
+			 $result3=mysqli_query($sql3);			 
+			 while($data3=mysqli_fetch_array($result3)){
 			 	if($data[job_id]==$data3[0]){
 					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
 				}else{

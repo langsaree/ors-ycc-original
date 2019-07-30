@@ -7,7 +7,7 @@ $active = $active;
 $non_active = $non_active;
 if(!empty($active)){
 	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -19,7 +19,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE register SET status='0' WHERE std_id='$non_active' ";
-			$result = mysql_query($sql);
+			$result = mysqli_query($sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -114,8 +114,8 @@ body {
   include('db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
-	$r = mysql_query($reg);
-	while ($ro = mysql_fetch_array($r)){
+	$r = mysqli_query($reg);
+	while ($ro = mysqli_fetch_array($r)){
 		$cos=$ro[cos_id];
 		$std=$ro[std_id];
 		$lec=$ro[lec_id];
@@ -124,8 +124,8 @@ body {
 		//echo $lec;
 		//////////////third////////////////
    $sql1 ="select * from course where cos_id='$cos' ";
-   $result = mysql_query($sql1);
-   while ($row= mysql_fetch_array($result))
+   $result = mysqli_query($sql1);
+   while ($row= mysqli_fetch_array($result))
 	{
 	//$cos_id= $row[cos_id];
 	$cos_group=$row[cos_group];
@@ -138,16 +138,16 @@ body {
 	//echo $cos_name;
   ///////////////////////second///////////////////////
 	$sql = "select * from student where std_id='$std'";
-	$re = mysql_query($sql);
-	while ($ro1= mysql_fetch_array($re))
+	$re = mysqli_query($sql);
+	while ($ro1= mysqli_fetch_array($re))
 	{
 		$std1= $ro1[std_id];
 		$name= $ro1[f_name]."<span>".$ro1[name]."-".$ro1[s_name];
 	
 	//////////////////forth/////////////////////
     $sql2 = "select * from lecture where lec_id = '$lec' ";
-	  $a =mysql_query ($sql2);
-	while ($row1= mysql_fetch_array($a))
+	  $a =mysqli_query ($sql2);
+	while ($row1= mysqli_fetch_array($a))
 	{
 	$lec_name= $row1[lec_name];
 	//echo $lec_name;

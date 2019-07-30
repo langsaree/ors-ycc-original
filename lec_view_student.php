@@ -126,12 +126,12 @@ if(session_is_registered(lec_user)){
 			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
 			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
 			
-            $result=mysql_query($sql);
-            while($row=mysql_fetch_array($result)){
+            $result=mysqli_query($sql);
+            while($row=mysqli_fetch_array($result)){
 				$std=$row[std_id];
 				$sql2 ="select * from student where std_id='$std'";
-				$result2=mysql_query($sql2);
-				while($row2=mysql_fetch_array($result2)){
+				$result2=mysqli_query($sql2);
+				while($row2=mysqli_fetch_array($result2)){
 		    ?>
               <tr>
                 <td>&nbsp;</td>

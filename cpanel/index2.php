@@ -17,8 +17,8 @@ if(!session_is_registered(user_admin)) // To check login user if already login t
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from admin where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
 //include('db.php');
 $username = "";
@@ -18,8 +18,8 @@ if(!isset($_SESSION['logined'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -51,6 +51,7 @@ if(!isset($_SESSION['logined'])) {
     <style type="text/css">
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
+.style9 {font-size: 12px;color: black}
 .style7 {color: #3987FB; font-size: 14px; }
 .style30 {
 	color: #3987FB;
@@ -91,8 +92,8 @@ if(!isset($_SESSION['logined'])) {
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php  $message; ?>		
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -162,7 +163,7 @@ if(!isset($_SESSION['logined'])) {
     <style type="text/css">
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
+.style9 {font-size: 12px;color: black}
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
 	font-size: 14px;
@@ -233,24 +234,23 @@ if(!isset($_SESSION['logined'])) {
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
- <?
-session_start();
-if($_POST['action']){
+ <?php
+if(isset($_POST['action'])){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
     //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
  }else{
      $headers  = "MIME-Version: 1.0\r\n";
-     $headers .= "Content-type: text/html; charset=utf-8\r\n";
+     $headers .= "Contentp-type: text/html; charset=utf-8\r\n";
      $headers .= "From:  ".$_POST['name']." <".$_POST['email'].">\r\n";
 
-     $msgs .= " จากคุณ  ".$_POST['name'].'<br>';
+     $msgs  = " จากคุณ  ".$_POST['name'].'<br>';
      $msgs .= " โทร  ".$_POST['tel'].'<br>';
      $msgs .= "ข้อความ<br>".$_POST['msg'];
 
 
-     $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
-     if(mail($mailto, $_POST['subj'], $msgs, $headers)){
+     $mailto = "langsaree@gmail.com"; #อีเมล์ผู้รับ
+     if($mail($mailto, $_POST['subj'], $msgs, $headers)){
      echo "ส่งสำเร็จ";
      }else{
      echo "ผิดพลาด";
@@ -260,7 +260,7 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
  }
   }
 ?>
-<?
+<?php
 $num1 = rand(0,10);
 $num2 = rand(0,10);
 $_SESSION['total'] = ($num1 + $num2);
@@ -282,10 +282,11 @@ $_SESSION['total'] = ($num1 + $num2);
       <td width="187">&nbsp;</td>
     </tr>
 
-<? 
+<?php 
+$user=$username;
 $sql = "select * from student where username='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($conn,$sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?> 
@@ -307,7 +308,7 @@ while($row=mysql_fetch_array($result))
       <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
       <td>&nbsp;</td>
     </tr>
-    <? } ?>
+    <?php } ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อเรื่อง :</span></td>
@@ -323,13 +324,13 @@ while($row=mysql_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">Code :
-        <? echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
-        <? echo '<span style="color:green">+</span>';?>
-        <? echo '<span style="color:red"> '.$num2.'</span>';?>
+        <?php echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
+        <?php echo '<span style="color:green">+</span>';?>
+        <?php echo '<span style="color:red"> '.$num2.'</span>';?>
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
-          <? echo $c_error; ?> </td>
+          <?php  $c_error; ?> </td>
       </tr>
     <tr>
       <td>&nbsp;</td>

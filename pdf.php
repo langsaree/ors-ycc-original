@@ -7,19 +7,19 @@ $cos_id=$id;
 //echo "$cos_id";
 
 $sql="select * from student where username='$username'";
-$result=mysql_query($sql);
-$row=mysql_fetch_array($result);
+$result=mysqli_query($sql);
+$row=mysqli_fetch_array($result);
 $std_id=$row[std_id];
 //echo "$std_id"; 
 
 $sql2="select * from lecture,course where course.lec_id=lecture.lec_id and cos_id='$cos_id'";
-$do2=mysql_query($sql2);
-$this2=mysql_fetch_array($do2);
+$do2=mysqli_query($sql2);
+$this2=mysqli_fetch_array($do2);
 $lec_id=$this2[lec_id];	
 //echo "$lec_id"; 
 
 $sql3="insert into register(std_id,cos_id,lec_id) value('$std_id','$cos_id','$lec_id')";
-$do3=mysql_query($sql3); 
+$do3=mysqli_query($sql3); 
 
 ?>
 
@@ -52,11 +52,11 @@ $do3=mysql_query($sql3);
       </tr>
       <?
 //$std="select * from student where username='$username'";
-//$result=mysql_query($sql);
+//$result=mysqli_query($sql);
 
 
 $cos="select * from course where cos_id='$cos_id'";
-$result1=mysql_query($cos);
+$result1=mysqli_query($cos);
 
 ?>
     </table>
@@ -76,7 +76,7 @@ $result1=mysql_query($cos);
         </tr>
         <tr>
           <td height="92" colspan="4" valign="top"><table width="600" border="0" cellspacing="2" cellpadding="0">
-            <? //while($row=mysql_fetch_array($result)){ ?>
+            <? //while($row=mysqli_fetch_array($result)){ ?>
             <tr>
               <td width="63"><span style="color: #000"><span class="style45">ข้าพเจ้า</span></span></td>
               <td width="337"><?= $row[f_name],' ',$row[name],' ',' ',$row[s_name]; ?></td>
@@ -202,7 +202,7 @@ $result1=mysql_query($cos);
         <tr>
           <td width="706" height="92" valign="top"><table width="705" border="1" cellpadding="0" cellspacing="0">
             <tr>
-            <? while($row1=mysql_fetch_array($result1)){?>
+            <? while($row1=mysqli_fetch_array($result1)){?>
               <td width="32"><div align="center">ที่</div></td>
               <td width="231"><div align="center">วิชา</div></td>
               <td width="149"><div align="center">จำนวนชั่วโมง/หน่วยกิต</div></td>

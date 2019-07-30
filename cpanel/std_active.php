@@ -7,7 +7,7 @@ $active = $active;
 $non_active = $non_active;
 if(!empty($active)){
 	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -19,7 +19,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
-			$result = mysql_query($sql);
+			$result = mysqli_query($sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -128,8 +128,8 @@ border-color:#8A9AA6;
           </tr> 
                        <?
   $sql = "select * from student order by status DESC";
-  $result = mysql_query($sql);
-        while($row = mysql_fetch_array($result)){
+  $result = mysqli_query($sql);
+        while($row = mysqli_fetch_array($result)){
 		$n = $row[f_name] . $row[name];
 		?>  
         <tr>

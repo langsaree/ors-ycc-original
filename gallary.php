@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{		
 include('db.php');
 $username = "";
@@ -17,8 +17,8 @@ if(!isset($_SESSION['logined'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -96,8 +96,8 @@ if(!isset($_SESSION['logined'])) {
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php $message; ?>		
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -248,12 +248,11 @@ if(!isset($_SESSION['logined'])) {
         <h1 class="style30">ภาพกิจกรรม</h1>
         
         <div id="galleria">
-            <img src="http://www.ycc.ac.th/images/stories/pb058590.jpg" >
-            
-            <img src="http://www.ycc.ac.th/images/stories/imga4838.jpg">
-            <img  src="http://www.ycc.ac.th/images/stories/imga4900.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/pb058615.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/imga4884.jpg">              </div>
+            <img src="gallary/pb058590.jpg" >
+            <img src="gallary/imga4838.jpg">
+            <img src="gallary/imga4900.jpg">
+            <img src="gallary/pb0585791.jpg">
+            <img src="gallary/imga4884.jpg">              </div>
     </div>
     <script>
     // Load the classic theme

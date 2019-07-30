@@ -11,11 +11,11 @@ $password=$_POST['password'];
 
 $sql = "insert into lecture (lec_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
 
-$result=mysql_query($sql);
+$result=mysqli_query($sql);
 
 if  (!$result)
 	{
-		die("could not query db ".mysql_error());
+		die("could not query db ".mysqli_error());
 		$error='<span style="color:red">กรุณากรอบข้อมูลให้ถูกต้อง</span>';
 		include('lec_add.php');
 	}

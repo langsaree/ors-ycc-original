@@ -62,9 +62,9 @@ body {
 			extract ($_GET);
 			$std_id=$id;
 			$sql = "select * from student where std_id='$std_id'";
-			$result = mysql_query($sql);
+			$result = mysqli_query($sql);
 			if (!$result)
-			{ die("error db".mysql_error()); }
+			{ die("error db".mysqli_error()); }
 			while ($result_row = mysql_fetch_row($result))
 			{
 			?>       

@@ -61,13 +61,13 @@ body {
            <?
 		   include('db.php');
 			extract ($_GET);
-//mysql_query ("SET NAMES 'utf8'");
+//mysqli_query ("SET NAMES 'utf8'");
 $std_id=$id;  echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!!<p>Data was deleted out from system</p>";
 echo $std_id;
-$result = mysql_query("delete from student where std_id = $std_id");
+$result = mysqli_query("delete from student where std_id = $std_id");
 	if(!$result)
 	{
-	die("could not query db".mysql_error());
+	die("could not query db".mysqli_error());
 	}
 ?>
 </div></td>

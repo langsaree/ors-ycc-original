@@ -75,8 +75,8 @@ body {
   include('db.php');
 	///////////////////////////////////////
    $sql1 ="select * from course ";
-   $result = mysql_query($sql1);
-   while ($row= mysql_fetch_array($result))
+   $result = mysqli_query($sql1);
+   while ($row= mysqli_fetch_array($result))
 	{
 	$cos_id= $row[cos_id];
 	$cos_group=$row[cos_group];
@@ -88,8 +88,8 @@ body {
 //	echo $cos_id;
 	//echo $cos_name;
     $sql2 = "select * from lecture where lec_id = '$lec_id' ";
-	  $a =mysql_query ($sql2);
-	while ($row1= mysql_fetch_array($a))
+	  $a =mysqli_query ($sql2);
+	while ($row1= mysqli_fetch_array($a))
 	{
 	$lec_name= $row1[lec_name];
 	//echo $lec_name;

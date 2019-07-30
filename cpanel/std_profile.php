@@ -135,8 +135,8 @@ a:active {
    
 //echo $cos_id;
 $sql = "select * from student where std_id='$id' ";
-$result = mysql_query($sql);
-while($row = mysql_fetch_array($result))
+$result = mysqli_query($sql);
+while($row = mysqli_fetch_array($result))
 {
 ?>                             
 

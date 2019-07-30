@@ -10,11 +10,11 @@ $date = $cos_day."/". $cos_after ."/". $cos_time;
 //echo $date;
 $cos_lec =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
-mysql_query ("SET NAMES 'utf8'");
+mysqli_query ("SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysql_query($sql);
+$result = mysqli_query($sql);
 if (!$result)	
-{ die("Error db".mysql_error()); }
+{ die("Error db".mysqli_error()); }
 else
 {*/
 ?>

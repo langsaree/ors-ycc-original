@@ -8,7 +8,7 @@ $non_active = $non_active;
 
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysql_query($sql);
+	$result = mysqli_query($sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -20,7 +20,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysql_query($sql);
+			$result = mysqli_query($sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -140,9 +140,9 @@ non {
 </table>
 <?
   $sql = "select * from course order by status DESC";
-  $result = mysql_query($sql);
+  $result = mysqli_query($sql);
   $sql2 = "select * from number ";
-  $result2 = mysql_query($sql2);
+  $result2 = mysqli_query($sql2);
   	
 ?>
 <table width="1024" border="0" cellpadding="0" cellspacing="2">  
@@ -158,8 +158,8 @@ non {
         <td width="51" bgcolor="#FF9933" class="hhhhh">ACTIVE</td>
         <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
         </tr>
-      <? while($row = mysql_fetch_array($result)){ ?>
-      <? // while($row2 = mysql_fetch_array($result2)){?>
+      <? while($row = mysqli_fetch_array($result)){ ?>
+      <? // while($row2 = mysqli_fetch_array($result2)){?>
       <tr>
         <td height="19" valign="top"><? //= $row2[number]; ?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;

@@ -117,10 +117,10 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt))
+mysqli_query("SET NAMES utf-8"); //		for thai input	
+$nt=mysqli_query($query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($nt))
 {
 	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
 ?>          

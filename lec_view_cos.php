@@ -138,8 +138,8 @@ if(session_is_registered(lec_user)){
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-            $result=mysql_query($sql);
-            while ($row=mysql_fetch_array($result)){
+            $result=mysqli_query($sql);
+            while ($row=mysqli_fetch_array($result)){
 		     ?>
               <tr>
                 <td>&nbsp;</td>

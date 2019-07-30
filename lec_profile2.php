@@ -156,8 +156,8 @@ a:active {
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-            $result=mysql_query($sql);//????????
-            ($row=mysql_fetch_array($result))//????????
+            $result=mysqli_query($sql);//????????
+            ($row=mysqli_fetch_array($result))//????????
 		    ?>
                   <td>&nbsp;</td>
                   <td rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
