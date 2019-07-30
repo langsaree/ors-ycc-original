@@ -17,7 +17,7 @@ $username = $_SESSION["username"];
     <style type="text/css">
 
 .style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }S
+.style7 {color: #3987FB; font-size: 14px; }
 .style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
 .style47 {font-size: 13px}
 .style54 {font-size: 14px}
