@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if($_SESSION["username"]) // To check login user if already login then hide login form
 	{
     
      $username = "";
@@ -32,13 +32,11 @@ if(!session_is_registered(username)) // To check login user if already login the
 					  header("location:std_profile.php");
 					  }
 				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
+				   { $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>'; }
 				  }
-			  	}  
-   
+			  	}    
 }
+  }
 ?>
 
 
@@ -76,7 +74,7 @@ oo {
 }
 -->
     </style>
-s
+
 </head>
 <body>
     <div class="BodyContent">
@@ -169,9 +167,7 @@ s
                   </tr>
                 </table>
 				';
-		}
-		else
-		{
+		
 #########################   IF user already logined display wellcome below  ############################# 		
 		echo '
 		<!DOCTYPE html>
@@ -232,7 +228,7 @@ s
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
-		}
+		
 ?>
             <br>
           </div>
