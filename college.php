@@ -14,36 +14,36 @@ if (isset($_SESSION['username'])) {
 
 if (!isset($_SESSION['username'])) {
 
-include('db.php');
+    include('db.php');
 
-$username = "";
-$password = "";
+    $username = "";
+    $password = "";
 
-if (!isset($_SESSION['username'])) {
-    if (isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-        if (empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-            $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
-        } else if (empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-            $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
-        } else if (!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-            $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
-        } else {
-            $sql = "select * from student where username='$username' and password='$password'";
-            $result = mysqli_query($connection, $sql);
-            $count = mysqli_num_rows($result);
-            if ($count == 1) {
-                $_SESSION['username'] = $count['username'];
-                $_SESSION['password'] = $count['password'];
-                header("location:std_profile.php");
+    if (!isset($_SESSION['username'])) {
+        if (isset($_REQUEST['username'])) {
+            $username = $_REQUEST['username'];
+            $password = $_REQUEST['password'];
+            if (empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
+            } else if (empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
+            } else if (!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
             } else {
-                $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+                $sql = "select * from student where username='$username' and password='$password'";
+                $result = mysqli_query($connection, $sql);
+                $count = mysqli_num_rows($result);
+                if ($count == 1) {
+                    $_SESSION['username'] = $count['username'];
+                    $_SESSION['password'] = $count['password'];
+                    header("location:std_profile.php");
+                } else {
+                    $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+                }
             }
         }
-    }
 
-}
+    }
 ?>
 
 <!DOCTYPE html>
@@ -106,6 +106,7 @@ if (!isset($_SESSION['username'])) {
 
                         </table>
 
+                        <?php // php code for login form and profile menu ?>
 
                         <?php if (!empty($message)) {
                             echo "<span style=\"color:red\">$message</span>";
@@ -172,10 +173,11 @@ if (!isset($_SESSION['username'])) {
                 </table>
 				
 				<?php '; ?>
-                <?php } else { ?>
-                <?php
-                           // process this if user aleady login
-                 echo '
+
+                        <?php } else { ?>
+                            <?php
+                            // process this if user aleady login
+                            echo '
 		<!DOCTYPE html>
 <html>
 <head>
@@ -234,7 +236,8 @@ if (!isset($_SESSION['username'])) {
                             echo '<span class="style26 "> ' . $username . ' </span><br>';
                             echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
                             echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-                        }}
+                        }
+                        }
                         ?>
                         <br>
                     </div>
