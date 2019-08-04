@@ -1,5 +1,5 @@
 <?
-session_start();
+//session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,7 +100,8 @@ session_start();
                     <td width="96" bgcolor="#CCCCCC">&nbsp;</td>
                   </tr>
                 </table></td>
-                <td width="346" valign="top"><form action="std_login_check.php" method="POST">
+                <td width="346" valign="top">
+                    <form action="std_login_check.php" method="post">
                   <table width="336" height="211" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td height="39" colspan="3" bgcolor="#0099FF"><span class="style29"> &nbsp;สำหรับผู้ที่เคยลงทะเบียนแล้ว</span></td>
@@ -112,7 +113,7 @@ session_start();
                         &nbsp;&nbsp;เพื่อเข้าไปลงทะเบียนเรียนหลักสูตรอื่นๆ ได้ <br></td>
                     </tr>
                     <tr>
-                      <td colspan="3" bgcolor="#CCCCCC"><? echo "$std_error"; ?></td>
+                      <td colspan="3" bgcolor="#CCCCCC"><? if(isset($std_error)){echo $std_error;} ?></td>
                       </tr>
                     <tr>
                       <td width="81" bgcolor="#CCCCCC">&nbsp;</td>
@@ -121,7 +122,7 @@ session_start();
                     </tr>
                     <tr>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
-                      <td bgcolor="#CCCCCC"><input type="text" name="username2" /></td>
+                      <td bgcolor="#CCCCCC"><input type="text" name="username" id="username"/></td>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
                     </tr>
                     <tr>
@@ -131,7 +132,7 @@ session_start();
                     </tr>
                     <tr>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
-                      <td bgcolor="#CCCCCC"><input type="password" name="password2" /></td>
+                      <td bgcolor="#CCCCCC"><input type="password" name="password" id="password"/></td>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
                     </tr>
                     <tr>

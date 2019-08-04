@@ -3,8 +3,8 @@ session_start();
 include('db.php');
 extract ($_GET);
 $cos_id=$id;
-if(!session_is_registered(username)){header("location:register.php");}
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if(!isset($_SESSION['username'])){header("location:register.php");}
+if(!isset($_SESSION['username'])) // To check login user if already login then hide login form
 	{
     
      $username = "";

@@ -3,7 +3,7 @@ session_start();
 include('db.php');
 extract ($_GET);
 $cos_id=$id;
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
      
      $username = "";
@@ -96,7 +96,7 @@ if(!session_is_registered(username))
              
             </table>
 
-	<?php echo $message; ?>		
+              <? if(isset($message)){echo $message;} ?>
 	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -238,8 +238,8 @@ if(!session_is_registered(username))
             <p>
   <?
 $sql_view = "select * from course where cos_id='$cos_id' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
+$result_view = mysqli_query($connection, $sql_view);
+while($row=mysqli_fetch_array($result_view))
 {
 ?>
               
@@ -257,25 +257,25 @@ while($row=mysql_fetch_array($result_view))
               <tr>
                 <td width="34" height="18" style="font-weight: bold; color:#000;">&nbsp;</td>
                 <td width="105" style="font-weight: bold;  color:#000;">ชื่อหลักสูตร</td>
-                <td width="410" style="font-weight: bold;  color:#000;"><?= $row[cos_name];?></td>
+                <td width="410" style="font-weight: bold;  color:#000;"><?= $row["cos_name"];?></td>
                 <td width="52">&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;" >รหัสหลักสูตร</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_id];?></td>
+                <td style="font-weight: bold;  color:#000;"><?= $row["cos_id"];?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;">หมู่วิชา</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_group];?></td>
+                <td style="font-weight: bold;  color:#000;"><?= $row["cos_group"];?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;">จำนวนชั่วโมง</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_time].' '.'ชั่วโมง';?></td>
+                <td style="font-weight: bold;  color:#000;"><?= $row["cos_time"].' '.'ชั่วโมง';?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>

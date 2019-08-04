@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
 //include('db.php');
 $username = "";
@@ -18,15 +18,15 @@ if(!isset($_SESSION['logined'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
 					  //$_SESSION['username'] = $_REQUEST['username'];
 					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+					  $_SESSION("username");
+                      $_SESSION("password");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  header("location:std_profile.php");
@@ -91,7 +91,7 @@ if(!isset($_SESSION['logined'])) {
              
             </table>
 
-	<?php echo $message; ?>		
+              <? if(isset($message)){echo $message;} ?>
 	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -233,9 +233,15 @@ if(!isset($_SESSION['logined'])) {
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
- <?
-session_start();
-if($_POST['action']){
+ <?php
+
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+
+if(isset($_POST['action'])){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
     //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
@@ -255,7 +261,7 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      }else{
      echo "ผิดพลาด";
      }
-	 
+
      exit();
  }
   }
@@ -282,29 +288,29 @@ $_SESSION['total'] = ($num1 + $num2);
       <td width="187">&nbsp;</td>
     </tr>
 
-<? 
-$sql = "select * from student where username='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+<?
+$sql = "select * from student where username='$username' ";
+$result = mysqli_query($connection, $sql);
+while($row=mysqli_fetch_array($result))
 {
 
 ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?=$row[username];?>" /></td>
+      <td><input type='text' name='name' value="<?=$row['username'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value="<?=$row[email];?>" /></td>
+      <td><input type='text' name='email' value="<?=$row['email'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
+      <td><input type='text' name='tel' value="<?=$row['phone'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <? } ?>
@@ -329,7 +335,7 @@ while($row=mysql_fetch_array($result))
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
-          <? echo $c_error; ?> </td>
+          <? if(isset($c_error)){echo $c_error;} ?></td>
       </tr>
     <tr>
       <td>&nbsp;</td>

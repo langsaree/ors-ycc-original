@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
      include('db.php');
      $username = "";
@@ -91,7 +91,7 @@ if(!session_is_registered(username))
              
             </table>
 
-	<?php echo $message; ?>		
+              <? if(isset($message)){echo $message;} ?>
 	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -230,7 +230,7 @@ if(!session_is_registered(username))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
        
           <div class="Article">
-            <p align="center">&nbsp;</p>
+            <p align="center">//</p>
         </div>
         </div>
 

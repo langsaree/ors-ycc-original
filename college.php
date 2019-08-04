@@ -1,14 +1,14 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
-include('db.php');
-$username = "";
-$password = "";
-if(!isset($_SESSION['logined'])) {
-   if(isset($_REQUEST['username'])) {
-   $username = $_REQUEST['username'];
-   $password = $_REQUEST['password'];
+     include('db.php');
+     $username = "";
+     $password = "";
+     if(!isset($_SESSION['logined'])) {
+      if(isset($_REQUEST['username'])) {
+        $username = $_REQUEST['username'];
+        $password = $_REQUEST['password'];
 			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
 				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
 			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
@@ -17,15 +17,15 @@ if(!isset($_SESSION['logined'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
 					  //$_SESSION['username'] = $_REQUEST['username'];
 					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+                          $_SESSION["username"];
+                          $_SESSION["password"];
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  header("location:std_profile.php");
@@ -57,8 +57,17 @@ if(!isset($_SESSION['logined'])) {
 </head>
 <body>
     <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+<div class="BorderBorder">
+  <div class="BorderBL">
+    <div>
+      
+    </div></div>
+    <div class="BorderBR"><div></div></div>
+    <div class="BorderTL"></div>
+    <div class="BorderTR"><div></div></div>
+      <div class="BorderR"><div></div></div>
+      <div class="BorderB"><div></div></div>
+      <div class="BorderL"></div>
       <div class="Border">
 
         <div class="Menu">
@@ -90,7 +99,7 @@ if(!isset($_SESSION['logined'])) {
 
 
 
-	<?php echo $message; ?>		
+              <? if(isset($message)){echo $message;} ?>
 	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>

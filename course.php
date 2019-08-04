@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
      include('db.php');
      $username = "";
@@ -17,15 +17,15 @@ if(!session_is_registered(username))
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
 					  //$_SESSION['username'] = $_REQUEST['username'];
 					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+                          $_SESSION["username"];
+                          $_SESSION["password"];
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  header("location:std_profile.php");
@@ -53,10 +53,27 @@ if(!session_is_registered(username))
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
-	font-size: 14px;
-	font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
 }
 .style28 {font-size: 12px; font-weight: bold; }
+.o {
+    color: #000;
+}
+oo {
+    font-size: 24px;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
+    color: #060;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+oo {
+    font-size: 12px;
+}
+textarea:focus, input:focus {
+    border: 2px solid #2B7C41;
+}
 -->
     </style>
 </head>
@@ -95,7 +112,7 @@ if(!session_is_registered(username))
 
 
 
-	<?php echo $message; ?>		
+              <? if(isset($message)){echo $message;} ?>
 	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -233,7 +250,7 @@ if(!session_is_registered(username))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
        
           <div class="Article">
-            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;//</p>
         </div>
         </div>
 
