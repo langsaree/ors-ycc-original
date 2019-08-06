@@ -125,7 +125,7 @@ input, textarea {
 		background:#E3E7A6;
 		color:#000000;
 	}
--->
+
     </style>
 </head>
 <body>
@@ -214,8 +214,8 @@ input, textarea {
            <tr>
 <? 
 $sql = "select * from student where std_id='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($connection,$sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?>
