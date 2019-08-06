@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if(!isset($_SESSION['username'])) // To check login user if already login then hide login form
 	{
     
      $username = "";
@@ -18,8 +18,8 @@ if(!session_is_registered(username)) // To check login user if already login the
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -63,7 +63,7 @@ if(!session_is_registered(username)) // To check login user if already login the
 .o {
 	color: #000;
 }
-oo {
+.o {
 	font-size: 24px;
 }
 .BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
@@ -71,12 +71,12 @@ oo {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: left;
 }
-oo {
+.o {
 	font-size: 12px;
 }
 -->
     </style>
-s
+
 </head>
 <body>
     <div class="BodyContent">
@@ -109,10 +109,9 @@ s
              
             </table>
 
-	<?php echo $message; ?>		
-	<? 	
-######################################   To show login form if user do not login ###################################
-	
+	<?php $message; ?>		
+	<?php 
+######################################   To show login form if user do not login ################################### 
 	echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -261,7 +260,7 @@ s
     <td width="420">&nbsp;</td>
   </tr>
   <tr>
-    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือ</span>นมกราคม 2554</td>
+    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือน</span>มกราคม 2554</td>
     </tr>
   <tr>
     <td>&nbsp;</td>
@@ -270,42 +269,46 @@ s
   </tr>
 </table>
 
-<?
-$sql_view = "select * from course where status='1' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
-{
 
+<?php
+
+$sql_view = "select * from course where status='1' ";
+$result_view = mysqli_query($conn,$sql_view);
+while($row=mysqli_fetch_array($result_view))
+
+{
 ?>
+
+
 
 <br>
              <table width="570" border="0" align="center" cellpadding="0" cellspacing="2">
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row[cos_group].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row['cos_group'].'</span>' ?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?= $row[cos_id];?></td>
+                <?= $row['cos_id'];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row[cos_name];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span> <?= $row['cos_name'];?></td>
                </tr>
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?=$row['cos_id']; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?=$row['cos_id']; ?>" style="color: #333; text-decoration: none">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
-               <? } ?>
+               <?php } ?>
           </table>
             <p align="center">&nbsp;</p>
         </div>

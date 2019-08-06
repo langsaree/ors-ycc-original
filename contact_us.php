@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
 //include('db.php');
 $username = "";
@@ -18,8 +18,8 @@ if(!isset($_SESSION['logined'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -91,8 +91,13 @@ if(!isset($_SESSION['logined'])) {
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	 <?php// echo $message;
+  if(isset($_GET['message'])){
+       $message = $_GET['message'];
+  }else{
+       $message = '';
+  } ?>  	
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -233,8 +238,8 @@ if(!isset($_SESSION['logined'])) {
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
- <?
-session_start();
+ <?php
+
 if($_POST['action']){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
@@ -284,27 +289,27 @@ $_SESSION['total'] = ($num1 + $num2);
 
 <? 
 $sql = "select * from student where username='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?=$row[username];?>" /></td>
+      <td><input type='text' name='name' value="<?=$row['username'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value="<?=$row[email];?>" /></td>
+      <td><input type='text' name='email' value="<?=$row['email'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
+      <td><input type='text' name='tel' value="<?=$row['phone'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <? } ?>

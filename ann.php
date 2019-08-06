@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_SESSION['username']))
 	{
      include('db.php');
      $username = "";
@@ -17,8 +17,8 @@ if(!session_is_registered(username))
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -91,8 +91,13 @@ if(!session_is_registered(username))
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	 <?php// echo $message;
+  if(isset($_GET['message'])){
+       $message = $_GET['message'];
+  }else{
+       $message = '';
+  } ?>  	
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>

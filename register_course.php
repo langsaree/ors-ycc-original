@@ -1,8 +1,8 @@
 <?php
 session_start();
 include('db.php');
-if(session_is_registered(username)){header("location:index.php");}
-if(!session_is_registered(username))
+if(!isset($_SESSION['username'])){header("location:index.php");}
+if(isset($_SESSION['username']))
 	{
      
      $username = "";
@@ -1052,7 +1052,7 @@ if(isset($ok)) {
                     <td><?= $errmsg33 ?></td>
                     <td>&nbsp;</td>
                   </tr>
-                  <? } ?>
+                  <?php } ?>
                   <tr>
                     <td>จังหวัด</td>
                     <td><label for="textfield4"></label>
