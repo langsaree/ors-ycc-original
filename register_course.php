@@ -1,6 +1,8 @@
 <?php
 session_start();
 include('db.php');
+
+
 if(session_is_registered(username)){header("location:index.php");}
 if(!session_is_registered(username))
 	{
@@ -27,7 +29,7 @@ if(!session_is_registered(username))
 					  //$_SESSION['username'] = $_REQUEST['username'];
 					  //$_SESSION['password'] = $_REQUEST['password'];
 					  session_register("username");
-                      session_register("password");
+            session_register("password");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  //header("location:std_profile.php");
@@ -245,7 +247,7 @@ font-weight:bold;
 		}
 		else
 		{
-		echo '
+		echo'
 		<!DOCTYPE html>
 <html>
 <head>

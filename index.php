@@ -48,32 +48,6 @@ if($_SESSION["username"]) // To check login user if already login then hide logi
     <title>ระบบลงทะเบียนออนไลน์</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
-.o {
-	color: #000;
-}
-oo {
-	font-size: 24px;
-}
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
-	color: #060;
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-oo {
-	font-size: 12px;
-}
--->
-    </style>
 
 </head>
 <body>
@@ -107,8 +81,13 @@ oo {
              
             </table>
 
-	<?php echo $message; ?>		
-	<? 	
+  <?php 
+  if(isset($message)){
+    echo $message;
+  }
+   ?>	
+
+	<?php 	
 ######################################   To show login form if user do not login ###################################
 	
 	echo	'<form action="" method="post">
@@ -166,7 +145,8 @@ oo {
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
+                
+                ';
 		
 #########################   IF user already logined display wellcome below  ############################# 		
 		echo '
