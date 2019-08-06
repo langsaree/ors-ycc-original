@@ -1,33 +1,30 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_SESSION["username"]))
 	{
      include('db.php');
      $username = "";
      $password = "";
      if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+      if(isset($_POST['username'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+			if(empty($_POST['username']) && empty($_POST['password'])) {
 				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+			} else if(empty($_POST['username']) && !empty($_POST['password'])) {
 				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+			} else if(!empty($_POST['username']) && empty($_POST['password'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
+					  $_SESSION['logined'] = true;
+					  $_SESSION['username'] = $_POST['username'];
+            $_SESSION['password'] = $_POST['password'];
+            
 					  header("location:std_profile.php");
 					  }
 				   else
@@ -47,18 +44,7 @@ if(!session_is_registered(username))
 
     <title>ประชาสัมพันธ์</title>
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
+    
 </head>
 <body>
     <div class="BodyContent">
@@ -83,7 +69,6 @@ if(!session_is_registered(username))
           <h1>&nbsp;</h1>
         </div>
         </div><div class="Columns"><div class="Column1">
-         
           <div class="Block">
             
             <span class="BlockHeader"><span>Online Register</span></span>
@@ -91,8 +76,13 @@ if(!session_is_registered(username))
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+<?php
+if (isset($message)) {
+        echo $message;
+    }
+    ?>
+
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -159,18 +149,6 @@ if(!session_is_registered(username))
 
     <title>ประชาสัมพันธ์</title>
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
 </head>
 <body>
     <div class="BodyContent">
@@ -206,7 +184,7 @@ if(!session_is_registered(username))
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		
@@ -230,7 +208,9 @@ if(!session_is_registered(username))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
        
           <div class="Article">
-            <p align="center">&nbsp;</p>
+            <p align="center">Good you can edit </p>
+            <br>
+            <p align="center">Nice brother</p>
         </div>
         </div>
 
