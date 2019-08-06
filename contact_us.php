@@ -1,11 +1,44 @@
 <?php
 session_start();
-if(!isset($_SESSION["username"]))
-{
-  include('login_check.php');
-
+include('db.php');
+if(!session_is_registered(username))
+	{
 //include('db.php');
-
+$username = "";
+$password = "";
+if(!isset($_SESSION['logined'])) {
+   if(isset($_REQUEST['username'])) {
+   $username = $_REQUEST['username'];
+   $password = $_REQUEST['password'];
+			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
+			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
+			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
+			} else {
+			       $sql = "select * from student where username='$username' and password='$password'";
+                   $result=mysql_query($sql);
+                   $count=mysql_num_rows($result);
+                  if($count==1)
+                      {
+					  //$_SESSION['logined'] = true;
+					  //$_SESSION['username'] = $_REQUEST['username'];
+					  //$_SESSION['password'] = $_REQUEST['password'];
+					  session_register("username");
+                      session_register("password");
+					  //$_SESSION['username'] = $value["username"];
+                      //$_SESSION['password'] = $value["password"];
+					  header("location:std_profile.php");
+					  }
+				   else
+				   {
+				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+				   }
+				  }
+			  	}  
+   
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +49,15 @@ if(!isset($_SESSION["username"]))
 <title>ติดต่อผู้ดูแลระบบ</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-
+<!--
+.style25 {font-size: 11px; font-family: Tahoma; }
+.style7 {color: #3987FB; font-size: 14px; }
+.style30 {
+	color: #3987FB;
+	font-size: 16px;
+	font-weight: bold;
+}
+-->
     </style>
 </head>
 <body>
@@ -50,13 +91,8 @@ if(!isset($_SESSION["username"]))
              
             </table>
 
-            <?php 
-  if(isset($message)){
-    echo $message;
-  }
-  ?>		
-  <?php
-	 echo	'<form action="" method="post">
+	<?php echo $message; ?>		
+	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -124,7 +160,21 @@ if(!isset($_SESSION["username"]))
     <title>ระบบลงทะเบียนออนไลน์</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-
+<!--
+.style25 {font-size: 11px; font-family: Tahoma; }
+.style9 {font-size: 12px}
+.style7 {color: #3987FB; font-size: 14px; }
+.style26 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style30 {
+	color: #3987FB;
+	font-size: 16px;
+	font-weight: bold;
+}
+.style28 {font-size: 12px; font-weight: bold; }
+-->
     </style>
 </head>
 <body>
@@ -161,7 +211,7 @@ if(!isset($_SESSION["username"]))
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-    echo '<span class="style26 "> '.$_SESSION['$username'].' </span><br>';
+		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		$user=$username;
@@ -183,13 +233,12 @@ if(!isset($_SESSION["username"]))
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
- <?php
-///session_start();
-$c_error= "";
-if(isset($_POST['action'])){
+ <?
+session_start();
+if($_POST['action']){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
-    echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
+    //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
  }else{
      $headers  = "MIME-Version: 1.0\r\n";
      $headers .= "Content-type: text/html; charset=utf-8\r\n";
@@ -211,7 +260,7 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
  }
   }
 ?>
-<?php
+<?
 $num1 = rand(0,10);
 $num2 = rand(0,10);
 $_SESSION['total'] = ($num1 + $num2);
@@ -233,32 +282,32 @@ $_SESSION['total'] = ($num1 + $num2);
       <td width="187">&nbsp;</td>
     </tr>
 
-<?php
-$sql = "select * from student where username='$username' ";
-$result = mysqli_query($connection,$sql); 
-while($row=mysqli_fetch_array($result))
+<? 
+$sql = "select * from student where username='$user' ";
+$result = mysql_query($sql); 
+while($row=mysql_fetch_array($result))
 {
 
 ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name'  value="<?php echo $row["username"];?>" /></td>
+      <td><input type='text' name='name' value="<?=$row[username];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value=<?php echo $row["email"];?>" /></td>
+      <td><input type='text' name='email' value="<?=$row[email];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?php echo $row["phone"];?>" /></td>
+      <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
       <td>&nbsp;</td>
     </tr>
-    <?php } ?>
+    <? } ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อเรื่อง :</span></td>
@@ -274,13 +323,13 @@ while($row=mysqli_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">Code :
-        <?php echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
-        <?php echo '<span style="color:green">+</span>';?>
-        <?php echo '<span style="color:red"> '.$num2.'</span>';?>
+        <? echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
+        <? echo '<span style="color:green">+</span>';?>
+        <? echo '<span style="color:red"> '.$num2.'</span>';?>
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
-          <?php echo $c_error; ?> </td>
+          <? echo $c_error; ?> </td>
       </tr>
     <tr>
       <td>&nbsp;</td>
@@ -309,3 +358,4 @@ while($row=mysqli_fetch_array($result))
     </div>
 </div>
     </body>
+</html>
