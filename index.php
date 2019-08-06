@@ -1,6 +1,4 @@
 <?php
-
-// Anas
 session_start();
 include('db.php');
 if(!session_is_registered(username)) // To check login user if already login then hide login form
