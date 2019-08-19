@@ -138,7 +138,6 @@ if(!isset($_SESSION['logined'])) {
               </tr>
             </table>
             </form>
-		
               <br><br>
 			  
             </p>

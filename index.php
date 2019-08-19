@@ -1,43 +1,60 @@
 <?php
 session_start();
 include('db.php');
-if(!isset($_SESSION['username'])) // To check login user if already login then hide login form
-    {
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+}
 
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysqli_query($sql);
-                   $count=mysqli_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
-          }  
-        
+// To check login user if already login then hide login form
+if ($_POST) {
+  if (!empty($_POST['username']) && !empty($_POST['password'])) {
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+
+      if (!empty($username) && !empty($password)) {
+          $studentCheclLoginSQL = "select * from student where username = '$username' and password = '$password'";
+          $result = mysqli_query($conn, $studentCheclLoginSQL);
+          while ($row = mysqli_fetch_array($result)) {
+              echo $row['username'], $row['password'], $row['std_id'];
+          }
+          $count = mysqli_num_rows($result);
+          if ($count) {
+              $tocount = mysqli_fetch_assoc($result);
+              $_SESSION['std_id'] = $tocount["std_id"];
+              $_SESSION['username'] = $tocount["username"];
+
+              echo $_SESSION['std_id'], $_SESSION['username'];
+
+              header("Location:test.php");
+          }
+          if (!empty($username) && !empty($password)) {
+              $lecturerCheckLoginSQL = "select * ";
+              $lecturerCheckLoginSQL .= "from lecture ";
+              $lecturerCheckLoginSQL .= "where username = '$username' and password = '$password'";
+              $result1 = mysqli_query($conn, $lecturerCheckLoginSQL);
+              $count1 = mysqli_num_rows($result1);
+              if ($count1) {
+                  $count1 = mysqli_fetch_assoc($result1);
+                  $_SESSION['lec_id'] = $count1["lec_id"];
+                  $_SESSION['username'] = $count1["username"];
+                  header("Location:test.php");
+              } else {
+                  $message = "incorrect";
+//                    echo $username, $password;
+              }
+          }
+      } else {
+          header("Location:index.php");
+      }
+  } else if (empty($_POST['username']) && empty($_POST['password'])) {
+      $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
+  } else if (empty($_POST['username']) && !empty($_POST['password'])) {
+      $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
+  } else if (!empty($_POST['username']) && empty($_POST['password'])) {
+      $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
+  } else {
+      $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+  }
 }
 ?>
 
@@ -50,45 +67,27 @@ if(!isset($_SESSION['username'])) // To check login user if already login then h
     <title>ระบบลงทะเบียนออนไลน์</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px; color: black}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
-.o {
-	color: #000;
-}
-.o {
-	font-size: 24px;
-}
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
-	color: #060;
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-.o {
-	font-size: 12px;
-}
--->
-    </style>
+    <style type="text/css"></style>
 </head>
 <body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="ActiveMenuButtonInput"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
+<div class="BodyContent">
+<div class="BorderBorder">
+<div class="BorderBR"><div></div></div>
+<div class="BorderTL"></div>
+<div class="BorderTR"><div></div></div>
+<div class="BorderR"><div></div></div>
+<div class="BorderB"><div></div></div>
+<div class="BorderL"></div>
+<div class="Border">
 
         <div class="Menu">
             <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
+              <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span></a>
+              <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
               <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -99,17 +98,20 @@ if(!isset($_SESSION['username'])) // To check login user if already login then h
           <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
           <h1>&nbsp;</h1>
         </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
+        </div>
+        <div class="Columns"></div><div class="Column1"></div>
+        
+         <div class="Block"></div>
             
             <span class="BlockHeader"><span>Online Register</span></span>
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
 
-	<?php  $message; ?>		
-	<?php
+	<?php if(!empty($message)) {
+    echo "<span style=\"color:red\">$message</span>";
+  } ?>	
+	<?php if(!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
 ######################################   To show login form if user do not login ###################################
   echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -166,67 +168,11 @@ if(!isset($_SESSION['username'])) // To check login user if already login then h
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
-		}
-		else
-    {
-    
-#########################   IF user already logined display wellcome below  ############################# 		
-		echo '
-		<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>ระบบลงทะเบียนออนไลน์</title>
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px; color: black}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
-
-';
+				<?php '; ?>
+		<?php } else { ?>
+<?php #########################   IF user already logined display wellcome below  ############################# 	?>	
+		<?php echo ' ';?>
+    <?php
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
@@ -249,9 +195,16 @@ if(!isset($_SESSION['username'])) // To check login user if already login then h
         </div>
 
         </div><div class="MainColumn">
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-       
-          <div class="Article">
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
+        <div class="Article">
           <br>
           <table width="601" border="0" cellspacing="0" cellpadding="0">
   <tr>
@@ -283,26 +236,26 @@ while($row=mysqli_fetch_array($result_view))
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row["cos_group"].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?php echo '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row['cos_group'].'</span>' ?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?= $row["cos_id"];?></td>
+                <?php echo $row['cos_id'];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row["cos_name"];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?php echo $row['cos_name'];?></td>
                </tr>
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?=$row["cos_id"]; ?>" style="color: #333; text-decoration: none">ดาวน์โหกดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?php echo $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดาวน์โหกดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?=$row["cos_id"]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?php echo $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
 <?php } ?>
@@ -313,7 +266,15 @@ while($row=mysqli_fetch_array($result_view))
 
 
 
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
         </div>
         </div></div>
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                

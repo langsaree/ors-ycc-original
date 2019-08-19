@@ -1,11 +1,11 @@
-<?
+<?php
 session_start();
 include('auth.php');
 include ('db.php');
 extract ($_GET);
 $user=$id;
 ?>
-<?
+<?php
 $ok=$ok;
 if(isset($ok)){	
    $login = $_POST['login'];

@@ -7,4 +7,4 @@
  */
 session_start();
 
-echo $_SESSION['std_id'];
+echo $_SESSION['std_id']; ?>

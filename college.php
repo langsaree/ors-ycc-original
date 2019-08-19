@@ -2,37 +2,36 @@
 session_start();
 if(!isset($_SESSION['username']))
 	{
+    $username = $_SESSION['username'];
+  }
+  if (!isset($_SESSION['username'])) {
 include('db.php');
 $username = "";
 $password = "";
-if(!isset($_SESSION['logined'])) {
+if(!isset($_SESSION['username'])) {
    if(isset($_REQUEST['username'])) {
    $username = $_REQUEST['username'];
    $password = $_REQUEST['password'];
 			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
+				$message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
 			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
+				$message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
 			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
+				$message = "กรุณากรอกรหัสผ่านของท่านด้วย";
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysqli_query($sql);
+                   $result=mysqli_query($conn,$sql);
                    $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
+					  $_SESSION['username'] = $count['username'];
+					  $_SESSION['password'] = $count['password'];
 					  header("location:std_profile.php");
 					  }
 				   else
 				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+				    $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
 				   }
 				  }
 			  	}  
@@ -48,26 +47,30 @@ if(!isset($_SESSION['logined'])) {
     <title>เกี่ยวกับวิทยาลัย</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px;color: black}
-.style7 {color: #3987FB; font-size: 14px; }
--->
-    </style>
+    <style type="text/css"></style>
+
+    
 </head>
 <body>
     <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+<div class="BorderBorder">
+<div class="BorderBL"><div></div></div>
+<div class="BorderBR"><div></div></div>
+<div class="BorderTL"></div>
+<div class="BorderTR"><div></div></div>
+<div class="BorderR"><div></div></div>
+<div class="BorderB"><div></div></div>
+<div class="BorderL"></div>
       <div class="Border">
 
         <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+            <ul> 
+              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
+              <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -91,8 +94,10 @@ if(!isset($_SESSION['logined'])) {
 
 
 
-	<?php  $message; ?>		
-	<?php
+            <?php if(!empty($message)) {
+    echo "<span style=\"color:red\">$message</span>";
+  } ?>		
+	<?php if (!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
    echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -148,10 +153,11 @@ if(!isset($_SESSION['logined'])) {
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
-		}
+			<?php	'; ?>
+		<?php }
 		else
-		{
+    { ?>
+    <?php
 		echo '
 		<!DOCTYPE html>
 <html>
@@ -160,31 +166,30 @@ if(!isset($_SESSION['logined'])) {
 
     <title>เกี่ยวกับวิทยาลัย</title>
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px;color: black}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
+    <style type="text/css"></style>
+
+    
 </head>
 <body>
     <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+<div class="BorderBorder">
+<div class="BorderBL"><div></div></div>
+<div class="BorderBR"><div></div></div>
+<div class="BorderTL"></div>
+<div class="BorderTR"><div></div></div>
+<div class="BorderR"><div></div></div>
+<div class="BorderB"><div></div></div>
+<div class="BorderL"></div>
       <div class="Border">
 
         <div class="Menu">
             <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
+              <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -205,12 +210,14 @@ if(!isset($_SESSION['logined'])) {
             </table>
 
 
-';
+';?>
+<?php
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		}
+    }
+  }
 ?>
             <br>
           </div>
@@ -225,9 +232,18 @@ if(!isset($_SESSION['logined'])) {
                 </ul>
           </div>
         </div>
-        </div><div class="MainColumn">
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-       
+        </div>
+        <div class="MainColumn">
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
+        
           <div class="Article">
             <table width="598" border="0" cellspacing="0" cellpadding="5">
               <tr>
@@ -294,7 +310,15 @@ if(!isset($_SESSION['logined'])) {
 
 
 
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+          <div class="ArticleBL"><div></div></div>
+          <div class="ArticleBR"><div></div></div>
+          <div class="ArticleTL"></div>
+          <div class="ArticleTR"><div></div></div>
+          <div class="ArticleT"></div>
+          <div class="ArticleR"><div></div></div>
+          <div class="ArticleB"><div></div></div>
+          <div class="ArticleL"></div>
         </div>
         </div></div>
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
