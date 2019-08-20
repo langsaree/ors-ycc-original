@@ -1,11 +1,4 @@
-<?php
-session_start(); 
-include'db.php';
-if(!isset($_SESSION['username']))
-	{
-    
-    include('login_check.php');
-?>
+
 
 <!DOCTYPE html>
 <html>
