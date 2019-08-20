@@ -59,7 +59,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                 <td width="163">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; font-size:13px"> '.$username.'</span>'; ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -178,7 +178,7 @@ while($row=mysqli_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">สัญชาติ :</span></td>
-                    <td><?php echo $row[nation];?></td>
+                    <td><?php echo $row['nation'];?></td>
                     <td class="style60">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

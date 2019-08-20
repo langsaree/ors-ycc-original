@@ -12,5 +12,4 @@ $conn->query("set names utf8");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
 ?>
