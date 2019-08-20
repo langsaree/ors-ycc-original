@@ -1,12 +1,13 @@
 <?php
 //define connection elements
-$dbHost = "localhost:8889";
+$dbHost = "localhost:3306";
 $dbDatabase = "ors_ycc";
 $dbUsername = "root";
-$dbPassword = "root";
+$dbPassword = "";
 
 //connect to Database
-$connection = mysql_connect($dbHost, $dbUsername, $dbPassword);
+
+$connection = mysqli_connect($dbHost, $dbUsername,$dbPassword , $dbDatabase);
 
 //connection checking
 if ($connection) {
