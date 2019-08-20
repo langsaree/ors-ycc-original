@@ -3,6 +3,7 @@ session_start();
 include('db.php');
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
+    $username=$_SESSION["username"];
     include('login_check.php');   
 ?>
 
@@ -181,10 +182,10 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		$user=$username;
+		$user=$_SESSION["username"];
 		}
 ?>
             <br>
@@ -252,8 +253,8 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php
-$sql = "select * from student where username='$username' ";
-$result = mysqli_query($connection,$sql); 
+$sql = "select * from student where username='$user' ";
+$result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
 {
 
