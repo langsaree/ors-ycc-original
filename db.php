@@ -16,7 +16,7 @@ $connection = mysqli_connect($dbHost, $dbUsername,$dbPassword , $dbDatabase);
    mysqli_query($connection, "SET NAMES 'utf8'") or die( mysqli_error($connection));
   } else {
    
-   die("Could not connect with db" . mysqli_error());
+   die("Could not connect with database" . mysqli_error());
  }
 ?>
 
