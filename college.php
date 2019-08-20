@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION["username"]))
+include('db.php');
+if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
-include('login_check.php');
-
+    include('login_check.php');   
 ?>
 
 <!DOCTYPE html>
