@@ -1,4 +1,11 @@
-
+<?php
+session_start(); 
+include'db.php';
+if(!isset($_SESSION['username']))
+	{
+    
+    include('login_check.php');
+?>
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +46,7 @@
              
             </table>
 
-  <?php if(isset($message)){echo $message; }?>		
+	<?php if(isset($message)){echo $message; }?>		
 	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -89,7 +96,8 @@
               <br><br>
 			  
             </p>
-            <p>&nbsp;</p>
+            <p>&nbsp;</p> 
+
         <table width="150" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
