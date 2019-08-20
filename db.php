@@ -10,15 +10,15 @@ $dbPassword = "";
 $connection = mysqli_connect($dbHost, $dbUsername,$dbPassword , $dbDatabase);
 
 //connection checking
-if ($connection) {
-   $db_select = mysql_select_db($dbDatabase);
-   
+ if ($connection) {
+  
    //set universal encoding
-   mysql_query("SET NAMES 'utf8'") or die(mysql_error());
-   if (!$db_select) {
-      die("Could not select db" . mysql_error());
-   }
-} else {
-   die("Could not connect with db" . mysql_error());
-}
+   mysqli_query($connection, "SET NAMES 'utf8'") or die( mysqli_error($connection));
+  } else {
+   
+   die("Could not connect with db" . mysqli_error());
+ }
 ?>
+
+
+   
