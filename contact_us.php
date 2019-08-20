@@ -15,7 +15,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 <title>ติดต่อผู้ดูแลระบบ</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style7 {color: #3987FB; font-size: 14px; }
 .style30 {
@@ -23,7 +23,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 	font-size: 16px;
 	font-weight: bold;
 }
--->
+
     </style>
 </head>
 <body>
@@ -203,9 +203,8 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
- <?
-session_start();
-if($_POST['action']){
+ <?php
+if(isset($_POST['action'])){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
     //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
@@ -230,7 +229,7 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
  }
   }
 ?>
-<?
+<?php
 $num1 = rand(0,10);
 $num2 = rand(0,10);
 $_SESSION['total'] = ($num1 + $num2);
@@ -252,32 +251,32 @@ $_SESSION['total'] = ($num1 + $num2);
       <td width="187">&nbsp;</td>
     </tr>
 
-<? 
-$sql = "select * from student where username='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+<?php
+$sql = "select * from student where username='$username' ";
+$result = mysqli_query($connection,$sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?=$row[username];?>" /></td>
+      <td><input type='text' name='name' value="<?php $row["username"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value="<?=$row[email];?>" /></td>
+      <td><input type='text' name='email' value="<?php $row["email"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
+      <td><input type='text' name='tel' value="<?php $row["phone"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
-    <? } ?>
+    <?php } ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อเรื่อง :</span></td>
@@ -293,13 +292,13 @@ while($row=mysql_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">Code :
-        <? echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
-        <? echo '<span style="color:green">+</span>';?>
-        <? echo '<span style="color:red"> '.$num2.'</span>';?>
+        <?php echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
+        <?php echo '<span style="color:green">+</span>';?>
+        <?php echo '<span style="color:red"> '.$num2.'</span>';?>
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
-          <? echo $c_error; ?> </td>
+          <?php if(isset($c_error)){echo $c_error; }?> </td>
       </tr>
     <tr>
       <td>&nbsp;</td>
