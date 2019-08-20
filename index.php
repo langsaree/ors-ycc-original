@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if(!isset($_SESSION['username'])) // To check login user if already login then hide login form
 	{
     
      $username = "";
@@ -17,25 +17,22 @@ if(!session_is_registered(username)) // To check login user if already login the
 			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+             $sql = "select * from student where username='$username' and password='$password'";
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
+                          $_SESSION['login']=true;
+                          $_SESSION['username']=$_POST['username'];
+                          $_SESSION['password']=$_POST['password'];
+
+                          header("location:std_profile.php");
+                      }
+           else
+           {
+            $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+           }
+          }
 			  	}  
    
 }
@@ -109,8 +106,8 @@ s
              
             </table>
 
-	<?php echo $message; ?>		
-	<? 	
+	<? echo $message; ?>		
+	<?php
 ######################################   To show login form if user do not login ###################################
 	
 	echo	'<form action="" method="post">
@@ -229,7 +226,7 @@ s
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 		}
@@ -261,7 +258,7 @@ s
     <td width="420">&nbsp;</td>
   </tr>
   <tr>
-    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือ</span>นมกราคม 2554</td>
+    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือ</span>มกราคม 2554</td>
     </tr>
   <tr>
     <td>&nbsp;</td>
@@ -270,10 +267,10 @@ s
   </tr>
 </table>
 
-<?
+<?php
 $sql_view = "select * from course where status='1' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
+$result_view = mysqli_query($connection, $sql_view);
+while($row=mysqli_fetch_array($result_view))
 {
 
 ?>
@@ -283,29 +280,29 @@ while($row=mysql_fetch_array($result_view))
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row[cos_group].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row['cos_group'].'</span>' ?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?= $row[cos_id];?></td>
+                <?= $row['cos_id'];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row[cos_name];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row['cos_name'];?></td>
                </tr>
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?=$row['cos_id']; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?=$row['cos_id']; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
-               <? } ?>
+               <?php } ?>
           </table>
             <p align="center">&nbsp;</p>
         </div>

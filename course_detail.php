@@ -3,7 +3,7 @@ session_start();
 include('db.php');
 extract ($_GET);
 $cos_id=$id;
-if(!session_is_registered(username))
+if(!$_SESSION["username"])
 	{
      
      $username = "";
@@ -20,25 +20,22 @@ if(!session_is_registered(username))
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  //header("location:std_profile.php");
-					  }
+                          $_SESSION['login']=true;
+                          $_SESSION['username']=$_POST['username'];
+                          $_SESSION['password']=$_POST['password'];
+
+                          header("location:std_profile.php");
+                      }
 				   else
 				   {
 				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
 				   }
 				  }
-			  	}  
+			  	}
    
 }
 ?>
@@ -96,8 +93,8 @@ if(!session_is_registered(username))
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php echo $message; ?>
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -212,7 +209,7 @@ if(!session_is_registered(username))
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26"> '.$username.' </span><br>';
+		echo '<span class="style26"> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		}
@@ -236,12 +233,12 @@ if(!session_is_registered(username))
        
           <div class="Article">
             <p>
-  <?
-$sql_view = "select * from course where cos_id='$cos_id' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
-{
-?>
+  <?php
+  $sql_view = "select * from course where status='1' ";
+  $result_view = mysqli_query($connection, $sql_view);
+  while($row=mysqli_fetch_array($result_view))
+  {
+  ?>
               
             </p>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="2">
@@ -257,25 +254,25 @@ while($row=mysql_fetch_array($result_view))
               <tr>
                 <td width="34" height="18" style="font-weight: bold; color:#000;">&nbsp;</td>
                 <td width="105" style="font-weight: bold;  color:#000;">ชื่อหลักสูตร</td>
-                <td width="410" style="font-weight: bold;  color:#000;"><?= $row[cos_name];?></td>
+                <td width="410" style="font-weight: bold;  color:#000;"><?= $row['cos_name'];?></td>
                 <td width="52">&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;" >รหัสหลักสูตร</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_id];?></td>
+                <td style="font-weight: bold;  color:#000;"><?= $row['cos_id'];?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;">หมู่วิชา</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_group];?></td>
+                <td style="font-weight: bold;  color:#000;"><?= $row['cos_group'];?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;">จำนวนชั่วโมง</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_time].' '.'ชั่วโมง';?></td>
+                <td style="font-weight: bold;  color:#000;"><?= $row['cos_time'].' '.'ชั่วโมง';?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
@@ -321,7 +318,7 @@ while($row=mysql_fetch_array($result_view))
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>  
-              <? } ?>
+              <?php } ?>
             </table>
           </div>
         </div>

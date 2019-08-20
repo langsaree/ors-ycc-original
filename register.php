@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -112,7 +112,13 @@ session_start();
                         &nbsp;&nbsp;เพื่อเข้าไปลงทะเบียนเรียนหลักสูตรอื่นๆ ได้ <br></td>
                     </tr>
                     <tr>
-                      <td colspan="3" bgcolor="#CCCCCC"><? echo "$std_error"; ?></td>
+                      <td colspan="3" bgcolor="#CCCCCC">
+
+                          <?php if(!empty($std_error)) {
+                              echo $std_error;
+                          } ?>
+
+                      </td>
                       </tr>
                     <tr>
                       <td width="81" bgcolor="#CCCCCC">&nbsp;</td>

@@ -1,6 +1,6 @@
-<?
+<?php
 session_start();
-if(!session_is_registered("username")){header("location:index.php");}
+if(!isset($_SESSION["username"])){header("location:index.php");}
 //end of check session
 ?>
 
@@ -14,7 +14,7 @@ if(!session_is_registered("username")){header("location:index.php");}
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style7 {color: #3987FB; font-size: 14px; }S
 .style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
@@ -55,7 +55,7 @@ a:active {
 }
 .style66 {font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; }
 .style67 {font-size: 12px}
--->
+
     </style>
 </head>
 <body>
@@ -89,7 +89,7 @@ a:active {
                 <td width="163">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; font-size:13px"> '.$_SESSION['username'].'</span>'; ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -129,8 +129,8 @@ a:active {
  <? 
 include ('db.php');
 $sql = "select * from student where username='$username' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($connection, $sql);
+while($row=mysqli_fetch_array($result))
 {
 
 ?>       
@@ -140,7 +140,7 @@ while($row=mysql_fetch_array($result))
              <td
  
                          width="435" height="30" valign="middle">&nbsp;</td>
-             <td width="99" valign="middle" class="style33"><a href="profile_update.php?id=<?=$row[std_id];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
+             <td width="99" valign="middle" class="style33"><a href="profile_update.php?id=<?=$row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
              <td width="83" valign="middle"><span class="style66"><a href="logout.php"  style="text-decoration: none">ออกจากระบบ</a></span></td>
            </tr>
            <tr>
@@ -172,7 +172,7 @@ while($row=mysql_fetch_array($result))
   <tr>
                     <td width="27" height="18">&nbsp;</td>
                     <td width="196" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
-                    <td colspan="4"><? echo $row[username]; ?>                    
+                    <td colspan="4"><? echo $row[username]; ?>
                   </tr>
                   <tr>
                     <td height="18" style="text-align: right">&nbsp;</td>

@@ -2,7 +2,7 @@
 //session_start();
 //if(session_is_registered("user_admin")){header("location:cpanel.php");}
 //ob_start(); 
-include("db.php");
+include("../db.php");
 $username=$_POST["username"];
 $password=$_POST["password"];
 //$code=$_POST['code'];

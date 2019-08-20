@@ -34,11 +34,11 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
 } 
 ob_end_flush();
 */?>
-<? 
+<?php
 include('db.php');
 $username = "";
 $password = "";
-if(!isset($_SESSION['logined'])) {
+if(!isset($_SESSION['login'])) {
    if(isset($_REQUEST['username'])) {
    $username = $_REQUEST['username'];
    $password = $_REQUEST['password'];
@@ -50,19 +50,16 @@ if(!isset($_SESSION['logined'])) {
 				$message = "<span class=\"red\">กรุณากรอกรหัสผ่านของท่านด้วย</span>";
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1/*&&strcmp($code,$code_hidden)==0*/)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  header("location:std_profile.php");
-					  }
+                          $_SESSION['login']=true;
+                          $_SESSION['username']=$_POST['username'];
+                          $_SESSION['password']=$_POST['password'];
+
+                          header("location:std_profile.php");
+                      }
 				   else
 				   {
 				    $message = "<span class=\"red\">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>";
