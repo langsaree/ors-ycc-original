@@ -2,71 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" afterPath="$PROJECT_DIR$/ann.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" afterPath="$PROJECT_DIR$/college.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/count1-100.php" beforeDir="false" afterPath="$PROJECT_DIR$/count1-100.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/course_detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_active.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_del.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_del.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/grade_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/grade_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/lec_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/lec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/lec_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/p_searchx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/p_searchx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos_addx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_addx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/psearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/psearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pstd_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pstd_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/register_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/register_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_active.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view _status.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view _status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/view_registered.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallary.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_view_cos.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_view_cos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_view_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_view_student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/login_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p_register.php" beforeDir="false" afterPath="$PROJECT_DIR$/p_register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/register_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_course_bk.php" beforeDir="false" afterPath="$PROJECT_DIR$/register_course_bk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_login_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +91,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/index.php</url>
-          <line>17</line>
+          <line>8</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
