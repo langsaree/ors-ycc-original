@@ -1,11 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION{"username"]))
-	{
-     include('login_check.php');
-    
-   
-}
+include ('db.php');
+if(!isset($_SESSION["username"]))
+{
+     include('login_check.php');  
+
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +15,8 @@ if(!isset($_SESSION{"username"]))
     <title>หลักสูตรที่เปิดสอน</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
+
+
     </style>
 </head>
 <body>
@@ -63,8 +54,12 @@ if(!isset($_SESSION{"username"]))
 
 
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+            <?php 
+  if (isset($message)){
+  echo $message;
+  }
+   ?>	
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -123,8 +118,8 @@ if(!isset($_SESSION{"username"]))
 		}
 		else
 		{
-		echo '
-		<!DOCTYPE html>
+		echo 
+		'<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -181,7 +176,7 @@ if(!isset($_SESSION{"username"]))
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		}
+		} 
 ?>
             <br>
           </div>
