@@ -58,8 +58,12 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+   <?php 
+  if (isset($message)){
+  echo $message;
+  }
+   ?>		
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
