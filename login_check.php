@@ -1,5 +1,8 @@
 
 <?php
+session_start();
+if(!isset($_SESSION['username']))
+{
 include('db.php');
 $username = "";
 $password = "";
@@ -15,7 +18,7 @@ if(!isset($_SESSION['logined'])) {
 				$message = "<span class=\"red\">กรุณากรอกรหัสผ่านของท่านด้วย</span>";
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysqli_query($sql);
+                   $result=mysqli_query($conn,$sql);
                    $count=mysqli_num_rows($result);
                   if($count==1/*&&strcmp($code,$code_hidden)==0*/)
                       {
@@ -42,7 +45,7 @@ if(!isset($_SESSION['logined'])) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-<meta http-equiv="refresh" content="1; url=index.php">
+<meta http-equiv="refresh" content="1"; url="index.php">
 <title>login check</title>
 </head>
 

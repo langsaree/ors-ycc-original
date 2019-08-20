@@ -1,6 +1,10 @@
 <?php
 session_start();
-if(!session_is_registered("username")){header("location:index.php");}
+if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+} else 
+
+{header("location:register.php");}
 //end of check session
 ?>
 
@@ -344,7 +348,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
-                  <? } ?>
+                  <?php } ?>
                  
               </table>
                 <table width="640" border="0" align="center" cellpadding="0" cellspacing="2">
