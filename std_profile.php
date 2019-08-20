@@ -1,6 +1,5 @@
 <?php
 Session_start();
-session_start();
 if(!isset($_SESSION["username"])){header("location:index.php");}
 //end of check session
 $username = $_SESSION["username"];
@@ -132,7 +131,7 @@ a:active {
 
            <?php
            include ('db.php');
-           $sql = "select * from student where username='$username' ";
+           $sql = "select * from student where username =  '$username' ";
            $result = mysqli_query($connection, $sql);
            while($row=mysqli_fetch_array($result))
            {
@@ -144,7 +143,7 @@ a:active {
                    <td
 
                            width="435" height="30" valign="middle">&nbsp;</td>
-                   <td width="99" valign="middle" class="style33"><a href="profile_update.php?id= <?php echo $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
+                   <td width="99" valign="middle" class="style33"><a href="profile_update.php?id= <?php $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
                    <td width="83" valign="middle"><span class="style66"><a href="logout.php"  style="text-decoration: none">ออกจากระบบ</a></span></td>
                </tr>
                <tr>
