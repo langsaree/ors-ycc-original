@@ -1,42 +1,9 @@
 <?php
 session_start();
-include('db.php');
-if($_SESSION["username"]) // To check login user if already login then hide login form
-	{
-    
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  header("location:std_profile.php");
-					  }
-				   else
-				   { $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>'; }
-				  }
-			  	}    
-}
-  }
+include'db.php';
+if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
+	{ 
+    include('login_check.php');
 ?>
 
 
@@ -82,9 +49,7 @@ if($_SESSION["username"]) // To check login user if already login then hide logi
             </table>
 
   <?php 
-  if(isset($message)){
-    echo $message;
-  }
+  if(isset($message)){ echo $message;  }
    ?>	
 
 	<?php 	
@@ -147,7 +112,8 @@ if($_SESSION["username"]) // To check login user if already login then hide logi
                 </table>
                 
                 ';
-		
+  }
+else {
 #########################   IF user already logined display wellcome below  ############################# 		
 		echo '
 		<!DOCTYPE html>
@@ -208,7 +174,7 @@ if($_SESSION["username"]) // To check login user if already login then hide logi
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
-		
+}		
 ?>
             <br>
           </div>
@@ -248,7 +214,7 @@ if($_SESSION["username"]) // To check login user if already login then hide logi
 
 <?
 $sql_view = "select * from course where status='1' ";
-$result_view = mysql_query($sql_view);
+$result_view = mysqli_query($connection,$sql_view);
 while($row=mysql_fetch_array($result_view))
 {
 
@@ -259,16 +225,16 @@ while($row=mysql_fetch_array($result_view))
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row[cos_group].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row['cos_group'].'</span>' ?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?= $row[cos_id];?></td>
+                <?= $row['cos_id'];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row[cos_name];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row['cos_name'];?></td>
                </tr>
              
               <tr>
