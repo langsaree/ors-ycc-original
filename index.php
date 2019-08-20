@@ -136,8 +136,7 @@ if (isset($message)) {
                   <tr>
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
-                </table>
-				';
+                </table>';
 } 
 
 else {
@@ -193,10 +192,9 @@ else {
             <span class="BlockHeader"><span>Online Register</span></span>
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
 
-            </table>
+            </table>';
 
 
-';
     echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
     echo '<span class="style26 "> ' .$_SESSION["username"]. ' </span><br>';
     echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';

@@ -1094,7 +1094,7 @@ if(isset($_POST["register"])) {
                   </tr>
                   <tr>
                     <td width="213" height="16">&nbsp;</td>
-                    <td width="224"><input class="submit_Register" type="submit" src="images/register.png" name="register" value="" alt="Submit"/></td>
+                    <td width="224"><input class="submit_Register" type="submit"src="images/register.png" name="register" value="" alt="Submit"/></td>
                     <td width="174">&nbsp;</td>
                     </tr>
                    
