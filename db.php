@@ -1,10 +1,10 @@
 <?php
 //define connection elements
 $dbHost = "localhost:8889";
-$dbDatabase = "ors_ycc";5
+$dbDatabase = "ors_ycc";
 $dbUsername = "root";
 $dbPassword = "root";
-
+here
 //connect to Database
 $connection = mysql_connect($dbHost, $dbUsername, $dbPassword);
 
