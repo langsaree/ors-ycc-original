@@ -3,11 +3,12 @@ session_start();
 include('auth.php');
 include ('db.php');
 extract ($_GET);
-$user=$_POST['std_id'];
+//$user=$_POST['std_id'];
+$username = $_SESSION["username"];
 ?>
 <?php
-$ok=$_POST['ok'];
-if(isset($ok)){	
+//$ok=$_POST['ok'];
+if(isset($_POST['ok'])){
    $login = $_POST['login'];
    $email=$_POST['email'];
    $pswd = $_POST['pswd'];
@@ -160,7 +161,7 @@ input, textarea {
                 <td width="170">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; font-size:15px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; color: #111111; font-size:15px"> '.$username.'</span>'; ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -214,7 +215,7 @@ input, textarea {
          <table width="600" border="0" align="center" cellpadding="0" cellspacing="2">
            <tr>
 <?php
-$sql = "select * from student where std_id='$user' ";
+$sql = "select * from student where username =  '$username' ";
 $result = mysqli_query($connection, $sql);
 while($row=mysqli_fetch_array($result))
 {
@@ -331,7 +332,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">วันเกิด : </span></td>
                     <td><label for="birthday"></label>
-                      <input name="birthday" type="text" id="birthday" value="<?php $row[birthday];?>"></td>
+                      <input name="birthday" type="text" id="birthday" value="<?php $row["birthday"];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -374,7 +375,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">จังหวัด :</span></td>
                     <td><label for="province"></label>
-                      <input type="text" name="province" id="province" value="<?php $row[province];?>"></td>
+                      <input type="text" name="province" id="province" value="<?php $row["province"];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
