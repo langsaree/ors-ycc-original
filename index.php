@@ -260,7 +260,7 @@ if ($_POST) {
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
-                                </tr>
+                                </tr>w
                             </table>
 
                             <?php
