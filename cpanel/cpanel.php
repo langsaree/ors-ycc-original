@@ -1,7 +1,7 @@
-<?
-//session_start();
-//if(!session_is_registered(user_admin)){header("location:index.php");}
-//end of check session
+<?php
+session_start();
+if(!isset($_SESSION["username"]){header("location:index.php");}
+// end of check session
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,11 +10,7 @@
 <title>Cpanel</title>
 <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="cpanel.css" />
-<style type="text/css">
-<!--
 
--->
-</style>
 </head>
 <body>
 <div class="banner"><span class="style25"></span></div>
