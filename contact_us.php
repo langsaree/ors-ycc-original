@@ -13,17 +13,7 @@ include('login_check.php');
 
     <title>ติดต่อผู้ดูแลระบบ</title>
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
 
-        .style25 {font-size: 11px; font-family: Tahoma; }
-        .style7 {color: #3987FB; font-size: 14px; }
-        .style30 {
-            color: #3987FB;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-    </style>
 </head>
 <body>
 <div class="BodyContent">

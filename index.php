@@ -22,21 +22,12 @@ include('login_check.php');
 <body>
 <div class="BodyContent">
     <div class="BorderBorder">
-        </div>
-        </div>
-        <div class="BorderBR">
-            <div></div>
-        </div>
+        <div class="BorderBL"><div></div></div>
+        <div class="BorderBR"><div></div></div>
         <div class="BorderTL"></div>
-        <div class="BorderTR">
-            <div></div>
-        </div>
-        <div class="BorderR">
-            <div></div>
-        </div>
-        <div class="BorderB">
-            <div></div>
-        </div>
+        <div class="BorderTR"><div></div></div>
+        <div class="BorderR"><div></div></div>
+        <div class="BorderB"><div></div></div>
         <div class="BorderL"></div>
         <div class="Border">
 

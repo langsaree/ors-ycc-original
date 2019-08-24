@@ -19,7 +19,7 @@ include('login_check.php');
 <body>
 <div class="BodyContent">
     <div class="BorderBorder">
-        <div class="BorderBL"></div></div></div>
+        <div class="BorderBL"><div></div></div>
         <div class="BorderBR"><div></div></div>
         <div class="BorderTL"></div>
         <div class="BorderTR"><div></div></div>
