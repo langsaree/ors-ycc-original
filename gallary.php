@@ -213,12 +213,12 @@ include('login_check.php');
                                 <h1 class="style30">ภาพกิจกรรม</h1>
 
                                 <div id="galleria">
-                                    <img src="http://www.ycc.ac.th/images/stories/pb058590.jpg" >
-
-                                    <img src="http://www.ycc.ac.th/images/stories/imga4838.jpg">
-                                    <img  src="http://www.ycc.ac.th/images/stories/imga4900.jpg">
-                                    <img src="http://www.ycc.ac.th/images/stories/pb058615.jpg">
-                                    <img src="http://www.ycc.ac.th/images/stories/imga4884.jpg">              </div>
+                                    <img src="gallary/imga4838.jpg">
+                                    <img  src="gallary/imga4884.jpg">
+                                    <img src="gallary/imga4900.jpg">
+                                    <img src="gallary/pb058590.jpg">
+                                    <img src="gallary/pb0585791.jpg">
+                                </div>
                             </div>
                             <script>
                                 // Load the classic theme
