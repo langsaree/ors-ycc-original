@@ -22,8 +22,7 @@ include('login_check.php');
 <body>
 <div class="BodyContent">
     <div class="BorderBorder">
-        <div class="ActiveMenuButtonInput">
-            <div></div>
+        </div>
         </div>
         <div class="BorderBR">
             <div></div>
