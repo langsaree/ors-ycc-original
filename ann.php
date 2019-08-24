@@ -1,9 +1,8 @@
 <?php
 session_start();
-include 'db.php';
-if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
-{
-include('login_check.php');
+if(!isset($_SESSION["username"])){header("location:index.php");}
+//end of check session
+$username = $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
@@ -13,18 +12,6 @@ include('login_check.php');
 
     <title>ประชาสัมพันธ์</title>
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
 </head>
 <body>
     <div class="BodyContent">
@@ -57,8 +44,8 @@ include('login_check.php');
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+              <?php if (isset($message)) { echo $message; } ?>
+              <?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -118,27 +105,6 @@ include('login_check.php');
 		else
 		{
 		echo '
-		<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>ประชาสัมพันธ์</title>
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
-</head>
-<body>
     <div class="BodyContent">
 <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
       <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
@@ -172,7 +138,7 @@ include('login_check.php');
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		
