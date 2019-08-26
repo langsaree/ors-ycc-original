@@ -1046,26 +1046,26 @@ if(isset($ok)) {
                       <input type="text" name="eduplace" id="textfield3" class="inputbox-normal" style="background: <? if($errmsg32) echo "#EEFCE2"; ?>" value="<?= $eduplace ?>" /></td>
                     <td>&nbsp;</td>
                   </tr>
-                    <? if($errmsg33) {?>
+                    <?php if($errmsg33) {?>
                   <tr>
                     <td>&nbsp;</td>
                     <td><?= $errmsg33 ?></td>
                     <td>&nbsp;</td>
                   </tr>
-                  <? } ?>
+                  <?php } ?>
                   <tr>
                     <td>จังหวัด</td>
                     <td><label for="textfield4"></label>
                       <input type="text" name="eduprovince" id="textfield4" class="inputbox-normal" style="background:<? if($errmsg33) echo "#EEFCE2"; ?>" value="<?= $eduprovince ?>" /></td>
                     <td>&nbsp;</td>
                   </tr>
-                    <? if($errmsg34) {?>
+                    <?php if($errmsg34) {?>
                   <tr>
                     <td>&nbsp;</td>
                     <td><?= $errmsg34 ?></td>
                     <td>&nbsp;</td>
                   </tr>
-                   <? } ?>
+                   <?php } ?>
                   <tr>
                     <td>ปีการศึกษา</td>
                     <td><label for="textfield5"></label>

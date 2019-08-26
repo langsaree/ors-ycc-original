@@ -73,13 +73,11 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php 
-$user=$username;
-$sql = "select * from student where username='$user' ";
-$result = mysqli_query($conn,$sql); 
-while($row=mysqli_fetch_array($result))
-{
-
-?> 
+if (isset($_SESSION['username'])) {
+  $sql = "select * from student where username='$user' ";
+  $result = mysqli_query($connection, $sql);
+  while ($row = mysqli_fetch_array($result)) {
+      ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
@@ -98,7 +96,7 @@ while($row=mysqli_fetch_array($result))
       <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
       <td>&nbsp;</td>
     </tr>
-    <?php } ?>
+    <?php } } ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อเรื่อง :</span></td>
