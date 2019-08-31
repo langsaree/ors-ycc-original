@@ -11,8 +11,8 @@ $password=$_POST['password2'];
 // To protect MySQL injection (more detail about MySQL injection)
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
+$username = mysql_real_escape_string($conn,$username);
+$password = mysql_real_escape_string($conn,$password);
 
 $sql="SELECT * FROM student WHERE username='$username' and password='$password'";
 $result=mysqli_query($conn,$sql);
@@ -25,7 +25,7 @@ if($count==1)
 {
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 $_SESSION['username'] = $username;
-$_SESSION['password'] = $password;
+//$_SESSION['password'] = $password;
 
 //session_register("sessioncode");
 header("location:std_profile.php");
@@ -33,7 +33,7 @@ header("location:std_profile.php");
 else
  {
 //$error='Wrong Username or Password';
-$std_error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิด กรุณาลองใหม่</span>';
+$std_error="ชื่ิอเข้าระบบและรหัสผ่านผิด กรุณาลองใหม่";
 include ('register.php');
 //header("location:register.php");
 } 
