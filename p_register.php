@@ -32,10 +32,10 @@ $sql = "insert into student(username,password,f_name,name,s_name,gender,b_day,b_
 '$mobile','$job','$t_job')";
 
 
-$result = mysqli_query($sql);
+$result = mysqli_query($conn,$sql);
 if (!$result)
 {
-die("could not connect db".mysqli_error());
+die("could not connect db".mysqli_connect_error());
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -43,16 +43,7 @@ die("could not connect db".mysqli_error());
 <head>
 <meta http-equiv="refresh"content="3; url='home.php' charset=tis-620" />
 <title>Untitled Document</title>
-<style type="text/css">
-<!--
-.style1 {
-	font-size: 36px;
-	color: #DD0000;
-	font-weight: bold;
-}
-.style4 {color: #0000FF}
--->
-</style>
+<style type="text/css"></style>
 </head>
 
 <body>

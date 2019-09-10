@@ -45,7 +45,111 @@ if (isset($_POST['ok'])) {
     <title>ลงทะเบียนเรียนใหม่</title>
      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css"></style>
+    <style type="text/css">
+    <!--
+.style25 {font-size: 11px; font-family: Tahoma; }
+.style7 {color: #3987FB; font-size: 14px; }
+.style26 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style29 {
+	color: #FF0000;
+	font-size: 16px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: oblique;
+}
+.style30 {
+	font-size: 10px;
+	color: #333333;
+}
+.style31 {font-size: 10px}
+.style32 {color: #e0f6fc}
+.style34 {
+	color: #FF0000;
+	font-size: 16px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+}
+.style35 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.style36 {font-size: 16px}
+.style37 {font-size: 18px}
+textarea:focus, input:focus {
+        border: 2px solid #333;
+}
+.black_color{
+color: #000;
+}
+body{
+font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+p, h1, form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+/* ----------- My Form ----------- */
+.myform{
+margin:0 auto;
+width:400px;
+padding:14px;
+}
+/* ----------- stylized ----------- */
+#stylized{
+border:solid 2px #b7ddf2;
+background:#ebf4fb;
+}
+#stylized h1 {
+font-size:14px;
+font-weight:bold;
+margin-bottom:8px;
+}
+#stylized p{
+font-size:11px;
+color:#666666;
+margin-bottom:20px;
+border-bottom:solid 1px #b7ddf2;
+padding-bottom:10px;
+}
+#stylized label{
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left;
+}
+#stylized .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+#stylized input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+margin:2px 0 20px 10px;
+}
+#stylized button{
+clear:both;
+margin-left:150px;
+width:125px;
+height:31px;
+background:#666666 url(img/button.png) no-repeat;
+text-align:center;
+line-height:31px;
+color:#FFFFFF;
+font-size:11px;
+font-weight:bold;
+}
+-->
+    
+    </style>
     
 </head>
 <body>

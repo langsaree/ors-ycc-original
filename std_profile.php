@@ -17,7 +17,87 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
     <title>ข้อมูลนักศึกษา </title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css"></style>
+    <style type="text/css">
+     <!--
+        .style25 {
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        .style7 {
+            color: #3987FB;
+            font-size: 14px;
+        }
+        S
+        .style46 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+        .style47 {
+            font-size: 13px
+        }
+        .style54 {
+            font-size: 14px
+        }
+        .style55 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        .style56 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #CCCCCC;
+        }
+        .style58 {
+            color: #333333
+        }
+        .style60 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            color: #333333;
+            font-weight: bold;
+        }
+        .style61 {
+            font-size: 13px;
+            color: #333333;
+        }
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        .style33 {
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #666666;
+        }
+        .style62 {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #333333;
+        }
+        .style64 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .style66 {
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #666666;
+        }
+        .style67 {
+            font-size: 12px
+        }
+        -->
+    
+    </style>
 </head>
 <body>
     <div class="BodyContent">
@@ -103,8 +183,8 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
        </div>
  <?php
 include ('db.php');
-$sql = "select * from student where username='$username' ";
-$result = mysqli_query($conn,$sql); 
+$sqli = "select * from student where username='$username' ";
+$result = mysqli_query($conn,$sqli); 
 while($row=mysqli_fetch_array($result))
 {
 
@@ -115,7 +195,7 @@ while($row=mysqli_fetch_array($result))
              <td
  
                          width="435" height="30" valign="middle">&nbsp;</td>
-             <td width="99" valign="middle" class="style33"><a href="profile_update.php?id=<?=$row[std_id];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
+             <td width="99" valign="middle" class="style33"><a href="profile_update.php id=<?php echo row['std_id'];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
              <td width="83" valign="middle"><span class="style66"><a href="logout.php"  style="text-decoration: none">ออกจากระบบ</a></span></td>
            </tr>
            <tr>

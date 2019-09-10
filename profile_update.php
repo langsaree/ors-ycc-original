@@ -3,7 +3,7 @@ session_start();
 include('auth.php');
 include ('db.php');
 extract ($_GET);
-$user=$_POST['id'];
+$user=$id;
 ?>
 <?php
 //$ok=$ok;
@@ -69,64 +69,7 @@ if(isset($_POST['ok'])){
     <title>ข้อมูลนักศึกษา </title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
-.style47 {font-size: 13px}
-.style54 {font-size: 14px}
-.style55 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; }
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-.style58 {color: #333333}
-.style60 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #333333;
-	font-weight: bold;
-}
-.style61 {font-size: 13px; color: #333333; }
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-.style33 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #666666;
-}
-.style62 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333333; }
-.style64 {
-	font-size: 14px;
-	font-weight: bold;
-	color: #333333;
-}
-.style66 {font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; }
-.style67 {font-size: 12px}
-input, textarea {
-		background:#C3E0C4;
-		color:#000000;
-		font:14px 'courier new',courier, monospace;
-		padding:6px;
-		border: 2px solid #cccccc;
-		position:relative;
-		top:0;
-		left:0;
-	}
-	input:focus, textarea:focus {
-		background:#E3E7A6;
-		color:#000000;
-	}
--->
-    </style>
+    <style type="text/css"></style>
 </head>
 <body>
     <div class="BodyContent">
@@ -141,10 +84,7 @@ input, textarea {
       <div class="Border">
 
         <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
+            <ul> 
               <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
               <a href="#" class="MenuButton">  <span>วิทยาลัย</span></a>
               <a href="#" class="MenuButton"><span>หลักสูตร</span></a>
@@ -170,7 +110,7 @@ input, textarea {
                 <td width="170">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:15px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; font-size:15px"> '.$username.'</span>'; ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -195,7 +135,15 @@ input, textarea {
         </div>
 
         </div><div class="MainColumn">
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
        
                <div class="Article">
                <form action="" method="POST">

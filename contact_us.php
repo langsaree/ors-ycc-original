@@ -74,26 +74,26 @@ $_SESSION['total'] = ($num1 + $num2);
 
 <?php 
 if (isset($_SESSION['username'])) {
-  $sql = "select * from student where username='$user' ";
-  $result = mysqli_query($connection, $sql);
+  $sqli = "select * from student where username='$username' ";
+  $result = mysqli_query($conn, $sqli);
   while ($row = mysqli_fetch_array($result)) {
       ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?=$row[username];?>" /></td>
+      <td><input type='text' name='name' value="<?php echo $row['username'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value="<?=$row[email];?>" /></td>
+      <td><input type='text' name='email' value="<?php echo $row['email'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?=$row[phone];?>" /></td>
+      <td><input type='text' name='tel' value="<?php echo $row['phone'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <?php } } ?>
@@ -118,7 +118,7 @@ if (isset($_SESSION['username'])) {
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
-          <?php  $c_error; ?> </td>
+          <?php $c_error; ?> </td>
       </tr>
     <tr>
       <td>&nbsp;</td>
@@ -140,7 +140,15 @@ if (isset($_SESSION['username'])) {
 
 
 
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
         </div>
         </div></div>
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
