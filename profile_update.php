@@ -1,11 +1,11 @@
-<?
+<?php
 session_start();
 include('auth.php');
 include ('db.php');
 extract ($_GET);
 $user=$id;
 ?>
-<?
+<?php
 $ok=$ok;
 if(isset($ok)){	
    $login = $_POST['login'];
@@ -44,13 +44,13 @@ if(isset($ok)){
 	
 	$query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
 
-       $do = mysql_query($query);
+       $do = mysqli_query($query);
        if ($do)
          { 
           header("location:std_profile.php");
 		 }	
 		 else{	 
-	   die("Could not select db".mysql_error());
+	   die("Could not select db".mysqli_error());
 	   //header("location:std_profile.php");
 	   }}
     else
@@ -125,7 +125,7 @@ input, textarea {
 		background:#E3E7A6;
 		color:#000000;
 	}
--->
+
     </style>
 </head>
 <body>
@@ -214,8 +214,8 @@ input, textarea {
            <tr>
 <? 
 $sql = "select * from student where std_id='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($connection, $sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?>
@@ -242,12 +242,12 @@ while($row=mysql_fetch_array($result))
                     <td width="27" height="18">&nbsp;</td>
                     <td width="135" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
                     <td colspan="4"><label for="login"></label>
-                      <input type="text" name="login" id="login" value="<?=$row[username];?>">                    </tr>
+                      <input type="text" name="login" id="login" value="<?php $row["username"];?>">                    </tr>
                   <tr>
                     <td height="18" style="text-align: right">&nbsp;</td>
                     <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
                     <td colspan="4"><label for="pswd"></label>
-                      <input type="password" name="pswd" id="pswd" value="<?=$row[password];?>"></td>
+                      <input type="password" name="pswd" id="pswd" value="<?php $row["password"];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -264,8 +264,8 @@ while($row=mysql_fetch_array($result))
                       <select name="fname" size="1" id="fname">
 					  <? 
                       $sql3="select * from mrmrs";
-			          $result3=mysql_query($sql3);			 
-			          while($data3=mysql_fetch_array($result3)){
+			          $result3=mysqli_query($connection, $sql3);			 
+			          while($data3=mysqli_fetch_array($result3)){
 			 	          if($data[id]==$data3[0]){
 					           echo "<option value='$data3[name]' selected>$data3[name]";
 				         }else{
@@ -279,13 +279,13 @@ while($row=mysql_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
                     <td colspan="4"><label for="name"></label>
-                      <input type="text" name="name" id="name" value="<?=$row[name];?>"></td>
+                      <input type="text" name="name" id="name" value="<?php $row["name"];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
                     <td><label for="s_name"></label>
-                      <input type="text" name="s_name" id="s_name" value="<?=$row[s_name];?>"></td>
+                      <input type="text" name="s_name" id="s_name" value="<?php $row["s_name"];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -464,8 +464,8 @@ while($row=mysql_fetch_array($result))
                       <select name="job" id="job">
                       <?		
 			 $sql3="select * from joblist";
-			 $result3=mysql_query($sql3);			 
-			 while($data3=mysql_fetch_array($result3)){
+			 $result3=mysqli_query($connection, $sql3);			 
+			 while($data3=mysqli_fetch_array($result3)){
 			 	if($data[job_id]==$data3[0]){
 					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
 				}else{
