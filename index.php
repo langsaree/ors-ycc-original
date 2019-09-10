@@ -48,8 +48,10 @@ if (!isset($_SESSION["username"]))  // To check login user if already login then
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
-
-	<?php if($message){ echo $message;}?>
+  <?php  
+  if (isset($message)) { echo $message;}
+  ?>		
+	
   <?php
 ######################################   To show login form if user do not login ###################################
 	
