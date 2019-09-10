@@ -49,7 +49,8 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
              
             </table>
 
-	<?php if(isset($message)){ echo $message; }?>		
+  <?php if(isset($message)){ echo $message; }
+  ?>		
 	<?php 	
 ######################################   To show login form if user do not login ###################################
 	
@@ -123,16 +124,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
+
     </style>
 </head>
 <body>
@@ -169,7 +161,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION['username'].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 		}
@@ -201,7 +193,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
     <td width="420">&nbsp;</td>
   </tr>
   <tr>
-    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือ</span>นมกราคม 2554</td>
+    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือน</span>มกราคม 2554</td>
     </tr>
   <tr>
     <td>&nbsp;</td>
