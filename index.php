@@ -22,7 +22,7 @@ include('login_check.php');
 <body>
     <div class="BodyContent">
       <div class="BorderBorder">
-        <div class="ActiveMenuButtonInput">
+        <div class="ActiveMenu">
           <div></div>
         </div>
         <div class="BorderBR">
@@ -83,12 +83,13 @@ if (isset($message)) {
 ######################################   To show login form if user do not login ###################################
 
     echo '<form action="index.php" method="post">
-		<table width="150" border="5" align="left" cellpadding="0" cellspacing="0">
+		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
               </tr>
               <tr>
-                <td><div align="left"><span class="style9">ล็อกอิน::</span></div></td>
+               <div align="left">
+               <td><span class="style9">ล็อกอิน::</span></div></td>
               </tr>
             </table>
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
