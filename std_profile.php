@@ -60,8 +60,14 @@ a:active {
 </head>
 <body>
     <div class="BodyContent">
-    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+    <div class="BorderBorder">
+    <div class="BorderBL"><div></div></div>
+    <div class="BorderBR"><div></div></div>
+    <div class="BorderTL"></div>
+    <div class="BorderTR"><div></div></div>
+      <div class="BorderR"><div></div></div>
+      <div class="BorderB"><div></div></div>
+      <div class="BorderL"></div>
       <div class="Border">
 
         <div class="Menu">
@@ -89,7 +95,7 @@ a:active {
                 <td width="163">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"></span></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -114,7 +120,15 @@ a:active {
         </div>
 
         </div><div class="MainColumn">
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
        
                <div class="Article">
             <table width="650" height="961" border="0" align="center" cellpadding="0" cellspacing="5">
@@ -129,8 +143,8 @@ a:active {
  <? 
 include ('db.php');
 $sql = "select * from student where username='$username' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
+$result = mysqli_query($sql); 
+while($row=mysqli_fetch_array($result))
 {
 
 ?>       
@@ -172,12 +186,12 @@ while($row=mysql_fetch_array($result))
   <tr>
                     <td width="27" height="18">&nbsp;</td>
                     <td width="196" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
-                    <td colspan="4"><? echo $row[username]; ?>                    
+                    <td colspan="4"><? echo $row['username']; ?>                    
                   </tr>
                   <tr>
                     <td height="18" style="text-align: right">&nbsp;</td>
                     <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
-                    <td colspan="4"><? echo $row[password]; ?></td>
+                    <td colspan="4"><? echo $row['password']; ?></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -190,12 +204,12 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
-                    <td colspan="4"><? echo $row[f_name];?>&nbsp;&nbsp;<? echo $row[name]; ?></td>
+                    <td colspan="4"><? echo $row['f_name'];?>&nbsp;&nbsp;<? echo $row['name']; ?></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
-                    <td><? echo $row[s_name];?></td>
+                    <td><? echo $row['s_name'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -203,7 +217,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">สัญชาติ :</span></td>
-                    <td><? echo $row[nation];?></td>
+                    <td><? echo $row['nation'];?></td>
                     <td class="style60">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -211,7 +225,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td >&nbsp;</td>
                     <td style="text-align: right"><span class="style60">เชื้อชาติ : </span></td>
-                    <td><? echo $row[origin];?></span></td>
+                    <td><? echo $row['origin'];?></span></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -219,7 +233,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td height="19" >&nbsp;</td>
                     <td class="style60" style="text-align: right">ศาสนา :</td>
-                    <td><? echo $row[religion];?></td>
+                    <td><? echo $row['religion'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -227,7 +241,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td height="19" >&nbsp;</td>
                     <td style="text-align: right"><span class="style60">เพศ :</span></td>
-                    <td><? echo $row[gender];?></td>
+                    <td><? echo $row['gender'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -235,7 +249,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">วันเกิด : </span></td>
-                    <td><? echo $row[birthday];?></td>
+                    <td><? echo $row['birthday'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -243,7 +257,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span style="font-weight: bold; text-align: right;"><span class="style61">เลขบัตรประชาชน<span class="style46"> :</span></span></span></td>
-                    <td><? echo $row[std_id];?></td>
+                    <td><? echo $row['std_id'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -259,12 +273,12 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
-                    <td colspan="4"><? echo $row[address];?></td>
+                    <td colspan="4"><? echo $row['address'];?></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style47"><span class="style60">เขต/อำเภอ<span class="style46"> :</span></span></span></td>
-                    <td><? echo $row[city];?></td>
+                    <td><? echo $row['city'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -272,7 +286,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">จังหวัด :</span></td>
-                    <td><? echo $row[province];?></td>
+                    <td><? echo $row['province'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -280,7 +294,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">รหัสไปรษณีย์ : </span></td>
-                    <td><? echo $row[postalcode];?></td>
+                    <td><? echo $row['postalcode'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -288,7 +302,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">โทรศัพท์ :</span></td>
-                    <td><? echo $row[phone];?></td>
+                    <td><? echo $row['phone'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -296,7 +310,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">E-mail :</span></td>
-                    <td><? echo $row[email];?></td>
+                    <td><? echo $row['email'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -312,7 +326,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">จบการศึกษาระดับ :</td>
-                    <td><? echo $row[edulevel];?></td>
+                    <td><? echo $row['edulevel'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -320,7 +334,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">จากสถานศึกษา :</td>
-                    <td><? echo $row[eduplace];?></td>
+                    <td><? echo $row['eduplace'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -328,7 +342,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">จังหวัด :</td>
-                    <td><? echo $row[eduprovince];?></td>
+                    <td><? echo $row['eduprovince'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -336,7 +350,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">ปีการศึกษา :</td>
-                    <td><? echo $row[eduyear];?></td>
+                    <td><? echo $row['eduyear'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -352,7 +366,7 @@ while($row=mysql_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>
-                    <td><? echo $row[job];?></td>
+                    <td><? echo $row['job'];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -388,7 +402,15 @@ while($row=mysql_fetch_array($result))
 
 
 
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
         </div>
         </div></div>
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
