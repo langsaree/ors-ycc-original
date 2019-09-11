@@ -60,11 +60,11 @@ if(!isset($_SESSION["username"]))
 
 
 
-              <?php
-              if (isset($message)) {
-                  echo $message;
-              }
-              ?>
+ <?php
+if (isset($message)) {
+        echo $message;
+    }
+    ?>
 	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -179,11 +179,12 @@ if(!isset($_SESSION["username"]))
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"]. ' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		}
+    }
 ?>
+
             <br>
           </div>
           <div class="Block">
@@ -214,5 +215,6 @@ if(!isset($_SESSION["username"]))
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
     </div>
 </div>
+
     </body>
 </html>
