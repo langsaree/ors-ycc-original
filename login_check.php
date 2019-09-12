@@ -57,8 +57,8 @@ if(!isset($_SESSION['logined'])) {
 					  $_SESSION['logined'] = true;
 					  $_SESSION['username'] = $_REQUEST['username'];
 					  $_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-					  session_register("password");
+					//   session_register("username");
+					//   session_register("password");
 			
 					  header("location:std_profile.php");
 					  }
@@ -72,7 +72,7 @@ if(!isset($_SESSION['logined'])) {
 }
 ?>
 
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
@@ -82,4 +82,4 @@ if(!isset($_SESSION['logined'])) {
 
 <body>
 </body>
-</html>
+</html> -->
