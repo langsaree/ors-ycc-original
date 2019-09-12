@@ -5,8 +5,6 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 {
   include 'login_check.php';
     ?>
-?>
-
 
 <!DOCTYPE html>
 <html>
