@@ -161,7 +161,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$_SESSION['username'].' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 		}
@@ -215,26 +215,26 @@ while($row=mysqli_fetch_array($result_view))
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?php  '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row["cos_group"].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?php echo  '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row["cos_group"].'</span>' ?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?php  $row["cos_id"];?></td>
+                <?php echo $row["cos_id"];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?php  $row["cos_name"];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?php echo $row["cos_name"];?></td>
                </tr>
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?php $row["cos_id"]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?php echo $row["cos_id"]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?php $row["cos_id"]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?php echo $row["cos_id"]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
                <?php } ?>
