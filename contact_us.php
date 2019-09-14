@@ -58,7 +58,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
              
             </table>
 
-            <?php 
+  <?php 
   if (isset($message)){
   echo $message;
   }
@@ -253,7 +253,7 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php
-$sql = "select * from student where username='$user' ";
+$sql = "select * from student where username='$username' ";
 $result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
 {
