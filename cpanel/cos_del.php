@@ -1,4 +1,4 @@
-<?
+<?php
 include('db.php');
 extract ($_GET);
 mysqli_query ("SET NAMES 'utf8'");

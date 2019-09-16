@@ -19,7 +19,7 @@ if(!isset($_SESSION["username"]))
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysqli_query($sql);
+                   $result=mysqli_query($conn,$sql);
                    $count=mysqli_num_rows($result);
                   if($count==1)
                       {

@@ -60,19 +60,19 @@ if(session_is_registered(lec_user)){
                 <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+            <?php } ?>
 
             <br>
           </div>
