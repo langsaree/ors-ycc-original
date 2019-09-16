@@ -1,8 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION["username"]){header("location:index.php");}
+if(!isset($_SESSION["user_admin"])){header("location:index.php");}
 // end of check session
-?>
+$user_admin = $_SESSION["user_admin"];
+ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,7 +20,7 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
     <td width="9">&nbsp;</td>
     <td width="330"><span class="style26"><span class="style30">Administrator</span> <span class="style29">Control Panel</span></span></td>
     <td width="308">&nbsp;</td>
-    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><? echo '<span style="font-weight:bold; font-size:15px"> '.$user_admin .'</span>'; ?></td>
+    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><?php echo '<span style="font-weight:bold; font-size:15px"> '.$user_admin .'</span>';  ?></td>
     <td width="12">&nbsp;</td>
   </tr>
   <tr>
@@ -119,21 +120,21 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
       <tr>
         <td width="165" height="23" valign="top" ><table width="161" border="0" cellspacing="0" cellpadding="0">
     
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';" 
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';" 
 >
             <td height="21" colspan="3"><a href="manage_course.php" class="right_side_bar"> &nbsp;&nbsp;&nbsp;&nbsp;การจัดการรายวิชา</a></td>
             </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td width="22">&nbsp;</td>
             <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
             <td width="20">&nbsp;</td>
             </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
             <td>&nbsp;</td>
@@ -142,21 +143,21 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
         </tr>
       <tr>
         <td><table width="161" border="0" cellspacing="0" cellpadding="0">
-           <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';" 
+           <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';" 
 >
             <td height="21" colspan="3"><a href="manage_student.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการนักศึกษา</a></td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td width="22">&nbsp;</td>
             <td width="119"><a href="std_add.php" class="right_side_bar_list">เพิ่มนักศึกษาใหม่</a></td>
             <td width="20">&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="std_view.php" class="right_side_bar_list">แสดงข้อมูลนักศึกษา</a></a></span></a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="std_active.php" class="right_side_bar_list">แสดงสถานะนักศึกษา</a></td>
             <td>&nbsp;</td>
@@ -165,25 +166,25 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
         </tr>
       <tr>
         <td><table width="163" border="0" cellspacing="0" cellpadding="0">
-           <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+           <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3" class="right_side_bar"><a href="manage_grade.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการเกรด</a></td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td width="21">&nbsp;</td>
             <td width="120"><a href="grade_add.php" class="right_side_bar_list">เพิ่มเกรด </a></td>
             <td width="22">&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="grade_delete.php" class="right_side_bar_list">ลบเกรด</a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="grade_update.php" class="right_side_bar_list">แก้ไขเกรด </a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="grade_view.php" class="right_side_bar_list">แสดงเกรด</a></td>
             <td>&nbsp;</td>
@@ -192,7 +193,7 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
         </tr>
       <tr>
         <td><table width="163" border="0" cellspacing="0" cellpadding="0">
-           <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+           <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_evaluation.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการการประเมิน</a></td>
           </tr>
           <tr>
@@ -214,7 +215,7 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
         </tr>
       <tr>
         <td><table width="163" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_statis.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;สถิติการใช้งาน</a></td>
           </tr>
           <tr>
@@ -236,7 +237,7 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
         </tr>
       <tr>
         <td><table width="167" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_std_status.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการสถานะนักศึกษา</a></td>
           </tr>
           <tr>
@@ -258,7 +259,7 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
         </tr>
       <tr>
         <td><table width="165" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_register.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการลงทะเบียน</a></td>
           </tr>
           <tr>
@@ -280,7 +281,7 @@ if(!isset($_SESSION["username"]){header("location:index.php");}
       </tr>
       <tr>
         <td><table width="165" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_admin.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ผู้ดูแลระบบ</a></td>
           </tr>
           <tr>
