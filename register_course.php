@@ -542,11 +542,7 @@ if(isset($_POST["register"])) {
 		 }
 		 
 	 }
-    else
-   {
-	
-       
-    } 
+     
 }
 //ob_end_clean();
 ?>  
