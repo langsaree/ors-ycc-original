@@ -190,11 +190,11 @@ include('db.php');
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
-                    <td colspan="4"><? echo $row["f_name"];?>&nbsp;&nbsp;<? echo $row["name"]; ?></td>
+                    <td><? echo $row["f_name"];?><? echo $row["name"]; ?></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
+                    <td style="text-align: right"><span class="style60" style="font-weight: bold">นามสกุล : </span></td>
                     <td><? echo $row["s_name"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
