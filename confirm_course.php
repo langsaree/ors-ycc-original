@@ -3,8 +3,8 @@ session_start();
 include('db.php');
 extract ($_GET);
 $cos_id=$id;
-if(!session_is_registered(username)){header("location:register.php");}
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if(!isset($_SESSION["username"])){header("location:register.php");}
+if(isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
     
      $username = "";
@@ -21,15 +21,15 @@ if(!session_is_registered(username)) // To check login user if already login the
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($connection, $sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+					  $_SESSION['logined'] = true;
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
+					  //session_register("username");
+              //session_register("password");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  //header("location:std_profile.php");
@@ -54,7 +54,7 @@ if(!session_is_registered(username)) // To check login user if already login the
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style7 {color: #3987FB; font-size: 14px; }
 .BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td strong {
@@ -86,7 +86,7 @@ if(!session_is_registered(username)) // To check login user if already login the
 	color: #000000;
 	font-weight: bold;
 }
--->
+
     </style>
 </head>
 <body>
@@ -120,8 +120,12 @@ if(!session_is_registered(username)) // To check login user if already login the
              
             </table>
 
-	<?php echo $message; ?>		
-	<? 	
+  <?php
+if (isset($message)) {
+        echo $message;
+    }
+    ?>	
+	<?php 	
 ######################################   To show login form if user do not login ###################################
 	
 	echo	'<form action="" method="post">
@@ -315,10 +319,10 @@ if(!session_is_registered(username)) // To check login user if already login the
             
               <table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
- <?
+ <?php
 $sql = "select * from course where cos_id='$cos_id' ";
-$result = mysql_query($sql);
-while ($rows = mysql_fetch_array($result)) {
+$result = mysqli_query($connection, $sql);
+while ($rows = mysqli_fetch_array($result)) {
 //$id = $rows["cos_id"];
 //$name = $rows["cos_name"];
 
@@ -330,11 +334,11 @@ while ($rows = mysql_fetch_array($result)) {
                     <select style=" width:200px;" name="cos_group" id="select3">
                       <option value="<? echo $rows[cos_group]; ?>"><?= $rows[cos_group]; ?></option>
                       <option>-- select --</option>
-                       <?		
+                       <?php		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
-			 	              if($data[cos_group]==$data3[0]){
+			             $result3=mysqli_query($connection, $sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
+			 	              if($data['cos_group']==$data3[0]){
 					             echo "<option value='$data3[cos_group]' selected>$data3[cos_group]";
 				              }else{
 					            echo "<option value='$data3[cos_group]'>$data3[cos_group]";
@@ -351,11 +355,11 @@ while ($rows = mysql_fetch_array($result)) {
                 <select style="width:200px;" name="select" size="1" id="select">                 
                   <option value="<? echo $rows[cos_id]; ?>"><?= $rows[cos_id]; ?></option>
                   <option>-- select --</option> 
-                   <?		
+                   <?php		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
-			 	              if($data[cos_id]==$data3[0]){
+			             $result3=mysqli_query($connection, $sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
+			 	              if($data['cos_id']==$data3[0]){
 					             echo "<option value='$data3[cos_id]' selected>$data3[cos_id]";
 				              }else{
 					             echo "<option value='$data3[cos_id]'>$data3[cos_id]";
@@ -374,9 +378,9 @@ while ($rows = mysql_fetch_array($result)) {
                   <option>-- select --</option> 
                   <?		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
-			 	              if($data[cos_name]==$data3[0]){
+			             $result3=mysqli_query($connection, $sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
+			 	              if($data['cos_name']==$data3[0]){
 					             echo "<option value='$data3[cos_name]' selected>$data3[cos_name]";
 				              }else{
 					             echo "<option value='$data3[cos_name]'>$data3[cos_name]";
