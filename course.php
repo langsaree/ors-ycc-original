@@ -1,42 +1,50 @@
 <?php
+/**
+ * LangsariEngine - A Delicious PHP Component
+ *
+ * @package  BuduEngine
+ * @author   Kholed Langsari <langsaree@gmail.com>
+ */
+
 session_start();
-if(!session_is_registered(username))
-	{
-     include('db.php');
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
-			  	}  
-   
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+}
+
+if (!isset($_SESSION['username'])) {
+
+include('db.php');
+
+$username = "";
+$password = "";
+
+    if (!isset($_SESSION['username'])) {
+        if (isset($_REQUEST['username'])) {
+            $username = $_REQUEST['username'];
+            $password = $_REQUEST['password'];
+            if (empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
+            } else if (empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
+            } else if (!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
+            } else {
+                $sql = "select * from student where username='$username' and password='$password'";
+                $result = mysqli_query($connection, $sql);
+                $count = mysqli_num_rows($result);
+                if ($count == 1) {
+                    $_SESSION['username'] = $count['username'];
+                    $_SESSION['password'] = $count['password'];
+                    header("location:std_profile.php");
+                } else {
+                    $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+                }
+            }
+        }
+
+    }
+
 }
 ?>
 
@@ -91,12 +99,17 @@ if(!session_is_registered(username))
              
             </table>
 
+              <?php // php code for login form and profile menu ?>
 
+              <?php if (!empty($message)) {
+                  echo "<span style=\"color:red\">$message</span>";
+              }
+              ?>
 
+              <?php if (!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
 
-
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+                  //  To show login form if user do not login
+                  echo '<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -151,11 +164,16 @@ if(!session_is_registered(username))
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
-		}
-		else
-		{
-		echo '
+                
+                
+				<?php '; ?>
+
+                  <?php //php code for profile menu ?>
+
+              <?php } else { ?>
+                  <?php // process this if user aleady login
+                  echo '
+		
 		<!DOCTYPE html>
 <html>
 <head>

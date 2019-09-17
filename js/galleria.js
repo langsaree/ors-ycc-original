@@ -1364,7 +1364,7 @@ Galleria.prototype = {
         // save the instance
         _galleries.push( this );
 
-        // save the original ingredients
+        // save the original-code ingredients
         this._original = {
             target: target,
             options: options,
@@ -3503,7 +3503,7 @@ Galleria.Picture = function( id ) {
         position: 'relative' // for IE Standards mode
     });
 
-    // saves the original meassurements
+    // saves the original-code meassurements
     this.original = {
         width: 0,
         height: 0

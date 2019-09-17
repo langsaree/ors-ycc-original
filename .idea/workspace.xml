@@ -1,20 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/count1-100.php" beforeDir="false" afterPath="$PROJECT_DIR$/count1-100.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password_recovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/password_recovery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-original-code/ors-ycc-original/testGit.php" beforeDir="false" afterPath="$PROJECT_DIR$/project-original-code/ors-ycc-original/testGit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4063#4069#1#HTML" expanded="true" />
+                <element signature="e#10097#10103#1#HTML" expanded="true" />
+                <element signature="e#10129#10135#1#HTML" expanded="true" />
+                <element signature="e#10161#10167#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#10342#10348#0#HTML" expanded="true" />
+                <element signature="e#10348#10354#0#HTML" expanded="true" />
+                <element signature="e#10354#10360#0#HTML" expanded="true" />
+                <element signature="e#10360#10366#0#HTML" expanded="true" />
+                <element signature="e#10366#10372#0#HTML" expanded="true" />
+                <element signature="e#10372#10378#0#HTML" expanded="true" />
+                <element signature="e#10378#10384#0#HTML" expanded="true" />
+                <element signature="e#10384#10390#0#HTML" expanded="true" />
+                <element signature="e#10390#10396#0#HTML" expanded="true" />
+                <element signature="e#10396#10402#0#HTML" expanded="true" />
+                <element signature="e#10497#10503#1#HTML" expanded="true" />
+                <element signature="e#10517#10523#1#HTML" expanded="true" />
+                <element signature="e#10537#10543#1#HTML" expanded="true" />
+                <element signature="e#11233#11239#1#HTML" expanded="true" />
+                <element signature="e#11329#11335#0#HTML" expanded="true" />
+                <element signature="e#11454#11460#1#HTML" expanded="true" />
+                <element signature="e#11526#11532#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#3;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11675#11681#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#1;n#tr#3;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11939#11945#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#1;n#tr#4;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#12130#12136#1#HTML" expanded="true" />
+                <element signature="e#12233#12239#1#HTML" expanded="true" />
+                <element signature="e#12682#12688#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cos</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/IndexHTML.php" />
+        <option value="$PROJECT_DIR$/Index.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="316" />
+    <option name="width" value="1440" />
+    <option name="height" value="785" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -22,11 +128,134 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557132654756</updated>
+      <workItem from="1566286731352" duration="5000" />
+      <workItem from="1566286807304" duration="983000" />
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="988000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32960895" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IndexHTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="265" column="17" lean-forward="true" selection-start-line="265" selection-start-column="17" selection-end-line="265" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4063#4069#1#HTML" expanded="true" />
+            <element signature="e#10097#10103#1#HTML" expanded="true" />
+            <element signature="e#10129#10135#1#HTML" expanded="true" />
+            <element signature="e#10161#10167#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#10342#10348#0#HTML" expanded="true" />
+            <element signature="e#10348#10354#0#HTML" expanded="true" />
+            <element signature="e#10354#10360#0#HTML" expanded="true" />
+            <element signature="e#10360#10366#0#HTML" expanded="true" />
+            <element signature="e#10366#10372#0#HTML" expanded="true" />
+            <element signature="e#10372#10378#0#HTML" expanded="true" />
+            <element signature="e#10378#10384#0#HTML" expanded="true" />
+            <element signature="e#10384#10390#0#HTML" expanded="true" />
+            <element signature="e#10390#10396#0#HTML" expanded="true" />
+            <element signature="e#10396#10402#0#HTML" expanded="true" />
+            <element signature="e#10497#10503#1#HTML" expanded="true" />
+            <element signature="e#10517#10523#1#HTML" expanded="true" />
+            <element signature="e#10537#10543#1#HTML" expanded="true" />
+            <element signature="e#11233#11239#1#HTML" expanded="true" />
+            <element signature="e#11329#11335#0#HTML" expanded="true" />
+            <element signature="e#11454#11460#1#HTML" expanded="true" />
+            <element signature="e#11526#11532#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11675#11681#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#3;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11939#11945#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#4;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#12130#12136#1#HTML" expanded="true" />
+            <element signature="e#12233#12239#1#HTML" expanded="true" />
+            <element signature="e#12682#12688#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
