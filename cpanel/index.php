@@ -1,10 +1,14 @@
 <?php
-//session_start();
-//if(session_is_registered("user_admin")){header("location:cpanel.php");}
+session_start();
+//if (isset($_SESSION["username"])){header("location:cpanel.php");}
 //ob_start(); 
 include("db.php");
-$username=$_POST["username"];
-$password=$_POST["password"];
+$username = "";
+$password = "";
+if(!isset($_SESSION['logined'])) {
+    if(isset($_REQUEST['username'])) {
+    $username = $_REQUEST['username'];
+    $password = $_REQUEST['password'];
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
 
@@ -20,14 +24,16 @@ $password=$_POST["password"];
 //$result=mysql_query($sql);
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 $sql = "select * from admin where username='$username' and password='$password'";
-$result=mysql_query($sql);
-$count=mysql_num_rows($result);
+$result=mysqli_query($connection, $sql);
+$count=mysqli_num_rows($result);
 if($count==1/*&&strcmp($code,$code_hidden)==0*/)
 {
 $user_admin = $username;
 $pass_admin = $password;
-session_register("user_admin");
-session_register("pass_admin");
+//session_register("user_admin");
+//session_register("pass_admin");
+$_SESSION['username'] = $_REQUEST['username'];
+$_SESSION['password'] = $_REQUEST['password'];
 header("location:cpanel.php");
 }
 else
@@ -35,6 +41,8 @@ else
 $error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
 //echo "Wrong username and password";
 } 
+    }
+}
 //ob_end_flush();
 ?>
 
