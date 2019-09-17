@@ -1,8 +1,8 @@
 <?
 //////////Check session
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+if(!isset($_SESSION['lec_user']){header("location:index.php");}
+if($_SESSION['lec_user']){
 
 ?>
 <!DOCTYPE html>
@@ -81,10 +81,10 @@ a:active {
             <span class="BlockHeader"><span>Online Register</span></span>
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -148,16 +148,16 @@ a:active {
                   <td width="196">&nbsp;</td>
                   <td width="91">&nbsp;</td>
                   <td width="243">&nbsp;</td>
-                  <td width="9">&nbsp;</td>
+                  <td width="9">&nbsp;</td>           
                   <td width="22">&nbsp;</td>
                 </tr>
                 <tr>
-                 <? 
+                 <?php
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-            $result=mysql_query($sql);//????????
-            ($row=mysql_fetch_array($result))//????????
+            $result=mysqli_query($connection, $sql);//????????
+            ($row=mysqli_fetch_array($result))//????????
 		    ?>
                   <td>&nbsp;</td>
                   <td rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>

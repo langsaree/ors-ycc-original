@@ -1,4 +1,4 @@
-<?
+<?php
 include ('db.php');
 $lec_id= $_POST['lec_id'];
 $lec_name= $_POST['lec_name'];
