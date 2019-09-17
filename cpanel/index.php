@@ -1,10 +1,28 @@
 <?php
-//session_start();
-//if(session_is_registered("user_admin")){header("location:cpanel.php");}
+session_start();
+//if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
 //ob_start(); 
 include("db.php");
-$username=$_POST["username"];
-$password=$_POST["password"];
+//if (isset($_SESSION["user_admin"]))
+$username = "";
+$password = "";
+	if (isset($_POST['username'])) {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+            $sql = "select * from admin where username='$username' and password='$password'";
+            $result=mysqli_query($connection, $sql);
+            $count=mysqli_num_rows($result);
+			if ($count == 1) {
+				$_SESSION['username'] = $_POST['username'];
+				$_SESSION['password'] = $_POST['password'];
+
+				header("location:cpanel.php");
+			}
+		
+	}
+
+//$username = $_POST['username'];
+//$password = $_POST['password'];
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
 
@@ -19,22 +37,8 @@ $password=$_POST["password"];
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 //$result=mysql_query($sql);
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-$sql = "select * from admin where username='$username' and password='$password'";
-$result=mysql_query($sql);
-$count=mysql_num_rows($result);
-if($count==1/*&&strcmp($code,$code_hidden)==0*/)
-{
-$user_admin = $username;
-$pass_admin = $password;
-session_register("user_admin");
-session_register("pass_admin");
-header("location:cpanel.php");
-}
-else
- {
-$error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
-//echo "Wrong username and password";
-} 
+//session_register("user_admin");
+//session_register("pass_admin");
 //ob_end_flush();
 ?>
 
@@ -61,7 +65,6 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
 	font-weight: bold;
 	text-decoration:none;
 }
--->
     </style>
 </head>
 
@@ -71,7 +74,7 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
           <h3 class="style5"><span class="style2">ADMINISTRATOR</span> <span class="style3">LOGIN</span></h3>
           <p class="style5"></p>
 <form action="" method="post" target="">
-                <p><label for="ftp-user-name">User Name</label><input type="text" name="username" id="user-name" /></p>
+                <p><label for="ftp-user-name">User Name</label><input type="text" name="username" id="username" /></p>
                 <p><label for="ftp-password">Password</label><input type="password" name="password" id="password" /></p>
                 <p class="submit-wrap"><input type="submit" id="submit" class="button" value="Login" /> 
 &nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p>
