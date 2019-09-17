@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('db.php');
+$username = $_SESSION['username'];
 if(!isset($_SESSION["username"]))
 	{
     include('login_check.php');
