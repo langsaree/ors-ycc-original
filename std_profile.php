@@ -143,7 +143,7 @@ a:active {
                    <td
 
                            width="435" height="30" valign="middle">&nbsp;</td>
-                   <td width="99" valign="middle" class="style33"><a href="profile_update.php?id= <?php $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
+                   <td width="99" valign="middle" class="style33"><a href="profile_update.php?id=<?php $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
                    <td width="83" valign="middle"><span class="style66"><a href="logout.php"  style="text-decoration: none">ออกจากระบบ</a></span></td>
                </tr>
                <tr>
