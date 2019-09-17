@@ -1,7 +1,7 @@
 <?php
 session_start();
 include'db.php';
-if(!isset($_SESSION['username']))
+if(!isset($_SESSION["username"]))
 	{
     
     include('login_check.php');
@@ -173,10 +173,10 @@ if(!isset($_SESSION['username']))
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		$user=$username;
+		//$user=$username;
 		}
 ?>
             <br>
@@ -195,9 +195,12 @@ if(!isset($_SESSION['username']))
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
- <?php
-session_start();
-if($_POST['action']){
+
+
+<?php
+/*session_start();*/
+$c_error ="";
+if(isset($_POST['action'])){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
     //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
@@ -245,9 +248,8 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php 
-$sql = "select * from student where username='$user' ";
-$result = 
-i_query($connection,$sql); 
+$sql = "select * from student where username='$username' ";
+$result = mysqli_query($connection,$sql); 
 while($row =mysqli_fetch_array($result))
 {
 
@@ -255,7 +257,7 @@ while($row =mysqli_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?php $row['username'];?>" /></td>
+      <td><input type='text' name='name' value="<?php $row["username"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
