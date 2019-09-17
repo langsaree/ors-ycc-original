@@ -40,7 +40,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
--->
+
 </style>
 </head>
 <body>
@@ -90,21 +90,21 @@ body {
 		/////////////////////////take information from student table //////////////////////////
 	include('db.php');
 	$sql1 = "select * from student ";
-	$v=mysql_query ($sql1);
-	while ($row= mysql_fetch_array($v))
+	$v=mysqli_query ($sql1);
+	while ($row= mysqli_fetch_array($v))
 	{
-	$std = $row[std_id];
-	$user= $row[username];
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$std = $row['std_id'];
+	$user= $row['username'];
+	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
 	//echo $name;
 	?>
       <tr>
 		<td><div align="left"><?= $std?> </div></td>
 		<td><div align="center"><?= $user ?></div></td>
 		<td><div align="left"><?= $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<? echo $std;?>">แสดงรายละเอียด</a></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php echo $std; ?>">แสดงรายละเอียด</a></div></td>
       </tr>
      <? } ////// close first while //////////////////////////////////////////////
 		//} //////// close of second while ////////////////////
