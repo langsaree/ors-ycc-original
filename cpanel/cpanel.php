@@ -23,7 +23,7 @@ session_start();
     <td width="9">&nbsp;</td>
     <td width="330"><span class="style26"><span class="style30">Administrator</span> <span class="style29">Control Panel</span></span></td>
     <td width="308">&nbsp;</td>
-    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><? echo '<span style="font-weight:bold; font-size:15px"> '.$user_admin .'</span>'; ?></td>
+    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><?php echo '<span style="font-weight:bold; font-size:15px"> '.$_SESSION["username"].' </span>';  ?></td>
     <td width="12">&nbsp;</td>
   </tr>
   <tr>
