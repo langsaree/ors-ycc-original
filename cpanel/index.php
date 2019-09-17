@@ -1,10 +1,12 @@
 <?php
 session_start();
-if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
-ob_start(); 
+//if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
+//ob_start(); 
 include("db.php");
-$username=$_POST["username"];
-$password=$_POST["password"];
+
+$username= "";
+$password= "";
+if (isset($_POST['username'])) {
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
 
@@ -19,6 +21,8 @@ $password=$_POST["password"];
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 //$result=mysql_query($sql);
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
+$username = $_POST['username'];
+$password = $_POST['password'];
 $sql = "select * from admin where username='$username' and password='$password'";
 $result=mysqli_query($connection, $sql);
 $count=mysqli_num_rows($result);
@@ -26,15 +30,15 @@ if($count==1/*&&strcmp($code,$code_hidden)==0*/)
 {
 $user_admin = $username;
 $pass_admin = $password;
-session_register("user_admin");
-session_register("pass_admin");
+$_SESSION['username'] =  $_POST['username'];
+$_SESSION['password'] = $_POST['password'];
 header("location:cpanel.php");
 }
 else
  {
-$error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+$error='<span style="color:red">ชื่อเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
 //echo "Wrong username and password";
-} 
+} }
 //ob_end_flush();
 ?>
 
@@ -50,7 +54,7 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/example.js'></script>
     <style type="text/css">
-<!--
+
 .style2 {color: #0066FF}
 .style3 {color: #666666}
 .style5 {
@@ -61,7 +65,7 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
 	font-weight: bold;
 	text-decoration:none;
 }
--->
+
     </style>
 </head>
 
