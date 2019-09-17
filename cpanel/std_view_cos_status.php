@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student course status</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +29,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
@@ -56,38 +56,38 @@ body {
     <td height="492" valign="top"><p>&nbsp;</p>
       <table width="25%" border="0" align="center" cellpadding="0" cellspacing="5">
 
-        <? if($error[0]) { ?>
+        <?php  if($error[0]) { ?>
         <tr>
           <td width="36%" align="right"><span class="style40">รหัสวิชา :</span> </td>
           <td width="64%" class="red"><label>
             <input name="textfield" type="text" size="20" />
           </label></td>
         </tr>
-        <? } ?>
+        <?php  } ?>
         <tr>
           <td width="36%" align="right"><span class="style40">ชื่อวิชา :</span></td>
           <td width="64%"><label>
             <input name="textfield2" type="text" size="30" />
           </label></td>
         </tr>
-        <? if($error[1]) { ?>
-        <? } ?>
-        <? if($error[2]) { ?>
-        <? } ?>
-        <? if($error[3]) { ?>
-        <? } ?>
-        <? if($error[4]) { ?>
-        <? } ?>
-        <? if($error[5]) { ?>
-        <? } ?>
-        <? if($error[6]) { ?>
-        <? } ?>
-        <? if($error[7]) { ?>
-        <? } ?>
-        <? if($error[8]) { ?>
-        <? } ?>
-        <? if($error[9]) { ?>
-        <? } ?>
+        <?php  if($error[1]) { ?>
+        <?php  } ?>
+        <?php  if($error[2]) { ?>
+        <?php  } ?>
+        <?php  if($error[3]) { ?>
+        <?php  } ?>
+        <?php  if($error[4]) { ?>
+        <?php  } ?>
+        <?php  if($error[5]) { ?>
+        <?php  } ?>
+        <?php  if($error[6]) { ?>
+        <?php  } ?>
+        <?php  if($error[7]) { ?>
+        <?php  } ?>
+        <?php  if($error[8]) { ?>
+        <?php  } ?>
+        <?php  if($error[9]) { ?>
+        <?php  } ?>
         <tr>
           <td align="right">&nbsp;</td>
           <td><label>
