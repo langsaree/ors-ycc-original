@@ -9,34 +9,46 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
 .style29 {
 	color: #FFFFFF;
 	font-size: 16px;
 }
--->
     </style>
 </head>
 <body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+<div class="BodyContent">
+  <div class="BorderBorder">
+      <div class="BorderBR">
+          <div></div>
+      </div>
+      <div class="BorderTL"></div>
+      <div class="BorderTR">
+          <div></div>
+      </div>
+      <div class="BorderR">
+          <div></div>
+      </div>
+      <div class="BorderB">
+          <div></div>
+      </div>
+      <div class="BorderL"></div>
       <div class="Border">
 
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span> วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
+          <div class="Menu">
+              <ul>
+                  <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+                  <a href="college.php" class="MenuButton"> <span>วิทยาลัย</span></a>
+                  <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+                  <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span></a>
+                  <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+                  <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+                  <input name="text" type="text" style="width:120px"/>
+                  <span class="ButtonInput"><span>
+               <input type="button" value="Search"/>
+               </span></span>
+              </ul>
+          </div>
+
         <div class="Header">
         <div class="HeaderTitle">
           <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
@@ -137,7 +149,7 @@
                     </tr>
                     <tr>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
-                      <td bgcolor="#CCCCCC"><input type="submit" name="submit" id="ok2" value="เข้าสู่ระบบ" />
+                      <td bgcolor="#CCCCCC"><br><input type="submit" name="submit" id="ok2" value="เข้าสู่ระบบ" />
                         &nbsp;<a href="password_recovery.php">ลืมรหัสผ่าน?</a></td>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
                     </tr>
