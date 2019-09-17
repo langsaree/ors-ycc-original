@@ -1,8 +1,10 @@
 <?php
 session_start();
 include('db.php');
+// $username = $_SESSION["username"];
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
+    
     include('login_check.php');   
 ?>
 
@@ -15,7 +17,6 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
     <title>ประชาสัมพันธ์</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -24,7 +25,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 	font-weight: bold;
 }
 .style28 {font-size: 12px; font-weight: bold; }
--->
+
     </style>
 </head>
 <body>
@@ -131,7 +132,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
     <title>ประชาสัมพันธ์</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -140,7 +141,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 	font-weight: bold;
 }
 .style28 {font-size: 12px; font-weight: bold; }
--->
+
     </style>
 </head>
 <body>
@@ -177,7 +178,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
+		echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		
