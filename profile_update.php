@@ -1,56 +1,60 @@
-<?
+<?php
 session_start();
-include('auth.php');
-include ('db.php');
-extract ($_GET);
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
+include('db.php');
+extract($_GET);
 $user=$id;
 ?>
-<?
-$ok=$ok;
-if(isset($ok)){	
+
+<?php
+if(isset($_POST['ok'])){
    $login = $_POST['login'];
-   $email=$_POST['email'];
    $pswd = $_POST['pswd'];
-   $cpswd = $_POST['cpswd'];
-   $fname=$_POST['fname'];
+
+   $f_name=$_POST['f_name'];
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
-   //$b_day=$_POST['b_day'];
-   //$b_month=$_POST['b_month'];
-   //$b_year=$_POST['b_year'];
-   //$birthday=$b_day.'/'.$b_month.'/'.$b_year; 
-   $birthday=$_POST['birthday'];
-   
    $nation=$_POST['nation'];
    $origin=$_POST['origin'];
    $religion=$_POST['religion'];
-   
-    $std_id=$_POST['std_id'];
-    $home=$_POST['home'];
-    //$m_home=$_POST['m_home'];
+   $gender=$_POST['gender'];
+   //$b_day=$_POST['b_day'];
+   //$b_month=$_POST['b_month'];
+   //$b_year=$_POST['b_year'];
+   //$birthday=$b_day.'/'.$b_month.'/'.$b_year;
+   $birthday=$_POST['birthday'];
+   $std_id=$_POST['std_id'];
+
+    //$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
+    $address=$_POST['address'];
+   //$m_home=$_POST['m_home'];
     //$r_home=$_POST['r_home'];
     //$v_home=$_POST['v_home'];
     $city=$_POST['city'];
     $province=$_POST['province'];
     $postalcode=$_POST['postalcode'];
     $phone=$_POST['phone'];
-	//$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
-	$address=$_POST['address'];
+    $email=$_POST['email'];
+
+
 	$edulevel=$_POST['edulevel'];
     $eduplace=$_POST['eduplace'];
     $eduprovince=$_POST['eduprovince'];
     $eduyear=$_POST['eduyear'];
+
 	$job=$_POST['job']; 
 	
-	$query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
+	$query = "UPDATE student set username='$login',password='$pswd',f_name='$f_name',name='$name',s_name='$s_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$user'";
 
-       $do = mysql_query($query);
+       $do = mysqli_query($connection, $query);
        if ($do)
          { 
           header("location:std_profile.php");
 		 }	
 		 else{	 
-	   die("Could not select db".mysql_error());
+	   die("Could not select db".mysqli_error($connection));
 	   //header("location:std_profile.php");
 	   }}
     else
@@ -70,120 +74,100 @@ if(isset($ok)){
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
-.style47 {font-size: 13px}
-.style54 {font-size: 14px}
-.style55 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; }
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-.style58 {color: #333333}
-.style60 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #333333;
-	font-weight: bold;
-}
-.style61 {font-size: 13px; color: #333333; }
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-.style33 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #666666;
-}
-.style62 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333333; }
-.style64 {
-	font-size: 14px;
-	font-weight: bold;
-	color: #333333;
-}
-.style66 {font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; }
-.style67 {font-size: 12px}
-input, textarea {
-		background:#C3E0C4;
-		color:#000000;
-		font:14px 'courier new',courier, monospace;
-		padding:6px;
-		border: 2px solid #cccccc;
-		position:relative;
-		top:0;
-		left:0;
-	}
-	input:focus, textarea:focus {
-		background:#E3E7A6;
-		color:#000000;
-	}
--->
+    input, textarea {
+            background:#C3E0C4;
+            color:#000000;
+            font:14px 'courier new',courier, monospace;
+            padding:6px;
+            border: 2px solid #cccccc;
+            position:relative;
+            top:0;
+            left:0;
+        }
+        input:focus, textarea:focus {
+            background:#E3E7A6;
+            color:#000000;
+        }
     </style>
+
 </head>
+
 <body>
-    <div class="BodyContent">
-    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="#" class="MenuButton">  <span>วิทยาลัย</span></a><a href="#" class="MenuButton"><span>หลักสูตร</span></a><a href="#" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="#" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="#" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
+<div class="BodyContent">
+    <div class="BorderBorder">
+        <div class="BorderBR">
+            <div></div>
         </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
+        <div class="BorderTL"></div>
+        <div class="BorderTR">
+            <div></div>
         </div>
-        </div><div class="Columns"><div class="Column1">
-          <div class="Block">
-          
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="170" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td width="170">&nbsp;</td>
-              </tr>
-              <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:15px"> '.$username.'</span>'; ?></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-              </tr>
-            </table>
-        
-            
-           
-            <br>
-            <br>
-          </div>
-          <div class="Block">
+        <div class="BorderR">
+            <div></div>
+        </div>
+        <div class="BorderB">
+            <div></div>
+        </div>
+        <div class="BorderL"></div>
+        <div class="Border">
 
-            <span class="BlockHeader"><span>Menu</span></span>
-            <div class="BlockContentBorder">
-
+            <div class="Menu">
                 <ul>
-                    <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
-                    <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
+                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+                    <a href="college.php" class="MenuButton"> <span>วิทยาลัย</span></a>
+                    <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+                    <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span></a>
+                    <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+                    <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+                    <input name="text" type="text" style="width:100px"/>
+                    <span class="ButtonInput"><span>
+                 <input type="button" value="Search"/>
+                 </span></span>
                 </ul>
-          </div>
-        </div>
+            </div>
 
-        </div><div class="MainColumn">
+            <div class="Header">
+                <div class="HeaderTitle">
+                    <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
+                    <h1>&nbsp;</h1>
+                </div>
+            </div>
+
+            <div class="Columns">
+                <div class="Column1">
+
+                    <div class="Block">
+
+                        <span class="BlockHeader"><span>Online Register</span></span>
+                        <table width="163" border="0" align="left" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="163">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"> '.$username.' </span>'; ?></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                    </div>
+
+                    <div class="Block">
+
+                        <span class="BlockHeader"><span>Menu</span></span>
+                        <div class="BlockContentBorder">
+
+                            <ul>
+                                <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
+                                <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
        
                <div class="Article">
@@ -257,23 +241,30 @@ while($row=mysqli_fetch_array($result))
                     <td width="31">&nbsp;</td>
                     <td width="1">&nbsp;</td>
                   </tr>
+<!--                  <tr>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>-->
+<!--                    <td colspan="4"><label for="fname"></label>  -->
+<!--                      <select name="fname" size="1" id="fname">-->
+<!--					  --><?//
+//                      $sql3="select * from mrmrs";
+//			          $result3=mysqli_query($connection, $sql3);
+//			          while($data3=mysqli_fetch_array($result3)){
+//			 	          if($data[id]==$data3[0]){
+//					           echo "<option value='$data3[name]' selected>$data3[name]";
+//				         }else{
+//					         echo "<option value='$data3[name]'>$data3[name]";
+//				           }
+//			            }
+//			         ?>
+<!--                      </select></td>-->
+<!--                  </tr>-->
+
                   <tr>
                     <td>&nbsp;</td>
-                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
-                    <td colspan="4"><label for="fname"></label>  
-                      <select name="fname" size="1" id="fname">
-					  <? 
-                      $sql3="select * from mrmrs";
-			          $result3=mysqli_query($connection, $sql3);
-			          while($data3=mysqli_fetch_array($result3)){
-			 	          if($data[id]==$data3[0]){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
-                      </select></td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ :</span></span></td>
+                    <td><label for="f_name"></label>
+                        <input type="text" name="f_name" id="f_nname" value="<?=$row['f_name'];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -319,12 +310,10 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td height="19" >&nbsp;</td>
-                    <td style="text-align: right"><span class="style60">เพศ :</span></td>
-                    <td><? echo $row['gender'];?></td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">เพศ :</span></span></td>
+                    <td colspan="4"><label for="gender"></label>
+                        <input type="text" name="gender" id="gender" value="<?=$row['gender'];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -356,7 +345,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
                     <td colspan="4"><label for="address"></label>
-                      <textarea name="textarea" id="textarea" cols="23" rows="5"><?=$row['address'];?></textarea></td>
+                      <textarea name="address" id="address" cols="23" rows="5"><?=$row['address'];?></textarea></td>
                   </tr>
                   
                   
@@ -456,28 +445,36 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
+<!--                  <tr>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                    <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>-->
+<!--                    <td>-->
+<!--                      <label for="select"></label>-->
+<!--                      <select name="job" id="job">-->
+<!--                      --><?//
+//			 $sql3="select * from joblist";
+//			 $result3=mysqli_query($sql3);
+//			 while($data3=mysqli_fetch_array($result3)){
+//			 	if($data[job_id]==$data3[0]){
+//					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
+//				}else{
+//					echo "<option value='$data3[job_name]'>$data3[job_name]";
+//				}
+//			 }
+//			  ?>
+<!--                      </select></td>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                  </tr>-->
+
                   <tr>
                     <td>&nbsp;</td>
-                    <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>
-                    <td>
-                      <label for="select"></label>
-                      <select name="job" id="job">
-                      <?		
-			 $sql3="select * from joblist";
-			 $result3=mysql_query($sql3);			 
-			 while($data3=mysql_fetch_array($result3)){
-			 	if($data[job_id]==$data3[0]){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
-                      </select></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">อาชีพ :</span></span></td>
+                    <td colspan="4"><label for="job"></label>
+                        <input type="text" name="job" id="job" value="<?=$row['job'];?>"></td>
                   </tr>
+
                   <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
