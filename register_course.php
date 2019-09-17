@@ -1,4 +1,4 @@
-<?php
+  <?php
 session_start();
 include('db.php');
 if(isset($_SESSION['username'])) { header("location:index.php");}
@@ -559,7 +559,7 @@ if(isset($ok)) {
        $query = "insert into student(username,password,f_name,name,s_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) value(
 '$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
 
-       $do = mysql_query($query);
+       $do = mysqli_query($connection,$query);
        if ($do)
          {    
 		   echo "<script>location='index.php';</script>";
@@ -1122,7 +1122,7 @@ if(isset($ok)) {
                   </tr>
                   <tr>
                     <td width="213" height="16">&nbsp;</td>
-                    <td width="224"><input type="image" src="images/register.png" name="ok" value="Submit" alt="Submit"></td>
+                    <td width="224"><button type="submit" src="images/register.png" name="submit" value="Submit" alt="Submit"></td>
                     <td width="174">&nbsp;</td>
                     </tr>
                    
