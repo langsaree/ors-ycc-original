@@ -1,6 +1,6 @@
-<?
-//session_start();
-//if(!session_is_registered(user_admin)){header("location:index.php");}
+<?php
+session_start();
+//if(!isset($_SESSION["user_admin"])){header("location:index.php");}
 //end of check session
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="cpanel.css" />
 <style type="text/css">
 <!--
-
 -->
 </style>
 </head>
@@ -23,7 +22,7 @@
     <td width="9">&nbsp;</td>
     <td width="330"><span class="style26"><span class="style30">Administrator</span> <span class="style29">Control Panel</span></span></td>
     <td width="308">&nbsp;</td>
-    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><? echo '<span style="font-weight:bold; font-size:15px"> '.$user_admin .'</span>'; ?></td>
+    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><?php echo '<span style="font-weight:bold; font-size:15px"> '.$_SESSION["username"].' </span>';  ?></td>
     <td width="12">&nbsp;</td>
   </tr>
   <tr>
@@ -315,7 +314,6 @@
     <td>&nbsp;</td>
   </tr>
 </table>
-
 <table width="1024" border="0" cellspacing="2" cellpadding="0">
   <tr>
     <td width="977"><span class="boader">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></td>
