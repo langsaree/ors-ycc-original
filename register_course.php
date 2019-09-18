@@ -348,7 +348,13 @@ font-weight:bold;
 <?php
 //ob_start();
 //session_start();
-$errmsg= "";
+$errmsg = ""; $errmsg1 = ""; $errmsg2 = ""; $errmsg3 = ""; $errmsg4 = ""; $errmsg5 = "";
+$errmsg6 = ""; $errmsg7 = ""; $errmsg8 = ""; $errmsg9 = ""; $errmsg10 = ""; $errmsg11 = "";
+$errmsg12 = ""; $errmsg13 = ""; $errmsg14 = ""; $errmsg15 = ""; $errmsg16 = ""; $errmsg17 = "";
+$errmsg18 = ""; $errmsg19 = ""; $errmsg20 = ""; $errmsg21 = ""; $errmsg22 = ""; $errmsg23 = "";
+$errmsg24 = ""; $errmsg25 = ""; $errmsg26 = ""; $errmsg27 = ""; $errmsg28 = ""; $errmsg29 = "";
+$errmsg30 = ""; $errmsg31 = ""; $errmsg32 = ""; $errmsg33 = ""; $errmsg34 = ""; $errmsg35 = "";
+
 
 //$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
 //	foreach($_REQUEST as $key => $value)  {
@@ -359,7 +365,7 @@ $errmsg= "";
 //		$errmsg[$i] = false;
 //	}
 //$ok=$ok;
-if(isset($_POST['ok'])) {
+if(isset($_POST['Submit'])) {
 #=========================================
 # username check	
 //if(isset($ok)) { 
@@ -368,11 +374,11 @@ if(isset($_POST['ok'])) {
 	    $errmsg1 = "<span style=color:red>กรุณากรอบชื่ิิอล็อกอินด้วยค่ะ</span>";
 	  }	
 	//if(!ereg($pattern, $login)) {
-	  //  $errmsg2 .= "<span style=color:red>ชื่ิิอล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
+	  //  $errmsg2 = "<span style=color:red>ชื่ิิอล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
 	 //}
 	 if(!$errmsg1) {
-	 if(strlen($login) <4) {
-	    $errmsg3 .= "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>"; 
+	 if(strlen($login) <6) {
+	    $errmsg3 = "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>"; 
        }}
 	 
      /*if(!$errmsg[3]) {
@@ -386,7 +392,7 @@ if(isset($_POST['ok'])) {
 #email check
     $email=$_POST['email'];
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$errmsg5 .= "<span style=color:red>กรุณาใส่ Email ให้ตรงตามรูปแบบด้วยค่ะ</span>";
+		$errmsg5 = "<span style=color:red>กรุณาใส่ Email ให้ตรงตามรูปแบบด้วยค่ะ</span>";
 	}
 #============================================	
 # password check	
@@ -397,21 +403,21 @@ if(isset($_POST['ok'])) {
 	   }
 	      
     if(empty($cpswd)){
-	   $errmsg7 .= "<span style=color:red>กรุณากรอบยืนยันรหัสผ่านด้วยค่ะ</span>";
+	   $errmsg7 = "<span style=color:red>กรุณากรอบยืนยันรหัสผ่านด้วยค่ะ</span>";
 	   }
 		   
 	//if(!ereg($pattern, $pswd)) {
-	//    $errmsg8 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
+	//    $errmsg8 = "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
 	
 	//}
 	if(!$errmsg6)
 	if(strlen($pswd) < 6) {
-	    $errmsg9 .= "<span style=color:red>รหัสผ่านต้องยาว 6-20 ตัวค่ะ</span>"; 
+	    $errmsg9 = "<span style=color:red>รหัสผ่านต้องยาว 6-20 ตัวค่ะ</span>"; 
 	   }
     
 	if(!$errmsg6 && !$errmsg7 && !$errmsg9) {
 		if($pswd != $cpswd) {
-			$errmsg10 .="<span style=color:red>รหัสผ่านทั้งสองไม่ตรงกันค่ัะ</span>"; ;
+			$errmsg10 ="<span style=color:red>รหัสผ่านทั้งสองไม่ตรงกันค่ัะ</span>"; ;
 		}}
 #end password check
 #===================================	
@@ -420,16 +426,16 @@ if(isset($_POST['ok'])) {
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
    if(empty($f_name)){
-	   $errmsg11 .= "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
+	   $errmsg11 = "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
 	   }
     if(empty($name)){
-	   $errmsg12 .= "<span style=color:red>กรุณากรอบชื่อด้วยค่ะ</span>";
+	   $errmsg12 = "<span style=color:red>กรุณากรอบชื่อด้วยค่ะ</span>";
 	   }
     if(empty($s_name)){
-	   $errmsg13 .= "<span style=color:red>กรุณากรอบนามสกุลด้วยค่ะ</span>";
+	   $errmsg13 = "<span style=color:red>กรุณากรอบนามสกุลด้วยค่ะ</span>";
 	   }
 	 //if(!ereg($pattern, $pswd)) {
-	//    $errmsg14 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
+	//    $errmsg14 = "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
 	  
 #===================================
 #bithday check
@@ -528,26 +534,26 @@ if(isset($_POST['ok'])) {
     $phone=$_POST['tel'];
 
        if(empty($home)){
-	      $errmsg23 .= "<span style=color:red>กรุณากรอบบ้านเลขที่ด้วยค่ะ</span>";
+	      $errmsg23 = "<span style=color:red>กรุณากรอบบ้านเลขที่ด้วยค่ะ</span>";
            }
        if(empty($m_home)){
-	      $errmsg24 .= "<span style=color:red>กรุณากรอบหมู่บ้านด้วยค่ะ</span>";
+	      $errmsg24 = "<span style=color:red>กรุณากรอบหมู่บ้านด้วยค่ะ</span>";
            }
        if(empty($r_home)){
-	      $errmsg25 .= "<span style=color:red>กรุณากรอกซอย/ถนนด้วยค่ะ</span>";
+	      $errmsg25 = "<span style=color:red>กรุณากรอกซอย/ถนนด้วยค่ะ</span>";
            }
        if(empty($v_home)){
-	      $errmsg26 .= "<span style=color:red>กรุณากรอกแขวง/ตำบลด้วยค่ะ</span>";}
+	      $errmsg26 = "<span style=color:red>กรุณากรอกแขวง/ตำบลด้วยค่ะ</span>";}
        if(empty($p_home)){
-	      $errmsg27 .= "<span style=color:red>กรุณากรอกอำเภด้วยค่ะ</span>";}
+	      $errmsg27 = "<span style=color:red>กรุณากรอกอำเภด้วยค่ะ</span>";}
        if(empty($c_home)){
-	      $errmsg28 .= "<span style=color:red>กรุณากรอกจังหวัดด้วยค่ะ</span>";}
+	      $errmsg28 = "<span style=color:red>กรุณากรอกจังหวัดด้วยค่ะ</span>";}
 
        if(empty($post)){
-	      $errmsg29 .= "<span style=color:red>กรุณากรอบหรัสไปรษณีด้วยค่ะ</span>";}
+	      $errmsg29 = "<span style=color:red>กรุณากรอบหรัสไปรษณีด้วยค่ะ</span>";}
 
        if(empty($tel)){
-	      $errmsg30 .= "<span style=color:red>กรุณากรอกเบอร์โทรศัพย์ด้วยค่ะ</span>";}
+	      $errmsg30 = "<span style=color:red>กรุณากรอกเบอร์โทรศัพย์ด้วยค่ะ</span>";}
 		  
 	$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;	  
 #end address
@@ -557,13 +563,13 @@ if(isset($_POST['ok'])) {
     $eduprovince=$_POST['eduprovince'];
     $eduyear=$_POST['eduyear'];
 	if(empty($edulevel)){
-	      $errmsg31 .= "<span style=color:red>กรุณาเลือกระดับการศึกษาด้วยค่ะ</span>";}
+	      $errmsg31 = "<span style=color:red>กรุณาเลือกระดับการศึกษาด้วยค่ะ</span>";}
     if(empty($eduplace)){
-	      $errmsg32 .= "<span style=color:red>กรุณากรอบสถานศึกษาด้วยค่ะ</span>";}
+	      $errmsg32 = "<span style=color:red>กรุณากรอบสถานศึกษาด้วยค่ะ</span>";}
     if(empty($eduprovince)){
-	      $errmsg33 .= "<span style=color:red>กรุณากรอบจังหหวัดสถานศึกษาด้วยค่ะ</span>";}
+	      $errmsg33 = "<span style=color:red>กรุณากรอบจังหหวัดสถานศึกษาด้วยค่ะ</span>";}
 	if(empty($eduyear)){
-	      $errmsg34 .= "<span style=color:red>กรุณากรอบปีการศึกษาด้วยค่ะ</span>";}		  		  
+	      $errmsg34 = "<span style=color:red>กรุณากรอบปีการศึกษาด้วยค่ะ</span>";}		  		  
 #================================= 
   //$job=$_POST['job'];
     $job=$_POST['t_job'];
