@@ -1,39 +1,37 @@
 <?php
 session_start();
 include('db.php');
-if(!isset($_SESSION['username']))
-	{
-//include('db.php');
-$username = "";
-$password = "";
-if(!isset($_SESSION['logined'])) {
-   if(isset($_REQUEST['username'])) {
-   $username = $_REQUEST['username'];
-   $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
+if(isset($_SESSION['username'])) {
+   $username =$_SESSION['username'];
+ }
+
+if(!isset($_SESSION['username'])) {
+}
+   $username = "";
+   $password = "";
+
+   if(!isset($_REQUEST['username'])) {
+       if(isset($_REQUEST['username'])) {
+          $username = $_REQUEST['username'];
+          $password = $_REQUEST['password'];
+			    if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+				  $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
+			    } else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+				  $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
+			    } else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+				  $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
+			    } else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysqli_query($sql);
+                   $result=mysqli_query($conn,$sql);
                    $count=mysqli_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
+                  if($count==1) {
+					 
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
+					
 					  header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+					  } else {
+				    $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
 				   }
 				  }
 			  	}  
@@ -44,175 +42,107 @@ if(!isset($_SESSION['logined'])) {
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <title>ติดต่อผู้ดูแลระบบ</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.style30 {
-	color: #3987FB;
-	font-size: 16px;
-	font-weight: bold;
-}
--->
+        <!--
+        .style25 {
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        .style7 {
+            color: #3987FB;
+            font-size: 14px;
+        }
+        .style30 {
+            color: #3987FB;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        -->
     </style>
 </head>
 <body>
     <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
+        <div class="BorderBorder">
+            <div class="BorderBL">
+              <div></div>
+        </div>
+            <div class="BorderBR">
+              <div></div>
+        </div>
+              
+         <div class="BorderTL"></div>
+        <div class="BorderTR">
+            <div></div>
+        </div>
+        <div class="BorderR">
+            <div></div>
+        </div>
+        <div class="BorderB">
+            <div></div>
+        </div>
+        <div class="BorderL"></div>
+        <div class="Border">
+            <div class="Menu">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php"
+                                                                                       class="MenuButton"> <span>วิทยาลัย</span></a><a
+                            href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php"
+                                                                                             class="MenuButton"><span>ประชาสัมพันธ์</span>
+                    </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php"
+                                                                                               class="MenuButton"><span> ติดต่อเรา</span></a>
+                    <input name="text" type="text" style="width:120px"/>
+                    <span class="ButtonInput"><span>
+                 <input type="button" value="Search"/>
                  </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
+            </div>
+            <div class="Header">
+                <div class="HeaderTitle">
+                    <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
+                    <h1>&nbsp;</h1>
+                </div>
+            </div>
+            <div class="Columns">
+                <div class="Column1">
+                    <div class="Block">
+                        <span class="BlockHeader"><span>Online Register</span></span>
+                        <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+                        </table>
 
-	 <?php// echo $message;
-  if(isset($_GET['message'])){
-       $message = $_GET['message'];
-  }else{
-       $message = '';
-  } ?>  	
-	<?php echo	'<form action="" method="post">
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+          <?php if (!empty($message)) {
+                            echo "<span style=\"color:red\">$message</span>";
+                        }
+                        ?>
+
+        <?php if(!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
+              //  To show login form if user do not login
+              echo '<form action="" method="post">';
+           ?>
+            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
-              </tr>
-              <tr>
-                <td><div align="left"><span class="style9">ล็อกอิน::</span></div></td>
-              </tr>
-            </table>
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><label>
-                  <input type="text" name="username" />
-                </label></td>
-              </tr>
-            </table>
-           
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><span class="style9">รหัสผ่าน::</span></td>
-              </tr>
-            </table>
-            <p>&nbsp;</p>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><input type="password" name="password" /></td>
-              </tr>
-            </table>
-            <table width="161" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td width="72"><label for="Submit"></label>
-                  <input type="submit" name="ok" id="ok" value="เข้าสู่ระบบ" /></td>
-                <td width="7">&nbsp;</td>
-                <td width="175"><label><a href="password_recovery.php">ลืมรหัสผ่าน?</a></label></td>
-              </tr>
-              <tr>
-                
-              </tr>
-            </table>
-            </form>
-		
-              <br><br>
-			  
-            </p>
-            <p>&nbsp;</p>
-        <table width="150" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
+            
+              <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
-		}
-		else
-		{
-		echo '
+				<?php 
+                   
+                        } else {
+                         ?>
+                    <?php
+                        // process this if user aleady login
+                            echo '
+
 		<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>ระบบลงทะเบียนออนไลน์</title>
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style30 {
-	color: #3987FB;
-	font-size: 16px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
@@ -222,9 +152,9 @@ if(!isset($_SESSION['logined'])) {
 		$user=$username;
 		}
 ?>
-            <br>
-          </div>
-          <div class="Block">
+    <br>
+      </div>
+      <div class="Block">
 
             <span class="BlockHeader"><span>Menu</span></span>
             <div class="BlockContentBorder">
@@ -236,12 +166,34 @@ if(!isset($_SESSION['logined'])) {
           </div>
         </div>
 
-        </div><div class="MainColumn">
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        </div>
+        <div class="MainColumn">
+        <div class="ArticleBorder">
+        <div class="ArticleBL">
+           < div></div>
+        </div>
+        <div class="ArticleBR">
+           <div></div>
+        </div>
+        <div class="ArticleTL">
+        </div>
+        <div class="ArticleTR">
+           <div></div>
+        </div>
+        <div class="ArticleT">
+        </div>
+        <div class="ArticleR">
+            <div></div>
+        </div>
+        <div class="ArticleB">
+            <div></div>
+        </div>
+        <div class="ArticleL">
+        </div>
  <?php
 
-if($_POST['action']){
-if($_POST['verifycode'] !=$_SESSION['total'] ){
+if(isset($_POST['submit'])) {
+if($_POST['verifycode'] !=$_SESSION['total']) {
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
     //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
  }else{
@@ -254,7 +206,7 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      $msgs .= "ข้อความ<br>".$_POST['msg'];
 
 
-     $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
+     $mailto = "art369963@gmail.com"; # อีเมล์ผู้รับ
      if(mail($mailto, $_POST['subj'], $msgs, $headers)){
      echo "ส่งสำเร็จ";
      }else{
@@ -265,13 +217,13 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
  }
   }
 ?>
-<?
+<?php
 $num1 = rand(0,10);
 $num2 = rand(0,10);
 $_SESSION['total'] = ($num1 + $num2);
 ?>      
           <div class="Article">
-            <form id="form1" name="form1" method="post" action="">
+            <form id="form1" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
           
               <table width="600" border="0" cellspacing="2" cellpadding="2">
     <tr>
@@ -287,32 +239,33 @@ $_SESSION['total'] = ($num1 + $num2);
       <td width="187">&nbsp;</td>
     </tr>
 
-<? 
+<?
 $sql = "select * from student where username='$user' ";
-$result = mysqli_query($sql); 
-while($row=mysqli_fetch_array($result))
-{
+$result = mysqli_query($conn,$sql); 
+while($row=mysqli_fetch_array($result)) {
 
 ?> 
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?=$row['username'];?>" /></td>
+      <td><input type='text' name='name' value="<?php $row['username']; ?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value="<?=$row['email'];?>" /></td>
+      <td><input type='text' name='email' value="<?php echo $row['email'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?=$row['phone'];?>" /></td>
+      <td><input type='text' name='tel' value="<?php echo $row['phone'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
-    <? } ?>
+    <?
+      } 
+    ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อเรื่อง :</span></td>
@@ -328,18 +281,23 @@ while($row=mysqli_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">Code :
-        <? echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
-        <? echo '<span style="color:green">+</span>';?>
-        <? echo '<span style="color:red"> '.$num2.'</span>';?>
+        <?php echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
+        <?php echo '<span style="color:green">+</span>';?>
+        <?php echo '<span style="color:red"> '.$num2.'</span>';?>
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
-          <? echo $c_error; ?> </td>
+          <?php 
+            if (isset($c_error)) {
+              echo $c_error;
+            }
+            ?>
+         </td>
       </tr>
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td><input type='submit' value='ส่งข้อความ' /></td>
+      <td><input type='submit' name='submit' value='ส่งข้อความ' /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -354,13 +312,30 @@ while($row=mysqli_fetch_array($result))
           </div>
         </div>
 
-
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+       <div class="ArticleBorder">
+                        <div class="ArticleBL">
+                            <div></div>
+                        </div>
+                        <div class="ArticleBR">
+                            <div></div>
+                        </div>
+                        <div class="ArticleTL"></div>
+                        <div class="ArticleTR">
+                            <div></div>
+                        </div>
+                        <div class="ArticleT"></div>
+                        <div class="ArticleR">
+                            <div></div>
+                        </div>
+                        <div class="ArticleB">
+                            <div></div>
+                        </div>
+                        <div class="ArticleL"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span>
+            </div>
         </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
     </body>
 </html>
