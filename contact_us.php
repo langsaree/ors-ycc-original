@@ -253,7 +253,7 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php
-$sql = "select * from student where username='$username' ";
+$sql = "select * from student where username='$user' ";
 $result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
 {
