@@ -173,14 +173,15 @@ if(isset($_SESSION['username'])) {
                     </table>
                     </form>
 
-                      <br><br>
-                      </p>
-                      <p>&nbsp;</p>
-                    <table width="150" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td><div align="center"><a href="register.php"><img scr="images/register.gif" width="130" height="35"></a></div><td>
-                      </tr>
-                    </table>
+                     <br>
+        
+            </p>
+            <p>&nbsp;</p>
+        <table width="150" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
+                  </tr>
+                </table>
 
                                <?php ';?>
                         <?php } else { ?>
