@@ -1,6 +1,6 @@
-<?
+<?php  
 session_start();
-include('auth.php');
+include('db.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +8,7 @@ include('auth.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -40,7 +40,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
--->
+
 </style>
 </head>
 <body>
@@ -86,27 +86,27 @@ body {
         <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
         <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
       </tr>
-     <? 
+     <?php   
 		/////////////////////////take information from student table //////////////////////////
 	include('db.php');
 	$sql1 = "select * from student ";
-	$v=mysql_query ($sql1);
-	while ($row= mysql_fetch_array($v))
+	$v=mysqli_query ($connection,$sql1);
+	while ($row= mysqli_fetch_array($v))
 	{
-	$std = $row[std_id];
-	$user= $row[username];
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$std = $row['std_id'];
+	$user= $row['username'];
+	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
 	//echo $name;
 	?>
       <tr>
-		<td><div align="left"><?= $std?> </div></td>
-		<td><div align="center"><?= $user ?></div></td>
-		<td><div align="left"><?= $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<? echo $std;?>">แสดงรายละเอียด</a></div></td>
+		<td><div align="left"><?php echo $std?> </div></td>
+		<td><div align="center"><?php echo $user ?></div></td>
+		<td><div align="left"><?php echo $name?></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php   echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php   echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php   echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <? } ////// close first while //////////////////////////////////////////////
+     <?php   } ////// close first while //////////////////////////////////////////////
 		//} //////// close of second while ////////////////////
 		//} /////// close 3rd while ///////////////////////
 		?>

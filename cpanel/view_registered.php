@@ -3,6 +3,7 @@ session_start();
 include('db.php');
 $msg = "";
 $active = "";
+$non_active = "";
 //include('auth.php');
 extract ($_GET);
 $active = $active;
