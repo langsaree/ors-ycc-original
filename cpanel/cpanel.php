@@ -1,7 +1,7 @@
 <?
 session_start();
-if (isset($_SESSION['username'])) {
-    $user_admin = $_SESSION['username'];
+if (isset($_SESSION['user_admin'])) {
+    $user_admin = $_SESSION['user_admin'];
 }
 //end of check session
 ?>
