@@ -30,8 +30,28 @@ if (isset($_POST['ok'])) {
         } else {
             //$error='Wrong Username or Password';
             $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+        }
+
+        $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
+        $result1 = mysqli_query($connection, $sql1);
+        // Mysql_num_row is counting table row
+        $count1 = mysqli_num_rows($result1);
+        // If result matched $myusername and $mypassword, table row must be 1 row
+        if ($count1 == 1) {
+            // Register $username, $password and redirect to file "login_success.php"
+            $_SESSION['username'] = $username;
+//            $_SESSION['password'] = $password;
+            // redirect to profile page
+            header("Location:lec_profile.php");
+        } else {
+            //$error='Wrong Username or Password';
+            $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
 
         }
+
+
+
+
     } else if (empty($_POST['username']) && empty($_POST['password'])) {
         $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
     } else if (empty($_POST['username']) && !empty($_POST['password'])) {
@@ -116,6 +136,11 @@ if (isset($_POST['ok'])) {
                 <td></td>
               </tr>
               <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
                 <td><div align="left"><span class="style9">ล็อกอิน::</span></div></td>
               </tr>
             </table>
@@ -151,7 +176,9 @@ if (isset($_POST['ok'])) {
                 <td width="175"><label><a href="password_recovery.php">ลืมรหัสผ่าน?</a></label></td>
               </tr>
               <tr>
-                
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
               </tr>
             </table>
             </form>
