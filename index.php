@@ -71,11 +71,7 @@ include('login_check.php');
                 </table>
 
 
-<?php
-if (isset($message)) {
-        echo $message;
-    }
-    ?>
+<?php if (isset($message)) { echo $message; }?>
 
 
 
