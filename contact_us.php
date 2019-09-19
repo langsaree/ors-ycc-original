@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('login.php');
+include('include/login.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +72,7 @@ $_SESSION['total'] = ($num1 + $num2);
       <td width="187">&nbsp;</td>
     </tr>
 
-<?php 
+<?php
 if (isset($_SESSION['username'])) {
   $sqli = "select * from student where username='$username' ";
   $result = mysqli_query($conn, $sqli);
