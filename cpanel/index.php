@@ -22,23 +22,7 @@ if (isset($_POST['submit'])) {
         // If result matched $myusername and $mypassword, table row must be 1 row
         if ($count == 1) {
             // Register $username, $password and redirect to file "login_success.php"
-            $_SESSION['username'] = $username;
-//            $_SESSION['password'] = $password;
-            // redirect to profile page
-            header("Location:cpanel.php");
-        } else {
-            //$error='Wrong Username or Password';
-            $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
-
-        }
-        $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
-        $result1 = mysqli_query($connection, $sql1);
-        // Mysql_num_row is counting table row
-        $count1 = mysqli_num_rows($result1);
-        // If result matched $myusername and $mypassword, table row must be 1 row
-        if ($count1 == 1) {
-            // Register $username, $password and redirect to file "login_success.php"
-            $_SESSION['username'] = $username;
+            $_SESSION['user_admin'] = $username;
 //            $_SESSION['password'] = $password;
             // redirect to profile page
             header("Location:cpanel.php");
