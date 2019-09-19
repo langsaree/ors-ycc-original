@@ -1,41 +1,66 @@
+
+
 <?php
-//session_start();
-//if(session_is_registered("user_admin")){header("location:cpanel.php");}
-//ob_start(); 
-include("db.php");
-$username=$_POST["username"];
-$password=$_POST["password"];
-//$code=$_POST['code'];
-//$code_hidden=$_POST['code_hidden'];
+session_start();
+include('db.php');
 
-#To protect MySQL injection (more detail about MySQL injection) 
-//$username = stripslashes($username);      
-//$password = stripslashes($password);
-//$username = mysql_real_escape_string($username);
-//$password = mysql_real_escape_string($password);
-//$code = stripslashes($code);
-//$code = mysql_real_escape_string($code);
+// username and password receive from register form
+if (isset($_POST['submit'])) {
+    if (!empty($_POST['username'] && !empty($_POST['password']))) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        // To protect MySQL injection (more detail about MySQL injection)
+//        $username = stripslashes($username);
+//        $password = stripslashes($password);
+//        $username = mysqli_real_escape_string($connection, $username);
+//        $password = mysqli_real_escape_string($connection, $password);
+        //check compare to database
+        $sql = "SELECT * FROM admin WHERE username='$username' and password='$password'";
+        $result = mysqli_query($connection, $sql);
+        // Mysql_num_row is counting table row
+        $count = mysqli_num_rows($result);
+        // If result matched $myusername and $mypassword, table row must be 1 row
+        if ($count == 1) {
+            // Register $username, $password and redirect to file "login_success.php"
+            $_SESSION['username'] = $username;
+//            $_SESSION['password'] = $password;
+            // redirect to profile page
+            header("Location:cpanel.php");
+        } else {
+            //$error='Wrong Username or Password';
+            $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
 
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-//$result=mysql_query($sql);
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-$sql = "select * from admin where username='$username' and password='$password'";
-$result=mysql_query($sql);
-$count=mysql_num_rows($result);
-if($count==1/*&&strcmp($code,$code_hidden)==0*/)
-{
-$user_admin = $username;
-$pass_admin = $password;
-session_register("user_admin");
-session_register("pass_admin");
-header("location:cpanel.php");
+        }
+        $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
+        $result1 = mysqli_query($connection, $sql1);
+        // Mysql_num_row is counting table row
+        $count1 = mysqli_num_rows($result1);
+        // If result matched $myusername and $mypassword, table row must be 1 row
+        if ($count1 == 1) {
+            // Register $username, $password and redirect to file "login_success.php"
+            $_SESSION['username'] = $username;
+//            $_SESSION['password'] = $password;
+            // redirect to profile page
+            header("Location:cpanel.php");
+        } else {
+            //$error='Wrong Username or Password';
+            $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+
+        }
+
+
+
+
+
+
+    } else if (empty($_POST['username']) && empty($_POST['password'])) {
+        $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
+    } else if (empty($_POST['username']) && !empty($_POST['password'])) {
+        $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
+    } else if (!empty($_POST['username']) && empty($_POST['password'])) {
+        $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
+    }
 }
-else
- {
-$error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
-//echo "Wrong username and password";
-} 
-//ob_end_flush();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -71,11 +96,15 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
           <h3 class="style5"><span class="style2">ADMINISTRATOR</span> <span class="style3">LOGIN</span></h3>
           <p class="style5"></p>
 <form action="" method="post" target="">
-                <p><label for="ftp-user-name">User Name</label><input type="text" name="username" id="user-name" /></p>
+                <p><label for="ftp-user-name">User Name</label><input type="text" name="username" id="username" /></p>
                 <p><label for="ftp-password">Password</label><input type="password" name="password" id="password" /></p>
-                <p class="submit-wrap"><input type="submit" id="submit" class="button" value="Login" /> 
+                <p class="submit-wrap"><input type="submit" id="submit" name="submit" value="Login" />
 &nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p>
     </form>
+      <?php if (!empty($message)) {
+          echo "<span style=\"color:red\">$message</span>";
+      }
+      ?>
   </div>
         
         
