@@ -1,8 +1,15 @@
 <?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+//if(!session_is_registered(lec_user)){header("location:index.php");}
+//if(session_is_registered(lec_user)){
+
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
+include('db.php');
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -68,7 +75,7 @@ if(session_is_registered(lec_user)){
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$username.' </span><br>'; ?></td>
               </tr>
               <tr>
                 <td><? echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
@@ -80,7 +87,7 @@ if(session_is_registered(lec_user)){
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+
 
             <br>
           </div>
@@ -128,58 +135,58 @@ if(session_is_registered(lec_user)){
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-            $result=mysql_query($sql);//????????
-            ($row=mysql_fetch_array($result))//????????
+            $result=mysqli_query($connection, $sql);//????????
+            ($row=mysqli_fetch_array($result))//????????
 		    ?>
                   <td width="26">&nbsp;</td>
                   <td width="124" rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
                   <td width="140" class="main" style="text-align: right">รหัสประจำตัว :</td>
-                  <td width="321" class="maintext"><?= $row[lec_id];?></td>
+                  <td width="321" class="maintext"><?= $row['lec_id'];?></td>
                   <td width="15">&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">ชื่อ :</td>
-                  <td class="maintext"><?= $row[lec_name];?></td>
+                  <td class="maintext"><?= $row['lec_name'];?></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">แผนกวิชา :</td>
-                  <td class="maintext"><?= $row[cos_name];?></td>
+                  <td class="maintext"><?= $row['cos_name'];?></td>
                   <td>&nbsp;</td>
                 </tr>
                                 <tr>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">ภาควิชา :</td>
-                  <td class="maintext"><?= $row[cos_group];?></td>
+                  <td class="maintext"><?= $row['cos_group'];?></td>
                   <td>&nbsp;</td>
                 </tr>
 
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">Email :</td>
-                  <td class="maintext"><?= $row[lec_email];?></td>
+                  <td class="maintext"><?= $row['lec_email'];?></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">Phone :</td>
-                  <td class="maintext"><?= $row[lec_tel];?></td>
+                  <td class="maintext"><?= $row['lec_tel'];?></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">Username :</td>
-                  <td class="maintext"><?= $row[username];?></td>
+                  <td class="maintext"><?= $row['username'];?></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">Password :</td>
-                  <td class="maintext"><?= $row[password];?></td>
+                  <td class="maintext"><?= $row['password'];?></td>
                   <td>&nbsp;</td>
                 </tr>
              

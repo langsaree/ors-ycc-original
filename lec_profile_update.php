@@ -1,9 +1,11 @@
 <?php
 session_start();
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
 include('db.php');
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -64,7 +66,7 @@ input:focus, textarea:focus {
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$username.' </span><br>'; ?></td>
               </tr>
               <tr>
                 <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
@@ -76,7 +78,7 @@ input:focus, textarea:focus {
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+
 
             <br>
           </div>
@@ -111,8 +113,8 @@ input:focus, textarea:focus {
             </table>
 <?
 			
-			$ok=$ok;
-            if(isset($ok)){
+
+            if(isset($POST['ok'])){
 				$login=$_POST['login'];
 				$pswd=$_POST['pswd'];
 				$name=$_POST['name'];
@@ -120,12 +122,12 @@ input:focus, textarea:focus {
 				$phone=$_POST['phone'];
 				
 				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysql_query($sql);
+				$do=mysqli_query($connection,$sql);
 				if($do){
-					echo "<script>location='lec_profile.php';</script>";
+					header("location:lec_profile.php");
 				}
 				else{
-					 mysql_error();
+					 mysqli_error($connection);
 				}
 			}
 			?>
@@ -134,8 +136,8 @@ input:focus, textarea:focus {
              <? 
 			
 			$sql = "select * from lecture where username='$username'";
-            $result=mysql_query($sql);
-            ($row=mysql_fetch_array($result));
+            $result=mysqli_query($connection,$sql);
+            ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
@@ -160,7 +162,7 @@ input:focus, textarea:focus {
                   <td class="main">Username :</td>
                   <td>
                     <label for="login"></label>
-                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?=$row[username];?>">
+                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?=$row['username'];?>">
                  </td>
                   <td>&nbsp;</td>
                 </tr>
@@ -168,7 +170,7 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">Password :</td>
                   <td><label for="pswd"></label>
-                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?=$row[password];?>" ></td>
+                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?=$row['password'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -181,21 +183,21 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">ชื่อ :</td>
                   <td><label for="name"></label>
-                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?=$row[lec_name];?>" ></td>
+                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?=$row['lec_name'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Email :</td>
                   <td><label for="email"></label>
-                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?=$row[lec_email];?>" ></td>
+                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?=$row['lec_email'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Phone :</td>
                   <td><label for="phone"></label>
-                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?=$row[lec_tel];?>" ></td>
+                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?=$row['lec_tel'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
             </table>
@@ -209,8 +211,8 @@ input:focus, textarea:focus {
               
               <tr>
                 <td>&nbsp;</td>
-                <td><input type="submit" name="ok" id="button" value="    ตกลง    "></td>
-                <td><input type="submit" name="cancel" id="button2" value="    ยกเลิก    "></td>
+                <td><input type="submit" name="ok" id="ok" value="    ตกลง    "></td>
+                <td><input type="reset" name="cancel" id="cancel" value="    ยกเลิก    "></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
