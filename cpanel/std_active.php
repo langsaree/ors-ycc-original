@@ -5,6 +5,7 @@ include('db.php');
 extract ($_GET);
 //$active = $active;
 //$non_active = $non_active;
+$msg='';
 if(!empty($active)){
 	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
 	$result = mysqli_query($connection,$sql);
@@ -130,13 +131,13 @@ border-color:#8A9AA6;
   $sql = "select * from student order by status DESC";
   $result = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_array($result)){
-		$n = $row[f_name] . $row[name];
+		$n = $row['f_name'] . $row['name'];
 		?>  
         <tr>
-          <td align="center" bgcolor="#FFFFB0"><?php  echo $row[std_id];?></td>  
-          <td align="left" bgcolor="#FFFFB0"><?php  echo $n?> -  <?php  echo $row[s_name];?></td>
+          <td align="center" bgcolor="#FFFFB0"><?php  echo $row['std_id'];?></td>  
+          <td align="left" bgcolor="#FFFFB0"><?php  echo $n?> -  <?php  echo $row['s_name'];?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <?php  $status=$row[status];
+            <?php  $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -146,8 +147,8 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?php  echo$row[std_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?php  echo$row[std_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?php  echo$row['std_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?php  echo$row['std_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
           </tr><?php  }?>
 </table>
       <p>&nbsp;</p>
