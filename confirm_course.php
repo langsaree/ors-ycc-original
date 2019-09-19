@@ -86,10 +86,7 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
              
             </table>
 
-  <?php
-      if (isset($message)) 
-      { echo $message;  } 
-      ?>		
+  <?php if (isset($message)) { echo $message;  } ?>		
 	<?php
 ######################################   To show login form if user do not login ###################################
 	
@@ -284,11 +281,11 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
             
               <table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
- <?
+ <?php
 $sql = "select * from course where cos_id='$cos_id' ";
-$result = mysql_query($sql);
-while ($rows = mysql_fetch_array($result)) {
-//$id = $rows["cos_id"];
+$result = mysqli_query($connection, $sql);
+while ($rows = mysqli_fetch_array($result)) {
+$id = $rows["cos_id"];
 //$name = $rows["cos_name"];
 
 ?>               
@@ -297,13 +294,13 @@ while ($rows = mysql_fetch_array($result)) {
                   <td>หมูวิชา</td>
                   <td><label for="select3"></label>
                     <select style=" width:200px;" name="cos_group" id="select3">
-                      <option value="<? echo $rows[cos_group]; ?>"><?= $rows[cos_group]; ?></option>
+                      <option value="<?php echo $rows['cos_group']; ?>"><?php  $rows['cos_group']; ?></option>
                       <option>-- select --</option>
-                       <?		
+                       <?php
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
-			 	              if($data[cos_group]==$data3[0]){
+			             $result3=mysqli_query($connection, $sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
+			 	              if($data['cos_group']==$data3[0]){
 					             echo "<option value='$data3[cos_group]' selected>$data3[cos_group]";
 				              }else{
 					            echo "<option value='$data3[cos_group]'>$data3[cos_group]";
@@ -318,13 +315,13 @@ while ($rows = mysql_fetch_array($result)) {
                 <td width="73">รหัสวิชา</td>
                 <td width="317">
                 <select style="width:200px;" name="select" size="1" id="select">                 
-                  <option value="<? echo $rows[cos_id]; ?>"><?= $rows[cos_id]; ?></option>
+                  <option value="<?php echo $rows['cos_id']; ?>"><?php  $rows['cos_id']; ?></option>
                   <option>-- select --</option> 
-                   <?		
+                   <?php		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
-			 	              if($data[cos_id]==$data3[0]){
+			             $result3=mysqli_query($connection, $sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
+			 	              if($data['cos_id']==$data3[0]){
 					             echo "<option value='$data3[cos_id]' selected>$data3[cos_id]";
 				              }else{
 					             echo "<option value='$data3[cos_id]'>$data3[cos_id]";
@@ -339,13 +336,13 @@ while ($rows = mysql_fetch_array($result)) {
                 <td>รายวิชา</td>
                 <td><select style="width:200px;" name="select2" id="select2">
                   
-                  <option value="<? echo $rows[cos_name]; ?>"><?= $rows[cos_name]; ?></option>
+                  <option value="<?php echo $rows['cos_name']; ?>"><?php  $rows['cos_name']; ?></option>
                   <option>-- select --</option> 
-                  <?		
+                  <?php		
 			             $sql3="select * from course";
-			             $result3=mysql_query($sql3);			 
-			             while($data3=mysql_fetch_array($result3)){
-			 	              if($data[cos_name]==$data3[0]){
+			             $result3=mysqli_query($connection, $sql3);			 
+			             while($data3=mysqli_fetch_array($result3)){
+			 	              if($data['cos_name']==$data3[0]){
 					             echo "<option value='$data3[cos_name]' selected>$data3[cos_name]";
 				              }else{
 					             echo "<option value='$data3[cos_name]'>$data3[cos_name]";
@@ -375,12 +372,12 @@ while ($rows = mysql_fetch_array($result)) {
               <tr>
                 <td height="22">&nbsp;</td>
                 <td><span class="style48">หมูวิชา</span></td>
-                <td><?= $rows[cos_group];?></td>
+                <td><?php echo $rows['cos_group'];?></td>
               </tr>
               <tr>
                 <td height="24">&nbsp;</td>
                 <td><span class="style48">รายวิชา</span></td>
-                <td><?= $rows[cos_id];?></td>
+                <td><?php echo $rows['cos_id'];?></td>
               </tr>
               <tr>
                 <td width="57">&nbsp;</td>
@@ -520,7 +517,7 @@ while ($rows = mysql_fetch_array($result)) {
                 </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="pdf.php?id=<?=$rows[cos_id]; ?> " target="_blank" ><img src="images/cregister.png" width="200" height="40"></a></td>
+                <td><a href="pdf.php?id=<?php $rows['cos_id']; ?> " target="_blank" ><img src="images/cregister.png" width="200" height="40"></a></td>
                 <td>&nbsp;</td>
                 </tr>
               <tr>
@@ -528,7 +525,7 @@ while ($rows = mysql_fetch_array($result)) {
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 </tr>
-                   <? } ?>
+                   <?php } ?>
     </table>
             <p>&nbsp;</p>
             </form>
