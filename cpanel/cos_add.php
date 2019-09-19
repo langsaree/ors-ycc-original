@@ -5,63 +5,75 @@ session_start();
 
 ?>
 <?
+$errmsg1 = ""; $errmsg2 = ""; $errmsg3 = ""; $errmsg4 = "";
+$errmsg5 = ""; $errmsg6 = ""; $errmsg7 = ""; $errmsg8 = "";
 
-$errmsg= "";
-if(isset($ok)) {
+
+if(isset($_POST['ok'])) {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
    if(empty($cos_id)){
-     $errmsg1 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+     $errmsg1 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์</span>';}
    	#=========================== 	 
 $cos_group = $_POST['cos_group'];
    if(empty($cos_group)){ 
-   $errmsg2 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+   $errmsg2 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์</span>';}
       	#=========================== 	 
 $cos_name = $_POST['cos_name'];
    if(empty($cos_name)){ 
-   $errmsg3 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+   $errmsg3 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์</span>';}
 
    #========================
 $cos_period = $_POST['cos_period'];
    if(empty($cos_period)){ 
-   $errmsg4 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';} 
+   $errmsg4 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์</span>';}
    #============================
 $cos_day =$_POST['cos_day'];
 $cos_after =$_POST['cos_after'];
 $cos_time =$_POST['cos_time'];
-$date = $cos_day."-". $cos_after ."/". $cos_time;
 //echo $date;
    if(empty($cos_day)){
-   $errmsg5 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day</span>'; }
+   $errmsg5 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์ day</span>'; }
    if(!$errmsg5){
 	   if(empty($cos_after)){
-           $errmsg6 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day2 </span>'; 
+           $errmsg6 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์ day2 </span>';
 		   }}
    if(!$errmsg5 && !$errmsg6){
 	   if(empty($cos_time)){
-           $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
+           $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์ period </span>'; }}
+
+   $date = $cos_day.'-'. $cos_after .'/'. $cos_time;
    #====================================
-$cos_lec =$_POST['lec_id'];
+$lec_id =$_POST['lec_id'];
    if(empty($lec_id)){
-   $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
+   $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอกข้อมูลไม่สมบูรณ์</span>' ;}
    
 $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysql_query ("SET NAMES 'utf8'");
+mysqli_query ($connection, "SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysql_query($sql);
+$result = mysqli_query($connection, $sql);
 
-if ($result>0)	
-{?>
-<script type="text/javascript">
-	window.location="manage_course.php";
-</script>
+//if ($result>0)
+//{?>
+<!--<script type="text/javascript">-->
+<!--	window.location="manage_course.php";-->
+<!--</script>-->
+<!---->
+<!-- --><?//  }
+//else {
+//	 die("Error db".mysqli_error($connection)); }
 
- <?  }
-else {
-	 die("Error db".mysql_error()); }
+    if ($result) {
+        echo "<script>location='manage_course.php';</script>";
+        $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+        echo "$text";
+        exit;
+    }else {
+	 die("Error db".mysqli_error($connection)); }
+
 
 }}
 ?>
@@ -134,13 +146,13 @@ body {
             <tr>
               <td height="26">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?=  $errmsg1?></td>
+              <td><?= $errmsg1?></td>
             </tr>
             <? } ?>
             <tr>
               <td width="227" height="26"><div align="right">รหัสวิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <? if($errmsg1 ) echo "#EEFCE2"; ?>" value="<?= $cos_id ?>" /></td>
+              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <? if($errmsg1 ) echo "#EEFCE2"; ?>" value="<? $cos_id ?>" /></td>
             </tr>
             <? if($errmsg2) {?>
             <tr>
@@ -152,7 +164,7 @@ body {
             <tr>
               <td width="227" height="26"><div align="right">หมู่วิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input name="cos_group" type="text" id="cos_group" style="background:<? if($errmsg2) echo "#EEFCE2"; ?>" value="<?= $cos_group ?>" /></td>
+              <td width="339"><input name="cos_group" type="text" id="cos_group" style="background:<? if($errmsg2) echo "#EEFCE2"; ?>" value="<? $cos_group ?>" /></td>
             </tr>
             <? if ($errmsg3){?>
             <tr>
@@ -164,7 +176,7 @@ body {
             <tr>
               <td width="227" height="26"><div align="right">รายวิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input type="text" name="cos_name" id="cos_name" style="background: <? if($errmsg3 ) echo "#EEFCE2"; ?>" value="<?= $cos_name ?>"/></td>
+              <td width="339"><input type="text" name="cos_name" id="cos_name" style="background: <? if($errmsg3 ) echo "#EEFCE2"; ?>" value="<? $cos_name ?>"/></td>
             </tr>
             <? if ($errmsg4) {?>
             <tr>
@@ -176,7 +188,7 @@ body {
             <tr>
               <td height="27"><div align="right">จำนวนชั่วโมง/หน่วยกิจ</div></td>
               <td>&nbsp;</td>
-              <td><input type="text" name="cos_period" id="cos_period"  style="background: <? if($errmsg3 ) echo "#EEFCE2"; ?>"value="<?= $cos_period ?>" /></td>
+              <td><input type="text" name="cos_period" id="cos_period"  style="background: <? if($errmsg3 ) echo "#EEFCE2"; ?>"value="<? $cos_period ?>" /></td>
             </tr>
             <? if ($errmsg5 || $errmsg6 || $errmsg7) {?>
             <tr>
@@ -191,7 +203,7 @@ body {
             <tr>
               <td height="30"><div align="right">วันที่เข้าเรียน</div></td>
               <td></td>
-              <td><select name="cos_day" id="cos_day" style="background: <? if($errmsg5 ) echo "#EEFCE2"; ?>" value="<?= $cos_day ?>">
+              <td><select name="cos_day" id="cos_day" style="background: <? if($errmsg5 ) echo "#EEFCE2"; ?>" value="<? $cos_day ?>">
                 <option value="0" selected>เริ่ม</option>
                 <option>จันทร์</option>
                 <option>อังคาร</option>
@@ -201,7 +213,7 @@ body {
                 <option>เสาร์</option>
                 <option>อาทิตย์</option>
               </select>
-                <select name="cos_after" id="cos_after"style="background: <? if($errmsg6 ) echo "#EEFCE2"; ?>" value="<?= $cos_after ?>">
+                <select name="cos_after" id="cos_after"style="background: <? if($errmsg6 ) echo "#EEFCE2"; ?>" value="<? $cos_after ?>">
                   <option value="0" selected="selected">ถึง</option>
                   <option value="จันทร์">จันทร์</option>
                   <option value="อังคาร">อังคาร</option>
@@ -211,7 +223,7 @@ body {
                   <option value="เสาร์">เสาร์</option>
                   <option value="อาทิตย์">อาทิตย์</option>
                 </select>
-                <select name="cos_time" id="cos_time"style="background: <? if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?= $cos_time ?>">
+                <select name="cos_time" id="cos_time"style="background: <? if($errmsg7 ) echo "#EEFCE2"; ?>" value="<? $cos_time ?>">
                   <option  value="0">ภาค</option>
                   <option value="เช้า">เช้า</option>
                   <option value="เย็น">เย็น</option>
@@ -228,7 +240,7 @@ body {
             <tr>
               <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
               <td>&nbsp;</td>
-              <td><input name="lec_id" type="text" id="lec_id" style="background: <? if($errmsg8) echo "#EEFCE2"; ?>" value="<?= $lec_id ?>" /></td>
+              <td><input name="lec_id" type="text" id="lec_id" style="background: <? if($errmsg8) echo "#EEFCE2"; ?>" value="<? $lec_id ?>" /></td>
             </tr>
             <tr>
               <td><div align="right">หมายเหตุ ::</div></td>
