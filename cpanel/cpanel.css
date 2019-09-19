@@ -60,7 +60,6 @@ body {
 }
 .second_image {
 	padding: 0 0 0 30px;
-	position:;
 	width: 70px;
 	height: 70px;
 	float: center;
@@ -101,9 +100,10 @@ body {
 
 .banner{color:#FFF;font-size:13px;text-align:Center;background:url('image/bg.png') bottom left;overflow:hidden;padding:8px 25px;}
 .banner a{color:#FFF;text-decoration:underline;}
-.banner a:visited{
-	color:#326EE9;
-	text-decoration:underline;
+.banner a:visited {
+	color: #326EE9;
+	text-decoration: underline;
+}
 
 .Footer{color:#FFF;font-size:13px;text-align:Center;background:url('image/bg.png') bottom left;overflow:hidden;padding:8px 25px;}
 .Footer a{color:#FFF;text-decoration:underline;}
