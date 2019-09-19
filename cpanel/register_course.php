@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username))
+if(!isset($username))
 	{
      ///////////////////// code login completed///////////////////
      $username = "";
