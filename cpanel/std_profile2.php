@@ -3,11 +3,11 @@
    //mysql_query ("SET NAMES 'utf8'");
 
    $sql	 = "select * from register ";
-   $result = mysql_query($sql);
+   $result = mysqli_query($connection,$sql);
    if (!$result)
-   {die ("can not connect db".mysql_error());
+   {die ("can not connect db".mysqli_error($connection));
    }
-   while ($result_row = mysql_fetch_row($result))
+   while ($result_row = mysqli_fetch_row($result))
    {
    $cos_id = $result_row[0];  
 //echo $std_id;

@@ -36,7 +36,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td><img src="../images/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
 <table width="1260" height="250" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -61,13 +61,13 @@ body {
            <?
 		   include('db.php');
 			extract ($_GET);
-//mysql_query ("SET NAMES 'utf8'");
+mysqli_query($connection,"SET NAMES 'utf8'");
 $std_id=$id;  echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!!<p>Data was deleted out from system</p>";
 echo $std_id;
-$result = mysql_query("delete from student where std_id = $std_id");
+$result = mysqli_query($connection,"delete from student where std_id = $std_id");
 	if(!$result)
 	{
-	die("could not query db".mysql_error());
+	die("could not query db".mysqli_error($connection));
 	}
 ?>
 </div></td>

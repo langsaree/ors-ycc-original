@@ -1,7 +1,3 @@
-<?
-session_start();
-include('auth.php');
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -46,7 +42,7 @@ body {
 <body>
 <table width="998" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td width="1045"><img src="../images/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -90,12 +86,12 @@ body {
 		/////////////////////////take information from student table //////////////////////////
 	include('db.php');
 	$sql1 = "select * from student ";
-	$v=mysql_query ($sql1);
-	while ($row= mysql_fetch_array($v))
+	$v=mysqli_query ($connection,$sql1);
+	while ($row= mysqli_fetch_array($v))
 	{
-	$std = $row[std_id];
-	$user= $row[username];
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$std = $row['std_id'];
+	$user= $row['username'];
+	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
 	//echo $name;
 	?>
       <tr>
