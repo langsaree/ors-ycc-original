@@ -5,6 +5,10 @@ session_start();
 
 ?>
 <?php
+$cos_period='';
+$cos_id='';
+$cos_time='';
+$cos_day='';
 
 $errmsg= ""; $errmsg1= ""; $errmsg2= ""; $errmsg3= ""; $errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";
 if(isset($ok)) {
@@ -164,19 +168,20 @@ body {
             <tr>
               <td width="227" height="26"><div align="right">รายวิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input type="text" name="cos_name" id="cos_name" style="background: <?php if($errmsg3 ) echo "#EEFCE2"; ?>" value="<?php= $cos_name ?>"/></td>
+              <td width="339"><input type="text" name="cos_name" id="cos_name" style="background: <?php if($errmsg3 ) echo "#EEFCE2"; ?>" value="<?php echo
+               $cos_name ?>"/></td>
             </tr>
             <?php if ($errmsg4) {?>
             <tr>
               <td height="27">&nbsp;</td>
-              <td>&nbsp;</td>
+              <td>&nbsp;</td>                                                                                                                                                 
               <td><?php= $errmsg4?></td>
-            </tr>
+            </tr>              
             <?php }?>
             <tr>
               <td height="27"><div align="right">จำนวนชั่วโมง/หน่วยกิจ</div></td>
               <td>&nbsp;</td>
-              <td><input type="text" name="cos_period" id="cos_period"  style="background: <?php if($errmsg3 ) echo "#EEFCE2"; ?>"value="<?php= $cos_period ?>" /></td>
+              <td><input type="text" name="cos_period" id="cos_period"  style="background: <?php if($errmsg3 ) echo "#EEFCE2"; ?>"value="<?php echo $cos_period ?>" /></td>
             </tr>
             <?php if ($errmsg5 || $errmsg6 || $errmsg7) {?>
             <tr>
@@ -191,7 +196,7 @@ body {
             <tr>
               <td height="30"><div align="right">วันที่เข้าเรียน</div></td>
               <td></td>
-              <td><select name="cos_day" id="cos_day" style="background: <?php if($errmsg5 ) echo "#EEFCE2"; ?>" value="<?php= $cos_day ?>">
+              <td><select name="cos_day" id="cos_day" style="background: <?php if($errmsg5 ) echo "#EEFCE2"; ?>" value="<?php echo $cos_day ?>">
                 <option value="0" selected>เริ่ม</option>
                 <option>จันทร์</option>
                 <option>อังคาร</option>
@@ -211,7 +216,7 @@ body {
                   <option value="เสาร์">เสาร์</option>
                   <option value="อาทิตย์">อาทิตย์</option>
                 </select>
-                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php= $cos_time ?>">
+                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php echo $cos_time ?>">
                   <option  value="0">ภาค</option>
                   <option value="เช้า">เช้า</option>
                   <option value="เย็น">เย็น</option>
@@ -228,7 +233,7 @@ body {
             <tr>
               <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
               <td>&nbsp;</td>
-              <td><input name="lec_id" type="text" id="lec_id" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php= $lec_id ?>" /></td>
+              <td><input name="lec_id" type="text" id="lec_id" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php echo $lec_id ?>" /></td>
             </tr>
             <tr>
               <td><div align="right">หมายเหตุ ::</div></td>
