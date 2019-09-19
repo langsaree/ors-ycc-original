@@ -3,6 +3,7 @@
 #extract ($_GET);
 $lec_id=$id;
 */
+$success="";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -53,7 +54,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1263" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1263"><img src="../images/header-bg.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../images/header.png" width="1258" height="45" /></td>
     </tr>
   </table>
 
@@ -97,19 +98,19 @@ body {
 include ('db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
-$result = mysql_query($sql);
+$result = mysqli_query($connection,$sql);
 #while($result_row = mysql_fetch_row($result))  
-while($row=mysql_fetch_array($result))
+while($row=mysqli_fetch_array($result))
 {
 ?>
-               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_id]; ?></td>
-               <td align="left">&nbsp;&nbsp;<? echo $row[lec_name]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row[lec_tel]; ?></td>
-               <td>&nbsp;&nbsp;<? echo $row[lec_email]; ?></td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_comment]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row['lec_id']; ?></td>
+               <td align="left">&nbsp;&nbsp;<? echo $row['lec_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row['lec_tel']; ?></td>
+               <td>&nbsp;&nbsp;<? echo $row['lec_email']; ?></td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row['lec_comment']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
-               <td><a href="lec_update.php?id=<? echo $row[lec_id];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
-               <td><a href="lec_delete.php?id=<? echo $row[lec_id];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_update.php?id=<? echo $row['lec_id'];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_delete.php?id=<? echo $row['lec_id'];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
              </tr>
              <? } ?>
            </table></td>

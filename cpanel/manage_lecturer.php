@@ -1,3 +1,7 @@
+<?php
+$success="";
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -58,7 +62,7 @@ body {
           <td width="94%">&nbsp;</td>
         </tr>
       </table>
-     <span class="style37"><? echo "$success"; ?><br />     
+     <span class="style37"><? echo "$success"; ?><br />
      _________________________________________________________________________________________________________________________________</span></td>
     </tr>
     <tr>
