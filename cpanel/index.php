@@ -10,11 +10,8 @@ if(empty($username) && empty($password)){
 }
     
  $username= isset($_POST['username']) ? $_POST['username'] : "";
-
  $password= isset($_POST['password']) ? $_POST['password'] : "";
     
-
-    var_dump($_POST['password'],$password);
 
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
@@ -33,7 +30,7 @@ if(empty($username) && empty($password)){
 $sql = "select * from admin where username='$username' and password='$password'";
 $result=mysqli_query($connection, $sql);
 $count=mysqli_num_rows($result);
-var_dump($count,$result);
+// var_dump($count,$result);
 if($count==1/*&&strcmp($code,$code_hidden)==0*/)
 {
     $_SESSION["user_admin"] = $username;
