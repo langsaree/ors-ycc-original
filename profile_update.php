@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('auth.php');
+//include('auth.php');
 include ('db.php');
 extract ($_GET);
 $user=$_SESSION['id'];
@@ -16,10 +16,10 @@ if(isset($_POST["ok"])){
    $fname=$_POST['fname'];
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
-   //$b_day=$_POST['b_day'];
-   //$b_month=$_POST['b_month'];
-   //$b_year=$_POST['b_year'];
-   //$birthday=$b_day.'/'.$b_month.'/'.$b_year; 
+   $b_day=$_POST['b_day'];
+   $b_month=$_POST['b_month'];
+   $b_year=$_POST['b_year'];
+   $birthday=$b_day.'/'.$b_month.'/'.$b_year; 
    $birthday=$_POST['birthday'];
    
    $nation=$_POST['nation'];
@@ -28,14 +28,14 @@ if(isset($_POST["ok"])){
    
     $std_id=$_POST['std_id'];
     $home=$_POST['home'];
-    //$m_home=$_POST['m_home'];
-    //$r_home=$_POST['r_home'];
-    //$v_home=$_POST['v_home'];
+    $m_home=$_POST['m_home'];
+    $r_home=$_POST['r_home'];
+    $v_home=$_POST['v_home'];
     $city=$_POST['city'];
     $province=$_POST['province'];
     $postalcode=$_POST['postalcode'];
     $phone=$_POST['phone'];
-	//$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
+	$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
 	$address=$_POST['address'];
 	$edulevel=$_POST['edulevel'];
     $eduplace=$_POST['eduplace'];
@@ -263,7 +263,7 @@ while($row=mysqli_fetch_array($result))
                       $sql3="select * from mrmrs";
 			          $result3=mysqli_query($connection,$sql3);			 
 			          while($data3=mysqli_fetch_array($result3)){
-			 	          if($data['id']==$data3[0]){
+			 	          if($data3['id']==$data3[0]){
 					           echo "<option value='$data3[name]' selected>$data3[name]";
 				         }else{
 					         echo "<option value='$data3[name]'>$data3[name]";
@@ -463,7 +463,7 @@ while($row=mysqli_fetch_array($result))
 			 $sql3="select * from joblist";
 			 $result3=mysqli_query($connection,$sql3);			 
 			 while($data3=mysqli_fetch_array($result3)){
-			 	if($data['job_id']==$data3[0]){
+			 	if($data3['job_id']==$data3[0]){
 					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
 				}else{
 					echo "<option value='$data3[job_name]'>$data3[job_name]";
