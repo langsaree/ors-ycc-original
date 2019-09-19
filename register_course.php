@@ -316,17 +316,19 @@ $errmsg30 = ""; $errmsg31 = ""; $errmsg32 = ""; $errmsg33 = ""; $errmsg34 = ""; 
 #=========================================
 # username check	
 if(isset($_POST["register"])) {
-    $login = $_POST['login'];
+  $login = $_POST['login'];
 	if(empty($login)) {
 	    $errmsg1 = "<span style=color:red>กรุณากรอบชื่อล็อกอินด้วยค่ะ</span>";
-	  }	}
+  }	
+
 	//if(!ereg($pattern, $login)) {
 	  //  $errmsg2 .= "<span style=color:red>ชื่อล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
 	 //}
-	 if(!$errmsg1) {
-	 if(strlen($login) <4) {
-	    $errmsg3 .= "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>"; 
-       }}
+if(!$errmsg1) {
+	if(strlen($login) <4) {
+      $errmsg3 .= "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>"; 
+  }
+}
 	 
      /*if(!$errmsg[3]) {
 			# check username duplicate
@@ -542,6 +544,7 @@ if(isset($_POST["register"])) {
 		 
 	 }
 }
+}
 //ob_end_clean();
 ?>  
 
@@ -627,7 +630,7 @@ if(isset($_POST["register"])) {
                     <td width="106" height="5" bgcolor="#FFFFFF" ><div align="left"> ชื่อล็อกอิน:</div></td>
                     <td height="" align="center" valign="middle" bgcolor="#FFFFFF"><span class="style32"></span>
                       <div align="left">
-                        <input name="login" class="inputbox-normal" type="text" id="username" style="background: <?php if($errmsg1 || $errmsg2 || $errmsg3   ) echo "#EEFCE2"; ?>" value="<?php= $login ?>" size="25" maxlength="20" />
+                        <input name="login" class="inputbox-normal" type="text" id="username" style="background: <?php if($errmsg1 || $errmsg2 || $errmsg3   ) echo "#EEFCE2"; ?>" value="<?php  echo  (isset($login) ? $login : '') ?>" size="25" maxlength="20" />
                         <span class="style34">*</span> &nbsp;<span class="style30"> ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span></div></td>
                   </tr>
                   <?php if($errmsg6) { ?>
@@ -667,7 +670,7 @@ if(isset($_POST["register"])) {
                   <tr>
                     <td height="1" bgcolor="#FFFFFF"><div align="left" >รหัสผ่าน:</div></td>
                     <td bgcolor="#FFFFFF"><div align="left">
-                      <input name="pswd" class="inputbox-normal" type="password" id="password" style="background: <?php if($errmsg6 || $errmsg8 || $errmsg9 || $errmsg10 ) echo "#EEFCE2"; ?>" value="<?php= $pswd ?>" size="25" maxlength="20" />
+                      <input name="pswd" class="inputbox-normal" type="password" id="password" style="background: <?php if($errmsg6 || $errmsg8 || $errmsg9 || $errmsg10 ) echo "#EEFCE2"; ?>" value="<?php  echo  (isset($pswd) ? $pswd : '') ?>" size="25" maxlength="20" />
                       <span class="style34">*</span> &nbsp;<span class="style30"> ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span></div></td>
                   </tr>
                   <?php if($errmsg7) { ?>
@@ -681,7 +684,7 @@ if(isset($_POST["register"])) {
                   <tr>
                     <td height="1" bgcolor="#FFFFFF"><div align="left" class="black_color">ยืนยันรหัสผ่าน:</div></td>
                     <td bgcolor="#FFFFFF"><div align="left">
-                      <input name="cpswd" class="inputbox-normal" type="password" id="cpswd" style="background: <?php if($errmsg7 || $errmsg9 || $errmsg10 ) echo "#EEFCE2"; ?>"  value="<?php= $cpswd ?>" size="25" maxlength="20" />
+                      <input name="cpswd" class="inputbox-normal" type="password" id="cpswd" style="background: <?php if($errmsg7 || $errmsg9 || $errmsg10 ) echo "#EEFCE2"; ?>"  value="<?php  echo  (isset($cpswd) ? $cpswd : '') ?>" size="25" maxlength="20" />
                       <span class="style34">*</span> &nbsp;<span class="style30"> ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span></div></td>
                   </tr>
                   <tr>
@@ -704,7 +707,7 @@ if(isset($_POST["register"])) {
                     <td bgcolor="#FFFFFF">&nbsp;</td>
                     <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg11 ?></td>
                   </tr>
-                  <php ? } ?>
+                  <?php } ?>
                   <tr>
                     <td bgcolor="#FFFFFF"><div align="left" class="black_color">คำนำหน้าชื่อ </div></td>
                     <td height="1" bgcolor="#FFFFFF"><div align="left">
@@ -725,7 +728,7 @@ if(isset($_POST["register"])) {
                   <?php } ?>
                   <tr>
                     <td height="" bgcolor="#FFFFFF" class="black_color">ชื่อ </td>
-                    <td height="1" bgcolor="#FFFFFF"><input type="text"  class="inputbox-normal" name="name" value="<?php echo $name ?>" id="name" style="background: <?php if($errmsg12) echo "#EEFCE2"; ?>"/>
+                    <td height="1" bgcolor="#FFFFFF"><input type="text"  class="inputbox-normal" name="name" value="<?php  echo  (isset($name) ? $name : '') ?>" id="name" style="background: <?php if($errmsg12) echo "#EEFCE2"; ?>"/>
                       <span class="style29">                      *</span><span class="style34"> &nbsp;</span></td>
                   </tr>
                   <?php if($errmsg13) { ?>
@@ -764,7 +767,7 @@ if(isset($_POST["register"])) {
                         <option value="0" selected>-- วัน --</option>
                         <?php
 				         for($i=1;$i<=31;$i++){
-				         echo"<option value='$i'>$i";
+				         echo"<option value='".$i."'>".$i;
 				         }
 				         ?>
                         </select>
@@ -787,7 +790,7 @@ if(isset($_POST["register"])) {
                         <option value="0" selected>-- ปี --</option>
                         <?php
 				        for($i=2554;$i>=2520;$i--){
-				        echo"<option value='$i'>$i";
+				        echo"<option value='".$i."'>".$i;
 				        }
 				       ?>
                         </select>
@@ -1088,7 +1091,7 @@ if(isset($_POST["register"])) {
                   </tr>
                   <tr>
                     <td width="213" height="16">&nbsp;</td>
-                    <td width="224"><button type="submit" src="images/register.png" name="ok" value="Submit" alt="Submit"></td>
+                    <td width="224"><button type="submit"  name="register"><img src="images/register.png" value="Submit" alt="Submit"></button></td>
                     <td width="174">&nbsp;</td>
                     </tr>
                    
