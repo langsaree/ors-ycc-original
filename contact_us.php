@@ -253,7 +253,7 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php
-$sql = "select * from student where username='$user' ";
+$sql = "select * from student where username='$username' ";
 $result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
 {
@@ -293,7 +293,7 @@ while($row=mysqli_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">Code :
-        <?php echo '<span style="color:red;font-size:24"> '.$num1.'</span>'; ?>
+        <?php echo '<span style="color:red;"> '.$num1.'</span>'; ?>
         <?php echo '<span style="color:green">+</span>';?>
         <?php echo '<span style="color:red"> '.$num2.'</span>';?>
       </span></td>
