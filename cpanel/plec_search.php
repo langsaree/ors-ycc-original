@@ -60,7 +60,7 @@ body {
 
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="527" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -136,19 +136,19 @@ $query="select * from lecture where $q order by lec_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt)){
+mysqli_query($connection,"SET NAMES utf-8"); //		for thai input
+$nt=mysqli_query($connection,$query);
+echo mysqli_error($connection);
+while($row=mysqli_fetch_array($nt)){
 ?>          
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_id]; ?></td>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_name]; ?></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_id']; ?></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_name']; ?></td>
       <td></td>
       <td></td>
       <td>      </td>
-      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row[lec_id]; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
+      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row['lec_id']; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
         
       </a></div></td>
             <?
