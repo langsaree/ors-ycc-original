@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include('auth.php');
 ?>
@@ -9,7 +9,7 @@ include('auth.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>เพิ่มอาจารย์ผู้สอน</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -52,7 +52,7 @@ body {
 .style49 {font-family: Georgia, "Times New Roman", Times, serif}
 .style50 {color: #FF0000}
 .style52 {color: #FF0000; font-weight: bold; }
--->
+
 </style>
 </head>
 
