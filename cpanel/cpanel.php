@@ -1,6 +1,6 @@
 <?php
 session_start();
-//if(!session_is_registered(user_admin)){header("location:index.php");}
+// if(!session_is_registered(user_admin)){header("location:index.php");}
 //end of check session
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -11,9 +11,8 @@ session_start();
 <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="cpanel.css" />
 <style type="text/css">
-<!--
 
--->
+
 </style>
 </head>
 <body>
@@ -84,7 +83,7 @@ session_start();
       <tr>
         <td class="style41">&nbsp;</td>
         <td class="style41"><a href="register_course.php" class="style41">ลงทะเบียนวิชา</a></td>
-        <td class="style41">การจัดการสถานะนักศึกษา</td>
+        <td class="style41"><a href="manage_student.php" class="style41"> การจัดการสถานะนักศึกษา</a></td>
         <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
         <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
         <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>
