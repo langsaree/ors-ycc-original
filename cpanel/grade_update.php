@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -28,7 +28,7 @@ body {
 	font-weight: bold;
 	font-size: 24px;
 }
--->
+
 </style>
 </head>
 
@@ -56,11 +56,11 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?
+          <?php
 	include('db_connect.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
-	while($shows = mysql_fetch_row($show))
+	$show = mysqlร_query($connection,$sql);
+	while($shows = mysqli_fetch_row($show))
 	{
 	?>
           <tr>
