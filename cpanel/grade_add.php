@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>add new grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +29,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
@@ -58,76 +58,76 @@ body {
         <tr>
           <td colspan="2" align="center">&nbsp;</td>
         </tr>
-        <? if($error[0]) { ?>
+        <?php if($error[0]) { ?>
         <tr>
           <td width="32%" align="right"><span class="style40">รหัสวิชา :</span> </td>
           <td width="68%" class="red"><label>
             <input name="textfield" type="text" size="20" />
           </label></td>
         </tr>
-        <? } ?>
+        <?php } ?>
         <tr>
           <td width="32%" align="right"><span class="style40">ชื่อวิชา :</span></td>
           <td width="68%"><label>
             <input name="textfield2" type="text" size="30" />
           </label></td>
         </tr>
-        <? if($error[1]) { ?>
+        <?php if($error[1]) { ?>
         <tr>
           <td align="right"><span class="style40">จำนวนชั่วโมง/หน่วยกิต :</span></td>
           <td class="red"><input name="textfield3" type="text" size="20" /></td>
         </tr>
-        <? } ?>
+        <?php } ?>
         <tr>
           <td align="right"><span class="style40">วัน :</span></td>
           <td><label>
             <input name="textfield4" type="text" size="30" />
           </label></td>
         </tr>
-        <? if($error[2]) { ?>
+        <?php if($error[2]) { ?>
         <tr>
           <td align="right"><span class="style40">เวลา :</span></td>
           <td class="red"><input name="textfield5" type="text" size="30" /></td>
         </tr>
-        <? } ?>
+        <?php } ?>
         <tr>
           <td align="right"><span class="style40">อาจารย์ผู้สอน :</span></td>
           <td><input name="textfield6" type="text" size="25" /></td>
         </tr>
-        <? if($error[3]) { ?>
+        <?php if($error[3]) { ?>
         <tr>
           <td align="right"><span class="style40">หมายเหตุ :</span></td>
           <td class="red"><label>
             <textarea name="textarea" cols="50"></textarea>
           </label></td>
         </tr>
-        <? } ?>
-        <? if($error[4]) { ?>
+        <?php } ?>
+        <?php if($error[4]) { ?>
 
-        <? } ?>
+        <?php } ?>
 
-        <? if($error[5]) { ?>
+        <?php if($error[5]) { ?>
 
-        <? } ?>
-        <? if($error[6]) { ?>
+        <?php } ?>
+        <?php if($error[6]) { ?>
 
-        <? } ?>
+        <?php } ?>
 
-        <? if($error[7]) { ?>
+        <?php if($error[7]) { ?>
 
-        <? } ?>
-        <? if($error[8]) { ?>
+        <?php } ?>
+        <?php if($error[8]) { ?>
 
-        <? } ?>
-        <? if($error[9]) { ?>
+        <?php } ?>
+        <?php if($error[9]) { ?>
 
-        <? } ?>
+        <?php } ?>
 
         <tr>
           <td align="right">&nbsp;</td>
           <td><label>
             <input type="submit" name="button" id="button" class="button" value="บันทึก" />
-            <input type="button" name="button2" id="button2" class="button" value="ยกเลิก" onclick="window.location='index2.php?option=manage_user&amp;group=<?= $_REQUEST['group'] ?>'" />
+            <input type="button" name="button2" id="button2" class="button" value="ยกเลิก" onclick="window.location='index2.php?option=manage_user&amp;group=<?php= $_REQUEST['group'] ?>'" />
           </label></td>
         </tr>
         <tr>
