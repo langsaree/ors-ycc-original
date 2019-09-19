@@ -1,7 +1,6 @@
 <?php
 include('db.php');
-$username = "";
-$password = "";
+
 if(!isset($_SESSION['logined'])) {
    if(isset($_REQUEST['username'])) {
    $username = $_REQUEST['username'];
@@ -27,7 +26,7 @@ if(!isset($_SESSION['logined'])) {
 				    $message = "<span class=\"red\">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>";
 				   }
 				  }
-			  	}  
-   
+			  	}
+
 }
 ?>

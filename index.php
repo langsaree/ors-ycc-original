@@ -1,10 +1,13 @@
 <?php
 session_start();
-include 'db.php';
-if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+include('db.php');
+
+if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
 {
 include('login_check.php');
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +41,6 @@ include('login_check.php');
         </div>
         <div class="BorderL"></div>
         <div class="Border">
-<<<<<<< HEAD
 
             <div class="Menu">
                 <ul>
@@ -69,38 +71,6 @@ include('login_check.php');
 
                         </table>
 
-=======
-
-            <div class="Menu">
-                <ul>
-                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">
-                        <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a
-                            href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php"
-                                                                                                class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span>
-                  ติดต่อเรา</span></a>
-                    <input name="text" type="text" style="width:120px" />
-                    <span class="ButtonInput"><span>
-                  <input type="button" value="Search" />
-                </span></span>
-                </ul>
-            </div>
-            <div class="Header">
-                <div class="HeaderTitle">
-                    <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-                    <h1>&nbsp;</h1>
-                </div>
-            </div>
-            <div class="Columns">
-                <div class="Column1">
-
-                    <div class="Block">
-
-                        <span class="BlockHeader"><span>Online Register</span></span>
-                        <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-
-                        </table>
-
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
 
                         <?php
                         if (isset($message)) {
@@ -113,11 +83,7 @@ include('login_check.php');
                         <?php
                         ######################################   To show login form if user do not login ###################################
                         echo '<form action="index.php" method="post">
-<<<<<<< HEAD
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-=======
-		<table width="150" border="5" align="left" cellpadding="0" cellspacing="0">
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
               <tr>
                 <td></td>
               </tr>
@@ -224,7 +190,6 @@ include('login_check.php');
                         <br>
                     </div>
                     <div class="Block">
-<<<<<<< HEAD
 
                         <span class="BlockHeader"><span>Menu</span></span>
                         <div class="BlockContentBorder">
@@ -259,42 +224,6 @@ include('login_check.php');
                         </div>
                         <div class="ArticleL"></div>
 
-=======
-
-                        <span class="BlockHeader"><span>Menu</span></span>
-                        <div class="BlockContentBorder">
-
-                            <ul>
-                                <li><span class="style7">หลักสูตรที่เปิด</span></li>
-                                <li><span class="style7">คู่มือการลงทะเบียน</span><br>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="MainColumn">
-                    <div class="ArticleBorder">
-                        <div class="ArticleBL">
-                            <div></div>
-                        </div>
-                        <div class="ArticleBR">
-                            <div></div>
-                        </div>
-                        <div class="ArticleTL"></div>
-                        <div class="ArticleTR">
-                            <div></div>
-                        </div>
-                        <div class="ArticleT"></div>
-                        <div class="ArticleR">
-                            <div></div>
-                        </div>
-                        <div class="ArticleB">
-                            <div></div>
-                        </div>
-                        <div class="ArticleL"></div>
-
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
                         <div class="Article">
                             <br>
                             <table width="601" border="0" cellspacing="0" cellpadding="0">
@@ -318,11 +247,7 @@ include('login_check.php');
 
                             <?php
                             $sql_view = "select * from course where status='1' ";
-<<<<<<< HEAD
                             $result_view = mysqli_query($con, $sql_view);
-=======
-                            $result_view = mysqli_query($connection, $sql_view);
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
                             while($row=mysqli_fetch_array($result_view)){
                             ?>
 
@@ -333,48 +258,28 @@ include('login_check.php');
                                     <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78"
                                                                                  height="83" /></td>
                                     <td height="19" colspan="3" valign="top">
-<<<<<<< HEAD
                                         <?php echo '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row['cos_group'].'</span>' ?>
-=======
-                                        <?php echo '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row["cos_group"].'</span>' ?>
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
                                     </td>
                                 </tr>
                                 <tr>
                                     <td width="21" valign="top">&nbsp;</td>
                                     <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-<<<<<<< HEAD
                                         <?php echo $row['cos_id']?></td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span> <?php echo $row['cos_name']?></td>
-=======
-                                        <?php echo $row["cos_id"]?></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span> <?php echo $row["cos_name"]?></td>
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
                                 </tr>
 
                                 <tr>
                                     <td style="color: #333">&nbsp;</td>
-<<<<<<< HEAD
                                     <td> <a href="course_down.php?id=<?php echo $row['cos_id']?>"
-=======
-                                    <td> <a href="course_down.php?id=<?php echo $row["cos_id"]?>"
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
                                             style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
                                     <td width="112"></td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
-<<<<<<< HEAD
                                     <td><a href="course_detail.php?id=<?php echo $row['cos_id'] ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
-=======
-                                    <td><a href="course_detail.php?id=<?php echo $row["cos_id"] ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a
                                     <td height=" 16">&nbsp;</td>
                                 </tr>
                                 <?php  } ?>
@@ -409,8 +314,4 @@ include('login_check.php');
         </div>
     </div>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> f279432a7d35228b6f944a5db4992d3fa9a38f0a

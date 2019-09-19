@@ -1,13 +1,7 @@
 <?php
-/**
- * LangsariEngine - A Delicious PHP Component
- *
- * @package  BuduEngine
- * @author   Kholed Langsari <langsaree@gmail.com>
- */
 
 session_start();
-
+include('db.php');
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 }
@@ -31,7 +25,7 @@ if (!isset($_SESSION['username'])) {
                 $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
             } else {
                 $sql = "select * from student where username='$username' and password='$password'";
-                $result = mysqli_query($connection, $sql);
+                $result = mysqli_query($con, $sql);
                 $count = mysqli_num_rows($result);
                 if ($count == 1) {
                     $_SESSION['username'] = $count['username'];

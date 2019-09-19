@@ -1,24 +1,12 @@
 <?php
-/**
- * LangsariEngine - A Delicious PHP Component
- *
- * @package  BuduEngine
- * @author   Kholed Langsari <langsaree@gmail.com>
- */
-
 session_start();
-
+include('db.php');
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 
     $username = $_SESSION['username'];
 
-} else {
-
-    header("Location:register.php");
-
-}
-//end of check session
-?>
+} else {header("Location:register.php");}
+//end of check session?>
 
 <!DOCTYPE html>
 <html>
@@ -47,11 +35,11 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
         }
 
         .style47 {
-            font-size: 13px
+            font-size: 13px;
         }
 
         .style54 {
-            font-size: 14px
+            font-size: 14px;
         }
 
         .style55 {
@@ -66,7 +54,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
         }
 
         .style58 {
-            color: #333333
+            color: #333333;
         }
 
         .style60 {
@@ -255,7 +243,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                                         // profile database query here
                                         include('db.php');
                                         $sql = "select * from student where username='$username' ";
-                                        $result = mysqli_query($connection, $sql);
+                                        $result = mysqli_query($con, $sql);
                                         while ($row = mysqli_fetch_array($result)) {
 
                                         ?>

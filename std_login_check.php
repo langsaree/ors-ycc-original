@@ -1,13 +1,5 @@
 <?php
-/**
- * LangsariEngine - A Delicious PHP Component
- *
- * @package  BuduEngine
- * @author   Kholed Langsari <langsaree@gmail.com>
- */
-
 session_start();
-
 include('db.php');
 
 // username and password receive from register form
@@ -21,12 +13,12 @@ if (isset($_POST['submit'])) {
         // To protect MySQL injection (more detail about MySQL injection)
         $username = stripslashes($username);
         $password = stripslashes($password);
-        $username = mysqli_real_escape_string($connection, $username);
-        $password = mysqli_real_escape_string($connection, $password);
+        $username = mysqli_real_escape_string($con, $username);
+        $password = mysqli_real_escape_string($con, $password);
 
         //check compare to database
         $sql = "SELECT * FROM student WHERE username='$username' and password='$password'";
-        $result = mysqli_query($connection, $sql);
+        $result = mysqli_query($con, $sql);
 
         // Mysql_num_row is counting table row
         $count = mysqli_num_rows($result);

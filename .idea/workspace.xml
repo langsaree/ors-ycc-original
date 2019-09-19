@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" afterPath="$PROJECT_DIR$/ann.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" afterPath="$PROJECT_DIR$/college.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallary.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/login_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_course_bk.php" beforeDir="false" afterPath="$PROJECT_DIR$/register_course_bk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_login_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,42 +23,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/std_login_check.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/college.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="2" selection-end-line="39" selection-end-column="5" />
               <folding>
-                <element signature="e#1817#1836#0#HTML" expanded="true" />
-                <element signature="e#2220#2226#1#HTML" expanded="true" />
-                <element signature="e#3311#3330#0#HTML" expanded="true" />
-                <element signature="e#3714#3720#1#HTML" expanded="true" />
-                <element signature="e#949#955#1" expanded="true" />
-                <element signature="e#1286#1292#1" expanded="true" />
-                <element signature="e#1318#1324#1" expanded="true" />
-                <element signature="e#1350#1356#1" expanded="true" />
-                <element signature="e#1576#1582#1" expanded="true" />
-                <element signature="e#1844#1850#1" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#1820#1826#1" expanded="true" />
-                <element signature="e#12548#12554#1#HTML" expanded="true" />
-                <element signature="e#12612#12618#1#HTML" expanded="true" />
-                <element signature="e#12676#12682#1#HTML" expanded="true" />
-                <element signature="e#12867#12988#0#HTML" expanded="true" />
-                <element signature="e#13030#13036#0#HTML" expanded="true" />
-                <element signature="e#13036#13042#0#HTML" expanded="true" />
-                <element signature="e#13042#13048#0#HTML" expanded="true" />
-                <element signature="e#13048#13054#0#HTML" expanded="true" />
-                <element signature="e#13054#13060#0#HTML" expanded="true" />
-                <element signature="e#13060#13066#0#HTML" expanded="true" />
-                <element signature="e#13066#13072#0#HTML" expanded="true" />
-                <element signature="e#13072#13078#0#HTML" expanded="true" />
-                <element signature="e#13078#13084#0#HTML" expanded="true" />
-                <element signature="e#13084#13090#0#HTML" expanded="true" />
-                <element signature="e#13323#13329#1#HTML" expanded="true" />
-                <element signature="e#13375#13381#1#HTML" expanded="true" />
-                <element signature="e#13427#13433#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ann.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contact_us.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="40" column="2" lean-forward="true" selection-start-line="10" selection-end-line="40" selection-end-column="2" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login_check.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/std_profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gallary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -77,13 +158,24 @@
         <option value="$PROJECT_DIR$/IndexHTML.php" />
         <option value="$PROJECT_DIR$/Index.html" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/register_course_bk.php" />
+        <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/std_login_check.php" />
+        <option value="$PROJECT_DIR$/college.php" />
+        <option value="$PROJECT_DIR$/ann.php" />
+        <option value="$PROJECT_DIR$/course.php" />
+        <option value="$PROJECT_DIR$/std_profile.php" />
+        <option value="$PROJECT_DIR$/gallary.php" />
+        <option value="$PROJECT_DIR$/contact_us.php" />
+        <option value="$PROJECT_DIR$/login_check.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="315" />
-    <option name="width" value="1440" />
-    <option name="height" value="785" />
+    <option name="x" value="883" />
+    <option name="y" value="66" />
+    <option name="width" value="855" />
+    <option name="height" value="950" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -120,12 +212,23 @@
       <updated>1557132654756</updated>
       <workItem from="1566286731352" duration="5000" />
       <workItem from="1566286807304" duration="983000" />
-      <workItem from="1568708665562" duration="123000" />
+      <workItem from="1568708665562" duration="383000" />
+      <workItem from="1568709129492" duration="2846000" />
+      <workItem from="1568714427597" duration="4409000" />
+      <workItem from="1568863037105" duration="207000" />
     </task>
+    <task id="LOCAL-00001" summary="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16.">
+      <created>1568708916699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568708916699</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1111000" />
+    <option name="totallyTimeSpent" value="8833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -196,7 +299,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Index.html" />
@@ -216,40 +320,165 @@
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/OneDrive/ors-ycc/IndexHTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/ors-ycc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-end-line="316" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register_course_bk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ann.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_us.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="40" column="2" lean-forward="true" selection-start-line="10" selection-end-line="40" selection-end-column="2" />
           <folding>
-            <element signature="e#1817#1836#0#HTML" expanded="true" />
-            <element signature="e#2220#2226#1#HTML" expanded="true" />
-            <element signature="e#3311#3330#0#HTML" expanded="true" />
-            <element signature="e#3714#3720#1#HTML" expanded="true" />
-            <element signature="e#949#955#1" expanded="true" />
-            <element signature="e#1286#1292#1" expanded="true" />
-            <element signature="e#1318#1324#1" expanded="true" />
-            <element signature="e#1350#1356#1" expanded="true" />
-            <element signature="e#1576#1582#1" expanded="true" />
-            <element signature="e#1844#1850#1" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1820#1826#1" expanded="true" />
-            <element signature="e#12548#12554#1#HTML" expanded="true" />
-            <element signature="e#12612#12618#1#HTML" expanded="true" />
-            <element signature="e#12676#12682#1#HTML" expanded="true" />
-            <element signature="e#12867#12988#0#HTML" expanded="true" />
-            <element signature="e#13030#13036#0#HTML" expanded="true" />
-            <element signature="e#13036#13042#0#HTML" expanded="true" />
-            <element signature="e#13042#13048#0#HTML" expanded="true" />
-            <element signature="e#13048#13054#0#HTML" expanded="true" />
-            <element signature="e#13054#13060#0#HTML" expanded="true" />
-            <element signature="e#13060#13066#0#HTML" expanded="true" />
-            <element signature="e#13066#13072#0#HTML" expanded="true" />
-            <element signature="e#13072#13078#0#HTML" expanded="true" />
-            <element signature="e#13078#13084#0#HTML" expanded="true" />
-            <element signature="e#13084#13090#0#HTML" expanded="true" />
-            <element signature="e#13323#13329#1#HTML" expanded="true" />
-            <element signature="e#13375#13381#1#HTML" expanded="true" />
-            <element signature="e#13427#13433#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std_login_check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="2" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
