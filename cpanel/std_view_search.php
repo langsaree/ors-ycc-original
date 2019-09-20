@@ -6,7 +6,8 @@ include "db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
-$type=$_POST['type'];
+//$type=$_POST['type'];
+$type="";
 
 $search_text=ltrim($search_text);
 $search_text=rtrim($search_text);
@@ -56,7 +57,7 @@ body {
 <body>
 <table width="998" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td width="1045"><img src="../images/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -117,16 +118,16 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt))
+mysqli_query($connection,"SET NAMES utf-8"); //		for thai input
+$nt=mysqli_query($connection,$query);
+echo mysqli_error($connection);
+while($row=mysqli_fetch_array($nt))
 {
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
 ?>          
       <tr>
-		<td><div align="left"><?= $row[std_id]; ?> </div></td>
-		<td><div align="center"><?= $row[username]; ?></div></td>
+		<td><div align="left"><?= $row['std_id']; ?> </div></td>
+		<td><div align="center"><?= $row['username']; ?></div></td>
 		<td><div align="left"><?= $name?></div></td>
         <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
