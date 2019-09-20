@@ -77,16 +77,16 @@ if (isset($_SESSION['user_admin'])) {
       <tr>
         <td>&nbsp;</td>
         <td><a href="register_course.php"><img src="image/manage register.png" alt="" class="second_image"/></a></td>
-        <td><img src="image/student status.png" alt="" class="second_image"/></td>
+        <td><a href="manage_std_status.php"><img src="image/student status.png" alt="" class="second_image"/></td>
         <td><a href="manage_lecturer.php"><img src="image/lecture Manager.png" alt="" class="second_image"/></a></td>
-        <td><a href="manage_lecturer.php"><img src="image/register.png" class="second_image" /></a></td>
+        <td><a href="manage_register.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
         <td><img src="image/database.png" width="64" height="64" class="second_image" /></td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
         <td class="style41"><a href="register_course.php" class="style41">ลงทะเบียนวิชา</a></td>
-        <td class="style41">การจัดการสถานะนักศึกษา</td>
+        <td class="style41"><a href="manage_std_status.php" class="style41">การจัดการสถานะนักศึกษา</td>
         <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
         <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
         <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>
