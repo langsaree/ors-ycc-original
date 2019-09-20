@@ -1,9 +1,9 @@
-<?
-//////////Check session
+<?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
-
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
+include('db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,8 +54,14 @@ a:active {
 <body>
     <div class="BodyContent">
     
-    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+    <div class="BorderBorder">
+        <div class="BorderBL"><div></div></div>
+        <div class="BorderBR"><div></div></div>
+        <div class="BorderTL"></div>
+        <div class="BorderTR"><div></div></div>
+      <div class="BorderR"><div></div></div>
+        <div class="BorderB"><div></div></div>
+        <div class="BorderL"></div>
       <div class="Border">
 
         <div class="Menu">
@@ -63,7 +69,9 @@ a:active {
               <li></li> 
               <li></li> 
               <li></li> <li></li> 
-              <a href="#" class="MenuButton"><span>หน้าหลัก</span></a><a href="#" class="MenuButton">  <span>วิทยาลัย</span></a><a href="#" class="MenuButton"><span>หลักสูตร</span></a><a href="#" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="#" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="#" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="#" class="MenuButton"><span>หน้าหลัก</span></a><a href="#" class="MenuButton">  <span>วิทยาลัย</span></a>
+                <a href="#" class="MenuButton"><span>หลักสูตร</span></a><a href="#" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+                <a href="#" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="#" class="MenuButton"><span> ติดต่อเรา</span></a>
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -84,7 +92,7 @@ a:active {
                 <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br> ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -152,38 +160,38 @@ a:active {
                   <td width="22">&nbsp;</td>
                 </tr>
                 <tr>
-                 <? 
+                 <?php 
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-            $result=mysqli_query($sql);//????????
+            $result=mysqli_query($conn,$sql);//????????
             ($row=mysqli_fetch_array($result))//????????
 		    ?>
                   <td>&nbsp;</td>
                   <td rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
                   <td>รหัสประจำตัว</td>
-                  <td><?= $row[lec_id];?></td>
+                  <td><?= $row['lec_id'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td>ชื่อ :</td>
-                  <td><?= $row[lec_name];?></td>
+                  <td><?= $row['lec_name'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td>แผนกวิชา </td>
-                  <td><?= $row[cos_name];?></td>
+                  <td><?= $row['cos_name'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
                                 <tr>
                   <td>&nbsp;</td>
                   <td>ภาควิชา</td>
-                  <td><?= $row[cos_group];?></td>
+                  <td><?= $row['cos_group'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
@@ -191,14 +199,14 @@ a:active {
                 <tr>
                   <td>&nbsp;</td>
                   <td>Email </td>
-                  <td><?= $row[lec_email];?></td>
+                  <td><?= $row['lec_email'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td>Phone :</td>
-                  <td><?= $row[lec_tel];?></td>
+                  <td><?= $row['lec_tel'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
@@ -212,7 +220,7 @@ a:active {
                 <tr>
                   <td>&nbsp;</td>
                   <td>Username :::
-                  <?= $row[username];?></td>
+                  <?= $row['username'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
@@ -222,7 +230,7 @@ a:active {
                 <tr>
                   <td>&nbsp;</td>
                   <td>Password :::  
-                  <?= $row[lec_id];?></td>
+                  <?= $row['lec_id'];?></td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
@@ -245,8 +253,7 @@ a:active {
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
 </div>
+<?php  include(\'include/footer.php\');?>
 </body>
 </html>

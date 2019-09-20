@@ -95,8 +95,7 @@ while($row=mysqli_fetch_array($result_view))
         <div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
 </div>
+<?php  include('include/footer.php');?>
     </body>
 </html>

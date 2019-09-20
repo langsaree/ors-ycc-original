@@ -1,7 +1,9 @@
 <?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
+include('db.php');
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +82,6 @@ if(session_is_registered(lec_user)){
                 <td></td>
               </tr>
             </table>
-            <? } ?>
 
             <br>
           </div>
@@ -205,8 +206,7 @@ if(session_is_registered(lec_user)){
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
 </div>
+    <?php  include('include/footer.php');?>
     </body>
 </html>
