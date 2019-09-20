@@ -7,6 +7,8 @@ extract ($_GET);
 $cos_id = '$id';
 //echo "$cos_id";
 
+
+
 $sql="select * from student where username='$username'";
 $result=mysqli_query($connection, $sql);
 $row=mysqli_fetch_array($result);
@@ -107,7 +109,7 @@ $result1=mysqli_query($connection, $cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="59"><span style="color: #000">อาชีพ</span></td>
-                <td width="263"><?= $row['job']?></td>
+                <td width="240"><?= $row['job']?></td>
                 <td width="153"><span style="color: #000">จบการศึกษาระดับ</span></td>
                 <td width="272"><?= $row['edulevel']?></td>
                 <td width="41">&nbsp;</td>
@@ -169,25 +171,26 @@ $result1=mysqli_query($connection, $cos);
                 <td width="39">&nbsp;</td>
               </tr>
             </table>
-            <table width="600" border="0" cellspacing="2" cellpadding="0">
-              <tr>
-                <td width="79">ชื่อบิดา</td>
-                <td width="209"><?= $row['fat_fname'],' ',$row['fat_lname']?></td>
-                <td width="53">อาชีพ</td>
-                <td width="198"><?= $row['fat_job']?></td>
-                <td width="49">&nbsp;</td>
-              </tr>
-            </table>
-            <table width="600" border="0" cellspacing="2" cellpadding="0">
-              <tr>
-                <td width="78">ชื่อมารดา</td>
-                <td width="211"><?= $row['mot_fname'],' ',$row['mot_lname']?></td>
-                <td width="54">อาชีพ</td>
-                <td width="200"><?= $row['mot_job']?></td>
-                <td width="45">&nbsp;</td>
-              </tr>
-               <? //} ?>
-          </table></td>
+<!--            <table width="600" border="0" cellspacing="2" cellpadding="0">-->
+<!--              <tr>-->
+<!--                <td width="79">ชื่อบิดา</td>-->
+<!--                <td width="209">--><?//= $row['fat_fname'],' ',$row['fat_lname']?><!--</td>-->
+<!--                <td width="53">อาชีพ</td>-->
+<!--                <td width="198">--><?//= $row['fat_job']?><!--</td>-->
+<!--                <td width="49">&nbsp;</td>-->
+<!--              </tr>-->
+<!--            </table>-->
+<!--            <table width="600" border="0" cellspacing="2" cellpadding="0">-->
+<!--              <tr>-->
+<!--                <td width="78">ชื่อมารดา</td>-->
+<!--                <td width="211">--><?//= $row['mot_fname'],' ',$row['mot_lname']?><!--</td>-->
+<!--                <td width="54">อาชีพ</td>-->
+<!--                <td width="200">--><?//= $row['mot_job']?><!--</td>-->
+<!--                <td width="45">&nbsp;</td>-->
+<!--              </tr>-->
+<!--               --><?// //} ?>
+<!--          </table>-->
+          </td>
         </tr>
       </table>
       <p><br />
