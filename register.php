@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -182,7 +182,7 @@ session_start();
                           </tr>
                           <tr>
                             <td colspan="3" bgcolor="#CCCCCC">
-                              <? echo "$std_error"; ?>
+                              <?php echo (isset($std_error) ? $std_error : '') ?>
                             </td>
                           </tr>
                           <tr>
