@@ -3,8 +3,8 @@ session_start();
 // include('auth.php');
 include('db.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active =  isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $user_admin = $_SESSION["user_admin"];
 $msg = "";
 if(!empty($active)){
@@ -140,7 +140,7 @@ non {
   <?php } ?>
 </table>
 <?php
-  $sql = "select * from course order by status DESC";
+  $sql = "select * from course order by cos_id DESC";
   $result = mysqli_query($connection, $sql);
   $sql2 = "select * from number ";
   $result2 = mysqli_query($connection, $sql2);
@@ -152,7 +152,7 @@ non {
   <tr>
     <td width="997" height="25" align="center" valign="top"><table width="1100" border="0" align="center" cellpadding="0" cellspacing="2">
       <tr>
-        <td width="19" height="36">&nbsp;</td>
+        <td width="20" align="center" bgcolor="#FF9933" class="one">เลขที่</td>
         <td width="178" align="center" bgcolor="#FF9933" class="one">รหัสหลักสูตร</td>
         <td width="582" align="center" bgcolor="#FF9933" class="one">ชื่อหลักสูตร</td>
         <td width="204" align="center" bgcolor="#FF9933" class="one">สถานะ</td>
@@ -160,9 +160,9 @@ non {
         <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
         </tr>
       <?php while($row = mysqli_fetch_array($result)){ ?>
-      <?php // while($row2 = mysql_fetch_array($result2)){?>
+      <?php  while($row2 = mysqli_fetch_array($result2)){?>
       <tr>
-        <td height="19" valign="top"><?php //= $row2[number]; ?></td>
+        <td height="19" valign="top"><?php echo $row2['number']; ?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
           <?php echo $row['cos_id']?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -176,10 +176,10 @@ non {
 			   echo '<span style="color:red">NON-ACTIVE</span>';
 		   }
 	    ?></td>
-        <td align="center" valign="top"><a href="cos_active.php?active=<?php $row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
-        <td align="center" valign="top"><a href="cos_active.php?non_active=<?php $row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?active=<?php echo $row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?non_active=<?php echo $row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
       </tr>
-      <?php }//} ?>
+      <?php }} ?>
     </table></td>
   </tr>
   </table>
