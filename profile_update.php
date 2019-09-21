@@ -262,7 +262,7 @@ while( $row=mysqli_fetch_array($result))
                   $sql3="select * from mrmrs";
 			            $result3=mysqli_query($connection, $sql3);			 
 			            while($data3=mysqli_fetch_array($result3)){
-			 	          if($data['id']==$data3[0]){
+			 	          if($data3['id']==$data3[0]){
 					           echo "<option value='$data3[name]' selected>$data3[name]";
 				         }else{
 					         echo "<option value='$data3[name]'>$data3[name]";
@@ -462,7 +462,7 @@ while( $row=mysqli_fetch_array($result))
 			 $sql3="select * from joblist";
 			 $result3=mysqli_query($connection, $sql3);			 
 			 while($data3=mysqli_fetch_array($result3)){
-			 	if($data["job_id"]==$data3[0]){
+			 	if($data3["job_id"]==$data3[0]){
 					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
 				}else{
 					echo "<option value='$data3[job_name]'>$data3[job_name]";
