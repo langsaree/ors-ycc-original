@@ -3,9 +3,8 @@ session_start();
 include('db.php');
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
-    $username=$_SESSION["username"];
     include('login_check.php');   
-?>
+    ?>
 
 
 <!DOCTYPE html>
@@ -214,12 +213,12 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      $headers .= "Content-type: text/html; charset=utf-8\r\n";
      $headers .= "From:  ".$_POST['name']." <".$_POST['email'].">\r\n";
 
-     $msgs .= " จากคุณ  ".$_POST['name'].'<br>';
+     $msgs = " จากคุณ  ".$_POST['name'].'<br>';
      $msgs .= " โทร  ".$_POST['tel'].'<br>';
      $msgs .= "ข้อความ<br>".$_POST['msg'];
 
 
-     $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
+     $mailto = "newuser@localhost"; # อีเมล์ผู้รับ
      if(mail($mailto, $_POST['subj'], $msgs, $headers)){
      echo "ส่งสำเร็จ";
      }else{
@@ -253,7 +252,7 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php
-$sql = "select * from student where username='$username' ";
+$sql = "select * from student where username='$user' ";
 $result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
 {
