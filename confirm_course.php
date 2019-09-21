@@ -1,12 +1,12 @@
 <?php
 session_start();
+// $username=$_SESSION["username"];
 include('db.php');
 extract ($_GET);
-$cos_id=$id;
+$cos_id=$_GET['id'];
 // if(!isset($_SESSION["username"])){header("location:register.php");}
 if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
-    
     include('login_check.php');
 ?>
 
@@ -86,138 +86,13 @@ if(!isset($_SESSION["username"])) // To check login user if already login then h
              
             </table>
 
-  <?php if (isset($message)) { echo $message;  } ?>		
-	<?php
-######################################   To show login form if user do not login ###################################
-	
-	echo	'<form action="" method="post">
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td><div align="left"><span class="style9">ล็อกอิน::</span></div></td>
-              </tr>
-            </table>
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><label>
-                  <input type="text" name="username" />
-                </label></td>
-              </tr>
-            </table>
-           
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><span class="style9">รหัสผ่าน::</span></td>
-              </tr>
-            </table>
-            <p>&nbsp;</p>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><input type="password" name="password" /></td>
-              </tr>
-            </table>
-            <table width="161" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td width="72"><label for="Submit"></label>
-                  <input type="submit" name="ok" id="ok" value="เข้าสู่ระบบ" /></td>
-                <td width="7">&nbsp;</td>
-                <td width="175"><label><a href="password_recovery.php">ลืมรหัสผ่าน?</a></label></td>
-              </tr>
-              <tr>
-                
-              </tr>
-            </table>
-            </form>
-		
-              <br><br>
-			  
-            </p>
-            <p>&nbsp;</p>
-        <table width="150" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
-                  </tr>
-                </table>
-				';
-		}
-		else
-		{
-#########################   IF user already logined display wellcome below  ############################# 		
-		echo '
-		<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>ระบบลงทะเบียนออนไลน์</title>
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
+<?php if (isset($message)) { echo $message; }?>
+<?php
+    include("not_logined.php");
+} 
+else {
+    include("logined.php");
 }
-.text {
-	font-weight: bold;
-	color: #FFF;
-}
-.c {
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
-.style47 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
--->
-    </style>
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
-
-';
-		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
-		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
-		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		}
 ?>
             <br>
           </div>
@@ -300,7 +175,7 @@ $id = $rows["cos_id"];
 			             $sql3="select * from course";
 			             $result3=mysqli_query($connection, $sql3);			 
 			             while($data3=mysqli_fetch_array($result3)){
-			 	              if($data['cos_group']==$data3[0]){
+			 	              if($data3['cos_group']==$data3[0]){
 					             echo "<option value='$data3[cos_group]' selected>$data3[cos_group]";
 				              }else{
 					            echo "<option value='$data3[cos_group]'>$data3[cos_group]";
@@ -321,7 +196,7 @@ $id = $rows["cos_id"];
 			             $sql3="select * from course";
 			             $result3=mysqli_query($connection, $sql3);			 
 			             while($data3=mysqli_fetch_array($result3)){
-			 	              if($data['cos_id']==$data3[0]){
+			 	              if($data3['cos_id']==$data3[0]){
 					             echo "<option value='$data3[cos_id]' selected>$data3[cos_id]";
 				              }else{
 					             echo "<option value='$data3[cos_id]'>$data3[cos_id]";
@@ -342,7 +217,7 @@ $id = $rows["cos_id"];
 			             $sql3="select * from course";
 			             $result3=mysqli_query($connection, $sql3);			 
 			             while($data3=mysqli_fetch_array($result3)){
-			 	              if($data['cos_name']==$data3[0]){
+			 	              if($data3['cos_name']==$data3[0]){
 					             echo "<option value='$data3[cos_name]' selected>$data3[cos_name]";
 				              }else{
 					             echo "<option value='$data3[cos_name]'>$data3[cos_name]";
