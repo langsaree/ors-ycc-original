@@ -3,7 +3,7 @@ session_start();
 //include('auth.php');
 include ('db.php');
 extract ($_GET);
-$user=$_SESSION['id'];
+$user=$_GET['id'];
 $username=$_SESSION['username'];
 ?>
 <?php
@@ -353,7 +353,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
                     <td colspan="4"><label for="address"></label>
-                      <textarea name="textarea" id="textarea" cols="23" rows="5"><?php echo$row['address'];?></textarea></td>
+                      <textarea name="textarea" id="textarea" cols="23" rows="5"><?php echo $row['address'];?></textarea></td>
                   </tr>
                   
                   
@@ -361,7 +361,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style47"><span class="style60">เขต/อำเภอ<span class="style46"> :</span></span></span></td>
                     <td><label for="city"></label>
-                      <input type="text" name="city" id="city" value="<?php echo$row['city'];?>"></td>
+                      <input type="text" name="city" id="city" value="<?php echo $row['city'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -370,7 +370,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">จังหวัด :</span></td>
                     <td><label for="province"></label>
-                      <input type="text" name="province" id="province" value="<?php echo$row['province'];?>"></td>
+                      <input type="text" name="province" id="province" value="<?php echo $row['province'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
