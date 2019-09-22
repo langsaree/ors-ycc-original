@@ -5,7 +5,6 @@ include('db.php');
 extract ($_GET);
 $active = $active;
 $non_active = $non_active;
-
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
 	$result = mysql_query($sql);
@@ -29,9 +28,6 @@ if(!empty($active)){
 			}
 		}
 	}
-
-
-
 	
 ?>
 
@@ -57,7 +53,6 @@ if(!empty($active)){
 	font-family: Verdana, Geneva, sans-serif;
 	color: #666666;
 	text-decoration:none;
-
 }
 .inmain {
 	font-size: 20px;

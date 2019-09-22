@@ -1,8 +1,9 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_REQUEST['username']))
 	{
 include('db.php');
+$message="";
 $username = "";
 $password = "";
 if(!isset($_SESSION['logined'])) {
@@ -52,6 +53,7 @@ if(!isset($_SESSION['logined'])) {
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style7 {color: #3987FB; font-size: 14px; }
+.style9 {color: black;font-size: 12px}
 -->
     </style>
 </head>
@@ -91,7 +93,8 @@ if(!isset($_SESSION['logined'])) {
 
 
 	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php
+echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>

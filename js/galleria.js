@@ -243,7 +243,7 @@ var DEBUG = false,
                     elem.stop().animate( style, speed, callback );
                 } else {
                     elem.css( style );
-                };
+                }
             },
 
             show : function( elem, speed, callback ) {
@@ -263,7 +263,7 @@ var DEBUG = false,
                     elem.stop().animate( style, speed, callback );
                 } else {
                     elem.css( style );
-                };
+                }
             },
 
             addTimer : function() {

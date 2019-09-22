@@ -4,8 +4,8 @@ include('db.php');
 extract ($_GET);
 $cos_id=$id;
 if(!session_is_registered(username))
-	{
-     
+	
+   {  
      $username = "";
      $password = "";
      if(!isset($_SESSION['logined'])) {
@@ -97,7 +97,7 @@ if(!session_is_registered(username))
             </table>
 
 	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<? {echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>

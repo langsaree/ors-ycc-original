@@ -1,8 +1,9 @@
 <?php
 session_start();
-if(!session_is_registered(username))
+if(!isset($_REQUEST['username']))
 	{
      include('db.php');
+     $message="";
      $username = "";
      $password = "";
      if(!isset($_SESSION['logined'])) {
@@ -17,8 +18,8 @@ if(!session_is_registered(username))
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -50,7 +51,7 @@ if(!session_is_registered(username))
     <style type="text/css">
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
+.style9 {color: black;font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
 	font-size: 14px;
@@ -92,7 +93,8 @@ if(!session_is_registered(username))
             </table>
 
 	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php
+   echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>

@@ -1,9 +1,9 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(username)) // To check login user if already login then hide login form
+if(!isset($_REQUEST['username'])) // To check login user if already login then hide login form
 	{
-    
+    $message ="";
      $username = "";
      $password = "";
      if(!isset($_SESSION['logined'])) {
@@ -18,8 +18,8 @@ if(!session_is_registered(username)) // To check login user if already login the
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
@@ -53,7 +53,7 @@ if(!session_is_registered(username)) // To check login user if already login the
     <style type="text/css">
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
+.style9 {color: black;font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
 	font-size: 14px;
@@ -63,7 +63,7 @@ if(!session_is_registered(username)) // To check login user if already login the
 .o {
 	color: #000;
 }
-oo {
+.o {
 	font-size: 24px;
 }
 .BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
@@ -71,7 +71,7 @@ oo {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: left;
 }
-oo {
+.o {
 	font-size: 12px;
 }
 -->
@@ -80,7 +80,7 @@ s
 </head>
 <body>
     <div class="BodyContent">
-<div class="BorderBorder"><div class="ActiveMenuButtonInput"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
+<div class="BorderBorder"><div class="ActiveMenu"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
       <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
       <div class="Border">
 
@@ -109,8 +109,13 @@ s
              
             </table>
 
-	<?php echo $message; ?>		
-	<? 	
+	<?php  $message; 
+  
+?>
+ 
+
+
+	<?php
 ######################################   To show login form if user do not login ###################################
 	
 	echo	'<form action="" method="post">
@@ -186,6 +191,7 @@ s
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
+
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
 	font-size: 14px;
@@ -228,6 +234,7 @@ s
 
 
 ';
+
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
 		echo '<span class="style26 "> '.$username.' </span><br>';
 		echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
@@ -261,7 +268,7 @@ s
     <td width="420">&nbsp;</td>
   </tr>
   <tr>
-    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือ</span>นมกราคม 2554</td>
+    <td height="26" colspan="3" style="color: #333; font-size: 16px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Article">วิชาที่เปิดสอนประจำเดือน</span>มกราคม 2554</td>
     </tr>
   <tr>
     <td>&nbsp;</td>
@@ -270,10 +277,11 @@ s
   </tr>
 </table>
 
-<?
+<?php
+
 $sql_view = "select * from course where status='1' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
+$result_view = mysqli_query($conn,$sql_view);
+while($row=mysqli_fetch_array($result_view))
 {
 
 ?>
@@ -283,29 +291,29 @@ while($row=mysql_fetch_array($result_view))
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row[cos_group].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row["cos_group"].'</span>' ?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?= $row[cos_id];?></td>
+                <?= $row["cos_id"];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row[cos_name];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row["cos_name"];?></td>
                </tr>
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?=$row["cos_id"]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?=$row[cos_id]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?=$row["cos_id"]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
-               <? } ?>
+               <?php }?>
           </table>
             <p align="center">&nbsp;</p>
         </div>
@@ -318,6 +326,7 @@ while($row=mysql_fetch_array($result_view))
         </div></div>
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
     </div>
+
 </div>
     </body>
 </html>

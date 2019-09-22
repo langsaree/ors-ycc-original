@@ -89,7 +89,7 @@ a:active {
                 <td width="163">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <? echo  '<span style="font-weight:bold; font-size:13px"> </span>' ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>

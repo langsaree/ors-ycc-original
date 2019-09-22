@@ -10,18 +10,18 @@ $password=$_POST['password2'];
 // To protect MySQL injection (more detail about MySQL injection)
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
+$username = mysqli_real_escape_string($username);
+$password = mysqli_real_escape_string($password);
 //$code = stripslashes($code);
 //$code = mysql_real_escape_string($code);
 
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 //$result=mysql_query($sql);
 $sql="SELECT * FROM student WHERE username='$username' and password='$password'";
-$result=mysql_query($sql);
+$result=mysqli_query($sql);
 
 // Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+$count=mysqli_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 
 if($count==1/*&&strcmp($code,$code_hidden)==0*/)
