@@ -3,10 +3,10 @@ session_start();
 include('db.php');
 //include('auth.php');
 extract ($_GET);
-//$active = $active;
-//$non_active = $non_active;
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 if(!empty($active)){
-	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
+	$sql = "UPDATE course  SET status='1' WHERE cos_id='$active' ";
 	$result = mysqli_query($connection,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
@@ -18,7 +18,7 @@ if(!empty($active)){
 	else
 	{
 		if(!empty($non_active)){
-			$sql = "UPDATE register SET status='0' WHERE std_id='$non_active' ";
+			$sql = "UPDATE course  SET status='0' WHERE cos_id='$non_active' ";
 			$result = mysqli_query($connection,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
@@ -76,7 +76,7 @@ body {
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+    <td><img src="../image/header-bg.png" width="1260" height="45" /></td>
   </tr>
   
   <tr>
@@ -90,7 +90,7 @@ body {
   <tr>
    <td height="548" valign="top">
       <table width="737" height="31" align="left">
-	  <?php if("$msg"){?>
+	  <?php if(isset($msg)){?>
         <tr>
           <td width="129" valign="top">&nbsp;</td>
           <td width="596" valign="top"><?php echo $msg?></td>
@@ -110,7 +110,7 @@ body {
         <td width="53" align="center" bgcolor="#FFCCFF">Non-active</td>
       </tr>
       
-    <?
+    <?php
   include('db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
@@ -127,7 +127,7 @@ body {
    $result = mysqli_query($connection,$sql1);
    while ($row= mysqli_fetch_array($result))
 	{
-	//$cos_id= $row["cos_id"];
+	$cos_id= $row["cos_id"];
 	$cos_group=$row["cos_group"];
 	$cos_name = $row["cos_name"];
 	//$cos_period = $row["cos_period"];	
@@ -141,7 +141,7 @@ body {
 	$re = mysqli_query($connection,$sql);
 	while ($ro1= mysqli_fetch_array($re))
 	{
-		$std1= $ro1["std_id"]";
+		$std1= $ro1["std_id"];
 		$name= $ro1["f_name"]."<span>".$ro1["name"]."-".$ro1["s_name"];
 	
 	//////////////////forth/////////////////////
@@ -153,13 +153,13 @@ body {
 	//echo $lec_name;
 	?>
       <tr>
-        <td width="129" bgcolor="#FFFFE8"><?php echo $std?></td>
-        <td width="186" bgcolor="#FFE1FF"><?php echo $name?></td>
-        <td width="160" align="left" bgcolor="#FFFFE8"><?php echo $cos_group?></td>
-        <td bgcolor="#FFFFE8"><?php echo $cos_name?></td>
-        <td align="left" bgcolor="#FFFFE8"><?php echo $lec_name?></td>
+        <td width="129" bgcolor="#FFFFE8"> <?php echo (isset($std) ? $std : '')?></td>
+        <td width="186" bgcolor="#FFE1FF"><?php echo (isset($name) ? $name : '')?></td>
+        <td width="160" align="left" bgcolor="#FFFFE8"><?php echo (isset($cos_group) ? $cos_group : '')?></td>
+        <td bgcolor="#FFFFE8"><?php echo (isset($cos_name) ? $cos_name : '')?></td>
+        <td align="left" bgcolor="#FFFFE8"><?php echo (isset($lec_name) ? $lec_name : '')?></td>
         <td align="center" bgcolor="#FFFFCC">
-		<?php $status=$ro["status"];
+		<?php $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -169,13 +169,13 @@ body {
 		   }
 	    ?>
         </td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $ro["std_id"];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $ro["std_id"]; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $ro["cos_id"];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $ro["cos_id"]; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
-       <?php{ ////// close first while //////////////////////////////////////////////
+       <?php ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
-		{ /////// close 3rd while ///////////////////////
-	}
+	 } /////// close 3rd while ///////////////////////
+	}}
 		?>
   </table>
       <p class="style44">&nbsp;</p>
