@@ -49,7 +49,7 @@ $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysql_query ("SET NAMES 'utf8'");
+mysqli_query ("SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
 $result = mysqli_query($connection, $sql);
 
@@ -124,7 +124,7 @@ body {
       <td height="19" colspan="3"><span class="style4">__________________________________________________________________________________________</span></td>
     </tr>
   </table>
-  <form action="" method="POST">
+  <form action="pcos_add.php" method="POST">
   <table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td bgcolor="#FFFFFF"><table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
@@ -146,7 +146,7 @@ body {
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg2?></td>
+              <td><?php echo $errmsg2?></td>
             </tr>
             <?php }?>
             <tr>
@@ -158,7 +158,7 @@ body {
             <tr>
               <td height="27">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg3?></td>
+              <td><?php echo $errmsg3?></td>
             </tr>
             <?php }?>
             <tr>
@@ -170,7 +170,7 @@ body {
             <tr>
               <td height="27">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg4?></td>
+              <td><?php echo $errmsg4?></td>
             </tr>
             <?php }?>
             <tr>
@@ -182,9 +182,9 @@ body {
             <tr>
               <td height="30">&nbsp;</td>
               <td></td>
-              <td><?php= $errmsg5?>
-                <?php= $errmsg6?>
-                <?php= $errmsg7?>
+              <td><?php echo $errmsg5?>
+                <?php echo $errmsg6?>
+                <?php echo $errmsg7?>
                 </td>
             </tr>
             <?php }?>
@@ -222,7 +222,7 @@ body {
             <tr>
               <td height="28">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg8?></td>
+              <td><?php echo $errmsg8?></td>
             </tr>
             <?php }?>
             <tr>

@@ -75,7 +75,7 @@ body {
          </tr>
        </table>
     </form>
-       <?php echo "$success"; ?>
+       <? "$success"; ?>
        <table width="1261" border="0" cellspacing="2" cellpadding="5">
          <tr>
            <td width="1247" height="38" valign="top"><div align="center"><span class="style44">__________________________________________________________________________________________________________________________________________</span></div></td>

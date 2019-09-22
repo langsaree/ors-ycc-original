@@ -1,4 +1,4 @@
-<?
+<?php
 include ('db.php');
 $lec_id= $_POST['lec_id'];
 $lec_name= $_POST['lec_name'];
@@ -11,11 +11,11 @@ $lec_comment= $_POST['lec_comment'];
 
 $sql = "update lecture set lec_id='$lec_id', lec_name='$lec_name', lec_tel='$lec_tel', lec_email='$lec_email', lec_comment='$lec_comment' where lec_id ='$lec_id'";
 
-$result=mysql_query($sql);
+$result=mysqli_query($connection, $sql);
 
 if  (!$result)
 	{
-		die("could not query db ".mysql_error());
+		die("could not query db ".mysqli_error($connection));
 		$error='<span style="color:red">กรุณากรอบข้อมูลให้ถูกต้อง</span>';
 		include('lec_update.php');
 	}

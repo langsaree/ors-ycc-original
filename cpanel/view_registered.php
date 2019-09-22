@@ -4,7 +4,7 @@ include('db.php');
 include('auth.php');
 extract ($_GET);
 $active = $active;
-$non_active = $non_active;
+$non_active = $non_active; //$non_active = $_SESSION['non_active'];
 if(!empty($active)){
 	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
 	$result = mysqli_query($connection, $sql);

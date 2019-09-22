@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db.php";
+include ('db.php');
 //if(!session_is_registered(username)){header("location:index.php");}
 if(!isset($_SESSION['username']) {header("location:index.php");}
 //end of check session
