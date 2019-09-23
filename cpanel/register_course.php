@@ -467,7 +467,7 @@ if(isset($ok)) {
          {
            die("ผิดพลาด".mysql_error());
          }
-		 header("Refresh: 3; url=index.php");  
+		 header("Refresh: 3; url=manage_student.php");  
 		 echo "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที";
 		exit;
    }
