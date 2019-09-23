@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage lecture</title>
 <style type="text/css">
-<!--
+
 .style1 {color: #666666}
 body {
 	margin-left: 0px;
@@ -39,7 +39,6 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 .style43 {color: #FFFFFF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
--->
 </style>
 </head>
 
@@ -58,7 +57,7 @@ body {
           <td width="94%">&nbsp;</td>
         </tr>
       </table>
-     <span class="style37"><? echo "$success"; ?><br />     
+     <span class="style37"><?php echo isset($success) ? $success : ''; ?><br />     
      _________________________________________________________________________________________________________________________________</span></td>
     </tr>
     <tr>
