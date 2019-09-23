@@ -145,10 +145,10 @@ while($row=mysqli_fetch_array($nt)){
             </tr>
             <tr>
               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_id']; ?></td>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_name']; ?></td>
-      <td></td>
-      <td></td>
-      <td>      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?PHP echo $row['lec_name']; ?></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?PHP echo $row['lec_tel']; ?></td>
+      <td> <?PHP echo $row['lec_email']; ?></td>
+      <td> <?PHP echo $row['lec_comment']; ?>     </td>
       <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row['lec_id']; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
         
       </a></div></td>
