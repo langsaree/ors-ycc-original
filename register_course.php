@@ -1,4 +1,10 @@
 <?php
+/**
+ * LangsariEngine - A Delicious PHP Component
+ *
+ * @package  BuduEngine
+ * @author   Kholed Langsari <langsaree@gmail.com>
+ */
 
 session_start();
 
@@ -350,18 +356,26 @@ $errmsg = "";
 if(isset($_POST['ok'])) {
 #=========================================
 # username check	
-//if(isset($ok)) { 
-    $login = $_POST['login'];
-	if(empty($login)) {
+//if(isset($ok)) {
+    if(!empty($_POST['login'])) {
+
+        $login = $_POST['login'];
+
+        if(strlen($login) <4) {
+            $errmsg3 .= "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>";
+        }
+
+    } else {
+
 	    $errmsg1 = "<span style=color:red>กรุณากรอบชื่ิิอล็อกอินด้วยค่ะ</span>";
-	  }
+
+	}
+
 	//if(!ereg($pattern, $login)) {
 	  //  $errmsg2 .= "<span style=color:red>ชื่ิิอล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
 	 //}
-	 if(!$errmsg1) {
-	 if(strlen($login) <4) {
-	    $errmsg3 .= "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>";
-       }}
+
+
 
      /*if(!$errmsg[3]) {
 			# check username duplicate
