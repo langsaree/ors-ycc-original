@@ -15,7 +15,7 @@ $result=mysqli_query($connection,$sql);
 
 if  (!$result)
 	{
-		die("could not query db ".mysqli_error());
+		die("could not query db ".mysqli_error($connection));
 		$error='<span style="color:red">กรุณากรอบข้อมูลให้ถูกต้อง</span>';
 		include('lec_add.php');
 	}
