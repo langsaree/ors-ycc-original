@@ -218,7 +218,7 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      $msgs .= "ข้อความ<br>".$_POST['msg'];
 
 
-     $mailto = "newuser@localhost"; # อีเมล์ผู้รับ
+     $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
      if(mail($mailto, $_POST['subj'], $msgs, $headers)){
      echo "ส่งสำเร็จ";
      }else{
