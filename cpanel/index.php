@@ -30,7 +30,7 @@ if($count==1/*&&strcmp($code,$code_hidden)==0*/)
 {
 $user_admin = $username;
 $pass_admin = $password;
-$_SESSION['username'] =  $_POST['username'];
+$_SESSION['user_admin'] =  $_POST['username'];
 $_SESSION['password'] = $_POST['password'];
 header("location:cpanel.php");
 }
