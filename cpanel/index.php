@@ -1,28 +1,18 @@
 <?php
 session_start();
-//if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
-//ob_start(); 
+
+if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
+ob_start(); 
 include("db.php");
-//if (isset($_SESSION["user_admin"]))
-$username = "";
-$password = "";
-	if (isset($_POST['username'])) {
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-            $sql = "select * from admin where username='$username' and password='$password'";
-            $result=mysqli_query($connection, $sql);
-            $count=mysqli_num_rows($result);
-			if ($count == 1) {
-				$_SESSION['username'] = $_POST['username'];
-				$_SESSION['password'] = $_POST['password'];
 
-				header("location:cpanel.php");
-			}
-		
-	}
+if(empty($username) && empty($password)){
+    
+}
+    
+ $username= isset($_POST['username']) ? $_POST['username'] : "";
+ $password= isset($_POST['password']) ? $_POST['password'] : "";
+    
 
-//$username = $_POST['username'];
-//$password = $_POST['password'];
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
 
@@ -37,9 +27,21 @@ $password = "";
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 //$result=mysql_query($sql);
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-//session_register("user_admin");
-//session_register("pass_admin");
-//ob_end_flush();
+$sql = "select * from admin where username='$username' and password='$password'";
+$result=mysqli_query($connection, $sql);
+$count=mysqli_num_rows($result);
+// var_dump($count,$result);
+if($count==1/*&&strcmp($code,$code_hidden)==0*/)
+{
+    $_SESSION["user_admin"] = $username;
+header("location:cpanel.php");
+}
+else
+ {
+$error='<span style="color:red">ชื่่อเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+//echo "Wrong username and password";
+} 
+ob_end_flush();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -54,7 +56,7 @@ $password = "";
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/example.js'></script>
     <style type="text/css">
-<!--
+
 .style2 {color: #0066FF}
 .style3 {color: #666666}
 .style5 {
@@ -74,7 +76,7 @@ $password = "";
           <h3 class="style5"><span class="style2">ADMINISTRATOR</span> <span class="style3">LOGIN</span></h3>
           <p class="style5"></p>
 <form action="" method="post" target="">
-                <p><label for="ftp-user-name">User Name</label><input type="text" name="username" id="username" /></p>
+                <p><label for="ftp-user-name">UserName</label><input type="text" name="username" id="user-name" /></p>
                 <p><label for="ftp-password">Password</label><input type="password" name="password" id="password" /></p>
                 <p class="submit-wrap"><input type="submit" id="submit" class="button" value="Login" /> 
 &nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p>
