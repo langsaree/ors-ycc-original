@@ -8,7 +8,7 @@
 
 session_start();
 
-
+include('db.php');
 
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
