@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if(!session_is_registered(username));//{header("location:index.php");}
 //end of check session
@@ -17,11 +17,11 @@ $search_text=rtrim($search_text);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>::Searchx::</title>
 <style type="text/css">
-<!--
+
 .style46 {color: #00E800
 }
 .style47 {color: #FF0099}
--->
+
 </style>
 </head>
 
@@ -50,7 +50,7 @@ $search_text=rtrim($search_text);
       <td width="27%" bgcolor="#CCCCCC"><div align="center">ชื่อ-นามสกุล</div></td>
       <td width="12%" bgcolor="#CCCCCC"><div align="center" class="style46">Active</div></td>
       <td width="11%" bgcolor="#CCCCCC"><div align="center" class="style47">Non-Active</div></td>
- <?
+ <?php
 // check for blank input
 if($search_text==""){$search_text="";}
 // end of check
@@ -75,9 +75,9 @@ $query="select * from student where '$q' order by std_id limit 0, 20"; // start 
 
 echo "<br><br>";
 //mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt)){
+$nt=mysqli_query($query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($nt)){
 		//$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
 ?>
     </tr>
