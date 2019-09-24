@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include('db.php');
 include('auth.php');
@@ -35,7 +35,7 @@ if(!empty($active)){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student status</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -78,7 +78,7 @@ border-color:#8A9AA6;
 .hhhhh {	font-size: 12px;
 	text-align: center;
 }
--->
+
 </style>
 </head>
 
@@ -102,7 +102,7 @@ border-color:#8A9AA6;
   
   <tr>
     <td height="548" valign="top"><table width="1024" border="0" align="left" cellpadding="0" cellspacing="0">
-      <? if($msg){?>
+      <?php if($msg){?>
       <tr>
         <td width="171" height="61">&nbsp;</td>
         <td width="401"><p class="one"><br />
@@ -112,7 +112,7 @@ border-color:#8A9AA6;
         </p></td>
         <td width="432">&nbsp;</td>
         <td width="20">&nbsp;</td>
-      </tr><? }?>
+      </tr><?php }?>
     </table>
       <br />
       <br />
@@ -133,10 +133,10 @@ border-color:#8A9AA6;
 		$n = $row[f_name] . $row[name];
 		?>  
         <tr>
-          <td align="center" bgcolor="#FFFFB0"><? echo $row[std_id];?></td>  
+          <td align="center" bgcolor="#FFFFB0"><?php echo $row[std_id];?></td>  
           <td align="left" bgcolor="#FFFFB0"><?= $n?> -  <?= $row[s_name];?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <? $status=$row[status];
+            <?php $status=$row[status];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -148,7 +148,7 @@ border-color:#8A9AA6;
           </span></div></td>
           <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?=$row[std_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
           <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row[std_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
-          </tr><? }?>
+          </tr><?php }?>
 </table>
       <p>&nbsp;</p>
       <p>&nbsp;</p>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update student</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +29,7 @@ body {
 	font-size: 24px;
 }
 .style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
@@ -37,7 +37,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -57,42 +57,45 @@ body {
       <div align="center">
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
-          <?
-	include('db.php');
+          <?php
+  include('db.php');
+  extract ($_GET);
+  $std_id = $_GET['id'];
 	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysql_query($sql);
-	while($ro = mysql_fetch_row($re))
+	$re = mysqli_query($connection,$sql);
+	while($row = mysqli_fetch_row($re))
 	{
 	?>
           <tr>
-            <td width="173"><span class="style46">รหัสวิชา :</span></td>
-            <td width="144"><input type="text" name="name" /></td>
+            <td width="173"><span class="style46">ชื่อ :</span></td>
+            <td width="144"><input type="text" name="name" value="<?php echo $row["name"]; ?>" /></td>
           </tr>
           <tr>
-            <td><span class="style46">ชื่อวิชา :</span></td>
-            <td><input type="text" name="lastname" /></td>
+            <td><span class="style46">นามสกุล :</span></td>
+            <td><input type="text" name="lastname" value="<?php echo $row["s_name"]; ?>" /></td>
           </tr>
           <tr>
-            <td><span class="style46">จำนวนชั่วโมง/หน่วยกิต :</span></td>
-            <td colspan="2"><input type="text" name="gender" /></td>
+            <td><span class="style46">เพช :</span></td>
+            <td colspan="2"><input type="text" name="gender" value="<?php echo $row["gender"]; ?>" /></td>
           </tr>
           <tr>
-            <td><span class="style46">วัน :</span></td>
-            <td><input type="text" name="address" /></td>
+            <td><span class="style46">ที่อยู่ :</span></td>
+            <td><input type="text" name="address" value="<?php echo $row["address"]; ?>" /></td>
           </tr>
           <tr>
-            <td><span class="style46">เวลา :</span></td>
-            <td><input type="text" name="city" /></td>
+            <td><span class="style46">จังหวัด :</span></td>
+            <td><input type="text" name="city" value="<?php echo $row["city"]; ?>" /></td>
           </tr>
           <tr>
-            <td><span class="style46">อาจารย์ผู้สอน :</span></td>
-            <td><input type="text" name="province" /></td>
+            <td><span class="style46">อำเภอ :</span></td>
+            <td><input type="text" name="province" value="<?php echo $row["province"]; ?>" /></td>
           </tr>
           <tr>
-            <td><span class="style46">หมายเหตุ :</span></td>
-            <td><input type="text" name="postcode" /></td>
+            <td><span class="style46">รหัสไปรสณี :</span></td>
+            <td><input type="text" name="postcode" value="<?php echo $row["postcode"]; ?>" /></td>
           </tr>
         </table>
+            <?php } ?>
         <p>
           <input name="Update" type="submit" id="Update" value="Update" />
         </p>
