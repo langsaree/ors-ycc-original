@@ -1,6 +1,5 @@
 <?
 session_start();
-//include('auth.php');
 include('db.php');
 extract ($_GET);
 $active = "";
