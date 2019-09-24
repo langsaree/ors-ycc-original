@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Password Recovery</title>
+<p> กรุณาติตต่อ ผู้ดูแลระบบครับ </p>
 </head>
 
 <body>
