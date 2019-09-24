@@ -1,4 +1,4 @@
 <?php
 session_start();
-if(!session_is_registered(user_admin)) header("Location: index.php");
+if (!isset($_SESSION["username_admin"])) header("Location: index.php");
 ?>
