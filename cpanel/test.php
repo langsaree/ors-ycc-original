@@ -1,12 +1,12 @@
-<?  
+<?php  
 include ('db.php');
 $query = ("select * from student,course ");     
 //$query1 = ("select * from register "); 
-	//$result1 = mysql_query($query) or die (mysql_error());
+	//$result1 = mysql_query($query) or die (mysqli_error());
 //$query = "select student.f_name.name.s_name,course.cos_id"."from student,course"."where student.f_name.name.s_name = course.cos_id";
- //  $result2 = mysql_query($query);
-   $result = mysql_query($query) or die(mysql_error());  
-   while ($row = mysql_fetch_array($result)) //or $row = mysql_fetch_array($result1))
+ //  $result2 = mysqli_query($query);
+   $result = mysqli_query$connection,($query) or die(mysqli_error());  
+   while ($row = mysqli_fetch_array($result)) //or $row = mysqli_fetch_array($result1))
    {
    $id = $row['std_id'];
    $fn = $row['f_name'];
@@ -38,12 +38,12 @@ $query = ("select * from student,course ");
     <td width="13%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลส่วนตัว</div></td>
   </tr>
   <tr>
-    <td><div align="center"><? echo $id ; ?></div></td>
-    <td><div align="center"><? echo $fn;?><? echo $n;?>-<? echo $ln;?></div></td>
-    <td><div align="center"><? echo $cn; ?></div></td>
+    <td><div align="center"><?php echo $id ; ?></div></td>
+    <td><div align="center"><?php echo $fn;?><?php echo $n;?>-<?php echo $ln;?></div></td>
+    <td><div align="center"><?php echo $cn; ?></div></td>
     <td><div align="center">update</div></td>
     <td><div align="center">delete </div></td>
-    <td><div align="center"><a href="std_view2.php?id= <? echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
+    <td><div align="center"><a href="std_view2.php?id= <?php echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
   </tr>
 </table>
 </body>
