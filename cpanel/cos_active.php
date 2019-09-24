@@ -1,6 +1,6 @@
 <?php
 //session_start();
-include('auth.php');
+//include('auth.php');
 include('../db.php');
 extract ($_GET);
 //$active = $active;
@@ -124,8 +124,7 @@ non {
     <td>&nbsp;</td>
   </tr>
 </table>
-<table width="1024" border="0" cellpadding="0" cellspacing="0"> 
-<?php if($msg){?>
+<table width="1024" border="0" cellpadding="0" cellspacing="0"> <?php error_reporting('E_ALL & ~E_NOTICE'); if($msg){?>
   <tr>
     <td width="26" height="61">&nbsp;</td>
     <td width="465"><p class="one"><br />
