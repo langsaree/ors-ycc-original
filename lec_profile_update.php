@@ -38,15 +38,26 @@ include('db.php');
 </head>
 <body>
 <div class="BodyContent">
-    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-        <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
+    <div class="BorderBorder">
+        <div class="BorderBL"><div></div></div>
+        <div class="BorderBR"><div></div></div>
+        <div class="BorderTL"></div>
+        <div class="BorderTR"><div></div></div>
+        <div class="BorderR"><div></div></div>
+        <div class="BorderB"><div></div></div>
+        <div class="BorderL"></div>
         <div class="Border">
             <div class="Menu">
                 <ul>
                     <li></li>
                     <li></li>
                     <li></li> <li></li>
-                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+                    <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
+                    <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+                    <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+                    <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+                    <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
                     <input name="text" type="text" style="width:120px" />
                     <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -97,7 +108,15 @@ include('db.php');
                         </div>
                     </div>
                 </div><div class="MainColumn">
-                    <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+                    <div class="ArticleBorder">
+                        <div class="ArticleBL"><div></div></div>
+                        <div class="ArticleBR"><div></div></div>
+                        <div class="ArticleTL"></div>
+                        <div class="ArticleTR"><div></div></div>
+                        <div class="ArticleT"></div>
+                        <div class="ArticleR"><div></div></div>
+                        <div class="ArticleB"><div></div></div>
+                        <div class="ArticleL"></div>
 
                         <div class="Article"><br>
                             <table width="647" border="0" cellspacing="2" cellpadding="0">
@@ -105,7 +124,7 @@ include('db.php');
                                     <td width="643" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------------------------------------------</td>
                                 </tr>
                             </table>
-                            <?
+                            <?php
 
                             if(isset($POST['ok'])){
                                 $login=$_POST['login'];
@@ -120,13 +139,13 @@ include('db.php');
                                     header("location:lec_profile.php");
                                 }
                                 else{
-                                    mysqli_error($connection);
+                                    mysqli_error($conn);
                                 }
                             }
                             ?>
                             <form action="" method="post" enctype="multipart/form-data" name="form1">
                                 <table width="600">
-                                    <?
+                                    <?php
 
                                     $sql = "select * from lecture where username='$username'";
                                     $result=mysqli_query($conn,$sql);
@@ -224,9 +243,6 @@ include('db.php');
                             </form>
                         </div>
                     </div>
-                    <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-                    </div>
-                </div></div>
     </div>
         <?php  include('include/footer.php');?>
 </body>
