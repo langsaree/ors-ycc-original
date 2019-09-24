@@ -1,5 +1,6 @@
 <?php
 ob_start(); 
+session_start();
 include ('db.php');
 // username and password sent from form
 $username=$_POST['username2'];
@@ -27,8 +28,7 @@ $count=mysqli_num_rows($result);
 if($count==1/*&&strcmp($code,$code_hidden)==0*/)
 {
 // Register $myusername, $mypassword and redirect to file "login_success.php"
-$_SESSION("username");
-$_SESSION("password");
+$_SESSION['username'] = $_POST['username2'];
 //session_register("sessioncode");
 header("location:std_profile.php");
 }
