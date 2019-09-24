@@ -72,7 +72,7 @@ body {
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
        <?php
-  include('db.php');
+include("../db.php");
 	///////////////////////////////////////
    $sql1 ="select * from course ";
    $result = mysqli_query($connection, $sql1);
@@ -106,7 +106,8 @@ body {
    	 	<td><div align="center"><a href="cos_del.php?id= <?php echo $cos_id; ?> "><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></div></td>
       </tr>
 	  <?php }
-} ?>
+	 	 }
+	 	  ?>
     </table>
 </body>
 </html>
