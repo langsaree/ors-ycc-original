@@ -1,8 +1,7 @@
 <?php
 session_start();
-//if(!session_is_registered(user_admin)){header("location:index.php");}
+if(isset($_SESSION['user_admin'])) {header("location:index.php");}
 //end of check session
-//$user_admin = $_SESSION["user_admin"];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,9 +11,7 @@ session_start();
 <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="cpanel.css" />
 <style type="text/css">
-<!--
 
--->
 </style>
 </head>
 <body>
@@ -76,11 +73,11 @@ session_start();
       <tr>
         <td>&nbsp;</td>
         <td><a href="register_course.php"><img src="image/manage register.png" alt="" class="second_image"/></a></td>
-        <td><img src="image/student status.png" alt="" class="second_image"/></td>
+        <td><a href="manage_student.php"><img src="image/student status.png" alt="" class="second_image"/></td>
         <td><a href="manage_lecturer.php"><img src="image/lecture Manager.png" alt="" class="second_image"/></a></td>
         <td><a href="manage_lecturer.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
-        <td><img src="image/database.png" width="64" height="64" class="second_image" /></td>
+        <td><a href="http://localhost/phpmyadmin/db_designer.php?db=ors_ycc"><img src="image/database.png" width="64" height="64" class="second_image" /></td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
