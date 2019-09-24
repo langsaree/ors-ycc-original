@@ -55,14 +55,26 @@ if (!isset($_SESSION['logined'])) {
 			if ($count == 1) {
 				$_SESSION['logined'] = true;
 				$_SESSION['username'] = $_POST['username'];
-				$_SESSION['password'] = $_POST['password'];
-
+				// $_SESSION['password'] = $_POST['password'];
 				header("location:std_profile.php");
-			} else {
-				$message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+			} else{
+				$sql2 = "SELECT * FROM `lecture` WHERE `username` = '$username' and `password` = '$password'";
+				$result2 = mysqli_query($connection, $sql2);
+				$count2 = mysqli_num_rows($result2);
+				if ($count2 == 1) {
+					$_SESSION['logined'] = true;
+					$_SESSION['lec_user'] = $_POST['username'];
+					// $_SESSION['password'] = $_POST['password'];
+					header("location:lec_profile.php");
+				}else{
+					$message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+				}
+				
 			}
 		}
 	}
-
 }
+
+
+
 ?>
