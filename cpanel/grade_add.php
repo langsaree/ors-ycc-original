@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>add new grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +29,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
