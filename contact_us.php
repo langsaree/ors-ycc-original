@@ -193,6 +193,7 @@ include('include/login.php');
                 </form>
             </div>
         </div>
+    </div>
 </div>
 <?php  include('include/footer.php');?>
 </body>

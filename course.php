@@ -41,7 +41,17 @@ include('include/login.php');
         </div>
 
         <div class="Article">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
             <p align="center">//</p>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
         </div>
     </div>
 </div>
