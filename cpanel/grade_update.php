@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -28,7 +28,7 @@ body {
 	font-weight: bold;
 	font-size: 24px;
 }
--->
+
 </style>
 </head>
 
@@ -42,7 +42,7 @@ body {
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
-      <tr>
+      <tr>  
         <td width="6%" align="center"><img src="image/update_grade.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Update<span class="style38"> Course</span></span></span><br />
             <span class="style34">แก้ไขเกรด</span></td>
@@ -56,11 +56,11 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?
-	include('db_connect.php');
+          <?php
+include("../db.php");
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
-	while($shows = mysql_fetch_row($show))
+	$show = mysqli_query($connection, $sql);
+	if (($show))
 	{
 	?>
           <tr>
@@ -107,7 +107,7 @@ body {
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      
+  <?php } ?>
     </tr>
   </table>
 </form>
