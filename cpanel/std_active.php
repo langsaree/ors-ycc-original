@@ -1,14 +1,13 @@
-<?php
+<?
 session_start();
-include ('../db.php');
-//include ('auth.php');
+include('db.php');
+include('auth.php');
 extract ($_GET);
-$active = isset($_GET['active']) ? $_GET['active'] : "";
-$non_active =  isset($_GET['non_active']) ? $_GET['non_active'] : "";
-$msg = "";
+$active = $active;
+$non_active = $non_active;
 if(!empty($active)){
 	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
-	$result = mysqli_query($connection,$sql);
+	$result = mysql_query($sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -20,7 +19,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
-			$result = mysqli_query($connection,$sql);
+			$result = mysql_query($sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -79,7 +78,7 @@ border-color:#8A9AA6;
 .hhhhh {	font-size: 12px;
 	text-align: center;
 }
-
+-->
 </style>
 </head>
 
@@ -103,17 +102,17 @@ border-color:#8A9AA6;
   
   <tr>
     <td height="548" valign="top"><table width="1024" border="0" align="left" cellpadding="0" cellspacing="0">
-      <?php  if($msg){?>
+      <? if($msg){?>
       <tr>
         <td width="171" height="61">&nbsp;</td>
         <td width="401"><p class="one"><br />
           &nbsp;&nbsp;
-          <?php echo  $msg ?>          <br />
+          <?= $msg ?>          <br />
           <br />
         </p></td>
         <td width="432">&nbsp;</td>
         <td width="20">&nbsp;</td>
-      </tr><?php }?>
+      </tr><? }?>
     </table>
       <br />
       <br />
@@ -127,17 +126,17 @@ border-color:#8A9AA6;
           <td width="8%"><div align="center" class="style46">Active</div></td>
           <td width="7%"><div align="center" class="style25">Non-Active</div></td>
           </tr> 
-                       <?php
+                       <?
   $sql = "select * from student order by status DESC";
-  $result = mysqli_query($connection,$sql);
-        while($row = mysqli_fetch_array($result)){
-		$n = $row['f_name'] . $row['name'];
+  $result = mysql_query($sql);
+        while($row = mysql_fetch_array($result)){
+		$n = $row[f_name] . $row[name];
 		?>  
         <tr>
-          <td align="center" bgcolor="#FFFFB0"><?php echo $row['std_id'];?></td>  
-          <td align="left" bgcolor="#FFFFB0"><?php $n?> -  <?php $row['s_name'];?></td>
+          <td align="center" bgcolor="#FFFFB0"><? echo $row[std_id];?></td>  
+          <td align="left" bgcolor="#FFFFB0"><?= $n?> -  <?= $row[s_name];?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <?php echo $status=$row['status'];
+            <? $status=$row[status];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -147,9 +146,9 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?php=$row['std_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?php=$row['std_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
-          </tr><?php ?>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?=$row[std_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row[std_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          </tr><? }?>
 </table>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
