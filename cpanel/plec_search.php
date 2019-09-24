@@ -1,8 +1,9 @@
-<?
-//session_start();
-#if(!session_is_registered(username)){header("location:index.php");}
+<?php
+session_start();
+include ('../db.php');
+//if(!session_is_registered(username)){header("location:index.php");}
+if(!isset($_SESSION['username'])) {header("location:index.php");}
 //end of check session
-include "db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
@@ -19,7 +20,7 @@ $search_text=rtrim($search_text);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Search Lecturer</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -52,7 +53,7 @@ body {
 	font-weight: bold;
 }
 .style55 {font-family: Georgia, "Times New Roman", Times, serif}
--->
+
 </style>
 </head>
 
@@ -115,7 +116,7 @@ body {
               <td width="226"><span class="style51">หมายเหตุ</span></td>
               <td width="226"><div align="center" class="style51">ดูข้อมูลอาจารยผู้สอน</div></td>
               
-  <?
+  <?php
 // check for blank input
 if($search_text==""){$search_text="blank";}
 // end of check
@@ -136,22 +137,22 @@ $query="select * from lecture where $q order by lec_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt)){
+//mysqli_query("SET NAMES utf-8"); //		for thai input	
+$nt=mysqli_query($connection, $query);
+//echo mysqli_error($nt);
+while($row=mysqli_fetch_array($nt)){
 ?>          
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_id]; ?></td>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_name]; ?></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_id']; ?></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_name']; ?></td>
       <td></td>
       <td></td>
       <td>      </td>
-      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row[lec_id]; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
+      <td><div align="center"><a href="lec_view.php?id=<?php echo $row['lec_id']; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
         
       </a></div></td>
-            <?
+            <?php
 	}
 	}
 	?>
