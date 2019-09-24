@@ -198,12 +198,12 @@ $user_admin = $_SESSION["user_admin"];
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">แสดงประเมินผล</a></td>
+            <td width="119"><a href="##" class="right_side_bar_list">แสดงประเมินผล</a></td>
             <td width="22">&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">ลบประเมินผล</a></td>
+            <td><a href="##" class="right_side_bar_list">ลบประเมินผล</a></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
@@ -218,21 +218,6 @@ $user_admin = $_SESSION["user_admin"];
           <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_statis.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;สถิติการใช้งาน</a></td>
           </tr>
-          <tr>
-            <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
-            <td width="22">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
         </table></td>
         </tr>
       <tr>
@@ -242,17 +227,17 @@ $user_admin = $_SESSION["user_admin"];
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
+            <td width="119"><a href="std_add.php" class="right_side_bar_list">เพิ่มนักศึกษาใหม่ </a></td>
             <td width="26">&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
+            <td><a href="std_view.php" class="right_side_bar_list">แสดงข้อมูลนักศึกษา</a></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
+            <td><a href="std_active.php" class="right_side_bar_list" >แสดงสถานะนักศึกษา</a></td>
             <td>&nbsp;</td>
           </tr>
         </table></td>
@@ -264,17 +249,17 @@ $user_admin = $_SESSION["user_admin"];
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
+            <td width="119"><a href="cos_add.php" class="right_side_bar_list">ลงทะเบียนวิชา </a></td>
             <td width="24">&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
+            <td><a href="std_add.php" class="right_side_bar_list">ลงทะเบียนเรียน</a></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
+            <td><a href="view_registered.php" class="right_side_bar_list" >แสดงผู้ลงทะเบียน</a></td>
             <td>&nbsp;</td>
           </tr>
         </table></td>
@@ -286,17 +271,17 @@ $user_admin = $_SESSION["user_admin"];
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
+            <td width="119"><a href="##" class="right_side_bar_list">Database </a></td>
             <td width="24">&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
+            <td><a href="##" class="right_side_bar_list">Edit</a></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
+            <td><a href="##" class="right_side_bar_list" >Delete</a></td>
             <td>&nbsp;</td>
           </tr>
         </table></td>
