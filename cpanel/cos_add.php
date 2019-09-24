@@ -1,189 +1,256 @@
-<?php
-//session_start();
-include('auth.php');
-include('../db.php');
-extract ($_GET);
+<?php 
+include ('../db.php');
+session_start();
+//>--code insert using for process add data
 
-//$active = $active;
-//$non_active = $non_active;
-
-if(!empty($active)){
-	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysqli_query($connection, $sql);
-	if($result){
-		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
-	}
-	else{
-		$msg = "Fail";
-	}
-}
-	else
-	{
-		if(!empty($non_active)){
-			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysqli_query($connection, $sql);
-			if($result){
-				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
-			}
-			else{
-				$msg= "FAIL NON-active";	
-			}
-		}
-	}
-
-
-
-	
 ?>
+<?php
+ 
 
+$errmsg= ""; $errmsg1= ""; $errmsg2= ""; $errmsg3= ""; $errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";
+if(isset($ok)) {
+#============== function cos_id 
+   $cos_id = $_POST['cos_id'];
+   if(empty($cos_id)){
+     $errmsg1 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+   	#=========================== 	 
+$cos_group = $_POST['cos_group'];
+   if(empty($cos_group)){ 
+   $errmsg2 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+      	#=========================== 	 
+$cos_name = $_POST['cos_name'];
+   if(empty($cos_name)){ 
+   $errmsg3 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+
+   #========================
+$cos_period = $_POST['cos_period'];
+   if(empty($cos_period)){ 
+   $errmsg4 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';} 
+   #============================
+$cos_day =$_POST['cos_day'];
+$cos_after =$_POST['cos_after'];
+$cos_time =$_POST['cos_time'];
+$date = $cos_day."-". $cos_after ."/". $cos_time;
+//echo $date;
+   if(empty($cos_day)){
+   $errmsg5 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day</span>'; }
+   if(!$errmsg5){
+	   if(empty($cos_after)){
+           $errmsg6 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day2 </span>'; 
+		   }}
+   if(!$errmsg5 && !$errmsg6){
+	   if(empty($cos_time)){
+           $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
+   #====================================
+$cos_lec =$_POST['lec_id'];
+   if(empty($lec_id)){
+   $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
+   
+$cos_comment =$_POST['cos_comment'];
+
+if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
+{
+mysqli_query ("SET NAMES 'utf8'");
+$sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
+$result = mysqli_query($connection,$sql);
+
+if ($result>0)	
+{?>
+<script type="text/javascript">
+	window.location="manage_course.php";
+</script>
+
+ <?php  }
+else {
+	 die("Error db".mysqli_error()); }
+
+}}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>สถานะหลักสูตร</title>
+<title>เพิ่มข้อมูลรายวิชา</title>
 <style type="text/css">
-.main {
-	font-size: 24px;
-	color: #F63;
-	font-family: Verdana, Geneva, sans-serif;
-	font-weight: bolder;
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
 }
-.jjj {
-	font-size: 16px;
-	color: #666;
-	font-family: Georgia, "Times New Roman", Times, serif;}
+.style4 {color: #DECBAD}
+	
 .style6 {
 	font-size: 9px;
 	font-style: normal;
 	font-family: Verdana, Geneva, sans-serif;
 	color: #666666;
 	text-decoration:none;
+.style36 {color: #FF6600}
+.style38 {
+	color: #FF6600;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+}
+.style45 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #666;
+	font-weight: bold;
+}
+.style61 {
+	font-size: 14px;
+	font-style: normal;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #666666;
+	text-decoration:none;
+}
 
-}
-.inmain {
-	font-size: 20px;
-	color: #333;
-	font-weight: bold;
-	text-align: center;
-	font-family: Verdana, Geneva, sans-serif;
-}
-midle {
-	text-align: center;
-}
-midle {
-	text-align: center;
-}
-.hhhhh {
-	font-size: 12px;
-	text-align: center;
-}
-midle {
-	font-size: 12px;
-}
-p.one 
-{
-border-style:dashed;
-border-width:2px;
-border-color:#8A9AA6;
-}
-write {
-	color: #FFF;
-}
-non {
-	font-size: 14px;
-}
-#form1 table tr td table tr .one {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 14px;
-}
-.style26 {font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style36 {	color: #FF6600;
-	text-align: left;
-}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
+
 </style>
 </head>
 
 <body>
-<table width="1024" border="0" cellpadding="0" cellspacing="2">
-  <tr>
-    <td width="32">&nbsp;</td>
-    <td width="124">&nbsp;</td>
-    <td width="659">&nbsp;</td>
-    <td width="199">&nbsp;</td>
-  </tr>
-  <tr>
-    <td height="100" valign="top">&nbsp;</td>
-    <td valign="top"><img src="image/active_course.jpg" width="80" height="70" /></td>
-    <td valign="top"><p><span class="jjj"><span class="main">Course </span></span><span class="inmain">Status</span>   &nbsp;&nbsp;<span class="style26"><span class="style36"><span class="style38">&nbsp;</span></span></span>| <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> | <a href="manage_course.php" class="style6" style="text-decoration:none">ManageCourse</a><br />
-        <span class="jjj">แก้ไขสถานะหลักสูตร</span><br />
-    </p>
-    <p>&nbsp;</p></td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-<table width="1024" border="0" cellpadding="0" cellspacing="0"> 
-<?php if($msg){ ?>
-  <tr>
-    <td width="26" height="61">&nbsp;</td>
-    <td width="465"><p class="one"><br />
-      &nbsp;&nbsp;
-      <?php echo $msg ?>
-      <br />
-      <br />
-    </p></td>
-    <td width="505">&nbsp;</td>
-    <td width="18">&nbsp;</td>
-  </tr>
-  <?php } ?>
-</table>
-<?php
-  $sql = "select * from course order by status DESC";
-  $result = mysqli_query($connection, $sql);
-  $sql2 = "select * from number ";
-  $result2 = mysqli_query($connection, $sql2);
-  	
-?>
-<table width="1024" border="0" cellpadding="0" cellspacing="2">  
-</table><form id="form1" name="form1" method="post" action="">
-  <table width="1001" border="0" align="center" cellpadding="0" cellspacing="2">
-  <tr>
-    <td width="997" height="25" align="center" valign="top"><table width="1100" border="0" align="center" cellpadding="0" cellspacing="2">
-      <tr>
-        <td width="19" height="36">&nbsp;</td>
-        <td width="178" align="center" bgcolor="#FF9933" class="one">รหัสหลักสูตร</td>
-        <td width="582" align="center" bgcolor="#FF9933" class="one">ชื่อหลักสูตร</td>
-        <td width="204" align="center" bgcolor="#FF9933" class="one">สถานะ</td>
-        <td width="51" bgcolor="#FF9933" class="hhhhh">ACTIVE</td>
-        <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
-        </tr>
-      <?php while($row = mysqli_fetch_array($result)){ ?>
-      <?php // while($row2 = mysql_fetch_array($result2)){?>
-      <tr>
-        <td height="19" valign="top"><?php //= $row2[number]; ?></td>
-        <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
-          <?php echo $row['cos_id']?></td>
-        <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
-          <?php echo $row['cos_name']?></td>
-        <td bgcolor="#FFDDFF" class="hhhhh"><?php $status=$row['status'];
-	       if($status== 1){
-			   echo '<span style="color:green">ACTIVE</span>';
-		   }
-		   else
-		   {
-			   echo '<span style="color:red">NON-ACTIVE</span>';
-		   }
-	    ?></td>
-        <td align="center" valign="top"><a href="cos_active.php?active=<?php echo $row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
-        <td align="center" valign="top"><a href="cos_active.php?non_active=<?php echo $row['cos_id'	]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
-      </tr>
-      <?php }//} ?>
-    </table></td>
-  </tr>
+  <table width="1325" height="136" border="0" cellpadding="0" cellspacing="2">
+    <tr>
+      <td width="30" height="111">&nbsp;</td>
+      <td width="125"><img src="image/add_course.jpg" alt="" width="80" height="70" /></td>
+      <td width="1162"><span style="font-size: 24px; font-weight: bold; color: #F30;">ADD</span> <strong style="font-size: 18px; color: #666;">Course </strong><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel  | </a><a href="manage_course.php" class="style6" style="text-decoration:none; font-size: 9px;" >ManageCourse</a></span></p>
+        <p class="style61">เพิ่มชื่อวิชาใหม่เข้าสู่ระบบ</p></td>
+    </tr>
+    <tr>
+      <td height="19" colspan="3"><span class="style4">__________________________________________________________________________________________</span></td>
+    </tr>
   </table>
-</form>
+  <form action="" method="POST">
+  <table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td bgcolor="#FFFFFF"><table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#FFFFFF"><table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
+            <?php if($errmsg1){?>
+            <tr>
+              <td height="26">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><?php=  $errmsg1?></td>
+            </tr>
+            <?php } ?>
+            <tr>
+              <td width="227" height="26"><div align="right">รหัสวิชา</div></td>
+              <td width="34">&nbsp;</td>
+              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($cos_id) ? $cos_id : '')?>" /></td>
+            </tr>
+            <?php if($errmsg2) {?>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><?php= $errmsg2?></td>
+            </tr>
+            <?php }?>
+            <tr>
+              <td width="227" height="26"><div align="right">หมู่วิชา</div></td>
+              <td width="34">&nbsp;</td>
+              <td width="339"><input name="cos_group" type="text" id="cos_group" style="background:<?php if($errmsg2) echo "#EEFCE2"; ?>" value="<?php echo (isset($cos_group) ? $cos_group : '') ?>" /></td>
+            </tr>
+            <?php if ($errmsg3){?>
+            <tr>
+              <td height="27">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><?php= $errmsg3?></td>
+            </tr>
+            <?php }?>
+            <tr>
+              <td width="227" height="26"><div align="right">รายวิชา</div></td>
+              <td width="34">&nbsp;</td>
+              <td width="339"><input type="text" name="cos_name" id="cos_name" style="background: <?php if($errmsg3 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($cos_name) ? $cos_name : '' )?>"/></td>
+            </tr>
+            <?php if ($errmsg4) {?>
+            <tr>
+              <td height="27">&nbsp;</td>
+              <td>&nbsp;</td>                                                                                                                                                 
+              <td><?php= $errmsg4?></td>
+            </tr>              
+            <?php }?>
+            <tr>
+              <td height="27"><div align="right">จำนวนชั่วโมง/หน่วยกิจ</div></td>
+              <td>&nbsp;</td>
+              <td><input type="text" name="cos_period" id="cos_period"  style="background: <?php if($errmsg3 ) echo "#EEFCE2"; ?>"value="<?php echo (isset($cos_period) ? $cos_period : '' )?>" /></td>
+            </tr>
+            <?php if ($errmsg5 || $errmsg6 || $errmsg7) {?>
+            <tr>
+              <td height="30">&nbsp;</td>
+              <td></td>
+              <td><?php= $errmsg5?>
+                <?php= $errmsg6?>
+                <?php= $errmsg7?>
+                </td>
+            </tr>
+            <?php }?>
+            <tr>
+              <td height="30"><div align="right">วันที่เข้าเรียน</div></td>
+              <td></td>
+              <td><select name="cos_day" id="cos_day" style="background: <?php if($errmsg5 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($cos_day) ? $cos_day : '' )?>">
+                <option value="0" selected>เริ่ม</option>
+                <option>จันทร์</option>
+                <option>อังคาร</option>
+                <option>พุธ</option>
+                <option>พฤหัสบดี</option>
+                <option>ศุกร์</option>
+                <option>เสาร์</option>
+                <option>อาทิตย์</option>
+              </select>
+                <select name="cos_after" id="cos_after"style="background: <?php if($errmsg6 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($cos_after) ? $cos_comment : '' )?>">
+                  <option value="0" selected="selected">ถึง</option>
+                  <option value="จันทร์">จันทร์</option>
+                  <option value="อังคาร">อังคาร</option>
+                  <option value="พุธ">พุธ</option>
+                  <option value="พฤหัสบดี">พฤหัสบดี</option>
+                  <option value="ศุกร์">ศุกร์</option>
+                  <option value="เสาร์">เสาร์</option>
+                  <option value="อาทิตย์">อาทิตย์</option>
+                </select>
+                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($cos_time) ? $cos_time : '' )?>">
+                  <option  value="0">ภาค</option>
+                  <option value="เช้า">เช้า</option>
+                  <option value="เย็น">เย็น</option>
+                  <option value="เช้า - เย็น">เช้า - เย็น</option>
+                </select></td>
+            </tr>
+            <?php if($errmsg8) {?>
+            <tr>
+              <td height="28">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><?php= $errmsg8?></td>
+            </tr>
+            <?php }?>
+            <tr>
+              <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
+              <td>&nbsp;</td>
+              <td><input name="lec_id" type="text" id="lec_id" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php echo (isset($lec_id) ? $lec_id : '' )?>" /></td>
+            </tr>
+            <tr>
+              <td><div align="right">หมายเหตุ ::</div></td>
+              <td>&nbsp;</td>
+              <td><textarea name="cos_comment" id="cos_comment" cols="45" rows="5"></textarea></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><p>&nbsp;</p>
+                <p>
+                  <input type="submit" name="ok" id="ok" value="ยืนยัน" />
+                  <input type="reset" name="cancel" id="button" value="ยกเลิก" />
+                </p></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+  </form>
+  <p>&nbsp;</p>
 </body>
 </html>
