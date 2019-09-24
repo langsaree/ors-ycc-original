@@ -11,37 +11,21 @@ if(empty($username) && empty($password)){
     
  $username= isset($_POST['username']) ? $_POST['username'] : "";
  $password= isset($_POST['password']) ? $_POST['password'] : "";
-    
-
-//$code=$_POST['code'];
-//$code_hidden=$_POST['code_hidden'];
-
-#To protect MySQL injection (more detail about MySQL injection) 
-//$username = stripslashes($username);      
-//$password = stripslashes($password);
-//$username = mysql_real_escape_string($username);
-//$password = mysql_real_escape_string($password);
-//$code = stripslashes($code);
-//$code = mysql_real_escape_string($code);
-
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-//$result=mysql_query($sql);
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 $sql = "select * from admin where username='$username' and password='$password'";
 $result=mysqli_query($connection, $sql);
 $count=mysqli_num_rows($result);
-// var_dump($count,$result);
-if($count==1/*&&strcmp($code,$code_hidden)==0*/)
+
+if($count==1)
 {
-    $_SESSION["user_admin"] = $username;
+$_SESSION["user_admin"] = $username;
 header("location:cpanel.php");
 }
 else
  {
-$error='<span style="color:red">ชื่่อเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+    $message = '<span style="color:red">ชื่่อเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
 //echo "Wrong username and password";
 } 
-ob_end_flush();
+//ob_end_flush();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
