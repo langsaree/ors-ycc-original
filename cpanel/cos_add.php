@@ -67,7 +67,7 @@ $result = mysqli_query($connection, $sql);
 //	 die("Error db".mysqli_error($connection)); }
 
     if ($result) {
-        echo "<script>location='manage_course.php';</script>";
+        echo "<script>location='pcos_add.php';</script>";
         $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
         echo "$text";
         exit;
