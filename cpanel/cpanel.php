@@ -72,11 +72,11 @@ $user_admin = $_SESSION["user_admin"];
       <tr>
         <td>&nbsp;</td>
         <td><a href="register_course.php"><img src="image/manage register.png" alt="" class="second_image"/></a></td>
-        <td><img src="image/student status.png" alt="" class="second_image"/></td>
+        <td><a href="manage_student.php"><img src="image/student status.png" alt="" class="second_image"/></td>
         <td><a href="manage_lecturer.php"><img src="image/lecture Manager.png" alt="" class="second_image"/></a></td>
         <td><a href="manage_lecturer.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
-        <td><img src="image/database.png" width="64" height="64" class="second_image" /></td>
+        <td><a href="http://localhost/phpmyadmin/db_designer.php?db=ors_ycc"><img src="image/database.png" width="64" height="64" class="second_image" /></td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
