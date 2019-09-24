@@ -1,5 +1,4 @@
-<?php
-echo '
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,10 +49,8 @@ font-weight: bold;
     <span class="BlockHeader"><span>Online Register</span></span>
     <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
 
-    </table>';
-
-
-echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
-echo '<span class="style26 "> ' .$_SESSION["username"]. ' </span><br>';
-echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
-echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
+    </table>
+<br><span class="style7">ยินดีต้อนรับ ::</span>;
+<span class="style26 "> <?php $_SESSION["username"]?> </span><br>;
+<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>;
+<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>;

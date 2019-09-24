@@ -1,5 +1,4 @@
-<?php
-echo '<form action="index.php" method="post">
+<form action="index.php" method="post">
 <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
       <tr>
         <td></td>
@@ -53,5 +52,4 @@ echo '<form action="index.php" method="post">
           <tr>
             <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
           </tr>
-        </table>';
-        ?>
+        </table>
