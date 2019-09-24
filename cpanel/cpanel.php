@@ -1,4 +1,4 @@
-<?
+<?php
 //session_start();
 //if(!session_is_registered(user_admin)){header("location:index.php");}
 //end of check session
@@ -11,9 +11,9 @@
 <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="cpanel.css" />
 <style type="text/css">
-<!--
 
--->
+
+
 </style>
 </head>
 <body>
