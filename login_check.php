@@ -1,5 +1,5 @@
 <?php
-/*ob_start(); 
+ob_start(); 
 include ('db.php');
 // username and password sent from form
 $username=$_POST['username'];
@@ -20,8 +20,8 @@ $password = mysql_real_escape_string($password);
 $sql="SELECT * FROM student WHERE username='$username' and password='$password'";
 $result=mysql_query($sql);
 $count=mysql_num_rows($result);
-if($count==1/*&&strcmp($code,$code_hidden)==0*///)
-/*{
+if($count==1)/*/&&strcmp($code,$code_hidden)==0*///)
+{
 session_register("username");
 session_register("password");
 header("location:std_profile.php");
@@ -33,7 +33,7 @@ $error='<span style="color:red">ชื่ิอเข้าระบบและ
 
 } 
 ob_end_flush();
-*/?>
+?>
 <? 
 include('db.php');
 $username = "";

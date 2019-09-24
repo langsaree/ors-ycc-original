@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(!session_is_registered(username))
-	{
+
 include('db.php');
+if(!isset($_SESSION['username'])) {
 $username = "";
 $password = "";
 if(!isset($_SESSION['logined'])) {
@@ -51,7 +51,27 @@ if(!isset($_SESSION['logined'])) {
     <style type="text/css">
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
+.style9 {font-size: 12px ;color:black;}
 .style7 {color: #3987FB; font-size: 14px; }
+.style26 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.style28 {font-size: 12px; font-weight: bold; }
+.o {
+  color: #000;
+}
+oo {
+  font-size: 24px;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
+  color: #060;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+oo {
+  font-size: 12px;
+}
 -->
     </style>
 </head>
@@ -90,8 +110,8 @@ if(!isset($_SESSION['logined'])) {
 
 
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php  $message; ?>		
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -205,8 +225,10 @@ if(!isset($_SESSION['logined'])) {
 
 ';
 		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
-		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
+		echo '<span class="style26 "> '.$username.'
+     </span><br>';
+		echo '<span class="style7"><a 
+    href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		}
 ?>
@@ -299,4 +321,5 @@ if(!isset($_SESSION['logined'])) {
     </div>
 </div>
     </body>
-</html>
+</htmi>
+ 

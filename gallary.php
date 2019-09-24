@@ -1,8 +1,9 @@
 <?php
 session_start();
-if(!session_is_registered(username))
-	{		
 include('db.php');
+if(!isset($_SESSION['username'])) 
+
+	{		
 $username = "";
 $password = "";
 if(!isset($_SESSION['logined'])) {
@@ -22,12 +23,8 @@ if(!isset($_SESSION['logined'])) {
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
 					  header("location:std_profile.php");
 					  }
 				   else
@@ -60,8 +57,27 @@ if(!isset($_SESSION['logined'])) {
     <style type="text/css">
 <!--
 .style25 {font-size: 11px; font-family: Tahoma; }
+.style9 {font-size: 12px ;color:black;}
 .style7 {color: #3987FB; font-size: 14px; }
-.style30 {color: #666666}
+.style26 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.style28 {font-size: 12px; font-weight: bold; }
+.o {
+  color: #000;
+}
+oo {
+  font-size: 24px;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
+  color: #060;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+oo {
+  font-size: 12px;
+}
 -->
     </style>
 </head>
@@ -95,9 +111,16 @@ if(!isset($_SESSION['logined'])) {
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
+             <?php // php code for login form and profile menu ?>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+             <?php if (!empty($message)) {
+                   echo "<span style=\"color:red\">$message</span>";
+              }
+              ?>
+                       
+             <?php if (!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
+           //  To show login form if user do not login
+	         echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -152,11 +175,13 @@ if(!isset($_SESSION['logined'])) {
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
-		}
-		else
-		{
-		echo '
+
+			                    	<?php '; ?>
+                       <?php } else { ?>
+                            <?php
+                            // process this if user aleady login
+                            echo '
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -224,7 +249,8 @@ if(!isset($_SESSION['logined'])) {
 		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
 		
 		}
-?>
+}
+    ?>
             <br>
           </div>
           <div class="Block">
@@ -248,12 +274,12 @@ if(!isset($_SESSION['logined'])) {
         <h1 class="style30">ภาพกิจกรรม</h1>
         
         <div id="galleria">
-            <img src="http://www.ycc.ac.th/images/stories/pb058590.jpg" >
-            
-            <img src="http://www.ycc.ac.th/images/stories/imga4838.jpg">
-            <img  src="http://www.ycc.ac.th/images/stories/imga4900.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/pb058615.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/imga4884.jpg">              </div>
+            <img src="gallary/pb058590.jpg">
+            <img src="gallary/imga4838.jpg">
+            <img src="gallary/imga4900.jpg">
+            <img src="gallary/pb0585791.jpg">
+            <img src="gallary/imga4884.jpg">                
+              </div>
     </div>
     <script>
     // Load the classic theme

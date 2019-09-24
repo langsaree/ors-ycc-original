@@ -1,42 +1,36 @@
 <?php
 session_start();
-if(!session_is_registered(username))
-	{
-     include('db.php');
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
-			  	}  
-   
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+}
+if (!isset($_SESSION['username'])) {
+include('db.php');
+$username = "";
+$password = "";
+    if (!isset($_SESSION['username'])) {
+        if (isset($_REQUEST['username'])) {
+            $username = $_REQUEST['username'];
+            $password = $_REQUEST['password'];
+            if (empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
+            } else if (empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
+            } else if (!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
+                $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
+            } else {
+                $sql = "select * from student where username='$username' and password='$password'";
+                $result = mysqli_query($connection, $sql);
+                $count = mysqli_num_rows($result);
+                if ($count == 1) {
+                    $_SESSION['username'] = $count['username'];
+                    $_SESSION['password'] = $count['password'];
+                    header("location:std_profile.php");
+                } else {
+                    $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+                }
+            }
+        }
+    }
 }
 ?>
 
@@ -49,12 +43,18 @@ if(!session_is_registered(username))
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
 <!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
+.style25 {
+  font-size: 11px;
+  font-family: Tahoma; }
+.style9 {
+  font-size: 12px 
+  color:black;}
+.style7 {
+  color: #3987FB; 
+  font-size: 14px; }
 .style26 {
-	font-size: 14px;
-	font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 .style28 {font-size: 12px; font-weight: bold; }
 -->
@@ -65,7 +65,6 @@ if(!session_is_registered(username))
 <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
       <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
       <div class="Border">
-
         <div class="Menu">
             <ul>
               <li></li> 
@@ -90,14 +89,15 @@ if(!session_is_registered(username))
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
-
-
-
-
-
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+              <?php // php code for login form and profile menu ?>
+              <?php if (!empty($message)) {
+                  echo "<span style=\"color:red\">$message</span>";
+              }
+              ?>
+              <?php if (!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
+                  //  To show login form if user do not login
+                  echo '<form action="" method="post">
+    <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
               </tr>
@@ -105,7 +105,7 @@ if(!session_is_registered(username))
                 <td><div align="left"><span class="style9">ล็อกอิน::</span></div></td>
               </tr>
             </table>
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+    <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td><label>
                   <input type="text" name="username" />
@@ -141,9 +141,9 @@ if(!session_is_registered(username))
               </tr>
             </table>
             </form>
-		
+    
               <br><br>
-			  
+        
             </p>
             <p>&nbsp;</p>
         <table width="150" border="0" cellpadding="0" cellspacing="0">
@@ -151,16 +151,18 @@ if(!session_is_registered(username))
                     <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
-				';
-		}
-		else
-		{
-		echo '
-		<!DOCTYPE html>
+                
+                
+        <?php '; ?> 
+                  <?php //php code for profile menu ?>
+              <?php } else { ?>
+                  <?php // process this if user aleady login
+                  echo '
+    
+    <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <title>หลักสูตรที่เปิดสอน</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
@@ -169,8 +171,8 @@ if(!session_is_registered(username))
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
-	font-size: 14px;
-	font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 .style28 {font-size: 12px; font-weight: bold; }
 -->
@@ -181,7 +183,6 @@ if(!session_is_registered(username))
 <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
       <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
       <div class="Border">
-
         <div class="Menu">
             <ul>
               <li></li> 
@@ -206,29 +207,24 @@ if(!session_is_registered(username))
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
-
-
 ';
-		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$username.' </span><br>';
-		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
-		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		}
+    echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
+    echo '<span class="style26 "> '.$username.' </span><br>';
+    echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
+    echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
+    }
 ?>
             <br>
           </div>
           <div class="Block">
-
             <span class="BlockHeader"><span>Menu</span></span>
             <div class="BlockContentBorder">
-
                  <ul>
                     <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
                     <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
                 </ul>
           </div>
         </div>
-
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
        
@@ -236,9 +232,6 @@ if(!session_is_registered(username))
             <p align="center">&nbsp;</p>
         </div>
         </div>
-
-
-
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>

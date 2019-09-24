@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('db.php');
-if(session_is_registered(username)){header("location:index.php");}
+if(session_is_registered(username)){header("location:index.php");
 if(!session_is_registered(username))
 	{
      
@@ -24,16 +24,14 @@ if(!session_is_registered(username))
                   if($count==1)
                       {
 					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+					  $_SESSION['username'] = $count['username'];
+					  $_SESSION['password'] = $count['password'];
+					 // session_register("username");
+           // session_register("password");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
-					  //header("location:std_profile.php");
-					  }
-				   else
-				   {
+					  header("location:std_profile.php");
+					  } else  {
 				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
 				   }
 				  }
@@ -187,12 +185,14 @@ font-weight:bold;
              
             </table>
 
-
-
-
-
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+<?php // php code for login form and profile menu ?>
+              <?php if (!empty($message)) {
+                  echo "<span style=\"color:red\">$message</span>";
+              }
+              ?>
+              <?php if (!isset($_SESSION['username']) || !isset($_SESSION['username'])) {
+                  //  To show login form if user do not login
+	 echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -240,12 +240,12 @@ font-weight:bold;
 		
           <br>
             <p>&nbsp;</P>
-        
-				';
-		}
-		else
-		{
-		echo '
+
+         <?php '; ?>
+                        <?php } else { ?>
+                            <?php
+                            // process this if user aleady login
+                            echo '
 		<!DOCTYPE html>
 <html>
 <head>
@@ -298,18 +298,15 @@ font-weight:bold;
              
             </table>
 
-
-';
-		
-		//header("location:confirm_course.php");
-		//header('refresh: 1; url=select_course.php'); #end session checking
-		//echo "<br>ยินดีต้อนรับ ::"; 
-		//echo " $username <br>";
-		//echo '<a href="std_profile.php">ข้อมูลส่วนตัว</a><br>';
-		//echo '<a href="logout.php">ออกจากระบบ</a><br>';
-		}
-		//ob_end_flush();
-?>
+'; ?>
+        <?php
+          echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
+          echo '<span class="style26 "> ' . $username . ' </span><br>';
+          echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
+          echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
+         }
+         }
+         ?>
             <br>
           </div>
           <div class="Block">
@@ -342,7 +339,7 @@ $errmsg= "";
 //		$errmsg[$i] = false;
 //	}
 $ok=$ok;
-if(isset($ok)) {	
+if(isset($_POST['ok'])) {	
 #=========================================
 # username check	
 //if(isset($ok)) { 

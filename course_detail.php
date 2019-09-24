@@ -96,8 +96,8 @@ if(!session_is_registered(username))
              
             </table>
 
-	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php $message; ?>		
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -236,7 +236,7 @@ if(!session_is_registered(username))
        
           <div class="Article">
             <p>
-  <?
+  <?php
 $sql_view = "select * from course where cos_id='$cos_id' ";
 $result_view = mysql_query($sql_view);
 while($row=mysql_fetch_array($result_view))
