@@ -59,8 +59,8 @@ body {
                 
                 </tr>
               <tr>
-                <td width="134" height="117"><div align="center"><img src="image/register change form.png" width="100" height="100" /></div></td>
-                <td width="134"><div align="center"><img src="image/view register course.png" width="100" height="100" /></div></td>
+                <td width="134" height="117"><div align="center"><a href="register_update.php"><img src="image/register change form.png" width="100" height="100" /></div></td>
+                <td width="134"><div align="center"><a href="register_view.php"><img src="image/view register course.png" width="100" height="100" /></div></td>
                 <td width="134"><div align="center"></div></td>
                 <td width="134"><div align="center"></div></td>
               </tr>
