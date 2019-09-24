@@ -22,7 +22,7 @@ if(!$_SESSION['user_admin']){header("location:index.php");}
     <td width="9">&nbsp;</td>
     <td width="330"><span class="style26"><span class="style30">Administrator</span> <span class="style29">Control Panel</span></span></td>
     <td width="308">&nbsp;</td>
-    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><?php echo '<span style="font-weight:bold; font-size:15px"> '.$_SESSION["username"].' </span>'; ?> </td>
+    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><?php echo '<span style="font-weight:bold; font-size:15px"> '.$_SESSION['user_admin'].' </span>'; ?> </td>
     <td width="12">&nbsp;</td>
   </tr>
   <tr>
@@ -76,9 +76,9 @@ if(!$_SESSION['user_admin']){header("location:index.php");}
         <td><a href="register_course.php"><img src="image/manage register.png" alt="" class="second_image"/></a></td>
         <td><img src="image/student status.png" alt="" class="second_image"/></td>
         <td><a href="manage_lecturer.php"><img src="image/lecture Manager.png" alt="" class="second_image"/></a></td>
-        <td><a href="manage_lecturer.php"><img src="image/register.png" class="second_image" /></a></td>
+        <td><a href="manage_register.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
-        <td><img src="image/database.png" width="64" height="64" class="second_image" /></td>
+        <td><a href="http://localhost:8080/phpmyadmin/db_structure.php?server=1&db=ors_ycc"><img src="image/database.png" width="64" height="64" class="second_image" /></td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
@@ -87,7 +87,7 @@ if(!$_SESSION['user_admin']){header("location:index.php");}
         <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
         <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
         <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>
-        <td class="style41">ด้าต้าเบส</td>
+        <td class="style41"><a href="http://localhost:8080/phpmyadmin/db_structure.php?server=1&db=ors_ycc">ด้าต้าเบส</td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
