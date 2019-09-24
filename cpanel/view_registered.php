@@ -3,11 +3,12 @@ session_start();
 include('../db.php');
 //include('auth.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active =  isset($_GET['non_active']) ? $_GET['non_active'] : "";
+$msg = "";
 if(!empty($active)){
-	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
-	$result = mysqli_query($sql);
+	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
+	$result = mysqli_query($connection, $sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -18,8 +19,8 @@ if(!empty($active)){
 	else
 	{
 		if(!empty($non_active)){
-			$sql = "UPDATE register SET status='0' WHERE std_id='$non_active' ";
-			$result = mysqli_query($sql);
+			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
+			$result = mysqli_query($connection,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -90,10 +91,10 @@ body {
   <tr>
    <td height="548" valign="top">
       <table width="737" height="31" align="left">
-      <?php if($msg){?>
+      <?php if(isset($msg)){?>
         <tr>
           <td width="129" valign="top">&nbsp;</td>
-          <td width="596" valign="top"><?php $msg?></td>
+          <td width="596" valign="top"><?php echo $msg?></td>
         </tr><?php }?>
       </table>
       <br />
@@ -111,14 +112,14 @@ body {
       </tr>
       
     <?php
-  include('db.php');
+  include('../db.php');
   ////////first///////////////$sql = "select * from student where username =  '$username' ";
     $reg = "select * from register ORDER BY std_id DESC ";
-	$r = mysqli_query($reg);
+	$r = mysqli_query($connection,$reg);
 	while ($ro = mysqli_fetch_array($r)){
-		$cos=$ro[cos_id];
-		$std=$ro[std_id];
-		$lec=$ro[lec_id];
+		$cos=$ro['cos_id'];
+		$std=$ro['std_id'];
+		$lec=$ro['lec_id'];
 		//echo $std;
 		//echo $cos;
 		//echo $lec;
@@ -127,9 +128,9 @@ body {
    $result = mysqli_query($connection,$sql1);
    while ($row= mysqli_fetch_array($result))
 	{
-	//$cos_id= $row[cos_id];
-	$cos_group=$row[cos_group];
-	$cos_name = $row[cos_name];
+	$cos_id= $row['cos_id'];
+	$cos_group=$row['cos_group'];
+	$cos_name = $row['cos_name'];
 	//$cos_period = $row[cos_period];	
 	//$cos_day = $row[cos_day];
 	//$lec_id = $row[lec_id];
@@ -138,28 +139,28 @@ body {
 	//echo $cos_name;
   ///////////////////////second///////////////////////
 	$sql = "select * from student where std_id='$std'";
-	$re = mysqli_query($sql);
+	$re = mysqli_query($connection,$sql);
 	while ($ro1= mysqli_fetch_array($re))
 	{
-		$std1= $ro1[std_id];
-		$name= $ro1[f_name]."<span>".$ro1[name]."-".$ro1[s_name];
+		$std1= $ro1['std_id'];
+		$name= $ro1['f_name']."<span>".$ro1['name']."-".$ro1['s_name'];
 	
 	//////////////////forth/////////////////////
     $sql2 = "select * from lecture where lec_id = '$lec' ";
-	  $a =mysqli_query ($sql2);
+	  $a =mysqli_query ($connection,$sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{
-	$lec_name= $row1[lec_name];
+	$lec_name= $row1['lec_name'];
 	//echo $lec_name;
 	?>
       <tr>
-        <td width="129" bgcolor="#FFFFE8"><?php echo $std?></td>
-        <td width="186" bgcolor="#FFE1FF"><?php $name?></td>
-        <td width="160" align="left" bgcolor="#FFFFE8"><?php $cos_group?></td>
-        <td bgcolor="#FFFFE8"><?php $cos_name?></td>
-        <td align="left" bgcolor="#FFFFE8"><?php $lec_name?></td>
+        <td width="129" bgcolor="#FFFFE8"><?php echo (isset($std) ? $std : '')?></td>
+        <td width="186" bgcolor="#FFE1FF"><?php echo (isset($name) ? $name : '')?></td>
+        <td width="160" align="left" bgcolor="#FFFFE8"><?php echo (isset($cos_group) ? $cos_group : '')?></td>
+        <td bgcolor="#FFFFE8"><?php echo (isset($cos_name) ? $cos_name : '')?></td>
+        <td align="left" bgcolor="#FFFFE8"><?php echo (isset($lec_name) ? $lec_name : '')?></td>
         <td align="center" bgcolor="#FFFFCC">
-		<?php $status=$ro["status"];
+		<?php $status = $row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -169,8 +170,8 @@ body {
 		   }
 	    ?>
         </td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo$ro["std_id"];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $ro["std_id"]; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $cos_id;?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $cos_id; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
        <?php } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
