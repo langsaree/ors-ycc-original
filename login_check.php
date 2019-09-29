@@ -51,7 +51,23 @@ if(!isset($_SESSION['logined'])) {
 			} else {
 			       $sql = "select * from student where username='$username' and password='$password'";
                    $result=mysqli_query($connection,$sql);
-                   $count=mysqli_num_rows($result);
+				   $count=mysqli_num_rows($result);
+				
+                  if($count==1/*&&strcmp($code,$code_hidden)==0*/)
+                      {
+					  $_SESSION['logined'] = true;
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
+					 // session_register("username");
+                     // session_register("password");
+					//   $_SESSION['username'] = $value["username"];
+                    //   $_SESSION['password'] = $value["password"];
+					  header("location:std_profile.php");
+
+					  $sql = "select * from lecture where username='$username' and password='$password'";
+                   $result=mysqli_query($connection,$sql);
+				   $count=mysqli_num_rows($result);
+				
                   if($count==1/*&&strcmp($code,$code_hidden)==0*/)
                       {
 					  $_SESSION['logined'] = true;
@@ -70,6 +86,7 @@ if(!isset($_SESSION['logined'])) {
 				  }
 			  	}  
    
+}
 }
 ?>
 
