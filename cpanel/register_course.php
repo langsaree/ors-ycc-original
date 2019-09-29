@@ -296,6 +296,7 @@ if(!isset($_SESSION['logined'])) {
                             if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                                 $errmsg5 .= "<span style=color:red>กรุณาใส่ Email ให้ตรงตามรูปแบบด้วยค่ะ</span>";
                             }
+                            
 #============================================
 # password check
                             $pswd = $_POST['pswd'];
