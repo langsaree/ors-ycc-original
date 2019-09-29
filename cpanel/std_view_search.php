@@ -1,8 +1,8 @@
-<?
+<?php
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
+include "../db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
@@ -17,7 +17,7 @@ $search_text=rtrim($search_text);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -50,7 +50,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
--->
+
 </style>
 </head>
 <body>
@@ -96,7 +96,7 @@ body {
         <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
         <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
       </tr>
-  <?
+  <?php
 // check for blank input
 if($search_text==""){$search_text="blank";}
 // end of check
@@ -117,10 +117,10 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt))
+mysqli_query("SET NAMES utf-8"); //		for thai input	
+$nt=mysqli_query($connection,$query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($nt))
 {
 	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
 ?>          
@@ -128,11 +128,11 @@ while($row=mysql_fetch_array($nt))
 		<td><div align="left"><?= $row[std_id]; ?> </div></td>
 		<td><div align="center"><?= $row[username]; ?></div></td>
 		<td><div align="left"><?= $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<? echo $std;?>">แสดงรายละเอียด</a></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <? } ////// close first while //////////////////////////////////////////////
+     <?php } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
 		//} /////// close 3rd while ///////////////////////
 		?>
