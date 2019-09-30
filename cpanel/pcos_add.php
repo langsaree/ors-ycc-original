@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include ('../db.php');
 $cos_id = $_POST['cos_id'];
 $cos_name = $_POST['cos_name'];
 $cos_period = $_POST['cos_period'];
