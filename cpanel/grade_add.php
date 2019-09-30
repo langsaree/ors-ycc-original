@@ -58,6 +58,8 @@ body {
         <tr>
           <td colspan="2" align="center">&nbsp;</td>
         </tr>
+
+        
         <?php if($error[0]) { ?>
         <tr>
           <td width="32%" align="right"><span class="style40">รหัสวิชา :</span> </td>
