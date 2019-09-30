@@ -137,7 +137,7 @@ border-color:#8A9AA6;
     
         <tr>
           <td align="center" bgcolor="#FFFFB0"><?php echo $row['std_id']?></td>  
-          <td align="left" bgcolor="#FFFFB0"><?php echo $n?> -  <?php  echo $row['s_name']?></td>
+          <td align="left" bgcolor="#FFFFB0"><?php echo $n?>  -  <?php  echo $row['s_name']?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
             <?php $status=$row['status'];
 	       if($status== 1){
