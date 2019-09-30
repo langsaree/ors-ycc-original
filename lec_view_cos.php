@@ -1,9 +1,10 @@
 <?php
 session_start();
-//if(!isset($_SESSION["lec_user"])){header("location:index.php");}
-if(isset($_SESSION["lec_user"])){
+$username = $_SESSION['username'];
+include('auth.php');
+//end of check session
+include('db.php');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +49,13 @@ if(isset($_SESSION["lec_user"])){
               <li></li> 
               <li></li> 
               <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="college.php" class="MenuButton"><span>วิทยาลัย</span></a>
+              <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -66,7 +73,7 @@ if(isset($_SESSION["lec_user"])){
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION['username'].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
               </tr>
               <tr>
                 <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
@@ -81,7 +88,7 @@ if(isset($_SESSION["lec_user"])){
                 <td></td>
               </tr>
             </table>
-            <?php } ?>
+
 
             <br>
           </div>
@@ -137,7 +144,7 @@ if(isset($_SESSION["lec_user"])){
               <?php 
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-			$sql = "select * from lecture, course where course.lec_id=lecture.lec_id and username='$username'";
+			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
             $result=mysqli_query($connection, $sql);
             while ($row=mysqli_fetch_array($result)){
 		     ?>
