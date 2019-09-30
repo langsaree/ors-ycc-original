@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,7 +109,7 @@ session_start();
                         &nbsp;&nbsp;เพื่อเข้าไปลงทะเบียนเรียนหลักสูตรอื่นๆ ได้ <br></td>
                     </tr>
                     <tr>
-                      <td colspan="3" bgcolor="#CCCCCC"><? echo "$std_error"; ?></td>
+                      <td colspan="3" bgcolor="#CCCCCC"><?php error_reporting('E_ALL & ~E_NOTICE'); echo $std_error; ?></td>
                       </tr>
                     <tr>
                       <td width="81" bgcolor="#CCCCCC">&nbsp;</td>
@@ -121,7 +118,7 @@ session_start();
                     </tr>
                     <tr>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
-                      <td bgcolor="#CCCCCC"><input type="text" name="username2" /></td>
+                      <td bgcolor="#CCCCCC"><input type="text" name="username" /></td>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
                     </tr>
                     <tr>
@@ -131,7 +128,7 @@ session_start();
                     </tr>
                     <tr>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
-                      <td bgcolor="#CCCCCC"><input type="password" name="password2" /></td>
+                      <td bgcolor="#CCCCCC"><input type="password" name="password" /></td>
                       <td bgcolor="#CCCCCC">&nbsp;</td>
                     </tr>
                     <tr>
