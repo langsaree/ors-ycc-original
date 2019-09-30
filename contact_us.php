@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('login_check.php');
+include('include/login_check.php');
 ?>
 
 <!DOCTYPE html>
