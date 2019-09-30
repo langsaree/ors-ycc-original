@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include ('../db.php');
 $lec_id= $_POST['lec_id'];
 $lec_name= $_POST['lec_name'];
 //$m_address= $_POST['address'];
@@ -15,7 +15,7 @@ $result=mysqli_query($connection,$sql);
 
 if  (!$result)
 	{
-		die("could not query db ".mysql_error());
+		die("could not query db ".mysqli_error());
 		$error='<span style="color:red">กรุณากรอบข้อมูลให้ถูกต้อง</span>';
 		include('lec_update.php');
 	}
