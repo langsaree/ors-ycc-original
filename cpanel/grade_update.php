@@ -57,9 +57,9 @@ body {
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
           <?php
-	include('db_connect.php');
+	include('../db_connect.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysqlร_query($connection,$sql);
+	$show = mysqli_query($connection,$sql);
 	while($shows = mysqli_fetch_row($show))
 	{
 	?>
