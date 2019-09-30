@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>แสดงรายชื่อวิชา</title>
 <style type="text/css">
-<!--
+
 
 .style4 {color: #FFFFFF; }
 .style26 {
@@ -36,7 +36,7 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
+
 </style>
 </head>
 
@@ -72,7 +72,7 @@ body {
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
        <?php
-  include('db.php');
+  include("../db.php");
 	///////////////////////////////////////
    $sql1 ="select * from course ";
    $result = mysqli_query($connection,$sql1);
