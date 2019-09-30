@@ -1,7 +1,7 @@
 <?php
-session_start();
+// session_start();
 include('auth.php');
-include('db.php');
+include('../db.php');
 extract($_GET);
 $id=$id;
 
@@ -161,7 +161,7 @@ while($row = mysqli_fetch_array($result))
                 <tr>
                   <td height="31"><div align="right" class="style60">ชื่อ :</div></td>
                   <td colspan="3"><?php echo $row['f_name'];?>&nbsp; <?php echo $row['name']; ?></td>
-                  <td><span class="style60">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621;<span class="style60"> :</span><span><?php echo $row[s_name];?></span></td>
+                  <td><span class="style60">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621;<span class="style60"> :</span><span><?php echo $row['s_name'];?></span></td>
                 </tr>
                 <tr>
                   <td height="30"><div align="right" class="style60">เพศ :</div></td>
