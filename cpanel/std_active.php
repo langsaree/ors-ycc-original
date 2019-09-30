@@ -87,7 +87,7 @@ border-color:#8A9AA6;
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1265" height="45" /></td>
+      <td><img src="../images/header.png" width="1265" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="723" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -139,7 +139,7 @@ border-color:#8A9AA6;
           <td align="center" bgcolor="#FFFFB0"><?php echo $row['std_id']?></td>  
           <td align="left" bgcolor="#FFFFB0"><?php echo $n?> -  <?php  echo $row['s_name']?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <?php echo $status=$row['status'];
+            <?php $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
