@@ -1,7 +1,9 @@
 <?php
 session_start();
-//if(!isset($_SESSION["lec_user"])){header("location:index.php");}
-if(isset($_SESSION["lec_user"])){
+$username = $_SESSION['username'];
+include('auth.php');
+//end of check session
+include('db.php');
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +63,7 @@ if(isset($_SESSION["lec_user"])){
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION['username'].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
               </tr>
               <tr>
                 <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
@@ -76,7 +78,7 @@ if(isset($_SESSION["lec_user"])){
                 <td></td>
               </tr>
             </table>
-            <?php } ?>
+
 
             <br>
           </div>
@@ -120,25 +122,27 @@ if(isset($_SESSION["lec_user"])){
                 <td width="12">&nbsp;</td>
                 <td width="15">&nbsp;</td>
               </tr>
-              <?php 
+       <?php 
 			include('db.php');
-	      //  $sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
 			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
 			
             $result=mysqli_query($connection, $sql);
             while($row=mysqli_fetch_array($result)){
-				$std=$row['std_id'];
-				$sql2 ="select * from student where std_id='$std'";
-				$result2=mysqli_query($sql2);
-				while($row2=mysqli_fetch_array($result2)){
+			    	$std=$row['std_id'];
+			    	$sql2 ="select * from student where std_id='$std'";
+			    	$result2=mysqli_query($connection, $sql2);
+			    	while($row2=mysqli_fetch_array($result2)){
 		    ?>
               <tr>
                 <td>&nbsp;</td>
                 <td><?php echo $row['std_id'] ?></td>
                 <td><?php echo $row2['name'] ?>
-&nbsp;&nbsp;&nbsp;<?php echo $row2['s_name'] ?></td>
+
+                &nbsp;&nbsp;&nbsp;              
+                
+                <?php echo $row2['s_name'] ?></td>
                 <td><?php echo $row['cos_name'] ?></td>
+
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
@@ -152,8 +156,6 @@ if(isset($_SESSION["lec_user"])){
             </table>
           </div>
         </div>
-
-
 
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
