@@ -63,7 +63,7 @@ body {
           <td width="11%" align="center"><img src="image/manage_course.jpg" width="100" height="100" /></td>
           <td width="18%"><span class="style26"><span class="style36">Manage Course</span></span> <br />
             <span class="style34">การจัดการหลักสูตร</span></td>
-          <td colspan="2" align="left"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a><a href="manage_course.php" class="style6" style="text-decoration:none" > | ManageCourse</a></td>
+          <td colspan="2" align="left"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>
         </tr>
       </table>
       <p align="left" class="style37">&nbsp;</p>
