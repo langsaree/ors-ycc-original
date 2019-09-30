@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 
 ?>
@@ -10,7 +10,7 @@ session_start();
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>search lecture</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -56,16 +56,16 @@ body {
 	font-weight: bold;
 }
 .style55 {font-family: Georgia, "Times New Roman", Times, serif}
--->
+
 </style>
 </head>
 
 <body>
 
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><img src="image/bg.png" width="198" height="40" /></td>
-  </tr>
+<tr>
+      <td width="1263"><img src="../images/header.png" width="1258" height="45" /></td>
+    </tr>
 </table>
   
   <table width="1280" height="363" border="0" align="left" cellpadding="0" cellspacing="0">
