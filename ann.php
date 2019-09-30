@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('login_check.php');
+include('include/login_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ include('login_check.php');
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
-            <p align="center">ไม่มีการประชาสัมพันธ์</p>
+            <p align="center">ยังไม่มีการประชาสัมพันธ์</p>
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
