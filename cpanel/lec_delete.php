@@ -1,9 +1,9 @@
 <title>delete process</title>
 <?php
-include ('db.php');
+include ('../db.php');
 extract($_GET);
 $id= $_GET['id'];
-$sql = "delete from lecturer where lec_id='$id'";
+$sql = "delete from lecture where lec_id='$id'";
 
 // to porform query
 $result=mysqli_query($connection,$sql) ;
