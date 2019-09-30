@@ -45,7 +45,7 @@ body {
         <tr>
           <td width="6%" align="center"><img src="image/manage register.png" width="100" height="100" /></td>
           <td width="94%"><span class="style26"><span class="style36">Manage Register Course </span></span><br />
-            <span class="style41">การจัดการลงทะเบียน</span></td>
+            <span class="style41">การจัดการลงทะเบียน</span><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>
           <td width="94%">&nbsp;</td>
         </tr>
       </table>
@@ -59,8 +59,8 @@ body {
                 
                 </tr>
               <tr>
-                <td width="134" height="117"><div align="center"><img src="image/register change form.png" width="100" height="100" /></div></td>
-                <td width="134"><div align="center"><img src="image/view register course.png" width="100" height="100" /></div></td>
+                <td width="134" height="117"><div align="center"><a href="register_update.php"><img src="image/register change form.png" width="100" height="100" /></div></td>
+                <td width="134"><div align="center"><a href="register_view.php"><img src="image/view register course.png" width="100" height="100" /></div></td>
                 <td width="134"><div align="center"></div></td>
                 <td width="134"><div align="center"></div></td>
               </tr>
