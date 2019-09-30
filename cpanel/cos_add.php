@@ -1,5 +1,5 @@
 <?php 
-include ('db.php');
+include ('../db.php');
 session_start();
 //>--code insert using for process add data
 
@@ -125,7 +125,7 @@ body {
       <td height="19" colspan="3"><span class="style4">__________________________________________________________________________________________</span></td>
     </tr>
   </table>
-  <form action="" method="POST">
+  <form action="pcos_add.php" method="POST">
   <table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td bgcolor="#FFFFFF"><table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
