@@ -2,8 +2,8 @@
 ob_start(); 
 include ('db.php');
 // username and password sent from form
-$username=$_POST['username2'];
-$password=$_POST['password2'];
+$username=$_POST['username'];
+$password=$_POST['password'];
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
 
