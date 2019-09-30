@@ -3,10 +3,8 @@ session_start();
 include('../db.php');
 ?>
 
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
@@ -22,7 +20,10 @@ include('../db.php');
 </head>
 
 <body>
-<td width="20%" align="center"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>
+<td width="10">&nbsp;</td>
+<table> <td width="330" style="text-align:right" align="center"><a href="cpanel.php" class="style6" style="text-decoration:none" >
+     <img src="../image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
+<p align="center"> _____________________________________________________________________________</p></td>
 <div class="BodyContent">
     <div class="BorderBorder">
         <div class="BorderBR">
@@ -344,8 +345,8 @@ include('../db.php');
 
                                 $do = mysqli_query($connection, $query);
                                 if ($do) {
-                                    echo "<script>location='ors-ycc/cpanel/cpanel.php';</script>";
                                     $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+                                    echo "<script>location='cpanel.php';</script>";
                                     echo "$text";
                                     exit;
                                 }
@@ -598,7 +599,7 @@ include('../db.php');
                                                 </select>
                                                 <select name="b_year" id="birth" style="background: <?php if($errmsg17) echo "#EEFCE2"; ?>" value="<?php $b_year ?>">
                                                     <option value="0" selected>-- ปี --</option>
-                                                    <?
+                                                    <?php
                                                     for($i=2554;$i>=2520;$i--){
                                                         echo"<option value='$i'>$i";
                                                     }
