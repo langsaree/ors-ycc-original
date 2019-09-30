@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update student</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +29,7 @@ body {
 	font-size: 24px;
 }
 .style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
@@ -57,12 +57,12 @@ body {
       <div align="center">
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
-          <?
-	include('db.php');
+          <?php
+	include('../db.php');
 	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysql_query($sql);
-	while($ro = mysql_fetch_row($re))
-	{
+	$re = mysqli_query($connection,$sql);
+	while($ro = mysqli_fetch_row($re))
+	
 	?>
           <tr>
             <td width="173"><span class="style46">รหัสวิชา :</span></td>
