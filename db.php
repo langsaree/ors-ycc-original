@@ -1,6 +1,6 @@
 <?php
 //define connection elements
-$dbHost = "localhost:3306";
+$dbHost = "localhost";
 $dbDatabase = "ors_ycc";
 $dbUsername = "root";
 $dbPassword = "";
