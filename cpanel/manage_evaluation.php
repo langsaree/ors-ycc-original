@@ -45,7 +45,8 @@ body {
         <tr>
           <td width="6%" align="center"><img src="../image/evaluation.png" width="100" height="100" /></td>
           <td width="94%"><span class="style26"><span class="style36">Manage Evaluation  </span></span><br />
-              <span class="style34">การจัดการประเมินผล </span></td>
+              <span class="style34">การจัดการประเมินผล </span>
+              <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>  
           <td width="94%">&nbsp;</td>
         </tr>
       </table>
