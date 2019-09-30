@@ -60,12 +60,12 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?
-	include('db_connect.php');
+          <?php
+	include('../db_connect.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysqlI_query($connection,$sql);
+	$show = mysqli_query($connection,$sql);
 	while($shows = mysqli_fetch_row($show))
-	{
+	
 	?>
           <tr>
             <td width="173"><span class="style46">รหัสวิชา :</span></td>
