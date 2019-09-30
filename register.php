@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ session_start();
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -17,7 +17,7 @@ session_start();
 	color: #FFFFFF;
 	font-size: 16px;
 }
--->
+
     </style>
 </head>
 <body>
