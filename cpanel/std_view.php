@@ -1,6 +1,6 @@
 <?php
 //session_start();
-// include('db.php');
+// include('../db.php');
 // include('auth.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -89,7 +89,7 @@ body {
       </tr>
      <?php
 		/////////////////////////take information from student table //////////////////////////
-	include('db.php');
+	include('../db.php');
 	$sql1 = "select * from student ";
 	$v=mysqli_query ($connection,$sql1);
 	while ($row= mysqli_fetch_array($v))
@@ -100,12 +100,12 @@ body {
 	//echo $name;
 	?>
       <tr>
-		<td><div align="left"><?= $std?> </div></td>
-		<td><div align="center"><?= $user ?></div></td>
-		<td><div align="left"><?= $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<? echo $std;?>">แสดงรายละเอียด</a></div></td>
+		<td><div align="left"><?php echo $std?> </div></td>
+		<td><div align="center"><?php echo $user ?></div></td>
+		<td><div align="left"><?php echo $name?></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
      <?php } ////// close first while //////////////////////////////////////////////
 		//} //////// close of second while ////////////////////
