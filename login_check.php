@@ -27,7 +27,7 @@ if (isset($_POST['ok'])) {
    
             $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
         }
-
+//Lecturer can log in
         $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
         $result1 = mysqli_query($connection, $sql1);
 
