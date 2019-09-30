@@ -36,7 +36,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -45,7 +45,8 @@ body {
       <tr>  
         <td width="6%" align="center"><img src="image/update_grade.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Update<span class="style38"> Course</span></span></span><br />
-            <span class="style34">แก้ไขเกรด</span></td>
+            <span class="style34">แก้ไขเกรด</span>
+            <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a><a href="manage_grade.php" class="style6" style="text-decoration:none" > | Manage Grade</a></td>  
         </tr>
     </table>
       <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
@@ -56,10 +57,10 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?php
+          <?
 include("../db.php");
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysqli_query($connection, $sql);
+	$show = mysql_query($connection, $sql);
 	if (($show))
 	{
 	?>
@@ -107,7 +108,7 @@ include("../db.php");
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-  <?php } ?>
+
     </tr>
   </table>
 </form>
