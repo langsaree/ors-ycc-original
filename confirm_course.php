@@ -7,7 +7,7 @@ $cos_id=$_GET['id'];
 // if(!isset($_SESSION["username"])){header("location:register.php");}
 if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
-    include('login_check.php');
+    include('include/login_check.php');
 ?>
 
 
