@@ -36,7 +36,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td><img src="../images/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
 <table width="1260" height="250" border="0" align="left" cellpadding="0" cellspacing="0">
