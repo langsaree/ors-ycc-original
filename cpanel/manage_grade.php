@@ -50,8 +50,9 @@ body {
         <tr>
           <td width="6%" align="center"><img src="image/manage_grade.png" width="128" height="128" /></td>
           <td width="94%"><span class="style26"><span class="style36">Manage Grade</span></span><br />
-            <span class="style34">การจัดการเกรด</span></td>
-          <td width="94%">&nbsp;</td>
+            <span class="style34">การจัดการเกรด</span>
+            <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>  
+     
         </tr>
       </table>
       <p><span class="style37">_________________________________________________________________________________________________________________________________________</span></p></td>
