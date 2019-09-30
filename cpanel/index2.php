@@ -55,7 +55,7 @@ if(!session_is_registered(user_admin)) // To check login user if already login t
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/example.js'></script>
     <style type="text/css">
-<!--
+
 .style2 {color: #0066FF}
 .style3 {color: #666666}
 .style5 {
@@ -65,7 +65,7 @@ if(!session_is_registered(user_admin)) // To check login user if already login t
 	font-size: 16px;
 	font-weight: bold;
 }
--->
+
     </style>
 </head>
 
