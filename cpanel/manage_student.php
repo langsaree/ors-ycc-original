@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage student</title>
 <style type="text/css">
-<!--
+
 .style1 {color: #666666}
 body {
 	margin-left: 0px;
@@ -29,7 +29,7 @@ body {
 .style37 {color: #CCCCCC}
 .style39 {color: #666666; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
 .style42 {color: #3399FF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
--->
+
 </style>
 </head>
 

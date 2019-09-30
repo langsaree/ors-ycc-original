@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage course</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -48,7 +48,7 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 }
--->
+
 </style>
 </head>
 
