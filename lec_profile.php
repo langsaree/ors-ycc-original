@@ -6,8 +6,6 @@ include('auth.php');
 include('db.php');
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,12 +52,12 @@ include('db.php');
               <li></li> 
               <li></li> 
               <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
-              <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
-              <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
-              <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
-              <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
-              <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="##" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="##" class="MenuButton">  <span>วิทยาลัย</span></a>
+              <a href="##" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="##" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="##" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="##" class="MenuButton"><span> ติดต่อเรา</span></a>
 
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
