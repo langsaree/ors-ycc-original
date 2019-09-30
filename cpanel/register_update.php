@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update register</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -32,7 +32,7 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 .style48 {color: #666666}
--->
+
 </style>
 </head>
 
@@ -40,7 +40,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -48,7 +48,7 @@ body {
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="image/update_course.jpg" width="91" height="82" /></td>
-        <td width="94%"><span class="style26"><span class="style36">Update<span class="style38">Register</span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36">Update<span class="style38">Register</span></span></span>   <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> |  <a href="manage_register.php" class="style6" style="text-decoration:none">Manage Register</a><br />
             <span class="style34">แก้ไข<span class="style48">รายวิชา<span class="style39">ที่ลงทะเบียน</span></span></span></td>
         </tr>
     </table>
@@ -61,7 +61,7 @@ body {
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
           <?
-	include('db_connect.php');
+	include('../db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysql_query($sql);
 	while($shows = mysql_fetch_row($show))
