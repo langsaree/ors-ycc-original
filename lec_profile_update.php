@@ -1,8 +1,8 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+if(!isset($_SESSION["lec_user"])){header("location:index.php");}
+if(isset($_SESSION["lec_user"])){
 ?>
 
 <!DOCTYPE html>
