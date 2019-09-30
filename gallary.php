@@ -91,12 +91,12 @@ else {
         <h1 class="style30">ภาพกิจกรรม</h1>
         
         <div id="galleria">
-            <img src="http://www.ycc.ac.th/images/stories/pb058590.jpg" >
-            
-            <img src="http://www.ycc.ac.th/images/stories/imga4838.jpg">
-            <img  src="http://www.ycc.ac.th/images/stories/imga4900.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/pb058615.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/imga4884.jpg">              </div>
+            <img src="gallary/1.jpg">
+            <img src="gallary/2.jpg">
+            <img src="gallary/3.jpg">
+            <img src="gallary/4.jpg">
+            <img src="gallary/5.jpg">              
+     </div>
     </div>
     <script>
     // Load the classic theme
