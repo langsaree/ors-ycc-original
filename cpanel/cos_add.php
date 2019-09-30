@@ -147,7 +147,7 @@ body {
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg2?></td>
+              <td><?php echo $errmsg2?></td>
             </tr>
             <?php }?>
             <tr>
@@ -159,7 +159,7 @@ body {
             <tr>
               <td height="27">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg3?></td>
+              <td><?php echo $errmsg3?></td>
             </tr>
             <?php }?>
             <tr>
@@ -171,7 +171,7 @@ body {
             <tr>
               <td height="27">&nbsp;</td>
               <td>&nbsp;</td>                                                                                                                                                 
-              <td><?php= $errmsg4?></td>
+              <td><?php echo $errmsg4?></td>
             </tr>              
             <?php }?>
             <tr>
@@ -183,9 +183,9 @@ body {
             <tr>
               <td height="30">&nbsp;</td>
               <td></td>
-              <td><?php= $errmsg5?>
-                <?php= $errmsg6?>
-                <?php= $errmsg7?>
+              <td><?php echo $errmsg5?>
+                <?php echo $errmsg6?>
+                <?php echo $errmsg7?>
                 </td>
             </tr>
             <?php }?>
@@ -223,7 +223,7 @@ body {
             <tr>
               <td height="28">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg8?></td>
+              <td><?php echo $errmsg8?></td>
             </tr>
             <?php }?>
             <tr>
