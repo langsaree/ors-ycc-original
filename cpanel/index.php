@@ -57,13 +57,13 @@ else
 <body>
 <div id="page-wrap">    
   <div align="center" class="login-block">
-          <h3 class="style5"><span class="style2">ADMINISTRATOR</span> <span class="style3">LOGIN</span></h3>
+  <FONT FACE="Tahoma" >  <h3 class="style5"><span class="style2">ADMINISTRATOR</span> <span class="style3">LOGIN</span></h3>
           <p class="style5"></p>
 <form action="" method="post" target="">
                 <p><label for="ftp-user-name">UserName</label><input type="text" name="username" id="user-name" /></p>
                 <p><label for="ftp-password">Password</label><input type="password" name="password" id="password" /></p>
-                <p class="submit-wrap"><input type="submit" id="submit" class="button" value="Login" /> 
-&nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p>
+                <p class="submit-wrap"><input type="submit" style="width:100;" id="submit" class="button" value="    Login    ">
+&nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p></FONT>
     </form>
   </div>
         
