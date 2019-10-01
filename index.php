@@ -3,22 +3,24 @@ session_start();
 include 'db.php';
 include 'class/auth.class.php';
 $auth = new Auth;
-// $auth->test();
+
+include "./template/header.php";
+echo "<title>ระบบลงทะเบียนออนไลน์</title>";
+
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 {
     if (isset($_POST['username'])) {
         $message = $auth->login_check($_POST);
     }
 
-    include "./template/header.php";
-
     if (isset($message)) {
         echo '<span style="color:red">' . $message . '</span>';
     }
 
     include "./template/login_form.php";
-    
-} else {
+
+} else {  
+  
     include "./template/logined.php";
 }
 

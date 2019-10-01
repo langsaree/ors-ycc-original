@@ -1,70 +1,31 @@
 <?php
 session_start();
-include('db.php');
-$username = '';
-if(!isset($_SESSION["username"]))
-	{
-    include('login_check.php');
-?>
+include 'db.php';
+include 'class/auth.class.php';
+$auth = new Auth;
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+include "./template/header.php";
 
-<title>ติดต่อผู้ดูแลระบบ</title>
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
+if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+{
+    if (isset($_POST['username'])) {
 
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.style30 {
-	color: #3987FB;
-	font-size: 16px;
-	font-weight: bold;
+        $message = $auth->login_check($_POST);
+    }
+
+    if (isset($message)) {
+        echo '<span style="color:red">' . $message . '</span>';
+    }
+
+    include "./template/login_form.php";
+
+} else {
+
+    include "./template/logined.php";
 }
 
-    </style>
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
-<?php if (isset($message)) { echo $message; } ?>	
-<?php
-    include("not_logined.php");
-} 
-else {
-    include("logined.php");
-}
 ?>
+          <title>ติดต่อผู้ดูแลระบบ</title>
             <br>
           </div>
           <div class="Block">
@@ -83,40 +44,39 @@ else {
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
  <?php
 // session_start();
-$c_error ="";
-if(isset($_POST['action'])){
-  if($_POST['verifycode'] !=$_SESSION['total'] ){
-    $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
-      // echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
-  }else{
-     $headers  = "MIME-Version: 1.0\r\n";
-     $headers .= "Content-type: text/html; charset=utf-8\r\n";
-     $headers .= "From:  ".$_POST['name']." <".$_POST['email'].">\r\n";
+$c_error = "";
+if (isset($_POST['action'])) {
+    if ($_POST['verifycode'] != $_SESSION['total']) {
+        $c_error = '<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
+        // echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
+    } else {
+        $headers = "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=utf-8\r\n";
+        $headers .= "From:  " . $_POST['name'] . " <" . $_POST['email'] . ">\r\n";
 
-     $msgs .= " จากคุณ  ".$_POST['name'].'<br>';
-     $msgs .= " โทร  ".$_POST['tel'].'<br>';
-     $msgs .= "ข้อความ<br>".$_POST['msg'];
+        $msgs .= " จากคุณ  " . $_POST['name'] . '<br>';
+        $msgs .= " โทร  " . $_POST['tel'] . '<br>';
+        $msgs .= "ข้อความ<br>" . $_POST['msg'];
 
+        $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
+        if (mail($mailto, $_POST['subj'], $msgs, $headers)) {
+            echo "ส่งสำเร็จ";
+        } else {
+            echo "ผิดพลาด";
+        }
 
-     $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
-     if(mail($mailto, $_POST['subj'], $msgs, $headers)){
-     echo "ส่งสำเร็จ";
-     }else{
-     echo "ผิดพลาด";
-     }
-	 
-     exit();
-  }
+        exit();
+    }
 }
 ?>
 <?php
-$num1 = rand(0,10);
-$num2 = rand(0,10);
+$num1 = rand(0, 10);
+$num2 = rand(0, 10);
 $_SESSION['total'] = ($num1 + $num2);
-?>      
+?>
           <div class="Article">
             <form id="form1" name="form1" method="post" action="">
-          
+
               <table width="600" border="0" cellspacing="2" cellpadding="2">
     <tr>
       <td colspan="4">&nbsp;</td>
@@ -132,12 +92,12 @@ $_SESSION['total'] = ($num1 + $num2);
     </tr>
 
 <?php
+$username = isset($_POST['username']) ? $_POST['username'] : "";
 $sql = "select * from student where username='$username' ";
-$result = mysqli_query($connection, $sql); 
-while($row=mysqli_fetch_array($result))
-{
+$result = mysqli_query($connection, $sql);
+while ($row = mysqli_fetch_array($result)) {
 
-?> 
+    ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
@@ -156,7 +116,7 @@ while($row=mysqli_fetch_array($result))
       <td><input type='text' name='tel' value="<?php $row["phone"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
-    <?php } ?>
+    <?php }?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อเรื่อง :</span></td>
@@ -172,9 +132,9 @@ while($row=mysqli_fetch_array($result))
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">Code :
-        <?php echo '<span style="color:red;"> '.$num1.'</span>'; ?>
-        <?php echo '<span style="color:green">+</span>';?>
-        <?php echo '<span style="color:red"> '.$num2.'</span>';?>
+        <?php echo '<span style="color:red;"> ' . $num1 . '</span>'; ?>
+        <?php echo '<span style="color:green">+</span>'; ?>
+        <?php echo '<span style="color:red"> ' . $num2 . '</span>'; ?>
       </span></td>
     <td colspan="2"><input type='text' name='verifycode' />
           <input type='hidden' name='action' value='1' />
@@ -203,7 +163,7 @@ while($row=mysqli_fetch_array($result))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
+        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>
     </div>
 </div>
     </body>

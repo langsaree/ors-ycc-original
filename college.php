@@ -1,62 +1,31 @@
 <?php
 session_start();
-if(!isset($_SESSION["username"]))
-	{
-include('login_check.php');
+include 'db.php';
+include 'class/auth.class.php';
+$auth = new Auth;
 
-?>
+include "./template/header.php";
+echo "<title>เกี่ยวกับวิทยาลัย</title>";
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+{
+    if (isset($_POST['username'])) {
+        $message = $auth->login_check($_POST);
+    }
+ 
+    if (isset($message)) {
+        echo '<span style="color:red">' . $message . '</span>';
+    }
 
-    <title>เกี่ยวกับวิทยาลัย</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
+    include "./template/login_form.php";
 
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-             <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
-
-<?php if (isset($message)) { echo $message; } ?>
-    
-<?php
-    include("not_logined.php");
-} 
-else {
-    include("logined.php");
+} else {
+  
+    include "./template/logined.php";
 }
-?>
+
+?>    
+              <title>เกี่ยวกับวิทยาลัย</title>
             <br>
           </div>
           <div class="Block">
@@ -72,7 +41,7 @@ else {
         </div>
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-       
+
           <div class="Article">
             <table width="598" border="0" cellspacing="0" cellpadding="5">
               <tr>
@@ -82,7 +51,7 @@ else {
 ระดับปริญญาในสหวิชาการและวิชาชีพ พร้อมทั้งจัดการศึกษาต่อเนื่องตลอดชีวิตที่สามารถเชื่อมโยง <br>
 กับการจัดการศึกษาในทุกระดับ ตลอดจนฝึกอบรมในหลักสูตรที่เน้นการพัฒนาอาชีพ พัฒนาคุณภาพชีวิตตามความต้องการของชุมชนที่สอดคล้องกับการพัฒนาเศรษฐกิจและ สังคม โดยมีปรัชญาว่า “วิทยาลัยชุมชน แหล่งเรียนรู้ของคนในชุมชน โดยชุมชนและเพื่อชุมชน”</td>
               </tr>
-              
+
               <tr>
                 <td><p><strong>ปรัชญา และหลักการของวิทยาลัยชุมชน</strong><br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วิทยาลัย  ชุมชน เป็นสถาบันการศึกษาของรัฐ   ซึ่งบริหารจัดการโดยชุมชนที่จัดการศึกษาระดับอุดมศึกษา ระดับต่ำกว่าปริญญา   ทั้งสายวิชาการและวิชาชีพ   รวมทั้งจัดการศึกษาต่อเนื่องตลอดชีวิตที่สามารถเชื่อมโยง   กับการจัดการศึกษาในทุกระดับ   และเติมเต็มศักยภาพในส่วนของการศึกษาที่ขาดหายไปของประชากรให้สมบูรณ์ยิ่ง  ขึ้น ตลอดจนฝึกอบรมในหลักสูตร เพื่อพัฒนาอาชีพ และพัฒนาคุณภาพชีวิต   ตามความต้องการของชุมชน และสอดคล้องกับการพัฒนาเศรษฐกิจ และสังคมของประเทศ<br>
@@ -122,7 +91,7 @@ else {
                   <p>      ๑) สังคมและเศรษฐกิจเกษตร เน้นหลักสูตรการเกษตรอุตสาหกรรม </p>
                   <p>      ๒) สังคมและเศรษฐกิจอุตสาหกรรม เน้นหลักสูตรช่างฝีมือ การผลิต และการแปรรูป เป็นต้น </p>
                   <p>      ๓) สังคมและเศรษฐกิจภาคบริการ เน้นหลักสูตรการบริหารจัดการ วิทยาศาสตร์สุขภาพ<br>
-                               
+
                     และการท่องเที่ยว </p>
                   <p>      ๔) สังคมและเศรษฐกิจสารสนเทศ เน้นหลักสูตรคอมพิวเตอร์และสารสนเทศ </p>
                 <p>&nbsp; </p></td>
@@ -142,7 +111,7 @@ else {
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
+        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>
     </div>
 </div>
     </body>

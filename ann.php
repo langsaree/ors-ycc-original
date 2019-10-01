@@ -1,90 +1,30 @@
 <?php
 session_start();
-if(!isset($_SESSION["username"]))
-	{
-     include('db.php');
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_POST['username'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-			if(empty($_POST['username']) && empty($_POST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_POST['username']) && !empty($_POST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_POST['username']) && empty($_POST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysqli_query($connection, $sql);
-                   $count=mysqli_num_rows($result);
-                  if($count==1)
-                      {
-					  $_SESSION['logined'] = true;
-					  $_SESSION['username'] = $_POST['username'];
-            $_SESSION['password'] = $_POST['password'];
-            
-					  header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
-			  	}  
-   
+include 'db.php';
+include 'class/auth.class.php';
+$auth = new Auth;
+
+include "./template/header.php";
+echo "<title>ประชาสัมพันธ์</title>";
+
+if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+{
+    if (isset($_POST['username'])) {
+        $message = $auth->login_check($_POST);
+    }
+
+    if (isset($message)) {
+        echo '<span style="color:red">' . $message . '</span>';
+    }
+
+    include "./template/login_form.php";
+
+} else {
+
+    include "./template/logined.php";
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>ประชาสัมพันธ์</title>
-    <link rel="stylesheet" href="style.css" />
-    
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
-
-<?php if (isset($message)) { echo $message; } ?>	
-<?php
-    include("not_logined.php");
-} 
-else {
-    include("logined.php");
-}
-?>
+        <title>ประชาสัมพันธ์</title>
             <br>
           </div>
           <div class="Block">
@@ -101,7 +41,7 @@ else {
 
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-       
+
           <div class="Article">
             <p align="center"></p>
             <br>
@@ -114,7 +54,7 @@ else {
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
+        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>
     </div>
 </div>
     </body>
