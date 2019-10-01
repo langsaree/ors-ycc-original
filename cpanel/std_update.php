@@ -58,7 +58,7 @@ body {
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
           <?php
-	include('../db.php');
+	include("../db.php");
 	$sql = "select * from student where std_id ='$std_id'";
 	$re = mysqli_query($connection,$sql);
 	while($ro = mysqli_fetch_row($re))
