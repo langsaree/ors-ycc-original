@@ -109,7 +109,7 @@ while($row=mysqli_fetch_array($result))
                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_comment']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
                <td><a href="lec_update.php?id=<?php echo $row['lec_id'];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
-               <td><a href="lec_delete.php?id=<?php echo $row['lec_id'];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_delete.php?id=<?php echo $row['lec_id'];?>" ><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></td>
              </tr>
              <?php } ?>
            </table></td>
