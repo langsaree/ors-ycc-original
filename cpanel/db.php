@@ -10,5 +10,6 @@ $db_password="";
 //$login2="SELECT * FROM student WHERE username='$username' and password='$password'";
 //$login3="SELECT * FROM lecture WHERE username='$username' and password='$password'";
 $connection = mysqli_connect($db_host, $db_username, $db_password, $db_database);
+mysqli_query( $connection ,"SET NAMES 'utf8'") or die(mysqli_error());
  
 ?>

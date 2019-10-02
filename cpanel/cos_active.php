@@ -2,13 +2,13 @@
 session_start(); 
 include('db.php');
 extract ($_GET);
-$active = "";
-$non_active ="";
+$active = isset($_POST['active']) ? $_POST['active'] : "";
+$non_active =isset($_POST['non_active']) ? $_POST['non_active'] : "";
 $msg = "";
 
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysqli_query($sql);
+	$result = mysqli_query($connection,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -20,7 +20,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysqli_query($sql);
+			$result = mysqli_query($connection,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}

@@ -1,11 +1,11 @@
 <?php   
-session_start();
+//session_start();
 if(!isset($_SESSION['username']))
 //{header("location:index.php");}
 //end of check session
 include "db.php";
 $todo = "";
-$todo=$_POST['todo'];
+$todo =$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
 $type=$_POST['type'];

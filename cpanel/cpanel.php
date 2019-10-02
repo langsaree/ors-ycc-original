@@ -1,6 +1,6 @@
 <?php
 session_start();
-// if(!isset($_SESSION["user_admin"])){header("location:index.php");}
+//if(!isset($_SESSION["user_admin"])){header("location:index.php");}
 //end of check session
 $user_admin = $_SESSION["user_admin"];
 ?>
