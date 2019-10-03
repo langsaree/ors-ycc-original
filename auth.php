@@ -1,3 +1,3 @@
 <?
-if(!session_is_registered(username)){header("location:index.php");}
+if(!session($_SESSION['username'])){header("location:index.php");}
 ?>
