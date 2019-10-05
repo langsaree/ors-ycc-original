@@ -1,9 +1,9 @@
 <?php
 session_start();
 include('db.php');
-if(session_is_registered(username)){header("location:index.php");
-if(!session_is_registered(username))
-	{
+if(isset($SESSION)['username'];{
+   $username = $_SESSION['username'];
+	}
      
      $username = "";
      $password = "";

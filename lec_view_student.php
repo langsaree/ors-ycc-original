@@ -1,7 +1,9 @@
 <?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
+include('db.php');
 ?>
 
 <!DOCTYPE html>
@@ -121,12 +123,13 @@ if(session_is_registered(lec_user)){
                 <td width="15">&nbsp;</td>
               </tr>
               <? 
+
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
 			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
 			
-            $result=mysql_query($sql);
+            $result=mysql_query($connection,$sql);
             while($row=mysql_fetch_array($result)){
 				$std=$row[std_id];
 				$sql2 ="select * from student where std_id='$std'";

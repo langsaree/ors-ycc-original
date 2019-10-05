@@ -1,13 +1,19 @@
 <?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+//if(!session_is_registered(lec_user)){header("location:index.php");}
+//if(session_is_registered(lec_user)){
+
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php")}
+//end of check session
+  include('db.php');
 ?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>:::  ข้อมูลอาจารย์  :::</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -125,6 +131,7 @@ if(session_is_registered(lec_user)){
             <table width="650" align="center">
                 <tr>
                  <?php 
+                 
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";

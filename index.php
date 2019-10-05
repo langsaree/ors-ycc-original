@@ -45,11 +45,10 @@ include('include/login.php');
 
 <?php
 include('db.php');
-$sql_view = "select * from course where status='1' ";
-$result_view = mysqli_query($conn,$sql_view);
+$sql_view = "SELECT * FROM course  status='WHERE 1' ";
+$result_view = mysqli_query($connection,$sql_view);
 while($row=mysqli_fetch_array($result_view))
 {
-
 ?>
 
 <br>

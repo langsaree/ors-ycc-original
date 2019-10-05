@@ -1,13 +1,15 @@
 <?
 session_start();
-include('auth.php');
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
 include ('db.php');
 extract ($_GET);
 $user=$id;
 ?>
-<?
-$ok=$ok;
-if(isset($ok)){	
+
+<?php
+if(isset($_POST['ok'])){	
    $login = $_POST['login'];
    $email=$_POST['email'];
    $pswd = $_POST['pswd'];
@@ -70,47 +72,6 @@ if(isset($ok)){
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
-.style47 {font-size: 13px}
-.style54 {font-size: 14px}
-.style55 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; }
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-.style58 {color: #333333}
-.style60 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #333333;
-	font-weight: bold;
-}
-.style61 {font-size: 13px; color: #333333; }
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-.style33 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #666666;
-}
-.style62 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333333; }
-.style64 {
-	font-size: 14px;
-	font-weight: bold;
-	color: #333333;
-}
-.style66 {font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; }
-.style67 {font-size: 12px}
 input, textarea {
 		background:#C3E0C4;
 		color:#000000;
@@ -125,7 +86,6 @@ input, textarea {
 		background:#E3E7A6;
 		color:#000000;
 	}
--->
     </style>
 </head>
 <body>
@@ -214,7 +174,7 @@ input, textarea {
            <tr>
 <? 
 $sql = "select * from student where std_id='$user' ";
-$result = mysql_query($sql); 
+$result = mysql_query($connection,$sql); 
 while($row=mysql_fetch_array($result))
 {
 
@@ -257,24 +217,25 @@ while($row=mysql_fetch_array($result))
                     <td width="31">&nbsp;</td>
                     <td width="1">&nbsp;</td>
                   </tr>
-                  <tr>
-                    <td>&nbsp;</td>
-                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
-                    <td colspan="4"><label for="fname"></label>  
-                      <select name="fname" size="1" id="fname">
-					  <? 
-                      $sql3="select * from mrmrs";
-			          $result3=mysql_query($sql3);			 
-			          while($data3=mysql_fetch_array($result3)){
-			 	          if($data[id]==$data3[0]){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
-                      </select></td>
-                  </tr>
+
+ <!--               <tr>--.
+ <!--                   <td>&nbsp;</td>-->
+<!--                  <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>-->
+<!--                   <td colspan="4"><label for="fname"></label>-->
+<!--                     <select name="fname" size="1" id="fname">-->
+<!--					  --><? //
+//                   $sql3="select * from mrmrs";
+//			          $result3=mysql_query($sql3);			 
+//			          while($data3=mysql_fetch_array($result3)){
+//			 	          if($data[id]==$data3[0]){
+//					           echo "<option value='$data3[name]' selected>$data3[name]";
+//				         }else{
+//					         echo "<option value='$data3[name]'>$data3[name]";
+//				           }
+//			            }
+//			         ?>
+<!--                      </select></td>-->
+<!--                  </tr> -->
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
@@ -456,28 +417,30 @@ while($row=mysql_fetch_array($result))
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
-                  <tr>
-                    <td>&nbsp;</td>
-                    <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>
-                    <td>
-                      <label for="select"></label>
-                      <select name="job" id="job">
-                      <?		
-			 $sql3="select * from joblist";
-			 $result3=mysql_query($sql3);			 
-			 while($data3=mysql_fetch_array($result3)){
-			 	if($data[job_id]==$data3[0]){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
-                      </select></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
+
+<!--                  <tr>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                    <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>-->
+<!--                    <td>-->
+<!--                     <label for="select"></label>-->
+<!--                      <select name="job" id="job">-->
+<!--                      --><?//		
+//			 $sql3="select * from joblist";
+//			 $result3=mysql_query($sql3);			 
+//			 while($data3=mysql_fetch_array($result3)){
+//			 	if($data[job_id]==$data3[0]){
+//					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
+//				}else{
+//					echo "<option value='$data3[job_name]'>$data3[job_name]";
+//				}
+//			 }
+//			  ?>
+<!--                      </select></td>-->
+<!--                    <td>&nbsp;</td>-->
+<!--                   <td>&nbsp;</td>-->
+<!--                   <td>&nbsp;</td>-->
+<!--                 </tr>-->
+
                   <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

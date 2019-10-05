@@ -1,8 +1,10 @@
 <?php
 session_start();
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+//end of check session
 include('db.php');
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+
 ?>
 
 <!DOCTYPE html>
@@ -111,8 +113,8 @@ input:focus, textarea:focus {
             </table>
 <?
 			
-			$ok=$ok;
-            if(isset($ok)){
+
+  if(isset($POST['ok'])){
 				$login=$_POST['login'];
 				$pswd=$_POST['pswd'];
 				$name=$_POST['name'];
@@ -120,12 +122,13 @@ input:focus, textarea:focus {
 				$phone=$_POST['phone'];
 				
 				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysql_query($sql);
+				$do=mysql_query($connection,$sql);
 				if($do){
-					echo "<script>location='lec_profile.php';</script>";
+
+          header("location:lec_profile.php");
 				}
 				else{
-					 mysql_error();
+					 mysql_error($connection);
 				}
 			}
 			?>
@@ -134,7 +137,7 @@ input:focus, textarea:focus {
              <? 
 			
 			$sql = "select * from lecture where username='$username'";
-            $result=mysql_query($sql);
+            $result=mysql_query($connection,$sql);
             ($row=mysql_fetch_array($result));
 		    ?>
                 <tr>
