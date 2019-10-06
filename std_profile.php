@@ -1,7 +1,9 @@
-<?
+<?php
 session_start();
-if(!session_is_registered("username")){header("location:index.php");}
+$username = $_SESSION['username'];
+if(!isset($_SESSION)['username'])){header("location:index.php");}
 //end of check session
+include('db.php');
 ?>
 
 
@@ -13,50 +15,7 @@ if(!session_is_registered("username")){header("location:index.php");}
     <title>ข้อมูลนักศึกษา </title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }S
-.style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
-.style47 {font-size: 13px}
-.style54 {font-size: 14px}
-.style55 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; }
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-.style58 {color: #333333}
-.style60 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #333333;
-	font-weight: bold;
-}
-.style61 {font-size: 13px; color: #333333; }
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-.style33 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #666666;
-}
-.style62 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #333333; }
-.style64 {
-	font-size: 14px;
-	font-weight: bold;
-	color: #333333;
-}
-.style66 {font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; }
-.style67 {font-size: 12px}
--->
-    </style>
+    <style type="text/css"></style>
 </head>
 <body>
     <div class="BodyContent">
@@ -95,9 +54,6 @@ a:active {
                 <td>&nbsp;</td>
               </tr>
             </table>
-        
-            
-           
             <br>
             <br>
           </div>
@@ -126,15 +82,12 @@ a:active {
          <p class="style55"><span class="style58"> :::<strong> ข้อมูลนักศึกษา &#3623;&#3636;&#3607;&#3618;&#3634;&#3621;&#3633;&#3618;&#3594;&#3640;&#3617;&#3594;&#3609;&#3618;&#3632;&#3621;&#3634;</strong> :::</span><br>
          </p>
        </div>
- <? 
-include ('db.php');
-$sql = "select * from student where username='$username' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
-{
+ <?php 
+$sql_view = "select * from student where username='$username' ";
+$result_view = mysql_query($connection,$sql_view); 
+$row=mysql_fetch_array($result_view);
 
 ?>       
-       
          <table width="637" height="62" border="0" cellpadding="0" cellspacing="5">
            <tr>
              <td
@@ -373,7 +326,7 @@ while($row=mysql_fetch_array($result))
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
-                  <? } ?>
+                  <?php } ?>
                  
               </table>
                 <table width="640" border="0" align="center" cellpadding="0" cellspacing="2">
@@ -384,15 +337,9 @@ while($row=mysql_fetch_array($result))
         </table>
        
           </div>
-        </div>
-
-
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-        </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
+        </div>              
     </div>
 </div>
+<?php include('include/footer.php');
 </body>
 </html>
