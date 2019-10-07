@@ -346,11 +346,9 @@ include('../db.php');
                                 $do = mysqli_query($connection, $query);
                                 if ($do) {
                                     $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+                                    echo "<script>location='cpanel.php';</script>";
                                     echo "$text";
-                                    header("Refresh:3; url=cpanel.php");
-                                    
-                                     //  echo "<script>location='cpanel.php';</script>";
-                                     exit;
+                                    exit;
                                 }
 
                             }
@@ -530,10 +528,6 @@ include('../db.php');
                                                     <option>นางสาว</option>
                                                     <option>ด.ช.</option>
                                                     <option>ด.ญ.</option>
-                                                    <option>Miss.</option>
-                                                    <option>Mr.</option>
-                                                    <option>Mrs.</option>
-                                                    <option>Ms.</option>
                                                 </select>
                                                 <span class="style29">*</span></div></td>
                                     </tr>
