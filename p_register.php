@@ -32,10 +32,10 @@ $sql = "insert into student(username,password,f_name,name,s_name,gender,b_day,b_
 '$mobile','$job','$t_job')";
 
 
-$result = mysql_query($sql);
+$result = mysqli_query($connection,$sql);
 if (!$result)
 {
-die("could not connect db".mysql_error());
+die("could not connect db".mysqli_error());
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
