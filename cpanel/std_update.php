@@ -107,7 +107,7 @@ body {
       <tr>
       <td width="6%" align="center"><img src="image/student add.png" width="127" height="111" /></td>
       <td width="94%"><span class="style26"><span class="style36"><span class="style45">Update</span> <span class="style38">Student&nbsp;&nbsp;</span></span></span>
-      <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a> <a href="manage_student.php" class="style6" style="text-decoration:none" >| ManageStudent</a><br />
+      <a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent | </a><a href="std_view.php" class="style6" style="text-decoration:none" >ViewStudent</a><br />
                 <span class="style34">แก้ไขข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
@@ -155,10 +155,20 @@ body {
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ :</span></span></td>
-                    <td><label for="f_name"></label>
-                        <input type="text" name="f_name" id="f_nname" value="<?php echo $row['f_name'];?>"></td>
-                </tr>
+                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
+                    <td colspan="4"><label for="f_name"></label>  
+                      <select name="f_name" size="1" id="f_name">
+					  <?php 
+                  $sql3="select * from mrmrs";
+			            $result3=mysqli_query($connection, $sql3);			 
+			            while($data3=mysqli_fetch_array($result3)){
+			 	          if($data3['id']==$data3){
+					           echo "<option value='$data3[name]' selected>$data3[name]";
+				         }else{
+					         echo "<option value='$data3[name]'>$data3[name]";
+				           }
+			            }
+			         ?>
                 <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
@@ -305,10 +315,21 @@ body {
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td style="text-align: right; font-weight: bold; color: #333;">อาชีพ :</span></span></td>
-                    <td colspan="4"><label for="job"></label>
-                        <input type="text" name="job" id="job" value="<?php echo $row['job'];?>"></td>
-                </tr>
+                    <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>
+                    <td>
+                      <label for="select"></label>
+                      <select name="job" id="job">
+                      <?php
+			 $sql3="select * from joblist";
+			 $result3=mysqli_query($connection, $sql3);			 
+			 while($data3=mysqli_fetch_array($result3)){
+			 	if($data3["job_id"]==$data3){
+					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
+				}else{
+					echo "<option value='$data3[job_name]'>$data3[job_name]";
+				}
+			 }
+			  ?>
 
                 <tr>
 
