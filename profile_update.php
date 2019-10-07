@@ -15,10 +15,11 @@ if(isset($_POST['ok'])){
    $fname=$_POST['fname'];
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
-   $b_day=$_POST['b_day'];
-   $b_month=$_POST['b_month'];
-   $b_year=$_POST['b_year'];
-   $birthday=$b_day.'/'.$b_month.'/'.$b_year; 
+   $gender=$_POST['gender'];
+  //  $b_day=$_POST['b_day'];
+  //  $b_month=$_POST['b_month'];
+  //  $b_year=$_POST['b_year'];
+  //  $birthday=$b_day.'/'.$b_month.'/'.$b_year; 
    $birthday=$_POST['birthday'];
    
    $nation=$_POST['nation'];
@@ -27,14 +28,14 @@ if(isset($_POST['ok'])){
    
     $std_id=$_POST['std_id'];
     $home=$_POST['home'];
-    $m_home=$_POST['m_home'];
-    $r_home=$_POST['r_home'];
-    $v_home=$_POST['v_home'];
+    // $m_home=$_POST['m_home'];
+    // $r_home=$_POST['r_home'];
+    // $v_home=$_POST['v_home'];
     $city=$_POST['city'];
     $province=$_POST['province'];
     $postalcode=$_POST['postalcode'];
     $phone=$_POST['phone'];
-	$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
+	// $address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
 	$address=$_POST['address'];
 	$edulevel=$_POST['edulevel'];
     $eduplace=$_POST['eduplace'];
@@ -42,7 +43,7 @@ if(isset($_POST['ok'])){
     $eduyear=$_POST['eduyear'];
 	$job=$_POST['job']; 
 	
-	$query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
+	$query = "UPDATE student set username='$login',password='$pswd',f_name='$f_name',name='$name',s_name='$s_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$user'";
 
        $do = mysqli_query($connection, $query);
        if ($do)
@@ -209,7 +210,7 @@ input, textarea {
          <table width="600" border="0" align="center" cellpadding="0" cellspacing="2">
            <tr>
 <?php
-$sql = "select * from student where std_id='$user' ";
+$sql = "select * from student where std_id= '$user' ";
 $result = mysqli_query($connection, $sql); 
 while( $row=mysqli_fetch_array($result))
 {
@@ -243,7 +244,7 @@ while( $row=mysqli_fetch_array($result))
                     <td height="18" style="text-align: right">&nbsp;</td>
                     <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
                     <td colspan="4"><label for="pswd"></label>
-                      <input type="password" name="pswd" id="pswd" value="<?php $row['password'];?>"></td>
+                      <input type="password" name="pswd" id="pswd" value="<?php echo $row['password'];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -317,7 +318,8 @@ while( $row=mysqli_fetch_array($result))
                   <tr>
                     <td height="19" >&nbsp;</td>
                     <td style="text-align: right"><span class="style60">เพศ :</span></td>
-                    <td><?php echo $row['gender'];?></td>
+                    <td><label for="gender"></label>
+                      <input name="gender" type="text" id="gender" value="<?php echo $row['gender'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -352,7 +354,7 @@ while( $row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
                     <td colspan="4"><label for="address"></label>
-                      <textarea name="textarea" id="textarea" cols="23" rows="5"><?php echo $row['address'];?></textarea></td>
+                      <textarea name="address" id="textarea" cols="23" rows="5"><?php echo $row['address'];?></textarea></td>
                   </tr>
                   
                   
