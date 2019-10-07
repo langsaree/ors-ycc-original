@@ -1,8 +1,8 @@
 <?php
 session_start();
 include('db.php');
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+if(!isset($_SESSION["lec_user"])){header("location:index.php");}
+if(isset($_SESSION["lec_user"])){
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ if(session_is_registered(lec_user)){
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -32,7 +32,7 @@ input:focus, textarea:focus {
 	}
 .style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
 
--->
+
     </style>
 </head>
 <body>
@@ -109,7 +109,7 @@ input:focus, textarea:focus {
                 <td width="643" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------------------------------------------</td>
               </tr>
             </table>
-<?
+<?php
 			
 			$ok=$ok;
             if(isset($ok)){
@@ -131,7 +131,7 @@ input:focus, textarea:focus {
 			?>
             <form action="" method="post" enctype="multipart/form-data" name="form1">
             <table width="600">
-             <? 
+             <?php 
 			
 			$sql = "select * from lecture where username='$username'";
             $result=mysql_query($sql);
