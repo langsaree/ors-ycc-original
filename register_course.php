@@ -6,7 +6,6 @@ if (isset($_SESSION['username'])) {
   $username = $_SESSION['username'];
 }
 
-
 // username and password receive from register form
 if (isset($_POST['ok'])) {
   if (!empty($_POST['username'] && !empty($_POST['password']))) {
