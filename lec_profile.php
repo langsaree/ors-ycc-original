@@ -1,7 +1,9 @@
 <?php 
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+$username = $_SESSION['username'];
+//include('auth.php');
+//end of check session
+include('db.php');
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +70,7 @@ if(session_is_registered(lec_user)){
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><?php  echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php  echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><?php  echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php  echo '<span class="style26 "> '.$_SESSION['username'].' </span><br>'; ?></td>
               </tr>
               <tr>
                 <td><?php  echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
@@ -80,7 +82,7 @@ if(session_is_registered(lec_user)){
                 <td></td>
               </tr>
             </table>
-            <?php  } ?>
+         
 
             <br>
           </div>
