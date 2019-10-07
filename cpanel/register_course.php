@@ -18,7 +18,6 @@ include('../db.php');
         }
     </style>
 </head>
-
 <body>
 <td width="10">&nbsp;</td>
 <table> <td width="330" style="text-align:right" align="center"><a href="cpanel.php" class="style6" style="text-decoration:none" >
@@ -41,12 +40,7 @@ include('../db.php');
         </div>
         <div class="BorderL"></div>
         <div class="Border">
-
-
-
             <div class="Columns">
-
-
                 <div class="MainColumn">
                     <div class="ArticleBorder">
                         <div class="ArticleBL">
@@ -952,6 +946,5 @@ include('../db.php');
                         </div>
                     </div>
                 </div>
-
 </body>
 </html>
