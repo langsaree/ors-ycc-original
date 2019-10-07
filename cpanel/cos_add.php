@@ -8,7 +8,7 @@ session_start();
  
 
 $errmsg= ""; $errmsg1= ""; $errmsg2= ""; $errmsg3= ""; $errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";
-if(isset($ok)) {
+if(isset($_POST['ok'])) {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
    if(empty($cos_id)){
@@ -54,15 +54,18 @@ mysqli_query ("SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
 $result = mysqli_query($connection,$sql);
 
-if ($result>0)	
-{?>
-<script type="text/javascript">
-	window.location="manage_course.php";
-</script>
+?>
 
- <?php  }
-else {
-	 die("Error db".mysqli_error()); }
+ <?php  
+
+if ($result) {
+  echo "<script>location='pcos_add.php';</script>";
+  $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+  echo "$text";
+  exit;
+}else {
+die("Error db".mysqli_error($connection)); }
+
 
 }}
 ?>
@@ -135,7 +138,7 @@ body {
             <tr>
               <td height="26">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php=  $errmsg1?></td>
+              <td><?php echo  $errmsg1?></td>
             </tr>
             <?php } ?>
             <tr>
