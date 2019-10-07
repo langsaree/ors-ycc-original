@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html>
 
@@ -245,8 +243,7 @@ session_start();
               </div>
               <div class="ArticleL"></div>
             </div>
-          </div>
-        </div>
+          </div></div>       
         <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College
             Design by : Bukhoree | Kholed | Ihsan </span></div>
       </div>
