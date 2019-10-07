@@ -689,6 +689,10 @@ if(isset($_POST['Submit'])) {
                         <option>นางสาว</option>
                         <option>ด.ช.</option>
                         <option>ด.ญ.</option>
+                        <option>Miss.</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
                         </select>
                       <span class="style29">*</span></div></td>
                   </tr>
