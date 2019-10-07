@@ -1,8 +1,11 @@
 <?php
 session_start();
-include 'db.php';
+// include 'db.php';
 include 'class/auth.class.php';
 $auth = new Auth;
+
+include 'class/bootstrap.class.php';
+$bs = new BS;
 
 include './template/gallary.php';
 
@@ -12,7 +15,6 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
         $message = $auth->login_check($_POST);
     }
 
-    
     if (isset($message)) {
         echo '<span style="color:red">' . $message . '</span>';
     }
@@ -20,7 +22,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
     include "./template/login_form.php";
 
 } else {
-    
+
     include "./template/logined.php";
 }
 
@@ -45,29 +47,49 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
           <div class="Article">
             <p align="center">
-  <div class="content">
-        <h1 class="style30">ภาพกิจกรรม</h1>
 
-        <div id="galleria">
-            <img src="gallary/pb058590.jpg" >
-            <img src="gallary/imga4838.jpg">
-            <img  src="gallary/imga4900.jpg">
-            <img src="gallary/pb058615.jpg">
-            <img src="gallary/imga4884.jpg">
+
+<div class="content">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="gallary/pb058590.jpg" class="d-block w-100" alt="...">
         </div>
+        <div class="carousel-item">
+          <img src="gallary/imga4838.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="gallary/imga4900.jpg" class="d-block w-100" alt="...">
+            </div>
+        <div class="carousel-item">
+          <img src="gallary/pb058615.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="gallary/imga4884.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
         
     </div>
-    <script>
-    // Load the classic theme
-    Galleria.loadTheme('galleria.classic.js');
-    // Initialize Galleria
-    $('#galleria').galleria();
-    </script>
-
-
-
+</div>
         </div>
-        </div>
+         </div>
 
 
 
@@ -78,4 +100,5 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
     </div>
 </div>
     </body>
+    <?php $bs->bootstrap();?>
 </html>
