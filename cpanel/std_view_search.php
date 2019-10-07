@@ -7,6 +7,7 @@ $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
 //$type=$_POST['type'];
+$type="";
 
 $search_text=ltrim($search_text);
 $search_text=rtrim($search_text);
@@ -64,7 +65,7 @@ body {
     <td width="1027" height="74" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student&nbsp;&nbsp;</span></span></span> <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a> <a href="manage_student.php" class="style6" style="text-decoration:none" >| ManageStudent</a><br />
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
@@ -77,7 +78,7 @@ body {
                 <input name="search_text" type="text" id="search" size="20" />
                 </label></td>
                 <td width="48"><label>
-                <input type="submit" name="button" id="button" value="ค้นหา" />
+                <input type="submit" name="any" id="any" value="  ค้นหา  " />
                 </label></td>
                 <td width="849">&nbsp;</td>
               </tr>
@@ -108,7 +109,7 @@ $query="select * from student where std_id='$search_text'";
 $kt=split(" ",$search_text);//Breaking the string to array of words
 // Now let us generate the sql 
 			while(list($key,$val)=each($kt)){
-if($val<>" " and strlen($val) > 0){$q .= " lec_id like '%$val%' or ";}
+if($val<>" " and strlen($val) > 0){$q .= " std_id like '%$val%' or ";}
 			}// end of while
 $q=substr($q,0,(strLen($q)-3));
 // this will remove the last or from the string. 
@@ -117,9 +118,9 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysqli_query("SET NAMES utf-8"); //		for thai input	
+mysqli_query($connection, "SET NAMES utf-8"); //		for thai input	
 $nt=mysqli_query($connection, $query);
-echo mysqli_error();
+echo mysqli_error($connection);
 while($row=mysqli_fetch_array($nt))
 {
 	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
@@ -127,10 +128,10 @@ while($row=mysqli_fetch_array($nt))
       <tr>
 		<td><div align="left"><?php echo $row['std_id']; ?> </div></td>
 		<td><div align="center"><?php echo $row['username']; ?></div></td>
-		<td><div align="left"><?php echo $name?></div></td>
+		<td><div align="left"><?php echo $name; ?></div></td>
         <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php echo $std; ?>">แสดงรายละเอียด</a></div></td>
       </tr>
      <?php } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
