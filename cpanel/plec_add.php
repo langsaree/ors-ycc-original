@@ -12,6 +12,8 @@ $password=$_POST['password'];
 $sql = "insert into lecture (lec_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
 
 $result=mysqli_query($connection, $sql);
+else {
+die("Error db".mysqli_error($connection)); }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
