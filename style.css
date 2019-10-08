@@ -34,6 +34,24 @@ ul{margin:5px;padding-left:20px;}
 .BorderR div{position:absolute;z-index:-1;left:-27px;width:54px;height:100%;background-image:url('images/BorderVertical.png');}
 .BorderC{left:27px;top:27px;right:27px;bottom:27px;background-image:url('images/BorderCenter.png');}
 .BorderBorder{width:850px;margin:5px auto;}
+
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td strong {
+	color: #FFF;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
+	color: #000;
+}
+.Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
+	color: #000;
+}
+.text {
+	font-weight: bold;
+	color: #FFF;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td h3 {
+	font-size: 12px;
+}
+
 .Header{
     position:relative;
     background-image:url('images/Header.png');
@@ -166,6 +184,17 @@ blockquote a:hover{color:#000!important;text-decoration:none;}
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style26 {font-size: 14px; font-weight: bold; }
 .style28 {font-size: 12px; font-weight: bold; }
+.style29 {color: #FF0000; font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; }
+.style30 { font-size: 10px; color: #333333; }
+.style31 {font-size: 10px}
+.style32 {color: #e0f6fc}
+.style34 { color: #FF0000; font-size: 16px; font-family: "Courier New", Courier, monospace; font-weight: bold; }
+.style35 { font-size: 16px; font-weight: bold; }
+.style36 {font-size: 16px}
+.style37 {font-size: 18px}
+.style47 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style48 { color: #000000; font-weight: bold; }
 .style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
 .o {color: #000;}
 .o {font-size: 24px;}
@@ -177,6 +206,14 @@ blockquote a:hover{color:#000!important;text-decoration:none;}
 .o {font-size: 12px;}
 textarea:focus, input:focus {
     border: 2px solid #2B7C41;
+}
+
+.tex2 {
+	color: #FFF;
+	font-weight: bold;
+}
+.c {
+	font-weight: bold;
 }
 
 .submit_Register{
@@ -197,3 +234,67 @@ textarea:focus, input:focus {
         color: #00F;}
 
 .main {	font-size: 14px; font-weight: bold; font-family: Tahoma; text-align: right;}
+
+
+/* ----------- stylized ----------- */
+#stylized{
+    border:solid 2px #b7ddf2;
+    background:#ebf4fb;
+    }
+    #stylized h1 {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+    }
+    #stylized p{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:20px;
+    border-bottom:solid 1px #b7ddf2;
+    padding-bottom:10px;
+    }
+    #stylized label{
+    display:block;
+    font-weight:bold;
+    text-align:right;
+    width:140px;
+    float:left;
+    }
+    #stylized .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:right;
+    width:140px;
+    }
+    #stylized input{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 20px 10px;
+    }
+    #stylized button{
+    clear:both;
+    margin-left:150px;
+    width:125px;
+    height:31px;
+    background:#666666 url(img/button.png) no-repeat;
+    text-align:center;
+    line-height:31px;
+    color:#FFFFFF;
+    font-size:11px;
+    font-weight:bold;
+    }
+
+
+    p, h1, form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+/* ----------- My Form ----------- */
+.myform{
+margin:0 auto;
+width:400px;
+padding:14px;
+}
