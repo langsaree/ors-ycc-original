@@ -1,6 +1,7 @@
-<?
+<?php
 session_start();
-include('auth.php');
+//include('auth.php');
+include ('../db.php');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -52,7 +53,7 @@ body {
 .style49 {font-family: Georgia, "Times New Roman", Times, serif}
 .style50 {color: #FF0000}
 .style52 {color: #FF0000; font-weight: bold; }
--->
+
 </style>
 </head>
 

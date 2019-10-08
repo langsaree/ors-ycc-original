@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('db.php');
-if(!session_is_registered(username))
+include ('../db.php');
+if (!isset($_SESSION["username"]))
 	{
      ///////////////////// code login completed///////////////////
      $username = "";
@@ -80,7 +80,7 @@ if(!session_is_registered(username))
 }
 .style36 {font-size: 16px}
 .style37 {font-size: 18px}
--->
+
     </style>
 </head>
 <body>
@@ -106,7 +106,8 @@ if(!session_is_registered(username))
 
 
 
-	<?php echo $message; ?>		
+  <?php echo $message;
+   ?>		
 	<? echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
