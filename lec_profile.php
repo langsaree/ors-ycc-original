@@ -13,31 +13,6 @@ if(isset($_SESSION["lec_user"])){
     <title>:::  ข้อมูลอาจารย์  :::</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-
-.style25 {font-size: 11px;  }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px;  }
-.main {
-	font-size: 12px; font-weight: bold; font-family: Tahoma;
-}
-.maintext {
-	font-size: 12px; font-weight: bold; font-family: Tahoma; color: #73707D;
-}
-.mainhead {
-	font-size: 14px;
-	font-weight: bold;
-	font-family: Tahoma;
-	color: #00F;
-}
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-
-    </style>
 </head>
 <body>
     <div class="BodyContent">

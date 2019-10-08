@@ -56,7 +56,7 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?php
+  <?php
 	include('db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysqli_query($connection, $sql);
@@ -92,6 +92,7 @@ body {
             <td><input type="text" name="postcode" /></td>
           </tr>
         </table>
+  <?php } ?>
         <p>
           <input name="Update" type="submit" id="Update" value="Update" />
         </p>
