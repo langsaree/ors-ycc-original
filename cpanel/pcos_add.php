@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include ('../db.php');
 $cos_id = $_POST['cos_id'];
 $cos_name = $_POST['cos_name'];
 $cos_period = $_POST['cos_period'];
@@ -9,7 +9,7 @@ $cos_time =$_POST['cos_time'];
 $date = $cos_day."/". $cos_after ."/". $cos_time;
 $lec_id =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
-//mysql_query ("SET NAMES 'utf8'");
+mysql_query ($connection, "SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
 $result = mysqli_query($connection, $sql);
 if (!$result)	
