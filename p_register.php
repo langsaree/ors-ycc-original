@@ -44,14 +44,14 @@ die("could not connect db".mysql_error());
 <meta http-equiv="refresh"content="3; url='home.php' charset=tis-620" />
 <title>Untitled Document</title>
 <style type="text/css">
-<!--
+
 .style1 {
 	font-size: 36px;
 	color: #DD0000;
 	font-weight: bold;
 }
 .style4 {color: #0000FF}
--->
+
 </style>
 </head>
 

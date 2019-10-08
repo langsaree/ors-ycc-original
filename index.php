@@ -19,8 +19,8 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 
     include "./template/login_form.php";
 
-} else {  
-  
+} else {
+
     include "./template/logined.php";
 }
 

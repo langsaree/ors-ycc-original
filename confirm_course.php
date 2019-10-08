@@ -4,94 +4,26 @@ session_start();
 include('db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
+
+include "./template/header.php";
+echo "<title>ยืนยันการลงทะเบียน</title>";
+
 // if(!isset($_SESSION["username"])){header("location:register.php");}
-if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
-	{
-    include('login_check.php');
-?>
+if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+{
+    if (isset($_POST['username'])) {
+        $message = $auth->login_check($_POST);
+    }
 
+    if (isset($message)) {
+      echo '<span style="color:red">' . $message . '</span>';
+    }
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    include "./template/login_form.php";
 
-    <title>ยืนยันการลงทะเบียน</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
+} else {  
 
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td strong {
-	color: #FFF;
-}
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
-	color: #000;
-}
-.Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
-	color: #000;
-}
-.text {
-	font-weight: bold;
-	color: #FFF;
-}
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td h3 {
-	font-size: 12px;
-}
-.tex2 {
-	color: #FFF;
-	font-weight: bold;
-}
-.c {
-	font-weight: bold;
-}
-.style47 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style48 {
-	color: #000000;
-	font-weight: bold;
-}
-
-    </style>
-</head>
-<body>
-    <div class="BodyContent">
-<div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
-      <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
-      <div class="Border">
-
-        <div class="Menu">
-            <ul>
-              <li></li> 
-              <li></li> 
-              <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
-                 <input name="text" type="text" style="width:120px" />
-                 <span class="ButtonInput"><span>
-                 <input type="button" value="Search" />
-                 </span></span></ul>
-        </div>
-        <div class="Header">
-        <div class="HeaderTitle">
-          <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
-          <h1>&nbsp;</h1>
-        </div>
-        </div><div class="Columns"><div class="Column1">
-         
-          <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-             
-            </table>
-
-<?php if (isset($message)) { echo $message; }?>
-<?php
-    include("not_logined.php");
-} 
-else {
-    include("logined.php");
+    include "./template/logined.php";
 }
 ?>
             <br>

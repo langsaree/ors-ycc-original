@@ -26,15 +26,15 @@ else
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
-</style></head>
+</style>
+</head>
 
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
@@ -57,6 +57,6 @@ body {
     <tr>
       <td valign="baseline"><img src="image/footer.jpg" width="1260" height="76" /></td>
     </tr>
-  </table> <? } ?>
+  </table> <?php } ?>
 </body>
 </html>
