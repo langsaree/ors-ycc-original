@@ -10,6 +10,6 @@ $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase);
 $conn->query("set names utf8");
 
 if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
