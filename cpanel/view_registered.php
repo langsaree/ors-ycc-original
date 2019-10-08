@@ -145,7 +145,7 @@ body {
 		$name= $ro1['f_name']."<span>".$ro1['name']."-".$ro1['s_name'];
 	
 	//////////////////forth/////////////////////
-    $sql2 = "select * from lecture where lec_id = '$lec' ";
+    $sql2 = "select * from lecturer where lec_id = '$lec' ";
 	  $a =mysqli_query ($connection,$sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{

@@ -8,7 +8,7 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>search lecture</title>
+<title>search lecturer</title>
 <style type="text/css">
 <!--
 body {
@@ -72,7 +72,7 @@ body {
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="image/search lecture.png" width="128" height="128" /></td>
+        <td width="6%" align="center"><img src="image/search lecturer.png" width="128" height="128" /></td>
         <td width="94%"><span class="style26"><span class="style36">Search<span class="style38"> Lecturer Information</span></span></span> | <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a>| <a href="manage_lecturer.php" class="style6" style="text-decoration:none">ManageLecturer</a><br />
           <span class="style34">ค้นหา<span class="style48">ข้อมูลอาจารย์ผู้สอน</span></span></td>
         </tr>

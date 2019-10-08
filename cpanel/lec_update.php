@@ -9,7 +9,7 @@ $error="";
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>update lecture</title>
+<title>update lecturer</title>
 <style type="text/css">
 <!--
 body {
@@ -81,7 +81,7 @@ body {
           <tr>
 <?
 include ('db.php');
-$sql = "select * from lecture where lec_id='$lec_id'";
+$sql = "select * from lecturer where lec_id='$lec_id'";
 $result = mysqli_query($connection,$sql);
 while($result_row = mysqli_fetch_array($result))
 {  

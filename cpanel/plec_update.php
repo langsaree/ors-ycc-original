@@ -9,7 +9,7 @@ $lec_comment= $_POST['lec_comment'];
 
 #$sql = "insert into lecturer (lec_id, lec_name, lec_tel, lec_email, lec_comment) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment')";
 
-$sql = "update lecture set lec_id='$lec_id', lec_name='$lec_name', lec_tel='$lec_tel', lec_email='$lec_email', lec_comment='$lec_comment' where lec_id ='$lec_id'";
+$sql = "update lecturer set lec_id='$lec_id', lec_name='$lec_name', lec_tel='$lec_tel', lec_email='$lec_email', lec_comment='$lec_comment' where lec_id ='$lec_id'";
 
 $result=mysqli_query($connection,$sql);
 

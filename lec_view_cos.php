@@ -137,8 +137,8 @@ include('db.php');
               </tr>
               <? 
 			include('db.php');
-	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
+	        //$sql="select * from lecturer,course where lecturer.cos_id=course.cos_id and username='$lec_user' ";
+			$sql = "select * from lecturer,course where course.lec_id=lecturer.lec_id and username='$username'";
             $result=mysqli_query($connection,$sql);
             while ($row=mysqli_fetch_array($result)){
 		     ?>
@@ -168,3 +168,11 @@ include('db.php');
 <p>&nbsp;</p>
           </div>
         </div>
+        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        </div>
+        </div></div>
+        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
+    </div>
+</div>
+</body>
+</html>

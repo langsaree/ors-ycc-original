@@ -121,7 +121,7 @@ input:focus, textarea:focus {
 				$email=$_POST['email'];
 				$phone=$_POST['phone'];
 				
-				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
+				$sql="UPDATE lecturer SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
 				$do=mysqli_query($connection,$sql);
 				if($do){
 					header("location:lec_profile.php");
@@ -135,7 +135,7 @@ input:focus, textarea:focus {
             <table width="600">
              <? 
 			
-			$sql = "select * from lecture where username='$username'";
+			$sql = "select * from lecturer where username='$username'";
             $result=mysqli_query($connection,$sql);
             ($row=mysqli_fetch_array($result));
 		    ?>

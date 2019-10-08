@@ -15,7 +15,7 @@ $row=mysqli_fetch_array($result);
 $std_id=$row['std_id'];
 //echo "$std_id"; 
 
-$sql2="select * from lecture,course where course.lec_id=lecture.lec_id and cos_id='$cos_id'";
+$sql2="select * from lecturer,course where course.lec_id=lecturer.lec_id and cos_id='$cos_id'";
 $do2=mysqli_query($connection, $sql2);
 $this2=mysqli_fetch_array($do2);
 $lec_id=$this2['lec_id'];

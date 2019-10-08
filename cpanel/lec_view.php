@@ -9,7 +9,7 @@ $success="";
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>view lecture</title>
+<title>view lecturer</title>
 <style type="text/css">
 <!--
 body {
@@ -62,7 +62,7 @@ body {
   <tr>
     <td width="1261" height="74" valign="top"><table width="92%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="15%" align="center"><img src="image/view lecture.png" width="122" height="111" /></td>
+        <td width="15%" align="center"><img src="image/view lecturer.png" width="122" height="111" /></td>
         <td width="73%" align="left"><span class="style26"><span class="style36">View<span class="style38"> Lecturer Information&nbsp;&nbsp;</span></span></span>| <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> | <a href="manage_lecturer.php" class="style6" style="text-decoration:none">ManageLecturer</a><br />
             <span class="style34">แสดงอาจารย์ผู้สอน</span></td>
         <td width="12%">&nbsp;</td>
@@ -97,7 +97,7 @@ body {
                <? 
 include ('db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
-$sql = "select* from lecture";
+$sql = "select* from lecturer";
 $result = mysqli_query($connection,$sql);
 #while($result_row = mysql_fetch_row($result))  
 while($row=mysqli_fetch_array($result))

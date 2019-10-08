@@ -67,7 +67,7 @@ body {
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/search lecture.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../image/search lecturer.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Search<span class="style54"> Lecturer Information</span></span></span><br />
             <span class="style34">ค้นหา<span class="style48">ข้อมูลอาจารย์ผู้สอน</span></span></td>
         </tr>
@@ -122,7 +122,7 @@ if($search_text==""){$search_text="blank";}
 
 if($type<>"any"){
 //$query="select * from $m where s_id='$search_text'";
-$query="select * from lecture where lec_id='$search_text'";
+$query="select * from lecturer where lec_id='$search_text'";
 		}else{
 $kt=split(" ",$search_text);//Breaking the string to array of words
 // Now let us generate the sql 
@@ -131,7 +131,7 @@ if($val<>" " and strlen($val) > 0){$q .= " lec_id like '%$val%' or ";}
 			}// end of while
 $q=substr($q,0,(strLen($q)-3));
 // this will remove the last or from the string. 
-$query="select * from lecture where $q order by lec_id limit 0, 20"; // start search query list as limit result at 10 result at a time
+$query="select * from lecturer where $q order by lec_id limit 0, 20"; // start search query list as limit result at 10 result at a time
 		} // end of if else based on type value
 //echo $query;
 

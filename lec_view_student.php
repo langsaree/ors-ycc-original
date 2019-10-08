@@ -124,9 +124,9 @@ include('db.php');
               </tr>
               <? 
 			include('db.php');
-	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
-			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
+	        //$sql="select * from lecturer,course where lecturer.cos_id=course.cos_id and username='$lec_user' ";
+			//$sql = "select * from register,lecturer,course where lecturer.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
+			$sql = "select * from register,lecturer,course where lecturer.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
 			
             $result=mysqli_query($connection,$sql);
             while($row=mysqli_fetch_array($result)){

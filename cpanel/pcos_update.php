@@ -10,7 +10,7 @@ $cos_comment =$_POST['cos_comment'];
 mysqli_query ($connection,"SET NAMES 'utf8'");
 
 $sql = "UPDATE course SET cos_id='$cos_id',cos_group='$cos_group',cos_name='$cos_name',cos_period='$cos_period',cos_day='$cos_day',lec_id='$lec_id',cos_comment='$cos_comment' where cos_id='$cos_id'";
-$sql1 = "UPDATE lecture SET lec_id='$lec_id' WHERE lec_id='$lec_id'";
+$sql1 = "UPDATE lecturer SET lec_id='$lec_id' WHERE lec_id='$lec_id'";
 $re = mysqli_query($connection, $sql1);
 $result = mysqli_query($connection,$sql);
 if (!$result && !$re)	
