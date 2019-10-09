@@ -1,8 +1,9 @@
 <?php
 session_start();
-include 'db.php';
 include 'class/auth.class.php';
 $auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
 
 include "./template/header.php";
 echo "<title>ประชาสัมพันธ์</title>";

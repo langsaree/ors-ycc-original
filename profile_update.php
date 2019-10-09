@@ -1,7 +1,10 @@
 <?php
 session_start();
-include 'auth.php';
-include 'db.php';
+include 'class/auth.class.php';
+$auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
+
 extract($_GET);
 $username = $_SESSION['username'];
 $user = $_GET['id'];

@@ -1,6 +1,10 @@
 <?php
 session_start();
-include('db.php');
+include 'class/auth.class.php';
+$auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
+
 if(!isset($_SESSION["lec_user"])){header("location:index.php");}
 if(isset($_SESSION["lec_user"])){
   $username=$_SESSION["lec_user"];

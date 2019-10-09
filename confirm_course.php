@@ -1,7 +1,10 @@
 <?php
 session_start();
-// $username=$_SESSION["username"];
-include('db.php');
+include 'class/auth.class.php';
+$auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
+
 extract ($_GET);
 $cos_id=$_GET['id'];
 
