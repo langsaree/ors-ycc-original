@@ -2,26 +2,383 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.buildpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/.dataModel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" afterPath="$PROJECT_DIR$/ann.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" afterPath="$PROJECT_DIR$/college.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" afterPath="$PROJECT_DIR$/course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/course_detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.php.core.projectOptions.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_notes/std_profile.php.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_notes/std_view.php.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bk_modify_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/d41d8cd9.datamodel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classic-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classic-map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/count1-100.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_active.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_del.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cpanel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cpanel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/4099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/Delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/MSN MESSENGER 15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/PhotoshopSZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/Shutdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/Stats.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/View.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/_notes/update.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/_notes/update.png.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/_notes/v.png.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/active.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/active_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/add_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/add_grade .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/add_lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/bg-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/bg-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/controlPanel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/database.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/delete evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/delete lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/delete_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/delete_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/edit-find.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/footer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/gear2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/lecture Manager.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/lecturer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/list-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/manage register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/manage student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/manage_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/manage_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/non-active.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/non-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/osa_user_blue_sysadmin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/p_Image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/regi corse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/register change form.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/register course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/register_form.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/search lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/search_course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/search_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/search_lec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/search_student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/std_infor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student course status.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student status.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/student view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/update lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/update_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/update_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/view evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/view lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/view register course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/view_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/view_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/image/view_lec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/js/example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/js/min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_search.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_evaluation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_grade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_lecturer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_statis.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_std_status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/manage_student.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_search.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pstd_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_active.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view_cos_status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view_search.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/admin.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/joblist.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/mrmrs.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ors_ycc(2).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ors_ycc(3).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ors_ycc(4).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ors_ycc.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/student.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/imga4838.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/imga4884.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/imga4900.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/pb0585791.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/pb058590.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleria.classic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleria.classic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/idea/ors-ycc-original.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650148_DeleteRed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650438_Shutdown_Box_Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650538_Cute Ball - Shutdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650560_Circle_Blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1295339949_pen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1295340314_old-edit-find.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/4099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Horsligne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Live Messenger22322.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/MSN MESSENGER 15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/PhotoshopSZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/View.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_notes/update.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_notes/update.png.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_notes/v.png.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about-us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about-us_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add_grade .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add_lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/advicer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/applyForm-page_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/applyForm-page_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b-search.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b1b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b1f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b1r.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/back-button.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/bbbb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/bd1L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/contect-us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/contect-us_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/controlPanel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/controlPanel_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/couse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/couse_C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cpanel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/default_avatar_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/display.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/f2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/footer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/gear2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/header-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/home_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/images3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/images4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/infor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/infor_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/invisible22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/l.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lec_view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lecture Manager.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lecturer.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lecturer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/list-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/man form.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/news.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/news_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/office22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/officer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/osa_user_blue_sysadmin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/p_Image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/picture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/picture_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/regi corse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/register change form.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/register course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/register_form.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_lec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/std_infor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student course status.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student status.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view register course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view_lec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/web-background-008.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/web-background-008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ycc_bg_1_2 copy1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButtonAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockHeader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockHeaderAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ButtonAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuBar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuButtonAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/_notes/2.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/_notes/dwsync.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/_notes/untitled.jpg.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cregister.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p_Image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/untitled.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ycc_banner_real.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ตราโลโก้.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ยืนยันการสมัคร.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/login.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-book/ORS-YCC.PDF" beforeDir="false" afterPath="$PROJECT_DIR$/project-book/ORS-YCC.PDF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/register_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_login_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/std_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/galleria.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_view_cos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_view_student.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/password_recovery.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/org.eclipse.php.core.projectOptions.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_bk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,260 +391,39 @@
       <executable />
     </execution>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3555">
-              <caret line="237" column="24" selection-start-line="237" selection-start-column="24" selection-end-line="237" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1395">
-              <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/profile_update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6675">
-              <caret line="281" column="79" selection-start-line="281" selection-start-column="79" selection-end-line="281" selection-end-column="79" />
-              <caret line="281" column="84" selection-start-line="281" selection-start-column="84" selection-end-line="281" selection-end-column="84" />
-              <caret line="287" column="83" selection-start-line="287" selection-start-column="83" selection-end-line="287" selection-end-column="83" />
-              <caret line="287" column="90" selection-start-line="287" selection-start-column="90" selection-end-line="287" selection-end-column="90" />
-              <caret line="296" column="83" selection-start-line="296" selection-start-column="83" selection-end-line="296" selection-end-column="83" />
-              <caret line="296" column="90" selection-start-line="296" selection-start-column="90" selection-end-line="296" selection-end-column="90" />
-              <caret line="306" column="81" selection-start-line="306" selection-start-column="81" selection-end-line="306" selection-end-column="81" />
-              <caret line="306" column="88" selection-start-line="306" selection-start-column="88" selection-end-line="306" selection-end-column="88" />
-              <caret line="315" column="87" selection-start-line="315" selection-start-column="87" selection-end-line="315" selection-end-column="87" />
-              <caret line="315" column="96" selection-start-line="315" selection-start-column="96" selection-end-line="315" selection-end-column="96" />
-              <caret line="323" column="38" selection-start-line="323" selection-start-column="38" selection-end-line="323" selection-end-column="38" />
-              <caret line="323" column="45" selection-start-line="323" selection-start-column="45" selection-end-line="323" selection-end-column="45" />
-              <caret line="332" column="87" selection-start-line="332" selection-start-column="87" selection-end-line="332" selection-end-column="87" />
-              <caret line="332" column="96" selection-start-line="332" selection-start-column="96" selection-end-line="332" selection-end-column="96" />
-              <caret line="341" column="98" selection-start-line="341" selection-start-column="98" selection-end-line="341" selection-end-column="98" />
-              <caret line="341" column="105" selection-start-line="341" selection-start-column="105" selection-end-line="341" selection-end-column="105" />
-              <caret line="358" column="90" selection-start-line="358" selection-start-column="90" selection-end-line="358" selection-end-column="90" />
-              <caret line="358" column="98" selection-start-line="358" selection-start-column="98" selection-end-line="358" selection-end-column="98" />
-              <caret line="366" column="79" selection-start-line="366" selection-start-column="79" selection-end-line="366" selection-end-column="79" />
-              <caret line="366" column="84" selection-start-line="366" selection-start-column="84" selection-end-line="366" selection-end-column="84" />
-              <caret line="375" column="87" selection-start-line="375" selection-start-column="87" selection-end-line="375" selection-end-column="87" />
-              <caret line="375" column="96" selection-start-line="375" selection-start-column="96" selection-end-line="375" selection-end-column="96" />
-              <caret line="384" column="91" selection-start-line="384" selection-start-column="91" selection-end-line="384" selection-end-column="91" />
-              <caret line="384" column="102" selection-start-line="384" selection-start-column="102" selection-end-line="384" selection-end-column="102" />
-              <caret line="392" column="83" selection-start-line="392" selection-start-column="83" selection-end-line="392" selection-end-column="83" />
-              <caret line="392" column="89" selection-start-line="392" selection-start-column="89" selection-end-line="392" selection-end-column="89" />
-              <caret line="401" column="81" selection-start-line="401" selection-start-column="81" selection-end-line="401" selection-end-column="81" />
-              <caret line="401" column="87" selection-start-line="401" selection-start-column="87" selection-end-line="401" selection-end-column="87" />
-              <caret line="418" column="87" selection-start-line="418" selection-start-column="87" selection-end-line="418" selection-end-column="87" />
-              <caret line="418" column="96" selection-start-line="418" selection-start-column="96" selection-end-line="418" selection-end-column="96" />
-              <caret line="427" column="87" selection-start-line="427" selection-start-column="87" selection-end-line="427" selection-end-column="87" />
-              <caret line="427" column="96" selection-start-line="427" selection-start-column="96" selection-end-line="427" selection-end-column="96" />
-              <caret line="436" column="93" selection-start-line="436" selection-start-column="93" selection-end-line="436" selection-end-column="93" />
-              <caret line="436" column="105" selection-start-line="436" selection-start-column="105" selection-end-line="436" selection-end-column="105" />
-              <caret line="445" column="85" selection-start-line="445" selection-start-column="85" selection-end-line="445" selection-end-column="85" />
-              <caret line="445" column="93" selection-start-line="445" selection-start-column="93" selection-end-line="445" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contact_us.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3645">
-              <caret line="243" column="24" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/register_course.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="576" column="8" selection-start-line="576" selection-start-column="8" selection-end-line="576" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/std_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="154" column="41" selection-start-line="154" selection-start-column="41" selection-end-line="154" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pdf.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="33" lean-forward="true" selection-start-line="9" selection-end-line="11" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="114" column="55" lean-forward="true" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2790">
-              <caret line="186" column="1" lean-forward="true" selection-start-line="162" selection-end-line="186" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>$std</find>
-      <find>classic</find>
-      <find>$username</find>
-      <find>course_</find>
-      <find>.php</find>
-      <find>$row</find>
-      <find>เข้า</find>
-      <find>../</find>
-      <find>form</find>
-      <find>$login</find>
-      <find>$ok</find>
-      <find>input</find>
-      <find>action</find>
-      <find>job</find>
-    </findStrings>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/db.php" />
-        <option value="$PROJECT_DIR$/course_detail.php" />
-        <option value="$PROJECT_DIR$/gallary.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/include/menu" />
-        <option value="$PROJECT_DIR$/include/menu.php" />
-        <option value="$PROJECT_DIR$/include/footer.php" />
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/std_login_check.php" />
-        <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/ann.php" />
-        <option value="$PROJECT_DIR$/include/login.php" />
-        <option value="$PROJECT_DIR$/include/action_contact_us.php" />
-        <option value="$PROJECT_DIR$/pdf.php" />
-        <option value="$PROJECT_DIR$/auth.php" />
-        <option value="$PROJECT_DIR$/profile_update.php" />
-        <option value="$PROJECT_DIR$/college.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/course.php" />
-        <option value="$PROJECT_DIR$/std_profile.php" />
-        <option value="$PROJECT_DIR$/contact_us.php" />
-        <option value="$PROJECT_DIR$/register_course.php" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="826" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ors-ycc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ors-ycc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ors-ycc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ors-ycc" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1PzsSMcgWMd954WHA3FfVlzYoXo" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public/js/gallary" />
+      <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/include" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -320,312 +456,60 @@
       <workItem from="1564027322301" duration="27651000" />
       <workItem from="1564458888348" duration="9998000" />
       <workItem from="1564478879969" duration="15205000" />
-      <workItem from="1564903594518" duration="575000" />
+      <workItem from="1564903594518" duration="26464000" />
+      <workItem from="1565598742861" duration="1529000" />
+      <workItem from="1566117228307" duration="329000" />
+      <workItem from="1566282309056" duration="1677000" />
+      <workItem from="1566888263439" duration="253000" />
+      <workItem from="1567171474746" duration="7774000" />
+      <workItem from="1567500673202" duration="1892000" />
+      <workItem from="1567513505346" duration="513000" />
+      <workItem from="1567949113307" duration="35000" />
+      <workItem from="1567950368056" duration="22000" />
+      <workItem from="1568634865137" duration="18088000" />
+      <workItem from="1568813023769" duration="31254000" />
+      <workItem from="1568968631380" duration="172000" />
+      <workItem from="1569283101298" duration="7307000" />
+      <workItem from="1570505908750" duration="551000" />
+      <workItem from="1570508630170" duration="28000" />
+      <workItem from="1570508675795" duration="212000" />
+      <workItem from="1570520269446" duration="211000" />
+      <workItem from="1570521452990" duration="54000" />
+      <workItem from="1570523668206" duration="732000" />
+      <workItem from="1570540997504" duration="2088000" />
+      <workItem from="1570630088920" duration="4457000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64870000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="826" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17095852" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32970026" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/admin.sql" />
-    <entry file="file://$PROJECT_DIR$/db/ors_ycc.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="258" column="41" selection-start-line="258" selection-start-column="41" selection-end-line="258" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lec_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallary/imga4884.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallary/imga4838.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallary/imga4900.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallary/pb058590.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/menu" />
-    <entry file="file://$PROJECT_DIR$/style_bk.css" />
-    <entry file="file://$PROJECT_DIR$/include/menu.php" />
-    <entry file="file://$PROJECT_DIR$/login_check.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="139" column="71" selection-start-line="139" selection-start-column="71" selection-end-line="139" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ann.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="232" column="30" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/action_contact_us.php" />
-    <entry file="file://$PROJECT_DIR$/std_login_check.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3555">
-          <caret line="237" column="24" selection-start-line="237" selection-start-column="24" selection-end-line="237" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profile_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6675">
-          <caret line="281" column="79" selection-start-line="281" selection-start-column="79" selection-end-line="281" selection-end-column="79" />
-          <caret line="281" column="84" selection-start-line="281" selection-start-column="84" selection-end-line="281" selection-end-column="84" />
-          <caret line="287" column="83" selection-start-line="287" selection-start-column="83" selection-end-line="287" selection-end-column="83" />
-          <caret line="287" column="90" selection-start-line="287" selection-start-column="90" selection-end-line="287" selection-end-column="90" />
-          <caret line="296" column="83" selection-start-line="296" selection-start-column="83" selection-end-line="296" selection-end-column="83" />
-          <caret line="296" column="90" selection-start-line="296" selection-start-column="90" selection-end-line="296" selection-end-column="90" />
-          <caret line="306" column="81" selection-start-line="306" selection-start-column="81" selection-end-line="306" selection-end-column="81" />
-          <caret line="306" column="88" selection-start-line="306" selection-start-column="88" selection-end-line="306" selection-end-column="88" />
-          <caret line="315" column="87" selection-start-line="315" selection-start-column="87" selection-end-line="315" selection-end-column="87" />
-          <caret line="315" column="96" selection-start-line="315" selection-start-column="96" selection-end-line="315" selection-end-column="96" />
-          <caret line="323" column="38" selection-start-line="323" selection-start-column="38" selection-end-line="323" selection-end-column="38" />
-          <caret line="323" column="45" selection-start-line="323" selection-start-column="45" selection-end-line="323" selection-end-column="45" />
-          <caret line="332" column="87" selection-start-line="332" selection-start-column="87" selection-end-line="332" selection-end-column="87" />
-          <caret line="332" column="96" selection-start-line="332" selection-start-column="96" selection-end-line="332" selection-end-column="96" />
-          <caret line="341" column="98" selection-start-line="341" selection-start-column="98" selection-end-line="341" selection-end-column="98" />
-          <caret line="341" column="105" selection-start-line="341" selection-start-column="105" selection-end-line="341" selection-end-column="105" />
-          <caret line="358" column="90" selection-start-line="358" selection-start-column="90" selection-end-line="358" selection-end-column="90" />
-          <caret line="358" column="98" selection-start-line="358" selection-start-column="98" selection-end-line="358" selection-end-column="98" />
-          <caret line="366" column="79" selection-start-line="366" selection-start-column="79" selection-end-line="366" selection-end-column="79" />
-          <caret line="366" column="84" selection-start-line="366" selection-start-column="84" selection-end-line="366" selection-end-column="84" />
-          <caret line="375" column="87" selection-start-line="375" selection-start-column="87" selection-end-line="375" selection-end-column="87" />
-          <caret line="375" column="96" selection-start-line="375" selection-start-column="96" selection-end-line="375" selection-end-column="96" />
-          <caret line="384" column="91" selection-start-line="384" selection-start-column="91" selection-end-line="384" selection-end-column="91" />
-          <caret line="384" column="102" selection-start-line="384" selection-start-column="102" selection-end-line="384" selection-end-column="102" />
-          <caret line="392" column="83" selection-start-line="392" selection-start-column="83" selection-end-line="392" selection-end-column="83" />
-          <caret line="392" column="89" selection-start-line="392" selection-start-column="89" selection-end-line="392" selection-end-column="89" />
-          <caret line="401" column="81" selection-start-line="401" selection-start-column="81" selection-end-line="401" selection-end-column="81" />
-          <caret line="401" column="87" selection-start-line="401" selection-start-column="87" selection-end-line="401" selection-end-column="87" />
-          <caret line="418" column="87" selection-start-line="418" selection-start-column="87" selection-end-line="418" selection-end-column="87" />
-          <caret line="418" column="96" selection-start-line="418" selection-start-column="96" selection-end-line="418" selection-end-column="96" />
-          <caret line="427" column="87" selection-start-line="427" selection-start-column="87" selection-end-line="427" selection-end-column="87" />
-          <caret line="427" column="96" selection-start-line="427" selection-start-column="96" selection-end-line="427" selection-end-column="96" />
-          <caret line="436" column="93" selection-start-line="436" selection-start-column="93" selection-end-line="436" selection-end-column="93" />
-          <caret line="436" column="105" selection-start-line="436" selection-start-column="105" selection-end-line="436" selection-end-column="105" />
-          <caret line="445" column="85" selection-start-line="445" selection-start-column="85" selection-end-line="445" selection-end-column="85" />
-          <caret line="445" column="93" selection-start-line="445" selection-start-column="93" selection-end-line="445" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact_us.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3645">
-          <caret line="243" column="24" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/std_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="154" column="41" selection-start-line="154" selection-start-column="41" selection-end-line="154" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="9" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="114" column="55" lean-forward="true" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="186" column="1" lean-forward="true" selection-start-line="162" selection-end-line="186" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register_course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="576" column="8" selection-start-line="576" selection-start-column="8" selection-end-line="576" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>
