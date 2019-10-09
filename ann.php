@@ -25,7 +25,6 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
     include "./template/logined.php";
 }
 ?>
-        <title>ประชาสัมพันธ์</title>
             <br>
           </div>
           <div class="Block">
@@ -50,13 +49,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
         </div>
         </div>
 
-
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-        </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>
-    </div>
-</div>
+        <?php include "./template/footer.php"; ?>
+        
     </body>
 </html>
