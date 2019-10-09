@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/grade_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/grade_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/lec_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/view_registered.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,39 +18,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/cos_add.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cpanel/view_registered.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="298" column="84" lean-forward="true" selection-start-line="298" selection-start-column="84" selection-end-line="298" selection-end-column="84" />
+            <state relative-caret-position="517">
+              <caret line="173" column="94" selection-start-line="173" selection-start-column="94" selection-end-line="173" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/grade_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cpanel/grade_update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -97,13 +67,14 @@
         <option value="$PROJECT_DIR$/cpanel/cos_add.php" />
         <option value="$PROJECT_DIR$/cpanel/grade_view.php" />
         <option value="$PROJECT_DIR$/cpanel/grade_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/view_registered.php" />
       </list>
     </option>
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="697" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="722" />
+    <option name="width" value="651" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -111,6 +82,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,24 +98,12 @@
             <path>
               <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="fix2019" type="462c0819:PsiDirectoryNode" />
-              <item name="cpanel" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix2019" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix2019" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,16 +143,19 @@
       <workItem from="1568964599047" duration="9791000" />
       <workItem from="1569313601577" duration="754000" />
       <workItem from="1570521293015" duration="5516000" />
+      <workItem from="1570548061498" duration="618000" />
+      <workItem from="1570634328868" duration="3748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32178000" />
+    <option name="totallyTimeSpent" value="36544000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="722" y="0" width="651" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19818456" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.42386186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -670,43 +633,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="298" column="84" lean-forward="true" selection-start-line="298" selection-start-column="84" selection-end-line="298" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/Header.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/image/view_grade.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/cos_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="298" column="84" selection-start-line="298" selection-start-column="84" selection-end-line="298" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/grade_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="526">
           <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/grade_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/image/header-bg.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_update.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/view_registered.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        <state relative-caret-position="517">
+          <caret line="173" column="94" selection-start-line="173" selection-start-column="94" selection-end-line="173" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
