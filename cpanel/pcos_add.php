@@ -22,7 +22,7 @@ else
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>การจัดการหลักสูตร</title>
 <style type="text/css">
 <!--
 body {
@@ -31,7 +31,7 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
+
 </style></head>
 
 <body>
@@ -55,6 +55,6 @@ body {
     <tr>
       <td valign="baseline"><img src="image/footer.jpg" width="1260" height="76" /></td>
     </tr>
-  </table> <? //} ?>
+  </table> <?php //} ?>
 </body>
 </html>

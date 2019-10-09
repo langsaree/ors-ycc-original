@@ -1,8 +1,8 @@
-<?
+<?php
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
+include "../db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
@@ -50,7 +50,7 @@ body {
 	font-weight: bold;
 }
 .style55 {font-family: Georgia, "Times New Roman", Times, serif}
--->
+
 </style>
 </head>
 <body>
@@ -96,7 +96,7 @@ body {
         <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
         <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
       </tr>
-  <?
+  <?php
 // check for blank input
 if($search_text==""){$search_text="blank";}
 // end of check
@@ -117,22 +117,22 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt))
+mysqli_query("SET NAMES utf-8"); //		for thai input	
+$nt=mysqli_query($connection,$query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($connection,$nt))
 {
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
 ?>          
             </tr>
             <tr>
-              <td align="center"><?PHP echo $row[std_id]; ?></td>
-      <td align="center" bordercolor="#FFFFFF"><? echo $row[username]; ?></td>
-      <td align="center"><?= $name ?></td>
+              <td align="center"><?php echo $row['std_id']; ?></td>
+      <td align="center" bordercolor="#FFFFFF"><?php echo $row[username]; ?></td>
+      <td align="center"><?php echo $name ?></td>
       <td align="center"></td>
       <td align="center"></td>
-      <td><div align="center"><a href="std_profile.php?id= <? echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
-            <?
+      <td><div align="center"><a href="std_profile.php?id= <?php echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
+            <?php
 	}
 	}
 	?>

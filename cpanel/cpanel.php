@@ -84,7 +84,7 @@
       <tr>
         <td class="style41">&nbsp;</td>
         <td class="style41"><a href="register_course.php" class="style41">ลงทะเบียนวิชา</a></td>
-        <td class="style41">การจัดการสถานะนักศึกษา</td>
+        <td class="style41"><a href="manage_std_status.php" class="style41">การจัดการสถานะนักศึกษา</a></td>
         <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
         <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
         <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>
