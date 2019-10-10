@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include('../db.php');
 //include('auth.php');
 extract($_GET);
 $user_admin = $_SESSION["user_admin"];
@@ -130,7 +130,7 @@ if (!empty($active)) {
                 </tr>
 
                 <?php
-                include('db.php');
+                include('../db.php');
                 ////////first///////////////
                 $reg = "select * from register ORDER BY std_id DESC ";
                 $r = mysqli_query($conn, $reg);

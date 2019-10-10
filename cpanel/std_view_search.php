@@ -1,12 +1,13 @@
-<?
+<?php
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
+include "../db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
-$type=$_POST['type'];
+//$type=$_POST['type'];
+$type="";
 
 $search_text=ltrim($search_text);
 $search_text=rtrim($search_text);
@@ -56,7 +57,7 @@ body {
 <body>
 <table width="998" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td width="1045"><img src="../image/header-bg.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -64,7 +65,7 @@ body {
     <td width="1027" height="74" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br /><br />
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
@@ -96,7 +97,7 @@ body {
         <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
         <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
       </tr>
-  <?
+  <?php
 // check for blank input
 if($search_text==""){$search_text="blank";}
 // end of check
@@ -117,22 +118,22 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysqli_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysqli_query($query);
-echo mysqli_error();
+mysqli_query($conn,"SET NAMES utf-8"); //		for thai input
+$nt=mysqli_query($conn,$query);
+echo mysqli_error($conn);
 while($row=mysqli_fetch_array($nt))
 {
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
 ?>          
       <tr>
-		<td><div align="left"><?= $row[std_id]; ?> </div></td>
-		<td><div align="center"><?= $row[username]; ?></div></td>
-		<td><div align="left"><?= $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<? echo $std;?>">แสดงรายละเอียด</a></div></td>
+		<td><div align="left"><?php echo $row['std_id']; ?> </div></td>
+		<td><div align="center"><?php echo$row['username']; ?></div></td>
+		<td><div align="left"><?php echo $name?></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <? } ////// close first while //////////////////////////////////////////////
+     <?php } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
 		//} /////// close 3rd while ///////////////////////
 		?>

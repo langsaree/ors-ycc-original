@@ -49,7 +49,7 @@ body {
     <td><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
         <tr>
           <td width="6%" align="center"><img src="image/manage_grade.png" width="128" height="128" /></td>
-          <td width="94%"><span class="style26"><span class="style36">Manage Grade</span></span><br />
+          <td width="94%"><span class="style26"><span class="style36">Manage Grade</span></span><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a><br />
             <span class="style34">การจัดการเกรด</span></td>
           <td width="94%">&nbsp;</td>
         </tr>

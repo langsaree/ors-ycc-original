@@ -1,9 +1,9 @@
 <?php
-include('auth.php');
-include('db.php');
+//include('auth.php');
+include('../db.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
+//$active = $active;
+//$non_active = $non_active;
 
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
@@ -123,12 +123,12 @@ non {
     <td>&nbsp;</td>
   </tr>
 </table>
-<table width="1024" border="0" cellpadding="0" cellspacing="0"> <?php if($msg){?>
+<table width="1024" border="0" cellpadding="0" cellspacing="0"> <?php error_reporting('E_ALL & ~E_NOTICE'); if($msg){?>
   <tr>
     <td width="26" height="61">&nbsp;</td>
     <td width="465"><p class="one"><br />
       &nbsp;&nbsp;
-      <?php $msg ?>
+      <?php echo $msg ?>
       <br />
       <br />
     </p></td>
@@ -157,10 +157,10 @@ non {
         <td width="51" bgcolor="#FF9933" class="hhhhh">ACTIVE</td>
         <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
         </tr>
-      <? while($row = mysqli_fetch_array($result)){ ?>
-      <? // while($row2 = mysqli_fetch_array($result2)){?>
+      <?php while($row = mysqli_fetch_array($result)){ ?>
+      <?php // while($row2 = mysqli_fetch_array($result2)){?>
       <tr>
-        <td height="19" valign="top"><? //= $row2[number]; ?></td>
+        <td height="19" valign="top"><?php //= $row2[number]; ?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
           <?php echo $row['cos_id']?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -177,7 +177,7 @@ non {
         <td align="center" valign="top"><a href="cos_active.php?active=<?php echo $row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
         <td align="center" valign="top"><a href="cos_active.php?non_active=<?php echo $row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
       </tr>
-      <? }//} ?>
+      <?php }//} ?>
     </table></td>
   </tr>
   </table>

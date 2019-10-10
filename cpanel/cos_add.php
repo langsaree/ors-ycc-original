@@ -1,23 +1,13 @@
 <?php
-include('db.php');
+include('../db.php');
 session_start();
 //>--code insert using for process add data
 
 ?>
 <?php
 
-$errmsg = "";
-$errmsg1 = "";
-$errmsg2 = "";
-$errmsg3 = "";
-$errmsg4 = "";
-$errmsg5 = "";
-$errmsg6 = "";
-$errmsg7 = "";
-$errmsg8 = "";
-
-$errmsg = "";
-if (isset($ok)) {
+$errmsg = "";$errmsg1 = "";$errmsg2 = "";$errmsg3 = "";$errmsg4 = "";$errmsg5 = "";$errmsg6 = "";$errmsg7 = "";$errmsg8 = "";
+if (isset($_POST['ok'])) {
 #============== function cos_id 
     $cos_id = $_POST['cos_id'];
     if (empty($cos_id)) {
@@ -41,15 +31,15 @@ if (isset($ok)) {
     }
     #============================
     $cos_day = $_POST['cos_day'];
-    $cos_after = $_POST['cos_after'];
+    $cos_comment = $_POST['cos_comment'];
     $cos_time = $_POST['cos_time'];
-    $date = $cos_day . "-" . $cos_after . "/" . $cos_time;
+    $date = $cos_day . "-" . $cos_comment . "/" . $cos_time;
 //echo $date;
     if (empty($cos_day)) {
         $errmsg5 .= '<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day</span>';
     }
     if (!$errmsg5) {
-        if (empty($cos_after)) {
+        if (empty($cos_commment)) {
             $errmsg6 .= '<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day2 </span>';
         }
     }
@@ -59,7 +49,7 @@ if (isset($ok)) {
         }
     }
     #====================================
-    $cos_lec = $_POST['lec_id'];
+    $lec_id = $_POST['lec_id'];
     if (empty($lec_id)) {
         $errmsg8 .= '<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';
     }
@@ -67,7 +57,7 @@ if (isset($ok)) {
     $cos_comment = $_POST['cos_comment'];
 
     if (!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8) {
-        mysqli_query("SET NAMES 'utf8'");
+        mysqli_query($conn,"SET NAMES 'utf8'");
         $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
         $result = mysqli_query($conn, $sql);
 
@@ -78,7 +68,7 @@ if (isset($ok)) {
             </script>
 
         <?php } else {
-            die("Error db" . mysqli_error());
+            die("Error db" . mysqli_error($conn));
         }
 
     }
@@ -145,10 +135,8 @@ if (isset($ok)) {
     <tr>
         <td width="30" height="111">&nbsp;</td>
         <td width="125"><img src="image/add_course.jpg" alt="" width="80" height="70"/></td>
-        <td width="1162"><span style="font-size: 24px; font-weight: bold; color: #F30;">ADD</span> <strong
-                    style="font-size: 18px; color: #666;">Course </strong><a href="cpanel.php" class="style6"
-                                                                             style="text-decoration:none">| ControlPanel
-                | </a><a href="manage_course.php" class="style6" style="text-decoration:none; font-size: 9px;">ManageCourse</a></span></p>
+        <td width="1162"><span style="font-size: 24px; font-weight: bold; color: #F30;">ADD</span> <strong style="font-size: 18px; color: #666;">Course </strong><a href="cpanel.php" class="style6"
+                                                                             style="text-decoration:none">| ControlPanel | </a><a href="manage_course.php" class="style6" style="text-decoration:none; font-size: 9px;">ManageCourse</a></span></p>
             <p class="style61">เพิ่มชื่อวิชาใหม่เข้าสู่ระบบ</p></td>
     </tr>
     <tr>
@@ -228,7 +216,7 @@ if (isset($ok)) {
                                     </td>
                                     <td>&nbsp;</td>
                                     <td><input type="text" name="cos_period" id="cos_period"
-                                               style="background: <?php if($errmsg3) {
+                                               style="background: <?php if ($errmsg3) {
                                                echo "#EEFCE2"; ?>" value="<?php echo $cos_period;
                                         } ?>"/></td>
                                 </tr>
@@ -248,7 +236,7 @@ if (isset($ok)) {
                                     </td>
                                     <td></td>
                                     <td><select name="cos_day" id="cos_day"
-                                                style="background: <?php if($errmsg5) {
+                                                style="background: <?php if ($errmsg5) {
                                                 echo "#EEFCE2"; ?>" value="<?php echo $cos_day;
                                         } ?>">
                                             <option value="0" selected>เริ่ม</option>
@@ -260,9 +248,9 @@ if (isset($ok)) {
                                             <option>เสาร์</option>
                                             <option>อาทิตย์</option>
                                         </select>
-                                        <select name="cos_after" id="cos_after"
-                                                style="background: <?php if($errmsg6) {
-                                                echo "#EEFCE2"; ?>" value="<?php echo $cos_after;
+                                        <select name="cos_comment" id="cos_after"
+                                                style="background: <?php if ($errmsg6) {
+                                                echo "#EEFCE2"; ?>" value="<?php echo $cos_comment;
                                         } ?>">
                                             <option value="0" selected="selected">ถึง</option>
                                             <option value="จันทร์">จันทร์</option>
@@ -274,7 +262,7 @@ if (isset($ok)) {
                                             <option value="อาทิตย์">อาทิตย์</option>
                                         </select>
                                         <select name="cos_time" id="cos_time"
-                                                style="background: <?php if($errmsg7) {
+                                                style="background: <?php if ($errmsg7) {
                                                 echo "#EEFCE2"; ?>" value="<?php echo $cos_time;
                                         } ?>">
                                             <option value="0">ภาค</option>
@@ -283,7 +271,7 @@ if (isset($ok)) {
                                             <option value="เช้า - เย็น">เช้า - เย็น</option>
                                         </select></td>
                                 </tr>
-                                <?php if($errmsg8) { ?>
+                                <?php if ($errmsg8) { ?>
                                     <tr>
                                         <td height="28">&nbsp;</td>
                                         <td>&nbsp;</td>
@@ -296,8 +284,8 @@ if (isset($ok)) {
                                     </td>
                                     <td>&nbsp;</td>
                                     <td><input name="lec_id" type="text" id="lec_id"
-                                               style="background: <?php if($errmsg8) {
-                                               echo "#EEFCE2"; ?>" value="<?php echo $lec_id;
+                                               style="background: <?php if ($errmsg8) {
+                                               echo "#EEFCE2"; ?>" value="<?php  $lec_id;
                                         } ?>"/></td>
                                 </tr>
                                 <tr>

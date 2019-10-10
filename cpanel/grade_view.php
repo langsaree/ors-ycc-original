@@ -68,7 +68,7 @@
 <form id="form1" name="form1" method="post" action="">
     <table width="1260" border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <td><img src="image/header-bg.png" width="1280" height="45"/></td>
+            <td><img src="../image/header-bg.png" width="1280" height="45"/></td>
         </tr>
     </table>
     <table width="1280" height="551" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -78,7 +78,7 @@
                     <tr>
                         <td width="6%" align="center"><img src="image/view_grade.png" width="100" height="100"/></td>
                         <td width="94%"><span class="style26"><span class="style36"><span
-                                            class="style47">View</span><span class="style38"> Grade</span></span></span><br/>
+                                            class="style47">View</span><span class="style38"> Grade</span></span></span><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a><a href="manage_grade.php" class="style6" style="text-decoration:none" > | Manage Grade</a><br/>
                             <span class="style34">แสดงเกรด</span></td>
                     </tr>
                 </table>
@@ -91,10 +91,10 @@
                 <div align="center">
                     <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
                         <?
-                        include('db_connect.php');
+                        include('d../b.php');
                         $sql = "select * from $db_table2 where name ='$name'";
-                        $show = mysqli_query($sql);
-                        while ($shows = mysql_fetch_row($show))
+                        $show = mysqli_query($conn,$sql);
+                        while ($shows = mysqli_fetch_row($show))
                         {
                         ?>
                         <tr>

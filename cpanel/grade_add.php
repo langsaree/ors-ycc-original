@@ -37,7 +37,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="879" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -45,7 +45,7 @@ body {
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="image/add_grade .png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style45">Add</span>  <span class="style38">New Grade </span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36"><span class="style45">Add</span>  <span class="style38">New Grade </span></span></span>   <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a><a href="manage_grade.php" class="style6" style="text-decoration:none" > | Manage Grade</a><br />
             <span class="style34">เพิ่มเกรดใหม่</span></td>
         </tr>
     </table>
@@ -127,7 +127,7 @@ body {
           <td align="right">&nbsp;</td>
           <td><label>
             <input type="submit" name="button" id="button" class="button" value="บันทึก" />
-            <input type="button" name="button2" id="button2" class="button" value="ยกเลิก" onclick="window.location='index2.php?option=manage_user&amp;group=<?= $_REQUEST['group'] ?>'" />
+            <input type="button" name="button2" id="button2" class="button" value="ยกเลิก" onclick="window.location='index2.php?option=manage_user&amp;group=<?php $_REQUEST['group'] ?>'" />
           </label></td>
         </tr>
         <tr>
