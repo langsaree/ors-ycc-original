@@ -53,7 +53,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1263" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1263"><img src="../images/header-bg.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../public/images/header-bg.png" width="1258" height="45" /></td>
     </tr>
   </table>
 

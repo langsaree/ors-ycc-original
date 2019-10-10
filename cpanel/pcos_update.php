@@ -44,7 +44,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="../image/controlPanel.jpg" width="1261" height="112" /></td>
+    <td><img src="../public/image/controlPanel.jpg" width="1261" height="112" /></td>
   </tr>
 </table>
   <table width="700" height="422" border="0" align="center" cellpadding="0" cellspacing="0">

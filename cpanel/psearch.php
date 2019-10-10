@@ -56,14 +56,14 @@ body {
 <body>
 <table width="998" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td width="1045"><img src="../public/images/header-bg.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1213" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td width="1213" height="196" align="center" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><br />
             <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>

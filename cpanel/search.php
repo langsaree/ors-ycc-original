@@ -53,7 +53,7 @@ body {
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/search lecture.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/search lecture.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Search<span class="style38"> Lecturer Information</span></span></span><br />
           <span class="style34">ค้นหา<span class="style48">ข้อมูลอาจารย์ผู้สอน</span></span></td>
         </tr>

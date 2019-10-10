@@ -24,7 +24,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/controlPanel.jpg" width="1261" height="112" /></td>
+      <td><img src="../public/images/controlPanel.jpg" width="1261" height="112" /></td>
     </tr>
 </table>
 <form id="form1" name="form1" method="post" action="pcos.php">
@@ -118,7 +118,7 @@ body {
   </form>
  <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td valign="baseline"><img src="../image/footer.jpg" width="1260" height="76" /></td>
+      <td valign="baseline"><img src="../public/image/footer.jpg" width="1260" height="76" /></td>
     </tr>
 </table>
 </body>

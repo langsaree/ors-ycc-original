@@ -40,19 +40,19 @@ body {
 <form id="form1" name="form1" method="post" action="pstd_add.php">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1265" height="45" /></td>
+      <td><img src="../public/images/header-bg.png" width="1265" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="1463" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">Add</span>  <span class="style38">New Student</span></span></span><br />
             <span class="style34">เพิ่มนักศึกษาใหม่</span></td>
         </tr>
     </table>
-      <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________<a href="manage_student.php"><img src="../image/images3.jpg" width="30" height="30" border="0" /></a></span></p></td>
+      <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________<a href="manage_student.php"><img src="../public/image/images3.jpg" width="30" height="30" border="0" /></a></span></p></td>
     </tr>
   
   <tr>
@@ -68,7 +68,7 @@ body {
             <tr>
               <td height="135" bgcolor="#FFFFFF"><div align="right" class="style46">รูปประจำตัว :</div></td>
               <td width="12" height="135" bgcolor="#FFFFFF">&nbsp;</td>
-              <td width="129" bgcolor="#FFFFFF"><img src="../image/user.png" width="128" height="128" align="top" /></td>
+              <td width="129" bgcolor="#FFFFFF"><img src="../public/image/user.png" width="128" height="128" align="top" /></td>
               <td height="135" bgcolor="#FFFFFF">&nbsp;</td>
             </tr>
             <tr>
