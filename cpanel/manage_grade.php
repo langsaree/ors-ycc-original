@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -36,7 +36,7 @@ body {
 	font-size: 13px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
--->
+
 </style>
 </head>
 

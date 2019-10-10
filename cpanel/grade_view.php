@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +29,7 @@ body {
 	font-size: 24px;
 }
 .style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
@@ -56,8 +56,10 @@ body {
     <td height="392" valign="top"><p></p>
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
-          <?
-	include('db_connect.php');
+  <?php
+	require_once("../public/class/db.class.php");
+  $db = new Db;
+  $connection = $db->connect();
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysql_query($sql);
 	while($shows = mysql_fetch_row($show))

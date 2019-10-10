@@ -50,16 +50,18 @@ body {
     </table>
       <p><span class="style44">_____________________________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
-  
+
   <tr>
     <td height="75" valign="top">
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <table width="500" height="34" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="65" height="32" valign="middle"><div align="center" class="style40"> 
-           <?
-		   include('db.php');
+          <td width="65" height="32" valign="middle"><div align="center" class="style40">
+<?
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 			extract ($_GET);
 //mysql_query ("SET NAMES 'utf8'");
 $std_id=$id;  echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!!<p>Data was deleted out from system</p>";

@@ -1,4 +1,4 @@
-<?
+<?php
 /*session_start();
 #extract ($_GET);
 $lec_id=$id;
@@ -10,7 +10,7 @@ $lec_id=$id;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view lecture</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -45,7 +45,7 @@ body {
 .style38 td div strong {
 	color: #000;
 }
--->
+
 </style>
 </head>
 
@@ -94,7 +94,9 @@ body {
              </tr>
              <tr>
                <? 
-include ('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
 $result = mysql_query($sql);

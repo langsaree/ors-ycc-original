@@ -1,5 +1,7 @@
 <?php
-include ('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 session_start();
 //>--code insert using for process add data
 

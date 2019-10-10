@@ -1,4 +1,4 @@
-<?
+<?php
 extract ($_GET);
 $lec_id=$id;
 
@@ -11,7 +11,8 @@ $lec_id=$id;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update lecture</title>
 <style type="text/css">
-<!--
+
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -45,7 +46,7 @@ body {
 }
 .style49 {font-family: Georgia, "Times New Roman", Times, serif}
 .style50 {color: #FF0000}
--->
+
 </style>
 </head>
 
@@ -79,8 +80,11 @@ body {
             <td height="26" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo "$error"; ?></td>
             </tr>
           <tr>
-<?
-include ('db.php');
+<?php
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
+
 $sql = "select * from lecture where lec_id='$lec_id'";
 $result = mysql_query($sql);
 while($result_row = mysql_fetch_array($result))

@@ -113,7 +113,9 @@ body {
       </tr>
       
     <?php
-  include('db.php');
+  require_once("../public/class/db.class.php");
+  $db = new Db;
+  $connection = $db->connect();
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
 	$r = mysqli_query($connection, $reg);

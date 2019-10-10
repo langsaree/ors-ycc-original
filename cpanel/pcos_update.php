@@ -1,5 +1,7 @@
 <?php
-include('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 $cos_id = $_POST['cos_id'];
 $cos_group = $_POST['cos_group'];
 $cos_name = $_POST['cos_name'];

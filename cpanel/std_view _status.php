@@ -1,6 +1,9 @@
 <?
 session_start();
-include('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
+
 include('auth.php');
 extract ($_GET);
 $active = $active;

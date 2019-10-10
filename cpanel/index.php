@@ -3,7 +3,10 @@ session_start();
 
 if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
 ob_start(); 
-include("db.php");
+
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 
 if(empty($username) && empty($password)){
     

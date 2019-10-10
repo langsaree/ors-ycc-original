@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage lecture</title>
 <style type="text/css">
-<!--
+
 .style1 {color: #666666}
 body {
 	margin-left: 0px;
@@ -26,7 +26,7 @@ body {
 .style36 {color: #FF6600}
 .style37 {color: #CCCCCC}
 .style40 {color: #3399FF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
--->
+
 </style>
 </head>
 

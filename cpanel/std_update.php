@@ -58,7 +58,10 @@ body {
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
           <?php
-  include('db.php');
+  require_once("../public/class/db.class.php");
+  $db = new Db;
+  $connection = $db->connect();
+  
   extract ($_GET);
   $std_id = $_GET['id'];
 	$sql = "select * from student where std_id ='$std_id'";

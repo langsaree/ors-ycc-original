@@ -2,7 +2,10 @@
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
+
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];

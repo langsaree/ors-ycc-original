@@ -56,8 +56,13 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
+        
   <?php
-	include('db.php');
+
+	require_once("../public/class/db.class.php");
+  $db = new Db;
+  $connection = $db->connect();
+
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysqli_query($connection, $sql);
 	while($shows = mysqli_fetch_row($show))

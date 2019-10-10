@@ -1,5 +1,7 @@
 <?php
-include('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 extract ($_GET);
 mysql_query ("SET NAMES 'utf8'");
 $cos_id=$_GET['id'];

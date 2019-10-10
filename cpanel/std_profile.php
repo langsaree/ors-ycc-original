@@ -1,7 +1,10 @@
 <?
 session_start();
 include('auth.php');
-include('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
+
 extract($_GET);
 $id=$id;
 

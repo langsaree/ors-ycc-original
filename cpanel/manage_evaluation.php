@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage evaluation</title>
 <style type="text/css">
-<!--
+
 .style1 {color: #666666}
 body {
 	margin-left: 0px;
@@ -30,7 +30,7 @@ body {
 	font-size: 13px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
--->
+
 </style>
 </head>
 

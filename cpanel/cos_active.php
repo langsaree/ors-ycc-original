@@ -1,7 +1,8 @@
 <?php
 session_start();
-// include('auth.php');
-include('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
 extract ($_GET);
 $active = isset($_GET['active']) ? $_GET['active'] : "";
 $non_active =  isset($_GET['non_active']) ? $_GET['non_active'] : "";

@@ -1,5 +1,7 @@
  <?
-   include('db.php');
+require_once("../public/class/db.class.php");
+$db = new Db;
+$connection = $db->connect();
    //mysql_query ("SET NAMES 'utf8'");
 
    $sql	 = "select * from register ";

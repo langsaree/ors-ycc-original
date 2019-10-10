@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage register</title>
 <style type="text/css">
-<!--
+
 .style1 {color: #666666}
 body {
 	margin-left: 0px;
@@ -30,7 +30,7 @@ body {
 }
 .style41 {color: #666666; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
 .style42 {color: #3399FF; }
--->
+
 </style>
 </head>
 
