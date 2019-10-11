@@ -57,45 +57,45 @@ body {
       <div align="center">
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
-          <?php
-  require_once("../public/class/db.class.php");
+  <?php
+  include("../public/class/db.class.php");
   $db = new Db;
   $connection = $db->connect();
   
   extract ($_GET);
   $std_id = $_GET['id'];
 	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysqli_query($connection,$sql);
+	$re = mysqli_query($connection, $sql);
 	while($row = mysqli_fetch_row($re))
 	{
 	?>
           <tr>
             <td width="173"><span class="style46">ชื่อ :</span></td>
-            <td width="144"><input type="text" name="name" value="<?php echo $row["name"]; ?>" /></td>
+            <td width="144"><input type="text" name="name" value="<?php $row["name"]; ?>" /></td>
           </tr>
           <tr>
             <td><span class="style46">นามสกุล :</span></td>
-            <td><input type="text" name="lastname" value="<?php echo $row["s_name"]; ?>" /></td>
+            <td><input type="text" name="lastname" value="<?php  $row["s_name"]; ?>" /></td>
           </tr>
           <tr>
             <td><span class="style46">เพช :</span></td>
-            <td colspan="2"><input type="text" name="gender" value="<?php echo $row["gender"]; ?>" /></td>
+            <td colspan="2"><input type="text" name="gender" value="<?php $row["gender"]; ?>" /></td>
           </tr>
           <tr>
             <td><span class="style46">ที่อยู่ :</span></td>
-            <td><input type="text" name="address" value="<?php echo $row["address"]; ?>" /></td>
+            <td><input type="text" name="address" value="<?php $row["address"]; ?>" /></td>
           </tr>
           <tr>
             <td><span class="style46">จังหวัด :</span></td>
-            <td><input type="text" name="city" value="<?php echo $row["city"]; ?>" /></td>
+            <td><input type="text" name="city" value="<?php $row["city"]; ?>" /></td>
           </tr>
           <tr>
             <td><span class="style46">อำเภอ :</span></td>
-            <td><input type="text" name="province" value="<?php echo $row["province"]; ?>" /></td>
+            <td><input type="text" name="province" value="<?php $row["province"]; ?>" /></td>
           </tr>
           <tr>
             <td><span class="style46">รหัสไปรสณี :</span></td>
-            <td><input type="text" name="postcode" value="<?php echo $row["postcode"]; ?>" /></td>
+            <td><input type="text" name="postcode" value="<?php $row["postcode"]; ?>" /></td>
           </tr>
         </table>
             <?php } ?>
