@@ -32,10 +32,7 @@ $do3=mysqli_query($connection, $sql3);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ใบสมัคร</title>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<style type="text/css">
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style60 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #333333; }
-</style>
+<style type="text/css"></style>
 </head>
 
 <body>
