@@ -5,7 +5,6 @@ if(!isset($_SESSION["username"])){header("location:index.php");}
 $username = $_SESSION["username"];
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -141,8 +140,8 @@ while($row=mysqli_fetch_array($result))
              <td
  
                          width="435" height="30" valign="middle">&nbsp;</td>
-             <td width="99" valign="middle" class="style33"><a href="profile_update.php?id=<?php echo $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
-             <td width="83" valign="middle"><span class="style66"><a href="logout.php"  style="text-decoration: none">ออกจากระบบ</a></span></td>
+             <td width="99" valign="middle" class="style33"><strong><a href="profile_update.php?id=<?php echo $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></strong></td>
+             <td style="text-align:center"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
            </tr>
            <tr>
              <td height="16" colspan="3" valign="middle"><span class="style56">----------------------------------------------------------------------------------------</span></td>

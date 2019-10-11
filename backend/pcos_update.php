@@ -1,5 +1,5 @@
 <?php
-include ('../db.php');
+include('../config/db.php');
 $cos_id = $_POST['cos_id'];
 $cos_group = $_POST['cos_group'];
 $cos_name = $_POST['cos_name'];
@@ -29,7 +29,7 @@ else {
 <meta http-equiv="Content-Type" content="charset=utf-8; url='cos_view.php'" />
 <meta http-equiv="refresh" content="1 url='cos_view.php'" />
 
-<title>Untitled Document</title>
+<title>Updating</title>
 <style type="text/css">
 
 body {

@@ -1,6 +1,6 @@
 <?php
 //session_start();
-include("../db.php");
+include('../config/db.php');
 include('auth.php');
 extract ($_GET);
 $user_admin = $_SESSION["user_admin"];
@@ -78,13 +78,13 @@ body {
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../image/header-bg.png" width="1260" height="45" /></td>
+    <td><img src="../public/image/header-bg.png" width="1260" height="45" /></td>
   </tr>
   
   <tr>
     <td><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student register.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/student register.png" width="100" height="100" /></td>
         <td width="94%"><span class="style36">View<span class="style38"> Registered&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="style6"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a>&nbsp;</span><span class="style36"><span class="style38"> &nbsp;</span></span><span class="style6">&nbsp;</span><br />
           <span class="style34">แสดงรายชื่อนักศึกษาลงทะเบียน</span></td>
       </tr>
@@ -113,7 +113,7 @@ body {
       </tr>
       
     <?php
-include("../db.php");
+include('../config/db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
 	$r = mysqli_query($connection, $reg);

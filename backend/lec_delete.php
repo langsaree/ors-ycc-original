@@ -1,6 +1,6 @@
 <title>delete process</title>
 <?php
-include ('../db.php');
+include('../config/db.php');
 extract($_GET);
 $id= $id;
 $sql = "delete from lecture where lec_id='$id'";

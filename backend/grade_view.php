@@ -37,7 +37,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1280" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="551" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -57,8 +57,8 @@ body {
     <td height="392" valign="top"><p></p>
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
-          <?
-include("../db.php");
+          <?php
+  include('../config/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysqli_query($connection, $sql);
 	while($shows = mysqli_fetch_row($show))
@@ -89,7 +89,7 @@ include("../db.php");
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      
+  <?php } ?>
     </tr>
   </table>
 </form>

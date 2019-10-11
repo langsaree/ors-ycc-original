@@ -60,7 +60,7 @@ body {
 <form id="form1" name="form1" method="post" action="plec_add.php">
   <table width="1280" height="578" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
-      <td width="1263"><img src="../images/header.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
     </tr>
     <tr>
     <td width="1300" height="139" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">

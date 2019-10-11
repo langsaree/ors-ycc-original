@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../db.php");
+include('../config/db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,7 +50,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
     <td><table width="1260" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td><p><img src="../images/header.png" width="1265" height="45"></p>
+        <td><p><img src="../public/images/header.png" width="1265" height="45"></p>
           <table width="95%"  align="center" border="0" cellspacing="0" cellpadding="0"  class="header">
             <tr>
               <td width="6%" align="center"><img src="image/student add.png" width="127" height="111" /></td>
@@ -325,7 +325,7 @@ if(isset($_POST['Submit'])) {
 
         $do = mysqli_query($connection, $query);
         if ($do) {
-            echo "<script>location='std_view.php';</script>";
+            echo "<script>location='pstd_add.php';</script>";
             $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
             echo "$text";
             exit;

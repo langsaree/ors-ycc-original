@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 
@@ -64,7 +63,7 @@ body {
 
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
 <tr>
-      <td width="1263"><img src="../images/header.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
     </tr>
 </table>
   

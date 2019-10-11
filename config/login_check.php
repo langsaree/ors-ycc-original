@@ -22,7 +22,13 @@ if (isset($_POST['ok'])) {
         if ($count == 1) {
 
             $_SESSION['username'] = $username;
-            header("Location:std_profile.php");
+            ?>
+            <script>
+				    	window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
+				    	window.location.href="std_profile.php";
+            </script>
+            <!-- header("Location:std_profile.php"); -->
+            <?php
         } else {
    
             $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";

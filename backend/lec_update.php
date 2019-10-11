@@ -52,7 +52,7 @@ body {
 <form id="form1" name="form1" method="post" action="plec_update.php">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
   <tr>
-      <td width="1263"><img src="../images/header.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="527" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -80,7 +80,7 @@ body {
             </tr>
           <tr>
 <?php
-include ('../db.php');
+include('../config/db.php');
 $sql = "select * from lecture where lec_id='$lec_id'";
 $result = mysqli_query($connection, $sql);
 while($result_row = mysqli_fetch_array($result))

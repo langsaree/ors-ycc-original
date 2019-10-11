@@ -1,9 +1,3 @@
-<?php
-/*session_start();
-extract ($_GET);
-$lec_id=$id;
-*/
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -53,7 +47,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1263" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1263"><img src="../images/header.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
     </tr>
   </table>
 
@@ -94,7 +88,7 @@ body {
              </tr>
              <tr>
                <?php 
-include ('../db.php');
+include('../config/db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
 $result = mysqli_query($connection, $sql);

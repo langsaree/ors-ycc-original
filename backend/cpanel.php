@@ -28,7 +28,8 @@ $user_admin = $_SESSION["user_admin"];
     <td>&nbsp;</td>
     <td><span class="style37">ระบบจัดการการลงทะเบียนออนไลน์</span></td>
     <td>&nbsp;</td>
-    <td style="text-align:right"><strong><a href="logout.php" title="ออกจากระบบ" class="style33" style="text-decoration: none">ออกจากระบบ</a></strong></td>
+    <li class="divider"></li>
+    <td style="text-align:right"><strong><a href="logout.php" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span> ออกจากระบบ</a></strong></td>
     <td><div align="right" class="style33"></td>
   </tr>
 </table>
@@ -73,7 +74,7 @@ $user_admin = $_SESSION["user_admin"];
       <tr>
         <td>&nbsp;</td>
         <td><a href="register_course.php"><img src="image/manage register.png" alt="" class="second_image"/></a></td>
-        <td><a href="manage_std_status.php"><img src="image/student status.png" alt="" class="second_image"/></td>
+        <td><a href="std_active.php"><img src="image/student status.png" alt="" class="second_image"/></td>
         <td><a href="manage_lecturer.php"><img src="image/lecture Manager.png" alt="" class="second_image"/></a></td>
         <td><a href="manage_register.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
@@ -82,7 +83,7 @@ $user_admin = $_SESSION["user_admin"];
       <tr>
         <td class="style41">&nbsp;</td>
         <td class="style41"><a href="register_course.php" class="style41">ลงทะเบียนวิชา</a></td>
-        <td class="style41"><a href="manage_std_status.php" class="style41">การจัดการสถานะนักศึกษา</a></td>
+        <td class="style41"><a href="std_active.php" class="style41">การจัดการสถานะนักศึกษา</a></td>
         <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
         <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
         <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>

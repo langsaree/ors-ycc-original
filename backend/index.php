@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
 ob_start(); 
-include("../db.php");
+include('../config/db.php');
 
 if(empty($username) && empty($password)){
     
@@ -18,7 +18,13 @@ $count=mysqli_num_rows($result);
 if($count==1)
 {
 $_SESSION["user_admin"] = $username;
-header("location:cpanel.php");
+?>
+                <script>
+					window.alert('Login Success, Welcome User!');
+					window.location.href="cpanel.php";
+                </script>
+                <?php
+                // header("location:cpanel.php");
 }
 else
  {
@@ -66,10 +72,7 @@ else
 &nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p></FONT>
     </form>
   </div>
-        
-        
         </div>
-			
 	</div>
 	<p>&nbsp;</p>
 </body>

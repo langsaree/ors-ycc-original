@@ -39,7 +39,7 @@ body {
             <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">หมายเหตุ</span></div></td>
           </tr>
            <?php
-include("../db.php");
+  include('../config/db.php');
 	$sql = "select * from course where cos_id = $cos_id";
 	$result= mysqli_query($connection, $sql);
 	while ($row = mysqli_fetch_array($result))

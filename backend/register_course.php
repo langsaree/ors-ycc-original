@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../db.php');
+include('../config/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -923,7 +923,7 @@ include('../db.php');
                                     </tr>
                                     <tr>
                                         <td width="213" height="16">&nbsp;</td>
-                                        <td width="224"><button type="submit" src="../images/register.png" name="Submit" value="Submit" alt="Submit"><img src="../images/register.png"/></td>
+                                        <td width="224"><button type="submit" src="../public/images/register.png" name="Submit" value="Submit" alt="Submit"><img src="../images/register.png"/></td>
                                         <td width="174">&nbsp;</td>
                                     </tr>
 

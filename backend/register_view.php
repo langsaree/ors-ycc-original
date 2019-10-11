@@ -41,7 +41,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1280" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="551" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -61,7 +61,7 @@ body {
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
           <?
-	include('../db.php');
+	include('../config/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysql_query($connection, $sql);
 	while($shows = mysql_fetch_row($show))

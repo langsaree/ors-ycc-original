@@ -1,5 +1,5 @@
 <?php
-include("../db.php");
+include('../config/db.php');
 $cos_id = $_POST['cos_id'];
 $cos_name = $_POST['cos_name'];
 $cos_period = $_POST['cos_period'];
@@ -24,7 +24,7 @@ else
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>Adding</title>
 <style type="text/css">
 
 body {

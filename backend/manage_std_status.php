@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>จัดการสถานะนักศึกษา</title>
 </head>
-
+<div align="center"><span class="style4">ระบบยังไม่พร้อมใช้งานในขณะนี้</span></div>
 <body>
 </body>
 </html>

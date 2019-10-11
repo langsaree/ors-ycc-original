@@ -84,7 +84,7 @@ body {
      <td bgcolor="#666633"><div align="center"><span class="style4">Delete</span></div></td>
    </tr>
  <?php
- include("../db.php");
+   include('../config/db.php');
    //mysql_query ("SET NAMES 'utf8'");
    $sql = "select * from course";
    $result = mysqli_query($connection, $sql);
@@ -108,8 +108,8 @@ body {
      <td><div align="center"><?php echo $result_row[3]; ?></div></td>
      <td><div align="center"><?php echo $result_row[4]; ?></div></td>
      <td><div align="center"><?php echo $result_row[5]; ?></div></td>
-     <td><div align="center"><a href="../cos_update.php">แก้ไข</a></div></td>
-     <td><div align="center"><a href="../cos_del.php?id= <?php echo $result_row[0]; ?>">ลบ</a></div></td>
+     <td><div align="center"><a href="cos_update.php">แก้ไข</a></div></td>
+     <td><div align="center"><a href="cos_del.php" <?php echo $result_row[0]; ?>>ลบ</a></div></td>
    </tr><?php } ?>
  </table>
  <p>&nbsp;</p>
@@ -118,7 +118,7 @@ body {
   </form>
  <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td valign="baseline"><img src="../image/footer.jpg" width="1260" height="76" /></td>
+      <td valign="baseline"><img src="../public/image/footer.jpg" width="1260" height="76" /></td>
     </tr>
 </table>
 </body>

@@ -201,7 +201,7 @@ input, textarea {
  
                          width="455" height="18" valign="middle">&nbsp;</td>
              <td width="79" valign="middle" class="style33"><a href="std_profile.php" class="style67" style="text-decoration: none">ดูข้อมูลส่วนตัว</a></td>
-             <td width="83" valign="middle"><span class="style66"><a href="logout.php" style="text-decoration: none" >ออกจากระบบ</a></span></td>
+             <td style="text-align:center"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
            </tr>
            <tr>
              <td height="17" colspan="3" valign="middle"><span class="style56">----------------------------------------------------------------------------------------</span></td>

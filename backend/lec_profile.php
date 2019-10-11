@@ -42,7 +42,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1280" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -64,7 +64,7 @@ body {
         <p class="style1">Lecturer Information </p>
                                        
 <?php
-include('../db.php');
+include('../config/db.php');
 $sql = "select * from lecture where lec_id='$lec_id'";
 $result = mysqli_query($connection, $sql);
 while($row = mysqli_fetch_array($result))

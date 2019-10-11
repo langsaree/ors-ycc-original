@@ -1,5 +1,5 @@
 <?php
-include('../db.php');
+include('../config/db.php');
 extract($_GET);
 $std_id=$id;
 ?>
@@ -98,7 +98,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1280" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
