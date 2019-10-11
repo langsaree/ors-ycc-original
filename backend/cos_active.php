@@ -116,7 +116,7 @@ non {
   </tr>
   <tr>
     <td height="100" valign="top">&nbsp;</td>
-    <td valign="top"><img src="image/active_course.jpg" width="80" height="70" /></td>
+    <td valign="top"><img src="image/course_active.jpg" width="80" height="70" /></td>
     <td valign="top"><p><span class="jjj"><span class="main">Course </span></span><span class="inmain">Status</span>   &nbsp;&nbsp;<span class="style26"><span class="style36"><span class="style38">&nbsp;</span></span></span>| <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> | <a href="manage_course.php" class="style6" style="text-decoration:none">ManageCourse</a><br />
         <span class="jjj">แก้ไขสถานะหลักสูตร</span><br />
     </p>
@@ -176,7 +176,7 @@ non {
 		   }
 	    ?></td>
         <td align="center" valign="top"><a href="cos_active.php?active=<?=$row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
-        <td align="center" valign="top"><a href="cos_active.php?non_active=<?=$row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?non_active=<?=$row['cos_id']; ?>" ><img src="image/active_non.jpg" width="16" height="16" border="0" /></a></td>
       </tr>
       <? }//} ?>
     </table></td>

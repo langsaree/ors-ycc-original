@@ -62,10 +62,10 @@ body {
           <td height="37" valign="top"><table width="669" height="136" border="0" cellpadding="0" cellspacing="0">
               <tr> </tr>
               <tr>
-                <td width="134" height="117"><div align="center"><img src="image/add_grade .png" width="100" height="100" /></div></td>
-                <td width="134"><div align="center"><img src="image/delete_grade.png" width="100" height="100" border="0" /></div></td>
-                <td width="134"><div align="center"><img src="image/update_grade.png" width="100" height="100" /></div></td>
-                <td width="134"><div align="center"><img src="image/view_grade.png" width="100" height="100" /></div></td>
+                <td width="134" height="117"><div align="center"><img src="image/grade_add.png" width="100" height="100" /></div></td>
+                <td width="134"><div align="center"><img src="image/grade_delete.png" width="100" height="100" border="0" /></div></td>
+                <td width="134"><div align="center"><img src="image/grade_update.png" width="100" height="100" /></div></td>
+                <td width="134"><div align="center"><img src="image/grade_view.png" width="100" height="100" /></div></td>
               </tr>
               <tr>
                 <td height="19"><div align="center" class="style38"><a href="grade_add.php">เพิ่มเกรด </a></div></td>

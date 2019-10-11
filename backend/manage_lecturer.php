@@ -56,7 +56,7 @@ body {
     <tr>
       <td><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
         <tr>
-          <td width="6%" height="100" align="center"><img src="image/lecturer Manager.png" width="128" height="128" /></td>
+          <td width="6%" height="100" align="center"><img src="image/manage_lecturer.png" width="128" height="128" /></td>
           <td width="94%"><span class="style26"><span class="style36">Manage Lecturer </span></span><span class="style6">| <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a></span><br />
               <span class="style34">การจัดการอาจารย์ผู้สอน</span></td>
           <td width="94%">&nbsp;</td>
@@ -71,9 +71,9 @@ body {
           <td width="431" height="136" valign="top"><table width="418" height="156" border="0" cellpadding="0" cellspacing="4">
             <tr> </tr>
             <tr>
-              <td width="134" height="117"><div align="center"><a href="lec_add.php"><img src="image/add_lecturer.png" width="90" height="90" border="0" /></a></div></td>
-              <td width="134"><div align="center"><a href="lec_search.php"><img src="image/search_lec.png" width="90" height="90" border="0" /></a></div></td>
-              <td width="134"><div align="center"><a href="lec_view.php"><img src="image/view lecturer.png" width="90" height="90" border="0" /></a></div></td>
+              <td width="134" height="117"><div align="center"><a href="lec_add.php"><img src="image/lecturer_add.png" width="90" height="90" border="0" /></a></div></td>
+              <td width="134"><div align="center"><a href="lec_search.php"><img src="image/lecturer_search.png" width="90" height="90" border="0" /></a></div></td>
+              <td width="134"><div align="center"><a href="lec_view.php"><img src="image/lecturer_view.png" width="90" height="90" border="0" /></a></div></td>
             </tr>
             <tr>
               <td height="19"><div align="center" class="style1"><span class="style40"><a href="lec_add.php" style="text-decoration:none">เพิ่มอาจารย์ผู้สอน</a></span></div></td>

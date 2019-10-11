@@ -9,7 +9,7 @@ include('db.php');
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css"/>
     <style type="text/css">
         .style29 {
@@ -922,7 +922,7 @@ include('db.php');
                                     </tr>
                                     <tr>
                                         <td width="213" height="16">&nbsp;</td>
-                                        <td width="224"><button type="submit" src="../images/register.png" name="Submit" value="Submit" alt="Submit"><img src="../images/register.png"/></td>
+                                        <td width="224"><button type="submit" src="image/register1.png" name="Submit" value="Submit" alt="Submit"><img src="image/register1.png"/></td>
                                         <td width="174">&nbsp;</td>
                                     </tr>
 

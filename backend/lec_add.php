@@ -60,7 +60,7 @@ body {
     <tr>
     <td width="1300" height="139" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="image/add_lecturer.png" width="128" height="128" /></td>
+        <td width="6%" align="center"><img src="image/lecturer_add.png" width="128" height="128" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">Add</span>  <span class="style38">New Lecturer&nbsp;&nbsp;</span></span></span> | <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> |  <a href="manage_lecturer.php" class="style6" style="text-decoration:none">ManageLecturer</a><br />
             <span class="style34">เพิ่ม<span class="style46">อาจารย์ผู้สอน</span>ใหม่</span></td>
         </tr>

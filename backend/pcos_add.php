@@ -37,13 +37,13 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="../image/controlPanel.jpg" width="1260" height="112" /></td>
+    <td><img src="image/controlPanel.jpg" width="1260" height="112" /></td>
   </tr>
 </table>
   <table width="700" height="422" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td align="center" background="images/b1.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
-      <p>กดปุ่่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>Cpanel</strong></p>
+      <td align="center" background="image/bg.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
+      <p>กดปุ่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>Cpanel</strong></p>
       <form id="form1" name="form1" method="post" action="manage_course.php">
         <input type="submit" name="Ok" id="Ok" value="สำเร็จ" />
       </form>      <p>&nbsp;</p></td>

@@ -76,14 +76,14 @@ body {
         <tr>
           <td height="37" valign="top"><table width="445" height="195" border="0" cellpadding="0" cellspacing="10">
               <tr>
-                <td colspan="3"><div align="center"><a href="cos_add.php"><img src="image/add_course.jpg" width="80" height="70" border="0" /></a></div>
+                <td colspan="3"><div align="center"><a href="cos_add.php"><img src="image/course_add.jpg" width="80" height="70" border="0" /></a></div>
                   <div align="center" class="style38">
                     <div align="right"><a href="cos_add.php"></a></div>
                   </div>
                   <div align="center" class="style38"></div>
                   <div align="center" class="style38"></div></td>
-                <td width="128"><div align="center"><a href="cos_view.php"><img src="image/view_course.jpg" alt="" width="80" height="70" border="0" /></a></div></td>
-                <td width="135" height="117"><div align="center"><a href="cos_active.php"><img src="image/active_course.jpg" width="80" height="70" border="0" align="middle" /></a></div></td>
+                <td width="128"><div align="center"><a href="cos_view.php"><img src="image/course_view.jpg" alt="" width="80" height="70" border="0" /></a></div></td>
+                <td width="135" height="117"><div align="center"><a href="cos_active.php"><img src="image/course_active.jpg" width="80" height="70" border="0" align="middle" /></a></div></td>
               </tr>
               <tr>
                 <td colspan="3"><div align="center"><a href="cos_add.php" class="style39" style="text-decoration:none">เพิ่มรายวิชา </a></div></td>

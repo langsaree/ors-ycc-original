@@ -128,7 +128,7 @@ body {
   <table width="1325" height="136" border="0" cellpadding="0" cellspacing="2">
     <tr>
       <td width="30" height="111">&nbsp;</td>
-      <td width="125"><img src="image/add_course.jpg" alt="" width="80" height="70" /></td>
+      <td width="125"><img src="image/course_add.jpg" alt="" width="80" height="70" /></td>
       <td width="1162"><span style="font-size: 24px; font-weight: bold; color: #F30;">ADD</span> <strong style="font-size: 18px; color: #666;">Course </strong><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel  | </a><a href="manage_course.php" class="style6" style="text-decoration:none; font-size: 9px;" >ManageCourse</a></span></p>
         <p class="style61">เพิ่มชื่อวิชาใหม่เข้าสู่ระบบ</p></td>
     </tr>

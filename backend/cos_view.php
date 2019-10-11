@@ -45,7 +45,7 @@ body {
   <tr>
     <td><table width="1180" border="0" cellpadding="0" cellspacing="10">
       <tr>
-        <td colspan="2"><a href="cpanel.php" style="text-decoration:none"><img src="image/view_course.jpg" width="80" height="70" border="0" /></a></td>
+        <td colspan="2"><a href="cpanel.php" style="text-decoration:none"><img src="image/course_view.jpg" width="80" height="70" border="0" /></a></td>
       </tr>
       <tr>
         <td colspan="2"><span class="style36">View</span> <span class="style26">Course&nbsp;&nbsp;&nbsp;</span><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel  | </a><a href="manage_course.php" class="style6" style="text-decoration:none" >ManageCourse</a><br />

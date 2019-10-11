@@ -7,7 +7,7 @@ include('db.php');
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ลงทะเบียนเรียนใหม่</title>
-     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
 <!--
@@ -50,10 +50,10 @@ body {
 <form id="form1" name="form1" method="post" action="">
     <td><table width="1260" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td><p><img src="../images/header.png" width="1265" height="45"></p>
+        <td><p><img src="image/header.png" width="1265" height="45"></p>
           <table width="95%"  align="center" border="0" cellspacing="0" cellpadding="0"  class="header">
             <tr>
-              <td width="6%" align="center"><img src="image/student add.png" width="127" height="111" /></td>
+              <td width="6%" align="center"><img src="image/student_add.png" width="127" height="111" /></td>
               <td width="94%"><span class="style26"><span class="style36"><span class="style45">Add</span> <span class="style38">New Student&nbsp;&nbsp;</span></span></span>  <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a> <a href="manage_student.php" class="style6" style="text-decoration:none" >| ManageStudent</a><br />
                 <span class="style34">เพิ่มนักศึกษาใหม่</span></td>
             </tr>

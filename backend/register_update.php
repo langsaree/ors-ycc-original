@@ -40,14 +40,14 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1280" height="45" /></td>
+      <td><img src="image/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="image/update_course.jpg" width="91" height="82" /></td>
+        <td width="6%" align="center"><img src="image/course_update.jpg" width="91" height="82" /></td>
         <td width="94%"><span class="style26"><span class="style36">Update<span class="style38">Register</span></span></span><br />
             <span class="style34">แก้ไข<span class="style48">รายวิชา<span class="style39">ที่ลงทะเบียน</span></span></span></td>
         </tr>

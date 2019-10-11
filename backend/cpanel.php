@@ -49,9 +49,9 @@ if (isset($_SESSION['user_admin'])) {
     <td width="831" height="325" valign="top" ><table  width="819" height="250" border="0" cellpadding="0" cellspacing="2" >
       <tr>
         <td width="10" valign="top" >&nbsp;</td>
-        <td width="128"><a href="view_registered.php"><img src="image/5.jpg" alt="" class="second_image"/></a></td>
+        <td width="128"><a href="view_registered.php"><img src="image/registered.jpg" alt="" class="second_image"/></a></td>
         <td width="139"><a href="manage_course.php"><img src="image/manage_course.jpg" alt="" class="second_image"/></a></td>
-        <td width="129"><a href="manage_student.php"><img src="image/manage student.png" alt="" class="second_image"/></a></td>
+        <td width="129"><a href="manage_student.php"><img src="image/manage_student.png" alt="" class="second_image"/></a></td>
         <td width="128"><a href="manage_grade.php" title="การจัดการเกรด"><img src="image/manage_grade.png" alt="" class="second_image" /></a></td>
         <td width="130"><a href="manage_evaluation.php" title="การจัดการการประเมิน"><img src="image/evaluation.png" alt="" class="second_image" /></a></td>
         <td width="139"><span class="style41"><a href="manage_statis.php" TITLE="ดูสถิติการใช้งานระบบ"><img src="image/Stats.png" alt="statistic" class="second_image" /></a></span></td>
@@ -76,9 +76,9 @@ if (isset($_SESSION['user_admin'])) {
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a href="register_course.php"><img src="image/manage register.png" alt="" class="second_image"/></a></td>
-        <td><a href="manage_std_status.php"><img src="image/student status.png" alt="" class="second_image"/></td>
-        <td><a href="manage_lecturer.php"><img src="image/lecturer Manager.png" alt="" class="second_image"/></a></td>
+        <td><a href="register_course.php"><img src="image/manage_register.png" alt="" class="second_image"/></a></td>
+        <td><a href="manage_std_status.php"><img src="image/student_status.png" alt="" class="second_image"/></td>
+        <td><a href="manage_lecturer.php"><img src="image/manage_lecturer.png" alt="" class="second_image"/></a></td>
         <td><a href="manage_register.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
         <td><img src="image/database.png" width="64" height="64" class="second_image" /></td>

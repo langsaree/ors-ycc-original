@@ -76,13 +76,13 @@ body {
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../images/header.png" width="1260" height="45" /></td>
+    <td><img src="image/header.png" width="1260" height="45" /></td>
   </tr>
   
   <tr>
     <td><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student register.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="image/student_register.png" width="100" height="100" /></td>
         <td width="94%"><span class="style36">View<span class="style38"> Registered&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="style6"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a>&nbsp;</span><span class="style36"><span class="style38"> &nbsp;</span></span><span class="style6">&nbsp;</span><br />
           <span class="style34">แสดงรายชื่อนักศึกษาลงทะเบียน</span></td>
       </tr>
@@ -170,7 +170,7 @@ body {
 	    ?>
         </td>
         <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?= $ro['std_id'];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?= $ro['std_id']; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?= $ro['std_id']; ?>"><img src="image/active_non.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
        <? } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////

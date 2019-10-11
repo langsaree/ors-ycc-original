@@ -36,14 +36,14 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1260" height="45" /></td>
+      <td><img src="image/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
 <table width="1260" height="250" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td width="1298" height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student delete.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="image/student_delete.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">Delete</span> <span class="style38">Student</span></span></span><br />
           <span class="style34">ลบนักศึกษา</span></td>
         </tr>

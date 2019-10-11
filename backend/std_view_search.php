@@ -57,14 +57,14 @@ body {
 <body>
 <table width="998" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header.png" width="1260" height="45" /></td>
+      <td width="1045"><img src="image/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td width="1027" height="74" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="image/student_add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><br />
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
@@ -129,8 +129,8 @@ while($row=mysqli_fetch_array($nt))
 		<td><div align="left"><?= $row['std_id']; ?> </div></td>
 		<td><div align="center"><?= $row['username']; ?></div></td>
 		<td><div align="left"><?= $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="image/Delete.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_profile.php?id=<? echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
      <? } ////// close first while //////////////////////////////////////////////

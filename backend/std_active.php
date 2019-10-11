@@ -86,14 +86,14 @@ border-color:#8A9AA6;
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header.png" width="1265" height="45" /></td>
+      <td><img src="image/header.png" width="1265" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="723" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" align="center" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="image/student_status.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">View</span>  <span class="style38"> Student Status</span></span></span>  &nbsp;&nbsp;&nbsp;&nbsp;<a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br />
             <span class="style34">แสดงสถานะนักศึกษา</span></td>
         </tr>
@@ -147,7 +147,7 @@ border-color:#8A9AA6;
 	    ?>
           </span></div></td>
           <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?=$row['std_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row['std_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row['std_id']; ?>" ><img src="image/active_non.jpg" width="16" height="16" border="0" /></a></div></td>
           </tr><? }?>
 </table>
       <p>&nbsp;</p>

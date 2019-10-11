@@ -44,7 +44,7 @@ body {
 </table>
   <table width="700" height="422" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td align="center" background="images/b1.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
+      <td align="center" background="image/bg.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
 <!--      <p>กดปุ่่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>Cpanel</strong></p>-->
     </tr>
   </table>
