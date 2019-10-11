@@ -40,52 +40,7 @@ if(!empty($active)){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student status</title>
-<style type="text/css">
-
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	}
-.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-
-}
-.style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {
-	font-size: 13px;
-	font-family: Tahoma;
-	color: #F00;
-}
-.style44 {color: #CCCCCC}
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style46 {
-	color: #00E800
-}
-.style47 {color: #FF0099}
-p.one {border-style:dashed;
-border-width:2px;
-border-color:#8A9AA6;
-}
-.hhhhh {	font-size: 12px;
-	text-align: center;
-}
-
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -141,7 +96,7 @@ border-color:#8A9AA6;
         <tr>
           <td align="center" bgcolor="#FFFFB0"><?php echo $row["std_id"];?></td>  
           <td align="left" bgcolor="#FFFFB0"><?php echo  $n?> -  <?php echo  $row["s_name"];?></td>
-          <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
+          <td bgcolor="#FFDDFF"><div align="center"><span class="stat">
             <?php $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';

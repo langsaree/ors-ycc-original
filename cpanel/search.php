@@ -6,41 +6,7 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>search lecture</title>
-<style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {color: #FF6600}
-.style38 {
-	color: #55443E;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 18px;
-}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style48 {color: #666666;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-.style52 {
-	color: #333333;
-	font-size: 16px;
-	font-weight: bold;
-}
-.style55 {font-family: Georgia, "Times New Roman", Times, serif}
--->
+  <link rel="stylesheet" href="style.css" />
 </style>
 </head>
 <body>
@@ -55,14 +21,14 @@ body {
       <tr>
         <td width="6%" align="center"><img src="../public/image/search lecture.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Search<span class="style38"> Lecturer Information</span></span></span><br />
-          <span class="style34">ค้นหา<span class="style48">ข้อมูลอาจารย์ผู้สอน</span></span></td>
+          <span class="style34">ค้นหา<span class="style102">ข้อมูลอาจารย์ผู้สอน</span></span></td>
         </tr>
     </table>
       <span class="style44">____________________________________________________________________________________________________________________________________________</span></td>
     </tr>
   <tr>
     <td height="199" valign="top">
-        <div align="left"><span class="style52">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กรุณากรอบรหัส<span class="style55">อาจารย์ผู้สอน</span>เพื่อค้นหา</span><br />  
+        <div align="left"><span class="style101">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กรุณากรอบรหัส<span class="style100">อาจารย์ผู้สอน</span>เพื่อค้นหา</span><br />  
           <form id="form1" name="form1" method="post" action="psearch.php">
             <table width="288" border="0" align="center" cellpadding="0" cellspacing="3">
               <tr>

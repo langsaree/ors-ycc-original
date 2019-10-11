@@ -3,41 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>แสดงรายชื่อวิชา</title>
-<style type="text/css">
-
-
-.style4 {color: #FFFFFF; }
-.style26 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-	color: #666;
-}
-.style34 {color: #666666;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-		}
-.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-
-}
-.style36 {
-	color: #FF6600;
-	font-size: 24px;
-	font-weight: bold;
-}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>

@@ -16,13 +16,7 @@ $search_text=rtrim($search_text);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>::Searchx::</title>
-<style type="text/css">
-<!--
-.style46 {color: #00E800
-}
-.style47 {color: #FF0099}
--->
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>

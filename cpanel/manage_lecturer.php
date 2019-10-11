@@ -3,51 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage lecture</title>
-<style type="text/css">
-
-.style1 {color: #666666}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style26 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {
-	color: #666666;
-	font-size: 14px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-	.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-	}
-.style36 {color: #FF6600}
-.style37 {color: #CCCCCC}
-.style40 {color: #3399FF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-.style41 {
-	color: #999999;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style43 {color: #FFFFFF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 <form id="form1" name="form1" method="post" action="">
   <table width="1251" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1251"><span class="style37">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></td>
+      <td width="1251"><span class="style44">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></td>
     </tr>
     <tr>
       <td><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
@@ -58,7 +21,7 @@ body {
           <td width="94%">&nbsp;</td>
         </tr>
       </table>
-     <span class="style37"><? echo "$success"; ?><br />
+     <span class="style44"><? echo "$success"; ?><br />
      _________________________________________________________________________________________________________________________________</span></td>
     </tr>
     <tr>
@@ -84,7 +47,7 @@ body {
       </table>
         <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p>
         <p>&nbsp;</p>
-        <p><span class="style37">_______________________________________________________________________________________________________________________________________</span></p></td>
+        <p><span class="style44">_______________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
     <tr>
       <td><div align="center"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</span></div></td>

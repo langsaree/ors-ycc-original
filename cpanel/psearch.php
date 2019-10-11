@@ -16,41 +16,8 @@ $search_text=rtrim($search_text);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>::: Search student :::</title>
-<style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style48 {color: #666666;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-.style51 {
-	color: #333333;
-	font-weight: bold;
-}
-.style54 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; }
-.style52 {	color: #333333;
-	font-size: 16px;
-	font-weight: bold;
-}
-.style55 {font-family: Georgia, "Times New Roman", Times, serif}
--->
+  <link rel="stylesheet" href="style.css" />
+
 </style>
 </head>
 <body>
@@ -106,29 +73,29 @@ if($type<>"any"){
 $query="select * from student where std_id='$search_text'";
 		}else{
 $kt=split(" ",$search_text);//Breaking the string to array of words
-// Now let us generate the sql 
+// Now let us generate the sql
 			while(list($key,$val)=each($kt)){
 if($val<>" " and strlen($val) > 0){$q .= " lec_id like '%$val%' or ";}
 			}// end of while
 $q=substr($q,0,(strLen($q)-3));
-// this will remove the last or from the string. 
+// this will remove the last or from the string.
 $query="select * from student where $q order by std_id limit 0, 20"; // start search query list as limit result at 10 result at a time
 		} // end of if else based on type value
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
+mysql_query("SET NAMES utf-8"); //		for thai input
 $nt=mysql_query($query);
 echo mysql_error();
 while($row=mysql_fetch_array($nt))
 {
 	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
-?>          
+?>
             </tr>
             <tr>
               <td align="center"><?PHP echo $row[std_id]; ?></td>
       <td align="center" bordercolor="#FFFFFF"><? echo $row[username]; ?></td>
-      <td align="center"><?= $name ?></td>
+      <td align="center"><?=$name?></td>
       <td align="center"></td>
       <td align="center"></td>
       <td><div align="center"><a href="std_profile.php?id= <? echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
@@ -144,7 +111,7 @@ while($row=mysql_fetch_array($nt))
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-      
+
       <p align="left"><span class="style44">_________________________________________________________________________________________________________________________________________</span></p>      </td>
     </tr>
   <tr>

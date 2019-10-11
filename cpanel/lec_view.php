@@ -9,44 +9,8 @@ $lec_id=$id;
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view lecture</title>
-<style type="text/css">
+<link rel="stylesheet" href="style.css" />
 
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	text-align: center;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-		}
-	.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-.style36 {
-	color: #FF6600;
-	text-align: left;
-}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
-.style38 td div strong {
-	color: #000;
-}
-
-</style>
 </head>
 
 <body>

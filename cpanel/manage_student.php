@@ -3,34 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage student</title>
-<style type="text/css">
-
-.style1 {color: #666666}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style26 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-	}
-.style36 {color: #FF6600}
-.style37 {color: #CCCCCC}
-.style39 {color: #666666; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-.style42 {color: #3399FF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -43,7 +16,7 @@ body {
       <td><table width="78%"  align="left" border="0" cellspacing="10" cellpadding="0"  class="header">
         <tr>
           <td width="9%" height="95" align="center"><img src="image/manage student.png" width="101" height="95" /></td>
-          <td><span class="style26"><span class="style36">Manage Student</span></span> <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a><br />
+          <td><span class="style26"><span class="style36">Manage Student</span></span> <a href="cpanel.php" class="style104" style="text-decoration:none" >| ControlPanel</a><br />
               <span class="style39">การจัดการนักศึกษา</span></td>
           </tr>
       </table>
@@ -62,9 +35,9 @@ body {
                 <td width="134"><div align="center"><a href="std_active.php"><img src="image/student status.png" width="90" height="90" border="0" /></a></div></td>
               </tr>
               <tr>
-                <td height="19"><div align="center" class="style1"><span class="style42"><a href="std_add.php" style="text-decoration:none">เพิ่มนักศึกษาใหม่</a></span></div></td>
-                <td><div align="center" class="style1"><span class="style42"><a href="std_view.php" style="text-decoration:none">แสดงข้อมูลนักศึกษา</a><a href="std_view.php" style="text-decoration:none"></a></span></div></td>
-                <td><div align="center" class="style1"><span class="style42"><a href="std_active.php" style="text-decoration:none">แสดงสถานะนักศึกษา</a><a href="std_update.php"></a></span></div></td>
+                <td height="19"><div align="center" class="style105"><span class="style42"><a href="std_add.php" style="text-decoration:none">เพิ่มนักศึกษาใหม่</a></span></div></td>
+                <td><div align="center" class="style105"><span class="style42"><a href="std_view.php" style="text-decoration:none">แสดงข้อมูลนักศึกษา</a><a href="std_view.php" style="text-decoration:none"></a></span></div></td>
+                <td><div align="center" class="style105"><span class="style42"><a href="std_active.php" style="text-decoration:none">แสดงสถานะนักศึกษา</a><a href="std_update.php"></a></span></div></td>
                 </tr>
               
             </table></td>

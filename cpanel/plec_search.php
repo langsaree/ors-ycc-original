@@ -18,42 +18,7 @@ $search_text=rtrim($search_text);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Search Lecturer</title>
-<style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style48 {color: #666666;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-.style51 {
-	color: #333333;
-	font-weight: bold;
-}
-.style54 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; }
-.style52 {	color: #333333;
-	font-size: 16px;
-	font-weight: bold;
-}
-.style55 {font-family: Georgia, "Times New Roman", Times, serif}
--->
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>

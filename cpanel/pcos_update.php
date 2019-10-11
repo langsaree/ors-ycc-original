@@ -31,16 +31,8 @@ else {
 <meta http-equiv="refresh" content="1 url='cos_view.php'" />
 
 <title>Untitled Document</title>
-<style type="text/css">
-
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-
-</style></head>
+<link rel="stylesheet" href="style.css" />
+</head>
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
   <tr>

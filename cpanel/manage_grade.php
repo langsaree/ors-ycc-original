@@ -3,41 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage grade</title>
-<style type="text/css">
-
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style25 {
-	font-size: 13px;
-	font-family: Tahoma;
-}
-.style26 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {
-	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {
-	color: #FF6600
-}
-.style37 {
-	color: #CCCCCC
-}
-.style38 {
-	color: #3399FF;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>

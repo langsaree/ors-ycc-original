@@ -9,55 +9,8 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>search lecture</title>
-<style type="text/css">
+<link rel="stylesheet" href="style.css" />
 
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {
-	color: #FF6600;
-	font-size: 36px;
-	font-family: "Times New Roman", Times, serif;
-	text-transform: none;
-}
-.style38 {
-	color: #55443E;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 18px;
-}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style48 {color: #666666;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	}
-	.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-
-}
-.style52 {
-	color: #333333;
-	font-size: 16px;
-	font-weight: bold;
-}
-.style55 {font-family: Georgia, "Times New Roman", Times, serif}
-
-</style>
 </head>
 
 <body>

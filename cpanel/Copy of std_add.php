@@ -3,37 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>add new student</title>
-<style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
-.style47 {font-size: 13px}
-.style54 {font-size: 14px}
-.style55 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; }
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-.style57 {font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color: #CCCCCC; }
-.style58 {color: #333333}
-.style59 {font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color: #333333; }
--->
-</style>
+<link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>

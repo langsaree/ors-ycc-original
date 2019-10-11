@@ -12,19 +12,8 @@ $cos_id = $_GET['id'];
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>:: แก้ไขรายวิชา ::</title>
-<style type="text/css">
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style6 {font-family: Geneva, Arial, Helvetica, sans-serif; color: #0000FF; }
-.style7 {color: #000000}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style8 {font-size: 13px; font-family: Tahoma; color: #999999; }
-
-</style></head>
+<link rel="stylesheet" href="style.css" />
+</head>
 <body>
 <table width="94%" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>

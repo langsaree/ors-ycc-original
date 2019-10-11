@@ -3,22 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
-<style type="text/css">
-<!--
-.style1 {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	color: #000066;
-}
-.style2 {color: #333333}
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style4 {color: #FFFFFF; }
--->
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -33,7 +18,7 @@ body {
    <tr>
      <td colspan="5"><div align="center" class="style2">
       
-       <div align="left"><span class="style1">เข้าสู่ระบบ</span></div>
+       <div align="left"><span class="style5">เข้าสู่ระบบ</span></div>
      </div><div align="center" class="style2"></div></td>
      <td width="6"><div align="center" class="style2"></div></td>
      <td width="6"><div align="center" class="style2"></div></td>
@@ -47,7 +32,7 @@ body {
      <td width="82">&nbsp;</td>
    </tr>
    <tr>
-     <td colspan="15"><span class="style1">__________________________________________________</span></td>
+     <td colspan="15"><span class="style5">__________________________________________________</span></td>
    </tr>
    <tr>
      <td width="21">&nbsp;</td>

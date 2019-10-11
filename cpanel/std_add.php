@@ -11,42 +11,6 @@ $connection = $db->connect();
 <title>ลงทะเบียนเรียนใหม่</title>
      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css">
-
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style40 {
-	color: #333333;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	}
-.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-
-}
-.style44 {color: #CCCCCC}
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-
-</style>
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="">
