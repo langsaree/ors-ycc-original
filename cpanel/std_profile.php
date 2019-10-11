@@ -1,12 +1,12 @@
-<?
-session_start();
+<?php
+// session_start();
 include('auth.php');
 require_once("../public/class/db.class.php");
 $db = new Db;
 $connection = $db->connect();
 
 extract($_GET);
-$id=$id;
+$id=$_GET["id"];
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ $id=$id;
     <title>ข้อมูลนักศึกษา </title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style7 {color: #3987FB; font-size: 14px; }
 .style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
@@ -52,7 +52,7 @@ a:active {
 }
 .style66 {font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; color: #666666; }
 .style67 {font-size: 12px}
--->
+
     </style>
 </head>
 <body>
@@ -83,7 +83,7 @@ a:active {
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64">ยินดีต้อนรับ ::</span> <? //echo "$id"; ?></td>
+                <td><span class="style64">ยินดีต้อนรับ ::</span> <?php echo "$id"; ?></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -134,12 +134,11 @@ a:active {
                   <td width="258" height="135" rowspan="2">&nbsp;</td>
                 </tr>
                                        
-<?
-   
+<?php
 //echo $cos_id;
 $sql = "select * from student where std_id='$id' ";
-$result = mysql_query($sql);
-while($row = mysql_fetch_array($result))
+$result = mysqli_query($connection, $sql);
+while($row = mysqli_fetch_array($result))
 {
 ?>                             
 
@@ -151,32 +150,32 @@ while($row = mysql_fetch_array($result))
                   <td width="224" height="30"><div align="left" class="style46">
                       <div align="right" class="style58">ชื่อล็อกอิน : </div>
                   </div></td>
-                  <td colspan="4"><span class="style58"><?= $row[username]; ?></span></td>
+                  <td colspan="4"><span class="style58"><?php echo  $row["username"]; ?></span></td>
                 </tr>
                 
                 <tr>
                   <td height="30"><div align="left" class="style60">
                       <div align="right">รหัสผ่าน :</div>
                   </div></td>
-                  <td colspan="4"><?= $row[password]; ?></td>
+                  <td colspan="4"><?php echo  $row["password"]; ?></td>
                 </tr>
   
                 <tr>
                   <td height="31"><div align="right" class="style60">ชื่อ :</div></td>
-                  <td colspan="3"><? echo $row[f_name];?>&nbsp; <? echo $row[name]; ?></td>
-                  <td><span class="style60">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621;<span class="style60"> :</span><span><? echo $row[s_name];?></span></td>
+                  <td colspan="3"><?php  echo $row["f_name"];?>&nbsp; <?php  echo $row["name"]; ?></td>
+                  <td><span class="style60">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621;<span class="style60"> :</span><span><?php  echo $row["s_name"];?></span></td>
                 </tr>
                 <tr>
                   <td height="30"><div align="right" class="style60">เพศ :</div></td>
-                  <td colspan="4"><? echo $row[gender];?></td>
+                  <td colspan="4"><?php  echo $row["gender"];?></td>
                 </tr>
                 <tr>
                   <td height="26"><div align="right" class="style60">วันเกิด : </div></td>
-                  <td colspan="4"><? echo $row[birthday];?></td>
+                  <td colspan="4"><?php  echo $row["birthday"];?></td>
                 </tr>
                 <tr>
                   <td height="29"><div align="right" class="style61">เลขบัตรประชาชน<span class="style46"> :</span></div></td>
-                  <td colspan="4"><? echo $row[std_id];?>   </td>
+                  <td colspan="4"><?php  echo $row["std_id"];?>   </td>
                 </tr>
 
               </table>
@@ -191,15 +190,15 @@ while($row = mysql_fetch_array($result))
                     </tr>
                     <tr>
                       <td height="26"><div align="right" class="style61"><span class="style60">บ้านเลขที่ :</span></div></td>
-                      <td><? echo $row[address];?></td>
+                      <td><?php  echo $row["address"];?></td>
                       <td><div align="right" class="style60"><span class="style47">เขต/อำเภอ<span class="style46"> :</span></span></div></td>
-                      <td><? echo $row[city];?></td>
+                      <td><?php  echo $row["city"];?></td>
                     </tr>
                     <tr>
                       <td height="27"><div align="right" class="style47"><span class="style60">จังหวัด :</span></div></td>
-                      <td><? echo $row[province];?></td>
+                      <td><?php  echo $row["province"];?></td>
                       <td><div align="right" class="style60">รหัสไปรษณีย์ :</div></td>
-                      <td><? echo $row[postalcode];?></td>
+                      <td><?php  echo $row["postalcode"];?></td>
                     </tr>
                     <tr>
                       <td height="26"><div align="right"><span class="style60">โทรศัพท์ :</span></div></td>
@@ -209,9 +208,9 @@ while($row = mysql_fetch_array($result))
                     </tr>
                     <tr>
                       <td height="27"><div align="right" class="style60">E-mail :</div></td>
-                      <td><? echo $row[email];?></td>
+                      <td><?php  echo $row["email"];?></td>
                       <td><div align="right" class="style60">มือถือ :</div></td>
-                      <td><? echo $row[phone];?></td>
+                      <td><?php  echo $row["phone"];?></td>
                     </tr>
                     <tr>
                       <td height="28"><div align="right" class="style60"></div></td>
@@ -228,7 +227,7 @@ while($row = mysql_fetch_array($result))
                     </tr>
                     <tr>
                       <td height="29"><div align="right" class="style60">ลักษณะอาชีพที่ท่านประกอบอยู่ :</div></td>
-                      <td><? echo $row[job];?><? } ?>
+                      <td><?php  echo $row["job"];?><?php  } ?>
 </td>
                     </tr>
                     <tr>
