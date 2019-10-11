@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('include/login_check.php');
+include('../config/login_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -189,6 +189,6 @@ while ($row = mysqli_fetch_array($result)) {
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <?php  include('include/footer.php');?>
+        <?php include('../config/footer.php');?>
     </body>
 </html>

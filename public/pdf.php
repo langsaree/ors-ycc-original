@@ -2,7 +2,7 @@
 session_start();
 $username = $_SESSION['username'];
 if(!isset($_SESSION['username'])){header("location:index.php");}
-include('db.php');
+include('../config/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
 //echo "$cos_id";

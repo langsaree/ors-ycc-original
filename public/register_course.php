@@ -1,7 +1,6 @@
 <?php
 session_start();
-include('db.php');
-
+include('../config/db.php');
 if (isset($_SESSION['username'])) {
   $username = $_SESSION['username'];
 }
@@ -1110,6 +1109,6 @@ if(isset($_POST['Submit'])) {
         </div>
         </div>
       </div>
-          <?php  include('include/footer.php');?>
+      <?php include('../config/footer.php');?>
 </body>
 </html>

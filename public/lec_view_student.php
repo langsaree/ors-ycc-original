@@ -3,7 +3,7 @@ session_start();
 $username = $_SESSION['username'];
 include('auth.php');
 //end of check session
-include('db.php');
+include('../config/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -117,7 +117,7 @@ include('db.php');
                 <td width="15">&nbsp;</td>
               </tr>
        <?php 
-			include('db.php');
+			include('../config/db.php');
 			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
 			
             $result=mysqli_query($connection, $sql);
@@ -156,6 +156,6 @@ include('db.php');
         </div>
 
 </div>
-<?php  include('include/footer.php');?>
+<?php include('../config/footer.php');?>
 </body>
 </html>

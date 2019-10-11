@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('db.php');
+include('../config/db.php');
 
 
 $strSQL = "SELECT * FROM student WHERE username = '".mysqli_real_escape_string($connection, $_POST['username'])."' 

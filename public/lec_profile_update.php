@@ -3,7 +3,7 @@ session_start();
 $username = $_SESSION['username'];
 include('auth.php');
 //end of check session
-include('db.php');
+include('../config/db.php');
 // $username = $_SESSION['username'];
 ?>
 
@@ -232,6 +232,6 @@ input:focus, textarea:focus {
           </div>
         </div>
         </div>
-        <?php  include('include/footer.php');?>
+        <?php include('../config/footer.php');?>
 </body>
 </html>

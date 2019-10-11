@@ -1,11 +1,11 @@
 <?php
 session_start();
-include('db.php');
+include('../config/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 {
-  include('include/login_check.php');
+  include('../config/login_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -183,8 +183,6 @@ while($row=mysqli_fetch_array($result_view))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+        <?php include('../config/footer.php');?>
     </body>
 </html>

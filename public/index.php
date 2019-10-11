@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('include/login_check.php');
+include('../config/login_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ include('include/login_check.php');
             </table>
 
 <?php
-include('db.php');
+include('../config/db.php');
 $sql_view = "SELECT * FROM course WHERE status='1' ";
 $result_view = mysqli_query($connection, $sql_view);
 while($row = mysqli_fetch_array($result_view))
@@ -96,6 +96,6 @@ while($row = mysqli_fetch_array($result_view))
           </div>
         </div>
     </div>
-    <?php  include('include/footer.php');?>
+    <?php include('../config/footer.php');?>
 </body>
 </html>

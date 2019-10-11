@@ -128,7 +128,7 @@ a:active {
          </p>
        </div>
  <?php 
-include ('db.php');
+include('../config/db.php');
 $sql = "select * from student where username='$username' ";
 $result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
@@ -392,6 +392,6 @@ while($row=mysqli_fetch_array($result))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <?php  include('include/footer.php');?>
+        <?php include('../config/footer.php');?>
 </body>
 </html>
