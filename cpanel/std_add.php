@@ -282,9 +282,8 @@ if (isset($_POST["ok"])) {
     if (empty($eduyear)) {
         $errmsg34 .= '<span style="color:red; font-size:12px">กรุณากรอบปีการศึกษาด้วยค่ะ</span>';}
 #=================================
-    $job = $_POST['t_job'];
-    // $job=$_POST['t_job'];
-
+    // $job = $_POST['t_job'];
+    $job = isset($_POST['t_job']) ? $_POST['t_job'] :  "";  
 #=================================
     #=================================
     if (!$errmsg3 && !$errmsg5 && !$errmsg10 && !$errmsg11 && !$errmsg12 && !$errmsg13 && /* !$errmsg15 && !$errmsg16 &&
@@ -355,7 +354,7 @@ if (isset($_POST["ok"])) {
                     <input name="login" class="inputbox-normal" type="text" id="username" style="background: <?php if ($errmsg1 || $errmsg2 || $errmsg3) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $login ?>" size="25" maxlength="20" />
+?>" value="<?php  $login ?>" size="25" maxlength="20" />
                     <span class="style34" style="color:#F00;">*</span> &nbsp;<span class="style31" style="color:#B50B0F; font-size:12px;"> ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 4-20 ตัว</span></div></td>
               </tr>
               <?php if ($errmsg6) {?>
@@ -398,7 +397,7 @@ if (isset($_POST["ok"])) {
                   <input name="pswd" class="inputbox-normal" type="password" id="password" style="background: <?php if ($errmsg6 || $errmsg8 || $errmsg9 || $errmsg10) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $pswd ?>" size="25" maxlength="20" />
+?>" value="<?php  $pswd ?>" size="25" maxlength="20" />
                   <span class="style34" style="color:#F00;">*</span> &nbsp;<span class="style30"  style="color:#B50B0F; font-size:12px;"> ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span></div></td>
               </tr>
               <?php if ($errmsg7) {?>
@@ -415,7 +414,7 @@ if (isset($_POST["ok"])) {
                   <input name="cpswd" class="inputbox-normal" type="password" id="cpswd" style="background: <?php if ($errmsg7 || $errmsg9 || $errmsg10) {
     echo "#EEFCE2";
 }
-?>"  value="<?php echo $cpswd ?>" size="25" maxlength="20" />
+?>"  value="<?php  $cpswd ?>" size="25" maxlength="20" />
                   <span class="style34" style="color:#F00;">*</span> &nbsp;<span class="style30"  style="color:#B50B0F; font-size:12px;"> ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span></div></td>
               </tr>
               <tr>
@@ -479,7 +478,7 @@ if (isset($_POST["ok"])) {
               <?php }?>
               <tr>
                 <td height="" bgcolor="#FFFFFF">ชื่อ </td>
-                <td height="1" bgcolor="#FFFFFF"><input type="text"  class="inputbox-normal" name="name" value="<?php echo $name ?>" id="name" style="background: <?php if ($errmsg12) {
+                <td height="1" bgcolor="#FFFFFF"><input type="text"  class="inputbox-normal" name="name" value="<?php  $name ?>" id="name" style="background: <?php if ($errmsg12) {
     echo "#EEFCE2";
 }
 ?>"/>
@@ -496,7 +495,7 @@ if (isset($_POST["ok"])) {
                 <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if ($errmsg13) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $s_name ?>" />
+?>" value="<?php  $s_name ?>" />
                   <span class="style29"style="color:#F00;">*</span></td>
               </tr>
               <?php if ($errmsg15) {?>
@@ -523,7 +522,7 @@ if (isset($_POST["ok"])) {
                   <select name="b_day" id="birth" style="background: <?php if ($errmsg15) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $b_day ?>">
+?>" value="<?php  $b_day ?>">
                     <option selected value="0">-- วัน --</option>
                     <option value="01">1</option>
                     <option value="02">2</option>
@@ -560,7 +559,7 @@ if (isset($_POST["ok"])) {
                   <select name="b_month" id="b_month" style="background: <?php if ($errmsg16) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $b_month ?>">
+?>" value="<?php  $b_month ?>">
                     <option selected value="0">-- เดือน --</option>
                     <option value="01">&#3617;&#3585;&#3619;&#3634;&#3588;&#3617;</option>
                     <option value="02">&#3585;&#3640;&#3617;&#3616;&#3634;&#3614;&#3633;&#3609;&#3608;&#3660;</option>
@@ -578,7 +577,7 @@ if (isset($_POST["ok"])) {
                   <select name="b_year" id="birth" style="background: <?php if ($errmsg17) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $b_year ?>">
+?>" value="<?php  $b_year ?>">
                     <option selected value="0">-- ปี --</option>
                     <option value="2553">2553</option>
                     <option value="2552">2552</option>
@@ -635,14 +634,14 @@ if (isset($_POST["ok"])) {
                 <td height="1" bgcolor="#FFFFFF"><select name="nation" size="1" id=" nation" style="background: <?php if ($errmsg18) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $nation ?>">
+?>" value="<?php  $nation ?>">
                   <option selected>-- สัญชาติ --</option>
                   <option>ไทย</option>
                 </select>
                   <select name="origin" size="1" id="origin" style="background: <?php if ($errmsg19) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $origin ?>">
+?>" value="<?php  $origin ?>">
                     <option>-- เชื้อชาติ --</option>
                     <option>ไทย</option>
                     <option>จีน</option>
@@ -651,7 +650,7 @@ if (isset($_POST["ok"])) {
                   <select name="religion" size="1" id="religion" style="background: <?php if ($errmsg20) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $religion ?>">
+?>" value="<?php  $religion ?>">
                     <option>-- ศาสนา --</option>
                     <option>อิสลาม</option>
                     <option>พุธ</option>
@@ -675,7 +674,7 @@ if (isset($_POST["ok"])) {
                 <td bgcolor="#FFFFFF"><input name="std_id" type="text" id="std_id" size="20" maxlength="13" class="inputbox-normal" style="background: <?php if ($errmsg21 || $errmsg22) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $std_id ?>" />
+?>" value="<?php  $std_id ?>" />
                   <span class="style29" style="color:#F00;">*</span></td>
               </tr>
               <tr>
@@ -718,14 +717,14 @@ if (isset($_POST["ok"])) {
                   <input type="text" class="inputbox-normal" name="home" id="textfield" style="background: <?php if ($errmsg23) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $home ?>" >
+?>" value="<?php $home ?>" >
                   <span class="style29" style="color:#F00;">*</span></label></td>
                 <td>หมู่บ้าน/อาคาร</td>
                 <td><div align="left">
                   <input name="m_home" class="inputbox-normal" type="text" id="m_home" size="10" style="background: <?php if ($errmsg24) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $m_home ?>"  />
+?>" value="<?php  $m_home ?>"  />
                   <span class="style29" style="color:#F00;">*</span> &nbsp;</div></td>
               </tr>
               <?php if ($errmsg25) {?>
@@ -743,14 +742,14 @@ if (isset($_POST["ok"])) {
                 <td><input name="r_home" class="inputbox-normal" type="text" id="r_home" size="10" style="background: <?php if ($errmsg25) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $r_home ?>" />
+?>" value="<?php  $r_home ?>" />
                   <span class="style29" style="color:#F00;">*</span></td>
                 <td>แขวง/ตำบล</td>
                 <td><div align="left">
                   <input name="v_home" class="inputbox-normal" type="text" id="v_home" size="10" style="background: <?php if ($errmsg26) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $v_home ?>" />
+?>" value="<?php  $v_home ?>" />
                   <span class="style29" style="color:#F00;">*</span> &nbsp;</div></td>
               </tr>
               <?php if ($errmsg27) {?>
@@ -769,14 +768,14 @@ if (isset($_POST["ok"])) {
                   <input name="p_home" class="inputbox-normal" type="text" id="p_home" size="10" style="background: <?php if ($errmsg27) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $p_home ?>" />
+?>" value="<?php  $p_home ?>" />
                   <span class="style29" style="color:#F00;">*</span> &nbsp;</div></td>
                 <td>จังหวัด</td>
                 <td><div align="left">
                   <input name="c_home" class="inputbox-normal" type="text" id="c_home" size="15" style="background: <?php if ($errmsg28) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $c_home ?>" />
+?>" value="<?php  $c_home ?>" />
                   <span class="style29" style="color:#F00;">*</span> &nbsp;</div></td>
               </tr>
               <?php if ($errmsg29) {?>
@@ -793,7 +792,7 @@ if (isset($_POST["ok"])) {
                   <input name="post" type="text" class="inputbox-normal" id="post" size="15" maxlength="5" style="background: <?php if ($errmsg29) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $post ?>"/>
+?>" value="<?php  $post ?>"/>
                   <span class="style29" style="color:#F00;">*</span> &nbsp;</div></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -811,7 +810,7 @@ if (isset($_POST["ok"])) {
                 <td><input name="tel" type="text" class="inputbox-normal" id="tel" size="18" maxlength="20" style="background: <?php if ($errmsg30) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $tel ?>"/>
+?>" value="<?php  $tel ?>"/>
                   <span class="style29" style="color:#F00;">*</span> &nbsp;</td>
                 <td>&nbsp;</td>
                 <td><div align="left"></div></td>
@@ -829,7 +828,7 @@ if (isset($_POST["ok"])) {
                 <td><input name="email" class="inputbox-normal" type="text" id="email" style="background: <?php if ($errmsg5) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $email ?>" size="25" /></td>
+?>" value="<?php  $email ?>" size="25" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
@@ -864,7 +863,7 @@ if (isset($_POST["ok"])) {
                   <select name="edulevel" id="select" style="background:<?php if ($errmsg31) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $edulevel ?>"/>
+?>" value="<?php  $edulevel ?>"/>
                   <option selected>-- การศึกษา --</option>
                   <option>ปริญญาเอก หรือ สูงกว่า</option>
                   <option>ปริญญาโท</option>
@@ -889,7 +888,7 @@ if (isset($_POST["ok"])) {
                   <input type="text" name="eduplace" id="textfield3" class="inputbox-normal" style="background: <?php if ($errmsg32) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $eduplace ?>" /></td>
+?>" value="<?php  $eduplace ?>" /></td>
                 <td>&nbsp;</td>
               </tr>
               <?php if ($errmsg33) {?>
@@ -905,7 +904,7 @@ if (isset($_POST["ok"])) {
                   <input type="text" name="eduprovince" id="textfield4" class="inputbox-normal" style="background:<?php if ($errmsg33) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $eduprovince ?>" /></td>
+?>" value="<?php  $eduprovince ?>" /></td>
                 <td>&nbsp;</td>
               </tr>
               <?php if ($errmsg34) {?>
@@ -921,7 +920,7 @@ if (isset($_POST["ok"])) {
                   <input type="text" name="eduyear" id="textfield5" class="inputbox-normal" style="background:<?php if ($errmsg34) {
     echo "#EEFCE2";
 }
-?>" value="<?php echo $eduyear ?>" /></td>
+?>" value="<?php  $eduyear ?>" /></td>
                 <td>&nbsp;</td>
               </tr>
             </table>
