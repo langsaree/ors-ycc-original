@@ -185,8 +185,12 @@ blockquote a:hover{color:#000!important;text-decoration:none;}
 }
 .style36 {font-size: 16px}
 .style37 {font-size: 18px}
+
+.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
+
 .style46 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
-.style47 {font-size: 13px}
+.style47 {font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+.style48 {color: #000000; font-weight: bold;}
 .style54 {font-size: 14px}
 .style55 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; }
 .style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
@@ -208,12 +212,6 @@ blockquote a:hover{color:#000!important;text-decoration:none;}
 .style67 {font-size: 12px}
 
 
-.style34 {
-	color: #FF0000;
-	font-size: 16px;
-	font-family: "Courier New", Courier, monospace;
-	font-weight: bold;
-}
 
 
 
@@ -230,16 +228,19 @@ blockquote a:hover{color:#000!important;text-decoration:none;}
 oo {
     font-size: 24px;
 }
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
-    color: #060;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-}
-oo {
-    font-size: 12px;
-}
+
+
+
+
+
+
+
 textarea:focus, input:focus {
     border: 2px solid #2B7C41;
+}
+input:focus, textarea:focus {
+    background:#E3E7A6;
+    color:#000000;
 }
 
 
@@ -323,5 +324,70 @@ p, h1, form, button{border:0; margin:0; padding:0;}
     color:#FFFFFF;
     font-size:11px;
     font-weight:bold;
+}
+
+
+
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td strong {
+    color: #FFF;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
+    color: #000;
+}
+.Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
+    color: #000;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td {
+    color: #060;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td h3 {
+    font-size: 12px;
+}
+.text {
+    font-weight: bold;
+    color: #FFF;
+}
+.tex2 {
+    color: #FFF;
+    font-weight: bold;
+}
+.c {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.main {
+    font-size: 12px; font-weight: bold; font-family: Tahoma;
+}
+.maintext {
+    font-size: 12px; font-weight: bold; font-family: Tahoma; color: #73707D;
+}
+.mainhead {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma;
+    color: #00F;
+}
+
+
+
+
+
+.mainhead {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma;
+    color: #00F;}
+.midle {
+    font-size: 12px;
+    font-weight: bold;
+
 }
 

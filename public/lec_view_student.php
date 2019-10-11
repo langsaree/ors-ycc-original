@@ -14,22 +14,11 @@ include('db.php');
     <title>แสดงรายชื่อนักศึกษา</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <style type="text/css">
 <!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
 .midle {
 	font-size: 12px;
 	font-weight: bold;
-	
 	}	
 -->
     </style>

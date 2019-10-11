@@ -13,19 +13,7 @@ $cos_id=$id;
     <title>รายละเอียดหลักสูตร</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-	color:#000;
-}
-.style28 {font-size: 12px; font-weight: bold; }
--->
-    </style>
+    <style type="text/css"></style>
 </head>
 <body>
 <div class="MainColumn">

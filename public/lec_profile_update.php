@@ -15,26 +15,11 @@ include('db.php');
     <title>แก้ไขข้อมูลส่วนตัว</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style9 {font-size: 12px}
-.style7 {color: #3987FB; font-size: 14px; }
-.style26 {
-	font-size: 14px;
-	font-weight: bold;
-}
-.style28 {font-size: 12px; font-weight: bold; }
-.main {	font-size: 14px; font-weight: bold; font-family: Tahoma; text-align: right;
-}
-input:focus, textarea:focus {
-		background:#E3E7A6;
-		color:#000000;
-	}
-.style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-
--->
+        <!--
+        .main {	font-size: 14px; font-weight: bold; font-family: Tahoma; text-align: right;
+        }
+        -->
     </style>
 </head>
 <body>

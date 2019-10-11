@@ -53,14 +53,7 @@ if (isset($_POST['ok'])) {
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="css/style.css"/>
-  <style type="text/css">
-  .style29 {
-    color: #FF0000;
-    font-size: 16px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: oblique;
-}
-</style>
+  <style type="text/css"></style>
 </head>
 
 <body>

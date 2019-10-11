@@ -14,41 +14,7 @@ $data="";
     <title>ยืนยันการลงทะเบียน</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
-    <style type="text/css">
-<!--
-.style25 {font-size: 11px; font-family: Tahoma; }
-.style7 {color: #3987FB; font-size: 14px; }
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td strong {
-	color: #FFF;
-}
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
-	color: #000;
-}
-.Border .Columns .MainColumn .ArticleBorder .Article table tr td li {
-	color: #000;
-}
-.text {
-	font-weight: bold;
-	color: #FFF;
-}
-.BorderBorder .Border .Columns .MainColumn .ArticleBorder .Article table tr td h3 {
-	font-size: 12px;
-}
-.tex2 {
-	color: #FFF;
-	font-weight: bold;
-}
-.c {
-	font-weight: bold;
-}
-.style47 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-.style48 {
-	color: #000000;
-	font-weight: bold;
-}
--->
-    </style>
+    <style type="text/css"></style>
 </head>
 
 <body>
@@ -83,7 +49,7 @@ $data="";
             <br>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
               <tr>
-                <td height="26" colspan="3" bgcolor="#333333" class="text"><strong>&nbsp;<span >&nbsp;&nbsp;&nbsp;เลือกวิชาที่ท่านต้องการลงทะเบียนเรียน</span></strong></td>
+                <td height="26" colspan="3" bgcolor="#333333" style="font-weight: bold; color: #FFF; font-size: 14px;"><strong>&nbsp;<span >&nbsp;&nbsp;&nbsp;เลือกวิชาที่ท่านต้องการลงทะเบียนเรียน</span></strong></td>
               </tr>
               <tr>
                 <td height="16">&nbsp;</td>
@@ -375,11 +341,7 @@ while ($rows = mysqli_fetch_array($result)) {
             <p align="center">&nbsp;</p>
         </div>
         </div>
-
-
-
-
-</div>
+    </div>
 <?php  include('include/footer.php');?>
 </body>
 </html>
