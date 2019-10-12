@@ -3,41 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view grade</title>
-<style type="text/css">
+<link rel="stylesheet" href="style.css">
 
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-}
-.style34 {	color: #666666;
-	font-size: 13px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
-.style1 {color: #FF0000;
-	font-weight: bold;
-	font-size: 24px;
-}
-.style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
-
-</style>
 </head>
 
 <body>
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../public/image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="551" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -45,7 +19,7 @@ body {
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="image/view_grade.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style47">View</span><span class="style38"> Grade</span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36"><span class="style45">View</span><span class="style38"> Grade</span></span></span><br />
             <span class="style34">แสดงเกรด</span></td>
         </tr>
     </table>
@@ -60,10 +34,11 @@ body {
 	require_once("../public/class/db.class.php");
   $db = new Db;
   $connection = $db->connect();
-	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
-	while($shows = mysql_fetch_row($show))
-	{
+  // $name = $_POST['name'];
+	// $sql = "select * from student where name ='$name'";
+	// $show = mysqli_query($connection, $sql);
+	// while($shows = mysqli_fetch_row($show))
+	// {
 	?>
           <tr>
             <td width="173"><span class="style46">รหัสประจำตัวนักศึกษา :</span></td>
@@ -77,6 +52,7 @@ body {
         <p>&nbsp;</p>
         <p class="style1">&nbsp; </p>
       </div>
+
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p align="left">&nbsp;</p>
