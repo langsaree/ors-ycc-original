@@ -1,6 +1,6 @@
-<?php{
+<?php
 session_start();
-    include('include/login.php');
+  include('include/login.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,8 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ประชาสัมพันธ์</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
     <style type="text/css"></style>
 </head>
 

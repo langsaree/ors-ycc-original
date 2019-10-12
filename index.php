@@ -43,11 +43,11 @@ include('include/login.php');
   </tr>
 </table>
 
-<?php
+<?
 include('db.php');
-$sql_view = "SELECT * FROM course  status='WHERE 1' ";
-$result_view = mysqli_query($connection,$sql_view);
-while($row=mysqli_fetch_array($result_view))
+$sql_view = "SELECT * FROM course WHERE status = '1' ";
+$result_view = mysqli_query($connection, $sql_view);
+while($row = mysqli_fetch_array($result_view))
 {
 ?>
 
@@ -56,16 +56,16 @@ while($row=mysqli_fetch_array($result_view))
   
               <tr>
                 <td width="93" rowspan="5" valign="top"><img src="images/untitled.jpg" alt="" width="78" height="83" /></td>
-                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row['cos_group'].'</span>' ?></td>
+                <td height="19" colspan="3" valign="top"><?= '<span style="color:red; font-size:15px;  font-weight: bolder;">'.'หมู่วิชา'.$row["cos_group"].'</span>'?></td>
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?= $row['cos_id'];?></td>
+                <?= $row["cos_id"];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row['cos_name'];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row["cos_name"];?></td>
                </tr>
              
               <tr>
