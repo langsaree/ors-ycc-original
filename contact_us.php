@@ -1,6 +1,7 @@
 <?php
 session_start();
-include('login_check.php');   
+include('login_check.php');
+include('db.php');   
 ?>
 
 
@@ -63,15 +64,12 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      $msgs .= " โทร  ".$_POST['tel'].'<br>';
      $msgs .= "ข้อความ<br>".$_POST['msg'];
 
-     $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
+     $mailto = "anastodeng@gmail.com"; # อีเมล์ผู้รับ
+     
      if (mail($mailto, $_POST['subj'], $msgs, $headers)) {
-      echo "<div class=\"Article\">
-             <p align=\"center\">ส่งสำเร็จ</p>
-            </div>";
+      echo "<ส่งสำเร็จ";
   } else {
-      echo "<div class=\"Article\">
-             <p align=\"center\">ผิดพลาด</p>
-            </div>";
+      echo "ผิดพลาด";
      }
 	 
      exit();
