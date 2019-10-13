@@ -1,6 +1,6 @@
-<?
+<?php
 extract ($_GET);
-$cos_id=$id;
+$cos_id = $_GET['id'];
 //echo $cos_id;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -21,7 +21,8 @@ body {
 .style25 {font-size: 13px; font-family: Tahoma; }
 .style8 {font-size: 13px; font-family: Tahoma; color: #999999; }
 -->
-</style></head>
+</style>
+</head>
 <body>
 <table width="94%" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
@@ -39,12 +40,11 @@ body {
             <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">อาจารย์ผู้สอน</span></div></td>
             <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">หมายเหตุ</span></div></td>
           </tr>
-           <?
-	include('db.php');
+           <?php
+	include('../db.php');
 	$sql = "select * from course where cos_id = $cos_id";
-	$result= mysql_query($sql);
-	while ($row = mysql_fetch_array($result))
-{
+	$result= mysql_query($conn,$sql);
+	while ($row = mysql_fetch_array($result)){
 ?>
           <tr>
             <td height="64">
@@ -69,7 +69,7 @@ body {
             <td><textarea name="cos_comment" id="cos_comment" cols="30" rows="3"> <?= $row[cos_comment]; ?> </textarea></td>
           </tr>
           
-          <?  }?>
+          <?php  }?>
         </table>
 <p align="center">
               <input type="submit" name="ok" id="ok" value="Submit" />
@@ -84,7 +84,9 @@ body {
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<table width="1260" border="0" cellspacing="0" cellpadding="0"><tr><td valign="baseline"><table width="1260" border="0" cellspacing="0" cellpadding="0">
+<table width="1260" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+   <td valign="baseline"><table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="baseline"><p class="style8">___________________________________________________________________________________________________________________________________________________________________________________</p>
         <p align="center" class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</p></td>

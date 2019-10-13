@@ -71,43 +71,43 @@ body {
         <td width="8%" bgcolor="#CCCCCC"><div align="center">แก้ไขข้อมูล</div></td>
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
-       <?
-  include('db.php');
+       <?php
+  include('.../db.php');
 	///////////////////////////////////////
    $sql1 ="select * from course ";
-   $result = mysql_query($sql1);
-   while ($row= mysql_fetch_array($result))
+   $result = mysql_query($conn,$sql1);
+   while ($row= mysqli_fetch_array($result))
 	{
-	$cos_id= $row[cos_id];
-	$cos_group=$row[cos_group];
-	$cos_name = $row[cos_name];
-	$cos_period = $row[cos_period];	
-	$cos_day = $row[cos_day];
-	$lec_id = $row[lec_id];
-	$cos_comment = $row[cos_comment];
+	$cos_id= $row['cos_id'];
+	$cos_group=$row['cos_group'];
+	$cos_name = $row['cos_name'];
+	$cos_period = $row['cos_period'];	
+	$cos_day = $row['cos_day'];
+	$lec_id = $row['lec_id'];
+	$cos_comment = $row['cos_comment'];
 //	echo $cos_id;
 	//echo $cos_name;
     $sql2 = "select * from lecture where lec_id = '$lec_id' ";
-	  $a =mysql_query ($sql2);
-	while ($row1= mysql_fetch_array($a))
+	  $a =mysqli_query ($conn,$sql2);
+	while ($row1= mysqli_fetch_array($a))
 	{
-	$lec_name= $row1[lec_name];
+	$lec_name= $row1['lec_name'];
 	//echo $lec_name;
    ?>
       <tr>
-        <td><div align="left"><? echo $cos_id; ?></div></td>
-        <td><div align="left"><? echo $cos_group; ?></div></td>
-         <td bgcolor="#F0F2F4"><div align="left"><? echo $cos_name; ?></div></td>
-        <td><div align="center"><? echo $cos_period;?></div></td>
-        <td><div align="left"><? echo $cos_day;?></div></td>
-        <td bgcolor="#F0F2F4"><div align="left"><? echo $lec_name; ?></div></td>
-        <td><div align="left"><? echo $cos_comment; ?></div></td>
+        <td><div align="left"><?php echo $cos_id; ?></div></td>
+        <td><div align="left"><?php echo $cos_group; ?></div></td>
+         <td bgcolor="#F0F2F4"><div align="left"><?php echo $cos_name; ?></div></td>
+        <td><div align="center"><?php echo $cos_period;?></div></td>
+        <td><div align="left"><?php echo $cos_day;?></div></td>
+        <td bgcolor="#F0F2F4"><div align="left"><?php echo $lec_name; ?></div></td>
+        <td><div align="left"><?php echo $cos_comment; ?></div></td>
        	<td><div align="center"><a href="cos_update.php?id= <? echo $cos_id; ?> "><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></div></td>
    	 	<td><div align="center"><a href="cos_del.php?id= <? echo $cos_id; ?> "><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></div></td>
       </tr>
-	  <? }
-	 	 }
-	 	  ?>
+	  <?php }
+	 	        }
+	 	         ?>
     </table>
 </body>
 </html>
