@@ -97,7 +97,7 @@ include('include/login.php');
                         <td width="259">&nbsp;</td>
                         <td width="187">&nbsp;</td>
                     </tr>
-                    <?
+                    <?php
                     if (isset($_SESSION['username'])) {
                         $sql = "select * from student where username='$user' ";
                         $result = mysqli_query($connection, $sql);
@@ -126,7 +126,7 @@ include('include/login.php');
                             </td>
                                 <td>&nbsp;</td>
                             </tr>
-                                <?
+                                <?php
                             }
                      }
                     ?>

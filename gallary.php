@@ -12,8 +12,11 @@ include('include/login.php');
     <script src="js/jquery.min.js"></script>
         <script src="js/galleria.js"></script>
         <style>
+             html,body{background:#333}
             .content{color:#eee;font:14px/1.4 "helvetica neue", arial,sans-serif;width:620px;margin:20px auto}
-             #galleria{height:400px;}
+              h1{line-height:1.1;letter-spacing:-1px;}
+              a {color:#fff;}
+              #galleria{height:400px;}
 
      </style>
      <link rel="stylesheet" href="style.css" />
@@ -21,8 +24,6 @@ include('include/login.php');
       .style30 {color: #666666}
     </style>
     </head> 
-
-<body>
     </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
        
@@ -39,7 +40,6 @@ include('include/login.php');
             <img src="gallary/imga4884.jpg">                
         </div>
     </div>
-
     <script>
     // Load the classic theme
     Galleria.loadTheme('galleria.classic.js');
