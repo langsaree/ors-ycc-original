@@ -19,7 +19,7 @@ $password = mysqli_real_escape_string($connection,$password);
 $sql="SELECT * FROM student WHERE username='$username' and password='$password'";
 $result=mysqli_query($connection,$sql);
 $count=mysqli_num_rows($result);
-if($count==1)
+if($count==1){
 $_SESSION['username'] = $username;
             header("Location:std_profile.php");
         } else {
@@ -35,16 +35,16 @@ $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$passwor
         if ($count1 == 1) {
             $_SESSION['username'] = $username;
             header("Location:lec_profile.php");
-        } else {
-            $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
-        }
-    } else if (empty($_POST['username']) && empty($_POST['password'])) {
+        } 
+     else if (empty($_POST['username']) && empty($_POST['password'])) {
         $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
     } else if (empty($_POST['username']) && !empty($_POST['password'])) {
         $message = "กรุณากรอกชื่อผู้ใช้ของท่านด้วย";
     } else if (!empty($_POST['username']) && empty($_POST['password'])) {
         $message = "กรุณากรอกรหัสผ่านของท่านด้วย";
-    }
+    }else {
+      $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
+  }
 	
 ?>
 <!DOCTYPE html>
@@ -111,7 +111,7 @@ $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$passwor
                         }
                  ?>
 <?php
-if (!isset($_SESSION['username']) || !isset($_SESSION['username']))
+if (!isset($_SESSION['username']))
     {
 ######################################   To show login form if user do not login ###################################
     echo '<form action="" method="post">
