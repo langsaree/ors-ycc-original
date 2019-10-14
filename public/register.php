@@ -120,8 +120,8 @@
                     </tr>
                     <tr>
                       <td height="72" colspan="3" valign="top" bgcolor="#CCCCCC">&nbsp;&nbsp;หากคุณเคยลงทะเบียนเรียนหลักสูตรของทาง <br>
-                        &nbsp;&nbsp;วิทยาลัยชุมชนยะลาแล้ว คุณสามารถใส่ <strong> <br>
-                          &nbsp;&nbsp;ชื่อล็อกอิน</strong> และ<strong>รหัสผ่าน</strong> ของคุณ <br>
+                        &nbsp;&nbsp;วิทยาลัยชุมชนยะลาแล้ว คุณสามารถใส่ <strong style="color: #060"> <br>
+                          &nbsp;&nbsp;ชื่อล็อกอิน</strong> และ<strong style="color: #060">รหัสผ่าน</strong> ของคุณ <br>
                         &nbsp;&nbsp;เพื่อเข้าไปลงทะเบียนเรียนหลักสูตรอื่นๆ ได้ <br></td>
                     </tr>
                     <tr>

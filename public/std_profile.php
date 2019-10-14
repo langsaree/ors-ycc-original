@@ -218,7 +218,7 @@ include('db.php');
                   </tr>
                   <tr>
                     <td height="19" >&nbsp;</td>
-                    <td class="style60" style="text-align: right">ศาสนา :</td>
+                      <td style="text-align: right"><span class="style60">ศาสนา :</span></td>
                     <td><? echo $row["religion"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -311,7 +311,7 @@ include('db.php');
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">จบการศึกษาระดับ :</td>
+                      <td style="text-align: right"><span class="style60">จบการศึกษาระดับ :</span></td>
                     <td><? echo $row["edulevel"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -319,7 +319,7 @@ include('db.php');
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">จากสถานศึกษา :</td>
+                      <td style="text-align: right"><span class="style60">จากสถานศึกษา :</span></td>
                     <td><? echo $row["eduplace"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -327,7 +327,7 @@ include('db.php');
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">จังหวัด :</td>
+                      <td style="text-align: right"><span class="style60">จังหวัด :</span></td>
                     <td><? echo $row["eduprovince"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -335,7 +335,7 @@ include('db.php');
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">ปีการศึกษา :</td>
+                      <td style="text-align: right"><span class="style60">ปีการศึกษา :</span></td>
                     <td><? echo $row["eduyear"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

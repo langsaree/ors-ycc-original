@@ -302,7 +302,7 @@ while($row=mysqli_fetch_array($result))
                   </tr>
                   <tr>
                     <td height="19" >&nbsp;</td>
-                    <td class="style60" style="text-align: right">ศาสนา :</td>
+                      <td style="text-align: right"><span class="style60">ศาสนา :</span></td>
                     <td><label for="religion"></label>
                       <input name="religion" type="text" id="religion" value="<?=$row['religion'];?>"></td>
                     <td>&nbsp;</td>
@@ -403,7 +403,7 @@ while($row=mysqli_fetch_array($result))
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">จบการศึกษาระดับ :</td>
+                      <td style="text-align: right"><span class="style60">จบการศึกษาระดับ :</span></td>
                     <td><label for="edulevel"></label>
                       <input type="text" name="edulevel" id="edulevel" value="<?=$row['edulevel'];?>"></td>
                     <td>&nbsp;</td>
@@ -412,7 +412,7 @@ while($row=mysqli_fetch_array($result))
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">จากสถานศึกษา :</td>
+                      <td style="text-align: right"><span class="style60">จากสถานศึกษา :</span></td>
                     <td><label for="eduplace"></label>
                       <input type="text" name="eduplace" id="eduplace" value="<?=$row['eduplace'];?>"></td>
                     <td>&nbsp;</td>
@@ -421,7 +421,7 @@ while($row=mysqli_fetch_array($result))
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">จังหวัด :</td>
+                      <td style="text-align: right"><span class="style60">จังหวัด :</span></td>
                     <td><label for="eduprovince"></label>
                       <input type="text" name="eduprovince" id="eduprovince" value="<?=$row['eduprovince'];?>"></td>
                     <td>&nbsp;</td>
@@ -430,7 +430,7 @@ while($row=mysqli_fetch_array($result))
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
-                    <td class="style60" style="text-align: right">ปีการศึกษา :</td>
+                      <td style="text-align: right">ป<span class="style60">ีการศึกษา :</span></td>
                     <td><label for="eduyear"></label>
                       <input type="text" name="eduyear" id="eduyear" value="<?=$row['eduyear'];?>"></td>
                     <td>&nbsp;</td>
