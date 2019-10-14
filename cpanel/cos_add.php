@@ -60,7 +60,7 @@ $result = mysql_query($conn,$sql);
 </script>
 
  <?php } else {
-	 die("Error db".mysql_error($conn));
+	 die("Error db".mysqli_error($conn));
     }
   }
 }

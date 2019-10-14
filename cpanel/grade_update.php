@@ -57,10 +57,10 @@ body {
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
           <?
-	include('db_connect.php');
+	include('../db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
-	while($shows = mysql_fetch_row($show))
+	$show = mysqli_query($conn,$sql);
+	while = (($show))
 	{
 	?>
           <tr>

@@ -58,11 +58,11 @@ body {
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
           <?
-	include('db.php');
+	include('..db.php');
 	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysql_query($sql);
-	while($ro = mysql_fetch_row($re))
-	{
+	$re = mysqli_query($conn,$sql);
+	while($ro = mysqli_fetch_row($re))
+	
 	?>
           <tr>
             <td width="173"><span class="style46">รหัสวิชา :</span></td>

@@ -19,7 +19,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 	$sql = "UPDATE course SET status='0' WHERE cos_id ='$non_active' ";
-	$result = mysql_query($conn,$sql);
+	$result = mysqli_query($conn,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -158,7 +158,7 @@ non {
         <td width="51" bgcolor="#FF9933" class="hhhhh">ACTIVE</td>
         <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
         </tr>
-      <?php while($row = mysql_fetch_array($result)){ ?>
+      <?php while($row = mysqli_fetch_array($result)){ ?>
       <?php // while($row2 = mysql_fetch_array($result2)){?>
       <tr>
         <td height="19" valign="top"><?php //= $row2[number]; ?></td>
