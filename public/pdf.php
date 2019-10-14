@@ -4,7 +4,7 @@ $username = $_SESSION['username'];
 if(!isset($username)){header("location:register.php");}
 include('db.php');
 extract ($_GET);
-$cos_id = '$id';
+$cos_id = $id;
 //echo "$cos_id";
 
 
@@ -13,7 +13,12 @@ $sql="select * from student where username='$username'";
 $result=mysqli_query($connection, $sql);
 $row=mysqli_fetch_array($result);
 $std_id=$row['std_id'];
-//echo "$std_id"; 
+//echo "$std_id";
+
+$cos="select * from course where cos_id='$cos_id'";
+$result1=mysqli_query($connection, $cos);
+$row1=mysqli_fetch_array($result1);
+
 
 $sql2="select * from lecturer,course where course.lec_id=lecturer.lec_id and cos_id='$cos_id'";
 $do2=mysqli_query($connection, $sql2);
@@ -55,8 +60,7 @@ $do3=mysqli_query($connection, $sql3);
 //$result=mysql_query($sql);
 
 
-$cos="select * from course where cos_id='$cos_id'";
-$result1=mysqli_query($connection, $cos);
+
 
 ?>
     </table>
@@ -168,25 +172,25 @@ $result1=mysqli_query($connection, $cos);
                 <td width="39">&nbsp;</td>
               </tr>
             </table>
-<!--            <table width="600" border="0" cellspacing="2" cellpadding="0">-->
-<!--              <tr>-->
-<!--                <td width="79">ชื่อบิดา</td>-->
+            <table width="600" border="0" cellspacing="2" cellpadding="0">
+              <tr>
+                <td width="79">ชื่อบิดา</td>
 <!--                <td width="209">--><?//= $row['fat_fname'],' ',$row['fat_lname']?><!--</td>-->
-<!--                <td width="53">อาชีพ</td>-->
+                <td width="53">อาชีพ</td>
 <!--                <td width="198">--><?//= $row['fat_job']?><!--</td>-->
-<!--                <td width="49">&nbsp;</td>-->
-<!--              </tr>-->
-<!--            </table>-->
-<!--            <table width="600" border="0" cellspacing="2" cellpadding="0">-->
-<!--              <tr>-->
-<!--                <td width="78">ชื่อมารดา</td>-->
+                <td width="49">&nbsp;</td>
+              </tr>
+            </table>
+            <table width="600" border="0" cellspacing="2" cellpadding="0">
+              <tr>
+                <td width="78">ชื่อมารดา</td>
 <!--                <td width="211">--><?//= $row['mot_fname'],' ',$row['mot_lname']?><!--</td>-->
-<!--                <td width="54">อาชีพ</td>-->
+                <td width="54">อาชีพ</td>
 <!--                <td width="200">--><?//= $row['mot_job']?><!--</td>-->
-<!--                <td width="45">&nbsp;</td>-->
-<!--              </tr>-->
-<!--               --><?// //} ?>
-<!--          </table>-->
+                <td width="45">&nbsp;</td>
+              </tr>
+               <? //} ?>
+          </table>
           </td>
         </tr>
       </table>
@@ -203,24 +207,28 @@ $result1=mysqli_query($connection, $cos);
         <tr>
           <td width="706" height="92" valign="top"><table width="705" border="1" cellpadding="0" cellspacing="0">
             <tr>
-            <? while($row1=mysqli_fetch_array($result1)){?>
+<!--            --><?// while($row1=mysqli_fetch_array($result1)){?>
               <td width="32"><div align="center">ที่</div></td>
               <td width="231"><div align="center">วิชา</div></td>
-              <td width="149"><div align="center">จำนวนชั่วโมง/หน่วยกิต</div></td>
-              <td width="107"><div align="center">วันที่เข้าเรียน</div></td>
+              <td width="107"><div align="center">จำนวนชั่วโมง/หน่วยกิต</div></td>
+              <td width="149"><div align="center">วันที่เข้าเรียน</div></td>
               <td width="174"><div align="center">หมายเหตุ</div></td>
             </tr>
             <tr>
               <td height="61" valign="top"><? ?></td>
-              <td valign="top">&nbsp;                <?=$row1['cos_name'];?></td>
-              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?=$row1['cos_time']?></td>
-              <td valign="top"><?=$row1['cos_start']?></td>
+              <td valign="top"><?=$row1['cos_name'];?></td>
+              <td valign="top" align="center"><?=$row1['cos_period']?></td>
+              <td valign="top" align="center"><?=$row1['cos_day']?></td>
               <td valign="top"><?=$row1['cos_comment']?></td>
             </tr>
-            <? } ?>
+<!--            --><?// } ?>
           </table></td>
         </tr>
       </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
