@@ -79,7 +79,7 @@ $data="";
                 <td width="192">&nbsp;</td>
               </tr>
               <tr>
-                <td height="25" colspan="3" bgcolor="#333333" class="text"><span>&nbsp;&nbsp;&nbsp;&nbsp;เลือกหมู่วิชา รายวิชา</span></td>
+                <td height="25" colspan="3" bgcolor="#333333" class="text" style="font-weight: bold; color: #FFF; font-size: 14px;"><span>&nbsp;&nbsp;&nbsp;&nbsp;เลือกหมู่วิชา รายวิชา</span></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -100,7 +100,7 @@ while ($rows = mysqli_fetch_array($result)) {
 ?>               
                 
                   <td>&nbsp;</td>
-                  <td>หมูวิชา</td>
+                  <td style=" color: black">หมูวิชา</td>
                   <td><label for="select3"></label>
                     <select style=" width:200px;" name="cos_group" id="select3">
                       <option value="<? echo $rows['cos_group']; ?>"><?= $rows['cos_group']; ?></option>
@@ -121,7 +121,7 @@ while ($rows = mysqli_fetch_array($result)) {
                 </tr>
                 <tr>
                 <td width="27">&nbsp;</td>
-                <td width="73">รหัสวิชา</td>
+                <td width="73" style=" color: black">รหัสวิชา</td>
                 <td width="317">
                 <select style="width:200px;" name="select" size="1" id="select">                 
                   <option value="<? echo $rows['cos_id']; ?>"><?= $rows['cos_id']; ?></option>
@@ -142,7 +142,7 @@ while ($rows = mysqli_fetch_array($result)) {
            
               <tr>
                 <td>&nbsp;</td>
-                <td>รายวิชา</td>
+                <td style=" color: black">รายวิชา</td>
                 <td><select style="width:200px;" name="select2" id="select2">
                   
                   <option value="<? echo $rows['cos_name']; ?>"><?= $rows['cos_name']; ?></option>
@@ -171,7 +171,7 @@ while ($rows = mysqli_fetch_array($result)) {
 <br>      <form name="form1" method="post" action="">
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="2">
               <tr>
-                <td height="22" colspan="3" bgcolor="#999999" style="font-weight: bold"> &nbsp;&nbsp;รายละเอียดวิชา</td>
+                <td height="22" colspan="3" bgcolor="#999999" style="font-weight: bold; color: black"> &nbsp;&nbsp;รายละเอียดวิชา</td>
                 </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -181,12 +181,12 @@ while ($rows = mysqli_fetch_array($result)) {
               <tr>
                 <td height="22">&nbsp;</td>
                 <td><span class="style48">หมูวิชา</span></td>
-                <td><?= $rows['cos_group'];?></td>
+                <td style=" color: black"><?= $rows['cos_group'];?></td>
               </tr>
               <tr>
                 <td height="24">&nbsp;</td>
                 <td><span class="style48">รายวิชา</span></td>
-                <td><?= $rows['cos_id'];?></td>
+                <td style=" color: black"><?= $rows['cos_id'];?></td>
               </tr>
               <tr>
                 <td width="57">&nbsp;</td>
@@ -201,7 +201,7 @@ while ($rows = mysqli_fetch_array($result)) {
             </table>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="2">
               <tr>
-                <td height="22" colspan="4" bgcolor="#999999"><span class="style47">&nbsp;&nbsp;หลักฐานการรับสมัคร</span></td>
+                <td height="22" colspan="4" bgcolor="#999999"><span class="style47" style=" color: black">&nbsp;&nbsp;หลักฐานการรับสมัคร</span></td>
                 </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -242,7 +242,7 @@ while ($rows = mysqli_fetch_array($result)) {
             </table>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="2">
               <tr>
-                <td height="21" colspan="4" bgcolor="#999999"><span class="style47">&nbsp;&nbsp;ค่าใช้จ่ายลงทะเบียนเรียน</span></td>
+                <td height="21" colspan="4" bgcolor="#999999"><span class="style47" style=" color: black">&nbsp;&nbsp;ค่าใช้จ่ายลงทะเบียนเรียน</span></td>
                 </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -277,7 +277,7 @@ while ($rows = mysqli_fetch_array($result)) {
             </table>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="2">
               <tr>
-                <td height="23" colspan="4" bgcolor="#999999"><span class="style47">การชำระค่าลงทะเบียนเรียน</span></td>
+                <td height="23" colspan="4" bgcolor="#999999"><span class="style47" style=" color: black">การชำระค่าลงทะเบียนเรียน</span></td>
                 </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -300,7 +300,7 @@ while ($rows = mysqli_fetch_array($result)) {
             </table>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="2">
               <tr>
-                <td height="20" colspan="3" bgcolor="#999999"><span class="style47">ติดต่อสอบถาม</span></td>
+                <td height="20" colspan="3" bgcolor="#999999"><span class="style47" style=" color: black">ติดต่อสอบถาม</span></td>
                 </tr>
               <tr>
                 <td width="55">&nbsp;</td>
@@ -309,7 +309,7 @@ while ($rows = mysqli_fetch_array($result)) {
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td>2 ถนนสุขยางค์ ตำบลสะเตง อำเภอเมือง จังหวัดยะลา โทร. 0-7321-6646-7 Fax. 0-7321-6648 www.ycc.ac.th </td>
+                <td style=" color: black">2 ถนนสุขยางค์ ตำบลสะเตง อำเภอเมือง จังหวัดยะลา โทร. 0-7321-6646-7 Fax. 0-7321-6648 www.ycc.ac.th </td>
                 <td>&nbsp;</td>
               </tr>
               <tr>

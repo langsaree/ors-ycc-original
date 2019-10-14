@@ -73,12 +73,12 @@ while($row = mysqli_fetch_array($result_view))
                </tr>
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
-                <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
+                <td height="19" colspan="2" valign="top" style="font-weight:bold;"><span class="o" >รหัสวิชา ::&nbsp;</span>
                 <?= $row["cos_id"];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span><?= $row["cos_name"];?></td>
+                <td colspan="2" style="font-weight:bold;"><span class="o" >ชื่อวิชา :: &nbsp;</span><?= $row["cos_name"];?></td>
                </tr>
               <tr>
                 <td style="color: #333">&nbsp;</td>
