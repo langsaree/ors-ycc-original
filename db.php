@@ -1,17 +1,13 @@
 <?php
 //define connection elements
 $dbHost = "localhost";
-$dbDatabase = "ors_ycc";
+$dbDatabase = "db";
 $dbUsername = "root";
 $dbPassword = "";
-
-
-// Create connection
-$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword,$dbDatabase);
-$conn-> query("set names utf8");
-// Check connection
+//connect to Database
+$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase);
+$conn->query("set names utf8");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
 ?>
