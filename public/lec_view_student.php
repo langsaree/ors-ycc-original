@@ -93,14 +93,22 @@ include('db.php');
         </div>
         </div><div class="MainColumn">
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-       
-          <div class="Article">
-            <br>
-            <table width="650">
-              <tr>
-                  <td width="637" class="style56">------------------------------------------------------------------------------------------</td>
-              </tr>
-            </table>
+
+            <div class="Article">            <br>
+                <br>
+                <table width="650" border="0" align="center" cellpadding="0" cellspacing="2">
+                    <tr>
+                        <td colspan="3" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------------------------------------------------------------</td>
+                    </tr>
+                    <tr>
+                        <td width="19">&nbsp;</td>
+                        <td width="409" class="mainhead">รายชื่อนักศึกษา</td>
+                        <td width="146">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------------------------------------------</td>
+                    </tr>
+                </table>
             
             <table width="650" border="0" cellspacing="2" cellpadding="0">
               <tr>
@@ -134,17 +142,24 @@ include('db.php');
                 <td>&nbsp;</td>
               </tr>
               <? }}?>
-            </table>
-            
-            <table width="650">
-              <tr>
-                <td width="637" class="style56">------------------------------------------------------------------------------------------</td>
-              </tr>
-            </table>
-          </div>
+                <table width="654" border="0" cellspacing="2" cellpadding="0">
+                    <tr>
+                        <td width="19">&nbsp;</td>
+                        <td width="603" bgcolor="#FF9933">&nbsp;</td>
+                        <td width="24">&nbsp;</td>
+                    </tr>
+                </table>
+                <table width="647" border="0" cellspacing="2" cellpadding="0">
+                    <tr>
+                        <td width="643" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------------------------------------------</td>
+                    </tr>
+                </table>
+                <br>
+                <p>&nbsp;</p>
+            </div>
         </div>
-       </div>
-     </div>
+              </div>
+          </div>
    <?php  include('include/footer.php');?>
 </body>
 </html>
