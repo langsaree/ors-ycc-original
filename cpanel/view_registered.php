@@ -4,8 +4,8 @@ include('../db.php');
 //include('auth.php');
 extract ($_GET);
 $user_admin = $_SESSION["user_admin"]
-$active = isset($_GET['active']) ? $_GET['active'] : "";
-$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
+$active = isset($_GET["active"]) ?php $_GET["active"] : "";
+$non_active = isset($_GET["non_active"]) ?php $_GET["non_active"] : "";
 $msg = "";
 if(!empty($active)){
 	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
