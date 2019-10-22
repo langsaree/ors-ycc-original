@@ -7,7 +7,7 @@ session_start();
 <?php
 
 $errmsg= "";$errmsg1 = "";$errmsg2 = "";$errmsg3 = "";$errmsg4 = "";$errmsg5 = "";$errmsg6 = "";$errmsg7 = "";$errmsg8 = "";
-if(isset($_POST['ok'])) {
+if(isset($_POST['ok'])); {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
    if(empty($cos_id)){
@@ -29,7 +29,7 @@ $cos_period = $_POST['cos_period'];
 $cos_day =$_POST['cos_day'];
 $cos_after =$_POST['cos_after'];
 $cos_time =$_POST['cos_time'];
-$date = $cos_day."-". $cos_comment ."/". $cos_time;
+$date = $cos_day."-". $cos_after ."/". $cos_time;
 //echo $date;
    if(empty($cos_day)){
    $errmsg5 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day</span>'; }
