@@ -42,7 +42,7 @@ include('include/login.php');
 
 <?php
 
- if (isset($_POST['submit'])) {
+ if (isset($_POST['action'])) {
     if ($_POST['verifycode'] != $_SESSION['total']) {
         $c_error = '<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
         //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
@@ -99,8 +99,8 @@ include('include/login.php');
                     </tr>
                     <?php
                     if (isset($_SESSION['username'])) {
-                        $sql = "select * from student where username='$user' ";
-                        $result = mysqli_query($connection, $sql);
+                        $sql = "select * from student where username='$username' ";
+                        $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_array($result)) {
                              ?>
                             <tr>

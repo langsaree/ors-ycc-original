@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>แสดงรายชื่อวิชา</title>
 <style type="text/css">
-<!--
 
 .style4 {color: #FFFFFF; }
 .style26 {
@@ -36,7 +35,6 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
 </style>
 </head>
 
@@ -71,12 +69,13 @@ body {
         <td width="8%" bgcolor="#CCCCCC"><div align="center">แก้ไขข้อมูล</div></td>
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
-       <?php
-  include('.../db.php');
+
+<?php
+  include('../db.php');
 	///////////////////////////////////////
    $sql1 ="select * from course ";
-   $result = mysql_query($conn,$sql1);
-   while ($row= mysqli_fetch_array($result))
+   $result = mysqli_query($conn,$sql1);
+   while ($row= mysqli_fetch_array($result));
 	{
 	$cos_id= $row['cos_id'];
 	$cos_group=$row['cos_group'];
@@ -89,7 +88,7 @@ body {
 	//echo $cos_name;
     $sql2 = "select * from lecture where lec_id = '$lec_id' ";
 	  $a =mysqli_query ($conn,$sql2);
-	while ($row1= mysqli_fetch_array($a))
+	while ($row1= mysqli_fetch_array($a));
 	{
 	$lec_name= $row1['lec_name'];
 	//echo $lec_name;

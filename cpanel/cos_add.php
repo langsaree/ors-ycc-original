@@ -49,21 +49,22 @@ $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysql_query ("SET NAMES 'utf8'");
+mysqli_query ($conn,"SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysql_query($conn,$sql);
+$result = mysqli_query($conn,$sql);
 
- if ($result > 0){
-   ?>
-   <script type="text/javascript">
-	      window.location="manage_course.php";
-</script>
+?>
 
- <?php } else {
-	 die("Error db".mysqli_error($conn));
-    }
-  }
-}
+<?php
+ if ($result){
+   echo "<script>location ='cos_view.php';</script>";
+   $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+   echo "$text";
+   exit;
+ } else {
+	 die("Error db".mysqli_error($conn));}
+    
+}}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -71,7 +72,6 @@ $result = mysql_query($conn,$sql);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>เพิ่มข้อมูลรายวิชา</title>
 <style type="text/css">
-<!--
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -112,7 +112,6 @@ body {
 	text-decoration:none;
 }
 
--->
 </style>
 </head>
 
@@ -138,13 +137,13 @@ body {
             <tr>
               <td height="26">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php echo $errmsg1 ?></td>
+              <td><?php echo $errmsg1?></td>
             </tr>
             <?php } ?>
             <tr>
               <td width="227" height="26"><div align="right">รหัสวิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1){ echo "#EEFCE2"; ?>" value="<?php echo $cos_id } ?>" /></td>
+              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1){ echo "#EEFCE2"; ?>" value="<?php $cos_id ?>" /></td>
             </tr>
             <?php if($errmsg2) {?>
             <tr>
@@ -205,7 +204,7 @@ body {
                 <option>เสาร์</option>
                 <option>อาทิตย์</option>
               </select>
-                <select name="cos_comment" id="cos_after"style="background: <?php if($errmsg6 ) echo "#EEFCE2"; ?>" value="<?php echo $cos_comment ?>">
+                <select name="cos_after" id="cos_after"style="background: <?php if($errmsg6 ) echo "#EEFCE2"; ?>" value="<?php echo $cos_comment ?>">
                   <option value="0" selected="selected">ถึง</option>
                   <option value="จันทร์">จันทร์</option>
                   <option value="อังคาร">อังคาร</option>
@@ -215,7 +214,7 @@ body {
                   <option value="เสาร์">เสาร์</option>
                   <option value="อาทิตย์">อาทิตย์</option>
                 </select>
-                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php echo $cos_time ?>">
+                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php $cos_time ?>">
                   <option  value="0">ภาค</option>
                   <option value="เช้า">เช้า</option>
                   <option value="เย็น">เย็น</option>
@@ -226,9 +225,9 @@ body {
             <tr>
               <td height="28">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?= $errmsg8?></td>
+              <td><?php echo $errmsg8?></td>
             </tr>
-            <? }?>
+            <?php }?>
             <tr>
               <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
               <td>&nbsp;</td>

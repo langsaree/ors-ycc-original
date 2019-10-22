@@ -74,7 +74,7 @@ a:active {
                 <div align="center">
                     <p class="style1">Student Information </p>
                                        
-<?
+<?php
 //echo $cos_id;
 $sql = "select * from student where std_id='$id' ";
 $result = mysqli_query($conn,$sql);

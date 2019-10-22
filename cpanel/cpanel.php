@@ -1,20 +1,19 @@
 <?php
-//session_start();
-//if(!session_is_registered(user_admin)){header("location:index.php");}
+session_start();
+if(!isset($_SESSION["user_admin"])){header("location:index.php");}
 //end of check session
+$user_admin = $_SESSION["user_admin"]
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Cpanel</title>
 <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="cpanel.css" />
-<style type="text/css">
-<!--
 
--->
-</style>
+
 </head>
 <body>
 <div class="banner"><span class="style25"></span></div>
@@ -23,14 +22,15 @@
     <td width="9">&nbsp;</td>
     <td width="330"><span class="style26"><span class="style30">Administrator</span> <span class="style29">Control Panel</span></span></td>
     <td width="308">&nbsp;</td>
-    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><? echo '<span style="font-weight:bold; font-size:15px"> '.$user_admin .'</span>'; ?></td>
+    <td width="359" style="text-align:right"><span class="style33"><strong>ยินดีต้อนรับ :: </strong></span><?php echo '<span style="font-weight:bold; font-size:15px"> '.$user_admin .'</span>'; ?></td>
     <td width="12">&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td><span class="style37">ระบบจัดการการลงทะเบียนออนไลน์</span></td>
     <td>&nbsp;</td>
-    <td style="text-align:right"><strong><a href="logout.php" title="ออกจากระบบ" class="style33" style="text-decoration: none">ออกจากระบบ</a></strong></td>
+    <li class="divider"></li>
+    <td style="text-align:right"><strong><a href="logout.php" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></samp> ออกจากระบบ</a></strong></td>
     <td><div align="right" class="style33"></td>
   </tr>
 </table>
@@ -84,7 +84,7 @@
       <tr>
         <td class="style41">&nbsp;</td>
         <td class="style41"><a href="register_course.php" class="style41">ลงทะเบียนวิชา</a></td>
-        <td class="style41">การจัดการสถานะนักศึกษา</td>
+        <td class="style41"><a href="std_active.php" class="style41">การจัดการสถานะนักศึกษา</td>
         <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
         <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
         <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>

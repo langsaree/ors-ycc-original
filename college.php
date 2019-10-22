@@ -76,20 +76,8 @@ include('include/login.php');
                 <td>&nbsp;</td>
               </tr>
             </table>
-            </div>
-        </div>   
-        <div class="ArticleBorder">
-          <div class="ArticleBL"><div></div></div>
-          <div class="ArticleBR"><div></div></div>
-          <div class="ArticleTL"></div>
-          <div class="ArticleTR"><div></div></div>
-          <div class="ArticleT"></div>
-          <div class="ArticleR"><div></div></div>
-          <div class="ArticleB"><div></div></div>
-          <div class="ArticleL"></div>
-        </div>
-        </div>
-    </div>
+          </div>
+      </div>
 </div>
     <?php include('include/footer.php');?>
     </body>

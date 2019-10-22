@@ -30,7 +30,7 @@ session_start();
               <td>&nbsp;</td>
               <td>&nbsp;</td>
            <tr>
-        <p align="center">//</p>
+        <p align="center">ยังไม่มีการประชาสัมพันธ์</p>
       </tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>

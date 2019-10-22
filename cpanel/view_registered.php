@@ -1,14 +1,14 @@
 <?php
 session_start();
 include('../db.php');
-//include('auth.php');
+include('auth.php');
 extract ($_GET);
-$user_admin = $_SESSION["user_admin"]
-$active = isset($_GET["active"]) ?php $_GET["active"] : "";
-$non_active = isset($_GET["non_active"]) ?php $_GET["non_active"] : "";
+$user_admin = $_SESSION['user_admin'];
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg = "";
-if(!empty($active)){
-	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
+if(!empty($active)) {
+	$sql = "UPDATE register SET status='1' WHERE cos_id='$active' ";
 	$result = mysqli_query($conn,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
@@ -84,7 +84,7 @@ body {
   <tr>
     <td><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student register.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/student register.png" width="100" height="100" /></td>
         <td width="94%"><span class="style36">View<span class="style38"> Registered&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="style6"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a>&nbsp;</span><span class="style36"><span class="style38"> &nbsp;</span></span><span class="style6">&nbsp;</span><br />
           <span class="style34">แสดงรายชื่อนักศึกษาลงทะเบียน</span></td>
       </tr>
@@ -95,7 +95,7 @@ body {
       <?php if($msg){?>
         <tr>
           <td width="129" valign="top">&nbsp;</td>
-          <td width="596" valign="top"><?php echo $msg?></td>
+          <td width="596" valign="top"><?php  $msg?></td>
         </tr><?php }?>
       </table>
       <br />
@@ -159,7 +159,7 @@ body {
         <td bgcolor="#FFFFE8"><?php echo $cos_name?></td>
         <td align="left" bgcolor="#FFFFE8"><?php echo $lec_name?></td>
         <td align="center" bgcolor="#FFFFCC">
-		<?php $status=$ro[status];
+		<?php $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }

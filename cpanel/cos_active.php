@@ -7,7 +7,7 @@ extract ($_GET);
 
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysql_query($conn,$sql);
+	$result = mysqli_query($conn,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -123,7 +123,7 @@ non {
     <td>&nbsp;</td>
   </tr>
 </table>
-<table width="1024" border="0" cellpadding="0" cellspacing="0"> <?php error_reporting('E_ALL & E_NOTICE') if($msg){?>
+<table width="1024" border="0" cellpadding="0" cellspacing="0"> <?php error_reporting('E_ALL & ~E_NOTICE'); if($msg){?>
   <tr>
     <td width="26" height="61">&nbsp;</td>
     <td width="465"><p class="one"><br />
@@ -140,9 +140,9 @@ non {
 
 <?php
   $sql = "select * from course order by status DESC";
-  $result = mysql_query($conn,$sql);
+  $result = mysqli_query($conn,$sql);
   $sql2 = "select * from number ";
-  $result2 = mysql_query($conn,$sql2);
+  $result2 = mysqli_query($conn,$sql2);
   	
 ?>
 <table width="1024" border="0" cellpadding="0" cellspacing="2">  
