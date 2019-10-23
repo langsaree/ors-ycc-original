@@ -1,8 +1,10 @@
-<?php
+<?php 
 session_start();
 include('db.php');
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+if(!isset($_SESSION['lec_user'])){header("location:index.php");}
+if(isset($_SESSION['lec_user'])){
+  $username=$_SESSION['lec_user'];
+  
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,7 @@ if(session_is_registered(lec_user)){
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -32,7 +34,6 @@ input:focus, textarea:focus {
 	}
 .style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
 
--->
     </style>
 </head>
 <body>
@@ -64,19 +65,19 @@ input:focus, textarea:focus {
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><?php  echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php  echo '<span class="style26 "> '.$_SESSION['lec_user'].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php  echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><?php  echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+            <?php  } ?>
 
             <br>
           </div>
@@ -109,10 +110,10 @@ input:focus, textarea:focus {
                 <td width="643" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------------------------------------------</td>
               </tr>
             </table>
-<?
+<?php 
 			
-			$ok=$ok;
-            if(isset($ok)){
+			
+            if(isset($_POST['ok'])){
 				$login=$_POST['login'];
 				$pswd=$_POST['pswd'];
 				$name=$_POST['name'];
@@ -120,22 +121,22 @@ input:focus, textarea:focus {
 				$phone=$_POST['phone'];
 				
 				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysql_query($sql);
+				$do=mysqli_query($conn,$sql);
 				if($do){
 					echo "<script>location='lec_profile.php';</script>";
 				}
 				else{
-					 mysql_error();
+					 mysqli_error();
 				}
 			}
 			?>
             <form action="" method="post" enctype="multipart/form-data" name="form1">
             <table width="600">
-             <? 
+             <?php  
 			
 			$sql = "select * from lecture where username='$username'";
-            $result=mysql_query($sql);
-            ($row=mysql_fetch_array($result));
+            $result=mysqli_query($conn,$sql);
+            ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
@@ -160,7 +161,7 @@ input:focus, textarea:focus {
                   <td class="main">Username :</td>
                   <td>
                     <label for="login"></label>
-                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?=$row[username];?>">
+                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?php echo $row['username'];?>">
                  </td>
                   <td>&nbsp;</td>
                 </tr>
@@ -168,7 +169,7 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">Password :</td>
                   <td><label for="pswd"></label>
-                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?=$row[password];?>" ></td>
+                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?php $row['password'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -181,21 +182,21 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">ชื่อ :</td>
                   <td><label for="name"></label>
-                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?=$row[lec_name];?>" ></td>
+                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?php echo $row['lec_name'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Email :</td>
                   <td><label for="email"></label>
-                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?=$row[lec_email];?>" ></td>
+                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?php echo $row['lec_email'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Phone :</td>
                   <td><label for="phone"></label>
-                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?=$row[lec_tel];?>" ></td>
+                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?php echo $row['lec_tel'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
             </table>

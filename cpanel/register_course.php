@@ -33,9 +33,7 @@ if(isset($_SESSION["username"])){header("location:cpanel.php");}
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  header("location:std_profile.php");
-					  }
-				   else
-				   {
+					  }else{
 				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
 				   }
 				  }
@@ -104,8 +102,6 @@ if(isset($_SESSION["username"])){header("location:cpanel.php");}
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
-
-
 
 
 

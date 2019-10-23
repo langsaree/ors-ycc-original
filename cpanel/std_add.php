@@ -100,7 +100,6 @@ body {
           <?php
 //ob_start();
 //session_start();
-$errmsg= "";
 
 //$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
 //	foreach($_REQUEST as $key => $value)  {
@@ -110,7 +109,7 @@ $errmsg= "";
 //	for($i = 0; $i < 20; $i++) {
 //		$errmsg[$i] = false;
 //	}
-if(isset($ok)) {	
+if(isset($_POST['ok'])) {	
 #=========================================
 # username check	
 //if(isset($ok)) { 
@@ -221,7 +220,7 @@ if(isset($ok)) {
 	   $errmsg21 .= '<span style="color:red; font-size:12px">กรุณากรอบเลขบัตรประชาชนด้วยค่ะ</span>';
 	   }
    if(!$errmsg21) {
-      //if(strlen($std_id) > 13 ){
+      if(strlen($std_id) > 13 ){
 		  if($group_1=$std_id){ 
 		  
           $num1=substr("$group_1",0,1);
@@ -260,7 +259,7 @@ if(isset($ok)) {
           if ($group_1<>"") {
             if ($cal_2!=$num13) {
                  $errmsg22 .='<span style="color:red; font-size:12px">หมายเลขบัตรประชาชนนี้ไม่ถูกต้อง กรุณาลองใหม่ค่ะ</span>';
-	      }}}}
+	      }}}}}
                     
 
 #end check id card
@@ -319,9 +318,9 @@ if(isset($ok)) {
   
 #================================= 
 #=================================
-      if(!$errmsg3 && !$errmsg5 && !$errmsg10  && !$errmsg11 && !$errmsg12 && !$errmsg13 &&/* !$errmsg15 && !$errmsg16 &&
-	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 &&*/ !$errmsg22 /*&& !$errmsg23 && !$errmsg24 && 
-	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */&& !$errmsg30)
+      if(!$errmsg3 && !$errmsg5 && !$errmsg10  && !$errmsg11 && !$errmsg12 && !$errmsg13 && !$errmsg15 && !$errmsg16 &&
+	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 && !$errmsg22 && !$errmsg23 && !$errmsg24 && 
+	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 && !$errmsg30)
 	   {
        $query = "insert into student(username,password,f_name,name,s_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) value(
 '$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
@@ -364,7 +363,7 @@ if(isset($ok)) {
               <tr>
                 <td height="5" bgcolor="#FFFFFF">&nbsp;</td>
                 <td width="505" align="center" valign="middle" bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg1 ?>
+                  <?php echo $errmsg1 ?>
                 </div></td>
               </tr>
               <?php   } ?>
@@ -372,7 +371,7 @@ if(isset($ok)) {
               <tr>
                 <td height="5" bgcolor="#FFFFFF">&nbsp;</td>
                 <td align="center" valign="middle" bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg2 ?>
+                  <?php echo $errmsg2 ?>
                 </div></td>
               </tr>
               <?php   } ?>
@@ -380,10 +379,10 @@ if(isset($ok)) {
               <tr>
                 <td height="5" bgcolor="#FFFFFF">&nbsp;</td>
                 <td align="center" valign="middle" bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg3 ?>
+                  <?php echo $errmsg3 ?>
                 </div></td>
               </tr>
-              <?php   } ?>
+              <?php } ?>
               <tr>
                 <td width="106" height="5" bgcolor="#FFFFFF"><div align="left"> ชื่อล็อกอิน:</div></td>
                 <td height="5" align="center" valign="middle" bgcolor="#FFFFFF"><span class="style32"></span>
@@ -395,7 +394,7 @@ if(isset($ok)) {
               <tr>
                 <td height="5" bgcolor="#FFFFFF">&nbsp;</td>
                 <td bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg6 ?>
+                  <?php echo $errmsg6 ?>
                 </div></td>
               </tr>
               <?php   } ?>
@@ -403,7 +402,7 @@ if(isset($ok)) {
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
                 <td bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg8 ?>
+                  <?php echo $errmsg8 ?>
                 </div>
                   <div align="left"></div></td>
               </tr>
@@ -412,7 +411,7 @@ if(isset($ok)) {
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
                 <td bgcolor="#FFFFFF"><div align="left" class="style34">
-                  <?php $errmsg9 ?>
+                  <?php echo $errmsg9 ?>
                 </div></td>
               </tr>
               <?php   } ?>
@@ -420,7 +419,7 @@ if(isset($ok)) {
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
                 <td bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg10 ?>
+                  <?php echo $errmsg10 ?>
                 </div>
                   <div align="left"></div></td>
               </tr>
@@ -435,10 +434,10 @@ if(isset($ok)) {
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
                 <td bgcolor="#FFFFFF"><div align="left">
-                  <?php $errmsg7 ?>
+                  <?php echo $errmsg7 ?>
                 </div></td>
               </tr>
-              <?php   } ?>
+              <?php } ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF"><div align="left">ยืนยันรหัสผ่าน:</div></td>
                 <td bgcolor="#FFFFFF"><div align="left">
@@ -483,7 +482,7 @@ if(isset($ok)) {
              <?php   if($errmsg11) { ?>
               <tr>
                 <td bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php $errmsg11 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg11 ?></td>
               </tr>
               <?php } ?>
                <tr>
@@ -501,41 +500,41 @@ if(isset($ok)) {
 			<?php   if($errormsg12) {?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg12 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg12 ?></td>
               </tr>
               <?php   } ?>
               <tr>
                 <td height="" bgcolor="#FFFFFF">ชื่อ </td>
-                <td height="1" bgcolor="#FFFFFF"><input type="text"  class="inputbox-normal" name="name" value="<?php  $name ?>" id="name" style="background: <?php   if($errmsg12) echo "#EEFCE2"; ?>"/>
+                <td height="1" bgcolor="#FFFFFF"><input type="text"  class="inputbox-normal" name="name" value="<?php $name ?>" id="name" style="background: <?php   if($errmsg12) echo "#EEFCE2"; ?>"/>
                   <span class="style29"style="color:#F00;"> *</span><span class="style34"> &nbsp;</span></td>
               </tr>
               <?php   if($errmsg13) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="" bgcolor="#FFFFFF"><?php  $errmsg13 ?></td>
+                <td height="" bgcolor="#FFFFFF"><?php echo $errmsg13 ?></td>
               </tr>
               <?php   } ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF"><div align="left">นามสกุล</div></td>
-                <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php   if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php  $s_name ?>" />
+                <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php  $s_name ?>" />
                   <span class="style29"style="color:#F00;">*</span></td>
               </tr>
               <?php   if($errmsg15) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg15 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg15 ?></td>
               </tr>
               <?php   } ?>
               <?php   if($errmsg16) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg16 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg16 ?></td>
               </tr>
               <?php   } ?>
               <?php   if($errmsg17) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg17 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg17 ?></td>
               </tr>
               <?php   } ?>
               <tr>
@@ -627,19 +626,19 @@ if(isset($ok)) {
               <?php   if($errmsg18) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="" bgcolor="#FFFFFF"><?php  $errmsg18 ?></td>
+                <td height="" bgcolor="#FFFFFF"><?php echo $errmsg18 ?></td>
               </tr>
               <?php   } ?>
               <?php   if($errmsg19) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg19 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg19 ?></td>
               </tr>
               <?php   } ?>
               <?php   if($errmsg20) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg20 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg20 ?></td>
               </tr>
               <?php   } ?>
               <tr>
@@ -664,13 +663,13 @@ if(isset($ok)) {
               <?php   if($errmsg21) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg21 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg21 ?></td>
               </tr>
               <?php   } ?>
               <?php   if($errmsg22) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
-                <td height="1" bgcolor="#FFFFFF"><?php  $errmsg22 ?></td>
+                <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg22 ?></td>
               </tr>
               <?php   } ?>
               <tr>
@@ -706,9 +705,9 @@ if(isset($ok)) {
               <?php   if($errmsg24) { ?>
               <tr>
                 <td height="1">&nbsp;</td>
-                <td><?php  $errmsg23 ?></td>
+                <td><?php echo $errmsg23 ?></td>
                 <td></td>
-                <td><?php  $errmsg24 ?></td>
+                <td><?php echo $errmsg24 ?></td>
               </tr>
               <?php   } ?>
               <?php   } ?>
@@ -726,9 +725,9 @@ if(isset($ok)) {
               <?php   if($errmsg26) { ?>
               <tr>
                 <td height="32">&nbsp;</td>
-                <td><?php  $errmsg25 ?></td>
+                <td><?php echo $errmsg25 ?></td>
                 <td>&nbsp;</td>
-                <td><?php  $errmsg26 ?></td>
+                <td><?php echo $errmsg26 ?></td>
               </tr>
               <?php   } ?>
               <?php   } ?>
@@ -745,9 +744,9 @@ if(isset($ok)) {
               <?php   if($errmsg28) { ?>
               <tr>
                 <td height="23">&nbsp;</td>
-                <td><?php  $errmsg27 ?></td>
+                <td><?php echo $errmsg27 ?></td>
                 <td>&nbsp;</td>
-                <td><?php  $errmsg28 ?></td>
+                <td><?php echo $errmsg28 ?></td>
               </tr>
               <?php   } ?>
               <?php   } ?>
@@ -764,7 +763,7 @@ if(isset($ok)) {
               <?php   if($errmsg29) { ?>
               <tr>
                 <td height="30">&nbsp;</td>
-                <td><?php  $errmsg29 ?></td>
+                <td><?php echo $errmsg29 ?></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
@@ -780,7 +779,7 @@ if(isset($ok)) {
               <?php   if($errmsg30) { ?>
               <tr>
                 <td height="27">&nbsp;</td>
-                <td><?php  $errmsg30 ?></td>
+                <td><?php echo $errmsg30 ?></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
@@ -795,7 +794,7 @@ if(isset($ok)) {
               <?php   if($errmsg5) { ?>
               <tr>
                 <td>&nbsp;</td>
-                <td><?php  $errmsg5 ?></td>
+                <td><?php echo $errmsg5 ?></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
@@ -826,7 +825,7 @@ if(isset($ok)) {
               <?php   if($errmsg31) {?>
               <tr>
                 <td>&nbsp;</td>
-                <td><?php $errmsg31 ?></td>
+                <td><?php echo $errmsg31 ?></td>
                 <td>&nbsp;</td>
               </tr>
               <?php   } ?>
@@ -849,7 +848,7 @@ if(isset($ok)) {
               <?php   if($errmsg32) {?>
               <tr>
                 <td>&nbsp;</td>
-                <td><?php  $errmsg32 ?></td>
+                <td><?php echo $errmsg32 ?></td>
                 <td>&nbsp;</td>
               </tr>
               <?php   }?>
@@ -862,7 +861,7 @@ if(isset($ok)) {
               <?php   if($errmsg33) {?>
               <tr>
                 <td>&nbsp;</td>
-                <td><?php  $errmsg33 ?></td>
+                <td><?php echo $errmsg33 ?></td>
                 <td>&nbsp;</td>
               </tr>
               <?php   } ?>
@@ -875,7 +874,7 @@ if(isset($ok)) {
               <?php   if($errmsg34) {?>
               <tr>
                 <td>&nbsp;</td>
-                <td><?php  $errmsg34 ?></td>
+                <td><?php echo $errmsg34 ?></td>
                 <td>&nbsp;</td>
               </tr>
               <?php   } ?>

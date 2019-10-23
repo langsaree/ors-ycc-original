@@ -56,13 +56,24 @@ include('db.php');
                       {
 					  $_SESSION['login'] = true;
 					  $_SESSION['username'] = $_REQUEST['username'];
-					  $_SESSION['password'] = $_REQUEST['password'];
 					  header("location:std_profile.php");
 					  }
 				   else
 				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
+				    $sql2 = "select * from lecture where username='$username' and password ='$password'";
+                   $result2=mysqli_query($conn, $sql2);
+                   $count2=mysqli_num_rows($result2);
+				   if($count2==1){
+					   
+					$_SESSION['login'] = true;
+					$_SESSION['lec_user'] = $_REQUEST['username'];
+					header("location:lec_profile.php");
+				   }else{
+					$message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
 				   }
+				   }
+				   
+				   
 				  }
 			  	}  
    
