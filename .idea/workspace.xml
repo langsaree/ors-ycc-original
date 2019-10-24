@@ -1,218 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bk_modify_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/imga4838.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/imga4884.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/imga4900.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/pb0585791.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/pb058590.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/galleria.classic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/galleria.classic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650148_DeleteRed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650438_Shutdown_Box_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650538_Cute Ball - Shutdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650560_Circle_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1295339949_pen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1295340314_old-edit-find.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/4099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Horsligne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Live Messenger22322.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/MSN MESSENGER 15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/PhotoshopSZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/View.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_notes/update.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_notes/update.png.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_notes/v.png.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/about-us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/about-us_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add_grade .png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add_lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/admin.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/admin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/advicer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/applyForm-page_04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/applyForm-page_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b-search.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b1b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b1f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b1r.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/back-button.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bbbb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bd1L.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/body.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/contect-us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/contect-us_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/controlPanel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/controlPanel_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/couse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/couse_C.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/cpanel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/default_avatar_big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete evaluation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/display.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/evaluation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/f2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/footer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/gear2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/home_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/infor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/infor_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/invisible22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/l.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lec_view.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lecture Manager.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lecturer.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lecturer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/list-edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/man form.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage student.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/news.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/news_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/office22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/officer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/osa_user_blue_sysadmin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/p_Image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/picture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/picture_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/regi corse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/register change form.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/register course.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/register_form.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_course.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_lec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_student.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/std_infor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student course status.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student status.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student update.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student view.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view evaluation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view register course.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view_lec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/web-background-008.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/web-background-008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ycc_bg_1_2 copy1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButtonAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockHeader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockHeaderAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ButtonAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Footer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Header.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Big.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Small.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MenuBar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MenuButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MenuButtonAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/_notes/2.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/_notes/dwsync.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/_notes/untitled.jpg.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cregister.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/p_Image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/register.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/register1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/untitled.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ycc_banner_real.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ตราโลโก้.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ยืนยันการสมัคร.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/galleria.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_view_cos.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_view_student.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manual.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/p_register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/password_recovery.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style_bk.css" beforeDir="false" />
-    </list>
+    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -244,6 +33,20 @@
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cpanel/admin.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-97" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cpanel/Copy of std_add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6016" />
           </provider>
         </entry>
       </file>
@@ -312,7 +115,7 @@
     </option>
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="712" />
     <option name="height" value="735" />
@@ -328,16 +131,6 @@
             <path>
               <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="fix2019" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix2019" type="462c0819:PsiDirectoryNode" />
-              <item name=".settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix2019" type="462c0819:PsiDirectoryNode" />
-              <item name="_notes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fix2019" type="b2602c69:ProjectViewProjectNode" />
@@ -393,16 +186,15 @@
       <workItem from="1570687478117" duration="23903000" />
       <workItem from="1570796883128" duration="1797000" />
       <workItem from="1571079059680" duration="843000" />
-      <workItem from="1571933898091" duration="1353000" />
+      <workItem from="1571933898091" duration="2872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66983000" />
+    <option name="totallyTimeSpent" value="68502000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -429,236 +221,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/register_course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="1061" column="31" selection-start-line="1061" selection-start-column="31" selection-end-line="1061" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3791#3797#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="e#25869#25875#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#td#1;n#tr#0;n#table#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#26120#26126#1#HTML" expanded="true" />
-            <element signature="e#26247#26253#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#26415#26421#0#HTML" expanded="true" />
-            <element signature="e#26518#26524#1#HTML" expanded="true" />
-            <element signature="e#26657#26663#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#26887#26893#1#HTML" expanded="true" />
-            <element signature="e#27026#27032#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#27303#27309#1#HTML" expanded="true" />
-            <element signature="e#27603#27609#1#HTML" expanded="true" />
-            <element signature="e#27667#27673#1#HTML" expanded="true" />
-            <element signature="e#27824#27830#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#28430#28436#1#HTML" expanded="true" />
-            <element signature="e#28812#28818#1#HTML" expanded="true" />
-            <element signature="e#28880#28886#1#HTML" expanded="true" />
-            <element signature="e#28948#28954#1#HTML" expanded="true" />
-            <element signature="e#29368#29374#1#HTML" expanded="true" />
-            <element signature="e#29919#29925#1#HTML" expanded="true" />
-            <element signature="e#30457#30463#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#1;n#tr#3;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#31513#31519#0#HTML" expanded="true" />
-            <element signature="e#31829#31835#1#HTML" expanded="true" />
-            <element signature="e#32336#32342#1#HTML" expanded="true" />
-            <element signature="e#32916#32922#1#HTML" expanded="true" />
-            <element signature="e#33440#33446#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#1;n#tr#8;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#34421#34427#0#HTML" expanded="true" />
-            <element signature="e#34737#34743#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#1;n#tr#10;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#35657#35663#0#HTML" expanded="true" />
-            <element signature="e#35905#35911#1#HTML" expanded="true" />
-            <element signature="e#35989#35995#1#HTML" expanded="true" />
-            <element signature="e#36157#36163#1#HTML" expanded="true" />
-            <element signature="e#36241#36247#1#HTML" expanded="true" />
-            <element signature="e#36625#36631#1#HTML" expanded="true" />
-            <element signature="e#36709#36715#1#HTML" expanded="true" />
-            <element signature="e#36935#36941#1#HTML" expanded="true" />
-            <element signature="e#38239#38245#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#18;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#38936#38942#0#HTML" expanded="true" />
-            <element signature="e#39180#39186#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#20;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#40097#40103#1#HTML" expanded="true" />
-            <element signature="e#40491#40497#1#HTML" expanded="true" />
-            <element signature="e#40885#40891#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#td#1;n#tr#24;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#td#1;n#tr#24;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#div#0;n#td#1;n#tr#24;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#44635#44641#0#HTML" expanded="true" />
-            <element signature="e#44878#44884#1#HTML" expanded="true" />
-            <element signature="e#45271#45277#1#HTML" expanded="true" />
-            <element signature="e#45665#45671#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#28;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#td#1;n#tr#28;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#td#1;n#tr#28;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#47624#47630#0#HTML" expanded="true" />
-            <element signature="e#47924#47930#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#30;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#48854#48860#0#HTML" expanded="true" />
-            <element signature="e#49091#49097#1#HTML" expanded="true" />
-            <element signature="e#49485#49491#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#33;n#table#1;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#50342#50348#1#HTML" expanded="true" />
-            <element signature="e#50416#50422#1#HTML" expanded="true" />
-            <element signature="e#50779#50785#0#HTML" expanded="true" />
-            <element signature="e#50785#50791#0#HTML" expanded="true" />
-            <element signature="e#50963#50969#1#HTML" expanded="true" />
-            <element signature="e#51031#51037#1#HTML" expanded="true" />
-            <element signature="e#51099#51105#1#HTML" expanded="true" />
-            <element signature="e#51167#51173#1#HTML" expanded="true" />
-            <element signature="e#51410#51416#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#3;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#label#0;n#td#1;n#tr#3;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#3;n#tr#3;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#52677#52683#0#HTML" expanded="true" />
-            <element signature="e#52927#52933#1#HTML" expanded="true" />
-            <element signature="e#53064#53070#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#5;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#5;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#3;n#tr#5;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#54164#54170#0#HTML" expanded="true" />
-            <element signature="e#54414#54420#1#HTML" expanded="true" />
-            <element signature="e#54551#54557#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#7;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#1;n#tr#7;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#55256#55262#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#3;n#tr#7;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#55687#55693#0#HTML" expanded="true" />
-            <element signature="e#55913#55919#1#HTML" expanded="true" />
-            <element signature="e#56050#56056#1#HTML" expanded="true" />
-            <element signature="e#56110#56116#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#9;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#td#1;n#tr#9;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#56738#56744#0#HTML" expanded="true" />
-            <element signature="e#56800#56806#1#HTML" expanded="true" />
-            <element signature="e#56856#56862#1#HTML" expanded="true" />
-            <element signature="e#57076#57082#1#HTML" expanded="true" />
-            <element signature="e#57213#57219#1#HTML" expanded="true" />
-            <element signature="e#57273#57279#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#11;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#11;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#57824#57830#0#HTML" expanded="true" />
-            <element signature="e#57880#57886#1#HTML" expanded="true" />
-            <element signature="e#58160#58166#1#HTML" expanded="true" />
-            <element signature="e#58296#58302#1#HTML" expanded="true" />
-            <element signature="e#58356#58362#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#13;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#13;n#table#2;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#58858#58864#1#HTML" expanded="true" />
-            <element signature="e#58914#58920#1#HTML" expanded="true" />
-            <element signature="e#59053#59059#1#HTML" expanded="true" />
-            <element signature="e#59109#59115#1#HTML" expanded="true" />
-            <element signature="e#59165#59171#1#HTML" expanded="true" />
-            <element signature="e#59221#59227#1#HTML" expanded="true" />
-            <element signature="e#59563#59569#0#HTML" expanded="true" />
-            <element signature="e#59569#59575#0#HTML" expanded="true" />
-            <element signature="e#59740#59746#1#HTML" expanded="true" />
-            <element signature="e#59808#59814#1#HTML" expanded="true" />
-            <element signature="e#59876#59882#1#HTML" expanded="true" />
-            <element signature="e#60113#60119#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#3;n#table#3;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#61421#61427#1#HTML" expanded="true" />
-            <element signature="e#61628#61634#1#HTML" expanded="true" />
-            <element signature="e#61765#61771#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#5;n#table#3;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#62303#62309#1#HTML" expanded="true" />
-            <element signature="e#62510#62516#1#HTML" expanded="true" />
-            <element signature="e#62647#62653#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#7;n#table#3;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#63189#63195#1#HTML" expanded="true" />
-            <element signature="e#63396#63402#1#HTML" expanded="true" />
-            <element signature="e#63533#63539#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#9;n#table#3;n#form#0;n#div#8;n#div#0;n#div#1;n#div#2;n#div#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#64070#64076#1#HTML" expanded="true" />
-            <element signature="e#64380#64386#1#HTML" expanded="true" />
-            <element signature="e#64436#64442#1#HTML" expanded="true" />
-            <element signature="e#64605#64611#0#HTML" expanded="true" />
-            <element signature="e#64611#64617#0#HTML" expanded="true" />
-            <element signature="e#64790#64796#1#HTML" expanded="true" />
-            <element signature="e#64858#64864#1#HTML" expanded="true" />
-            <element signature="e#65311#65317#0#HTML" expanded="true" />
-            <element signature="e#65317#65323#0#HTML" expanded="true" />
-            <element signature="e#65323#65329#0#HTML" expanded="true" />
-            <element signature="e#65329#65335#0#HTML" expanded="true" />
-            <element signature="e#65335#65341#0#HTML" expanded="true" />
-            <element signature="e#65341#65347#0#HTML" expanded="true" />
-            <element signature="e#65347#65353#0#HTML" expanded="true" />
-            <element signature="e#65353#65359#0#HTML" expanded="true" />
-            <element signature="e#65359#65365#0#HTML" expanded="true" />
-            <element signature="e#65379#65385#0#HTML" expanded="true" />
-            <element signature="e#65385#65391#0#HTML" expanded="true" />
-            <element signature="e#65391#65397#0#HTML" expanded="true" />
-            <element signature="e#65397#65403#0#HTML" expanded="true" />
-            <element signature="e#65403#65409#0#HTML" expanded="true" />
-            <element signature="e#65409#65415#0#HTML" expanded="true" />
-            <element signature="e#65415#65421#0#HTML" expanded="true" />
-            <element signature="e#66178#66184#1#HTML" expanded="true" />
-            <element signature="e#66234#66240#1#HTML" expanded="true" />
-            <element signature="e#66403#66409#1#HTML" expanded="true" />
-            <element signature="e#66707#66713#1#HTML" expanded="true" />
-            <element signature="e#66763#66769#1#HTML" expanded="true" />
-            <element signature="e#66819#66825#1#HTML" expanded="true" />
-            <element signature="e#66970#66976#1#HTML" expanded="true" />
-            <element signature="e#67026#67032#1#HTML" expanded="true" />
-            <element signature="e#67082#67088#1#HTML" expanded="true" />
-            <element signature="e#67245#67251#1#HTML" expanded="true" />
-            <element signature="e#67497#67503#1#HTML" expanded="true" />
-            <element signature="e#67637#67643#1#HTML" expanded="true" />
-            <element signature="e#67740#67746#1#HTML" expanded="true" />
-            <element signature="e#67880#67886#1#HTML" expanded="true" />
-            <element signature="e#67936#67942#1#HTML" expanded="true" />
-            <element signature="e#67992#67998#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact_us.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -1291,6 +853,16 @@
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/admin.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/Copy of std_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6016" />
       </provider>
     </entry>
   </component>
