@@ -5,7 +5,7 @@ if (isset($_SESSION["user_admin"])) {
     header("location:cpanel.php");
 }
 ob_start();
-include("db.php");
+include("../db.php");
 if (empty($username) && empty($password)) {
 
 }
