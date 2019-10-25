@@ -7,9 +7,12 @@ $dbPassword = "";
 
 //connect to Database
 $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase);
-$conn->query("set names utf8");
+if ($conn) {
+    //set universal encoding
+    mysqli_query( $conn ,"SET NAMES 'utf8'") or die(mysqli_error());
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+} else {
+
+    die("Could not connect with db" . mysqli_error());
 }
 ?>
