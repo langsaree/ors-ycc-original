@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('include/login.php');
+include('../config//login.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,23 +25,21 @@ include('include/login.php');
         <div class="ArticleB"><div></div></div>
         <div class="ArticleL"></div>
 
-          <div class="Article">
-            <p align="center">&nbsp;</p>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <p align="center">ยังไม่มีหลักสูตรที่เปิดสอน</p>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
         </div>
         </div>
-
-        <div class="ArticleBorder">
-          <div class="ArticleBL"><div></div></div>
-          <div class="ArticleBR"><div></div></div>
-          <div class="ArticleTL"></div>
-          <div class="ArticleTR"><div></div></div>
-          <div class="ArticleT"></div>
-          <div class="ArticleR"><div></div></div>
-          <div class="ArticleB"><div></div></div>
-          <div class="ArticleL"></div>
-        </div>
-        </div></div>
 </div>
-<?php  include('include/footer.php');?>
+</div>
+<?php  include('../config//footer.php');?>
     </body>
 </html>
