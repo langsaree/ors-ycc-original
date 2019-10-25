@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('include/login.php');
+include('../config/login.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@ include('include/login.php');
     <style type="text/css"></style>
 
 </head>
-
+<body>
         <div class="MainColumn">
         <div class="ArticleBorder">
         <div class="ArticleBL"><div></div></div>
@@ -88,21 +88,7 @@ include('include/login.php');
             </table>
             </div>
         </div>
-
-
-
-        <div class="ArticleBorder">
-          <div class="ArticleBL"><div></div></div>
-          <div class="ArticleBR"><div></div></div>
-          <div class="ArticleTL"></div>
-          <div class="ArticleTR"><div></div></div>
-          <div class="ArticleT"></div>
-          <div class="ArticleR"><div></div></div>
-          <div class="ArticleB"><div></div></div>
-          <div class="ArticleL"></div>
-        </div>
-        </div></div>
 </div>
-<?php  include('include/footer.php');?>
+        <?php include('../config/footer.php');?>
     </body>
 </html>
