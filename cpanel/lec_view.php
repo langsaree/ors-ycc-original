@@ -70,7 +70,7 @@ body {
          </tr>
        </table>
     </form>
-       <?php "$success"; ?>
+       <? echo "$success"; ?>
        <table width="1261" border="0" cellspacing="2" cellpadding="5">
          <tr>
            <td width="1247" height="38" valign="top"><div align="center"><span class="style44">__________________________________________________________________________________________________________________________________________</span></div></td>
@@ -89,7 +89,7 @@ body {
              </tr>
              <tr>
                <?php 
-include ('..db.php');
+include ('../db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
 $result = mysqli_query($conn,$sql);
@@ -97,11 +97,11 @@ $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_array($result))
 {
 ?>
-               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row[lec_id]; ?></td>
-               <td align="left">&nbsp;&nbsp;<?php echo $row[lec_name]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<?php echo $row[lec_tel]; ?></td>
-               <td>&nbsp;&nbsp;<?php echo $row[lec_email]; ?></td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row[lec_comment]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_id']; ?></td>
+               <td align="left">&nbsp;&nbsp;<?php echo $row['lec_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<?php echo $row['lec_tel']; ?></td>
+               <td>&nbsp;&nbsp;<?php echo $row['lec_email']; ?></td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_comment']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
                <td><a href="lec_update.php?id=<?php echo $row['lec_id'];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
                <td><a href="lec_delete.php?id=<?php echo $row['lec_id'];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
@@ -134,10 +134,6 @@ while($row=mysqli_fetch_array($result))
     </tr>
   </table>
   <p>&nbsp;</p>
- 
-
-
-
 <p>&nbsp;</p>
 </body>
 </html>
