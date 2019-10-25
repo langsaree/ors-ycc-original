@@ -1,7 +1,8 @@
 <?php
 session_start();
-include('include/login.php');
+include('../config/login.php');
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,7 @@ include('include/login.php');
     <link rel="stylesheet" href="style.css" />
     <style type="text/css"></style>
 </head>
+<body>
         <div class="MainColumn">
         <div class="ArticleBorder">
         <div class="ArticleBL"><div></div></div>
@@ -41,7 +43,7 @@ include('include/login.php');
 </table>
 
 <?php
-
+include('../config/db.php');
 $sqli_view = "select * from course where status='1' ";
 $result_view = mysqli_query($conn,$sqli_view);
 while($row=mysqli_fetch_array($result_view))
@@ -59,21 +61,21 @@ while($row=mysqli_fetch_array($result_view))
               <tr>
                 <td width="21" valign="top">&nbsp;</td>
                 <td height="19" colspan="2" valign="top"><span class="o">รหัสวิชา ::&nbsp;</span>
-                <?php echo $row['cos_id'];?></td>
+                <?= $row['cos_id'];?></td>
                </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?php echo $row['cos_name'];?></td>
+                <td colspan="2"><span class="o">ชื่อวิชา :: &nbsp;</span>                  <?= $row['cos_name'];?></td>
                </tr>
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?php echo $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดาวน์โหกดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?= $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดาวน์โหกดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?php echo $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?= $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
 <?php } ?>
@@ -83,19 +85,7 @@ while($row=mysqli_fetch_array($result_view))
         </div>
 
 
-
-        <div class="ArticleBorder">
-        <div class="ArticleBL"><div></div></div>
-        <div class="ArticleBR"><div></div></div>
-        <div class="ArticleTL"></div>
-        <div class="ArticleTR"><div></div></div>
-        <div class="ArticleT"></div>
-        <div class="ArticleR"><div></div></div>
-        <div class="ArticleB"><div></div></div>
-        <div class="ArticleL"></div>
-        </div>
-        </div></div>
 </div>
-<?php  include('include/footer.php');?>
+<?php  include('../config/footer.php');?>
     </body>
 </html>
