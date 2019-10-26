@@ -1,9 +1,9 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
-if(!isset($_SESSION['username'])){header("location:index.php");}
+include('auth.php');
 //end of check session
-include('db.php');
+include('../config/db.php');
 ?>
 
 
@@ -17,7 +17,7 @@ include('db.php');
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-        <!--
+
         .style25 {font-size: 11px; font-family: Tahoma; }
         .style9 {font-size: 12px}
         .style7 {color: #3987FB; font-size: 14px; }
@@ -33,7 +33,7 @@ include('db.php');
             color:#000000;
         }
         .style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
-        -->
+
     </style>
 </head>
 <body>
@@ -75,13 +75,13 @@ include('db.php');
                         <span class="BlockHeader"><span>Online Register</span></span>
                         <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
                             <tr>
-                                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$username.' </span><br>'; ?></td>
+                                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                                <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -127,11 +127,11 @@ include('db.php');
                             <?php
 
                             if(isset($POST['ok'])){
-                                $login=$_POST['login'];
-                                $pswd=$_POST['pswd'];
-                                $name=$_POST['name'];
-                                $email=$_POST['email'];
-                                $phone=$_POST['phone'];
+                                $login=$_POST['username'];
+                                $pswd=$_POST['password'];
+                                $name=$_POST['lec_name'];
+                                $email=$_POST['lec_tel'];
+                                $phone=$_POST['lec_email'];
 
                                 $sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
                                 $do=mysqli_query($conn,$sql);
@@ -139,7 +139,7 @@ include('db.php');
                                     header("location:lec_profile.php");
                                 }
                                 else{
-                                    mysqli_error($conn);
+                                    die("Could not select db".mysqli_error());
                                 }
                             }
                             ?>
@@ -244,6 +244,6 @@ include('db.php');
                         </div>
                     </div>
     </div>
-        <?php  include('include/footer.php');?>
+        <?php  include('../config/footer.php');?>
 </body>
 </html>

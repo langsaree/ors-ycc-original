@@ -1,9 +1,9 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
-if(!isset($_SESSION['username'])){header("location:index.php");}
+include('auth.php');
 //end of check session
-include('db.php');
+include('../config/db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@ include('db.php');
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-        <!--
+
         .style25 {font-size: 11px; font-family: Tahoma; }
         .style9 {font-size: 12px}
         .style7 {color: #3987FB; font-size: 14px; }
@@ -35,7 +35,6 @@ include('db.php');
             font-weight: bold;
 
         }
-        -->
     </style>
 </head>
 <body>
@@ -54,12 +53,12 @@ include('db.php');
                     <li></li>
                     <li></li>
                     <li></li> <li></li>
-                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
-                    <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
-                    <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
-                    <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
-                    <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
-                    <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+                    <a href="##" class="MenuButton"><span>หน้าหลัก</span></a>
+                    <a href="##" class="MenuButton">  <span>วิทยาลัย</span></a>
+                    <a href="##" class="MenuButton"><span>หลักสูตร</span></a>
+                    <a href="##" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+                    <a href="##" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+                    <a href="##" class="MenuButton"><span> ติดต่อเรา</span></a>
                     <input name="text" type="text" style="width:120px" />
                     <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -77,31 +76,22 @@ include('db.php');
                         <span class="BlockHeader"><span>Online Register</span></span>
                         <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
                             <tr>
-                                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$username.' </span><br>'; ?></td>
+                                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td><? echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                                <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                                <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
                             </tr>
                             <tr>
                                 <td></td>
                             </tr>
                         </table>
-                        <br>
-                    </div>
-                    <div class="Block">
-                        <span class="BlockHeader"><span>Menu</span></span>
-                        <div class="BlockContentBorder">
-                            <ul>
-                                <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
-                                <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
-                            </ul>
-                        </div>
+                       <br>
                     </div>
                     <div class="Block">
                         <span class="BlockHeader"><span>เมนูส่วนตัว</span></span>
@@ -150,7 +140,7 @@ include('db.php');
                                     <td width="28" >&nbsp;</td>
                                 </tr>
                                 <?php
-                                include('db.php');
+                                include('../config/db.php');
                                 //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
                                 $sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
                                 $result=mysqli_query($conn,$sql);
@@ -159,12 +149,12 @@ include('db.php');
                                     <tr>
                                         <td>&nbsp;</td>
                                         <td>&nbsp;</td>
-                                        <td><?=$row['cos_id']?></td>
-                                        <td><?=$row['cos_group']?></td>
-                                        <td><?=$row['cos_name']?></td>
+                                        <td><?php echo $row['cos_id']?></td>
+                                        <td><?php echo $row['cos_group']?></td>
+                                        <td><?php echo $row['cos_name']?></td>
                                         <td>&nbsp;</td>
                                     </tr>
-                                <? }?>
+                                <?php }?>
                             </table>
                             <table width="654" border="0" cellspacing="2" cellpadding="0">
                                 <tr>
@@ -182,3 +172,4 @@ include('db.php');
                             <p>&nbsp;</p>
                         </div>
                     </div>
+<?php include('../config/footer.php');?>
