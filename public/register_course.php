@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include('../config/db.php');
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 }
@@ -182,7 +182,7 @@ if (isset($_POST['ok'])) {
 
                             <?php
                             echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
-                            echo '<span class="style26 "> ' . $username . ' </span><br>';
+                            echo '<span class="style26 "> ' . $_SESSION['username'] . ' </span><br>';
                             echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
                             echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
                         }
@@ -469,7 +469,7 @@ if (isset($_POST['ok'])) {
                             {
                                 $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
                   value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
-                                $do = mysqli_query($connection, $query);
+                                $do = mysqli_query($conn, $query);
                                 if ($do) {
                                     echo "<script>location='index.php';</script>";
                                     $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
@@ -698,7 +698,7 @@ if (isset($_POST['ok'])) {
                                         <td height="1" bgcolor="#FFFFFF"><div align="left">
                                                 <select name="b_day" id="birth" style="background: <?php if($errmsg15) echo "#EEFCE2"; ?>" value="<?php $b_day ?>">
                                                     <option value="0" selected>-- วัน --</option>
-                                                    <?
+                                                    <?php
                                                     for($i=1;$i<=31;$i++){
                                                         echo"<option value='$i'>$i";
                                                     }
@@ -721,7 +721,7 @@ if (isset($_POST['ok'])) {
                                                 </select>
                                                 <select name="b_year" id="birth" style="background: <?php if($errmsg17) echo "#EEFCE2"; ?>" value="<?php $b_year ?>">
                                                     <option value="0" selected>-- ปี --</option>
-                                                    <?
+                                                    <?php
                                                     for($i=2554;$i>=2520;$i--){
                                                         echo"<option value='$i'>$i";
                                                     }
@@ -1069,6 +1069,6 @@ if (isset($_POST['ok'])) {
                         </div>
                     </div>
                 </div>
-                <?php  include('include/footer.php');?>
+                <?php  include('../config/footer.php');?>
 </body>
 </html>
