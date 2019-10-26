@@ -1,7 +1,8 @@
 <?php
 session_start();
-if(!isset($username)){header("location:register.php");}
-include('db.php');
+$username = $_SESSION['username'];
+if(!isset($_SESSION['username'])){header("location:index.php");}
+include('../config/db.php');
 extract ($_GET);
 $cos_id=$id;
 //echo "$cos_id";
@@ -185,7 +186,7 @@ $result1=mysqli_query($conn,$cos);
                 <td width="200"><?php echo $row['mot_job']?></td>
                 <td width="45">&nbsp;</td>
               </tr>
-               <? //} ?>
+               <?php //} ?>
           </table></td>
         </tr>
       </table>
@@ -202,7 +203,7 @@ $result1=mysqli_query($conn,$cos);
         <tr>
           <td width="706" height="92" valign="top"><table width="705" border="1" cellpadding="0" cellspacing="0">
             <tr>
-            <? while($row1=mysqli_fetch_array($result1)){?>
+            <?php while($row1=mysqli_fetch_array($result1)){?>
               <td width="32"><div align="center">ที่</div></td>
               <td width="231"><div align="center">วิชา</div></td>
               <td width="149"><div align="center">จำนวนชั่วโมง/หน่วยกิต</div></td>
@@ -216,7 +217,7 @@ $result1=mysqli_query($conn,$cos);
               <td valign="top"><?php echo $row1['cos_start']?></td>
               <td valign="top"><?php echo $row1['cos_comment']?></td>
             </tr>
-            <? } ?>
+            <?php } ?>
           </table></td>
         </tr>
       </table>
