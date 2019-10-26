@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('include/login.php');
+include('../config/login.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,17 @@ include('include/login.php');
     <title>ลงทะเบียนเรียน</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <style type="text/css"></style>
+    <style type="text/css">
+
+        .style25 {font-size: 11px; font-family: Tahoma; }
+        .style9 {font-size: 12px}
+        .style7 {color: #3987FB; font-size: 14px; }
+        .style29 {
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+
+    </style>
 </head>
         <div class="MainColumn">
         <div class="ArticleBorder">
@@ -62,7 +72,7 @@ include('include/login.php');
                         &nbsp;&nbsp;เพื่อเข้าไปลงทะเบียนเรียนหลักสูตรอื่นๆ ได้ <br></td>
                     </tr>
                     <tr>
-                      <td colspan="3" bgcolor="#CCCCCC"><? echo $std_error; ?></td>
+                      <td colspan="3" bgcolor="#CCCCCC"><?php error_reporting('E_ALL & ~E_NOTICE'); echo $std_error; ?></td>
                       </tr>
                     <tr>
                       <td width="81" bgcolor="#CCCCCC">&nbsp;</td>
@@ -105,8 +115,8 @@ include('include/login.php');
         </div>
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
-        </div></div>
+        </div
 </div>
-<?php  include('include/footer.php');?>
+<?php  include('../config/footer.php');?>
     </body>
 </html>
