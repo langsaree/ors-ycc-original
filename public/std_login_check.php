@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-include ('db.php');
+include ('../config/db.php');
 
 if (isset($_POST['submit'])) {
     if (!empty($_POST['username2'] && !empty($_POST['password2']))) {
@@ -11,8 +11,8 @@ $password=$_POST['password2'];
 // To protect MySQL injection (more detail about MySQL injection)
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mysql_real_escape_string($conn,$username);
-$password = mysql_real_escape_string($conn,$password);
+$username = mysql_reali_escape_string($conn,$username);
+$password = mysql_reali_escape_string($conn,$password);
 
 $sql="SELECT * FROM student WHERE username='$username' and password='$password'";
 $result=mysqli_query($conn,$sql);
