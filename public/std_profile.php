@@ -1,11 +1,8 @@
 <?php
 session_start();
-if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-  $username = $_SESSION['username'];
-} else 
-
-{header("location:register.php");}
+if(!isset($_SESSION["username"])){header("location:index.php");}
 //end of check session
+$username = $_SESSION["username"];
 ?>
 
 
@@ -18,7 +15,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-     <!--
+
         .style25 {
             font-size: 11px;
             font-family: Tahoma;
@@ -95,8 +92,8 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
         .style67 {
             font-size: 12px
         }
-        -->
-    
+
+
     </style>
 </head>
 <body>
@@ -112,8 +109,11 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
       <div class="Border">
 
         <div class="Menu">
-            <ul> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li> <li></li>
+                <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
               <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
               <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
               <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
@@ -132,7 +132,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
         </div><div class="Columns">
           <div class="Column1">
           <div class="Block">
-          
+
             <span class="BlockHeader"><span>Online Register</span></span>
             <table width="163" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
@@ -145,7 +145,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                 <td>&nbsp;</td>
               </tr>
             </table>
-      
+
             <br>
             <br>
           </div>
@@ -174,7 +174,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                <div class="Article">
             <table width="650" height="961" border="0" align="center" cellpadding="0" cellspacing="5">
           <tr>
-          
+
 
 
        <td width="659" height="951" align="right" valign="top"><div align="left">
@@ -182,21 +182,21 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
          </p>
        </div>
  <?php
-include ('db.php');
+include ('../config/db.php');
 $sqli = "select * from student where username='$username' ";
-$result = mysqli_query($conn,$sqli); 
+$result = mysqli_query($conn,$sqli);
 while($row=mysqli_fetch_array($result))
 {
 
-?>       
-       
+?>
+
          <table width="637" height="62" border="0" cellpadding="0" cellspacing="5">
            <tr>
              <td
- 
+
                          width="435" height="30" valign="middle">&nbsp;</td>
-             <td width="99" valign="middle" class="style33"><a href="profile_update.php id=<?php echo row['std_id'];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></td>
-             <td width="83" valign="middle"><span class="style66"><a href="logout.php"  style="text-decoration: none">ออกจากระบบ</a></span></td>
+               <td width="99" valign="middle" class="style33"><strong><a href="profile_update.php?id=<?php echo $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></strong></td>
+               <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
            </tr>
            <tr>
              <td height="16" colspan="3" valign="middle"><span class="style56">----------------------------------------------------------------------------------------</span></td>
@@ -204,7 +204,7 @@ while($row=mysqli_fetch_array($result))
        </table>
          <table width="600" border="0" align="center" cellpadding="0" cellspacing="2">
            <tr>
-            
+
              <td width="229">&nbsp;</td>
              <td width="158">&nbsp;</td>
              <td width="221">&nbsp;</td>
@@ -227,7 +227,7 @@ while($row=mysqli_fetch_array($result))
   <tr>
                     <td width="27" height="18">&nbsp;</td>
                     <td width="196" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
-                    <td colspan="4"><?php echo $row['username']; ?>                    
+                    <td colspan="4"><?php echo $row['username']; ?>
                   </tr>
                   <tr>
                     <td height="18" style="text-align: right">&nbsp;</td>
@@ -429,7 +429,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                   </tr>
                   <?php } ?>
-                 
+
               </table>
                 <table width="640" border="0" align="center" cellpadding="0" cellspacing="2">
                   <tr>
@@ -437,7 +437,7 @@ while($row=mysqli_fetch_array($result))
                   </tr>
                 </table>
         </table>
-       
+
           </div>
         </div>
 
@@ -445,9 +445,8 @@ while($row=mysqli_fetch_array($result))
 
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+        </div>
+          </div>
+              <?php include('../config/footer.php');?>
 </body>
 </html>
