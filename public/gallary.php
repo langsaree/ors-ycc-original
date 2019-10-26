@@ -58,11 +58,11 @@ include('../config/login.php');
         <h1 class="style30">ภาพกิจกรรม</h1>
         
         <div id="galleria">
-            <img src="gallary/pb058590.jpg" >
-            <img src="gallary/imga4838.jpg">
-            <img src="gallary/imga4900.jpg">
-            <img src="gallary/pb0585791.jpg">
-            <img src="gallary/imga4884.jpg">              </div>
+            <img src="gallary/img1.jpg" >
+            <img src="gallary/img2.jpg">
+            <img src="gallary/img3.jpg">
+            <img src="gallary/img4.jpg">
+            <img src="gallary/img5.jpg">              </div>
     </div>
     <script>
     // Load the classic theme
@@ -70,9 +70,6 @@ include('../config/login.php');
     // Initialize Galleria
     $('#galleria').galleria();
     </script>
-    
-            
-
         </div>
         </div>
           </div>
