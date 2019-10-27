@@ -3,45 +3,51 @@ session_start();
 include('db.php');
 extract ($_GET);
 $cos_id=$id;
-if(!session_is_registered(username)){header("location:register.php");}
-if(!session_is_registered(username)) // To check login user if already login then hide login form
-	{
-    
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  //header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
-			  	}  
-   
+if (isset($_POST['submit'])) {
+
+    if (!empty($_POST['username2'] && !empty($_POST['password2']))) {
+
+        $username = $_POST['username2'];
+        $password = $_POST['password2'];
+
+        // To protect MySQL injection (more detail about MySQL injection)
+        $username = stripslashes($username);
+        $password = stripslashes($password);
+        $username = mysqli_real_escape_string($con, $username);
+        $password = mysqli_real_escape_string($con, $password);
+
+        //check compare to database
+        $sql = "SELECT * FROM student WHERE username='$username' and password='$password'";
+        $result = mysqli_query($con, $sql);
+
+        // Mysql_num_row is counting table row
+        $count = mysqli_num_rows($result);
+
+        // If result matched $myusername and $mypassword, table row must be 1 row
+        if ($count == 1) {
+
+            // Register $username, $password and redirect to file "login_success.php"
+            $_SESSION['username'] = $username;
+//            $_SESSION['password'] = $password;
+
+            // redirect to profile page
+            header("Location:std_profile.php");
+        } else {
+
+            //$error='Wrong Username or Password';
+            $std_error = "ชื่ิอเข้าระบบและรหัสผ่านผิด กรุณาลองใหม่";
+
+            include('register.php');
+            // header("location:register.php");
+
+        }
+
+    }
+    else {
+        header("location:register.php");
+    }
 }
+
 ?>
 
 

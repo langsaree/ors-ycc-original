@@ -1,41 +1,81 @@
 <?php
-//session_start();
-//if(session_is_registered("user_admin")){header("location:cpanel.php");}
-//ob_start(); 
+session_start();
+if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
+ob_start();
 include("db.php");
-$username=$_POST["username"];
-$password=$_POST["password"];
+
+if(empty($username) && empty($password)){
+}
+//$username= isset($_POST['username']) ? $_POST['username'] : "";
+//$password= isset($_POST['password']) ? $_POST['password'] : "";
+//$username=$_POST["username"];
+//$password=$_POST["password"];
 //$code=$_POST['code'];
 //$code_hidden=$_POST['code_hidden'];
-
-#To protect MySQL injection (more detail about MySQL injection) 
-//$username = stripslashes($username);      
+//
+//#To protect MySQL injection (more detail about MySQL injection)
+//$username = stripslashes($username);
 //$password = stripslashes($password);
-//$username = mysql_real_escape_string($username);
-//$password = mysql_real_escape_string($password);
+//$username = mysqli_real_escape_string($username);
+//$password = mysqli_real_escape_string($password);
 //$code = stripslashes($code);
-//$code = mysql_real_escape_string($code);
+//$code = mysqli_real_escape_string($code);
+//
+////$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
+////$result=mysql_query($sql);
+////$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
+//$sql = "select * from admin where username='$username' and password='$password'";
+//$result=mysqli_query($con,$sql);
+//$count=mysqli_num_rows($result);
+//if($count==1/*&&strcmp($code,$code_hidden)==0*/)
+//{
+//    $_SESSION["user_admin"] = $username;
+//    header("location:cpanel.php");
+//}
+//else
+// {
+//$error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+////echo "Wrong username and password";
+//}
+////ob_end_flush();
+// username and password receive from register form
+if (isset($_POST['submit'])) {
+
+    if (!empty($_POST['username2'] && !empty($_POST['password2']))) {
+
+        $username=$_POST["username"];
+        $password=$_POST["password"];
+        $code=$_POST['code'];
+        $code_hidden=$_POST['code_hidden'];
+
+#To protect MySQL injection (more detail about MySQL injection)
+        $username = stripslashes($username);
+        $password = stripslashes($password);
+        $username = mysqli_real_escape_string($username);
+        $password = mysqli_real_escape_string($password);
+        $code = stripslashes($code);
+        $code = mysqli_real_escape_string($code);
 
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 //$result=mysql_query($sql);
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-$sql = "select * from admin where username='$username' and password='$password'";
-$result=mysql_query($sql);
-$count=mysql_num_rows($result);
-if($count==1/*&&strcmp($code,$code_hidden)==0*/)
-{
-$user_admin = $username;
-$pass_admin = $password;
-session_register("user_admin");
-session_register("pass_admin");
-header("location:cpanel.php");
+        $sql = "select * from admin where username='$username' and password='$password'";
+        $result=mysqli_query($con,$sql);
+        $count=mysqli_num_rows($result);
+        if($count==1/*&&strcmp($code,$code_hidden)==0*/)
+        {
+            $_SESSION["user_admin"] = $username;
+            header("location:cpanel.php");
+        }
+        else
+        {
+            $error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+echo "Wrong username and password";
+        }
+ob_end_flush();
 }
-else
- {
-$error='<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
-//echo "Wrong username and password";
-} 
-//ob_end_flush();
+}
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

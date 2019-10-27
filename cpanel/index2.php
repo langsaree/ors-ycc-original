@@ -1,8 +1,9 @@
 <?php
 if(session_is_registered(user_admin)){header("location:cpanel.php");}
-if(!session_is_registered(user_admin)) // To check login user if already login then hide login form
+if(!session_is_registered(user_admin))
+    // To check login user if already login then hide login form
 	{
-    
+
      $username = "";
      $password = "";
      if(!isset($_SESSION['logined'])) {
@@ -17,18 +18,18 @@ if(!session_is_registered(user_admin)) // To check login user if already login t
 				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
 			} else {
 			       $sql = "select * from admin where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
+                   $result=mysqli_query($con,$sql);
+                   $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
+					  $_SESSION['logined'] = true;
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
 					  $user_admin = $username;
                       $pass_admin = $password;
-					  session_register("user_admin"); 
-                      session_register("pass_admin");
-                      header("location:cpanel.php");
+					  //session_register("user_admin");
+                     // session_register("pass_admin");
+                    //  header("location:cpanel.php");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
 					  //header("location:std_profile.php");
@@ -38,8 +39,8 @@ if(!session_is_registered(user_admin)) // To check login user if already login t
 				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
 				   }
 				  }
-			  	}  
-   
+			  	}
+
 }}
 ?>
 
