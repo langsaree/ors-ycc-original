@@ -1,5 +1,5 @@
 <?php
-include('../db.php');
+include('./config/db.php');
 extract($_GET);
 //mysqli_query ("SET NAMES 'utf8'");
 $id ="";

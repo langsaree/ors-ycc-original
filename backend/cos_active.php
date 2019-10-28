@@ -1,6 +1,6 @@
 <?php
 //include('auth.php');
-include('../db.php');
+include('../config/db.php');
 extract ($_GET);
 //$active = $active;
 //$non_active = $non_active;

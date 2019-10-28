@@ -471,7 +471,7 @@ if (isset($_POST['ok'])) {
                   value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
                                 $do = mysqli_query($conn, $query);
                                 if ($do) {
-                                    echo "<script>location='index.php';</script>";
+                                    echo "<script>location='register.php';</script>";
                                     $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
                                     echo "$text";
                                     exit;
