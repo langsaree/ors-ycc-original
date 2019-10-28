@@ -55,12 +55,12 @@ $user_admin = $_SESSION["user_admin"];
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
-        <td class="style41"><a href="view_registered.php" class="style41">แสดงผู้ลงทะเบียน</a></td>
-        <td class="style41"><a href="manage_course.php" class="style41">การจัดการรายวิชา</a></td>
-        <td class="style41"><a href="manage_student.php" class="style41">การจัดการนักศึกษา</a></td>
-        <td class="style41"><a href="manage_grade.php" class="style41">การจัดการเกรด</a></td>
-        <td class="style41"><a href="manage_evaluation.php" class="style41">การจัดการการประเมิน</a></td>
-        <td class="style41"><a href="manage_statis.php" class="style41">สถิติการใช้งาน</a></td>
+        <td class="style41"><a href="view_registered.php" class="style41">View Registered</a></td>
+        <td class="style41"><a href="manage_course.php" class="style41">Manage Course</a></td>
+        <td class="style41"><a href="manage_student.php" class="style41">Manage Student</a></td>
+        <td class="style41"><a href="manage_grade.php" class="style41">	Manage Grade</a></td>
+        <td class="style41"><a href="manage_evaluation.php" class="style41">Manage Evaluation</a></td>
+        <td class="style41"><a href="manage_statis.php" class="style41">manage statis</a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -82,12 +82,12 @@ $user_admin = $_SESSION["user_admin"];
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
-        <td class="style41"><a href="register_course.php" class="style41">ลงทะเบียนวิชา</a></td>
-        <td class="style41"><a href="std_active.php" class="style41">การจัดการสถานะนักศึกษา</a></td>
-        <td class="style41"><a href="manage_lecturer.php" class="style41">การจัดการอาจารย์ผู้สอน</a></td>
-        <td class="style41"><a href="manage_register.php" class="style41">การจัดการลงทะเบียน</a></td>
-        <td class="style41"><a href="manage_admin.php" class="style41">ผู้ดูแลระบบ</a></td>
-        <td class="style41">ด้าต้าเบส</td>
+        <td class="style41"><a href="register_course.php" class="style41">register course</a></td>
+        <td class="style41"><a href="std_active.php" class="style41">View Student Status</a></td>
+        <td class="style41"><a href="manage_lecturer.php" class="style41">Manage Lecturer </a></td>
+        <td class="style41"><a href="manage_register.php" class="style41">Manage Register Course</a></td>
+        <td class="style41"><a href="manage_admin.php" class="style41">manage admin</a></td>
+        <td class="style41">Data Base</td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
