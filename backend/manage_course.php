@@ -86,9 +86,9 @@ body {
                 <td width="135" height="117"><div align="center"><a href="cos_active.php"><img src="image/active_course.jpg" width="80" height="70" border="0" align="middle" /></a></div></td>
               </tr>
               <tr>
-                <td colspan="3"><div align="center"><a href="cos_add.php" class="style39" style="text-decoration:none">เพิ่มรายวิชา </a></div></td>
-                <td><div align="center" class="style38"><a href="cos_view.php" style="text-decoration:none">แสดงรายวิชา</a></div></td>
-                <td><div align="center" class="style38"><a href="cos_active.php" style="text-decoration:none">สถานะรายวิชา</a></div></td>
+                <td colspan="3"><div align="center"><a href="cos_add.php" class="style39" style="text-decoration:none">	ADD Course </a></div></td>
+                <td><div align="center" class="style38"><a href="cos_view.php" style="text-decoration:none">View Course</a></div></td>
+                <td><div align="center" class="style38"><a href="cos_active.php" style="text-decoration:none">Course Status</a></div></td>
               </tr>
             </table></td>
         </tr>

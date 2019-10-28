@@ -172,18 +172,15 @@ $result1=mysqli_query($conn,$cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="79">ชื่อบิดา</td>
-                <td width="209"><?php echo $row['fat_fname'],' ',$row['fat_lname']?></td>
                 <td width="53">อาชีพ</td>
-                <td width="198"><?php echo $row['fat_job']?></td>
                 <td width="49">&nbsp;</td>
               </tr>
             </table>
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="78">ชื่อมารดา</td>
-                <td width="211"><?php echo $row['mot_fname'],' ',$row['mot_lname']?></td>
                 <td width="54">อาชีพ</td>
-                <td width="200"><?php echo $row['mot_job']?></td>
+
                 <td width="45">&nbsp;</td>
               </tr>
                <?php //} ?>
@@ -213,8 +210,8 @@ $result1=mysqli_query($conn,$cos);
             <tr>
               <td height="61" valign="top"><? ?></td>
               <td valign="top">&nbsp;                <?php echo $row1['cos_name'];?></td>
-              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?=$row1[cos_time]?></td>
-              <td valign="top"><?php echo $row1['cos_start']?></td>
+              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php echo $row1['cos_time']?></td>
+              <td valign="top"><?php echo $row1['cos_day']?></td>
               <td valign="top"><?php echo $row1['cos_comment']?></td>
             </tr>
             <?php } ?>
