@@ -800,7 +800,8 @@ if (isset($_POST['ok'])) {
                                     <?php } ?>
                                     <tr>
                                         <td height="1" bgcolor="#FFFFFF" class="black_color">เลขบัตรประชาชน</td>
-                                        <td bgcolor="#FFFFFF"><input name="std_id" type="text" id="std_id" size="20" maxlength="13" class="inputbox-normal" style="background: <?php if($errmsg21 || $errmsg22) echo "#EEFCE2"; ?>" value="<?php $std_id ?>" />
+                                        <td bgcolor="#FFFFFF">
+                                            <input name="std_id" type="text" id="std_id" size="20" maxlength="13" class="inputbox-normal" style="background: <?php if($errmsg21 || $errmsg22) echo "#EEFCE2"; ?>" value="<?php $std_id ?>" />
                                             <span class="style29">*</span></td>
                                     </tr>
                                     <tr>

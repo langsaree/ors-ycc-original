@@ -1,13 +1,13 @@
-<?
+<?php
 session_start();
-include('db.php');
+include('../config/db.php');
 include('auth.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
+//$active = $active;
+//$non_active = $non_active;
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysqli_query($sql);
+	$result = mysqli_query($conn,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -19,7 +19,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysqli_query($sql);
+			$result = mysqli_query($conn,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -74,14 +74,14 @@ border-color:#8A9AA6;
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1265" height="45" /></td>
+      <td><img src="../public/image/header-bg.png" width="1265" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="723" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">View</span>  <span class="style38"> Student Status</span></span></span><br />
             <span class="style34">แสดงสถานะนักศึกษา</span></td>
         </tr>
@@ -104,14 +104,14 @@ border-color:#8A9AA6;
         <td width="505">&nbsp;</td>
         <td width="18">&nbsp;</td>
       </tr>
-      <? } ?>
+      <?php } ?>
     </table>
-    <?
+    <?php
   $sql = "select * from student order by status DESC";
-  $re = mysqli_query($sql);
+  $re = mysqli_query($conn,$sql);
         while($row = mysqli_fetch_array($result))
 		{ 
-		$n = $row[f_name] . $row[name];
+		$n = $row['f_name'] . $row['name'];
 		?>
       <table width="90%" border="0" align="center" cellpadding="0" cellspacing="2">
         <tr>
@@ -122,10 +122,10 @@ border-color:#8A9AA6;
           <td width="11%" bgcolor="#CCCCCC"><div align="center" class="style36">Non-Active</div></td>
           </tr>           
         <tr>
-          <td><div align="center"><? echo $row[username];?></div></td>  
-          <td><div align="center"><? echo $n ?><span onclick="3"><?= $row[s_name];?></div></td>
+          <td><div align="center"><?php echo $row['username'];?></div></td>
+          <td><div align="center"><?php echo $n ?><span onclick="3"><?php echo $row['s_name'];?></div></td>
           <td><div align="center"><span class="hhhhh">
-            <? $status=$row[status];
+            <?php echo $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }

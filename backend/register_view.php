@@ -41,17 +41,17 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../public/image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="551" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="image/update_course.jpg" width="91" height="82" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style47">View</span><span class="style38"> Register </span></span></span><br />
-          <span class="style48"><span class="style34">แสดงรายวิชา</span><span class="style39">ที่ลงทะเบียน</span></span></td>
-        </tr>
+          <td width="6%" align="center"><img src="image/update_course.jpg" width="91" height="82" /></td>
+          <td width="94%"><span class="style26"><span class="style36"><span class="style47">View</span><span class="style38"> Register </span></span></span>  <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> |  <a href="manage_register.php" class="style6" style="text-decoration:none">Manage Register</a><br />
+              <span class="style48"><span class="style34">แสดงรายวิชา</span><span class="style39">ที่ลงทะเบียน</span></span></td>
+      </tr>
     </table>
       <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
@@ -61,10 +61,10 @@ body {
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
           <?
-	include('db_connect.php');
+	include('../config/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysqli_query($sql);
-	while($shows = mysql_fetch_row($show))
+	$show = mysqli_query($conn,$sql);
+	while($shows = mysqli_fetch_row($show))
 	{
 	?>
           <tr>

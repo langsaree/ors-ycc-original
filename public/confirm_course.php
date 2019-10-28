@@ -3,9 +3,6 @@ session_start();
 include('../config/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
-// if(!isset($_SESSION["username"])){header("location:register.php");}
-if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
-{
 include('../config/login.php');
 ?>
 
@@ -168,7 +165,7 @@ $id = $rows["cos_id"];
                   
                   <option value="<? echo $rows['cos_name']; ?>"><?= $rows['cos_name']; ?></option>
                   <option>-- select --</option> 
-                  <?		
+                  <?php
 			             $sql3="select * from course";
 			             $result3=mysqli_query($conn,$sql3);
 			             while($data3=mysqli_fetch_array($result3)){
@@ -202,12 +199,12 @@ $id = $rows["cos_id"];
               <tr>
                 <td height="22">&nbsp;</td>
                 <td><span class="style48">หมูวิชา</span></td>
-                <td><?= $rows['cos_group'];?></td>
+                <td><?php echo $rows['cos_group'];?></td>
               </tr>
               <tr>
                 <td height="24">&nbsp;</td>
                 <td><span class="style48">รายวิชา</span></td>
-                <td><?= $rows['cos_id'];?></td>
+                <td><?php echo $rows['cos_id'];?></td>
               </tr>
               <tr>
                 <td width="57">&nbsp;</td>
@@ -347,7 +344,7 @@ $id = $rows["cos_id"];
                 </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="pdf.php?id=<?=$rows['cos_id']; ?> " target="_blank" ><img src="images/cregister.png" width="200" height="40"></a></td>
+                <td><a href="pdf.php?id=<?php echo $rows['cos_id']; ?> " target="_blank" ><img src="images/cregister.png" width="200" height="40"></a></td>
                 <td>&nbsp;</td>
                 </tr>
               <tr>

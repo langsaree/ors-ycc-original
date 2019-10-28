@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../config//login.php');
+include('../config/login.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,6 +40,6 @@ include('../config//login.php');
         </div>
 </div>
 </div>
-<?php  include('../config//footer.php');?>
+<?php  include('../config/footer.php');?>
     </body>
 </html>

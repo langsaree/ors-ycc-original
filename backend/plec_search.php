@@ -1,8 +1,8 @@
-<?
-//session_start();
+<?php
+session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
+include "../config/db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
@@ -60,14 +60,14 @@ body {
 
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../public/image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="527" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/search lecture.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/search lecture.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Search<span class="style54"> Lecturer Information</span></span></span><br />
             <span class="style34">ค้นหา<span class="style48">ข้อมูลอาจารย์ผู้สอน</span></span></td>
         </tr>
@@ -115,7 +115,7 @@ body {
               <td width="226"><span class="style51">หมายเหตุ</span></td>
               <td width="226"><div align="center" class="style51">ดูข้อมูลอาจารยผู้สอน</div></td>
               
-  <?
+  <?php
 // check for blank input
 if($search_text==""){$search_text="blank";}
 // end of check
@@ -137,21 +137,21 @@ $query="select * from lecture where $q order by lec_id limit 0, 20"; // start se
 
 echo "<br><br>";
 mysqli_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysqli_query($query);
+$nt=mysqli_query($conn,$query);
 echo mysqli_error();
 while($row=mysqli_fetch_array($nt)){
 ?>          
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_id]; ?></td>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_name]; ?></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_id']; ?></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_name']; ?></td>
       <td></td>
       <td></td>
       <td>      </td>
-      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row[lec_id]; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
+      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row['lec_id']; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
         
       </a></div></td>
-            <?
+            <?php
 	}
 	}
 	?>
