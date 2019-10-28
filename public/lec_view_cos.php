@@ -75,17 +75,6 @@ include('db.php');
 
             <br>
           </div>
-          <div class="Block">
-
-            <span class="BlockHeader"><span>Menu</span></span>
-            <div class="BlockContentBorder">
-
-                 <ul>
-                    <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
-                    <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
-                </ul>
-          </div>
-        </div>
         <div class="Block">
             <span class="BlockHeader"><span>เมนูส่วนตัว</span></span>
             <div class="BlockContentBorder">
