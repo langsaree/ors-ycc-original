@@ -1,8 +1,7 @@
 <?php
-include('./config/db.php');
+include('../config/db.php');
 extract($_GET);
 //mysqli_query ("SET NAMES 'utf8'");
-$id ="";
 $cos_id = $id;
 echo " หลักสูตรที่คุณเลือก <p>ได้ทำการลบออกจากระบบเรียบร้อยแล้วค่ะ!!!</p>";
 //echo $cos_id;
