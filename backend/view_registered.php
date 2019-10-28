@@ -1,7 +1,7 @@
 <?php
-session_start();
+//session_start();
 include('../config/db.php');
-//include('auth.php');
+include('auth.php');
 extract($_GET);
 $user_admin = $_SESSION["user_admin"];
 $active = isset($_GET['active']) ? $_GET['active'] : "";
