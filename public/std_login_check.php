@@ -19,15 +19,12 @@ else
     $_SESSION['std_id'] = $objResult['std_id'];
 
     session_write_close();
-
-
-    header("location:std_profile.php");
-
-
+    ?>
+    <script>
+      window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
+      window.location.href="index.php";
+    </script>
+    <!-- header("Location:std_profile.php"); -->
+    <?php
 }
-
-
-
-
-
 ?>
