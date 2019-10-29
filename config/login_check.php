@@ -3,20 +3,20 @@ include('db.php');
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 }
-// username and password receive from register form
+
 if (isset($_POST['ok'])) {
     if (!empty($_POST['username'] && !empty($_POST['password']))) {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        // To protect MySQL injection (more detail about MySQL injection)
+
         $username = stripslashes($username);
         $password = stripslashes($password);
         $username = mysqli_real_escape_string($connection, $username);
         $password = mysqli_real_escape_string($connection, $password);
-        //check compare to database
+
         $sql = "SELECT * FROM student WHERE username='$username' and password='$password'";
         $result = mysqli_query($connection, $sql);
-        // Mysql_num_row is counting table row
+
         $count = mysqli_num_rows($result);
         
         if ($count == 1) {
@@ -27,13 +27,12 @@ if (isset($_POST['ok'])) {
 				    	window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
 				    	window.location.href="index.php";
             </script>
-            <!-- header("Location:std_profile.php"); -->
             <?php
         } else {
    
             $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
         }
-//Lecturer can log in
+
         $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
         $result1 = mysqli_query($connection, $sql1);
 
@@ -196,7 +195,8 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['username']))
 					<?php
 					echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
 					echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
-					echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
+          echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
+          echo '<span class="style7"><a href="std_view_lecturer.php">อาจารย์ผู้สอน</a></span><br>';
 					echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 				}
 				?>
