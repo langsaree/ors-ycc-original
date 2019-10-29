@@ -1,13 +1,16 @@
-<?
-session_start();
+<?php
+//session_start();
 include('db.php');
-//include('auth.php');
+include('auth.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
+$user_admin = $_SESSION["user_admin"];
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
+$msg = "";
+
 if(!empty($active)){
-	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
-	$result = mysql_query($sql);
+	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
+	$result = mysqli_query($connection, $sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -18,8 +21,8 @@ if(!empty($active)){
 	else
 	{
 		if(!empty($non_active)){
-			$sql = "UPDATE register SET status='0' WHERE std_id='$non_active' ";
-			$result = mysql_query($sql);
+			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
+			$result = mysqli_query($connection, $sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -76,7 +79,7 @@ body {
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+    <td><img src="../image/header-bg.png" width="1260" height="45" /></td>
   </tr>
   
   <tr>
@@ -90,11 +93,11 @@ body {
   <tr>
    <td height="548" valign="top">
       <table width="737" height="31" align="left">
-      <? if($msg){?>
+      <?php if($msg){?>
         <tr>
           <td width="129" valign="top">&nbsp;</td>
-          <td width="596" valign="top"><?= $msg?></td>
-        </tr><? }?>
+          <td width="596" valign="top"><?php $msg?></td>
+        </tr><?php }?>
       </table>
       <br />
       <br />
@@ -110,56 +113,57 @@ body {
         <td width="53" align="center" bgcolor="#FFCCFF">Non-active</td>
       </tr>
       
-    <?
-  include('db.php');
+    <?php
+  include('../db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
-	$r = mysql_query($reg);
-	while ($ro = mysql_fetch_array($r)){
-		$cos=$ro[cos_id];
-		$std=$ro[std_id];
-		$lec=$ro[lec_id];
+	$r = mysqli_query($connection, $reg);
+	while ($ro = mysqli_fetch_array($r)){
+		$cos=$ro['cos_id'];
+		$std=$ro['std_id'];
+		$lec=$ro['lec_id'];
 		//echo $std;
 		//echo $cos;
 		//echo $lec;
 		//////////////third////////////////
    $sql1 ="select * from course where cos_id='$cos' ";
-   $result = mysql_query($sql1);
-   while ($row= mysql_fetch_array($result))
+   $result = mysqli_query($connection, $sql1);
+   while ($row= mysqli_fetch_array($result))
 	{
-	//$cos_id= $row[cos_id];
-	$cos_group=$row[cos_group];
-	$cos_name = $row[cos_name];
-	//$cos_period = $row[cos_period];	
-	//$cos_day = $row[cos_day];
-	//$lec_id = $row[lec_id];
-	//$cos_comment = $row[cos_comment];
+	$cos_id= $row['cos_id'];
+	$cos_group=$row['cos_group'];
+	$cos_name = $row['cos_name'];
+	$cos_period = $row['cos_period'];	
+	$cos_day = $row['cos_day'];
+	$lec_id = $row['lec_id'];
+	$cos_comment = $row['cos_comment'];
 //	echo $cos_id;
 	//echo $cos_name;
   ///////////////////////second///////////////////////
 	$sql = "select * from student where std_id='$std'";
-	$re = mysql_query($sql);
-	while ($ro1= mysql_fetch_array($re))
+	$re = mysqli_query($connection, $sql);
+	while ($ro1= mysqli_fetch_array($re))
 	{
-		$std1= $ro1[std_id];
-		$name= $ro1[f_name]."<span>".$ro1[name]."-".$ro1[s_name];
+		$std1= $ro1['std_id'];
+		$name= $ro1['f_name']."<span>".$ro1['name']."-".$ro1['s_name'];
 	
 	//////////////////forth/////////////////////
     $sql2 = "select * from lecture where lec_id = '$lec' ";
-	  $a =mysql_query ($sql2);
-	while ($row1= mysql_fetch_array($a))
+	  $a =mysqli_query ($connection, $sql2);
+	while ($row1= mysqli_fetch_array($a))
 	{
-	$lec_name= $row1[lec_name];
+	$lec_name= $row1['lec_name'];
 	//echo $lec_name;
 	?>
       <tr>
-        <td width="129" bgcolor="#FFFFE8"><?= $std?></td>
-        <td width="186" bgcolor="#FFE1FF"><?= $name?></td>
-        <td width="160" align="left" bgcolor="#FFFFE8"><?= $cos_group?></td>
-        <td bgcolor="#FFFFE8"><?= $cos_name?></td>
-        <td align="left" bgcolor="#FFFFE8"><?= $lec_name?></td>
+        <td width="129" bgcolor="#FFFFE8"><?php echo $std?></td>
+        <td width="186" bgcolor="#FFE1FF"><?php echo $name?></td>
+        <td width="160" align="left" bgcolor="#FFFFE8"><?php echo $cos_group?></td>
+        <td bgcolor="#FFFFE8"><?php echo $cos_name?></td>
+        <td align="left" bgcolor="#FFFFE8"><?php echo $lec_name?></td>
         <td align="center" bgcolor="#FFFFCC">
-		<? $status=$ro[status];
+		
+		<?php $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -169,10 +173,10 @@ body {
 		   }
 	    ?>
         </td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?= $ro[std_id];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?= $ro[std_id]; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $cos_id;?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $cos_id; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
-       <? } ////// close first while //////////////////////////////////////////////
+       <?php } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
 		} /////// close 3rd while ///////////////////////
 	}
