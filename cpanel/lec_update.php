@@ -1,4 +1,4 @@
-<?
+<?php
 extract ($_GET);
 $lec_id=$id;
 
@@ -11,7 +11,7 @@ $lec_id=$id;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>update lecture</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -45,7 +45,7 @@ body {
 }
 .style49 {font-family: Georgia, "Times New Roman", Times, serif}
 .style50 {color: #FF0000}
--->
+
 </style>
 </head>
 
@@ -53,7 +53,7 @@ body {
 <form id="form1" name="form1" method="post" action="plec_update.php">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="527" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -76,44 +76,44 @@ body {
         <table width="1058" height="159" border="0" cellpadding="2" cellspacing="4">
           
           <tr>
-            <td height="26" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo "$error"; ?></td>
+          
             </tr>
           <tr>
-<?
+<?php
 include ('db.php');
 $sql = "select * from lecture where lec_id='$lec_id'";
-$result = mysql_query($sql);
-while($result_row = mysql_fetch_array($result))
+$result = mysqli_query($connection, $sql);
+while($result_row = mysqli_fetch_array($result))
 {  
 ?>          
           
             <td width="406" height="26"><div align="right"><span class="style40">รหัส<span class="style49">อาจารย</span>์ผู้สอน :</span></div></td>
-            <td width="632"><input name="lec_id" type="text" value="<? echo $result_row[lec_id]; ?>" size="30" />
+            <td width="632"><input name="lec_id" type="text" value="<?php echo $result_row['lec_id']; ?>" size="30" />
               <span class="style50">            *</span></td>
           </tr>
           <tr>
             <td height="31"><div align="right"><span class="style40">ชื่อ<span class="style49">อาจารย</span>์ผู้สอน :</span></div></td>
-            <td><input name="lec_name" type="text" value="<? echo $result_row[lec_name]; ?>" size="30" />
+            <td><input name="lec_name" type="text" value="<?php echo $result_row['lec_name']; ?>" size="30" />
               <span class="style50">*</span></td>
           </tr>
           <tr>
             <td height="26"><div align="right"><span class="style40">เบอร์โทรติดต่อ:</span></div></td>
-            <td colspan="2" class="style50"><input name="lec_tel" type="text" value="<? echo $result_row[lec_tel]; ?>" size="30" />
+            <td colspan="2" class="style50"><input name="lec_tel" type="text" value="<?php echo $result_row['lec_tel']; ?>" size="30" />
             *</td>
           </tr>
           <tr>
             <td height="26"><div align="right"><span class="style40">อีเมล:</span></div></td>
             <td><span class="style50">
-              <input name="lec_email" type="text" value="<? echo $result_row[lec_email]; ?>" size="30" />
+              <input name="lec_email" type="text" value="<?php echo $result_row['lec_email']; ?>" size="30" />
             *</span></td>
           </tr>
           <tr>
             <td><div align="right"><span class="style40">หมายเหตุ :</span></div></td>
             <td>
               <label for="textarea"></label>
-              <textarea name="lec_comment" id="textarea" cols="30" rows="3" value=""><? echo $result_row[lec_comment]; ?></textarea></td>
+              <textarea name="lec_comment" id="textarea" cols="30" rows="3" value=""><?php echo $result_row['lec_comment']; ?></textarea></td>
           </tr>
-           <? } ?>
+           <?php } ?>
           <tr>
             <td><div align="right"></div></td>
             <td><input name="Update" type="submit" id="Update" value="ตกลง" />
