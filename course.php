@@ -8,6 +8,7 @@ include('include/login.php');
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
      <title>หลักสูตรที่เปิดสอน</title>
+     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
      <link rel="stylesheet" href="style.css" />
      <style type="text/css"></style>
 </head>
@@ -50,7 +51,7 @@ include('include/login.php');
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
-          <p align="center">&nbsp;</p>
+          <p align="center">ยังไม่มีหลักสูตรที่เปิดสอน</p>
               </tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
