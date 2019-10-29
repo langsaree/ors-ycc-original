@@ -23,7 +23,7 @@ if(empty($username) && empty($password)){
 //$result=mysql_query($sql);
 //$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
 $sql = "select * from admin where username='$username' and password='$password'";
-$result=mysqli_query($connection, $sql);
+$result=mysqli_query($conn, $sql);
 $count=mysqli_num_rows($result);
 // var_dump($count,$result);
 if($count==1/*&&strcmp($code,$code_hidden)==0*/)

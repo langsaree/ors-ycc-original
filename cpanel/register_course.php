@@ -1,5 +1,5 @@
 <?php 
-session_start();
+session_start(); 
 include('db.php');
 if(isset($_SESSION["username"])){header("location:cpanel.php");}
 //if(!session_is_registered(username))

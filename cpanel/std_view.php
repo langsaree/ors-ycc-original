@@ -90,7 +90,7 @@ body {
 		/////////////////////////take information from student table //////////////////////////
 	include('db.php');
 	$sql1 = "select * from student ";
-	$v=mysqli_query ($connection,$sql1);
+	$v=mysqli_query ($conn,$sql1);
 	while ($row= mysqli_fetch_array($v))
 	{
 	$std = $row['std_id'];

@@ -2,13 +2,13 @@
 session_start(); 
 include('db.php');
 extract ($_GET);
-$active = isset($_POST['active']) ? $_POST['active'] : "";
-$non_active =isset($_POST['non_active']) ? $_POST['non_active'] : "";
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active =isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg = "";
 
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysqli_query($connection,$sql);
+	$result = mysqli_query($conn,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -20,7 +20,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysqli_query($connection,$sql);
+			$result = mysqli_query($conn,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -129,7 +129,7 @@ non {
     <td width="26" height="61">&nbsp;</td>
     <td width="465"><p class="one"><br />
       &nbsp;&nbsp;
-      <?php $msg ?>
+      <?php echo $msg ?>
       <br />
       <br />
     </p></td>
@@ -140,9 +140,9 @@ non {
 </table>
 <?php
   $sql = "select * from course order by status DESC";
-  $result = mysqli_query($connection,$sql);
+  $result = mysqli_query($conn,$sql);
   $sql2 = "select * from number ";
-  $result2 = mysqli_query($connection,$sql2);
+  $result2 = mysqli_query($conn,$sql2);
   	
 ?>
 <table width="1024" border="0" cellpadding="0" cellspacing="2">  
@@ -166,7 +166,7 @@ non {
           <?php echo $row['cos_id']?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
           <?php echo $row['cos_name']?></td>
-        <td bgcolor="#FFDDFF" class="hhhhh"><?php echo $status=$row['status'];
+        <td bgcolor="#FFDDFF" class="hhhhh"><?php $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -175,8 +175,8 @@ non {
 			   echo '<span style="color:red">NON-ACTIVE</span>';
 		   }
 	    ?></td>
-        <td align="center" valign="top"><a href="cos_active.php?active=<?=$row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
-        <td align="center" valign="top"><a href="cos_active.php?non_active=<?=$row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?active= <?php echo $row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?non_active=<?php echo $row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
       </tr>
       <?php } ?>
     </table></td>

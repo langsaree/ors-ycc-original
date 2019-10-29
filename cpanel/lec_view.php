@@ -1,8 +1,11 @@
-<?
+<?php
 /*session_start();
 #extract ($_GET);
 $lec_id=$id;
 */
+session_start(); 
+include('db.php');
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +13,7 @@ $lec_id=$id;
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view lecture</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -45,7 +48,7 @@ body {
 .style38 td div strong {
 	color: #000;
 }
--->
+
 </style>
 </head>
 
@@ -75,7 +78,7 @@ body {
          </tr>
        </table>
     </form>
-       <? echo "$success"; ?>
+       <?php  "$success"; ?>
        <table width="1261" border="0" cellspacing="2" cellpadding="5">
          <tr>
            <td width="1247" height="38" valign="top"><div align="center"><span class="style44">__________________________________________________________________________________________________________________________________________</span></div></td>
@@ -93,25 +96,25 @@ body {
                <td width="33"><div align="center"><strong>ลบ</strong></div></td>
              </tr>
              <tr>
-               <? 
+               <?php   
 include ('db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
-$result = mysql_query($sql);
+$result = mysqli_query($conn,$sql);
 #while($result_row = mysql_fetch_row($result))  
-while($row=mysql_fetch_array($result))
+while($row=mysqli_fetch_array($result))
 {
 ?>
-               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_id]; ?></td>
-               <td align="left">&nbsp;&nbsp;<? echo $row[lec_name]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row[lec_tel]; ?></td>
-               <td>&nbsp;&nbsp;<? echo $row[lec_email]; ?></td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_comment]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row['lec_id']; ?></td>
+               <td align="left">&nbsp;&nbsp;<? echo $row['lec_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row['lec_tel']; ?></td>
+               <td>&nbsp;&nbsp;<? echo $row['lec_email']; ?></td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row['lec_comment']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
-               <td><a href="lec_update.php?id=<? echo $row[lec_id];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
-               <td><a href="lec_delete.php?id=<? echo $row[lec_id];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_update.php?id=<? echo $row['lec_id'];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_delete.php?id=<? echo $row['lec_id'];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
              </tr>
-             <? } ?>
+             <?php   } ?>
            </table></td>
          </tr>
          <tr>

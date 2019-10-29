@@ -10,7 +10,7 @@ $active = $active;
 $non_active = $non_active;
 if(!empty($active)){
 	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
-	$result = mysqli_query($connection,$sql);
+	$result = mysqli_query($conn,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -117,7 +117,7 @@ body {
   include('db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
-	$r = mysqli_query($connection,$reg);
+	$r = mysqli_query($conn,$reg);
 	while ($ro = mysqli_fetch_array($r)){
 		$cos=$ro['cos_id'];
 		$std=$ro['std_id'];
@@ -127,7 +127,7 @@ body {
 		//echo $lec;
 		//////////////third////////////////
    $sqli ="select * from course where cos_id='$cos' ";
-   $result = mysqli_query($connection,$sqli);
+   $result = mysqli_query($conn,$sqli);
    while ($row= mysqli_fetch_array($result))
 	{
 	$cos_id= $row['cos_id'];
@@ -141,7 +141,7 @@ body {
 	//echo $cos_name;
   ///////////////////////second///////////////////////
 	$sqli = "select * from student where std_id='$std'";
-	$re = mysqli_query($connection,$sqli);
+	$re = mysqli_query($conn,$sqli);
 	while ($ro1= mysqli_fetch_array($re))
 	{
 		$std1= $ro1['std_id'];
@@ -149,7 +149,7 @@ body {
 	
 	//////////////////forth/////////////////////
     $sql2 = "select * from lecture where lec_id = '$lec' ";
-	  $a =mysqli_query ($connection,$sql2);
+	  $a =mysqli_query ($conn,$sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{
 	$lec_name= $row1['lec_name'];
@@ -172,8 +172,8 @@ body {
 		   }
 	    ?>
         </td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php $ro['std_id'];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php $ro['std_id']; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php $row['std_id'];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php $row['std_id']; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
        <?php  } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////

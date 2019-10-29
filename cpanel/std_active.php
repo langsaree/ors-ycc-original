@@ -12,10 +12,14 @@ if(!empty($active)){
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
-	else{
+  else{
+    if(isset($msg)){
 		$msg = "Fail";
-	}
-	else{
+  }
+}
+}
+  else
+  {
 		if(!empty($non_active)){
 			$sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
 			$result = mysqli_query($connection,$sql);
@@ -127,7 +131,7 @@ border-color:#8A9AA6;
           </tr> 
                        <?php 
   $sql = "select * from student order by status DESC";
-  $result = mysqli_query($connection,$sql);
+  $result = mysqli_query($conn,$sql);
         while($row = mysqli_fetch_array($result)){
 		$n = $row['f_name'] . $row['name'];
 		?>  

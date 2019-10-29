@@ -1,11 +1,8 @@
 <?php  
-include ('db.php');
+
 session_start();
 //>--code insert using for process add data
-
-?>
-<?php 
-
+include("../db.php");
 $errmsg= "";
 $errmsg1= "";
 $errmsg2= "";
@@ -20,20 +17,20 @@ if(isset($_POST['ok'])) {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
    if(empty($cos_id)){
-     $errmsg1 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+     $errmsg1 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
    	#=========================== 	 
 $cos_group = $_POST['cos_group'];
    if(empty($cos_group)){ 
-   $errmsg2 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+   $errmsg2 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
       	#=========================== 	 
 $cos_name = $_POST['cos_name'];
    if(empty($cos_name)){ 
-   $errmsg3 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
+   $errmsg3 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';}
 
    #========================
 $cos_period = $_POST['cos_period'];
    if(empty($cos_period)){ 
-   $errmsg4 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';} 
+   $errmsg4 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>';} 
    #============================
 $cos_day =$_POST['cos_day'];
 $cos_after =$_POST['cos_after'];
@@ -41,36 +38,37 @@ $cos_time =$_POST['cos_time'];
 $date = $cos_day."-". $cos_after ."/". $cos_time;
 //echo $date;
    if(empty($cos_day)){
-   $errmsg5 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day</span>'; }
+   $errmsg5 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day</span>'; }
    if(!$errmsg5){
 	   if(empty($cos_after)){
-           $errmsg6 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day2 </span>'; 
+           $errmsg6 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ day2 </span>'; 
 		   }}
    if(!$errmsg5 && !$errmsg6){
 	   if(empty($cos_time)){
-           $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
+           $errmsg7 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
    #====================================
-$cos_lec =$_POST['lec_id'];
+$lec_id =$_POST['lec_id'];
    if(empty($lec_id)){
-   $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
+   $errmsg8 ='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
    
 $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysqli_query ("SET NAMES 'utf8'");
-$sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysqli_query($connection,$sql);
+mysqli_query($conn, "SET NAMES 'utf8'");
+$sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$cos_day','$lec_id','$cos_comment')";
+$result = mysqli_query($conn,$sql);
 
 if ($result>0)	
-{?>
+{
+?>
 <script type="text/javascript">
 	window.location="manage_course.php";
 </script>
 
- <?php   }
+ <?php   } 
 else {
-	 die("Error db".mysqli_error()); }
+	 die("Error db".mysqli_error($conn)); }
 
 }}
 ?>
@@ -191,9 +189,12 @@ body {
             <tr>
               <td height="30">&nbsp;</td>
               <td></td>
-              <td><?php  echo $errmsg5?>
-                <?php  echo $errmsg6?>
-                <?php  echo $errmsg7?>
+              <td>
+                <?php 
+                  echo $errmsg5;
+                  echo $errmsg6;
+                  echo $errmsg7;
+                ?>
                 </td>
             </tr>
             <?php  }?>
