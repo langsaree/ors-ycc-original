@@ -1,25 +1,12 @@
-<?
+<?php
 session_start();
-include('db.php');
-include('auth.php');
+include  ('../db.php');
+include ('auth.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
-if(!empty($active)){
-	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysql_query($sql);
-	if($result){
-		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
-	}
-	else{
-		$msg = "Fail";
-	}
-}
-	else
-	{
+
 		if(!empty($non_active)){
 			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysql_query($sql);
+			$result = mysqli_query($connection,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -66,7 +53,7 @@ border-color:#8A9AA6;
 .hhhhh {	font-size: 12px;
 	text-align: center;
 }
--->
+
 </style>
 </head>
 
@@ -92,26 +79,26 @@ border-color:#8A9AA6;
   <tr>
   
     <td height="548" valign="top"><table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
-      <? if($msg){?>
+      <?php if($msg){?>
       <tr>
         <td width="26" height="61">&nbsp;</td>
         <td width="465"><p class="one"><br />
           &nbsp;&nbsp;
-          <?= $msg ?>
+          <?php= $msg ?>
           <br />
           <br />
         </p></td>
         <td width="505">&nbsp;</td>
         <td width="18">&nbsp;</td>
       </tr>
-      <? } ?>
+      <?php } ?>
     </table>
-    <?
+    <?php
   $sql = "select * from student order by status DESC";
-  $re = mysql_query($sql);
+  $re = mysqli_query($connection,$sql);
         while($row = mysql_fetch_array($result))
 		{ 
-		$n = $row[f_name] . $row[name];
+		$n = $row['f_name'] . $row['name'];
 		?>
       <table width="90%" border="0" align="center" cellpadding="0" cellspacing="2">
         <tr>
@@ -122,10 +109,10 @@ border-color:#8A9AA6;
           <td width="11%" bgcolor="#CCCCCC"><div align="center" class="style36">Non-Active</div></td>
           </tr>           
         <tr>
-          <td><div align="center"><? echo $row[username];?></div></td>  
-          <td><div align="center"><? echo $n ?><span onclick="3"><?= $row[s_name];?></div></td>
+          <td><div align="center"><?php echo $row['username'];?></div></td>  
+          <td><div align="center"><?php echo $n ?><span onclick="3"><?php echo $row['s_name'];?></div></td>
           <td><div align="center"><span class="hhhhh">
-            <? $status=$row[status];
+            <?php $status=$row['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -135,9 +122,9 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td><div align="center"><a href="std_active.php?active=<?=$row[std_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td><div align="center"><a href="std_active.php?non_active=<?=$row[std_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
-          </tr><? }?>
+          <td><div align="center"><a href="std_active.php?active=<?php echo $row['std_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td><div align="center"><a href="std_active.php?non_active=<?php echo $row['std_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          </tr><?php }?>
     </table>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
