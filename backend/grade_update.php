@@ -57,10 +57,10 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?php
+          <?
   include('../config/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($connection, $sql);
+	$show = mysql_query($sql);
 	if (($show))
 	{
 	?>
@@ -112,6 +112,6 @@ body {
     </tr>
   </table>
 </form>
-  <?php } ?>
+  <? } ?>
 </body>
 </html>

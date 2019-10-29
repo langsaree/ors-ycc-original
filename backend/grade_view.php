@@ -57,11 +57,11 @@ body {
     <td height="392" valign="top"><p></p>
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
-          <?php
+          <?
   include('../config/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysqli_query($connection, $sql);
-	while($shows = mysqli_fetch_row($show))
+	$show = mysql_query($sql);
+	while($shows = mysql_fetch_row($show))
 	{
 	?>
           <tr>
@@ -89,7 +89,7 @@ body {
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-  <?php } ?>
+  <? } ?>
     </tr>
   </table>
 </form>

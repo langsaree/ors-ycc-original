@@ -57,21 +57,6 @@ body {
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
-              <form id="form1" name="form1" method="post" action="std_view_search.php">
-      <table width="1151" height="50" border="0" align="left" cellpadding="0" cellspacing="5">
-           <tr>
-                <td width="83">&nbsp;</td>
-                <td width="146"><label>
-                <input type=hidden name=todo value=search>
-                <input name="search_text" type="text" id="search" size="20" />
-                </label></td>
-                <td width="48"><label>
-                <input type="submit" name="button" id="button" value="ค้นหา" />
-                </label></td>
-                <td width="849">&nbsp;</td>
-              </tr>
-      </table>
-      </form>
               <p>&nbsp;</p>
       <p><span class="style44">________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
