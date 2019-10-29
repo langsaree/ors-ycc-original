@@ -74,10 +74,18 @@ while($row = mysqli_fetch_array($result))
     <table width="400" border="0" align="center" cellpadding="0" cellspacing="5">
     <td width="26">&nbsp;</td>
                   <td width="124" rowspan="1"><img src="image/lecturer.png" width="100" height="100"></td>
+                  <tr>
+                  <td>&nbsp;</td>
+                  <td class="main" style="text-align: right">ลำดับ :</td>
+                  <td class="maintext"><?php echo $row['lec_id'];?></td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                <td>&nbsp;</td>
                   <td width="140" class="main" style="text-align: right">รหัสประจำตัว : </td>
                   <td width="321" class="maintext"><?php echo $row['lec_Teach_id'];?></td>
                   <td width="15">&nbsp;</td>
-                
+                  </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">ชื่อ :</td>
