@@ -1,5 +1,5 @@
-<?
-include ('db.php');
+<?php
+include ('../db.php');
 $lec_id= $_POST['lec_id'];
 $lec_name= $_POST['lec_name'];
 //$m_address= $_POST['address'];
@@ -11,18 +11,18 @@ $lec_comment= $_POST['lec_comment'];
 
 $sql = "update lecture set lec_id='$lec_id', lec_name='$lec_name', lec_tel='$lec_tel', lec_email='$lec_email', lec_comment='$lec_comment' where lec_id ='$lec_id'";
 
-$result=mysql_query($sql);
+$result=mysqli_query($connection, $sql);
 
 if  (!$result)
 	{
-		die("could not query db ".mysql_error());
+		die("could not query db ".mysqli_error());
 		$error='<span style="color:red">กรุณากรอบข้อมูลให้ถูกต้อง</span>';
-		include('lec_update.php');
+		include('lec_view.php');
 	}
 	else
 	{
 		$success= '<span style="color:green">ระบบได้แก้ไขข้อมูลอาจรย์ผู้สอนแล้ว</span>';
-		include ('manage_lecturer.php');
+		include ('lec_view.php');
 	}
 
 ?>
