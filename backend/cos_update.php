@@ -1,6 +1,6 @@
 <?php
 extract ($_GET);
-$cos_id=$id;
+$cos_id=$_GET['id'];
 echo $cos_id;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -40,7 +40,7 @@ body {
             <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">หมายเหตุ</span></div></td>
           </tr>
            <?php
-	include('../db.php');
+	include('../config/db.php');
 	$sql = "select * from course where cos_id = $cos_id";
 	$result= mysqli_query($connection, $sql);
 	while ($row = mysqli_fetch_array($result))
