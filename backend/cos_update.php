@@ -47,16 +47,31 @@ $cos_id = $_GET['id'];
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td><form id="form1" name="form1" method="post" action="pcos_update.php">
+        <td>
+            <form id="form1" name="form1" method="post" action="pcos_update.php">
                 <table width="104%" height="103" border="0" cellpadding="0" cellspacing="2">
                     <tr>
-                        <td width="15%" height="33" bgcolor="#CCCCCC"><div align="center"><p class="style7">รหัสวิชา</p></div></td>
-                        <td width="15%" bgcolor="#CCCCCC"><div align="center"><p class="style7">กลุ่มวิชา</p></div></td>
-                        <td width="18%" bgcolor="#CCCCCC"><div align="center"><span class="style7">ชื่อวิชา</span></div></td>
-                        <td width="18%" bgcolor="#CCCCCC"><div align="center"><span class="style7">จำนวนชั่วโมง/หน่วยกิจ</span></div></td>
-                        <td width="15%" bgcolor="#CCCCCC"><div align="center"><span class="style7">วันที่เข้าเรียน</span></div></td>
-                        <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">อาจารย์ผู้สอน</span></div></td>
-                        <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">หมายเหตุ</span></div></td>
+                        <td width="15%" height="33" bgcolor="#CCCCCC">
+                            <div align="center"><p class="style7">รหัสวิชา</p></div>
+                        </td>
+                        <td width="15%" bgcolor="#CCCCCC">
+                            <div align="center"><p class="style7">กลุ่มวิชา</p></div>
+                        </td>
+                        <td width="18%" bgcolor="#CCCCCC">
+                            <div align="center"><span class="style7">ชื่อวิชา</span></div>
+                        </td>
+                        <td width="18%" bgcolor="#CCCCCC">
+                            <div align="center"><span class="style7">จำนวนชั่วโมง/หน่วยกิจ</span></div>
+                        </td>
+                        <td width="15%" bgcolor="#CCCCCC">
+                            <div align="center"><span class="style7">วันที่เข้าเรียน</span></div>
+                        </td>
+                        <td width="19%" bgcolor="#CCCCCC">
+                            <div align="center"><span class="style7">อาจารย์ผู้สอน</span></div>
+                        </td>
+                        <td width="19%" bgcolor="#CCCCCC">
+                            <div align="center"><span class="style7">หมายเหตุ</span></div>
+                        </td>
                     </tr>
                     <?php
                     include('../config/db.php');

@@ -1,15 +1,15 @@
 <?php
 session_start();
-include('../config//login.php');
+include('../config/login.php');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ติดต่อผู้ดูแลระบบ</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>contact administrator</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css"/>
     <style type="text/css"></style>
 </head>
 
@@ -45,13 +45,13 @@ include('../config//login.php');
             if ($_POST['verifycode'] != $_SESSION['total']) {
                 $c_error = '<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใส่ใหม่อีกครั้ง</span>';
                 //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
-            } else if (!isset($_SESSION['username'])){
+            } else if (!isset($_SESSION['username'])) {
                 $u_error = '<span style="color:red">กรุณาทำการล็อกอินก่อน</span>';
-            } else if (empty($_POST['subj']) && empty($_POST['msg'])){
+            } else if (empty($_POST['subj']) && empty($_POST['msg'])) {
                 $sm_error = '<span style="color:red">กรุณาระบุชื่อเรื่องและข้อความ</span>';
-            } else if (!empty($_POST['subj']) && empty($_POST['msg'])){
+            } else if (!empty($_POST['subj']) && empty($_POST['msg'])) {
                 $m_error = '<span style="color:red">กรุณาระบุข้อความ</span>';
-            } else if (empty($_POST['subj']) && !empty($_POST['msg'])){
+            } else if (empty($_POST['subj']) && !empty($_POST['msg'])) {
                 $s_error = '<span style="color:red">กรุณาระบุชื่อเรื่อง</span>';
             } else {
                 $headers = "MIME-Version: 1.0\r\n";
@@ -86,7 +86,7 @@ include('../config//login.php');
                         <td colspan="4">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td colspan="4"><span class="style31">ติดต่อผู้ดูแลระบบ </span></td>
+                        <td colspan="4"><span class="style31">contact administrator </span></td>
                     </tr>
                     <tr>
                         <td width="32">&nbsp;</td>
@@ -102,24 +102,24 @@ include('../config//login.php');
                             ?>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td><span class="style5">ชื่อผู้ใช้ : </span></td>
+                                <td><span class="style5">Username : </span></td>
                                 <td><input type='text' name='name'
-                                           value="<?php echo $row['username']; ?>"/>
+                                           value="<?php $row['username']; ?>"/>
                                 </td>
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td><span class="style5">อีเมล์ :</span></td>
+                                <td><span class="style5">e-mail :</span></td>
                                 <td><input type='text' name='email'
-                                           value="<?php echo $row['email']; ?>"/>
+                                           value="<?php $row['email']; ?>"/>
                                 </td>
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-                                <td><input type='text' name='tel' value="<?php echo $row['phone']; ?>"/>
+                                <td><span class="style5">Telephone Number :</span></td>
+                                <td><input type='text' name='tel' value="<?php $row['phone']; ?>"/>
                                 </td>
                                 <td>&nbsp;</td>
                             </tr>
@@ -129,7 +129,7 @@ include('../config//login.php');
                     ?>
                     <tr>
                         <td>&nbsp;</td>
-                        <td><span class="style5">ชื่อเรื่อง :</span></td>
+                        <td><span class="style5">title :</span></td>
                         <td><input type='text' name='subj'/>
                             <?php
                             if (isset($s_error)) {
@@ -140,7 +140,7 @@ include('../config//login.php');
                     </tr>
                     <tr>
                         <td valign="top">&nbsp;</td>
-                        <td height="84" valign="top"><span class="style5">ข้อความ :</span></td>
+                        <td height="84" valign="top"><span class="style5">message:</span></td>
                         <td><textarea name="msg" rows="4" cols="30"></textarea>
                             <?php
                             if (isset($m_error)) {
@@ -193,6 +193,6 @@ include('../config//login.php');
         </div>
     </div>
 </div>
-<?php include('../config/footer.php');?>
+<?php include('../config/footer.php'); ?>
 </body>
 </html>

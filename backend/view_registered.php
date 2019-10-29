@@ -7,26 +7,22 @@ $user_admin = $_SESSION["user_admin"];
 $active = isset($_GET['active']) ? $_GET['active'] : "";
 $non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg = "";
-if(!empty($active)){
+if (!empty($active)) {
     $sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-    $result = mysqli_query($conn,$sql);
-    if($result){
-        $msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
-    }
-    else{
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        $msg = '<span style="color:green; font-weight:bold">' . $active . '</span>' . '  ' . 'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
+    } else {
         $msg = "Fail";
     }
-}
-else
-{
-    if(!empty($non_active)){
+} else {
+    if (!empty($non_active)) {
         $sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
         $result = mysqli_query($conn, $sql);
-        if($result){
-            $msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
-        }
-        else{
-            $msg= "FAIL NON-active";
+        if ($result) {
+            $msg = '<span style="color:red">' . $non_active . '</span>' . ' ' . 'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
+        } else {
+            $msg = "FAIL NON-active";
         }
     }
 }
@@ -44,35 +40,48 @@ else
             margin-right: 0px;
             margin-bottom: 0px;
         }
+
         .style26 {
             font-family: Geneva, Arial, Helvetica, sans-serif;
             font-weight: bold;
             font-size: 16px;
         }
+
         .style6 {
             font-size: 9px;
             font-style: normal;
             font-family: Verdana, Geneva, sans-serif;
             color: #666666;
-            text-decoration:none;
+            text-decoration: none;
 
         }
-        .style34 {color: #666666;
+
+        .style34 {
+            color: #666666;
             font-size: 13px;
             font-family: Verdana, Arial, Helvetica, sans-serif;
         }
+
         .style36 {
             color: #FF6600;
             font-size: 36px;
             font-weight: bold;
         }
+
         .style38 {
             color: #55443E;
             font-family: Verdana, Arial, Helvetica, sans-serif;
             font-size: 18px;
         }
-        .style25 {font-size: 13px; font-family: Tahoma; }
-        .style44 {color: #CCCCCC}
+
+        .style25 {
+            font-size: 13px;
+            font-family: Tahoma;
+        }
+
+        .style44 {
+            color: #CCCCCC
+        }
     </style>
 </head>
 
@@ -86,7 +95,8 @@ else
         <td>
             <table width="83%" align="center" border="0" cellspacing="10" cellpadding="0" class="header">
                 <tr>
-                    <td width="6%" align="center"><img src="../public/image/student register.png" width="100" height="100"/>
+                    <td width="6%" align="center"><img src="../public/image/student register.png" width="100"
+                                                       height="100"/>
                     </td>
                     <td width="94%"><span class="style36">View<span
                                     class="style38"> Registered&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span

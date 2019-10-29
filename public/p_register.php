@@ -1,5 +1,5 @@
 <?php
-include ('../config/db.php');
+include('../config/db.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 $f_name = $_POST['f_name'];
@@ -27,23 +27,23 @@ mysqli_query("SET NAMES 'utf8'");
 $sql = "insert into student(username,password,f_name,name,s_name,gender,b_day,b_month,b_years,std_id,home,m_home
 ,r_home,v_home,p_home,c_home,post,tel,email,d_tel,mobile,job,t_job)
  value 
- ('$username','".md5 ($_POST['password'] )."','$f_name','$name', 
+ ('$username','" . md5($_POST['password']) . "','$f_name','$name', 
 '$s_name','$gender','$b_day','$b_month','$b_years','$std_id','$home','$m_home','$r_home','$v_home','$p_home','$c_home','$post','$tel','$email','$d_tel',
 '$mobile','$job','$t_job')";
 
 
-$result = mysqli_query($conn,$sql);
-if (!$result)
-{
-die("could not connect db".mysqli_connect_error());
+$result = mysqli_query($conn, $sql);
+if (!$result) {
+    die("could not connect db" . mysqli_connect_error());
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="refresh"content="3; url='home.php' charset=tis-620" />
-<title>Untitled Document</title>
-<style type="text/css"></style>
+    <meta http-equiv="refresh" content="3; url='home.php' charset=tis-620"/>
+    <title>Untitled Document</title>
+    <style type="text/css"></style>
 </head>
 
 <body>

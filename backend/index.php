@@ -21,7 +21,7 @@ if ($count == 1/*&&strcmp($code,$code_hidden)==0*/) {
     $_SESSION["user_admin"] = $username;
     header("location:cpanel.php");
 } else {
-    $error = '<span style="color:red">ชื่ิอเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+    $error = '<span style="color:red">The login name and password are wrong. Please try again</span>';
 //echo "Wrong username and password";
 }
 ob_end_flush();
@@ -72,7 +72,7 @@ ob_end_flush();
             <p><label for="ftp-user-name">User Name</label><input type="text" name="username" id="user-name"/></p>
             <p><label for="ftp-password">Password</label><input type="password" name="password" id="password"/></p>
             <p class="submit-wrap"><input type="submit" id="submit" class="button" value="Login"/>
-                &nbsp;&nbsp; <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p>
+                &nbsp;&nbsp; <span class="style7"><a href="../index.php" class="style7">Back to main page</a></span></p>
         </form>
     </div>
 

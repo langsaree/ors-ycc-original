@@ -1,5 +1,5 @@
 <?php
-include('..//config/db.php');
+include('../config/db.php');
 extract($_GET);
 $std_id = $id;
 ?>
@@ -118,20 +118,25 @@ if (isset($_POST['Update'])) {
 <form id="form1" name="form1" method="post" action="">
     <table width="1260" border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <td><img src="../public/image/header-bg.png" width="1280" height="45" /></td>
+            <td><img src="../public/image/header-bg.png" width="1280" height="45"/></td>
         </tr>
     </table>
     <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
         <tr>
-            <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
+            <td height="74" valign="top">
+                <table width="95%" align="center" border="0" cellspacing="10" cellpadding="0" class="header">
                     <tr>
-                        <td width="6%" align="center"><img src="image/student add.png" width="127" height="111" /></td>
-                        <td width="94%"><span class="style26"><span class="style36"><span class="style45">Update</span> <span class="style38">Student&nbsp;&nbsp;</span></span></span>
-                            <a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent | </a><a href="std_view.php" class="style6" style="text-decoration:none" >ViewStudent</a><br />
+                        <td width="6%" align="center"><img src="image/student add.png" width="127" height="111"/></td>
+                        <td width="94%"><span class="style26"><span class="style36"><span class="style45">Update</span> <span
+                                            class="style38">Student&nbsp;&nbsp;</span></span></span>
+                            <a href="cpanel.php" class="style6" style="text-decoration:none"> | ControlPanel | </a><a
+                                    href="manage_student.php" class="style6" style="text-decoration:none">ManageStudent
+                                | </a><a href="std_view.php" class="style6" style="text-decoration:none">ViewStudent</a><br/>
                             <span class="style34">แก้ไขข้อมูลนักศึกษา</span></td>
                     </tr>
                 </table>
-                <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
+                <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span>
+                </p></td>
         </tr>
 
         <tr>
@@ -150,7 +155,7 @@ if (isset($_POST['Update'])) {
                         <tr>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
-                            <td><p><img src="image/std_infor.png" width="111" height="126" align="top" /><br>
+                            <td><p><img src="image/std_infor.png" width="111" height="126" align="top"/><br>
                                     <span class="style62">รูปประจำตัว</span></p></td>
 
                         </tr>
@@ -159,14 +164,17 @@ if (isset($_POST['Update'])) {
                         </tr>
                         <tr>
                             <td width="27" height="18">&nbsp;</td>
-                            <td width="135" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
+                            <td width="135" style="text-align: right; font-weight: bold; color: #333;">ชื่อล็อกอิน
+                                :</span></td>
                             <td colspan="4"><label for="login"></label>
-                                <input type="text" name="login" id="login" value="<?php echo $row['username'];?>">                    </tr>
+                                <input type="text" name="login" id="login" value="<?php echo $row['username']; ?>">
+                        </tr>
                         <tr>
                             <td height="18" style="text-align: right">&nbsp;</td>
-                            <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
+                            <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน :</td>
                             <td colspan="4"><label for="pswd"></label>
-                                <input type="password" name="pswd" id="pswd" value="<?php echo $row['password'];?>"></td>
+                                <input type="password" name="pswd" id="pswd" value="<?php echo $row['password']; ?>">
+                            </td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
@@ -179,12 +187,12 @@ if (isset($_POST['Update'])) {
                             <td colspan="4"><label for="f_name"></label>
                                 <select name="f_name" size="1" id="f_name">
                                     <?php
-                                    $sql3="select * from mrmrs";
-                                    $result3=mysqli_query($conn, $sql3);
-                                    while($data3=mysqli_fetch_array($result3)){
-                                        if($data3['id']==$data3){
+                                    $sql3 = "select * from mrmrs";
+                                    $result3 = mysqli_query($conn, $sql3);
+                                    while ($data3 = mysqli_fetch_array($result3)) {
+                                        if ($data3['id'] == $data3) {
                                             echo "<option value='$data3[name]' selected>$data3[name]";
-                                        }else{
+                                        } else {
                                             echo "<option value='$data3[name]'>$data3[name]";
                                         }
                                     }
@@ -193,56 +201,62 @@ if (isset($_POST['Update'])) {
                             <td>&nbsp;</td>
                             <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
                             <td colspan="4"><label for="name"></label>
-                                <input type="text" name="name" id="name" value="<?php echo $row['name'];?>"></td>
+                                <input type="text" name="name" id="name" value="<?php echo $row['name']; ?>"></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
+                            <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span>
+                            </td>
                             <td><label for="s_name"></label>
-                                <input type="text" name="s_name" id="s_name" value="<?php echo $row['s_name'];?>"></td>
+                                <input type="text" name="s_name" id="s_name" value="<?php echo $row['s_name']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td style="text-align: right"><span class="style60">สัญชาติ :</span></td>
                             <td><label for="nation"></label>
-                                <input name="nation" type="text" id="nation" value="<?php echo $row['nation'];?>"></td>
+                                <input name="nation" type="text" id="nation" value="<?php echo $row['nation']; ?>"></td>
 
 
                         </tr>
                         <tr>
-                            <td >&nbsp;</td>
+                            <td>&nbsp;</td>
                             <td style="text-align: right"><span class="style60">เชื้อชาติ : </span></td>
                             <td>
                                 <label for="origin"></label>
-                                <input name="origin" type="text" id="origin" value="<?php echo $row['origin'];?>"></td>
+                                <input name="origin" type="text" id="origin" value="<?php echo $row['origin']; ?>"></td>
 
                         </tr>
                         <tr>
-                            <td height="19" >&nbsp;</td>
+                            <td height="19">&nbsp;</td>
                             <td class="style60" style="text-align: right">ศาสนา :</td>
                             <td><label for="religion"></label>
-                                <input name="religion" type="text" id="religion" value="<?php echo $row['religion'];?>"></td>
+                                <input name="religion" type="text" id="religion"
+                                       value="<?php echo $row['religion']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td style="text-align: right; font-weight: bold; color: #333;">เพศ :</span></span></td>
                             <td colspan="4"><label for="gender"></label>
-                                <input type="text" name="gender" id="gender" value="<?php echo $row['gender'];?>"></td>
+                                <input type="text" name="gender" id="gender" value="<?php echo $row['gender']; ?>"></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td style="text-align: right"><span class="style60">วันเกิด : </span></td>
                             <td><label for="birthday"></label>
-                                <input name="birthday" type="text" id="birthday" value="<?php echo $row['birthday'];?>"></td>
+                                <input name="birthday" type="text" id="birthday"
+                                       value="<?php echo $row['birthday']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span style="font-weight: bold; text-align: right;"><span class="style61">เลขบัตรประชาชน<span class="style46"> :</span></span></span></td>
+                            <td style="text-align: right"><span style="font-weight: bold; text-align: right;"><span
+                                            class="style61">เลขบัตรประชาชน<span class="style46"> :</span></span></span>
+                            </td>
                             <td><label for="std_id"></label>
-                                <input name="std_id" type="text" id="std_id" maxlength="13" value="<?php echo $row['std_id'];?>"></td>
+                                <input name="std_id" type="text" id="std_id" maxlength="13"
+                                       value="<?php echo $row['std_id']; ?>"></td>
 
                         </tr>
                         <tr>
@@ -253,44 +267,51 @@ if (isset($_POST['Update'])) {
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
+                            <td style="text-align: right"><span class="style61"><span
+                                            class="style60">บ้านเลขที่ :</span></span></td>
                             <td colspan="4"><label for="address"></label>
-                                <textarea name="address" id="address" cols="23" rows="5"><?php echo $row['address'];?></textarea></td>
+                                <textarea name="address" id="address" cols="23"
+                                          rows="5"><?php echo $row['address']; ?></textarea></td>
                         </tr>
 
 
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span class="style47"><span class="style60">เขต/อำเภอ<span class="style46"> :</span></span></span></td>
+                            <td style="text-align: right"><span class="style47"><span class="style60">เขต/อำเภอ<span
+                                                class="style46"> :</span></span></span></td>
                             <td><label for="city"></label>
-                                <input type="text" name="city" id="city" value="<?php echo $row['city'];?>"></td>
+                                <input type="text" name="city" id="city" value="<?php echo $row['city']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span class="style60" style="font-weight: bold">จังหวัด :</span></td>
+                            <td style="text-align: right"><span class="style60"
+                                                                style="font-weight: bold">จังหวัด :</span></td>
                             <td><label for="province"></label>
-                                <input type="text" name="province" id="province" value="<?php echo $row['province'];?>"></td>
+                                <input type="text" name="province" id="province"
+                                       value="<?php echo $row['province']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td style="text-align: right"><span class="style60">รหัสไปรษณีย์ : </span></td>
                             <td><label for="postalcode"></label>
-                                <input type="text" name="postalcode" id="postalcode" value="<?php echo $row['postalcode'];?>"></td>
+                                <input type="text" name="postalcode" id="postalcode"
+                                       value="<?php echo $row['postalcode']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td style="text-align: right"><span class="style60">โทรศัพท์ :</span></td>
-                            <td><input type="text" name="phone" id="phone" value="<?php echo $row['phone'];?>"></td>
+                            <td><input type="text" name="phone" id="phone" value="<?php echo $row['phone']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span class="style60" style="font-weight: bold">E-mail :</span></td>
+                            <td style="text-align: right"><span class="style60"
+                                                                style="font-weight: bold">E-mail :</span></td>
                             <td><label for="email"></label>
-                                <input type="text" name="email" id="email" value="<?php echo $row['email'];?>"></td>
+                                <input type="text" name="email" id="email" value="<?php echo $row['email']; ?>"></td>
 
                         </tr>
                         <tr>
@@ -303,28 +324,32 @@ if (isset($_POST['Update'])) {
                             <td>&nbsp;</td>
                             <td class="style60" style="text-align: right">จบการศึกษาระดับ :</td>
                             <td><label for="edulevel"></label>
-                                <input type="text" name="edulevel" id="edulevel" value="<?php echo $row['edulevel'];?>"></td>
+                                <input type="text" name="edulevel" id="edulevel"
+                                       value="<?php echo $row['edulevel']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td class="style60" style="text-align: right">จากสถานศึกษา :</td>
                             <td><label for="eduplace"></label>
-                                <input type="text" name="eduplace" id="eduplace" value="<?php echo $row['eduplace'];?>"></td>
+                                <input type="text" name="eduplace" id="eduplace"
+                                       value="<?php echo $row['eduplace']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td class="style60" style="text-align: right">จังหวัด :</td>
                             <td><label for="eduprovince"></label>
-                                <input type="text" name="eduprovince" id="eduprovince" value="<?php echo $row['eduprovince'];?>"></td>
+                                <input type="text" name="eduprovince" id="eduprovince"
+                                       value="<?php echo $row['eduprovince']; ?>"></td>
 
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td class="style60" style="text-align: right">ปีการศึกษา :</td>
                             <td><label for="eduyear"></label>
-                                <input type="text" name="eduyear" id="eduyear" value="<?php echo $row['eduyear'];?>"></td>
+                                <input type="text" name="eduyear" id="eduyear" value="<?php echo $row['eduyear']; ?>">
+                            </td>
 
                         </tr>
                         <tr>
@@ -335,17 +360,18 @@ if (isset($_POST['Update'])) {
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>
+                            <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span>
+                            </td>
                             <td>
                                 <label for="select"></label>
                                 <select name="job" id="job">
                                     <?php
-                                    $sql3="select * from joblist";
-                                    $result3=mysqli_query($conn, $sql3);
-                                    while($data3=mysqli_fetch_array($result3)){
-                                        if($data3["job_id"]==$data3){
+                                    $sql3 = "select * from joblist";
+                                    $result3 = mysqli_query($conn, $sql3);
+                                    while ($data3 = mysqli_fetch_array($result3)) {
+                                        if ($data3["job_id"] == $data3) {
                                             echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-                                        }else{
+                                        } else {
                                             echo "<option value='$data3[job_name]'>$data3[job_name]";
                                         }
                                     }
@@ -375,16 +401,20 @@ if (isset($_POST['Update'])) {
                     </table>
 
                     <p>
-                        <input name="Update" type="submit" id="Update" value="Update" />
+                        <input name="Update" type="submit" id="Update" value="Update"/>
                     </p>
                     <p class="style1">&nbsp; </p>
                 </div>
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
-                <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
+                <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________________________________</span>
+                </p></td>
         </tr>
         <tr>
-            <td height="19" valign="top"><div align="center"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</span></div></td>
+            <td height="19" valign="top">
+                <div align="center"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</span>
+                </div>
+            </td>
         </tr>
     </table>
     <table width="1260" border="0" cellspacing="0" cellpadding="0">

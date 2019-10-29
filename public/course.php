@@ -7,7 +7,7 @@ include('../config/login.php');
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>เกี่ยวกับวิทยาลัย</title>
+    <title>About the College</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css"></style>
@@ -30,7 +30,7 @@ include('../config/login.php');
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
-            <p align="center">ยังไม่มีหลักสูตรที่เปิดสอน</p>
+            <p align="center">No publicity yet</p>
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

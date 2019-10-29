@@ -8,7 +8,7 @@ include('../config/login.php');
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>ภาพกิจกรรม</title>
+    <title>activity Pictures</title>
     <script src="js/jquery.min.js"></script>
         <script src="js/galleria.js"></script>
         <style>

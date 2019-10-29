@@ -2,18 +2,16 @@
 <?php
 include('../config/db.php');
 extract($_GET);
-$id= $id;
+$id = $id;
 $sql = "delete from lecture where lec_id='$id'";
 
 // to porform query
-$result=mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql);
 
-if (!$result)
-{
+if (!$result) {
     die('Error: ' . mysqli_error($conn));
-}
-else
-    $success= '<span style="color:red"> ระบบได้ลบข้อมูลอาจารยเรียบร้อยแล้วค่ะ </span>';
-include ('lec_view.php');
+} else
+    $success = '<span style="color:red"> The system has successfully deleted the professor data </span>';
+include('lec_view.php');
 
 ?>

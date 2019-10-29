@@ -66,9 +66,9 @@ if (isset($_POST['ok'])) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    <title>ระบบลงทะเบียนออนไลน์</title>
+    <title>Online registration system</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../public/style.css"/>
     <style type="text/css"></style>
 </head>
 <body>
@@ -95,12 +95,12 @@ if (isset($_POST['ok'])) {
 
             <div class="Menu">
                 <ul>
-                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
-                    <a href="college.php" class="MenuButton"> <span>วิทยาลัย</span></a>
-                    <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
-                    <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span></a>
-                    <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
-                    <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+                    <a href="../public/index.php" class="MenuButton"><span>Home</span></a>
+                    <a href="../public/college.php" class="MenuButton"><span>College</span></a>
+                    <a href="../public/course.php" class="MenuButton"><span>Course</span></a>
+                    <a href="../public/ann.php" class="MenuButton"><span>public relations</span></a>
+                    <a href="../public/gallary.php" class="MenuButton"><span>activity Pictures</span></a>
+                    <a href="../public/contact_us.php" class="MenuButton"><span>Contact Us</span></a>
                     <input name="text" type="text" style="width:120px"/>
                     <span class="ButtonInput"><span>
                  <input type="button" value="Search"/>
@@ -133,7 +133,7 @@ if (isset($_POST['ok'])) {
                 <td></td>
               </tr>
               <tr>
-                <td><div align="left" ><span class="style9">ล็อกอิน::</span></div></td>
+                <td><div align="left" ><span class="style9">Login::</span></div></td>
               </tr>
             </table>
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -146,7 +146,7 @@ if (isset($_POST['ok'])) {
            
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
-                <td><span class="style9">รหัสผ่าน::</span></td>
+                <td><span class="style9">password::</span></td>
               </tr>
             </table>
             <p>&nbsp;</p>
@@ -163,9 +163,9 @@ if (isset($_POST['ok'])) {
               </tr>
               <tr>
                 <td width="72"><label for="Submit"></label>
-                  <input type="submit" name="ok" id="ok" value="เข้าสู่ระบบ" /></td>
+                  <input type="submit" name="ok" id="ok" value="log in" /></td>
                 <td width="7">&nbsp;</td>
-                <td width="175"><label><a href="password_recovery.php">ลืมรหัสผ่าน?</a></label></td>
+                <td width="175"><label><a href="../public/password_recovery.php">Forgot your password?</a></label></td>
               </tr>
               <tr>
                 
@@ -179,7 +179,7 @@ if (isset($_POST['ok'])) {
             <p>&nbsp;</p>
         <table width="150" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
+                    <td><div align="center"><a href="../public/register.php"><img src="../public/images/register.gif"  width="130" height="35"></a></div></td>
                   </tr>
                 </table>
 				<?php '; ?>
@@ -190,10 +190,10 @@ if (isset($_POST['ok'])) {
                             <?php // If user already logined, so display wellcome section below ?>
                             <?php echo ' '; ?>
                             <?php
-                            echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
+                            echo '<br><span class="style7">Are welcome ::</span>';
                             echo '<span class="style26 "> ' . $username . ' </span><br>';
-                            echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
-                            echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
+                            echo '<span class="style7"><a href="../public/std_profile.php">personal Information</a></span><br>';
+                            echo '<span class="style7"><a href="../public/logout.php">Sign out</a><span class="style7"><br>';
                         }
                         ?>
                         <br>
@@ -202,11 +202,11 @@ if (isset($_POST['ok'])) {
                         <span class="BlockHeader"><span>Menu</span></span>
                         <div class="BlockContentBorder">
                             <ul>
-                                <li><span class="style7"><a href="index.php"
-                                                            style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span>
+                                <li><span class="style7"><a href="../public/index.php"
+                                                            style="color: #3987FB; text-decoration: none">Open course</a></span>
                                 </li>
-                                <li><span class="style7"><a href="manual.pdf"
-                                                            style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span>
+                                <li><span class="style7"><a href="../public/manual.pdf"
+                                                            style="color: #3987FB; text-decoration: none">Registration Guide</a></span>
                                 </li>
                             </ul>
                         </div>

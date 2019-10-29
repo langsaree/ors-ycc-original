@@ -13,7 +13,7 @@ include('../config/db.php');
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>:::  ข้อมูลอาจารย์  :::</title>
+    <title>:::  Teacher Information :::</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
@@ -53,12 +53,12 @@ include('../config/db.php');
                     <li></li>
                     <li></li>
                     <li></li> <li></li>
-                    <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
-                    <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
-                    <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
-                    <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
-                    <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
-                    <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+                    <a href="index.php" class="MenuButton"><span>Home</span></a>
+                    <a href="college.php" class="MenuButton">  <span>College</span></a>
+                    <a href="course.php" class="MenuButton"><span>Course</span></a>
+                    <a href="ann.php" class="MenuButton"><span>public relations</span> </a>
+                    <a href="gallary.php" class="MenuButton"><span>activity Pictures</span></a>
+                    <a href="contact_us.php" class="MenuButton"><span> Contact Us</span></a>
                     <input name="text" type="text" style="width:120px" />
                     <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -76,13 +76,13 @@ include('../config/db.php');
                         <span class="BlockHeader"><span>Online Register</span></span>
                         <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
                             <tr>
-                                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
+                                <td width="197"><?php echo '<br><span class="style7">Are welcome ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                                <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">Edit Profile</a></span ><br>'; ?></td>
                             </tr>
                             <tr>
-                                <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
+                                <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Sign out</a></strong></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -91,11 +91,11 @@ include('../config/db.php');
                         <br>
                     </div>
                     <div class="Block">
-                        <span class="BlockHeader"><span>เมนูส่วนตัว</span></span>
+                        <span class="BlockHeader"><span>Personal menu</span></span>
                         <div class="BlockContentBorder">
                             <ul>
-                                <li><span class="style7"><a href="lec_view_cos.php" style="color: #3987FB; text-decoration: none">แสดงข้อมูลวิชา</a></span></li>
-                                <li><span class="style7"><a href="lec_view_student.php" style="color: #3987FB; text-decoration: none">แสดงรายชื่อนักศึกษา</a></span></li>
+                                <li><span class="style7"><a href="lec_view_cos.php" style="color: #3987FB; text-decoration: none">Show course info</a></span></li>
+                                <li><span class="style7"><a href="lec_view_student.php" style="color: #3987FB; text-decoration: none">Show list of students</a></span></li>
                             </ul>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ include('../config/db.php');
                                 </tr>
                                 <tr>
                                     <td width="30">&nbsp;</td>
-                                    <td width="570" class="mainhead">ข้อมูลส่วนตัว</td>
+                                    <td width="570" class="mainhead">personal Information</td>
                                     <td width="11">&nbsp;</td>
                                 </tr>
                                 <tr>
@@ -136,19 +136,19 @@ include('../config/db.php');
                                     ?>
                                     <td width="26">&nbsp;</td>
                                     <td width="124" rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
-                                    <td width="140" class="main" style="text-align: right">รหัสประจำตัว :</td>
+                                    <td width="140" class="main" style="text-align: right">identification number :</td>
                                     <td width="321" class="maintext"><?= $row['lec_id'];?></td>
                                     <td width="15">&nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
-                                    <td class="main" style="text-align: right">ชื่อ :</td>
+                                    <td class="main" style="text-align: right">name :</td>
                                     <td class="maintext"><?= $row['lec_name'];?></td>
                                     <td>&nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
-                                    <td class="main" style="text-align: right">แผนกวิชา :</td>
+                                    <td class="main" style="text-align: right">Department:</td>
                                     <td class="maintext"><?= $row['cos_name'];?></td>
                                     <td>&nbsp;</td>
                                 </tr>
