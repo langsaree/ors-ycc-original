@@ -129,9 +129,15 @@ include('../config/db.php');
 		    ?>
                   <td width="26">&nbsp;</td>
                   <td width="124" rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
-                  <td width="140" class="main" style="text-align: right">รหัสประจำตัว :</td>
+                  <td width="140" class="main" style="text-align: right">ลำดับ :</td>
                   <td width="321" class="maintext"><?php echo $row['lec_id'];?></td>
                   <td width="15">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="main" style="text-align: right">รหัสประจำตัว :</td>
+                  <td class="maintext"><?php echo $row['lec_Teach_id'];?></td>
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -159,6 +165,7 @@ include('../config/db.php');
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
+                  <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">Phone :</td>
                   <td class="maintext"><?php echo $row['lec_tel'];?></td>
