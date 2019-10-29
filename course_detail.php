@@ -1,9 +1,10 @@
 <?php
 session_start();
-include('db.php');
+include ('db.php');
 extract ($_GET);
-$cos_id=$id;
-if(!session_is_registered(username))
+$cos_id=$_GET['id'];
+if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+
 	{
      
      $username = "";
@@ -52,7 +53,7 @@ if(!session_is_registered(username))
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -62,7 +63,7 @@ if(!session_is_registered(username))
 	color:#000;
 }
 .style28 {font-size: 12px; font-weight: bold; }
--->
+
     </style>
 </head>
 <body>
@@ -97,7 +98,7 @@ if(!session_is_registered(username))
             </table>
 
 	<?php echo $message; ?>		
-	<? echo	'<form action="" method="post">
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -211,10 +212,10 @@ if(!session_is_registered(username))
 
 
 ';
-		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26"> '.$username.' </span><br>';
-		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
-		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
+echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
+echo '<span class="style26 "> ' .$_SESSION["username"]. ' </span><br>';
+echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
+echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 		}
 ?>
             <br>
@@ -236,11 +237,11 @@ if(!session_is_registered(username))
        
           <div class="Article">
             <p>
-  <?
-$sql_view = "select * from course where cos_id='$cos_id' ";
-$result_view = mysql_query($sql_view);
-while($row=mysql_fetch_array($result_view))
-{
+  
+ <?php
+ $sql_view = "select * from course where cos_id='$cos_id' ";
+ $result_view = mysqli_query($connection, $sql_view);
+ while($row=mysqli_fetch_array($result_view))
 ?>
               
             </p>
@@ -257,25 +258,25 @@ while($row=mysql_fetch_array($result_view))
               <tr>
                 <td width="34" height="18" style="font-weight: bold; color:#000;">&nbsp;</td>
                 <td width="105" style="font-weight: bold;  color:#000;">ชื่อหลักสูตร</td>
-                <td width="410" style="font-weight: bold;  color:#000;"><?= $row[cos_name];?></td>
+                <td width="410" style="font-weight: bold;  color:#000;"><?php echo $row['cos_name'];?></td>
                 <td width="52">&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;" >รหัสหลักสูตร</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_id];?></td>
+                <td style="font-weight: bold;  color:#000;"><?php echo $row['cos_id'];?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;">หมู่วิชา</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_group];?></td>
+                <td style="font-weight: bold;  color:#000;"><?php echo $row['cos_group'];?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
                 <td style="font-weight: bold">&nbsp;</td>
                 <td style="font-weight: bold;  color:#000;">จำนวนชั่วโมง</td>
-                <td style="font-weight: bold;  color:#000;"><?= $row[cos_time].' '.'ชั่วโมง';?></td>
+                <td style="font-weight: bold;  color:#000;"><?php echo  $row['cos_time'].' '.'ชั่วโมง';?></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
@@ -313,7 +314,7 @@ while($row=mysql_fetch_array($result_view))
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="confirm_course.php?id=<?=$row[cos_id]; ?>" ><img src="images/register1.jpg" width="200" height="40" border="0"></a></td>
+                <td><a href="confirm_course.php?id=<?php echo $row['cos_id']; ?>" ><img src="images/register1.jpg" width="200" height="40" border="0"></a></td>
                 
               </tr>
               <tr>
@@ -321,7 +322,7 @@ while($row=mysql_fetch_array($result_view))
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>  
-              <? } ?>
+              <?php  ?>
             </table>
           </div>
         </div>
