@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../db.php');
+include('../config/db.php');
 //include('auth.php');
 extract ($_GET);
 $active = isset($_GET['active']) ? $_GET['active'] : "";
@@ -112,7 +112,7 @@ body {
       </tr>
       
     <?php
-  include('../db.php');
+  include('../config/db.php');
   ////////first///////////////$sql = "select * from student where username =  '$username' ";
     $reg = "select * from register ORDER BY std_id DESC ";
 	$r = mysqli_query($connection,$reg);
