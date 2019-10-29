@@ -84,7 +84,7 @@ body {
      <td bgcolor="#666633"><div align="center"><span class="style4">Delete</span></div></td>
    </tr>
  <?php
-   include ('../db.php');
+   include ('../maintain/db.php');
    //mysql_query ("SET NAMES 'utf8'");
    $sql = "select * from course";
    $result = mysqli_query($connection,$sql);
