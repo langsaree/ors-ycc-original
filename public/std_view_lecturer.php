@@ -112,13 +112,13 @@ include('../config/db.php');
             <table width="650" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="12">&nbsp;</td>
-                <td width="131" bgcolor="#FF9933" class="midle">ลำดับ</td>
-                <td width="131" bgcolor="#FF9933" class="midle">รหัสอาจารย์ผู้สอน</td>
-                <td width="152" bgcolor="#FF9933" class="midle">ชื่อ-นามสกุล</td>
-                <td width="319" bgcolor="#FF9933" class="midle">เบอร์โทรติดต่อ</td>
-                <td width="319" bgcolor="#FF9933" class="midle">อีเมล</td>
-                <td width="12">&nbsp;</td>
-                <td width="15">&nbsp;</td>
+                <td width="131" bgcolor="#00ffb3" class="midle">ลำดับ</td>
+                <td width="152" bgcolor="#00ffb3" class="midle">รหัสอาจารย์ผู้สอน</td>
+                <td width="152" bgcolor="#00ffb3" class="midle">ชื่อ-นามสกุล</td>
+                <td width="319" bgcolor="#00ffb3" class="midle">เบอร์โทรติดต่อ</td>
+                <td width="319" bgcolor="#00ffb3" class="midle">อีเมล</td>
+                <td width="14">&nbsp;</td>
+                <td width="18">&nbsp;</td>
               </tr>
        <?php 
 			include('../config/db.php');
@@ -136,6 +136,7 @@ include('../config/db.php');
                 <td><?php echo $row['lec_id'] ?></td>
                 <td><?php echo $row2['lec_Teach_id'] ?>
                 <td><?php echo $row2['lec_name'] ?>
+                
 
                 &nbsp;&nbsp;&nbsp;              
                 <td><?php echo $row2['lec_tel'] ?></td>

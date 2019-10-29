@@ -204,11 +204,11 @@ $result1=mysqli_query($connection,$cos);
               <td width="174"><div align="center">หมายเหตุ</div></td>
             </tr>
             <tr>
-              <td height="61" valign="top"><?php ?></td>
-              <td valign="top">&nbsp; <?php $row1['cos_name'];?></td>
-              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php $row1[cos_time]?></td>
-              <td valign="top"><?php $row1['cos_start']?></td>
-              <td valign="top"><?php $row1['cos_comment']?></td>
+              <td height="61" valign="top"><?php echo $row1['lec_id'] ?></td>
+              <td valign="top">&nbsp; <?php echo $row1['cos_name'];?></td>
+              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php echo $row1['cos_time']?></td>
+              <td valign="top"><?php echo $row1['cos_day']?></td>
+              <td valign="top"><?php echo $row1['cos_comment']?></td>
             </tr>
             <?php } ?>
           </table></td>
