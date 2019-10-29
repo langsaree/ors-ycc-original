@@ -3,8 +3,6 @@ include('../config/db.php');
 include('auth.php');
 extract ($_GET);
 $user_admin = $_SESSION["user_admin"];
-$active = isset($_GET['active']) ? $_GET['active'] : "";
-$non_active =  isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg = "";
 if(!empty($active)){ 
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
@@ -112,7 +110,6 @@ body {
       </tr>
       
     <?php
-include('../config/db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
 	$r = mysqli_query($connection, $reg);
