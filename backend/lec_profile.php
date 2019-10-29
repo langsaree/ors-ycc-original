@@ -66,6 +66,7 @@ body {
 <?php
 include('../config/db.php');
 $sql = "select * from lecture where lec_id='$lec_id'";
+
 $result = mysqli_query($connection, $sql);
 while($row = mysqli_fetch_array($result))
 {  
@@ -74,7 +75,7 @@ while($row = mysqli_fetch_array($result))
     <td width="26">&nbsp;</td>
                   <td width="124" rowspan="1"><img src="image/lecturer.png" width="100" height="100"></td>
                   <td width="140" class="main" style="text-align: right">รหัสประจำตัว : </td>
-                  <td width="321" class="maintext"><?php echo $row['lec_id'];?></td>
+                  <td width="321" class="maintext"><?php echo $row['lec_Teach_id'];?></td>
                   <td width="15">&nbsp;</td>
                 
                 <tr>
@@ -93,6 +94,12 @@ while($row = mysqli_fetch_array($result))
                   <td>&nbsp;</td>
                   <td class="main" style="text-align: right">เบอร์โทร :</td>
                   <td class="maintext"><?php echo $row['lec_tel'];?></td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="main" style="text-align: right">หมายเหตุ :</td>
+                  <td class="maintext"><?php echo $row['lec_comment'];?></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
