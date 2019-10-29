@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include ('../db.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 $f_name = $_POST['f_name'];
@@ -23,7 +23,7 @@ $d_tel = $_POST['d_tel'];
 $mobile = $_POST['mobile'];
 $job = $_POST['job'];
 $t_job = $_POST['t_job'];
-mysql_query("SET NAMES 'utf8'");
+mysqli_query("SET NAMES 'utf8'");
 $sql = "insert into student(username,password,f_name,name,s_name,gender,b_day,b_month,b_years,std_id,home,m_home
 ,r_home,v_home,p_home,c_home,post,tel,email,d_tel,mobile,job,t_job)
  value 
@@ -32,10 +32,10 @@ $sql = "insert into student(username,password,f_name,name,s_name,gender,b_day,b_
 '$mobile','$job','$t_job')";
 
 
-$result = mysql_query($sql);
+$result = mysqli_query($connection,$sql);
 if (!$result)
 {
-die("could not connect db".mysql_error());
+die("could not connect db".mysqli_error());
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -52,7 +52,7 @@ die("could not connect db".mysql_error());
 	font-weight: bold;
 }
 .style4 {color: #0000FF}
--->
+
 </style>
 </head>
 
