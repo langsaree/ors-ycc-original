@@ -1,6 +1,72 @@
-<?php
-$error="";
+<?
+include ('db.php');
+session_start();
+//>--code insert using for process add data
+
 ?>
+<?
+$errmsg1 = ""; $errmsg2 = ""; $errmsg3 = "";
+$errmsg4 = ""; $errmsg5 = ""; $errmsg6 = "";
+
+
+if(isset($_POST['ok'])) {
+#============== function cos_id
+    $lec_id= $_POST['lec_id'];
+    if(empty($lec_id)){
+        $errmsg1 .='<span style="color:red; font-size:12px">กรุณากรอกรหัสอาจารย์ผู้สอนด้วยค่ะ</span>';}
+    #===========================
+    $lec_name= $_POST['lec_name'];
+    if(empty($lec_name)){
+        $errmsg2 .='<span style="color:red; font-size:12px">กรุณากรอกชื่ออาจารย์ผู้สอนด้วยค่ะ</span>';}
+    #===========================
+    $lec_tel= $_POST['lec_tel'];
+    if(empty($lec_tel)){
+        $errmsg3 .='<span style="color:red; font-size:12px">กรุณากรอกเบอร์โทรติดต่อด้วยค่ะ</span>';}
+    #========================
+    $lec_email= $_POST['lec_email'];
+    if(empty($lec_email)){
+        $errmsg4 .='<span style="color:red; font-size:12px">กรุณากรอกอีเมล์ด้วยค่ะ</span>';}
+    #============================
+    $username=$_POST['username'];
+    if(empty($username)){
+        $errmsg5 .='<span style="color:red; font-size:12px">กรุณากรอก Username ด้วยค่ะ</span>' ;}
+    #============================
+    $password=$_POST['password'];
+    if(empty($password)){
+        $errmsg6 .='<span style="color:red; font-size:12px">กรุณากรอก Password ด้วยค่ะ</span>' ;}
+
+    $lec_comment= $_POST['lec_comment'];
+
+    if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6)
+    {
+        mysqli_query ($connection, "SET NAMES 'utf8'");
+        $sql = "insert into lecturer (lec_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
+        $result = mysqli_query($connection, $sql);
+
+//if ($result>0)
+//{?>
+        <!--<script type="text/javascript">-->
+        <!--	window.location="manage_course.php";-->
+        <!--</script>-->
+        <!---->
+        <!-- --><?//  }
+//else {
+//	 die("Error db".mysqli_error($connection)); }
+
+        if ($result) {
+            echo "<script>location='plec_add.php';</script>";
+            $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+            echo "$text";
+            exit;
+        }else {
+            die("Error db".mysqli_error($connection)); }
+
+
+    }}
+?>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -55,7 +121,7 @@ body {
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="plec_add.php">
+<form method="post" action="">
   <table width="1280" height="578" border="0" align="left" cellpadding="0" cellspacing="0">
     <tr>
     <td width="1300" height="139" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
@@ -77,13 +143,22 @@ body {
     <td height="420" valign="top"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style52">กรุณากรอบข้อมูลอาจรย์ผู้สอน</span></p>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
       <table width="94%" border="0" cellspacing="5" cellpadding="0">
-        <tr>
-          <td colspan="2" align="center"><div align="left"><? echo "$error"; ?></div></td>
-        </tr>
+          <? if($errmsg5){?>
+              <tr>
+                  <td height="26">&nbsp;</td>
+                  <td><?= $errmsg5?></td>
+              </tr>
+          <? } ?>
           <tr>
           <td width="32%" align="right" class="style46">Username :</td>
           <td width="68%" class="red"><input name="username" type="text" id="username" size="20" /></td>
         </tr>
+          <? if($errmsg6){?>
+              <tr>
+                  <td height="26">&nbsp;</td>
+                  <td><?= $errmsg6?></td>
+              </tr>
+          <? } ?>
           <tr>
           <td width="32%" align="right" class="style46">Password :</td>
           <td width="68%" class="red"><input name="password" type="text" id="textfield3" size="20" /></td>
@@ -91,33 +166,55 @@ body {
           <tr>
           <td colspan="2" align="center" class="style44">-----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
           </tr>
+          <? if($errmsg1){?>
+              <tr>
+                  <td height="26">&nbsp;</td>
+                  <td><?= $errmsg1?></td>
+              </tr>
+          <? } ?>
         <tr>
-          <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์ห</span>ผู้สอน :</span> </td>
+          <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์</span>ผู้สอน :</span> </td>
           <td width="68%" class="red"><label>
             <span class="style50">
             <input name="lec_id" type="text" size="20" id="lec_id" />
             *            </span></label></td>
         </tr>
-   
+          <? if($errmsg2){?>
+              <tr>
+                  <td height="26">&nbsp;</td>
+                  <td><?= $errmsg2?></td>
+              </tr>
+          <? } ?>
         <tr>
           <td width="32%" align="right" class="style40"><span class="style40">ชื่อ<span class="style49">อาจารย์</span>ผู้สอน :</span></td>
           <td width="68%"><label>
             <input name="lec_name" type="text" size="30" id="lec_name" />
             <span class="style50">          *</span></label></td>
         </tr>
-    
+          <? if($errmsg3){?>
+              <tr>
+                  <td height="26">&nbsp;</td>
+                  <td><?= $errmsg3?></td>
+              </tr>
+          <? } ?>
         <tr>
           <td align="right" class="style40">เบอร์โทรติดต่อ:</td>
           <td><input name="lec_tel" type="text" size="25" id="tel" />
             <span class="style50">*</span></td>
         </tr>
+          <? if($errmsg4){?>
+              <tr>
+                  <td height="26">&nbsp;</td>
+                  <td><?= $errmsg4?></td>
+              </tr>
+          <? } ?>
         <tr>
           <td align="right" class="style40">อีเมล์:</td>
           <td><label>
             <input name="lec_email" type="text" id="textfield" size="30" />
             <span class="style50">          *</span></label></td>
         </tr>
-       
+
         <tr>
           <td align="right" class="style40"><span class="style40">หมายเหตุ :</span></td>
           <td class="red"><label>
@@ -128,7 +225,7 @@ body {
         <tr>
           <td align="right">&nbsp;</td>
           <td><label>
-            <input type="submit" name="button" id="button" class="button" value="บันทึก" />
+            <input type="submit" name="ok" id="ok" class="button" value="บันทึก" />
             <input type="button" name="button2" id="button2" class="button" value="ยกเลิก"  />
           </label></td>
         </tr>
