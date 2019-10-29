@@ -78,7 +78,7 @@ $user_admin = $_SESSION["user_admin"];
         <td><a href="manage_lecturer.php"><img src="image/lecture Manager.png" alt="" class="second_image"/></a></td>
         <td><a href="manage_register.php"><img src="image/register.png" class="second_image" /></a></td>
         <td><a href="manage_admin.php"><img src="image/admin.png" alt="" class="second_image"/></a></td>
-        <td><a href="http://localhost/phpmyadmin/db_designer.php?db=ors_ycc"><img src="image/database.png" width="64" height="64" class="second_image" /></td>
+        <td><a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=ors_ycc"><img src="image/database.png" width="64" height="64" class="second_image" /></td>
       </tr>
       <tr>
         <td class="style41">&nbsp;</td>
@@ -225,7 +225,7 @@ $user_admin = $_SESSION["user_admin"];
       <tr>
         <td><table width="167" border="0" cellspacing="0" cellpadding="0">
           <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
-            <td height="21" colspan="3"><a href="manage_std_status.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการสถานะนักศึกษา</a></td>
+            <td height="21" colspan="3"><a href="std_active.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการสถานะนักศึกษา</a></td>
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
@@ -273,7 +273,7 @@ $user_admin = $_SESSION["user_admin"];
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
-            <td width="119"><a href="##" class="right_side_bar_list">Database </a></td>
+            <td width="119"><a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=ors_ycc" class="right_side_bar_list">Database </a></td>
             <td width="24">&nbsp;</td>
           </tr>
           <tr>
