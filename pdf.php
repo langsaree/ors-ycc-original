@@ -56,7 +56,7 @@ $do3=mysql_query($sql3);
 
 
 $cos="select * from course where cos_id='$cos_id'";
-$result1=mysql_query($cos);
+$result1=mysqli_query($connection, $cos);
 
 ?>
     </table>
