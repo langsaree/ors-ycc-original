@@ -122,11 +122,16 @@ if (isset($_SESSION['user_admin'])) {
     </table>
       
     <td width="183" valign="top" ><table width="169" border="0" align="right" cellpadding="0" cellspacing="2">
+              <tr>
+                  <td width="165" height="23" valign="top" ><table width="161" border="0" cellspacing="0" cellpadding="0">
+                          <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+                              <td height="21" colspan="3"><a href="view_registered.php" class="right_side_bar"> &nbsp;&nbsp;&nbsp;&nbsp;แสดงผู้ลงทะเบียน</a></td>
+                          </tr>
+                      </table></td>
+              </tr>
       <tr>
         <td width="165" height="23" valign="top" ><table width="161" border="0" cellspacing="0" cellpadding="0">
-    
-          <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';"
->
+          <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_course.php" class="right_side_bar"> &nbsp;&nbsp;&nbsp;&nbsp;การจัดการรายวิชา</a></td>
             </tr>
           <tr onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
@@ -211,11 +216,6 @@ if (isset($_SESSION['user_admin'])) {
             <td><a href="cos_view.php" class="right_side_bar_list">ลบประเมินผล</a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
         </table></td>
         </tr>
       <tr>
@@ -223,65 +223,59 @@ if (isset($_SESSION['user_admin'])) {
           <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_statis.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;สถิติการใช้งาน</a></td>
           </tr>
-          <tr>
-            <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
-            <td width="22">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
         </table></td>
         </tr>
+              <tr>
+                  <td><table width="163" border="0" cellspacing="0" cellpadding="0">
+                          <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+                              <td height="21" colspan="3"><a href="register_course.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ลงทะเบียนวิชาเรียน</a></td>
+                          </tr>
+                      </table></td>
+              </tr>
       <tr>
         <td><table width="167" border="0" cellspacing="0" cellpadding="0">
           <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_std_status.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการสถานะนักศึกษา</a></td>
           </tr>
-          <tr>
-            <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
-            <td width="26">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
         </table></td>
         </tr>
+              <tr>
+                  <td width="165" height="23" valign="top" ><table width="161" border="0" cellspacing="0" cellpadding="0">
+                          <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+                              <td height="21" colspan="3"><a href="manage_lecturer.php" class="right_side_bar"> &nbsp;&nbsp;&nbsp;&nbsp;การจัดการอาจารย์ผุ้สอน</a></td>
+                          </tr>
+                          <tr onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+                              <td width="22">&nbsp;</td>
+                              <td width="119"><a href="lec_add.php" class="right_side_bar_list">เพิ่มอาจารย์ผู้สอน </a></td>
+                              <td width="20">&nbsp;</td>
+                          </tr>
+                          <tr onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+                              <td>&nbsp;</td>
+                              <td><a href="lec_search.php" class="right_side_bar_list">ค้นหาอาจารย์ผู้สอน</a></td>
+                              <td>&nbsp;</td>
+                          </tr>
+                          <tr onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+                              <td>&nbsp;</td>
+                              <td><a href="lec_view.php" class="right_side_bar_list" >แสดงอาจารย์ผู้สอน</a></td>
+                              <td>&nbsp;</td>
+                          </tr>
+                      </table></td>
+              </tr>
       <tr>
         <td><table width="165" border="0" cellspacing="0" cellpadding="0">
           <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_register.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการลงทะเบียน</a></td>
           </tr>
-          <tr>
-            <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
-            <td width="24">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
+                <tr onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+                    <td width="22">&nbsp;</td>
+                    <td width="119"><a href="register_update.php" class="right_side_bar_list">แก้ไขลงทะเบียน</a></td>
+                    <td width="20">&nbsp;</td>
+                </tr>
+                <tr onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+                    <td>&nbsp;</td>
+                    <td><a href="register_view.php" class="right_side_bar_list">แสดงการลงทะเบียน</a></td>
+                    <td>&nbsp;</td>
+                </tr>
         </table></td>
       </tr>
       <tr>
@@ -289,23 +283,15 @@ if (isset($_SESSION['user_admin'])) {
           <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_admin.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ผู้ดูแลระบบ</a></td>
           </tr>
-          <tr>
-            <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
-            <td width="24">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
-            <td>&nbsp;</td>
-          </tr>
         </table></td>
       </tr>
+              <tr>
+                  <td><table width="165" border="0" cellspacing="0" cellpadding="0">
+                          <tr onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+                              <td height="21" colspan="3"><a href="" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ดาต้าเบส</a></td>
+                          </tr>
+                      </table></td>
+              </tr>
       <tr>
         <td>&nbsp;</td>
         </tr>
