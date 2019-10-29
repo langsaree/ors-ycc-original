@@ -84,7 +84,7 @@ if(isset($_POST['Submit'])) {
             $errmsg3 = "<span style=color:red>ชื่อล็อกอินต้องยาว 6-20 ตัว</span>";
         }
     }
-==================================	
+#==================================	
 #email check
     $email = $_POST['email'];
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
