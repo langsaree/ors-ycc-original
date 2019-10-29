@@ -4,7 +4,6 @@ $username = $_SESSION['username'];
 include('auth.php');
 //end of check session
 include('../config/db.php');
-// $username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +113,12 @@ input:focus, textarea:focus {
               </tr>
             </table>
      <?php
-            if(isset($POST['ok'])){
+     error_reporting(~E_NOTICE );
+
+     $username=$_SESSION["username"];
+       $ok=$_POST['ok'];
+
+            if(isset($ok)){
 				$login=$_POST['username'];
         $pswd=$_POST['password'];
 				$name=$_POST['lec_name'];
@@ -123,12 +127,6 @@ input:focus, textarea:focus {
 				
 				$query = "UPDATE lecture set username ='$login', password ='$pswd', lec_name ='$name', lec_email ='$email', lec_tel ='$phone' where username='$username'";
 				$do=mysqli_query($connection, $query);
-				if($do){
-					header("location:lec_profile.php");
-				}
-				else{
-           die("Could not select db".mysqli_error());
-				}
 			}
 			?>
             <form action="" method="post" enctype="multipart/form-data" name="form1">
@@ -170,7 +168,7 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">Password :</td>
                   <td><label for="password"></label>
-                  <input type="password" name="pswd" id="password" class="inputbox-normal" value="<?php echo $row['password'];?>" ></td>
+                  <input type="password" name="password" id="password" class="inputbox-normal" value="<?php echo $row['password'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
