@@ -1,23 +1,3 @@
-<?php
-/*include ('db.php');
-$cos_id = $_POST['cos_id'];
-$cos_name = $_POST['cos_name'];
-$cos_period = $_POST['cos_period'];
-$cos_day =$_POST['cos_day'];
-$cos_after =$_POST['cos_after'];
-$cos_time =$_POST['cos_time'];
-$date = $cos_day."/". $cos_after ."/". $cos_time;
-//echo $date;
-$cos_lec =$_POST['lec_id'];
-$cos_comment =$_POST['cos_comment'];
-mysql_query ("SET NAMES 'utf8'");
-$sql = "insert into course(cos_id,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysql_query($sql);
-if (!$result)	
-{ die("Error db".mysql_error()); }
-else
-{*/
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -31,7 +11,6 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
 </style></head>
 
 <body>
@@ -55,6 +34,6 @@ body {
     <tr>
       <td valign="baseline"><img src="image/footer.jpg" width="1260" height="76" /></td>
     </tr>
-  </table> <? //} ?>
+  </table> 
 </body>
 </html>
