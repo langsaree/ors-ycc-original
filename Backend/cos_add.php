@@ -1,5 +1,5 @@
 <?php
-include ('../db.php');
+include ('../maintain/db.php');
 
 session_start();
 //>--code insert using for process add data

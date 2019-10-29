@@ -72,7 +72,7 @@ body {
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
        <?php 
-  include ('../db.php');
+  include ('../maintain/db.php');
 	///////////////////////////////////////
    $sql1 ="select * from course ";
    $result = mysqli_query($connection,$sql1);
