@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>manage lecture</title>
 <style type="text/css">
-<!--
+
 .style1 {color: #666666}
 body {
 	margin-left: 0px;
@@ -39,7 +39,7 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 .style43 {color: #FFFFFF; font-size: 13px; font-family: Verdana, Arial, Helvetica, sans-serif; }
--->
+
 </style>
 </head>
 
@@ -68,12 +68,12 @@ body {
             <tr> </tr>
             <tr>
               <td width="134" height="117"><div align="center"><a href="lec_add.php"><img src="image/add_lecture.png" width="90" height="90" border="0" /></a></div></td>
-              <td width="134"><div align="center"><a href="lec_search.php"><img src="image/search_lec.png" width="90" height="90" border="0" /></a></div></td>
+              
               <td width="134"><div align="center"><a href="lec_view.php"><img src="image/view lecture.png" width="90" height="90" border="0" /></a></div></td>
             </tr>
             <tr>
               <td height="19"><div align="center" class="style1"><span class="style40"><a href="lec_add.php" style="text-decoration:none">เพิ่มอาจารย์ผู้สอน</a></span></div></td>
-              <td class="style40"><div align="center"><a href="lec_search.php" style="text-decoration:none">ค้นหาอาจารย์ผู้สอน</a></div></td>
+              
               <td><div align="center"><span class="style1"><span class="style40"><a href="lec_view.php" style="text-decoration:none">แสดงอาจารย์ผู้สอน</a></span></span></div></td>
             </tr>
 <tr></tr>
