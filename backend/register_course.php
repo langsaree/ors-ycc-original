@@ -19,9 +19,12 @@ include('../config/db.php');
     </style>
 </head>
 <body>
-<td width="10">&nbsp;</td>
+<table width="1260" border="0">
+  <tr>
+    <td><img src="../public/image/header-bg.png" width="1260" height="45" /></td>
+  </tr>
 <table> <td width="330" style="text-align:right" align="center"><a href="cpanel.php" class="style6" style="text-decoration:none" >
-     <img src="../image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
+<img src="../public/image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
 <p align="center"> _____________________________________________________________________________</p></td>
 <div class="BodyContent">
     <div class="BorderBorder">
@@ -923,7 +926,7 @@ include('../config/db.php');
                                     </tr>
                                     <tr>
                                         <td width="213" height="16">&nbsp;</td>
-                                        <td width="224"><button type="submit" src="../public/images/register.png" name="Submit" value="Submit" alt="Submit"><img src="../images/register.png"/></td>
+                                        <td width="224"><button type="submit" name="Submit" value="Submit" alt="Submit"><img src="../public/images/register.png"/></td>
                                         <td width="174">&nbsp;</td>
                                     </tr>
 
