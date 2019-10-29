@@ -57,7 +57,7 @@ body {
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
           <?
-	include ('db_connect.php');
+	include ('../maintan/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysqli_query($connection,$sql);
 	while($shows = mysqli_fetch_row($show))

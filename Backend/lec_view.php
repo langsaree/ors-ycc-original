@@ -94,7 +94,7 @@ body {
              </tr>
              <tr>
                <?php 
-include ('../db.php');
+include ('../maintain/db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
 $result = mysqli_query($connection,$sql);

@@ -3,7 +3,7 @@ session_start();
 //if(session_is_registered("user_admin")){header("location:cpanel.php");}
 if(isset($_SESSION['user_admin'])) {header("location:cpanel.php");}
 //ob_start(); 
-include ('../db.php');
+include ('../maintain/db.php');
 $username = "";
 $password = "";
 //if(!isset($_SESSION['logined'])) {
