@@ -1,7 +1,7 @@
 <?php
 extract ($_GET);
+$error="";
 $cos_id = $_GET['id'];
-//echo $cos_id;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,7 +38,7 @@ body {
             <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">อาจารย์ผู้สอน</span></div></td>
             <td width="19%" bgcolor="#CCCCCC"><div align="center"><span class="style7">หมายเหตุ</span></div></td>
           </tr>
-           <?
+           <?php
 	include('../db.php');
 	$sql = "select * from course where cos_id = $cos_id";
 	$result= mysqli_query($conn,$sql);
@@ -48,23 +48,23 @@ body {
           <tr>
             <td height="64">
               <div align="left">
-                <input name="cos_id" type="text" id="cos_id" value="<?php echo $row['cos_id']; ?>" size="20" />
+                <input name="cos_id" type="text" id="cos_id" value="<?php  $row['cos_id']; ?>" size="20" />
               </div></td>
             <td>
               <div align="left">
-                <input name="cos_group" type="text" id="cos_group" value="<?php echo $row['cos_group'];?>" />
+                <input name="cos_group" type="text" id="cos_group" value="<?php $row['cos_group'];?>" />
               </div></td>
             <td>              
               <div align="center">
-                <input name="cos_name" type="text" id="cos_name" value="<?php echo $row['cos_name']; ?>" size="20" />
+                <input name="cos_name" type="text" id="cos_name" value="<?php  $row['cos_name']; ?>" size="20" />
               </div></td>
             <td><div align="center">
-              <input name="cos_period" type="text" id="cos_period" value="<?php echo $row['cos_period']; ?>" size="20" />
+              <input name="cos_period" type="text" id="cos_period" value="<?php $row['cos_period']; ?>" size="20" />
             </div>
             <td><div align="center">
-              <input name="cos_day" type="text" id="cos_day" value="<?php echo $row['cos_day']; ?>" />
+              <input name="cos_day" type="text" id="cos_day" value="<?php $row['cos_day']; ?>" />
             </div></td>
-            <td><input name="lec_id" type="text" id="lec_id" value="<?php echo $row['lec_id']; ?>" size="20" /></td>
+            <td><input name="lec_id" type="text" id="lec_id" value="<?php $row['lec_id']; ?>" size="20" /></td>
             <td><textarea name="cos_comment" id="cos_comment" cols="30" rows="3"> <?php $row['cos_comment']; ?> </textarea></td>
           </tr>
           
