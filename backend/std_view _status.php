@@ -1,10 +1,8 @@
 <?php
-//session_start();
 include('../config/db.php');
 include('auth.php');
 extract ($_GET);
-//$active = $active;
-//$non_active = $non_active;
+
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
 	$result = mysqli_query($connection, $sql);
@@ -140,7 +138,7 @@ if (isset($message)) {
           </span></div></td>
           <td><div align="center"><a href="std_active.php?active=<?php echo $row['std_id'] ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
           <td><div align="center"><a href="std_active.php?non_active=<?php echo $row['std_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
-          </tr><?php }?>
+          </tr><?php } ?>
     </table>
       <p>&nbsp;</p>
       <p>&nbsp;</p>

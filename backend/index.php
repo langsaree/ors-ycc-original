@@ -24,14 +24,13 @@ $_SESSION["user_admin"] = $username;
 					window.location.href="cpanel.php";
                 </script>
                 <?php
-                // header("location:cpanel.php");
+                
 }
 else
  {
     $message = '<span style="color:red">ชื่่อเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
-//echo "Wrong username and password";
+
 } 
-//ob_end_flush();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

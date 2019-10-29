@@ -1,5 +1,4 @@
 <?php
-//session_start();
 include('auth.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -96,7 +95,6 @@ body {
 	$std = $row['std_id'];
 	$user= $row['username'];
 	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
-	//echo $name;
 	?>
       <tr>
 		<td><div align="left"><?php echo $std?> </div></td>
@@ -106,10 +104,7 @@ body {
         <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../public/image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <?php } ////// close first while //////////////////////////////////////////////
-		//} //////// close of second while ////////////////////
-		//} /////// close 3rd while ///////////////////////
-		?>
+     <?php } ?>
     </table>
       <p></p>
       <p>&nbsp;</p>

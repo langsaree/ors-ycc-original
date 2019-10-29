@@ -1,10 +1,7 @@
 <?php 
-//session_start();
 include('../config/db.php');
 include('auth.php');
 extract ($_GET);
-//$active = $active;
-//$non_active = $non_active;
 $msg='';
 if(!empty($active)){
 	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";

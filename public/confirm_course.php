@@ -1,10 +1,8 @@
 <?php
 session_start();
-// $username=$_SESSION["username"];
 include('../config/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
-// if(!isset($_SESSION["username"])){header("location:register.php");}
 if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
 	{
     include('../config/login_check.php');
@@ -161,7 +159,6 @@ $sql = "select * from course where cos_id='$cos_id' ";
 $result = mysqli_query($connection, $sql);
 while ($rows = mysqli_fetch_array($result)) {
 $id = $rows["cos_id"];
-//$name = $rows["cos_name"];
 
 ?>               
                 

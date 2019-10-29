@@ -1,12 +1,9 @@
 <?php
-//session_start();
-#if(!session_is_registered(username)){header("location:index.php");}
-//end of check session
 include('../config/db.php');
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
-//$type=$_POST['type'];
+
 $type="";
 
 $search_text=ltrim($search_text);
@@ -103,7 +100,6 @@ if($search_text==""){$search_text="blank";}
 // end of check
 
 if($type<>"any"){
-//$query="select * from $m where s_id='$search_text'";
 $query="select * from student where std_id='$search_text'";
 		}else{
 $kt=split(" ",$search_text);//Breaking the string to array of words
@@ -115,7 +111,6 @@ $q=substr($q,0,(strLen($q)-3));
 // this will remove the last or from the string. 
 $query="select * from student where $q order by std_id limit 0, 20"; // start search query list as limit result at 10 result at a time
 		} // end of if else based on type value
-//echo $query;
 
 echo "<br><br>";
 mysqli_query($connection, "SET NAMES utf-8"); //		for thai input	
@@ -133,10 +128,7 @@ while($row=mysqli_fetch_array($nt))
         <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_profile.php?id=<?php echo $std; ?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <?php } ////// close first while //////////////////////////////////////////////
-		} //////// close of second while ////////////////////
-		//} /////// close 3rd while ///////////////////////
-		?>
+     <?php }} ?>
     </table>
       <p></p>
       <p>&nbsp;</p>

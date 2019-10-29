@@ -5,12 +5,11 @@ $cos_group = $_POST['cos_group'];
 $cos_name = $_POST['cos_name'];
 $cos_period = $_POST['cos_period'];
 $cos_day =$_POST['cos_day'];
-//$cos_after =$_POST['cos_after'];
-//$cos_time =$_POST['cos_time'];
-$date = ".$cos_day."/*". $cos_after ."".$cos_time*/;
+
+$date = ".$cos_day.";
 $lec_id =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
-//mysqli_query ("SET NAMES 'utf8'");
+
 
 
 $sql = "UPDATE course SET cos_id='$cos_id',cos_group='$cos_group',cos_name='$cos_name',cos_period='$cos_period',cos_day='$date',lec_id='$lec_id',cos_comment='$cos_comment' where cos_id='$cos_id'";

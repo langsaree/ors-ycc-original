@@ -90,7 +90,6 @@ body {
              <tr>
                <?php 
 include('../config/db.php');
-#$sql = "select* from lecturer where lec_Teach_id='$lec_Teach_id";
 $sql = "select* from lecture";
 $result = mysqli_query($connection, $sql);
 

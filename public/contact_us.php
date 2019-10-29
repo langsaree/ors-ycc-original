@@ -41,12 +41,9 @@ include('../config/login_check.php');
         </div>
 
 <?php
-// session_start();
-
 if(isset($_POST['action'])){
   if($_POST['verifycode'] !=$_SESSION['total'] ){
     $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
-      // echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
     } else if (!isset($_SESSION['username'])){
         $u_error = '<span style="color:red">กรุณาทำการล็อกอินก่อน</span>';
     } else if (empty($_POST['subj']) && empty($_POST['msg'])){

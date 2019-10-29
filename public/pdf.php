@@ -5,19 +5,16 @@ if(!isset($_SESSION['username'])){header("location:index.php");}
 include('../config/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
-//echo "$cos_id";
 
 $sql="select * from student where username='$username'";
 $result=mysqli_query($connection,$sql);
 $row=mysqli_fetch_array($result);
 $std_id=$row['std_id'];
-//echo "$std_id"; 
 
 $sql2="select * from lecture,course where course.lec_id=lecture.lec_id and cos_id='$cos_id'";
 $do2=mysqli_query($connection,$sql2);
 $this2=mysqli_fetch_array($do2);
 $lec_id=$this2['lec_id'];	
-//echo "$lec_id"; 
 
 $sql3="insert into register(std_id,cos_id,lec_id) value('$std_id','$cos_id','$lec_id')";
 $do3=mysqli_query($connection,$sql3); 
@@ -52,10 +49,6 @@ $do3=mysqli_query($connection,$sql3);
         <td></td>
       </tr>
       <?php
-//$std="select * from student where username='$username'";
-//$result=mysqli_query($connection,$sql);
-
-
 $cos="select * from course where cos_id='$cos_id'";
 $result1=mysqli_query($connection,$cos);
 

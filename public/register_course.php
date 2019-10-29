@@ -24,11 +24,9 @@ if (isset($_POST['ok'])) {
       if ($count == 1) {
           // Register $username, $password and redirect to file "login_success.php"
           $_SESSION['username'] = $username;
-//            $_SESSION['password'] = $password;
           // redirect to profile page
           header("Location:std_profile.php");
       } else {
-          //$error='Wrong Username or Password';
           $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
 
       }
@@ -177,9 +175,6 @@ if (isset($_POST['ok'])) {
                                 <?php '; ?>
 
                           <?php } else { ?>
-
-                          <?php //  remove the HTML code of login ?>
-                          <?php // If user already logined, so display wellcome section below ?>
                           <?php echo ' '; ?>
 
                           <?php
@@ -234,8 +229,6 @@ if (isset($_POST['ok'])) {
 
  
 <?php
-//ob_start();
-//session_start();
 
 $errmsg = ""; $errmsg1 = ""; $errmsg2 = ""; $errmsg3 = ""; $errmsg4 = ""; $errmsg5 = "";
 $errmsg6 = ""; $errmsg7 = ""; $errmsg8 = ""; $errmsg9 = ""; $errmsg10 = ""; $errmsg11 = "";
@@ -245,39 +238,19 @@ $errmsg24 = ""; $errmsg25 = ""; $errmsg26 = ""; $errmsg27 = ""; $errmsg28 = ""; 
 $errmsg30 = ""; $errmsg31 = ""; $errmsg32 = ""; $errmsg33 = ""; $errmsg34 = ""; $errmsg35 = "";
 
 
-//$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
-//	foreach($_REQUEST as $key => $value)  {
-//		$$key = $value;
-//	}
-//	$errmsg = array();
-//	for($i = 0; $i < 20; $i++) {
-//		$errmsg[$i] = false;
-//	}
-
 if(isset($_POST['Submit'])) {
 #=========================================
 # username check	
-//if(isset($ok)) { 
     $login = $_POST['login'];
     if (empty($login)) {
         $errmsg1 = "<span style=color:red>กรุณากรอกชื่อล็อกอินด้วยค่ะ</span>";
     }
-    //if(!ereg($pattern, $login)) {
-    //  $errmsg2 .= "<span style=color:red>ชื่ิิอล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
-    //}
+
     if (!$errmsg1) {
         if (strlen($login) < 6) {
             $errmsg3 = "<span style=color:red>ชื่อล็อกอินต้องยาว 6-20 ตัว</span>";
         }
     }
-
-    /*if(!$errmsg[3]) {
-           # check username duplicate
-           $sql = "select * from account where username = '$login'";
-           $link->query($sql);
-           if($link->num_rows() > 0) {
-               $errmsg[4] = true; // "<li>ชื่ิิอล็อกอินนี้มีผู้ใช้แล้ว";
-    }}*/
 #============================================	
 #email check
     $email = $_POST['email'];
@@ -296,10 +269,6 @@ if(isset($_POST['Submit'])) {
         $errmsg7 = "<span style=color:red>กรุณากรอกยืนยันรหัสผ่านด้วยค่ะ</span>";
     }
 
-    //if(!ereg($pattern, $pswd)) {
-    //    $errmsg8 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
-
-    //}
     if (!$errmsg6)
         if (strlen($pswd) < 6) {
             $errmsg9 = "<span style=color:red>รหัสผ่านต้องยาว 6-20 ตัวค่ะ</span>";
@@ -325,9 +294,6 @@ if(isset($_POST['Submit'])) {
     if (empty($s_name)) {
         $errmsg13 = "<span style=color:red>กรุณากรอกนามสกุลด้วยค่ะ</span>";
     }
-    //if(!ereg($pattern, $pswd)) {
-    //    $errmsg14 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
-
 #===================================
 #bithday check
     $b_day = $_POST['b_day'];
@@ -488,14 +454,11 @@ if(isset($_POST['Submit'])) {
         $errmsg34 = "<span style=color:red>กรุณากรอกปีการศึกษาด้วยค่ะ</span>";
     }
 #================================= 
-    //$job=$_POST['job'];
     $job = $_POST['job'];
 
 #================================= 
 #=================================
-    if (!$errmsg3 && !$errmsg5 && !$errmsg10 && !$errmsg11 && !$errmsg12 && !$errmsg13 &&/* !$errmsg15 && !$errmsg16 &&
-	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 &&*/!$errmsg22 /*&& !$errmsg23 && !$errmsg24 &&
-	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */ && !$errmsg30)
+    if (!$errmsg3 && !$errmsg5 && !$errmsg10 && !$errmsg11 && !$errmsg12 && !$errmsg13 && !$errmsg22 && !$errmsg30)
     {
 
 
@@ -512,9 +475,6 @@ if(isset($_POST['Submit'])) {
 
     }
 }
-//ob_end_clean();
-
-
 
 ?>  
 

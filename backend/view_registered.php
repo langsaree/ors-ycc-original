@@ -1,5 +1,4 @@
 <?php
-//session_start();
 include('../config/db.php');
 include('auth.php');
 extract ($_GET);
@@ -121,9 +120,6 @@ include('../config/db.php');
 		$cos=$ro["cos_id"];
 		$std=$ro["std_id"];
 		$lec=$ro["lec_id"];
-		//echo $std;
-		//echo $cos;
-		//echo $lec;
 		//////////////third////////////////
    $sql1 ="select * from course where cos_id='$cos' ";
    $result = mysqli_query($connection, $sql1);
@@ -136,8 +132,6 @@ include('../config/db.php');
 	$cos_day = $row["cos_day"];
 	$lec_id = $row["lec_id"];
 	$cos_comment = $row["cos_comment"];
-//	echo $cos_id;
-	//echo $cos_name;
   ///////////////////////second///////////////////////
 	$sql = "select * from student where std_id='$std'";
 	$re = mysqli_query($connection,$sql);
@@ -152,7 +146,6 @@ include('../config/db.php');
 	while ($row1= mysqli_fetch_array($a))
 	{
 	$lec_name= $row1['lec_name'];
-	//echo $lec_name;
 	?>
       <tr>
         <td width="129" bgcolor="#FFFFE8"><?php echo $std?></td>
@@ -174,11 +167,7 @@ include('../config/db.php');
         <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $cos_id;?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
         <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $cos_id; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
-       <?php } ////// close first while //////////////////////////////////////////////
-		} //////// close of second while ////////////////////
-		} /////// close 3rd while ///////////////////////
-		}
-		?>
+       <?php } } } } ?>
   </table>
       <p class="style44">&nbsp;</p>
     <p class="style44">&nbsp;</p>

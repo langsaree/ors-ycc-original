@@ -133,7 +133,6 @@ include('../config/db.php');
               </tr>
               <?php 
 			include('../config/db.php');
-	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
             $result=mysqli_query($connection, $sql);
             while ($row=mysqli_fetch_array($result)){
