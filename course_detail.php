@@ -2,10 +2,9 @@
 session_start();
 include('db.php');
 extract ($_GET);
-$cos_id=$id;
-if(!session_is_registered('username'));
-	
-   {  
+$cos_id=$_GET['id'];
+if(!$_SESSION('username')){
+
      $username = "";
      $password = "";
      if(!isset($_SESSION['logined'])) {
@@ -24,23 +23,24 @@ if(!session_is_registered('username'));
                    $count=mysqli_num_rows($result);
                   if($count==1)
                       {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
+					  $_SESSION['logined'] = true;
+					  $_SESSION['username'] = $_REQUEST['username'];
+					  $_SESSION['password'] = $_REQUEST['password'];
+					  // session_register("username");
+       //                session_register("password");
 					  //$_SESSION['username'] = $value["username"];
                       //$_SESSION['password'] = $value["password"];
-					  //header("location:std_profile.php");
+					  header("location:std_profile.php");
 					  }
 				   else
 				   {
 				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
 				   }
 				  }
-			  	}  
+        }
+      }
+			  
    
-}
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +97,7 @@ if(!session_is_registered('username'));
             </table>
 
 	<?php echo $message ?>		
-	<?php {echo	'<form action="" method="post">
+	<?php echo	'<form action="" method="post">
 		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
               <tr>
                 <td></td>
@@ -154,9 +154,8 @@ if(!session_is_registered('username'));
                 </table>
 				';
         
-		}
-		else
-		{
+		} else {
+
 		echo '
 		<!DOCTYPE html>
 <html>
@@ -239,7 +238,7 @@ if(!session_is_registered('username'));
             <p>
   <?php
 $sql_view = "select * from course where cos_id='$cos_id' ";
-$result_view = mysqli_query($conn_view,$sql_view);
+$result_view = mysqli_query($conn ,$sql_view);
 while($row=mysqli_fetch_array($result_view))
 {
 ?>

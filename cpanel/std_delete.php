@@ -69,7 +69,7 @@ echo " ชื่อผู้ใช้ ได้ถูกลบออกจาก
 $result = mysqli_query($conn,"delete from student where std_id = $std_id");
 	if(!$result)
 	{
-	die("could not query db".mysqli_error());
+	die("could not query db".mysqli_error($conn));
 	}
 ?>
 </div></td>

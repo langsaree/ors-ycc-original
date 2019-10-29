@@ -67,9 +67,9 @@ body {
 	while($ro = mysqli_fetch_row($re))
 	{
 	?>
-        <tr>
+          <tr>
             <td width="173"><span class="style46">รหัสวิชา :</span></td>
-            <td width="144"><input type="text" name="name" /></td>
+            <td width="144"><input type="text" name="name"  /></td>
           </tr>
           <tr>
             <td><span class="style46">ชื่อวิชา :</span></td>
@@ -95,18 +95,6 @@ body {
             <td><span class="style46">หมายเหตุ :</span></td>
             <td><input type="text" name="postcode" /></td>
           </tr>
-       
-       
-
-
-
-
-
-
-
-
-
-
           <?php } ?>
         </table>
         <p>
