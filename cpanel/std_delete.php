@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="3 url='std_view.php'" />
+<!-- <meta http-equiv="refresh" content="3 url='std_view.php'" /> -->
 <title>ลบข้อมูลนักศึกษา</title>
 <style type="text/css">
 <!--
@@ -36,7 +36,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1260" height="45" /></td>
     </tr>
   </table>
 <table width="1260" height="250" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -58,16 +58,18 @@ body {
     <table width="500" height="34" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
           <td width="65" height="32" valign="middle"><div align="center" class="style40"> 
-           <?
-		   include('db.php');
+           <?php
+		   include('../db.php');
 			extract ($_GET);
-//mysql_query ("SET NAMES 'utf8'");
-$std_id=$id;  echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!!<p>Data was deleted out from system</p>";
-echo $std_id;
-$result = mysql_query("delete from student where std_id = $std_id");
+mysqli_query ($conn, "SET NAMES 'utf8'");
+$std_id=$_GET["id"];  
+// var_dump($std_id);
+echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!! <p>Data was deleted out from system</p>";
+// echo $std_id;
+$result = mysqli_query($conn,"delete from student where std_id = $std_id");
 	if(!$result)
 	{
-	die("could not query db".mysql_error());
+	die("could not query db".mysqli_error());
 	}
 ?>
 </div></td>

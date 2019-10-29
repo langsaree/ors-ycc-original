@@ -8,3 +8,4 @@
 session_start();
 
 echo $_SESSION['std_id'];
+?>

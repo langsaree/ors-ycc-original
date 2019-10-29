@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include ('../db.php');
 $cos_id = $_POST['cos_id'];
 $cos_name = $_POST['cos_name'];
 $cos_period = $_POST['cos_period'];
@@ -10,13 +10,13 @@ $date = $cos_day." - ". $cos_after ." / ". $cos_time;
 echo $date;
 $cos_lec =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
-mysql_query ("SET NAMES 'utf8'");
+mysqli_query ($conn,"SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
 $sql1 ="insert into register(cos_id)value('$cos_id')";
-$result = mysql_query($sql,$sql1);
+$result = mysqli_query($conn,$sql,$sql1);
 
 if (!$result) 	
-{ die("Error db".mysql_error()); }
+{ die("Error db".mysqli_error()); }
 else
 {
 ?>
@@ -57,6 +57,6 @@ body {
     <tr>
       <td valign="baseline"><img src="image/footer.jpg" width="1260" height="76" /></td>
     </tr>
-  </table> <? } ?>
+  </table> <?php } ?>
 </body>
 </html>

@@ -36,7 +36,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -56,12 +56,14 @@ body {
       <div align="center">
         <p class="style1">Course Information </p>
         <table width="333" height="278" border="1">
-          <?
+          <?php 
 	include('db_connect.php');
+  if (isset($_GET["db_table2"])) {
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
-	while($shows = mysql_fetch_row($show))
-	{
+	$show = mysqli_query($conn,$sql);
+	while($shows = mysqli_fetch_row($show)){
+  }
+	};
 	?>
           <tr>
             <td width="173"><span class="style46">รหัสวิชา :</span></td>

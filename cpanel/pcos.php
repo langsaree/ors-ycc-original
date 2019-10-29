@@ -24,7 +24,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/controlPanel.jpg" width="1261" height="112" /></td>
+      <td><img src="../image/controlPanel.jpg" width="1261" height="112" /></td>
     </tr>
 </table>
 <form id="form1" name="form1" method="post" action="pcos.php">
@@ -83,15 +83,15 @@ body {
      <td bgcolor="#666633"><div align="center" class="style4">Update</div></td>
      <td bgcolor="#666633"><div align="center"><span class="style4">Delete</span></div></td>
    </tr>
- <?
+ <?php
    include('../db.php');
    //mysql_query ("SET NAMES 'utf8'");
    $sql = "select * from course";
-   $result = mysql_query($sql);
+   $result = mysqli_query($conn,$sql);
    if (!$result)
-   {die ("can not connect db".mysql_error());
+   {die ("can not connect db".mysqli_error());
    }
-   while ($result_row = mysql_fetch_row($result))
+   while ($result_row = mysqli_fetch_row($result))
    { ?>
    <tr>
      <td></td>
@@ -102,15 +102,15 @@ body {
      <td>&nbsp;</td>
      <td>&nbsp;</td>
      <td><div align="center">
-       <? echo $result_row[0]; ?></div></td>
-     <td><div align="center"><? echo $result_row[1]; ?></div></td>
-     <td><div align="center"><? echo $result_row[2]; ?></div></td>
-     <td><div align="center"><? echo $result_row[3]; ?></div></td>
-     <td><div align="center"><? echo $result_row[4]; ?></div></td>
-     <td><div align="center"><? echo $result_row[5]; ?></div></td>
+       <?php echo $result_row[0]; ?></div></td>
+     <td><div align="center"><?php echo $result_row[1]; ?></div></td>
+     <td><div align="center"><?php echo $result_row[2]; ?></div></td>
+     <td><div align="center"><?php echo $result_row[3]; ?></div></td>
+     <td><div align="center"><?php echo $result_row[4]; ?></div></td>
+     <td><div align="center"><?php echo $result_row[5]; ?></div></td>
      <td><div align="center"><a href="../cos_update.php">แก้ไข</a></div></td>
-     <td><div align="center"><a href="../cos_del.php?id= <? echo $result_row[0]; ?>">ลบ</a></div></td>
-   </tr><? } ?>
+     <td><div align="center"><a href="../cos_del.php?id= <?php echo $result_row[0]; ?>">ลบ</a></div></td>
+   </tr><?php } ?>
  </table>
  <p>&nbsp;</p>
  <p>&nbsp;</p>

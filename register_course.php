@@ -514,7 +514,7 @@ if(isset($_POST['ok'])) {
      {
        $query = "insert into student(username,password,f_name,name,s_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) value(
 '$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
-       $do = mysql_query($query);
+       $do = mysqli_query($query);
        if ($do)
          {
        echo "<script>location='index.php';</script>";

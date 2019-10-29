@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -46,7 +46,7 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../f_project/images/header-bg.png" width="1260" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1260" height="45" /></td>
   </tr>
 </table>
   <table width="1260" height="363" border="0" align="left" cellpadding="0" cellspacing="0">

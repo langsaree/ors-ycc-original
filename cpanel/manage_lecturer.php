@@ -72,7 +72,7 @@ body {
               <td width="134"><div align="center"><a href="lec_view.php"><img src="image/view lecture.png" width="90" height="90" border="0" /></a></div></td>
             </tr>
             <tr>
-              <td height="19"><div align="center" class="style1"><span class="style40"><a href="lec_add.php" style="text-decoration:none">เพิ่มอาจารย์ผู้สอน</a></span></div></td>
+              <td><div align="center"><span class="style1"><span class="style40"><a href="lec_add.php" style="text-decoration:none">เพิ่มอาจารย์ผู้สอน</a></span></span></div></td>
               <td class="style40"><div align="center"><a href="lec_search.php" style="text-decoration:none">ค้นหาอาจารย์ผู้สอน</a></div></td>
               <td><div align="center"><span class="style1"><span class="style40"><a href="lec_view.php" style="text-decoration:none">แสดงอาจารย์ผู้สอน</a></span></span></div></td>
             </tr>

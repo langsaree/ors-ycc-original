@@ -1,15 +1,16 @@
-<?
-//session_start();
+<?php
+session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
-$todo=$_POST['todo'];
-if(isset($todo) and $todo=="search"){
+include "../db.php";
+$todo= isset($_GET['todo'])? $_GET['todo'] : '';
+if(isset($_GET["todo"])){
 $search_text=$_POST['search_text'];
 $type=$_POST['type'];
 
 $search_text=ltrim($search_text);
 $search_text=rtrim($search_text);
+}
 ?>
 
 
@@ -60,7 +61,7 @@ body {
 
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="527" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -115,11 +116,12 @@ body {
               <td width="226"><span class="style51">หมายเหตุ</span></td>
               <td width="226"><div align="center" class="style51">ดูข้อมูลอาจารยผู้สอน</div></td>
               
-  <?
+  <?php
 // check for blank input
+  $search_text= isset($_GET['search_text'])? $_GET['search_text'] : '';
 if($search_text==""){$search_text="blank";}
 // end of check
-
+$type = isset($_GET['type'])? $GET['type'] : '';
 if($type<>"any"){
 //$query="select * from $m where s_id='$search_text'";
 $query="select * from lecture where lec_id='$search_text'";
@@ -131,29 +133,33 @@ if($val<>" " and strlen($val) > 0){$q .= " lec_id like '%$val%' or ";}
 			}// end of while
 $q=substr($q,0,(strLen($q)-3));
 // this will remove the last or from the string. 
-$query="select * from lecture where $q order by lec_id limit 0, 20"; // start search query list as limit result at 10 result at a time
-		} // end of if else based on type value
+$query= $conn, "select * from lecture where $q order by lec_id limit 0 , 20" ; // start search query list as limit result at 10 result at a time
+	} 	 // end of if else based on type value
 //echo $query;
-
+  
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt)){
+mysqli_query($conn,"SET NAMES utf-8"); //		for thai input	
+$nt=mysqli_query($conn,$query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($nt)){
 ?>          
             </tr>
             <tr>
-              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_id]; ?></td>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row[lec_name]; ?></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_id']; ?></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?PHP echo $row['lec_name']; ?></td>
       <td></td>
       <td></td>
       <td>      </td>
-      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row[lec_id]; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
+      <td><div align="center"><a href="lec_view.php?id=<?PHP echo $row['lec_id']; ?>"><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" />
         
       </a></div></td>
-            <?
+            <?php
 	}
+
+
+{
 	}
+
 	?>
                 </table>
       </div></td>

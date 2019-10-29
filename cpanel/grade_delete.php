@@ -1,3 +1,29 @@
+  <?php
+  include('../db.php');
+  ///////////////////////////////////////
+   $sql1 ="select * from course ";
+   $result = mysqli_query($conn,$sql1);
+   while ($row= mysqli_fetch_array($result));
+  {
+  $cos_id= $row["cos_id"];
+  $cos_group=$row["cos_group"];
+  $cos_name = $row["cos_name"];
+  $cos_period = $row["cos_period"]; 
+  $cos_day = $row["cos_day"];
+  $lec_id = $row["lec_id"];
+  $cos_comment = $row["cos_comment"];
+//  echo $cos_id;
+  //echo $cos_name;
+    $sql2 = "select * from lecture where lec_id = '$lec_id' ";
+    $a =mysqli_query ($conn,$sql2);
+  while ($row1= mysqli_fetch_array($a))
+  {
+  $lec_name= $row1["lec_name"];
+  //echo $lec_name;
+}
+}
+   ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -36,7 +62,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../image/header-bg.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="879" border="0" align="left" cellpadding="0" cellspacing="0">
