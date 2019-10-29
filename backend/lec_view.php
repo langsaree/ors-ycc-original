@@ -77,7 +77,8 @@ body {
          <tr>
            <td height="422" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="2">
              <tr bgcolor="#CCCCCC" class="style38">
-               <td width="74" height="40"><div align="center"><strong>รหัส</strong></div></td>
+               <td width="74" height="40"><div align="center"><strong>ลำดับ</strong></div></td>
+               <td width="170" height="50"><div align="center"><strong>รหัสอาจารย์ผู้สอน</strong></div></td>
                <td width="217"><div align="center"><strong>ชื่อ-นามสกุล</strong></div></td>
                <td width="211"><div align="center"><strong>เบอร์โทรติดต่อ</strong></div></td>
                <td width="214"><div align="center"><strong>อีเมล์</strong></div></td>
@@ -89,14 +90,15 @@ body {
              <tr>
                <?php 
 include('../config/db.php');
-#$sql = "select* from lecturer where lec_id='$lec_id";
+#$sql = "select* from lecturer where lec_Teach_id='$lec_Teach_id";
 $sql = "select* from lecture";
 $result = mysqli_query($connection, $sql);
-#while($result_row = mysql_fetch_row($result))  
+
 while($row=mysqli_fetch_array($result))
 {
 ?>
                <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_id']; ?></td>
+               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_Teach_id']; ?></td>
                <td align="left">&nbsp;&nbsp;<?php echo $row['lec_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<?php echo $row['lec_tel']; ?></td>
                <td>&nbsp;&nbsp;<?php echo $row['lec_email']; ?></td>
