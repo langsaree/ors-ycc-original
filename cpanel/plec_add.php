@@ -1,28 +1,29 @@
-<?
+<?php
 include ('db.php');
 $lec_id= $_POST['lec_id'];
+$lec_teach= $_POST['lec_teach'];
 $lec_name= $_POST['lec_name'];
-//$m_address= $_POST['address'];
+
 $lec_tel= $_POST['lec_tel'];
 $lec_email= $_POST['lec_email'];
 $lec_comment= $_POST['lec_comment'];
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-$sql = "insert into lecture (lec_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
+$sql = "insert into lecture (lec_id,lec_teach, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_teach','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
 
-$result=mysql_query($sql);
+$result=mysqli_query($connection,$sql);
 
 if  (!$result)
 	{
-		die("could not query db ".mysql_error());
+		die("could not query db ".mysqli_error());
 		$error='<span style="color:red">กรุณากรอบข้อมูลให้ถูกต้อง</span>';
 		include('lec_add.php');
 	}
 	else
 	{
 		$success= '<span style="color:green">ระบบได้เพิ่มข้อมูลอาจรย์ผู้สอนแล้ว</span>';
-		include ('manage_lecturer.php');
+		include ('lec_view.php');
 	}
 
 ?>
