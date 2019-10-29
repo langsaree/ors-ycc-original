@@ -1,12 +1,12 @@
 <?php
-include ('../db.php');
+include ('db.php');
 session_start();
 //>--code insert using for process add data
-
 ?>
 <?php
 
 $errmsg= "";$errmsg1 = "";$errmsg2 = "";$errmsg3 = "";$errmsg4 = "";$errmsg5 = "";$errmsg6 = "";$errmsg7 = "";$errmsg8 = "";
+
 if(isset($_POST['ok'])); {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
@@ -87,7 +87,7 @@ body {
 	font-family: Verdana, Geneva, sans-serif;
 	color: #666666;
 	text-decoration:none;
-
+}
 .style36 {
   color: #FF6600
 }
@@ -133,17 +133,17 @@ body {
       <td bgcolor="#FFFFFF"><table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td bgcolor="#FFFFFF"><table width="652" height="286" border="0" cellpadding="0" cellspacing="0">
-            <?php if($errmsg1) {?>
+            <?php if($errmsg1){?>
             <tr>
               <td height="26">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php echo $errmsg1?></td>
+              <td><?php echo  $errmsg1?></td>
             </tr>
             <?php } ?>
             <tr>
               <td width="227" height="26"><div align="right">รหัสวิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1){ echo "#EEFCE2"; ?>" value="<?php $cos_id ?>" /></td>
+              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1) echo "#EEFCE2"; ?>" value="<?php $cos_id ?>" /></td>
             </tr>
             <?php if($errmsg2) {?>
             <tr>
