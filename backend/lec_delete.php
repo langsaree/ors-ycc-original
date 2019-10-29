@@ -1,6 +1,6 @@
 <title>delete process</title>
 <?php
-include ('../db.php');
+include ('../config/db.php');
 extract($_GET);
 $id= $id;
 $sql = "delete from lecturer where lec_id='$id'";
@@ -10,7 +10,7 @@ $result=mysqli_query($connection, $sql);
 
 if (!$result)
   {
-  die('Error: ' . mysqli_error());
+  die('Error: ' . mysqlii_error($connection));
   }
   else
 	$success= '<span style="color:red"> ระบบได้ลบข้อมูลอาจารยเรียบร้อยแล้วค่ะ </span>';

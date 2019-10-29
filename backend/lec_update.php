@@ -80,7 +80,7 @@ body {
             </tr>
           <tr>
 <?php
-include ('../db.php');
+include ('../config/db.php');
 $sql = "select * from lecture where lec_id='$lec_id'";
 $result = mysqli_query($connection, $sql);
 while($result_row = mysqli_fetch_array($result))
