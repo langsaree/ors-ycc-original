@@ -90,14 +90,20 @@ a:active {
               </tr>
               <tr>
                 <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; font-size:13px"> '.$username.'</span>'; ?></td>
+                <tr>
+                <td><?php echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>'; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo '<span class="style7"><a href="std_view_lecturer.php">อาจารย์ผู้สอน</a></span><br>'; ?></td>
+              </tr>
+              <tr>
+              <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
+              </tr>
               </tr>
               <tr>
                 <td>&nbsp;</td>
               </tr>
             </table>
-        
-            
-           
             <br>
             <br>
           </div>
@@ -141,7 +147,6 @@ while($row=mysqli_fetch_array($result))
  
                          width="435" height="30" valign="middle">&nbsp;</td>
              <td width="99" valign="middle" class="style33"><strong><a href="profile_update.php?id=<?php echo $row["std_id"];?>" class="style67"  style="text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></strong></td>
-             <td style="text-align:center"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
            </tr>
            <tr>
              <td height="16" colspan="3" valign="middle"><span class="style56">----------------------------------------------------------------------------------------</span></td>
