@@ -269,7 +269,7 @@ $user_admin = $_SESSION["user_admin"];
       <tr>
         <td><table width="165" border="0" cellspacing="0" cellpadding="0">
           <tr bgcolor="<?php $bgcolor ?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
-            <td height="21" colspan="3"><a href="manage_admin.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ผู้ดูแลระบบ</a></td>
+            <td height="21" colspan="3"><a href="#" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ผู้ดูแลระบบ</a></td>
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
@@ -278,12 +278,12 @@ $user_admin = $_SESSION["user_admin"];
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="##" class="right_side_bar_list">Edit</a></td>
+            <td><a href="http://localhost/phpmyadmin/sql.php?server=1&db=ors_ycc&table=admin&pos=0" class="right_side_bar_list">Edit</a></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="##" class="right_side_bar_list" >Delete</a></td>
+            <td><a href="http://localhost/phpmyadmin/sql.php?server=1&db=ors_ycc&table=admin&pos=0" class="right_side_bar_list" >Delete</a></td>
             <td>&nbsp;</td>
           </tr>
         </table></td>
