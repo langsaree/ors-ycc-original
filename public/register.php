@@ -41,18 +41,6 @@
         </div>
         </div><div class="Columns"><div class="Column1">
           <div class="Block">
-            
-            <span class="BlockHeader"><span>Online Register</span></span>
-            <table width="150" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
-                  </tr>
-                </table>
-            	<br>
           </div>
           <div class="Block">
 
