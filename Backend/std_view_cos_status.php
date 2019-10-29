@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student course status</title>
 <style type="text/css">
-<!--
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -29,7 +28,6 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
-
 </style>
 </head>
 
@@ -37,7 +35,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="669" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -56,7 +54,7 @@ body {
     <td height="492" valign="top"><p>&nbsp;</p>
       <table width="25%" border="0" align="center" cellpadding="0" cellspacing="5">
 
-      <?php if($error[0]) { ?>
+        <?php if($error[0]) { ?>
         <tr>
           <td width="36%" align="right"><span class="style40">รหัสวิชา :</span> </td>
           <td width="64%" class="red"><label>
