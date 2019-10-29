@@ -2,7 +2,7 @@
 session_start();
 //if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
 //ob_start(); 
-include("../db.php");
+include("../config//db.php");
 
 $username= "";
 $password= "";
