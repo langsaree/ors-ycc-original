@@ -96,11 +96,18 @@ body {
           <tr>
           <td colspan="2" align="center" class="style44">-----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
           </tr>
+          <tr>
+          <td width="32%" align="right"><span class="style40"><span class="style49"></span>ลำดับ :</span> </td>
+          <td width="68%" class="red"><label>
+            <span class="style50">
+            <input name="lec_id" type="text" size="20" id="lec_id" />
+            *            </span></label></td>
+        </tr>
         <tr>
           <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์ห</span>ผู้สอน :</span> </td>
           <td width="68%" class="red"><label>
             <span class="style50">
-            <input name="lec_id" type="text" size="20" id="lec_id" />
+            <input name="lec_Teach_id" type="text" size="20" id="lec_Teach_id" />
             *            </span></label></td>
         </tr>
    
