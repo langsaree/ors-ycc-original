@@ -1,14 +1,11 @@
 <?php
-session_start();
 include('../db.php');
 include('auth.php');
 extract ($_GET);
-$user_admin = $_SESSION['user_admin'];
-$active = isset($_GET['active']) ? $_GET['active'] : "";
-$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
+$user_admin = $_SESSION["user_admin"];
 $msg = "";
 if(!empty($active)) {
-	$sql = "UPDATE register SET status='1' WHERE cos_id='$active' ";
+	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
 	$result = mysqli_query($conn,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
@@ -20,7 +17,7 @@ if(!empty($active)) {
 	else
 	{
 		if(!empty($non_active)){
-			$sql = "UPDATE register SET status='0' WHERE std_id='$non_active' ";
+			$sql = "UPDATE course SET status='0' WHERE std_id='$non_active' ";
 			$result = mysqli_query($conn,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
@@ -78,7 +75,7 @@ body {
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+    <td><img src="../publi/images/header-bg.png" width="1260" height="45" /></td>
   </tr>
   
   <tr>
@@ -113,7 +110,6 @@ body {
       </tr>
       
     <?php
-  include('../db.php');
   ////////first///////////////
   	$reg = "select * from register ORDER BY std_id DESC ";
 	$r = mysqli_query($conn,$reg);
@@ -121,9 +117,6 @@ body {
 		$cos=$ro["cos_id"];
 		$std=$ro["std_id"];
 		$lec=$ro["lec_id"];
-		//echo $std;
-		//echo $cos;
-		//echo $lec;
 		//////////////third////////////////
    $sql1 ="select * from course where cos_id='$cos' ";
    $result = mysqli_query($conn,$sql1);
@@ -135,8 +128,6 @@ body {
 	$cos_day = $row['cos_day'];
 	$lec_id = $row['lec_id'];
 	$cos_comment = $row['cos_comment'];
-//	echo $cos_id;
-	//echo $cos_name;
   ///////////////////////second///////////////////////
 	$sql = "select * from student where std_id='$std'";
 	$re = mysqli_query($conn,$sql);
@@ -150,7 +141,6 @@ body {
 	  $a =mysqli_query ($conn,$sql2);
 	while ($row1= mysqli_fetch_array($a)){
 	$lec_name= $row1['lec_name'];
-	//echo $lec_name;
 	?>
       <tr>
         <td width="129" bgcolor="#FFFFE8"><?php echo $std?></td>
@@ -169,8 +159,8 @@ body {
 		   }
 	    ?>
         </td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $ro[std_id];?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
-        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $ro[std_id]; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?active=<?php echo $std_id;?>"><img src="image/active.gif" width="20" height="18" border="0" /></a></td>
+        <td align="center" bgcolor="#FFFFE8"><a href="view_registered.php?non_active=<?php echo $std_id; ?>"><img src="image/non-active.jpg" width="16" height="17" border="0" /></a></td>
       </tr>
        <?php } ////// close first while //////////////////////////////////////////////
 		} //////// close of second while ////////////////////
