@@ -7,7 +7,6 @@ include('include/login.php');
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <title>ระบบลงทะเบียนออนไลน์</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
@@ -69,12 +68,12 @@ while($row = mysqli_fetch_array($result_view))
              
               <tr>
                 <td style="color: #333">&nbsp;</td>
-                <td> <a href="course_down.php?id=<?php echo $row['cos_id']; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
+                <td> <a href="course_down.php?id=<?php echo $row["cos_id"]; ?>" style="color: #333; text-decoration: none">ดาวน์โหลดผังการเรียน </a> </td>
                 <td width="112"></td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td><a href="course_detail.php?id=<?php echo $row['cos_id']; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
+                <td><a href="course_detail.php?id=<?php echo $row["cos_id"]; ?>" style="color: #333; text-decoration: none"">ดูรายละเอียด</a></td>
                 <td height="16">&nbsp;</td>
               </tr>
            </table>
