@@ -2,7 +2,7 @@
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "../db.php";
+include "../maintain/db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];

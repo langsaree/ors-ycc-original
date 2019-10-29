@@ -29,7 +29,7 @@ body {
 	font-size: 24px;
 }
 .style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 
@@ -58,10 +58,10 @@ body {
         <p class="style1">Student Information </p>
         <table width="333" height="278" border="1">
           <?
-	include('db.php');
+	include('../maintain/db.php');
 	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysql_query($sql);
-	while($ro = mysql_fetch_row($re))
+	$re = mysqli_query($connection,$sql);
+	while($ro = mysqli_fetch_row($re))
 	{
 	?>
           <tr>

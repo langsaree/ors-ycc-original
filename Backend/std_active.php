@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('../db.php');
+include ('../maintain/db.php');
 //include('auth.php');
 extract ($_GET);
 $active = isset($_GET['active']) ? $_GET['active'] : "";
@@ -127,11 +127,11 @@ border-color:#8A9AA6;
           <td width="8%"><div align="center" class="style46">Active</div></td>
           <td width="7%"><div align="center" class="style25">Non-Active</div></td>
           </tr> 
-                       <?php
+          <?php 
   $sql = "select * from student order by status DESC";
   $result = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_array($result)){
-		$n = $n['f_name'] . $row['name'];
+		$n = $row['f_name'] . $row['name'];
 		?>  
 
         <tr>

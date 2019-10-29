@@ -1,7 +1,7 @@
 <?php
 session_start();
 //include ('auth.php');
-include ('../db.php');
+include ('../maintain/db.php');
 extract($_GET);
 $id=$_GET['id'];
 ?>

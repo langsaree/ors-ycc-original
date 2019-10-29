@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include ('../db.php');
+include ('../maintain/db.php');
 ?>
 <!DOCTYPE html>
 <html>

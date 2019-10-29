@@ -59,7 +59,7 @@ body {
         <tr>
           <td width="65" height="32" valign="middle"><div align="center" class="style40"> 
            <?php
-		   include ('../db.php');
+		   include ('../maintain/db.php');
 			extract ($_GET);
 mysqli_query ($connection,"SET NAMES 'utf8'");
 $std_id=$id;  echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!!<p>Data was deleted out from system</p>";

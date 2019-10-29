@@ -88,7 +88,7 @@ body {
       </tr>
      <?php 
 		/////////////////////////take information from student table //////////////////////////
-	include ('../db.php');
+	include ('../maintain/db.php');
 	$sql1 = "select * from student ";
 	$v=mysqli_query ($connection,$sql1);
 	while ($row= mysqli_fetch_array($v))
