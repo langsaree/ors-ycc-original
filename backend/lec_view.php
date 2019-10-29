@@ -108,7 +108,7 @@ while($row=mysqli_fetch_array($result))
                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row['lec_tel']; ?></td>
                <td>&nbsp;&nbsp;<? echo $row['lec_email']; ?></td>
                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row['lec_comment']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-               <td><img src="image/view.png" alt="1" width="20" height="20" border="0" /></td>
+               <td><a href="lec_profile.php?id=<? echo $row['lec_id'];?>" ><img src="image/view.png" alt="1" width="20" height="20" border="0" /></td>
                <td><a href="lec_update.php?id=<? echo $row['lec_id'];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
                <td><a href="lec_delete.php?id=<? echo $row['lec_id'];?>" ><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></td>
              </tr>

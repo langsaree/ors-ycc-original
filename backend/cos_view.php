@@ -103,7 +103,7 @@ body {
         <td bgcolor="#F0F2F4"><div align="left"><? echo $lec_name; ?></div></td>
         <td><div align="left"><? echo $cos_comment; ?></div></td>
        	<td><div align="center"><a href="cos_update.php?id= <? echo $cos_id; ?> "><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></div></td>
-   	 	<td><div align="center"><a href="cos_del.php?id= <? echo $cos_id; ?> "><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></div></td>
+   	 	<td><div align="center"><a href="cos_delete.php?id= <? echo $cos_id; ?> "><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></div></td>
       </tr>
 	  <? }
 	 	 }
