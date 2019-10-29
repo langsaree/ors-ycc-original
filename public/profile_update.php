@@ -12,14 +12,11 @@ if(isset($_POST['ok'])){
    $email=$_POST['email'];
    $pswd = $_POST['pswd'];
    $cpswd = $_POST['cpswd'];
-   $fname=$_POST['fname'];
+   $f_name=$_POST['f_name'];
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
    $gender=$_POST['gender'];
-  //  $b_day=$_POST['b_day'];
-  //  $b_month=$_POST['b_month'];
-  //  $b_year=$_POST['b_year'];
-  //  $birthday=$b_day.'/'.$b_month.'/'.$b_year; 
+
    $birthday=$_POST['birthday'];
    
    $nation=$_POST['nation'];
@@ -28,14 +25,12 @@ if(isset($_POST['ok'])){
    
     $std_id=$_POST['std_id'];
     $home=$_POST['home'];
-    // $m_home=$_POST['m_home'];
-    // $r_home=$_POST['r_home'];
-    // $v_home=$_POST['v_home'];
+
     $city=$_POST['city'];
     $province=$_POST['province'];
     $postalcode=$_POST['postalcode'];
     $phone=$_POST['phone'];
-	// $address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
+
 	$address=$_POST['address'];
 	$edulevel=$_POST['edulevel'];
     $eduplace=$_POST['eduplace'];
@@ -52,11 +47,11 @@ if(isset($_POST['ok'])){
 		 }	
 		 else{	 
 	   die("Could not select db".mysqli_error());
-	  //  header("location:std_profile.php");
+
 	   }}
     
 ?>
-<!-- <script type="text/javascript">window.location="index.php";</script> -->
+
 
 <!DOCTYPE html>
 <html>
@@ -258,18 +253,19 @@ while( $row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
                     <td colspan="4"><label for="fname"></label>  
-                      <select name="fname" size="1" id="fname">
-					  <?php 
-                  $sql3="select * from mrmrs";
-			            $result3=mysqli_query($connection, $sql3);			 
-			            while($data3=mysqli_fetch_array($result3)){
-			 	          if($data3['id']==$data3[0]){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
+                    <select name="f_name" size="1" id="f_name">
+                      <option selected><?php echo $row['f_name'];?></option>
+                      <option>-- โปรดระบุ --</option>
+                      <option>นาย</option>
+                        <option>นาง</option>
+                        <option>นางสาว</option>
+                        <option>ด.ช.</option>
+                        <option>ด.ญ.</option>
+                        <option>Miss.</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        </select>
                       </select></td>
                   </tr>
                   <tr>
@@ -460,18 +456,16 @@ while( $row=mysqli_fetch_array($result))
                     <td>
                       <label for="select"></label>
                       <select name="job" id="job">
-                      <?php
-			 $sql3="select * from joblist";
-			 $result3=mysqli_query($connection, $sql3);			 
-			 while($data3=mysqli_fetch_array($result3)){
-			 	if($data3["job_id"]==$data3[0]){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
-                      </select></td>
+                      <option selected><?php echo $row["job"];?></option>
+    
+                        <option>-- โปรดระบุ --</option>
+                        <option>ไม่ได้ประกอบอาชีพ</option>
+                        <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                        <option>รับราชการ</option>
+                        <option>พนักงานรัฐวิสาหกิจ</option>
+                        <option>ค้าขาย</option>
+                        <option>รับจ้างทั่วไป </option>
+                      </select>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
