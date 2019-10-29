@@ -16,18 +16,11 @@ if(isset($_POST['Update'])){
     $origin=$_POST['origin'];
     $religion=$_POST['religion'];
     $gender=$_POST['gender'];
-    //$b_day=$_POST['b_day'];
-    //$b_month=$_POST['b_month'];
-    //$b_year=$_POST['b_year'];
-    //$birthday=$b_day.'/'.$b_month.'/'.$b_year;
+
     $birthday=$_POST['birthday'];
     $std_id=$_POST['std_id'];
 
-    //$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
     $address=$_POST['address'];
-    //$m_home=$_POST['m_home'];
-    //$r_home=$_POST['r_home'];
-    //$v_home=$_POST['v_home'];
     $city=$_POST['city'];
     $province=$_POST['province'];
     $postalcode=$_POST['postalcode'];
@@ -51,7 +44,7 @@ if(isset($_POST['Update'])){
     }
     else{
         die("Could not select db".mysqli_error($connection));
-        //header("location:std_profile.php");
+        
     }}
 
 
@@ -158,17 +151,18 @@ body {
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
                     <td colspan="4"><label for="f_name"></label>  
                       <select name="f_name" size="1" id="f_name">
-					  <?php 
-                  $sql3="select * from mrmrs";
-			            $result3=mysqli_query($connection, $sql3);			 
-			            while($data3=mysqli_fetch_array($result3)){
-			 	          if($data3['id']==$data3){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
+                      <option selected><?php echo $row['f_name'];?></option>
+                      <option>-- โปรดระบุ --</option>
+                      <option>นาย</option>
+                        <option>นาง</option>
+                        <option>นางสาว</option>
+                        <option>ด.ช.</option>
+                        <option>ด.ญ.</option>
+                        <option>Miss.</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        </select>
                 <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
@@ -319,25 +313,19 @@ body {
                     <td>
                       <label for="select"></label>
                       <select name="job" id="job">
-                      <?php
-			 $sql3="select * from joblist";
-			 $result3=mysqli_query($connection, $sql3);			 
-			 while($data3=mysqli_fetch_array($result3)){
-			 	if($data3["job_id"]==$data3){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
-
+                        <option selected><?php echo $row["job"];?></option>
+    
+                        <option>-- โปรดระบุ --</option>
+                        <option>ไม่ได้ประกอบอาชีพ</option>
+                        <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                        <option>รับราชการ</option>
+                        <option>พนักงานรัฐวิสาหกิจ</option>
+                        <option>ค้าขาย</option>
+                        <option>รับจ้างทั่วไป </option>
+                      </select>
                 <tr>
-
-
                 </tr>
                 <tr>
-
-
                 </tr>
                 <?php } ?>
             </table>
