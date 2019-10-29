@@ -86,13 +86,17 @@ $result = mysqli_query($connection, $sql);
 while($result_row = mysqli_fetch_array($result))
 {  
 ?>          
-          
-            <td width="406" height="26"><div align="right"><span class="style40">รหัส<span class="style49">อาจารย</span>์ผู้สอน :</span></div></td>
+
+         <td width="406" height="26"><div align="right"><span class="style40"><span class="style49">ลำดับ</span> :</span></div></td>
             <td width="632"><input name="lec_id" type="text" value="<?php echo $result_row['lec_id']; ?>" size="30" />
               <span class="style50">            *</span></td>
           </tr>
+            <td width="406" height="26"><div align="right"><span class="style40">รหัส<span class="style49">อาจารย์</span>ผู้สอน :</span></div></td>
+            <td width="632"><input name="lec_Teach_id" type="text" value="<?php echo $result_row['lec_Teach_id']; ?>" size="30" />
+              <span class="style50">            *</span></td>
+          </tr>
           <tr>
-            <td height="31"><div align="right"><span class="style40">ชื่อ<span class="style49">อาจารย</span>์ผู้สอน :</span></div></td>
+            <td height="31"><div align="right"><span class="style40">ชื่อ<span class="style49">อาจารย์</span>ผู้สอน :</span></div></td>
             <td><input name="lec_name" type="text" value="<?php echo $result_row['lec_name']; ?>" size="30" />
               <span class="style50">*</span></td>
           </tr>
