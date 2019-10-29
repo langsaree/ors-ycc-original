@@ -1,51 +1,27 @@
 <?php
 session_start();
-if(isset($_SESSION['user_admin'])) {header("location:cpanel.php");}
-//ob_start(); 
-include('../db.php');
-$username = "";
-$password = "";
+if(!isset($_SESSION['user_admin'])) {header("location:index.php");}
 
-    if(isset($_POST['username'])) {
-        $username =$_POST['username'];
-        $password = $_POST['password'];
-       
-            $sql = "select * from admin where username='$username' and password='$password'";
-            $result=mysqli_query($connection,$sql);
-            $count=mysqli_num_rows($result);
-            if($count==1/*&&strcmp($code,$code_hidden)==0*/)
-            {
-               $user_admin = $username;
-               $pass_admin = $password;
-                $_SESSION['username'] = $_POST['username'];
-                $_SESSION['password'] = $_POST['password'];
-                //session_register("username");
-                //session_register("password");
-                //$_SESSION['username'] = $value["username"];
-                //$_SESSION['password'] = $value["password"];
-                header("location:cpanel.php");
-            }
-            else
-            {
-                $error = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-            }
-        }
-   
-
-//$code=$_POST['code'];
-//$code_hidden=$_POST['code_hidden'];
-
-#To protect MySQL injection (more detail about MySQL injection) 
-//$username = stripslashes($username);      
-//$password = stripslashes($password);
-//$username = mysql_real_escape_string($username);
-//$password = mysql_real_escape_string($password);
-//$code = stripslashes($code);
-//$code = mysql_real_escape_string($code);
-
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-//$result=mysql_query($sql);
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
+include('../config/db.php');
+  
+if(empty($username) && empty($password)){
+    
+}
+    
+ $username= isset($_POST['username']) ? $_POST['username'] : "";
+ $password= isset($_POST['password']) ? $_POST['password'] : "";
+$sql = "select * from admin where username='$username' and password='$password'";
+$result=mysqli_query($connection, $sql);
+$count=mysqli_num_rows($result);
+if($count==1)
+{
+$_SESSION["user_admin"] = $username;
+header("location:cpanel.php");
+}
+else
+ {
+    $message = '<span style="color:red">ชื่่อเข้าระบบและรหัสผ่านผิดค่ะ กรุณาลองใหม่</span>';
+ }
 
 ?>
 
