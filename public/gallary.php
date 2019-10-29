@@ -6,19 +6,29 @@ include('include/login.php');
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>ภาพกิจกรรม</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/galleria.js"></script>
     <style>
-        .content{color:#eee;font:14px/1.4 "helvetica neue", arial,sans-serif;width:620px;margin:20px auto}
-        #galleria{height:400px;}
+        .content {
+            color: #eee;
+            font: 14px/1.4 "helvetica neue", arial, sans-serif;
+            width: 620px;
+            margin: 20px auto
+        }
+
+        #galleria {
+            height: 400px;
+        }
     </style>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
     <style type="text/css">
-        .style30 {color: #666666}
+        .style30 {
+            color: #666666
+        }
     </style>
-    </head>
+</head>
 
 <body>
 <div class="MainColumn">
@@ -47,25 +57,25 @@ include('include/login.php');
         <div class="ArticleL">
         </div>
 
-          <div class="Article">
+        <div class="Article">
             <p align="center">
-                <div class="content">
-                    <h1 class="style30">ภาพกิจกรรม</h1>
+            <div class="content">
+                <h1 class="style30">ภาพกิจกรรม</h1>
 
-                    <div id="galleria">
-                        <img src="gallary/pb058590.jpg" >
-                        <img src="gallary/imga4838.jpg">
-                        <img src="gallary/imga4900.jpg">
-                        <img src="gallary/pb0585791.jpg">
-                        <img src="gallary/imga4884.jpg">
-                    </div>
+                <div id="galleria">
+                    <img src="gallary/pb058590.jpg">
+                    <img src="gallary/imga4838.jpg">
+                    <img src="gallary/imga4900.jpg">
+                    <img src="gallary/pb0585791.jpg">
+                    <img src="gallary/imga4884.jpg">
                 </div>
+            </div>
 
             <script>
-            // Load the classic theme
-            Galleria.loadTheme('galleria.classic.js');
-            // Initialize Galleria
-            $('#galleria').galleria();
+                // Load the classic theme
+                Galleria.loadTheme('galleria.classic.js');
+                // Initialize Galleria
+                $('#galleria').galleria();
             </script>
 
         </div>

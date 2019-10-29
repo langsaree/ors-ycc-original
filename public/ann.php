@@ -6,10 +6,10 @@ include('include/login.php');
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>ประชาสัมพันธ์</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <style type="text/css"></style>
 </head>
 
@@ -45,17 +45,17 @@ include('include/login.php');
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-              </tr>
+            </tr>
             <p align="center">//</p>
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-              </tr>
+            </tr>
         </div>
     </div>
 </div>
 </div>
-<?php  include('include/footer.php');?>
+<?php include('include/footer.php'); ?>
 </body>
 </html>

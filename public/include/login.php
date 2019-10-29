@@ -50,8 +50,6 @@ if (isset($_POST['ok'])) {
         }
 
 
-
-
     } else if (empty($_POST['username']) && empty($_POST['password'])) {
         $message = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย";
     } else if (empty($_POST['username']) && !empty($_POST['password'])) {
