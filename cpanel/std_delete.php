@@ -5,7 +5,7 @@
 <meta http-equiv="refresh" content="3 url='std_view.php'" />
 <title>ลบข้อมูลนักศึกษา</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -30,7 +30,7 @@ body {
 }
 .style44 {color: #CCCCCC}
 .style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+
 </style>
 </head>
 <body>
@@ -58,16 +58,16 @@ body {
     <table width="500" height="34" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
           <td width="65" height="32" valign="middle"><div align="center" class="style40"> 
-           <?
+           <?php
 		   include('db.php');
 			extract ($_GET);
-//mysql_query ("SET NAMES 'utf8'");
+
 $std_id=$id;  echo " ชื่อผู้ใช้ ได้ถูกลบออกจากระบบเรียบร้อยแล้วค่ะ!!!<p>Data was deleted out from system</p>";
 echo $std_id;
-$result = mysql_query("delete from student where std_id = $std_id");
+$result = mysqli_query($connection,"delete from student where std_id = $std_id");
 	if(!$result)
 	{
-	die("could not query db".mysql_error());
+	die("could not query db".mysqli_error($connection));
 	}
 ?>
 </div></td>
