@@ -1,6 +1,6 @@
-<?
+<?php
 session_start();
-include('auth.php');
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -9,7 +9,7 @@ include('auth.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>เพิ่มอาจารย์ผู้สอน</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -52,7 +52,7 @@ body {
 .style49 {font-family: Georgia, "Times New Roman", Times, serif}
 .style50 {color: #FF0000}
 .style52 {color: #FF0000; font-weight: bold; }
--->
+
 </style>
 </head>
 
@@ -93,14 +93,22 @@ body {
           <tr>
           <td colspan="2" align="center" class="style44">-----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
           </tr>
-        <tr>
-          <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์ห</span>ผู้สอน :</span> </td>
+
+          <tr>
+          <td width="32%" align="right"><span class="style40"><span class="style49"></span>ลำดับ :</span> </td>
           <td width="68%" class="red"><label>
             <span class="style50">
             <input name="lec_id" type="text" size="20" id="lec_id" />
             *            </span></label></td>
         </tr>
-   
+
+        <tr>
+          <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์ห</span>ผู้สอน :</span> </td>
+          <td width="68%" class="red"><label>
+            <span class="style50">
+            <input name="lec_teach" type="text" size="20" id="lec_teach" />
+            *            </span></label></td>
+        </tr>
         <tr>
           <td width="32%" align="right" class="style40"><span class="style40">ชื่อ<span class="style49">อาจารย์</span>ผู้สอน :</span></td>
           <td width="68%"><label>
