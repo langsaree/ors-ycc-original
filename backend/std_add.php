@@ -325,14 +325,15 @@ if(isset($_POST['ok'])) {
 '$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear','$gender')";
 
         $do = mysqli_query($connection, $query);
-        if ($do == 0) {
+        if ($do) {
+            header("location:manage_student.php");
 
-            die (mysqli_error($connection));
+
             // $text="การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที " ;
             //echo "$text";
             //exit;
         } else {
-            header("location:manage_student.php");
+
 
         }
     }
@@ -449,28 +450,7 @@ if(isset($_POST['ok'])) {
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
               </tr>
-              <? if($errmsg11) { ?>
-              <? } ?>
-              <? if($errmsg12) { ?>
-              <? } ?>
-              <? if($errmsg13) { ?>
-              <? } ?>
-              <? if($errmsg15) { ?>
-              <? } ?>
-              <? if($errmsg16) { ?>
-              <? } ?>
-              <? if($errmsg17) { ?>
-              <? } ?>
-              <? if($errmsg18) { ?>
-              <? } ?>
-              <? if($errmsg19) { ?>
-              <? } ?>
-              <? if($errmsg20) { ?>
-              <? } ?>
-              <? if($errmsg21) { ?>
-              <? } ?>
-              <? if($errmsg22) { ?>
-              <? } ?>
+
               </table>
             </fieldset>
             <fieldset style="width:800px; height:400px; border-color:#9C3; color:#069;  border-style: dotted" >
