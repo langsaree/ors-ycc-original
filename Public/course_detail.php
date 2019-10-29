@@ -1,47 +1,12 @@
 <?php
 session_start();
-include ('db.php');
-extract ($_GET);
+include '../maintain/db.php';
 $cos_id=$_GET['id'];
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
+{
+  include '../maintain/login_check.php';
+    ?>
 
-	{
-     
-     $username = "";
-     $password = "";
-     if(!isset($_SESSION['logined'])) {
-      if(isset($_REQUEST['username'])) {
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้และรหัสผ่านของท่านด้วย</span>';
-			} else if(empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกชื่อผู้ใช้ของท่านด้วย</span>';
-			} else if(!empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
-				$message = '<span style="color:red">กรุณากรอกรหัสผ่านของท่านด้วย</span>';
-			} else {
-			       $sql = "select * from student where username='$username' and password='$password'";
-                   $result=mysql_query($sql);
-                   $count=mysql_num_rows($result);
-                  if($count==1)
-                      {
-					  //$_SESSION['logined'] = true;
-					  //$_SESSION['username'] = $_REQUEST['username'];
-					  //$_SESSION['password'] = $_REQUEST['password'];
-					  session_register("username");
-                      session_register("password");
-					  //$_SESSION['username'] = $value["username"];
-                      //$_SESSION['password'] = $value["password"];
-					  //header("location:std_profile.php");
-					  }
-				   else
-				   {
-				    $message = '<span style="color:red">ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย</span>';
-				   }
-				  }
-			  	}  
-   
-}
 ?>
 
 <!DOCTYPE html>
@@ -239,6 +204,7 @@ echo '<span class="style7"><a href="logout.php">ออกจากระบบ</
             <p>
   
  <?php
+ include '../maintain/db.php';
  $sql_view = "select * from course where cos_id='$cos_id' ";
  $result_view = mysqli_query($connection, $sql_view);
  while($row=mysqli_fetch_array($result_view))

@@ -2,7 +2,8 @@
 session_start();
 if (!isset($_SESSION["username"]))
 	{
-    include('login_check.php');
+    include '../maintain/db.php';
+    include ('login_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -156,11 +157,10 @@ if (!isset($_SESSION["username"]))
 
 
 ';
-		echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; 
-		echo '<span class="style26 "> '.$_SESSION['$username'].' </span><br>';
-		echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
-		echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
-		
+echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
+echo '<span class="style26 "> ' .$_SESSION["username"]. ' </span><br>';
+echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
+echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 		}
 ?>
             <br>

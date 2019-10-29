@@ -3,7 +3,7 @@ session_start();
 $username = $_SESSION['username'];
 include ('auth.php');
 //end of check session
-include ('db.php');
+include ('../maintain/db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -122,7 +122,7 @@ include ('db.php');
                 <td width="15">&nbsp;</td>
               </tr>
               <?php 
-			include ('db.php');
+			include ('../maintain/db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
       $sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";

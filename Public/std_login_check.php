@@ -1,6 +1,6 @@
 <?php
 ob_start(); 
-include ('db.php');
+include ('../maintain/db.php');
 // username and password sent from form
 $username=$_POST['username2'];
 $password=$_POST['password2'];

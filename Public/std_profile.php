@@ -128,7 +128,7 @@ a:active {
          </p>
        </div>
  <?php
-include ('db.php');
+include ('../maintain/db.php');
 $sql = "select * from student where username='$username' ";
 $result = mysqli_query($connection,$sql); 
 while($row=mysqli_fetch_array($result))

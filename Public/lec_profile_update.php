@@ -3,7 +3,7 @@ session_start();
 $username = $_SESSION['username'];
 include ('auth.php');
 //end of check session
-include ('db.php');
+include ('../maintain/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -225,6 +225,7 @@ input:focus, textarea:focus {
           </div>
         </div>
         </div>
-        <?php include('../config/footer.php');?>
+        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College
+            Design by : Bukhoree | Kholed | Ihsan </span></div>
 </body>
 </html>

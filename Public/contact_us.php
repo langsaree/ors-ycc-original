@@ -1,9 +1,10 @@
 <?php
 session_start();
-include 'db.php';
+include '../maintain/db.php';
+$username=$_GET['username'];
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 {
-  include 'login_check.php';
+  include '../miantain/login_check.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,6 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 <title>ติดต่อผู้ดูแลระบบ</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-
     </style>
 </head>
 <body>
@@ -117,11 +117,9 @@ if (isset($message)) {
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <title>ระบบลงทะเบียนออนไลน์</title>
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-
     </style>
 </head>
 <body>
@@ -129,7 +127,6 @@ if (isset($message)) {
 <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div>
       <div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div>
       <div class="Border">
-
         <div class="Menu">
             <ul>
               <li></li> 
@@ -154,8 +151,6 @@ if (isset($message)) {
             <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
              
             </table>
-
-
 ';
 echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
 echo '<span class="style26 "> ' .$_SESSION["username"]. ' </span><br>';
@@ -190,12 +185,9 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      $headers  = "MIME-Version: 1.0\r\n";
      $headers .= "Content-type: text/html; charset=utf-8\r\n";
      $headers .= "From:  ".$_POST['name']." <".$_POST['email'].">\r\n";
-
      $msgs .= " จากคุณ  ".$_POST['name'].'<br>';
      $msgs .= " โทร  ".$_POST['tel'].'<br>';
      $msgs .= "ข้อความ<br>".$_POST['msg'];
-
-
      $mailto = "langsaree@gmail.com"; # อีเมล์ผู้รับ
      if(mail($mailto, $_POST['subj'], $msgs, $headers)){
      echo "ส่งสำเร็จ";
@@ -234,24 +226,23 @@ $sql = "select * from student where username='$username' ";
 $result = mysqli_query($connection,$sql); 
 while($row=mysqli_fetch_array($result))
 {
-
 ?>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
-      <td><input type='text' name='name' value="<?php=$row[username];?>" /></td>
+      <td><input type='text' name='name' value="<?php echo $row['username'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
-      <td><input type='text' name='email' value="<?php=$row[email];?>" /></td>
+      <td><input type='text' name='email' value="<?php echo $row['email'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
-      <td><input type='text' name='tel' value="<?php=$row[phone];?>" /></td>
+      <td><input type='text' name='tel' value="<?php echo $row['phone'];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <?php } ?>

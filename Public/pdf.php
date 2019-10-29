@@ -2,7 +2,7 @@
 session_start();
 $username = $_SESSION['username'];
 if(!isset($_SESSION['username'])){header("location:index.php");}
-include('db.php');
+include ('../maintain/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
 $sql="select * from student where username='$username'";
@@ -207,10 +207,10 @@ $result1=mysqli_query($connection,$cos);
             </tr>
             <tr>
               <td height="61" valign="top"><?php ?></td>
-              <td valign="top">&nbsp;                <?php=$row1[cos_name];?></td>
-              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php=$row1[cos_time]?></td>
-              <td valign="top"><?php=$row1['cos_start']?></td>
-              <td valign="top"><?php=$row1['cos_comment']?></td>
+              <td valign="top">&nbsp;                <?php echo $row1['cos_name'];?></td>
+              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php echo $row1[cos_time]?></td>
+              <td valign="top"><?php echo $row1['cos_start']?></td>
+              <td valign="top"><?php echo $row1['cos_comment']?></td>
             </tr>
             <?php } ?>
           </table></td>
