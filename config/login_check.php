@@ -25,7 +25,7 @@ if (isset($_POST['ok'])) {
             ?>
             <script>
 				    	window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
-				    	window.location.href="std_profile.php";
+				    	window.location.href="index.php";
             </script>
             <!-- header("Location:std_profile.php"); -->
             <?php
