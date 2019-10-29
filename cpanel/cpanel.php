@@ -201,12 +201,12 @@ $user_admin = $_SESSION["user_admin"]
           </tr>
           <tr>
             <td width="22">&nbsp;</td>
-            <td width="119"><a href="cos_add.php" class="right_side_bar_list">แสดงประเมินผล</a></td>
+            <td width="119"><a href="##" class="right_side_bar_list">แสดงประเมินผล</a></td>
             <td width="22">&nbsp;</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><a href="cos_view.php" class="right_side_bar_list">ลบประเมินผล</a></td>
+            <td><a href="##" class="right_side_bar_list">ลบประเมินผล</a></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
