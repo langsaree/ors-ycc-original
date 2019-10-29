@@ -1,12 +1,11 @@
 <?
-session_start();
 include('db.php');
 extract ($_GET);
-$active = "";
-$non_active = "";
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg="";
 if(!empty($active)){
-	$sql = "UPDATE register SET status='1' WHERE std_id='$active' ";
+	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
 	$result = mysqli_query($connection,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
@@ -18,7 +17,7 @@ if(!empty($active)){
 	else
 	{
 		if(!empty($non_active)){
-			$sql = "UPDATE register SET status='0' WHERE std_id='$non_active' ";
+			$sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
 			$result = mysqli_query($connection,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. ' '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
@@ -143,7 +142,7 @@ body {
 	{
 		$std1= $ro1['std_id'];
 		$name= $ro1['f_name']."<span>".$ro1['name']."-".$ro1['s_name'];
-	
+
 	//////////////////forth/////////////////////
     $sql2 = "select * from lecturer where lec_id = '$lec' ";
 	  $a =mysqli_query ($connection,$sql2);
@@ -159,7 +158,7 @@ body {
         <td bgcolor="#FFFFE8"><?= $cos_name?></td>
         <td align="left" bgcolor="#FFFFE8"><?= $lec_name?></td>
         <td align="center" bgcolor="#FFFFCC">
-		<? $status=$ro['status'];
+		<? $status=$ro1['status'];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }

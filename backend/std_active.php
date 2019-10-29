@@ -1,9 +1,8 @@
 <?
-
 include('db.php');
 extract ($_GET);
-$active = "";
-$non_active = "";
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg="";
 if(!empty($active)){
 	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
@@ -136,8 +135,8 @@ border-color:#8A9AA6;
           <td align="center" bgcolor="#FFFFB0"><? echo $row['std_id'];?></td>
           <td align="left" bgcolor="#FFFFB0"><?= $n?> -  <?= $row['s_name'];?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <? $status=$row['status'];
-	       if($status== 1){
+            <?php $status=$row['status'];
+	       if($status==1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
 		   else

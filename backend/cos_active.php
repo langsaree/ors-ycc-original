@@ -2,8 +2,8 @@
 session_start();
 include('db.php');
 extract ($_GET);
-$active = "";
-$non_active = "";
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 
 $msg="";
 if(!empty($active)){
