@@ -152,6 +152,15 @@ input, textarea {
               </tr>
               <tr>
                 <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; color:#000 font-size:15px"> '.$username.'</span>'; ?></td>
+                <tr>
+                <td><?php echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>'; ?></td>
+              </tr>  
+              <tr>
+                <td><?php echo '<span class="style7"><a href="std_view_lecturer.php">อาจารย์ผู้สอน</a></span><br>'; ?></td>
+              </tr>
+              <tr>
+              <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
+              </tr>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -193,10 +202,8 @@ input, textarea {
          <table width="637" height="50" border="0" cellpadding="0" cellspacing="5">
            <tr>
              <td
- 
-                         width="455" height="18" valign="middle">&nbsp;</td>
-             <td width="79" valign="middle" class="style33"><a href="std_profile.php" class="style67" style="text-decoration: none">ดูข้อมูลส่วนตัว</a></td>
-             <td style="text-align:center"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
+               width="455" height="18" valign="middle">&nbsp;</td>
+             <td width="79" valign="middle" class="style33"><a href="std_profile.php" class="style67" style="text-decoration: none"></a></td>
            </tr>
            <tr>
              <td height="17" colspan="3" valign="middle"><span class="style56">----------------------------------------------------------------------------------------</span></td>
