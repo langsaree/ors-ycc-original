@@ -60,13 +60,13 @@ if(isset($_POST['action'])){
      $headers .= "Content-type: text/html; charset=utf-8\r\n";
      $headers .= "From:  ".$_POST['name']." <".$_POST['email'].">\r\n";
 
-     $msgs .= " จากคุณ  ".$_POST['name'].'<br>';
-     $msgs .= " โทร  ".$_POST['tel'].'<br>';
-     $msgs .= "ข้อความ<br>".$_POST['msg'];
+     $msg .= " จากคุณ  ".$_POST['name'].'<br>';
+     $msg .= " โทร  ".$_POST['tel'].'<br>';
+     $msg .= "ข้อความ<br>".$_POST['msg'];
 
 
      $mailto = "harisyoonuh14@gmail.com"; # อีเมล์ผู้รับ
-     if(mail($mailto, $_POST['subj'], $msgs, $headers)){
+     if(mail($mailto, $_POST['subj'], $msg, $headers)){
      echo "ส่งสำเร็จ";
      }else{
      echo "ผิดพลาด";
@@ -164,7 +164,7 @@ while ($row = mysqli_fetch_array($result)) {
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td><input type='submit' value='ส่งข้อความ' /></td>
+      <td><input type='submit' id="action" class="button" value='ส่งข้อความ' /></td>
       <?php
       if (isset($u_error)) {
           echo $u_error;
