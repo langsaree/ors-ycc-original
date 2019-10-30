@@ -44,7 +44,7 @@ body {
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="image/update_grade.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36">Update<span class="style38"> Course</span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36">Update<span class="style38"> Grade</span></span></span><br />
             <span class="style34">แก้ไขเกรด</span></td>
         </tr>
     </table>
@@ -54,7 +54,7 @@ body {
   <tr>
     <td height="563" valign="top"><p></p>
       <div align="center">
-        <p class="style1">Course Information </p>
+        <p class="style1">Grade Information </p>
         <table width="333" height="278" border="1">
           <?
 	include ('../maintain/db');
