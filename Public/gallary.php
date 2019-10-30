@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('../maintain/login_check.php');
+include('../maintain/login_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +68,8 @@ include ('../maintain/login_check.php');
             $('#galleria').galleria();
             </script>
 
+        
+</html>
         </div>
     </div>
     <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
