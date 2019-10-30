@@ -22,10 +22,10 @@ include ('../maintain/db.php');
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../public/image/header-bg.png" width="1260" height="45" /></td>
+    <td><img src="image/header-bg.png" width="1260" height="45" /></td>
   </tr>
 <table> <td width="330" style="text-align:right" align="center"><a href="cpanel.php" class="style6" style="text-decoration:none" >
-<img src="../public/image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
+<img src="image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
 <p align="center"> _____________________________________________________________________________</p></td>
 <div class="BodyContent">
     <div class="BorderBorder">
