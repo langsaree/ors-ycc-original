@@ -1,6 +1,6 @@
 <?php
 include ('../db.php');
-// session_start();
+session_start();
 //>--code insert using for process add data
 ?>
 <?php
