@@ -121,20 +121,20 @@ body {
    $sql1 ="select * from course where cos_id='$cos' ";
    $result = mysqli_query($conn,$sql1);
    while ($row= mysqli_fetch_array($result)){
-	$cos_id= $row['cos_id'];
-	$cos_group=$row['cos_group'];
-	$cos_name = $row['cos_name'];
-	$cos_period = $row['cos_period'];	
-	$cos_day = $row['cos_day'];
-	$lec_id = $row['lec_id'];
-	$cos_comment = $row['cos_comment'];
+	$cos_id= $row["cos_id"];
+	$cos_group=$row["cos_group"];
+	$cos_name = $row["cos_name"];
+	$cos_period = $row["cos_period"];	
+	$cos_day = $row["cos_day"];
+	$lec_id = $row["lec_id"];
+	$cos_comment = $row["cos_comment"];
   ///////////////////////second///////////////////////
 	$sql = "select * from student where std_id='$std'";
 	$re = mysqli_query($conn,$sql);
 	while ($ro1= mysqli_fetch_array($re))
 	{
 		$std1= $ro1['std_id'];
-		$name= $ro1['f_name']."<span>".$ro1['name']."-".$ro1['s_name'];
+		$name= $ro1['first_name']."<span>".$ro1['name']."-".$ro1['last_name'];
 	
 	//////////////////forth/////////////////////
     $sql2 = "select * from lecture where lec_id = '$lec' ";
