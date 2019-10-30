@@ -8,7 +8,7 @@ include('db.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ลงทะเบียนเรียนใหม่</title>
      <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style1.css" />
     <style type="text/css">
 <!--
 body {

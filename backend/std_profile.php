@@ -17,7 +17,7 @@ $id=$id;
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ข้อมูลนักศึกษา </title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style1.css" />
     <style type="text/css">
         <!--
         body {
