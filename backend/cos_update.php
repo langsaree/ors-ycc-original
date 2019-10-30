@@ -1,7 +1,7 @@
 <?php
 extract ($_GET);
 $error="";
-$cos_id = $_GET['id'];
+$cos_id = $id;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -45,6 +45,7 @@ body {
 	while ($row= mysqli_fetch_array($result))
   {
 ?>
+
           <tr>
             <td height="64">
               <div align="left">
@@ -68,7 +69,7 @@ body {
             <td><textarea name="cos_comment" id="cos_comment" cols="30" rows="3"> <?php $row['cos_comment']; ?> </textarea></td>
           </tr>
           
-          <?php  ?>
+          <?php } ?>
         </table>
 <p align="center">
               <input type="submit" name="ok" id="ok" value="Submit" />
