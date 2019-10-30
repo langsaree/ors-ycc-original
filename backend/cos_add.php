@@ -1,13 +1,14 @@
 <?php 
-include ('../config/db.php');
+include('../config/db.php');
 session_start();
 //>--code insert using for process add data
 
 ?>
 <?php
+ 
 
-$errmsg= "";$errmsg1= "";$errmsg2= "";$errmsg3= "";$errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";
-if(isset($_POST["ok"])) {
+$errmsg= ""; $errmsg1= ""; $errmsg2= ""; $errmsg3= ""; $errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";
+if(isset($_POST['ok'])) {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
    if(empty($cos_id)){
@@ -41,7 +42,7 @@ $date = $cos_day."-". $cos_after ."/". $cos_time;
 	   if(empty($cos_time)){
            $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
    #====================================
-$cos_lec =$_POST['lec_id'];
+$lec_id =$_POST['lec_id'];
    if(empty($lec_id)){
    $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
    
@@ -49,19 +50,22 @@ $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysqli_query ("SET NAMES 'utf8'");
+mysqli_query ($connection, "SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysqli_query($connection, $sql);
+$result = mysqli_query($connection,$sql);
 
-if ($result>0)	
-{?>
-<script type="text/javascript">
-	window.location="manage_course.php";
-</script>
+?>
 
- <?php  }
-else {
-	 die("Error db".mysqli_error()); }
+ <?php  
+
+if ($result) {
+  echo "<script>location='cos_view.php';</script>";
+  $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+  echo "$text";
+  exit;
+}else {
+die("Error db".mysqli_error($connection)); }
+
 
 }}
 ?>
@@ -71,7 +75,7 @@ else {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>เพิ่มข้อมูลรายวิชา</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -140,13 +144,13 @@ body {
             <tr>
               <td width="227" height="26"><div align="right">รหัสวิชา</div></td>
               <td width="34">&nbsp;</td>
-              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1 ) echo "#EEFCE2"; ?>" value="<?php  $cos_id ?>" /></td>
+              <td width="339"><input type="text" name="cos_id" id="cos_id" style="background: <?php if($errmsg1 ) echo "#EEFCE2"; ?>" value="<?php $cos_id ?>" /></td>
             </tr>
             <?php if($errmsg2) {?>
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg2?></td>
+              <td><?php echo $errmsg2?></td>
             </tr>
             <?php }?>
             <tr>
@@ -158,7 +162,7 @@ body {
             <tr>
               <td height="27">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg3?></td>
+              <td><?php echo $errmsg3?></td>
             </tr>
             <?php }?>
             <tr>
@@ -169,9 +173,9 @@ body {
             <?php if ($errmsg4) {?>
             <tr>
               <td height="27">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td><?php= $errmsg4?></td>
-            </tr>
+              <td>&nbsp;</td>                                                                                                                                                 
+              <td><?php echo $errmsg4?></td>
+            </tr>              
             <?php }?>
             <tr>
               <td height="27"><div align="right">จำนวนชั่วโมง/หน่วยกิจ</div></td>
@@ -182,16 +186,16 @@ body {
             <tr>
               <td height="30">&nbsp;</td>
               <td></td>
-              <td><?php= $errmsg5?>
-                <?php= $errmsg6?>
-                <?php= $errmsg7?>
+              <td><?php echo $errmsg5?>
+                <?php echo $errmsg6?>
+                <?php echo $errmsg7?>
                 </td>
             </tr>
             <?php }?>
             <tr>
               <td height="30"><div align="right">วันที่เข้าเรียน</div></td>
               <td></td>
-              <td><select name="cos_day" id="cos_day" style="background: <?php if($errmsg5 ) echo "#EEFCE2"; ?>" value="<?php= $cos_day ?>">
+              <td><select name="cos_day" id="cos_day" style="background: <?php if($errmsg5 ) echo "#EEFCE2"; ?>" value="<?php $cos_day ?>">
                 <option value="0" selected>เริ่ม</option>
                 <option>จันทร์</option>
                 <option>อังคาร</option>
@@ -201,7 +205,7 @@ body {
                 <option>เสาร์</option>
                 <option>อาทิตย์</option>
               </select>
-                <select name="cos_after" id="cos_after"style="background: <?php if($errmsg6 ) echo "#EEFCE2"; ?>" value="<?php= $cos_after ?>">
+                <select name="cos_after" id="cos_after"style="background: <?php if($errmsg6 ) echo "#EEFCE2"; ?>" value="<?php $cos_comment ?>">
                   <option value="0" selected="selected">ถึง</option>
                   <option value="จันทร์">จันทร์</option>
                   <option value="อังคาร">อังคาร</option>
@@ -211,7 +215,7 @@ body {
                   <option value="เสาร์">เสาร์</option>
                   <option value="อาทิตย์">อาทิตย์</option>
                 </select>
-                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php= $cos_time ?>">
+                <select name="cos_time" id="cos_time"style="background: <?php if($errmsg7 ) echo "#EEFCE2"; ?>" value="<?php $cos_time ?>">
                   <option  value="0">ภาค</option>
                   <option value="เช้า">เช้า</option>
                   <option value="เย็น">เย็น</option>
@@ -222,7 +226,7 @@ body {
             <tr>
               <td height="28">&nbsp;</td>
               <td>&nbsp;</td>
-              <td><?php= $errmsg8?></td>
+              <td><?php echo $errmsg8?></td>
             </tr>
             <?php }?>
             <tr>
