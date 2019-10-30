@@ -159,9 +159,8 @@ non {
         <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
         </tr>
       <?php while($row = mysqli_fetch_array($result)){ ?>
-      <?php // while($row2 = mysql_fetch_array($result2)){?>
       <tr>
-        <td height="19" valign="top"><?php //= $row2[number]; ?></td>
+        <td height="19" valign="top"></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
           <?php echo $row['cos_id']?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -178,7 +177,7 @@ non {
         <td align="center" valign="top"><a href="cos_active.php?active=<?php echo $row['cos_id']; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
         <td align="center" valign="top"><a href="cos_active.php?non_active=<?php echo $row['cos_id']; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
       </tr>
-      <?php }//} ?>
+      <?php } ?>
     </table></td>
   </tr>
   </table>
