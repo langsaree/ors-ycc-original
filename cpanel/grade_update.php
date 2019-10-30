@@ -58,7 +58,9 @@ body {
         <table width="333" height="278" border="1">
           <?php 
 	include('db_connect.php');
-  if (isset($_GET["db_table2"])) {
+  if (isset($_GET["db_table2"])) 
+
+{
 	$sql = "select * from $db_table2 where name ='$name'";
 	$show = mysqli_query($conn,$sql);
 	while($shows = mysqli_fetch_row($show)){

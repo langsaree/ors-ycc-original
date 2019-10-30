@@ -64,8 +64,8 @@ body {
 // include('auth.php');
 
 ?>
-
-        <?php if($error[0]) { ?>
+          
+        <?php $error[0] = ''; if($error[0]) { ?>
         <tr>
           <td width="32%" align="right"><span class="style40">รหัสวิชา :</span> </td>
           <td width="68%" class="red"><label>
@@ -79,7 +79,7 @@ body {
             <input name="textfield2" type="text" size="30" />
           </label></td>
         </tr>
-        <?php if($error[1]) { ?>
+        <?php $error[1] = ''; if($error[1]) { ?>
         <tr>
           <td align="right"><span class="style40">จำนวนชั่วโมง/หน่วยกิต :</span></td>
           <td class="red"><input name="textfield3" type="text" size="20" /></td>
@@ -91,7 +91,7 @@ body {
             <input name="textfield4" type="text" size="30" />
           </label></td>
         </tr>
-        <?php if($error[2]) { ?>
+        <?php $error[2] = ''; if($error[2]) { ?>
         <tr>
           <td align="right"><span class="style40">เวลา :</span></td>
           <td class="red"><input name="textfield5" type="text" size="30" /></td>
@@ -101,7 +101,7 @@ body {
           <td align="right"><span class="style40">อาจารย์ผู้สอน :</span></td>
           <td><input name="textfield6" type="text" size="25" /></td>
         </tr>
-        <?php if($error[3]) { ?>
+        <?php $error[3] = ''; if($error[3]) { ?>
         <tr>
           <td align="right"><span class="style40">หมายเหตุ :</span></td>
           <td class="red"><label>
@@ -109,24 +109,24 @@ body {
           </label></td>
         </tr>
         <?php } ?>
-        <?php if($error[4]) { ?>
+        <?php $error[4] = ''; if($error[4]) { ?>
 
         <?php } ?>
 
-        <?php if($error[5]) { ?>
+        <?php $error[5] = ''; if($error[5]) { ?>
 
         <?php } ?>
-        <?php if($error[6]) { ?>
+        <?php $error[6] = ''; if($error[6]) { ?>
 
         <?php } ?>
 
-        <?php if($error[7]) { ?>
+        <?php $error[7] = ''; if($error[7]) { ?>
 
         <?php } ?>
-        <?php if($error[8]) { ?>
+        <?php $error[8] = ''; if($error[8]) { ?>
 
         <?php } ?>
-        <?php if($error[9]) { ?>
+        <?php $error[9] = ''; if($error[9]) { ?>
 
         <?php } ?>
 
