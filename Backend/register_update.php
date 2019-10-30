@@ -2,116 +2,110 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>update register</title>
+<title>manage evaluation</title>
 <style type="text/css">
-<!--
+.style1 {color: #666666}
 body {
 	margin-left: 0px;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
-.style26 {	font-family: Geneva, Arial, Helvetica, sans-serif;
+.style25 {font-size: 13px; font-family: Tahoma; }
+.style26 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 21px;
 }
-.style34 {	color: #666666;
-	font-size: 13px;
+.style34 {
+	color: #666666;
+	font-size: 14px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 .style36 {color: #FF6600}
-.style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
-.style25 {font-size: 13px; font-family: Tahoma; }
-.style44 {color: #CCCCCC}
-.style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
-.style1 {color: #FF0000;
-	font-weight: bold;
-	font-size: 24px;
-}
-.style39 {font-size: 13px;
+.style37 {color: #CCCCCC}
+.style39 {
+	color: #3399FF;
+	font-size: 13px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-.style48 {color: #666666}
-
 </style>
 </head>
 
 <body>
 <form id="form1" name="form1" method="post" action="">
-  <table width="1260" border="0" cellspacing="0" cellpadding="0">
+  <table width="1251" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td width="1251"><span class="style37">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></td>
     </tr>
-  </table>
-  <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
-  <tr>
-    <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
-      <tr>
-        <td width="6%" align="center"><img src="image/update_course.jpg" width="91" height="82" /></td>
-        <td width="94%"><span class="style26"><span class="style36">Update<span class="style38">Register</span></span></span><br />
-            <span class="style34">แก้ไข<span class="style48">รายวิชา<span class="style39">ที่ลงทะเบียน</span></span></span></td>
+    <tr>
+      <td><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
+        <tr>
+          <td width="6%" align="center"><img src="../public/image/evaluation.png" width="100" height="100" /></td>
+          <td width="94%"><span class="style26"><span class="style36">Manage Evaluation  </span></span><br />
+              <span class="style34">การจัดการประเมินผล </span>
+              <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>  
+          <td width="94%">&nbsp;</td>
         </tr>
-    </table>
-      <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
+      </table>
+        <table width="1225" height="53" border="0" cellpadding="0" cellspacing="5">
+        <tr>
+          <td width="1137" height="30" valign="middle"><span class="style37">__________________________________________________________________________________________________________________________________________________</span></td>
+          <td width="34" valign="bottom"><a href="cpanel.php"><img src="../public/image/images3.jpg" width="30" height="30" border="0" align="bottom" /></a></td>
+        </tr>
+      </table>      <p>&nbsp;</p></td></tr>
+    <tr>
+      <td><table width="150" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="37" valign="top"><table width="669" height="136" border="0" cellpadding="0" cellspacing="0">
+            
+            <tr>
+              <td width="134" height="117"><div align="center"><img src="../public/image/view evaluation.png" width="70" height="70" /></div>
+                </td>
+              <td width="134"><div align="center"><img src="../public/image/delete evaluation.png" width="70" height="70" /></div></td>
+              <td colspan="2">&nbsp;</td>
+              </tr>
+            <tr>
+              <td height="19"><div align="center" class="style1"><span class="style39">แสดงประเมินผล </span></div></td>
+              <td><div align="center" class="style1"><span class="style39">ลบประเมินผล </span></div></td>
+              <td width="134">&nbsp;</td>
+              <td width="134">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        
+        
+      </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><span class="style37"></span></p></td>
     </tr>
-  
-  <tr>
-    <td height="563" valign="top"><p></p>
-      <div align="center">
-        <p class="style1">Course Information </p>
-        <table width="333" height="278" border="1">
-          <?
-	include ('../maintain/db.php');
-	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysqli_query($connection,$sql);
-	while($shows = mysqli_fetch_row($show))
-	{
-	?>
+    <tr>
+      <td><div align="center">
+        <table width="1275" border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="173"><span class="style46">รหัสวิชา :</span></td>
-            <td width="144"><input type="text" name="name" /></td>
+            <td class="style37"></td>
           </tr>
           <tr>
-            <td><span class="style46">ชื่อวิชา :</span></td>
-            <td><input type="text" name="lastname" /></td>
-          </tr>
-          <tr>
-            <td><span class="style46">จำนวนชั่วโมง/หน่วยกิต :</span></td>
-            <td colspan="2"><input type="text" name="gender" /></td>
-          </tr>
-          <tr>
-            <td><span class="style46">วัน :</span></td>
-            <td><input type="text" name="address" /></td>
-          </tr>
-          <tr>
-            <td><span class="style46">เวลา :</span></td>
-            <td><input type="text" name="city" /></td>
-          </tr>
-          <tr>
-            <td><span class="style46">อาจารย์ผู้สอน :</span></td>
-            <td><input type="text" name="province" /></td>
-          </tr>
-          <tr>
-            <td><span class="style46">หมายเหตุ :</span></td>
-            <td><input type="text" name="postcode" /></td>
+            <td><div align="center">
+              <table width="1275" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="style37">________________________________________________________________________________________________________________________________________________________________</td>
+                </tr>
+                <tr>
+                  <td><div align="center"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</span></div></td>
+                </tr>
+              </table>
+            </div></td>
           </tr>
         </table>
-        <p>
-          <input name="Update" type="submit" id="Update" value="Update" />
-        </p>
-        <p class="style1">&nbsp; </p>
-      </div>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
-    </tr>
-  <tr>
-    <td height="19" valign="top"><div align="center"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</span></div></td>
-  </tr>
-</table>
-  <table width="1260" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      
+      </div></td>
     </tr>
   </table>
 </form>

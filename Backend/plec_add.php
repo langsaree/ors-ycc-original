@@ -1,15 +1,15 @@
 <?php
-include('../maintain/db.php');
+include ('../maintain/db.php');
 $lec_id= $_POST['lec_id'];
 //add more
-$lec_Teach_id= $_POST['lec_Teach_id'];
+//$lec_Teach_id= $_POST['lec_Teach_id'];
 $lec_name= $_POST['lec_name'];
 $lec_tel= $_POST['lec_tel'];
 $lec_email= $_POST['lec_email'];
 $lec_comment= $_POST['lec_comment'];
 $username=$_POST['username'];
 $password=$_POST['password'];
-$sql = "insert into lecture (lec_id, lec_Teach_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_Teach_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
+$sql = "insert into lecture (lec_id,  lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
 $result=mysqli_query($connection, $sql);
 ?>
 
@@ -51,4 +51,3 @@ body {
   </table> <?php //} ?>
 </body>
 </html>
-

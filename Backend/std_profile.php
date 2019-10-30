@@ -68,7 +68,7 @@ a:active {
         <div class="Header">
         <div class="HeaderTitle">
           <div align="left"></div>
-          <h1><img src="../images/banner.jpg" width="833" height="265" alt="banner"></h1>
+          <h1><img src="../Public/images/banner.jpg" width="833" height="265" alt="banner"></h1>
         </div>
         </div><div class="Columns"><div class="Column1">
           <div class="Block">

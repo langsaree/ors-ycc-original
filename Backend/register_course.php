@@ -1,7 +1,7 @@
   
 <?php
 session_start();
-include('../maintain/db.php');
+include ('../maintain/db.php');
 ?>
 
 <!DOCTYPE html>
