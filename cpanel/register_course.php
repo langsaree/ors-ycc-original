@@ -469,12 +469,12 @@ if(isset($ok)) {
 		 header("Refresh: 3; url=index.php");  
 		 echo "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที";
 		exit;
-   }
-    else
+   } 
+    else 
    {
 	 
      } 
-}
+
 
 ?>      
        

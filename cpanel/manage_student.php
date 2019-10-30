@@ -42,7 +42,7 @@ body {
     <tr>
       <td><table width="78%"  align="left" border="0" cellspacing="10" cellpadding="0"  class="header">
         <tr>
-          <td width="9%" height="95" align="center"><img src="image/manage student.png" width="101" height="95" /></td>
+          <td width="9%" height="95" align="center"><img src="../image/manage student.png" width="101" height="95" /></td>
           <td><span class="style26"><span class="style36">Manage Student</span></span> <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a><br />
               <span class="style39">การจัดการนักศึกษา</span></td>
           </tr>
@@ -59,12 +59,13 @@ body {
               <tr>
                 <td width="134" height="117"><div align="center"><a href="std_add.php"><img src="image/student add.png" width="90" height="90" border="0" /></a></div></td>
                 <td width="134"><div align="center"><a href="std_view.php"><img src="image/student view.png" width="90" height="90" border="0" /></a></div></td>
-                <td width="134"><div align="center"><a href="std_active.php"><img src="image/student status.png" width="90" height="90" border="0" /></a></div></td>
+                <td width="134" height ="118"><div align="center"><a href="std_active.php"><img src="image/student status.png" width="90" height="90" border="0" /></a></div></td>
               </tr>
               <tr>
                 <td height="19"><div align="center" class="style1"><span class="style42"><a href="std_add.php" style="text-decoration:none">เพิ่มนักศึกษาใหม่</a></span></div></td>
-                <td><div align="center" class="style1"><span class="style42"><a href="std_view.php" style="text-decoration:none">แสดงข้อมูลนักศึกษา</a><a href="std_view.php" style="text-decoration:none"></a></span></div></td>
-                <td><div align="center" class="style1"><span class="style42"><a href="std_active.php" style="text-decoration:none">แสดงสถานะนักศึกษา</a><a href="std_update.php"></a></span></div></td>
+                <td height="20"><div align="center" class="style1"><span class="style42"><a href="std_view.php" style="text-decoration:none">แสดงข้อมูลนักศึกษา</a></span></div></td>
+                 <td height="21"><div align="center" class="style1"><span class="style42"><a href="std_active.php" style="text-decoration:none">แสดงสถานะนักศึกษา </a></span></div></td>
+                
                 </tr>
               
             </table></td>
