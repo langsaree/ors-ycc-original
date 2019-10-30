@@ -29,7 +29,6 @@ body {
 	font-size: 24px;
 }
 .style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
 </style>
 </head>
 
@@ -88,7 +87,7 @@ body {
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      
+       <? } ?> 
     </tr>
   </table>
 </form>
