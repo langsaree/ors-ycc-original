@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="refresh" content="3 url='std_view.php'"/>
-    <title>ลบข้อมูลนักศึกษา</title>
+    <meta http-equiv="refresh" content="3 url='cos_view.php'"/>
+    <title>ลบข้อมูลรายวิชา</title>
     <style type="text/css">
         <!--
         body {
@@ -68,10 +68,10 @@
         <td width="1298" height="74" valign="top">
             <table width="95%" align="center" border="0" cellspacing="10" cellpadding="0" class="header">
                 <tr>
-                    <td width="6%" align="center"><img src="image/student_delete.png" width="100" height="100"/></td>
+                    <td width="6%" align="center"><img src="image/course_delete.jpg" width="100" height="100"/></td>
                     <td width="94%"><span class="style26"><span class="style36"><span
-                                        class="style45">Delete</span> <span class="style38">Student</span></span></span><br/>
-                        <span class="style34">ลบนักศึกษา</span></td>
+                                        class="style45">Delete</span> <span class="style38">Course</span></span></span><br/>
+                        <span class="style34">ลบรายวิชา</span></td>
                 </tr>
             </table>
             <p><span class="style44">_____________________________________________________________________________________________________________________________________________________________</span>
