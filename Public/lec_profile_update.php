@@ -128,14 +128,14 @@ input:focus, textarea:focus {
             <table width="600">
              <?php 
 			
-			$sql = "select * from lecture where  username='$username'";
+			$sql = "select * from lecturer where  username='$username'";
             $result=mysqli_query($connection, $sql);
             ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
                   <td width="186" class="main">&nbsp;</td>
-                  <td width="284"><p><img src="image/lecturer.png" alt="" width="124" height="120"></p></td>
+                  <td width="284"><p><img src="images/lecturer.png" alt="" width="124" height="120"></p></td>
                   <td width="81">&nbsp;</td>
                 </tr>
                 <tr>

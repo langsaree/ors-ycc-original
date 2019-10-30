@@ -134,7 +134,7 @@ include('../maintain/db.php');
               </tr>
               <?php 
 			include ('../maintain/db.php');
-			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
+			$sql = "select * from lecturer,course where course.lec_id=lecturer.lec_id and username='$username'";
             $result=mysqli_query($connection, $sql);
             while ($row=mysqli_fetch_array($result)){
 		     ?>

@@ -138,7 +138,7 @@ include ('../maintain/db.php');
                 <td>&nbsp;</td>
                 <td><?php echo $row['std_id'] ?></td>
                 <td><?php echo $row2['name'] ?>
-&nbsp;&nbsp;&nbsp;<?php echo $row2['s_name'] ?></td>
+&nbsp;&nbsp;&nbsp;<?php echo $row2['last_name'] ?></td>
                 <td><?php echo $row['cos_name'] ?></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
