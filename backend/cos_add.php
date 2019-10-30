@@ -4,7 +4,15 @@ session_start();
 //>--code insert using for process add data
 ?>
 <?php
-$errmsg = $errmsg1 = $errmsg2= $errmsg3= $errmsg4= $errmsg5= $errmsg6= $errmsg7= $errmsg8= "";
+$errmsg ="";
+$errmsg1 ="";
+$errmsg2="";
+$errmsg3="";
+$errmsg4="";
+$errmsg5="";
+$errmsg6="";
+$errmsg7="";
+$errmsg8= "";
 if(isset($_POST["ok"])) {
 #============== function cos_id 
    $cos_id = $_POST['cos_id'];
@@ -38,25 +46,28 @@ $date = $cos_day."-". $cos_after ."/". $cos_time;
      if(empty($cos_time)){
            $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
    #====================================
-$cos_lec =$_POST['lec_id'];
-   if(empty($cos_lec)){
+$lec_id =$_POST['lec_id'];
+   if(empty($lec_id)){
    $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
    
 $cos_comment =$_POST['cos_comment'];
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
 mysqli_query ($conn,"SET NAMES 'utf8'");
-$sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$cos_lec','$cos_comment')";
+$sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
 $result = mysqli_query($conn,$sql);
-if ($result>0)  
-{?>
-<script type="text/javascript">
-  window.location="manage_course.php";
-</script>
 
- <?php  }
-else {
-   die("Error db".mysqli_error()); }
+?>
+<?php 
+
+if ($result) {
+  echo "<script>location='cos_view.php';</script>";
+  $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+  echo "$text";
+  exit;
+}else {
+die("Error db".mysqli_error($conn)); }
+
 }}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -65,7 +76,6 @@ else {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>เพิ่มข้อมูลรายวิชา</title>
 <style type="text/css">
-<!--
 body {
   margin-left: 0px;
   margin-top: 0px;
@@ -101,7 +111,6 @@ body {
   color: #666666;
   text-decoration:none;
 }
--->
 </style>
 </head>
 <body>
