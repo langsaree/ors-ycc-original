@@ -41,7 +41,7 @@ body {
     <tr>
       <td><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
         <tr>
-          <td width="6%" align="center"><img src="../public/image/evaluation.png" width="100" height="100" /></td>
+          <td width="6%" align="center"><img src="image/evaluation.png" width="100" height="100" /></td>
           <td width="94%"><span class="style26"><span class="style36">Manage Evaluation  </span></span><br />
               <span class="style34">การจัดการประเมินผล </span>
               <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a></td>  
@@ -51,7 +51,7 @@ body {
         <table width="1225" height="53" border="0" cellpadding="0" cellspacing="5">
         <tr>
           <td width="1137" height="30" valign="middle"><span class="style37">__________________________________________________________________________________________________________________________________________________</span></td>
-          <td width="34" valign="bottom"><a href="cpanel.php"><img src="../public/image/images3.jpg" width="30" height="30" border="0" align="bottom" /></a></td>
+          <td width="34" valign="bottom"><a href="cpanel.php"><img src="image/images3.jpg" width="30" height="30" border="0" align="bottom" /></a></td>
         </tr>
       </table>      <p>&nbsp;</p></td></tr>
     <tr>
@@ -60,9 +60,9 @@ body {
           <td height="37" valign="top"><table width="669" height="136" border="0" cellpadding="0" cellspacing="0">
             
             <tr>
-              <td width="134" height="117"><div align="center"><img src="../public/image/view evaluation.png" width="70" height="70" /></div>
+              <td width="134" height="117"><div align="center"><img src="image/view evaluation.png" width="70" height="70" /></div>
                 </td>
-              <td width="134"><div align="center"><img src="../public/image/delete evaluation.png" width="70" height="70" /></div></td>
+              <td width="134"><div align="center"><img src="image/delete evaluation.png" width="70" height="70" /></div></td>
               <td colspan="2">&nbsp;</td>
               </tr>
             <tr>
