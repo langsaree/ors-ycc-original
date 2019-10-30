@@ -123,12 +123,12 @@ include('../config/db.php');
                 <tr>
                  <?php 
 			include('../config/db.php');
-			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
+			$sql = "select * from lecturer,course where course.lec_id=lecturer.lec_id and username='$username'";
             $result=mysqli_query($connection, $sql);
             ($row=mysqli_fetch_array($result))
 		    ?>
                   <td width="26">&nbsp;</td>
-                  <td width="124" rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
+                  <td width="124" rowspan="6"><img src="images/lecturer.png" width="124" height="120"></td>
                   <td width="140" class="main" style="text-align: right">ลำดับ :</td>
                   <td width="321" class="maintext"><?php echo $row['lec_id'];?></td>
                   <td width="15">&nbsp;</td>

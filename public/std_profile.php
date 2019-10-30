@@ -11,7 +11,7 @@ $username = $_SESSION["username"];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>ข้อมูลนักศึกษา </title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="imagess/favicon.ico" type="images/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
 
@@ -161,7 +161,7 @@ while($row=mysqli_fetch_array($result))
            </tr>
            <tr>
              <td>&nbsp;</td>
-             <td><p><img src="image/std_infor.png" width="111" height="126" align="top" /><br>
+             <td><p><img src="images/std_infor.png" width="111" height="126" align="top" /><br>
                <span class="style62">รูปประจำตัว</span></p></td>
              <td>&nbsp;</td>
            </tr>

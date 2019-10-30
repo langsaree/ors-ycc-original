@@ -12,7 +12,7 @@ include('../config/db.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>แสดงรายชื่ออาจารย์ผู้สอน</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
@@ -122,12 +122,12 @@ include('../config/db.php');
               </tr>
        <?php 
 			include('../config/db.php');
-			$sql = "select* from lecture";
+			$sql = "select* from lecturer";
 			
             $result=mysqli_query($connection, $sql);
             while($row=mysqli_fetch_array($result)){
 			    	$lec_id=$row['lec_id'];
-			    	$sql2 ="select * from lecture where lec_id='$lec_id'";
+			    	$sql2 ="select * from lecturer where lec_id='$lec_id'";
 			    	$result2=mysqli_query($connection, $sql2);
 			    	while($row2=mysqli_fetch_array($result2)){
 		    ?>

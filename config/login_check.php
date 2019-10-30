@@ -33,7 +33,7 @@ if (isset($_POST['ok'])) {
             $message = "ข้อมูลของท่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลด้วย";
         }
 
-        $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
+        $sql1 = "SELECT * FROM lecturer WHERE username='$username' and password='$password'";
         $result1 = mysqli_query($connection, $sql1);
 
         $count1 = mysqli_num_rows($result1);
@@ -63,7 +63,7 @@ if (isset($_POST['ok'])) {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>ระบบลงทะเบียนออนไลน์</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
 </head>
 <body>
     <div class="BodyContent">
@@ -188,9 +188,6 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['username']))
 
 				<?php } else { ?>
 
-					<?php //  remove the HTML code of login ?>
-
-					<?php // If user already logined, so display wellcome section below ?>
 					<?php echo ' '; ?>
 					<?php
 					echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';

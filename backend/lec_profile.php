@@ -65,7 +65,7 @@ body {
                                        
 <?php
 include('../config/db.php');
-$sql = "select * from lecture where lec_id='$lec_id'";
+$sql = "select * from lecturer where lec_id='$lec_id'";
 
 $result = mysqli_query($connection, $sql);
 while($row = mysqli_fetch_array($result))

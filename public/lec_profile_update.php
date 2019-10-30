@@ -12,7 +12,7 @@ include('../config/db.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>แก้ไขข้อมูลส่วนตัว</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
@@ -125,7 +125,7 @@ input:focus, textarea:focus {
         $phone=$_POST['lec_tel'];
         $email=$_POST['lec_email'];
 				
-				$query = "UPDATE lecture set username ='$login', password ='$pswd', lec_name ='$name', lec_email ='$email', lec_tel ='$phone' where username='$username'";
+				$query = "UPDATE lecturer set username ='$login', password ='$pswd', lec_name ='$name', lec_email ='$email', lec_tel ='$phone' where username='$username'";
 				$do=mysqli_query($connection, $query);
 			}
 			?>
@@ -133,14 +133,14 @@ input:focus, textarea:focus {
             <table width="600">
              <?php 
 			
-			$sql = "select * from lecture where  username='$username'";
+			$sql = "select * from lecturer where  username='$username'";
             $result=mysqli_query($connection, $sql);
             ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
                   <td width="186" class="main">&nbsp;</td>
-                  <td width="284"><p><img src="image/lecturer.png" alt="" width="124" height="120"></p></td>
+                  <td width="284"><p><img src="images/lecturer.png" alt="" width="124" height="120"></p></td>
                   <td width="81">&nbsp;</td>
                 </tr>
                 <tr>

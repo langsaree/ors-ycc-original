@@ -12,7 +12,7 @@ include('../config/db.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>แสดงรายชื่อนักศึกษา</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
@@ -118,7 +118,7 @@ include('../config/db.php');
               </tr>
        <?php 
 			include('../config/db.php');
-			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
+			$sql = "select * from register,lecturer,course where lecturer.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
 			
             $result=mysqli_query($connection, $sql);
             while($row=mysqli_fetch_array($result)){

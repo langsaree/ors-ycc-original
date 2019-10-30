@@ -90,7 +90,7 @@ body {
              <tr>
                <?php 
 include('../config/db.php');
-$sql = "select* from lecture";
+$sql = "select* from lecturer";
 $result = mysqli_query($connection, $sql);
 
 while($row=mysqli_fetch_array($result))
