@@ -9,7 +9,7 @@ $sql="select * from student where username='$username'";
 $result=mysqli_query($connection,$sql);
 $row=mysqli_fetch_array($result);
 $std_id=$row['std_id'];
-$sql2="select * from lecture,course where course.lec_id=lecture.lec_id and cos_id='$cos_id'";
+$sql2="select * from lecturer,course where course.lec_id=lecture.lec_id and cos_id='$cos_id'";
 $do2=mysqli_query($connection,$sql2);
 $this2=mysqli_fetch_array($do2);
 $lec_id=$this2['lec_id'];
@@ -75,7 +75,7 @@ $result1=mysqli_query($connection,$cos);
             <?php //while($row=mysql_fetch_array($result)){ ?>
             <tr>
               <td width="63"><span style="color: #000"><span class="style45">ข้าพเจ้า</span></span></td>
-              <td width="337"><?php echo $row['f_name'],' ',$row['name'],' ',' ',$row['s_name']; ?></td>
+              <td width="337"><?php echo $row['first_name'],' ',$row['name'],' ',' ',$row['last_name']; ?></td>
               <td width="62">&nbsp;</td>
               <td width="62">&nbsp;</td>
               <td width="64">&nbsp;</td>
@@ -167,7 +167,7 @@ $result1=mysqli_query($connection,$cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="79">ชื่อบิดา</td>
-                <td width="209"><?php echo $row['fat_fname'],$row['fat_lname']?></td>
+                <td width="209"><?php echo $row['fat_first_name'],$row['fat_last_name']?></td>
                 <td width="53">อาชีพ</td>
                 <td width="198"><?php echo $row['fat_job']?></td>
                 <td width="49">&nbsp;</td>
@@ -176,7 +176,7 @@ $result1=mysqli_query($connection,$cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="78">ชื่อมารดา</td>
-                <td width="211"><?php echo  $row['mot_fname'],' ',$row['mot_lname']?></td>
+                <td width="211"><?php echo  $row['mot_first_name'],' ',$row['mot_last_name']?></td>
                 <td width="54">อาชีพ</td>
                 <td width="200"><?php echo $row['mot_job']?></td>
                 <td width="45">&nbsp;</td>
@@ -208,8 +208,8 @@ $result1=mysqli_query($connection,$cos);
             <tr>
               <td height="61" valign="top"><?php ?></td>
               <td valign="top">&nbsp;                <?php echo $row1['cos_name'];?></td>
-              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php echo $row1[cos_time]?></td>
-              <td valign="top"><?php echo $row1['cos_start']?></td>
+              <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?php echo $row1['cos_period']?></td>
+              <td valign="top"><?php echo $row1['cos_day']?></td>
               <td valign="top"><?php echo $row1['cos_comment']?></td>
             </tr>
             <?php } ?>
