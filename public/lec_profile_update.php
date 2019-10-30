@@ -1,8 +1,9 @@
 <?php
 session_start();
-include('db.php');
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+$username = $_SESSION['username'];
+include('auth.php');
+//end of check session
+include('../config/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ if(session_is_registered(lec_user)){
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -32,7 +33,7 @@ input:focus, textarea:focus {
 	}
 .style56 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #CCCCCC; }
 
--->
+
     </style>
 </head>
 <body>
@@ -46,7 +47,12 @@ input:focus, textarea:focus {
               <li></li> 
               <li></li> 
               <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="##" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="##" class="MenuButton"><span>วิทยาลัย</span></a>
+              <a href="##" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="##" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="##" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="##" class="MenuButton"><span> ติดต่อเรา</span></a>
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -64,33 +70,22 @@ input:focus, textarea:focus {
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+              <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+
 
             <br>
           </div>
-          <div class="Block">
-
-            <span class="BlockHeader"><span>Menu</span></span>
-            <div class="BlockContentBorder">
-
-                 <ul>
-                    <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
-                    <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
-                </ul>
-          </div>
-        </div>
         <div class="Block">
             <span class="BlockHeader"><span>เมนูส่วนตัว</span></span>
             <div class="BlockContentBorder">
@@ -101,7 +96,15 @@ input:focus, textarea:focus {
           </div>
         </div>
         </div><div class="MainColumn">
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        <div class="ArticleBorder">
+        <div class="ArticleBL"><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
        
           <div class="Article"><br>
             <table width="647" border="0" cellspacing="2" cellpadding="0">
@@ -109,33 +112,30 @@ input:focus, textarea:focus {
                 <td width="643" class="style56">&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------------------------------------------</td>
               </tr>
             </table>
-<?
-			
-			$ok=$ok;
+     <?php
+     error_reporting(~E_NOTICE );
+
+     $username=$_SESSION["username"];
+       $ok=$_POST['ok'];
+
             if(isset($ok)){
-				$login=$_POST['login'];
-				$pswd=$_POST['pswd'];
-				$name=$_POST['name'];
-				$email=$_POST['email'];
-				$phone=$_POST['phone'];
+				$login=$_POST['username'];
+        $pswd=$_POST['password'];
+				$name=$_POST['lec_name'];
+        $phone=$_POST['lec_tel'];
+        $email=$_POST['lec_email'];
 				
-				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysql_query($sql);
-				if($do){
-					echo "<script>location='lec_profile.php';</script>";
-				}
-				else{
-					 mysql_error();
-				}
+				$query = "UPDATE lecture set username ='$login', password ='$pswd', lec_name ='$name', lec_email ='$email', lec_tel ='$phone' where username='$username'";
+				$do=mysqli_query($connection, $query);
 			}
 			?>
             <form action="" method="post" enctype="multipart/form-data" name="form1">
             <table width="600">
-             <? 
+             <?php 
 			
-			$sql = "select * from lecture where username='$username'";
-            $result=mysql_query($sql);
-            ($row=mysql_fetch_array($result));
+			$sql = "select * from lecture where  username='$username'";
+            $result=mysqli_query($connection, $sql);
+            ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
@@ -159,16 +159,16 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">Username :</td>
                   <td>
-                    <label for="login"></label>
-                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?=$row[username];?>">
+                    <label for="username"></label>
+                    <input type="text" name="username" id="username" class="inputbox-normal" value="<?php echo $row['username'];?>">
                  </td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Password :</td>
-                  <td><label for="pswd"></label>
-                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?=$row[password];?>" ></td>
+                  <td><label for="password"></label>
+                  <input type="password" name="password" id="password" class="inputbox-normal" value="<?php echo $row['password'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -180,22 +180,22 @@ input:focus, textarea:focus {
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">ชื่อ :</td>
-                  <td><label for="name"></label>
-                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?=$row[lec_name];?>" ></td>
+                  <td><label for="lec_name"></label>
+                  <input type="text" name="lec_name" id="lec_name" class="inputbox-normal" value="<?php echo $row['lec_name'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Email :</td>
-                  <td><label for="email"></label>
-                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?=$row[lec_email];?>" ></td>
+                  <td><label for="lec_email"></label>
+                  <input type="text" name="lec_email" id="lec_email" class="inputbox-normal" value="<?php echo $row['lec_email'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Phone :</td>
-                  <td><label for="phone"></label>
-                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?=$row[lec_tel];?>" ></td>
+                  <td><label for="lec_tel"></label>
+                  <input type="text" name="lec_tel" id="lec_tel" class="inputbox-normal" value="<?php echo $row['lec_tel'];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
             </table>
@@ -209,8 +209,8 @@ input:focus, textarea:focus {
               
               <tr>
                 <td>&nbsp;</td>
-                <td><input type="submit" name="ok" id="button" value="    ตกลง    "></td>
-                <td><input type="submit" name="cancel" id="button2" value="    ยกเลิก    "></td>
+                <td><input type="submit" name="ok" id="ok" value=" ตกลง "></td>
+                <td><input type="reset" name="cancel" id="cancel" value=" ยกเลิก "></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
@@ -229,14 +229,7 @@ input:focus, textarea:focus {
             </form>
           </div>
         </div>
-
-
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+        <?php include('../config/style.php');?>
 </body>
 </html>
