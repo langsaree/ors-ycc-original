@@ -1,10 +1,12 @@
+
 <?php
 session_start();
 $username = $_SESSION['username'];
 include ('auth.php');
 //end of check session
-include ('../maintain/db.php');
+include('../maintain/db.php');
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +17,7 @@ include ('../maintain/db.php');
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
+
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style9 {font-size: 12px}
 .style7 {color: #3987FB; font-size: 14px; }
@@ -49,7 +51,13 @@ include ('../maintain/db.php');
               <li></li> 
               <li></li> 
               <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="##" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="##" class="MenuButton"><span>วิทยาลัย</span></a>
+              <a href="##" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="##" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="##" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="##" class="MenuButton"><span> ติดต่อเรา</span></a>
+
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -67,7 +75,7 @@ include ('../maintain/db.php');
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION['username'].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>'; ?></td>
               </tr>
               <tr>
                 <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
@@ -76,27 +84,16 @@ include ('../maintain/db.php');
                 <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><?php echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+              <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <?php  ?>
+
 
             <br>
           </div>
-          <div class="Block">
-
-            <span class="BlockHeader"><span>Menu</span></span>
-            <div class="BlockContentBorder">
-
-                 <ul>
-                    <li><span class="style7"><a href="index.php" style="color: #3987FB; text-decoration: none">หลักสูตรที่เปิด</a></span></li>
-                    <li><span class="style7"><a href="manual.pdf" style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span></li>
-                </ul>
-          </div>
-        </div>
         <div class="Block">
             <span class="BlockHeader"><span>เมนูส่วนตัว</span></span>
             <div class="BlockContentBorder">
@@ -137,11 +134,9 @@ include ('../maintain/db.php');
               </tr>
               <?php 
 			include ('../maintain/db.php');
-	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-          $sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-          $result=mysqli_query($connection, $sql);
-          while ($row=mysqli_fetch_array($result)){
-       
+			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
+            $result=mysqli_query($connection, $sql);
+            while ($row=mysqli_fetch_array($result)){
 		     ?>
               <tr>
                 <td>&nbsp;</td>
@@ -169,3 +164,9 @@ include ('../maintain/db.php');
 <p>&nbsp;</p>
           </div>
         </div>
+        </div>
+        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
+        </div>
+        </div></div>
+        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>               
+       

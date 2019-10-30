@@ -117,7 +117,7 @@ include ('../maintain/db.php');
                 <td width="12">&nbsp;</td>
                 <td width="131" bgcolor="#FF9933" class="midle">รหัสประจำตัวนักศึกษา</td>
                 <td width="152" bgcolor="#FF9933" class="midle">ชื่อ-นามสกุล</td>
-                <td width="319" bgcolor="#FF9933" class="midle">วิชาที่ลงทะเบียน</td>
+                <td width="319" bgcolor="#FF9933" class="midle">วิชาลงที่เรียน</td>
                 <td width="12">&nbsp;</td>
                 <td width="15">&nbsp;</td>
               </tr>
@@ -125,8 +125,8 @@ include ('../maintain/db.php');
 			include ('../maintain/db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
-      $sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
-			
+      //$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
+			$sql = "select * from student,course ";
       $result=mysqli_query($connection, $sql);
       while($row=mysqli_fetch_array($result)){
       $std=$row['std_id'];
