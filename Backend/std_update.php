@@ -1,14 +1,53 @@
 <?php
-session_start();
-//include ('auth.php');
+include ('../maintain/db.php');
+extract($_GET);
+$std=$id;
 ?>
+
+<?php
+if(isset($_POST['Update'])){
+    $login = $_POST['login'];
+    $pswd = $_POST['pswd'];
+    $first_name=$_POST['first_name'];
+    $name=$_POST['name'];
+    $last_name=$_POST['last_name'];
+    $nation=$_POST['nation'];
+    $origin=$_POST['origin'];
+    $religion=$_POST['religion'];
+    $gender=$_POST['gender'];
+    $birthday=$_POST['birthday'];
+    $std_id=$_POST['std_id'];
+    $address=$_POST['address'];
+    $city=$_POST['city'];
+    $province=$_POST['province'];
+    $postalcode=$_POST['postalcode'];
+    $phone=$_POST['phone'];
+    $email=$_POST['email'];
+    $edulevel=$_POST['edulevel'];
+    $eduplace=$_POST['eduplace'];
+    $eduprovince=$_POST['eduprovince'];
+    $eduyear=$_POST['eduyear'];
+    $job=$_POST['job'];
+    $query = "UPDATE student set username='$login',password='$pswd',first_name='$first_name',name='$name',last_name='$last_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$std_id'";
+    $do = mysqli_query($connection, $query);
+    if ($do)
+    {
+        header("location:std_view.php");
+    }
+    else{
+        die("Could not select db".mysqli_error($connection));
+        
+    }}
+?>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>view student</title>
+<title>update student</title>
 <style type="text/css">
-<!--
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -23,103 +62,281 @@ body {
 	font-size: 13px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-.style6 {
-	font-size: 9px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	color: #666666;
-	text-decoration:none;
-}
 .style36 {color: #FF6600}
 .style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
 .style25 {font-size: 13px; font-family: Tahoma; }
-.style40 {
-	color: #333333;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-}
 .style44 {color: #CCCCCC}
 .style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
-
+.style1 {color: #FF0000;
+	font-weight: bold;
+	font-size: 24px;
+}
+.style47 {font-family: Verdana, Arial, Helvetica, sans-serif}
 </style>
 </head>
+
 <body>
-<table width="998" border="0" cellspacing="0" cellpadding="0">
+<form id="form1" name="form1" method="post" action="">
+  <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
-  <table width="1260" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
+  <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
-    <td width="1027" height="74" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
+    <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br />
-          <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
+      <td width="6%" align="center"><img src="image/student add.png" width="127" height="111" /></td>
+      <td width="94%"><span class="style26"><span class="style36"><span class="style45">Update</span> <span class="style38">Student&nbsp;&nbsp;</span></span></span>
+      <a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent | </a><a href="std_view.php" class="style6" style="text-decoration:none" >ViewStudent</a><br />
+                <span class="style34">แก้ไขข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
-              <form id="form1" name="form1" method="post" action="std_view_search.php">
-      <table width="1151" height="50" border="0" align="left" cellpadding="0" cellspacing="5">
-           <tr>
-                <td width="83">&nbsp;</td>
-                <td width="146"><label>
-                <input type=hidden name=todo value=search>
-                <input name="search_text" type="text" id="search" size="20" />
-                </label></td>
-                <td width="48"><label>
-                <input type="submit" name="button" id="button" value="ค้นหา" />
-                </label></td>
-                <td width="849">&nbsp;</td>
-              </tr>
-      </table>
-      </form>
-              <p>&nbsp;</p>
-      <p><span class="style44">________________________________________________________________________________________________________________________________________</span></p></td>
+      <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
+
   <tr>
-    <td height="339" valign="top"><table width="80%" border="0" align="center" cellpadding="0" cellspacing="2">
-      <tr>
-        <td width="16%" height="29" bgcolor="#CCCCCC"><div align="center">รหัสประจำตัว น.ศ.</div></td>
-        <td width="20%" bgcolor="#CCCCCC"><div align="center">ชื่อผู้ใช้</div></td>
-        <td width="33%" bgcolor="#CCCCCC"><div align="center">ชื่อ-สกุล</div></td>
-        <td width="7%" bgcolor="#CCCCCC"><div align="center">แก้ไข</div></td>
-        <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
-        <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
-      </tr>
-     <?php 
-		/////////////////////////take information from student table //////////////////////////
-	include ('../maintain/db.php');
-	$sql1 = "select * from student ";
-	$v=mysqli_query ($connection,$sql1);
-	while ($row= mysqli_fetch_array($v))
-	{
-	$std = $row['std_id'];
-	$user= $row['username'];
-	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
-	//echo $name;
-	?>
-      <tr>
-		<td><div align="left"><?php echo $std?> </div></td>
-		<td><div align="center"><?php echo $user ?></div></td>
-		<td><div align="left"><?php echo $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
-      </tr>
-     <?php } ////// close first while //////////////////////////////////////////////
-		//} //////// close of second while ////////////////////
-		//} /////// close 3rd while ///////////////////////
-		?>
-    </table>
-      <p></p>
+    <td height="563" valign="top"><p></p>
+      <div align="center">
+        <p class="style1">Student Information </p>
+          <?php
+          $sql = "select * from student where std_id= $id ";
+          $result = mysqli_query($connection, $sql);
+          while ($row = mysqli_fetch_array($result))
+          {
+          ?>
+
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="5">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><p><img src="image/std_infor.png" width="111" height="126" align="top" /><br>
+                            <span class="style62">รูปประจำตัว</span></p></td>
+
+                </tr>
+                <tr>
+
+                </tr>
+                <tr>
+                    <td width="27" height="18">&nbsp;</td>
+                    <td width="135" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
+                    <td colspan="4"><label for="login"></label>
+                        <input type="text" name="login" id="login" value="<?php echo $row['username'];?>">                    </tr>
+                <tr>
+                    <td height="18" style="text-align: right">&nbsp;</td>
+                    <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
+                    <td colspan="4"><label for="pswd"></label>
+                        <input type="password" name="pswd" id="pswd" value="<?php echo $row['password'];?>"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">&nbsp;</td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
+                    <td colspan="4"><label for="first_name"></label>  
+                      <select name="first_name" size="1" id="first_name">
+                      <option selected><?php echo $row['first_name'];?></option>
+                      <option>-- โปรดระบุ --</option>
+                      <option>นาย</option>
+                        <option>นาง</option>
+                        <option>นางสาว</option>
+                        <option>ด.ช.</option>
+                        <option>ด.ญ.</option>
+                        <option>Miss.</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        </select>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
+                    <td colspan="4"><label for="name"></label>
+                        <input type="text" name="name" id="name" value="<?php echo $row['name'];?>"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
+                    <td><label for="last_name"></label>
+                        <input type="text" name="last_name" id="last_name" value="<?php echo $row['last_name'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60">สัญชาติ :</span></td>
+                    <td><label for="nation"></label>
+                        <input name="nation" type="text" id="nation" value="<?php echo $row['nation'];?>"></td>
+
+
+                </tr>
+                <tr>
+                    <td >&nbsp;</td>
+                    <td style="text-align: right"><span class="style60">เชื้อชาติ : </span></td>
+                    <td>
+                        <label for="origin"></label>
+                        <input name="origin" type="text" id="origin" value="<?php echo $row['origin'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td height="19" >&nbsp;</td>
+                    <td class="style60" style="text-align: right">ศาสนา :</td>
+                    <td><label for="religion"></label>
+                        <input name="religion" type="text" id="religion" value="<?php echo $row['religion'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right; font-weight: bold; color: #333;">เพศ :</span></span></td>
+                    <td colspan="4"><label for="gender"></label>
+                        <input type="text" name="gender" id="gender" value="<?php echo $row['gender'];?>"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60">วันเกิด : </span></td>
+                    <td><label for="birthday"></label>
+                        <input name="birthday" type="text" id="birthday" value="<?php echo $row['birthday'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span style="font-weight: bold; text-align: right;"><span class="style61">เลขบัตรประชาชน<span class="style46"> :</span></span></span></td>
+                    <td><label for="std_id"></label>
+                        <input name="std_id" type="text" id="std_id" maxlength="13" value="<?php echo $row['std_id'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right">&nbsp;</td>
+
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
+                    <td colspan="4"><label for="address"></label>
+                        <textarea name="address" id="address" cols="23" rows="5"><?php echo $row['address'];?></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style47"><span class="style60">เขต/อำเภอ<span class="style46"> :</span></span></span></td>
+                    <td><label for="city"></label>
+                        <input type="text" name="city" id="city" value="<?php echo $row['city'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60" style="font-weight: bold">จังหวัด :</span></td>
+                    <td><label for="province"></label>
+                        <input type="text" name="province" id="province" value="<?php echo $row['province'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60">รหัสไปรษณีย์ : </span></td>
+                    <td><label for="postalcode"></label>
+                        <input type="text" name="postalcode" id="postalcode" value="<?php echo $row['postalcode'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60">โทรศัพท์ :</span></td>
+                    <td><input type="text" name="phone" id="phone" value="<?php echo $row['phone'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60" style="font-weight: bold">E-mail :</span></td>
+                    <td><label for="email"></label>
+                        <input type="text" name="email" id="email" value="<?php echo $row['email'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right">&nbsp;</td>
+
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="style60" style="text-align: right">จบการศึกษาระดับ :</td>
+                    <td><label for="edulevel"></label>
+                        <input type="text" name="edulevel" id="edulevel" value="<?php echo $row['edulevel'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="style60" style="text-align: right">จากสถานศึกษา :</td>
+                    <td><label for="eduplace"></label>
+                        <input type="text" name="eduplace" id="eduplace" value="<?php echo $row['eduplace'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="style60" style="text-align: right">จังหวัด :</td>
+                    <td><label for="eduprovince"></label>
+                        <input type="text" name="eduprovince" id="eduprovince" value="<?php echo $row['eduprovince'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="style60" style="text-align: right">ปีการศึกษา :</td>
+                    <td><label for="eduyear"></label>
+                        <input type="text" name="eduyear" id="eduyear" value="<?php echo $row['eduyear'];?>"></td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right">&nbsp;</td>
+
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td style="text-align: right"><span class="style60" style="font-weight: bold">อาชีพ :</span></td>
+                    <td>
+                      <label for="select"></label>
+                      <select name="job" id="job">
+                        <option selected><?php echo $row["job"];?></option>
+    
+                        <option>-- โปรดระบุ --</option>
+                        <option>ไม่ได้ประกอบอาชีพ</option>
+                        <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                        <option>รับราชการ</option>
+                        <option>พนักงานรัฐวิสาหกิจ</option>
+                        <option>ค้าขาย</option>
+                        <option>รับจ้างทั่วไป </option>
+                      </select>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <?php } ?>
+            </table>
+            <table width="600" border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td width="178">&nbsp;</td>
+                    <td width="65">&nbsp;</td>
+                    <td width="65">&nbsp;</td>
+                    <td width="282">&nbsp;</td>
+                </tr>
+                <tr>
+
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+
+            <p>
+          <input name="Update" type="submit" id="Update" value="Update" />
+        </p>
+        <p class="style1">&nbsp; </p>
+      </div>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      
-      <p align="left"><span class="style44">_________________________________________________________________________________________________________________________________________</span></p>      </td>
+      <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
   <tr>
     <td height="19" valign="top"><div align="center"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan ออกแบบและพัฒนาระบบโดยนักศึกษามหาวิทยาลัยอิสลามยะลา สาขาเทคโนโลยีสารสนเทศ</span></div></td>
@@ -127,7 +344,10 @@ body {
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
+
     </tr>
-</table>
+  </table>
+</form>
+
 </body>
 </html>

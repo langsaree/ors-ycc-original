@@ -1,7 +1,7 @@
 <?php
 session_start();
 include  ('../maintain/db.php');
-include ('auth.php');
+//include ('auth.php');
 extract ($_GET);
 
 		if(!empty($non_active)){

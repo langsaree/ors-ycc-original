@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../maintain/db.php');
+include ('../maintain/db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -107,14 +107,14 @@ if(isset($_POST['Submit'])) {
 # first name and last name
     $f_name = $_POST['f_name'];
     $name = $_POST['name'];
-    $s_name = $_POST['s_name'];
+    $last_name = $_POST['last_name'];
     if (empty($f_name)) {
         $errmsg11 = "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
     }
     if (empty($name)) {
         $errmsg12 = "<span style=color:red>กรุณากรอกชื่อด้วยค่ะ</span>";
     }
-    if (empty($s_name)) {
+    if (empty($last_nameame)) {
         $errmsg13 = "<span style=color:red>กรุณากรอกนามสกุลด้วยค่ะ</span>";
     }
 #===================================
@@ -265,8 +265,8 @@ if(isset($_POST['Submit'])) {
 #=================================
     if (!$errmsg3 && !$errmsg5 && !$errmsg10 && !$errmsg11 && !$errmsg12 && !$errmsg13 && !$errmsg22 && !$errmsg30)
     {
-        $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
-                  value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+        $query = "INSERT INTO student (username,password,f_name,name,last_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
+                  value('$login','$pswd','$f_name','$name','$last_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
         $do = mysqli_query($connection, $query);
         if ($do) {
             echo "<script>location='pstd_add.php';</script>";
@@ -455,7 +455,7 @@ if(isset($_POST['Submit'])) {
               <?php } ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF"><div align="left">นามสกุล</div></td>
-                <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $s_name ?>" />
+                <td height="1" bgcolor="#FFFFFF"><input type="text" name="last_name"  class="inputbox-normal" id="last_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $last_name ?>" />
                   <span class="style29"style="color:#F00;">*</span></td>
               </tr>
               <?php if($errmsg15) { ?>
