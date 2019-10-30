@@ -213,12 +213,11 @@ if (!isset($_SESSION["username"]))  // To check login user if already login then
         <h1 class="style30">ภาพกิจกรรม</h1>
         
         <div id="galleria">
-            <img src="http://www.ycc.ac.th/images/stories/pb058590.jpg" >
-            
-            <img src="http://www.ycc.ac.th/images/stories/imga4838.jpg">
-            <img  src="http://www.ycc.ac.th/images/stories/imga4900.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/pb058615.jpg">
-            <img src="http://www.ycc.ac.th/images/stories/imga4884.jpg">              </div>
+            <img src="../General/gallary/10.jpg" >
+            <img src="../General/gallary/11.jpg">
+            <img  src="../General/gallary/12.jpg">
+            <img src="../General/gallary/13.jpg">
+            <img src="../General/gallary/14.jpg">              </div>
     </div>
     <script>
     // Load the classic theme
