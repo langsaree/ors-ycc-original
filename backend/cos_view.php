@@ -85,7 +85,7 @@ body {
 	$lec_id = $row['lec_id'];
 	$cos_comment = $row['cos_comment'];
 
-    $sql2 = "select * from lecture where lec_id = '$lec_id' ";
+    $sql2 = "select * from lecturer where lec_id = '$lec_id' ";
 	  $a =mysqli_query ($connection, $sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{

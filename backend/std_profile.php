@@ -86,12 +86,12 @@ while($row = mysqli_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
-                    <td colspan="4"><?php echo $row["f_name"];?>&nbsp;&nbsp;<?php echo $row["name"]; ?></td>
+                    <td colspan="4"><?php echo $row["first_name"];?>&nbsp;&nbsp;<?php echo $row["name"]; ?></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
-                    <td><?php echo $row["s_name"];?></td>
+                    <td><?php echo $row["last_name"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

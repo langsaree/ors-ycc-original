@@ -282,16 +282,16 @@ if(isset($_POST['Submit'])) {
 #end password check
 #===================================	
 # first name and last name
-    $f_name = $_POST['f_name'];
+    $first_name = $_POST['first_name'];
     $name = $_POST['name'];
-    $s_name = $_POST['s_name'];
-    if (empty($f_name)) {
+    $last_name = $_POST['last_name'];
+    if (empty($first_name)) {
         $errmsg11 = "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
     }
     if (empty($name)) {
         $errmsg12 = "<span style=color:red>กรุณากรอกชื่อด้วยค่ะ</span>";
     }
-    if (empty($s_name)) {
+    if (empty($last_name)) {
         $errmsg13 = "<span style=color:red>กรุณากรอกนามสกุลด้วยค่ะ</span>";
     }
 #===================================
@@ -462,8 +462,8 @@ if(isset($_POST['Submit'])) {
     {
 
 
-        $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
-                  value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+        $query = "INSERT INTO student (username,password,first_name,name,last_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
+                  value('$login','$pswd','$first_name','$name','$last_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
 
         $do = mysqli_query($connection, $query);
         if ($do) {
@@ -641,7 +641,7 @@ if(isset($_POST['Submit'])) {
                   <tr>
                     <td bgcolor="#FFFFFF"><div align="left" class="black_color">คำนำหน้าชื่อ </div></td>
                     <td height="1" bgcolor="#FFFFFF"><div align="left">
-                      <select name="f_name" id="f_name">
+                      <select name="first_name" id="first_name">
                         <option selected>นาย</option>
                         <option>นาง</option>
                         <option>นางสาว</option>
@@ -673,7 +673,7 @@ if(isset($_POST['Submit'])) {
                   <?php } ?>
                   <tr>
                     <td height="1" bgcolor="#FFFFFF" class="black_color"><div align="left">นามสกุล</div></td>
-                    <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $s_name ?>" />
+                    <td height="1" bgcolor="#FFFFFF"><input type="text" name="last_name"  class="inputbox-normal" id="last_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $last_name ?>" />
                       <span class="style29">*</span></td>
                   </tr>
                   <?php if($errmsg15) { ?>

@@ -52,7 +52,7 @@ body {
   <tr>
     <td width="1027" height="74" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../public/image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/images/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br />
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
@@ -79,14 +79,14 @@ body {
 	{
 	$std = $row['std_id'];
 	$user= $row['username'];
-	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
+	$name= $row['first_name']." <span> ". $row['name']." <span> ". $row['last_name'];
 	?>
       <tr>
 		<td><div align="left"><?php echo $std?> </div></td>
 		<td><div align="center"><?php echo $user ?></div></td>
 		<td><div align="left"><?php echo $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../public/image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../public/image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../public/images/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../public/images/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
      <?php } ?>

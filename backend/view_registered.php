@@ -75,13 +75,13 @@ body {
 <body>
 <table width="1260" border="0">
   <tr>
-    <td><img src="../public/image/header-bg.png" width="1260" height="45" /></td>
+    <td><img src="../public/images/header-bg.png" width="1260" height="45" /></td>
   </tr>
   
   <tr>
     <td><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../public/image/student register.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/images/student register.png" width="100" height="100" /></td>
         <td width="94%"><span class="style36">View<span class="style38"> Registered&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class="style6"><a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel</a>&nbsp;</span><span class="style36"><span class="style38"> &nbsp;</span></span><span class="style6">&nbsp;</span><br />
           <span class="style34">แสดงรายชื่อนักศึกษาลงทะเบียน</span></td>
       </tr>
@@ -135,10 +135,10 @@ body {
 	while ($ro1 = mysqli_fetch_array($re))
 	{
 		$std1= $ro1['std_id'];
-		$name= $ro1['f_name']."<span>".$ro1['name']."-".$ro1['s_name'];
+		$name= $ro1['first_name']."<span>".$ro1['name']."-".$ro1['last_name'];
 	
 	//////////////////forth/////////////////////
-    $sql2 = "select * from lecture where lec_id = '$lec' ";
+    $sql2 = "select * from lecturer where lec_id = '$lec' ";
 	  $a =mysqli_query ($connection, $sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{

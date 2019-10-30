@@ -91,7 +91,7 @@ border-color:#8A9AA6;
   <tr>
     <td height="74" align="center" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../public/image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/images/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">View</span>  <span class="style38"> Student Status</span></span></span>  &nbsp;&nbsp;&nbsp;&nbsp;<a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br />
             <span class="style34">แสดงสถานะนักศึกษา</span></td>
         </tr>
@@ -129,12 +129,12 @@ border-color:#8A9AA6;
   $sql = "select * from student order by status DESC";
   $result = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_array($result)){
-		$n = $row['f_name'] . $row['name'];
+		$n = $row['first_name'] . $row['name'];
 		?>  
     
         <tr>
           <td align="center" bgcolor="#FFFFB0"><?php echo $row['std_id']?></td>  
-          <td align="left" bgcolor="#FFFFB0"><?php echo $n?>  -  <?php  echo $row['s_name']?></td>
+          <td align="left" bgcolor="#FFFFB0"><?php echo $n?>  -  <?php  echo $row['last_name']?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
             <?php $status=$row['status'];
 	       if($status== 1){

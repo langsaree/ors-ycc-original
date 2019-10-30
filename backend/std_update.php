@@ -9,9 +9,9 @@ if(isset($_POST['Update'])){
     $login = $_POST['login'];
     $pswd = $_POST['pswd'];
 
-    $f_name=$_POST['f_name'];
+    $first_name=$_POST['first_name'];
     $name=$_POST['name'];
-    $s_name=$_POST['s_name'];
+    $last_name=$_POST['last_name'];
     $nation=$_POST['nation'];
     $origin=$_POST['origin'];
     $religion=$_POST['religion'];
@@ -35,7 +35,7 @@ if(isset($_POST['Update'])){
 
     $job=$_POST['job'];
 
-    $query = "UPDATE student set username='$login',password='$pswd',f_name='$f_name',name='$name',s_name='$s_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$std_id'";
+    $query = "UPDATE student set username='$login',password='$pswd',first_name='$first_name',name='$name',last_name='$last_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$std_id'";
 
     $do = mysqli_query($connection, $query);
     if ($do)
@@ -149,9 +149,9 @@ body {
                 <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
-                    <td colspan="4"><label for="f_name"></label>  
-                      <select name="f_name" size="1" id="f_name">
-                      <option selected><?php echo $row['f_name'];?></option>
+                    <td colspan="4"><label for="first_name"></label>  
+                      <select name="first_name" size="1" id="first_name">
+                      <option selected><?php echo $row['first_name'];?></option>
                       <option>-- โปรดระบุ --</option>
                       <option>นาย</option>
                         <option>นาง</option>
@@ -172,8 +172,8 @@ body {
                 <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
-                    <td><label for="s_name"></label>
-                        <input type="text" name="s_name" id="s_name" value="<?php echo $row['s_name'];?>"></td>
+                    <td><label for="last_name"></label>
+                        <input type="text" name="last_name" id="last_name" value="<?php echo $row['last_name'];?>"></td>
 
                 </tr>
                 <tr>
