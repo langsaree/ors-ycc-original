@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include ('../config/db.php');
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 }
@@ -25,7 +25,7 @@ if($count==1){
   ?>
   <script>
     window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
-    window.location.href="std_profile.php";
+    window.location.href="index.php";
   </script>
   <!-- header("Location:std_profile.php"); -->
   <?php
@@ -99,7 +99,7 @@ $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$passwor
           </div>
           <div class="Header">
             <div class="HeaderTitle">
-              <div align="left"><img src="images/banner.jpg" width="836" height="250"></div>
+              <div align="left"><img src="images/banner.jpg" width="1000" height="250"></div>
               <h1>&nbsp;</h1>
             </div>
           </div>
@@ -120,58 +120,64 @@ $sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$passwor
 if (!isset($_SESSION['username']) || !isset($_SESSION['username']))
     {
 ######################################   To show login form if user do not login ###################################
-    echo '<form action="" method="post">
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+echo '<form action="" method="post">
+<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+           <div align="left">
+           <td><span class="style9">ล็อกอิน::</span></div></td>
+          </tr>
+        </table>
+<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><label>
+              <input type="text" name="username" />
+            </label></td>
+          </tr>
+        </table>
+
+<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><span class="style9">รหัสผ่าน::</span></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><input type="password" name="password" /></td>
+          </tr>
+        </table>
+<table width="161" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="72"><label for="Submit"></label>
+              <input type="submit" name="ok" id="ok" value="เข้าสู่ระบบ" /></td>
+            <td width="7">&nbsp;</td>
+            <td width="175"><label><a href="password_recovery.php">ลืมรหัสผ่าน?</a></label></td>
+          </tr>
+          <tr>
+
+          </tr>
+        </table>
+        </form>
+
+          <br><br>
+
+        </p>
+        <p>&nbsp;</p>
+    <table width="150" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td></td>
-              </tr>
-              <tr>
-               <div align="left">
-               <td><span class="style9">ล็อกอิน::</span></div></td>
+                <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
               </tr>
             </table>
-		<table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><label>
-                  <input type="text" name="username" />
-                </label></td>
-              </tr>
-            </table>
-    <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><span class="style9">รหัสผ่าน::</span></td>
-              </tr>
-            </table>
-            <p>&nbsp;</p>
-    <table width="150" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td><input type="password" name="password" /></td>
-              </tr>
-            </table>
-    <table width="161" border="0" align="left" cellpadding="0" cellspacing="0">
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td width="72"><label for="Submit"></label>
-                  <input type="submit" name="ok" id="ok" value="เข้าสู่ระบบ" /></td>
-                <td width="7">&nbsp;</td>
-                <td width="175"><label><a href="password_recovery.php">ลืมรหัสผ่าน?</a></label></td>
-              </tr>
-              <tr>
-              </tr>
-            </table>
-            </form>
-              <br><br>
-            </p>
-            <p>&nbsp;</p>
-        <table width="150" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td><div align="center"><a href="register.php"><img src="images/register.gif"  width="130" height="35"></a></div></td>
-                  </tr>
-                </table>
+
+
 				<?php '; ?>
 
 				<?php } else { ?>
@@ -183,7 +189,8 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['username']))
 					<?php
 					echo '<br><span class="style7">ยินดีต้อนรับ ::</span>';
 					echo '<span class="style26 "> '.$_SESSION["username"].' </span><br>';
-					echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
+          echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>';
+          echo '<span class="style7"><a href="std_view_lecturer.php">อาจารย์ผู้สอน</a></span><br>';
 					echo '<span class="style7"><a href="logout.php">ออกจากระบบ</a><span class="style7"><br>';
 				}
 				?>
