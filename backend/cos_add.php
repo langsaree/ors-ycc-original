@@ -230,7 +230,7 @@ body {
             </tr>
             <?php }?>
             <tr>
-              <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
+              <td height="28"><div align="right">ลำดับอาจารย์ผู้สอน</div></td>
               <td>&nbsp;</td>
               <td><input name="lec_id" type="text" id="lec_id" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php $lec_id ?>" /></td>
             </tr>

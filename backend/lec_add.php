@@ -103,7 +103,7 @@ body {
             *            </span></label></td>
         </tr>
         <tr>
-          <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์ห</span>ผู้สอน :</span> </td>
+          <td width="32%" align="right"><span class="style40">รหัส<span class="style49"></span>อาจารย์ผู้สอน :</span> </td>
           <td width="68%" class="red"><label>
             <span class="style50">
             <input name="lec_Teach_id" type="text" size="20" id="lec_Teach_id" />
@@ -111,7 +111,7 @@ body {
         </tr>
    
         <tr>
-          <td width="32%" align="right" class="style40"><span class="style40">ชื่อ<span class="style49">อาจารย์</span>ผู้สอน :</span></td>
+          <td width="32%" align="right" class="style40"><span class="style40">ชื่อ<span class="style49"></span>อาจารย์ผู้สอน :</span></td>
           <td width="68%"><label>
             <input name="lec_name" type="text" size="30" id="lec_name" />
             <span class="style50">          *</span></label></td>
