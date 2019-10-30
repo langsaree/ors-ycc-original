@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db.php";
+include ('../db.php');
 // include('auth.php');
 extract($_GET);
 $user_admin = $_SESSION["user_admin"];
@@ -9,7 +9,7 @@ $non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 $msg = "";
 if (!empty($active)) {
     $sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-    $result = mysqli_query($connection, $sql);
+    $result = mysqli_query($conn, $sql);
     if ($result) {
         $msg = '<span style="color:green; font-weight:bold">' . $active . '</span>' . '  ' . 'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
     } else {

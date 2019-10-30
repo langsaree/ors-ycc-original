@@ -1,20 +1,20 @@
 <?php
 session_start();
-include('../config/db.php');
+include('../db.php');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="style.css"/>
-    <style type="text/css">
-        .style29 {
-            color: #FF0000;
-            font-size: 16px;
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-style: oblique;
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="style.css"/>
+<style type="text/css">
+    .style29 {
+        color: #FF0000;
+        font-size: 16px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: oblique;
         }
     </style>
 </head>
@@ -27,11 +27,11 @@ include('../config/db.php');
 <img src="../public/image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
 <p align="center"> _____________________________________________________________________________</p></td>
 <div class="BodyContent">
-    <div class="BorderBorder">
-        <div class="BorderBR">
-            <div></div>
-        </div>
-        <div class="BorderTL"></div>
+<div class="BorderBorder">
+<div class="BorderBR">
+<div></div>
+</div>
+<div class="BorderTL"></div>
         <div class="BorderTR">
             <div></div>
         </div>
@@ -854,65 +854,61 @@ include('../config/db.php');
                                         <td width="409">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>ลักษณะอาชีพที่ท่านประกอบอยู่</td>
-                                        <td><div align="left">
-                                                <label for=""></label>
-                                                <select name="job">
-                                                    <option value="0"selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- โปรดระบุ --&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                                                    <option>ไม่ได้ประกอบอาชีพ</option>
-                                                    <option>ลูกจ้างบริษัท/ห้างร้าน</option>
-                                                    <option>รับราชการ</option>
-                                                    <option>พนักงานรัฐวิสาหกิจ</option>
-                                                    <option>ค้าขาย</option>
-                                                    <option>รับจ้างทั่วไป </option>
-                                                </select>
-                                            </div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" bgcolor="#CCCCCC">&nbsp;</td>
-                                    </tr>
-                                </table>
+<td>ลักษณะอาชีพที่ท่านประกอบอยู่</td>
+<td><div align="left">
+<label for=""></label>
+<select name="job">
+<option value="0"selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- โปรดระบุ --&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option>ไม่ได้ประกอบอาชีพ</option>
+<option>ลูกจ้างบริษัท/ห้างร้าน</option>
+<option>รับราชการ</option>
+<option>พนักงานรัฐวิสาหกิจ</option>
+<option>ค้าขาย</option>
+<option>รับจ้างทั่วไป </option>
+</select>
+</div></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" bgcolor="#CCCCCC">&nbsp;</td>
+</tr>
+</table>
+<table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td height="16">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="16">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="213" height="16">&nbsp;</td>
+<td width="224"><button type="submit" name="Submit" value="Submit" alt="Submit"><img src="../public/images/register.png"/></td>
+<td width="174">&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</td>
+<td>&nbsp;</td>
+</tr>
 
-
-                                <table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td height="16">&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td height="16">&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="213" height="16">&nbsp;</td>
-                                        <td width="224"><button type="submit" name="Submit" value="Submit" alt="Submit"><img src="../public/images/register.png"/></td>
-                                        <td width="174">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>&nbsp;</td>
-
-                                        </td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </form>
-                            <p align="center"><br />
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<tr>
+<td>&nbsp;</td>
+ <td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</form>
+<p align="center"><br />
+</p>
+</div>
+</div>
+</div>
 </body>
 </html>

@@ -1,8 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user_admin"])){
-  header("location:cpanel.php");
-}
+if(isset($_SESSION["user_admin"])){header("location:cpanel.php");}
 ob_start(); 
 include("../db.php");
 if (empty($username) && empty($password)){
@@ -39,7 +37,6 @@ ob_end_flush();
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/example.js'></script>
     <style type="text/css">
-<!--
 .style2 {color: #0066FF}
 .style3 {color: #666666}
 .style5 {
@@ -50,7 +47,6 @@ ob_end_flush();
 	font-weight: bold;
 	text-decoration:none;
 }
--->
     </style>
 </head>
 
@@ -66,8 +62,7 @@ ob_end_flush();
 &nbsp;&nbsp;                <span class="style7"><a href="../index.php" class="style7">กลับหน้าหลัก</a></span></p>
     </form>
   </div>
-        
-        
+
         </div>
 			
 	</div>
