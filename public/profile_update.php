@@ -1,43 +1,36 @@
 <?php
 session_start();
 include('auth.php');
-include ('db.php');
+include('../config/db.php');
 extract ($_GET);
-
-//$user=$_POST['std_id'];
-$username = $_SESSION["username"];
+$username = $_SESSION['username'];
 $user=$_GET['id'];
 ?>
 <?php
-//$ok=$_POST['ok'];
-if(isset($_POST['ok'])){
+if(isset($_POST['ok'])){	
    $login = $_POST['login'];
    $email=$_POST['email'];
    $pswd = $_POST['pswd'];
-   $cpswd = $_POST['cpswd'];
-   $fname=$_POST['fname'];
+   //$cpswd = $_POST['cpswd'];
+   $f_name=$_POST['f_name'];
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
-   //$b_day=$_POST['b_day'];
-   //$b_month=$_POST['b_month'];
-   //$b_year=$_POST['b_year'];
-   //$birthday=$b_day.'/'.$b_month.'/'.$b_year; 
+   $gender=$_POST['gender'];
+
    $birthday=$_POST['birthday'];
    
    $nation=$_POST['nation'];
    $origin=$_POST['origin'];
    $religion=$_POST['religion'];
-
+   
     $std_id=$_POST['std_id'];
-    $home=$_POST['home'];
-    //$m_home=$_POST['m_home'];
-    //$r_home=$_POST['r_home'];
-    //$v_home=$_POST['v_home'];
+   // $home=$_POST['home'];
+
     $city=$_POST['city'];
     $province=$_POST['province'];
     $postalcode=$_POST['postalcode'];
     $phone=$_POST['phone'];
-	//$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
+
 	$address=$_POST['address'];
 	$edulevel=$_POST['edulevel'];
     $eduplace=$_POST['eduplace'];
@@ -45,7 +38,7 @@ if(isset($_POST['ok'])){
     $eduyear=$_POST['eduyear'];
 	$job=$_POST['job']; 
 	
-	$query = "UPDATE student set username ='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
+	$query = "UPDATE student set username='$login',password='$pswd',f_name='$f_name',name='$name',s_name='$s_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$user'";
 
        $do = mysqli_query($connection, $query);
        if ($do)
@@ -53,16 +46,12 @@ if(isset($_POST['ok'])){
           header("location:std_profile.php");
 		 }	
 		 else{	 
-	   die("Could not select db".mysqli_error());
-	   //header("location:std_profile.php");
-	   }}
-    else
-   { 
-       
-   } 
+	   die("Could not select db".mysqli_error($connection));
 
+	   }}
+    
 ?>
-<!-- <script type="text/javascript">window.location="index.php";</script>-->
+
 
 <!DOCTYPE html>
 <html>
@@ -129,7 +118,6 @@ input, textarea {
 		color:#000000;
 	}
 
-
     </style>
 </head>
 <body>
@@ -163,7 +151,16 @@ input, textarea {
                 <td width="170">&nbsp;</td>
               </tr>
               <tr>
-                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; color: #111111; font-size:15px"> '.$username.'</span>'; ?></td>
+                <td><span class="style64"><span style="color: #2192CF">ยินดีต้อนรับ</span> ::</span> <?php echo  '<span style="font-weight:bold; color:#000 font-size:15px"> '.$username.'</span>'; ?></td>
+                <tr>
+                <td><?php echo '<span class="style7"><a href="std_profile.php">ข้อมูลส่วนตัว</a></span><br>'; ?></td>
+              </tr>  
+              <tr>
+                <td><?php echo '<span class="style7"><a href="std_view_lecturer.php">อาจารย์ผู้สอน</a></span><br>'; ?></td>
+              </tr>
+              <tr>
+              <td style="text-align:left"><strong><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>ออกจากระบบ</a></strong></td>
+              </tr>
               </tr>
               <tr>
                 <td>&nbsp;</td>
@@ -205,10 +202,8 @@ input, textarea {
          <table width="637" height="50" border="0" cellpadding="0" cellspacing="5">
            <tr>
              <td
- 
-                         width="455" height="18" valign="middle">&nbsp;</td>
-             <td width="79" valign="middle" class="style33"><a href="std_profile.php" class="style67" style="text-decoration: none">ดูข้อมูลส่วนตัว</a></td>
-             <td width="83" valign="middle"><span class="style66"><a href="logout.php" style="text-decoration: none" >ออกจากระบบ</a></span></td>
+               width="455" height="18" valign="middle">&nbsp;</td>
+             <td width="79" valign="middle" class="style33"><a href="std_profile.php" class="style67" style="text-decoration: none"></a></td>
            </tr>
            <tr>
              <td height="17" colspan="3" valign="middle"><span class="style56">----------------------------------------------------------------------------------------</span></td>
@@ -216,12 +211,12 @@ input, textarea {
        </table>
          <table width="600" border="0" align="center" cellpadding="0" cellspacing="2">
            <tr>
-<?php
-//$sql = "select * from student where std_id =  '$user' ";
-$sql = "select * from student where username =  '$username' ";
-$result = mysqli_query($connection, $sql);
-while($row=mysqli_fetch_array($result))
-{
+           <?php
+           include ('../config/db.php');
+           $sql = "select * from student where username =  '$username' ";
+           $result = mysqli_query($connection, $sql);
+           while($row=mysqli_fetch_array($result))
+           {
 
 ?>
              <td width="229">&nbsp;</td>
@@ -247,12 +242,12 @@ while($row=mysqli_fetch_array($result))
                     <td width="27" height="18">&nbsp;</td>
                     <td width="135" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
                     <td colspan="4"><label for="login"></label>
-                      <input type="text" name="login" id="login" value="<?php echo $row["username"];?>">    </tr>
+                      <input type="text" name="login" id="login" value="<?php echo $row['username'];?>">                    </tr>
                   <tr>
                     <td height="18" style="text-align: right">&nbsp;</td>
                     <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
                     <td colspan="4"><label for="pswd"></label>
-                      <input type="password" name="pswd" id="pswd" value="<?php echo $row["password"];?>"></td>
+                      <input type="password" name="pswd" id="pswd" value="<?php echo $row['password'];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -266,31 +261,32 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
                     <td colspan="4"><label for="fname"></label>  
-                      <select name="fname" size="1" id="fname">
-					  <?php
-                      $sql3="select * from mrmrs";
-			          $result3=mysqli_query($connection,$sql3);
-			          while($data3=mysqli_fetch_array($result3)){
-			 	          if($data3['id']==$data3[0]){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
+                    <select name="f_name" size="1" id="f_name">
+                      <option selected><?php echo $row['f_name'];?></option>
+                      <option>-- โปรดระบุ --</option>
+                      <option>นาย</option>
+                        <option>นาง</option>
+                        <option>นางสาว</option>
+                        <option>ด.ช.</option>
+                        <option>ด.ญ.</option>
+                        <option>Miss.</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        </select>
                       </select></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
                     <td colspan="4"><label for="name"></label>
-                      <input type="text" name="name" id="name" value="<?php echo $row["name"];?>"></td>
+                      <input type="text" name="name" id="name" value="<?php echo $row['name'];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
                     <td><label for="s_name"></label>
-                      <input type="text" name="s_name" id="s_name" value="<?php echo $row["s_name"];?>"></td>
+                      <input type="text" name="s_name" id="s_name" value="<?php echo $row['s_name'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -299,7 +295,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">สัญชาติ :</span></td>
                     <td><label for="nation"></label>
-                      <input name="nation" type="text" id="nation" value="<?php echo $row["nation"];?>"></td>
+                      <input name="nation" type="text" id="nation" value="<?php echo $row['nation'];?>"></td>
                     <td class="style60">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -309,7 +305,7 @@ while($row=mysqli_fetch_array($result))
                     <td style="text-align: right"><span class="style60">เชื้อชาติ : </span></td>
                     <td>
             <label for="origin"></label>
-                    <input name="origin" type="text" id="origin" value="<?php echo $row["origin"];?>"></td>
+                    <input name="origin" type="text" id="origin" value="<?php echo $row['origin'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -318,7 +314,7 @@ while($row=mysqli_fetch_array($result))
                     <td height="19" >&nbsp;</td>
                     <td class="style60" style="text-align: right">ศาสนา :</td>
                     <td><label for="religion"></label>
-                      <input name="religion" type="text" id="religion" value="<?php echo $row["religion"];?>"></td>
+                      <input name="religion" type="text" id="religion" value="<?php echo $row['religion'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -326,7 +322,8 @@ while($row=mysqli_fetch_array($result))
                   <tr>
                     <td height="19" >&nbsp;</td>
                     <td style="text-align: right"><span class="style60">เพศ :</span></td>
-                    <td><?php  echo $row["gender"];?></td>
+                    <td><label for="gender"></label>
+                      <input name="gender" type="text" id="gender" value="<?php echo $row['gender'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -335,7 +332,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">วันเกิด : </span></td>
                     <td><label for="birthday"></label>
-                      <input name="birthday" type="text" id="birthday" value="<?php echo $row["birthday"];?>"></td>
+                      <input name="birthday" type="text" id="birthday" value="<?php echo $row['birthday'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -344,7 +341,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span style="font-weight: bold; text-align: right;"><span class="style61">เลขบัตรประชาชน<span class="style46"> :</span></span></span></td>
                     <td><label for="std_id"></label>
-                      <input name="std_id" type="text" id="std_id" maxlength="13" value="<?php echo $row["std_id"];?>"></td>
+                      <input name="std_id" type="text" id="std_id" maxlength="13" value="<?php echo $row['std_id'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -361,7 +358,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style61"><span class="style60">บ้านเลขที่ :</span></span></td>
                     <td colspan="4"><label for="address"></label>
-                      <textarea name="textarea" id="textarea" cols="23" rows="5"><?php echo $row["address"];?></textarea></td>
+                      <textarea name="address" id="textarea" cols="23" rows="5"><?php echo $row['address'];?></textarea></td>
                   </tr>
                   
                   
@@ -369,7 +366,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style47"><span class="style60">เขต/อำเภอ<span class="style46"> :</span></span></span></td>
                     <td><label for="city"></label>
-                      <input type="text" name="city" id="city" value="<?php echo $row["city"];?>"></td>
+                      <input type="text" name="city" id="city" value="<?php echo $row['city'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -378,7 +375,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">จังหวัด :</span></td>
                     <td><label for="province"></label>
-                      <input type="text" name="province" id="province" value="<?php echo $row["province"];?>"></td>
+                      <input type="text" name="province" id="province" value="<?php echo $row['province'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -387,7 +384,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">รหัสไปรษณีย์ : </span></td>
                     <td><label for="postalcode"></label>
-                      <input type="text" name="postalcode" id="postalcode" value="<?php echo $row["postalcode"];?>"></td>
+                      <input type="text" name="postalcode" id="postalcode" value="<?php echo $row['postalcode'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -395,7 +392,7 @@ while($row=mysqli_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60">โทรศัพท์ :</span></td>
-                    <td><input type="text" name="phone" id="phone" value="<?php echo $row["phone"];?>"></td>
+                    <td><input type="text" name="phone" id="phone" value="<?php echo $row['phone'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -404,7 +401,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">E-mail :</span></td>
                     <td><label for="email"></label>
-                      <input type="text" name="email" id="email" value="<?php echo $row["email"];?>"></td>
+                      <input type="text" name="email" id="email" value="<?php echo $row['email'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -421,7 +418,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">จบการศึกษาระดับ :</td>
                     <td><label for="edulevel"></label>
-                      <input type="text" name="edulevel" id="edulevel" value="<?php echo $row["edulevel"];?>"></td>
+                      <input type="text" name="edulevel" id="edulevel" value="<?php echo $row['edulevel'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -430,7 +427,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">จากสถานศึกษา :</td>
                     <td><label for="eduplace"></label>
-                      <input type="text" name="eduplace" id="eduplace" value="<?php echo $row["eduplace"];?>"></td>
+                      <input type="text" name="eduplace" id="eduplace" value="<?php echo $row['eduplace'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -439,7 +436,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">จังหวัด :</td>
                     <td><label for="eduprovince"></label>
-                      <input type="text" name="eduprovince" id="eduprovince" value="<?php echo $row["eduprovince"];?>"></td>
+                      <input type="text" name="eduprovince" id="eduprovince" value="<?php echo $row['eduprovince'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -448,7 +445,7 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td class="style60" style="text-align: right">ปีการศึกษา :</td>
                     <td><label for="eduyear"></label>
-                      <input type="text" name="eduyear" id="eduyear" value="<?php echo $row["eduyear"];?>"></td>
+                      <input type="text" name="eduyear" id="eduyear" value="<?php echo $row['eduyear'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -467,18 +464,16 @@ while($row=mysqli_fetch_array($result))
                     <td>
                       <label for="select"></label>
                       <select name="job" id="job">
-                      <?php
-			 $sql3="select * from joblist";
-			 $result3=mysqli_query($connection,$sql3);
-			 while($data3=mysqli_fetch_array($result3)){
-			 	if($data3['job_id']==$data3[0]){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
-                      </select></td>
+                      <option selected><?php echo $row["job"];?></option>
+    
+                        <option>-- โปรดระบุ --</option>
+                        <option>ไม่ได้ประกอบอาชีพ</option>
+                        <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                        <option>รับราชการ</option>
+                        <option>พนักงานรัฐวิสาหกิจ</option>
+                        <option>ค้าขาย</option>
+                        <option>รับจ้างทั่วไป </option>
+                      </select>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -536,8 +531,6 @@ while($row=mysqli_fetch_array($result))
         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
         </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+        <?php include('../config/style.php');?>
 </body>
 </html>

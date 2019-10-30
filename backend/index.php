@@ -1,9 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION['user_admin'])) {header("location:index.php");}
 
 include('../config/db.php');
-  
+if (isset($_SESSION['user_admin'])) {
+    $user_admin = $_SESSION["user_admin"];
+  }
 if(empty($username) && empty($password)){
     
 }

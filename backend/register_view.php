@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -33,7 +33,7 @@ body {
 .style39 {	font-size: 13px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
--->
+
 </style>
 </head>
 
@@ -41,7 +41,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="551" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -49,7 +49,7 @@ body {
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="image/update_course.jpg" width="91" height="82" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style47">View</span><span class="style38"> Register </span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36"><span class="style47">View</span><span class="style38"> Register </span></span></span>  <a href="cpanel.php" class="style6"; style="text-decoration:none">ControlPanel</a> |  <a href="manage_register.php" class="style6" style="text-decoration:none">Manage Register</a><br />
           <span class="style48"><span class="style34">แสดงรายวิชา</span><span class="style39">ที่ลงทะเบียน</span></span></td>
         </tr>
     </table>
@@ -61,9 +61,9 @@ body {
       <div align="center">
         <table width="353" height="76" border="0" cellpadding="0" cellspacing="10">
           <?
-	include('db_connect.php');
+	include('../config/db.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
+	$show = mysql_query($connection, $sql);
 	while($shows = mysql_fetch_row($show))
 	{
 	?>

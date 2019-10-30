@@ -1,5 +1,4 @@
-<?php 
-//session_start();
+<?php
 include('auth.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -8,7 +7,7 @@ include('auth.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>view student</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -46,33 +45,18 @@ body {
 <body>
 <table width="998" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1045"><img src="../images/header-bg.png" width="1260" height="45" /></td>
+      <td width="1045"><img src="../public/images/header.png" width="1260" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="554" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td width="1027" height="74" valign="top"><table width="83%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="../public/image/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">View<span class="style38"> Student</span></span></span><a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br />
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
-              <form id="form1" name="form1" method="post" action="std_view_search.php">
-      <table width="1151" height="50" border="0" align="left" cellpadding="0" cellspacing="5">
-           <tr>
-                <td width="83">&nbsp;</td>
-                <td width="146"><label>
-                <input type=hidden name=todo value=search>
-                <input name="search_text" type="text" id="search" size="20" />
-                </label></td>
-                <td width="48"><label>
-                <input type="submit" name="button" id="button" value="ค้นหา" />
-                </label></td>
-                <td width="849">&nbsp;</td>
-              </tr>
-      </table>
-      </form>
               <p>&nbsp;</p>
       <p><span class="style44">________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
@@ -86,9 +70,9 @@ body {
         <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
         <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
       </tr>
-     <?php  
+     <?php 
 		/////////////////////////take information from student table //////////////////////////
-	include('../config/db.php');
+  include('../config/db.php');
 	$sql1 = "select * from student ";
 	$v=mysqli_query ($connection, $sql1);
 	while ($row= mysqli_fetch_array($v))
@@ -96,20 +80,16 @@ body {
 	$std = $row['std_id'];
 	$user= $row['username'];
 	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
-	//echo $name;
 	?>
       <tr>
 		<td><div align="left"><?php echo $std?> </div></td>
 		<td><div align="center"><?php echo $user ?></div></td>
 		<td><div align="left"><?php echo $name?></div></td>
-        <td><div align="center"><a href="std_update.php?id= <?php  echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_delete.php?id= <?php  echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
-        <td><div align="center"><a href="std_profile.php?id=<?php  echo $std;?>">แสดงรายละเอียด</a></div></td>
+        <td><div align="center"><a href="std_update.php?id= <?php echo $std; ?> "><img src="../public/image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../public/image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
+        <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <?php  } ////// close first while //////////////////////////////////////////////
-		//} //////// close of second while ////////////////////
-		//} /////// close 3rd while ///////////////////////
-		?>
+     <?php } ?>
     </table>
       <p></p>
       <p>&nbsp;</p>

@@ -1,21 +1,21 @@
 <?php
-include ('db.php');
+include('../config/db.php');
 $cos_id = $_POST['cos_id'];
 $cos_group = $_POST['cos_group'];
 $cos_name = $_POST['cos_name'];
 $cos_period = $_POST['cos_period'];
 $cos_day =$_POST['cos_day'];
-$cos_after =$_POST['cos_after'];
-$cos_time =$_POST['cos_time'];
-$date = $cos_day."". $cos_after ."".$cos_time;
+
+$date = ".$cos_day.";
 $lec_id =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
-mysql_query ("SET NAMES 'utf8'");
+
+
 
 $sql = "UPDATE course SET cos_id='$cos_id',cos_group='$cos_group',cos_name='$cos_name',cos_period='$cos_period',cos_day='$date',lec_id='$lec_id',cos_comment='$cos_comment' where cos_id='$cos_id'";
 $sql1 = "UPDATE lecture SET lec_id='$lec_id' WHERE lec_id='$lec_id'";
-$re = mysql_query($sql1);
-$result = mysql_query($sql);
+$re = mysqli_query($connection, $sql1);
+$result = mysqli_query($connection, $sql);
 if (!$result && !$re)	
 { 
 die("error db".mysql_error());
@@ -28,16 +28,16 @@ else {
 <meta http-equiv="Content-Type" content="charset=utf-8; url='cos_view.php'" />
 <meta http-equiv="refresh" content="1 url='cos_view.php'" />
 
-<title>Untitled Document</title>
+<title>Updating</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
+
 </style></head>
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
@@ -60,4 +60,4 @@ body {
   </table>
 </body>
 </html>
-<? } ?>
+<?php } ?>

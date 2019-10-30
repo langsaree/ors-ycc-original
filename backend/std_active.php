@@ -1,6 +1,6 @@
 <?php 
 include('../config/db.php');
-include('auth.php');
+session_start();
 extract ($_GET);
 $msg='';
 if(!empty($active)){

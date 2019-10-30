@@ -42,7 +42,7 @@ $date = $cos_day."-". $cos_after ."/". $cos_time;
 	   if(empty($cos_time)){
            $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
    #====================================
-$lec_id =$_POST['lec_id'];
+$lec_id =$_POST['lec_name'];
    if(empty($lec_id)){
    $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
    
@@ -232,7 +232,7 @@ body {
             <tr>
               <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
               <td>&nbsp;</td>
-              <td><input name="lec_id" type="text" id="lec_id" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php $lec_id ?>" /></td>
+              <td><input name="lec_name" type="text" id="lec_name" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php $lec_name ?>" /></td>
             </tr>
             <tr>
               <td><div align="right">หมายเหตุ ::</div></td>
