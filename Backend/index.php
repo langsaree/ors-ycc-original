@@ -22,6 +22,7 @@ $password = "";
             $count=mysqli_num_rows($result);
             if($count==1/*&&strcmp($code,$code_hidden)==0*/)
             {
+                $_SESSION["user_admin"] = $username;
                // $user_admin = $username;
                 //$pass_admin = $password;
                 $_SESSION['logined'] = true;
