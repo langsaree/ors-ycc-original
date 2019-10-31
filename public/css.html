@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.expand a:before {
+   content:"";
+   position:absolute;
+   top:50%;
+   left:1px;
+   width:5px;
+   height:0;
+   border-width:7px 7px 0;
+   border-style:solid;
+   border-color:transparent #c55500;
+   margin-top:-4px;
+   /* css3 */
+   -webkit-transform:rotate(-45deg);
+   -moz-transform:rotate(-45deg);
+   -o-transform:rotate(-45deg);
+   transform:rotate(-45deg);
+}
+
+.expand a:after {
+   content:"";
+   position:absolute;
+   top:50%;
+   left:5px;
+   width:8px;
+   height:8px;
+   border-width:3px 0 0 3px;
+   border-style:solid;
+   border-color:#c55500;
+   margin-top:-6px;
+}
+
+.expand a:hover:before,
+.expand a:focus:before,
+.expand a:active:before {
+   border-color:transparent #730800;
+}
+
+.expand a:hover:after,
+.expand a:focus:after,
+.expand a:active:after {
+   border-color:#730800;
+}
+
+    </style>
+</head>
+
+<body>
+<ul>
+   <li class="power"><a href="#non">Power</a></li>
+   <li class="play"><a href="#non">Play</a></li>
+   <li class="stop"><a href="#non">Stop</a></li>
+   <li class="pause"><a href="#non">Pause</a></li>
+</ul>
+</body>
+</html>
