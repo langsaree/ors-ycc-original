@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="laaaaast">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/project-original-code/ors-ycc-original/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/Files/project-original-code/ors-ycc-original/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cpanel/manage_evaluation.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/manage_evaluation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/manage_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/manage_lecturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos_addx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_addx.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cpanel/plec_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/psearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/psearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view _status.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view _status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view_cos_status.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view_cos_status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/view_registered.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/std_login_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/std_login_check.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/manage_statis.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/manage_register.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/manage_lecturer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,11 +34,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/manage_evaluation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+            <state relative-caret-position="918">
+              <caret line="54" column="144" lean-forward="true" selection-start-line="54" selection-start-column="144" selection-end-line="54" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -67,6 +46,87 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/manage_course.php">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cpanel/lec_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="98" column="44" lean-forward="true" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="44" />
+              <folding>
+                <element signature="e#4134#4140#0#HTML" expanded="true" />
+                <element signature="e#4140#4146#0#HTML" expanded="true" />
+                <element signature="e#4146#4152#0#HTML" expanded="true" />
+                <element signature="e#4152#4158#0#HTML" expanded="true" />
+                <element signature="e#4226#4232#0#HTML" expanded="true" />
+                <element signature="e#4232#4238#0#HTML" expanded="true" />
+                <element signature="e#4238#4244#0#HTML" expanded="true" />
+                <element signature="e#4244#4250#0#HTML" expanded="true" />
+                <element signature="e#4325#4331#0#HTML" expanded="true" />
+                <element signature="e#4331#4337#0#HTML" expanded="true" />
+                <element signature="e#4368#4374#0#HTML" expanded="true" />
+                <element signature="e#4374#4380#0#HTML" expanded="true" />
+                <element signature="e#4380#4386#0#HTML" expanded="true" />
+                <element signature="e#4386#4392#0#HTML" expanded="true" />
+                <element signature="e#4392#4398#0#HTML" expanded="true" />
+                <element signature="e#4398#4404#0#HTML" expanded="true" />
+                <element signature="e#4404#4410#0#HTML" expanded="true" />
+                <element signature="e#4410#4416#0#HTML" expanded="true" />
+                <element signature="e#4416#4422#0#HTML" expanded="true" />
+                <element signature="e#4422#4428#0#HTML" expanded="true" />
+                <element signature="e#4428#4434#0#HTML" expanded="true" />
+                <element signature="e#4434#4440#0#HTML" expanded="true" />
+                <element signature="e#4440#4446#0#HTML" expanded="true" />
+                <element signature="e#4473#4479#0#HTML" expanded="true" />
+                <element signature="e#4479#4485#0#HTML" expanded="true" />
+                <element signature="e#4485#4491#0#HTML" expanded="true" />
+                <element signature="e#4491#4497#0#HTML" expanded="true" />
+                <element signature="e#4497#4503#0#HTML" expanded="true" />
+                <element signature="e#4505#4511#0#HTML" expanded="true" />
+                <element signature="e#4568#4574#0#HTML" expanded="true" />
+                <element signature="e#4574#4580#0#HTML" expanded="true" />
+                <element signature="e#4639#4645#0#HTML" expanded="true" />
+                <element signature="e#4645#4651#0#HTML" expanded="true" />
+                <element signature="e#4651#4657#0#HTML" expanded="true" />
+                <element signature="e#4657#4663#0#HTML" expanded="true" />
+                <element signature="e#4663#4669#0#HTML" expanded="true" />
+                <element signature="e#4669#4675#0#HTML" expanded="true" />
+                <element signature="e#4675#4681#0#HTML" expanded="true" />
+                <element signature="e#4681#4687#0#HTML" expanded="true" />
+                <element signature="e#4721#4727#0#HTML" expanded="true" />
+                <element signature="e#4727#4733#0#HTML" expanded="true" />
+                <element signature="e#4733#4739#0#HTML" expanded="true" />
+                <element signature="e#4739#4745#0#HTML" expanded="true" />
+                <element signature="e#4745#4751#0#HTML" expanded="true" />
+                <element signature="e#4751#4757#0#HTML" expanded="true" />
+                <element signature="e#4757#4763#0#HTML" expanded="true" />
+                <element signature="e#4763#4769#0#HTML" expanded="true" />
+                <element signature="e#4770#4776#0#HTML" expanded="true" />
+                <element signature="e#4776#4782#0#HTML" expanded="true" />
+                <element signature="e#4782#4788#0#HTML" expanded="true" />
+                <element signature="e#4788#4794#0#HTML" expanded="true" />
+                <element signature="e#4794#4800#0#HTML" expanded="true" />
+                <element signature="e#4800#4806#0#HTML" expanded="true" />
+                <element signature="e#4806#4812#0#HTML" expanded="true" />
+                <element signature="e#4812#4818#0#HTML" expanded="true" />
+                <element signature="e#4818#4824#0#HTML" expanded="true" />
+                <element signature="e#4824#4830#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cpanel/plec_add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" selection-start-line="32" selection-end-line="41" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -114,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cpanel/pcos_update.php" />
         <option value="$PROJECT_DIR$/cpanel/pstd_add.php" />
         <option value="$PROJECT_DIR$/cpanel/register_update.php" />
         <option value="$PROJECT_DIR$/cpanel/register_view.php" />
@@ -159,12 +218,13 @@
         <option value="$PROJECT_DIR$/cpanel/psearch.php" />
         <option value="$PROJECT_DIR$/cpanel/plec_update.php" />
         <option value="$PROJECT_DIR$/cpanel/plec_search.php" />
-        <option value="$PROJECT_DIR$/cpanel/plec_add.php" />
         <option value="$PROJECT_DIR$/cpanel/pcos_addx.php" />
         <option value="$PROJECT_DIR$/cpanel/pcos.php" />
         <option value="$PROJECT_DIR$/cpanel/manage_lecturer.php" />
         <option value="$PROJECT_DIR$/cpanel/view_registered.php" />
         <option value="$PROJECT_DIR$/cpanel/manage_evaluation.php" />
+        <option value="$PROJECT_DIR$/cpanel/plec_add.php" />
+        <option value="$PROJECT_DIR$/cpanel/lec_view.php" />
       </list>
     </option>
   </component>
@@ -274,7 +334,7 @@
       <workItem from="1572525916206" duration="1791000" />
       <workItem from="1572527725531" duration="1790000" />
       <workItem from="1572529534531" duration="1809000" />
-      <workItem from="1572531375643" duration="251000" />
+      <workItem from="1572531375643" duration="1072000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16.">
       <created>1568708916699</created>
@@ -325,11 +385,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572530607254</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="laaaaast">
+      <created>1572531758294</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572531758294</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39857000" />
+    <option name="totallyTimeSpent" value="40678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -409,13 +476,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="laaaaast" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cpanel/std_active.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/register_course.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -966,17 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/plec_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/pcos_update.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1027,13 +1076,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_lecture.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/manage_grade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_course.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/manage_admin.php">
@@ -1057,8 +1100,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/manage_evaluation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+        <state relative-caret-position="918">
+          <caret line="54" column="144" lean-forward="true" selection-start-line="54" selection-start-column="144" selection-end-line="54" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_course.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/plec_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="41" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_lecture.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/lec_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="98" column="44" lean-forward="true" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="44" />
+          <folding>
+            <element signature="e#4134#4140#0#HTML" expanded="true" />
+            <element signature="e#4140#4146#0#HTML" expanded="true" />
+            <element signature="e#4146#4152#0#HTML" expanded="true" />
+            <element signature="e#4152#4158#0#HTML" expanded="true" />
+            <element signature="e#4226#4232#0#HTML" expanded="true" />
+            <element signature="e#4232#4238#0#HTML" expanded="true" />
+            <element signature="e#4238#4244#0#HTML" expanded="true" />
+            <element signature="e#4244#4250#0#HTML" expanded="true" />
+            <element signature="e#4325#4331#0#HTML" expanded="true" />
+            <element signature="e#4331#4337#0#HTML" expanded="true" />
+            <element signature="e#4368#4374#0#HTML" expanded="true" />
+            <element signature="e#4374#4380#0#HTML" expanded="true" />
+            <element signature="e#4380#4386#0#HTML" expanded="true" />
+            <element signature="e#4386#4392#0#HTML" expanded="true" />
+            <element signature="e#4392#4398#0#HTML" expanded="true" />
+            <element signature="e#4398#4404#0#HTML" expanded="true" />
+            <element signature="e#4404#4410#0#HTML" expanded="true" />
+            <element signature="e#4410#4416#0#HTML" expanded="true" />
+            <element signature="e#4416#4422#0#HTML" expanded="true" />
+            <element signature="e#4422#4428#0#HTML" expanded="true" />
+            <element signature="e#4428#4434#0#HTML" expanded="true" />
+            <element signature="e#4434#4440#0#HTML" expanded="true" />
+            <element signature="e#4440#4446#0#HTML" expanded="true" />
+            <element signature="e#4473#4479#0#HTML" expanded="true" />
+            <element signature="e#4479#4485#0#HTML" expanded="true" />
+            <element signature="e#4485#4491#0#HTML" expanded="true" />
+            <element signature="e#4491#4497#0#HTML" expanded="true" />
+            <element signature="e#4497#4503#0#HTML" expanded="true" />
+            <element signature="e#4505#4511#0#HTML" expanded="true" />
+            <element signature="e#4568#4574#0#HTML" expanded="true" />
+            <element signature="e#4574#4580#0#HTML" expanded="true" />
+            <element signature="e#4639#4645#0#HTML" expanded="true" />
+            <element signature="e#4645#4651#0#HTML" expanded="true" />
+            <element signature="e#4651#4657#0#HTML" expanded="true" />
+            <element signature="e#4657#4663#0#HTML" expanded="true" />
+            <element signature="e#4663#4669#0#HTML" expanded="true" />
+            <element signature="e#4669#4675#0#HTML" expanded="true" />
+            <element signature="e#4675#4681#0#HTML" expanded="true" />
+            <element signature="e#4681#4687#0#HTML" expanded="true" />
+            <element signature="e#4721#4727#0#HTML" expanded="true" />
+            <element signature="e#4727#4733#0#HTML" expanded="true" />
+            <element signature="e#4733#4739#0#HTML" expanded="true" />
+            <element signature="e#4739#4745#0#HTML" expanded="true" />
+            <element signature="e#4745#4751#0#HTML" expanded="true" />
+            <element signature="e#4751#4757#0#HTML" expanded="true" />
+            <element signature="e#4757#4763#0#HTML" expanded="true" />
+            <element signature="e#4763#4769#0#HTML" expanded="true" />
+            <element signature="e#4770#4776#0#HTML" expanded="true" />
+            <element signature="e#4776#4782#0#HTML" expanded="true" />
+            <element signature="e#4782#4788#0#HTML" expanded="true" />
+            <element signature="e#4788#4794#0#HTML" expanded="true" />
+            <element signature="e#4794#4800#0#HTML" expanded="true" />
+            <element signature="e#4800#4806#0#HTML" expanded="true" />
+            <element signature="e#4806#4812#0#HTML" expanded="true" />
+            <element signature="e#4812#4818#0#HTML" expanded="true" />
+            <element signature="e#4818#4824#0#HTML" expanded="true" />
+            <element signature="e#4824#4830#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

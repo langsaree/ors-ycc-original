@@ -6,10 +6,10 @@ $dbUsername = "root";
 $dbPassword = "root";
 
 //connect to Database
-$connection = mysql_connect($dbHost, $dbUsername, $dbPassword);
+$con = mysql_connect($dbHost, $dbUsername, $dbPassword);
 
 //con checking
-if ($connection) {
+if ($con) {
    $db_select = mysql_select_db($dbDatabase);
    
    //set universal encoding

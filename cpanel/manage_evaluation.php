@@ -52,7 +52,7 @@ body {
         <table width="1225" height="53" border="0" cellpadding="0" cellspacing="5">
         <tr>
           <td width="1137" height="30" valign="middle"><span class="style37">__________________________________________________________________________________________________________________________________________________</span></td>
-          <td width="34" valign="bottom"><a href="cpanel.php"><a href="cpanel.php"><img src="image/images3.jpg" width="30" height="30" border="0" align="bottom" /></a></td>
+          <td width="34" valign="bottom"><a href="cpanel.php"><img src="image/images3.jpg" width="30" height="30" border="0" align="bottom" /></a></td>
         </tr>
       </table>      <p>&nbsp;</p></td></tr>
     <tr>
