@@ -73,7 +73,7 @@ $result1=mysqli_query($cos);
             <? //while($row=mysql_fetch_array($result)){ ?>
             <tr>
               <td width="63"><span style="color: #000"><span class="style45">ข้าพเจ้า</span></span></td>
-              <td width="337"><?= $row["f_name"],' ',$row["name"],' ',' ',$row["s_name"]; ?></td>
+              <td width="337"><?php echo $row["f_name"],' ',$row["name"],' ',' ',$row["s_name"]; ?></td>
               <td width="62">&nbsp;</td>
               <td width="62">&nbsp;</td>
               <td width="64">&nbsp;</td>
@@ -83,26 +83,26 @@ $result1=mysqli_query($cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="118"><span class="style45">วัน/เดือน/ปี เกิด</span></td>
-                <td width="403"><?= $row["birthday"]?></td>
+                <td width="403"><?php echo$row["birthday"]?></td>
                 <td width="71">&nbsp;</td>
               </tr>
             </table>
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="56"><span style="color: #000">สัญชาติ</span></td>
-                <td width="111"><?= $row["nation"]?></td>
+                <td width="111"><?php echo$row["nation"]?></td>
                 <td width="74"><span style="color: #000">เชื้อชาติ</span></td>
-                <td width="99"><?= $row["origin"]?></td>
+                <td width="99"><?php echo$row["origin"]?></td>
                 <td width="51"><span style="color: #000">ศาสนา</span></td>
-                <td width="195"><?= $row["religion"]?></td>
+                <td width="195"><?php echo $row["religion"]?></td>
               </tr>
             </table>
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="59"><span style="color: #000">อาชีพ</span></td>
-                <td width="263"><?= $row["job"]?></td>
+                <td width="263"><?php echo$row["job"]?></td>
                 <td width="153"><span style="color: #000">จบการศึกษาระดับ</span></td>
-                <td width="272"><?= $row["edulevel"]?></td>
+                <td width="272"><?php echo$row["edulevel"]?></td>
                 <td width="41">&nbsp;</td>
               </tr>
           </table></td>
@@ -111,7 +111,7 @@ $result1=mysqli_query($cos);
           <td height="194" colspan="5" valign="top"><table width="600" border="0" cellspacing="2" cellpadding="0">
             <tr>
               <td width="143">จากสถานที่ศึกษา</td>
-              <td width="339"><?= $row["eduplace"]?></td>
+              <td width="339"><?php echo$row["eduplace"]?></td>
               <td width="34">&nbsp;</td>
               <td width="34">&nbsp;</td>
               <td width="38">&nbsp;</td>
@@ -120,16 +120,16 @@ $result1=mysqli_query($cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="60">จังหวัด</td>
-                <td width="159"><?= $row["eduprovince"]?></td>
+                <td width="159"><?php echo$row["eduprovince"]?></td>
                 <td width="84">ปีการศึกษา</td>
-                <td width="246"><?= $row["eduyear"]?></td>
+                <td width="246"><?php echo $row["eduyear"]?></td>
                 <td width="39">&nbsp;</td>
               </tr>
             </table>
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="195">ที่อยู่ตามสำเนาทะเบียนบ้าน</td>
-                <td width="322"><?= $row["address"]?></td>
+                <td width="322"><?php echo $row["address"]?></td>
                 <td width="20">&nbsp;</td>
                 <td width="25">&nbsp;</td>
                 <td width="26">&nbsp;</td>
@@ -138,7 +138,7 @@ $result1=mysqli_query($cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="129">โทรศัพท์/โทรสาร</td>
-                <td width="363"><?= $row["phone"]?></td>
+                <td width="363"><?php echo $row["phone"]?></td>
                 <td width="21">&nbsp;</td>
                 <td width="36">&nbsp;</td>
                 <td width="39">&nbsp;</td>
@@ -147,7 +147,7 @@ $result1=mysqli_query($cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="210">ที่อยู่ปัจจุบันที่สามารถติดต่อได้</td>
-                <td width="308"><?= $row["address"]?></td>
+                <td width="308"><?php echo $row["address"]?></td>
                 <td width="22">&nbsp;</td>
                 <td width="22">&nbsp;</td>
                 <td width="26">&nbsp;</td>
@@ -156,7 +156,7 @@ $result1=mysqli_query($cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="125">โทรศัพท์/โทรสาร</td>
-                <td width="352"><?= $row["phone"]?></td>
+                <td width="352"><?php echo $row["phone"]?></td>
                 <td width="36">&nbsp;</td>
                 <td width="36">&nbsp;</td>
                 <td width="39">&nbsp;</td>
@@ -165,18 +165,18 @@ $result1=mysqli_query($cos);
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="79">ชื่อบิดา</td>
-                <td width="209"><?= $row["fat_fname"],' ',$row["fat_lname"]?></td>
+                <td width="209"><?php echo $row["fat_fname"],' ',$row["fat_lname"]?></td>
                 <td width="53">อาชีพ</td>
-                <td width="198"><?= $row["fat_job"]?></td>
+                <td width="198"><?php echo $row["fat_job"]?></td>
                 <td width="49">&nbsp;</td>
               </tr>
             </table>
             <table width="600" border="0" cellspacing="2" cellpadding="0">
               <tr>
                 <td width="78">ชื่อมารดา</td>
-                <td width="211"><?= $row["mot_fname"],' ',$row["mot_lname"]?></td>
+                <td width="211"><?php echo $row["mot_fname"],' ',$row["mot_lname"]?></td>
                 <td width="54">อาชีพ</td>
-                <td width="200"><?= $row["mot_job"]?></td>
+                <td width="200"><?php echo $row["mot_job"]?></td>
                 <td width="45">&nbsp;</td>
               </tr>
                <? //} ?>
@@ -205,10 +205,10 @@ $result1=mysqli_query($cos);
             </tr>
             <tr>
               <td height="61" valign="top"><? ?></td>
-              <td valign="top">&nbsp;                <?=$row1["cos_name"];?></td>
+              <td valign="top">&nbsp;                <?php echo$row1["cos_name"];?></td>
               <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                <?=$row1["cos_time"]?></td>
-              <td valign="top"><?=$row1["cos_start"]?></td>
-              <td valign="top"><?=$row1["cos_comment"]?></td>
+              <td valign="top"><?php echo$row1["cos_start"]?></td>
+              <td valign="top"><?php echo$row1["cos_comment"]?></td>
             </tr>
             <? } ?>
           </table></td>

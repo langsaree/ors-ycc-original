@@ -1,5 +1,5 @@
 <?php
-//define connection elements
+//define con elements
 $dbHost = "localhost:3306";
 $dbDatabase = "ors_ycc";
 $dbUsername = "root";
@@ -8,7 +8,7 @@ $dbPassword = "";
 //connect to Database
 $con = mysqli_connect($dbHost, $dbUsername, $dbPassword,$dbDatabase);
 
-//connection checking
+//con checking
 if ($con) {
    mysqli_query($con,"SET NAMES 'utf8'") or die(mysqli_error());
 } else {

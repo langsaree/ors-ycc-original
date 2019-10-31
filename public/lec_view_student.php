@@ -62,22 +62,22 @@ include('../config/db.php');
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+              <?php  } ?>
 
             <br>
           </div>
@@ -136,14 +136,14 @@ include('../config/db.php');
                         ?>
               <tr>
                 <td>&nbsp;</td>
-                <td><?=$row["std_id"] ?></td>
-                <td><?=$row2["name"] ?>
-&nbsp;&nbsp;&nbsp;<?=$row2["s_name"] ?></td>
-                <td><?=$row["cos_name"] ?></td>
+                <td><?php echo$row["std_id"] ?></td>
+                <td><?php echo$row2["name"] ?>
+&nbsp;&nbsp;&nbsp;<?php echo$row2["s_name"] ?></td>
+                <td><?php echo$row["cos_name"] ?></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
               </tr>
-              <? }}?>
+                <?php  }}?>
             </table>
             
             <table width="650">

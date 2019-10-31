@@ -1,27 +1,47 @@
 <?php
+ob_start();
 session_start();
-include('../config/db.php');
-$strSQL = "SELECT * FROM student WHERE username = '".mysqli_real_escape_string($con, $_POST['username'])."' 
-  and password = '".mysqli_real_escape_string($con, $_POST['password'])."'";
-$objQuery = mysqli_query($con, $strSQL);
-$objResult = mysqli_fetch_array($objQuery);
-if(!$objResult)
+include ('../config/db.php');
+// username and password sent from form
+$username=$_POST['username2'];
+$password=$_POST['password2'];
+
+// To protect MySQL injection (more detail about MySQL injection)
+$username = stripslashes($username);
+$password = stripslashes($password);
+$username = mysqli_real_escape_string($con, $username);
+$password = mysqli_real_escape_string($con, $password);
+//$code = stripslashes($code);
+//$code = mysql_real_escape_string($code);
+//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
+//$result=mysql_query($sql);
+$sql="SELECT * FROM student WHERE username='$username' and password='$password'";
+$result=mysqli_query($con, $sql);
+// Mysql_num_row is counting table row
+$count=mysqli_num_rows($result);
+if($count==1/*&&strcmp($code,$code_hidden)==0*/)
 {
-    $std_error='<span style="color:red">ชื่อเข้าระบบและรหัสผ่านผิด กรุณาลองใหม่</span>';
-    include ('register.php');
+// Register $myusername, $mypassword and redirect to file "login_success.php"
+    $_SESSION['username'] = $_POST['username2'];
+//session_register("sessioncode");
+    header("location:std_profile.php");
 }
 else
 {
-    $_SESSION['username'] = $objResult['username'];
-    $_SESSION['password'] = $objResult['password'];
-    $_SESSION['std_id'] = $objResult['std_id'];
-    session_write_close();
-    ?>
-    <script>
-        window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
-        window.location.href="index.php";
-    </script>
-    <!-- header("Location:std_profile.php"); -->
-    <?php
+//$error='Wrong Username or Password';
+    $std_error='<span style="color:red">ชื่้อเข้าระบบและรหัสผ่านผิด กรุณาลองใหม่</span>';
+    include ('register.php');
 }
+ob_end_flush();
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta http-equiv="refresh" content="1; url=register.php">
+    <title>student login check</title>
+</head>
+
+<body>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>แสดงรายชื่อวิชา</title>
 <style type="text/css">
-<!--
+
 
 .style4 {color: #FFFFFF; }
 .style26 {
@@ -36,7 +36,7 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
--->
+
 </style>
 </head>
 
@@ -71,13 +71,15 @@ body {
         <td width="8%" bgcolor="#CCCCCC"><div align="center">แก้ไขข้อมูล</div></td>
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
-       <?
-  include('db.php');
-	///////////////////////////////////////
-   $sql1 ="select * from course ";
-       $result = mysqli_query($con,$sql);
-   while ($row= mysqli_fetch_array($result))
-	{
+            <?php
+            require_once("../public/class/db.class.php");
+            $db = new Db;
+            $con = $db->connect();
+            ///////////////////////////////////////
+            $sql1 ="select * from course ";
+            $result = mysqli_query($con, $sql1);
+            while ($row= mysqli_fetch_array($result))
+            {
 	$cos_id= $row["cos_id"];
 	$cos_group=$row["cos_group"];
 	$cos_name = $row["cos_name"];
@@ -95,17 +97,17 @@ body {
 	//echo $lec_name;
    ?>
       <tr>
-        <td><div align="left"><? echo $cos_id; ?></div></td>
-        <td><div align="left"><? echo $cos_group; ?></div></td>
+        <td><div align="left"><?php echo $cos_id; ?></div></td>
+        <td><div align="left"><?php echo $cos_group; ?></div></td>
          <td bgcolor="#F0F2F4"><div align="left"><? echo $cos_name; ?></div></td>
-        <td><div align="center"><? echo $cos_period;?></div></td>
-        <td><div align="left"><? echo $cos_day;?></div></td>
+        <td><div align="center"><?php echo $cos_period;?></div></td>
+        <td><div align="left"><?php echo $cos_day;?></div></td>
         <td bgcolor="#F0F2F4"><div align="left"><? echo $lec_name; ?></div></td>
-        <td><div align="left"><? echo $cos_comment; ?></div></td>
-       	<td><div align="center"><a href="cos_update.php?id= <? echo $cos_id; ?> "><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></div></td>
-   	 	<td><div align="center"><a href="cos_del.php?id= <? echo $cos_id; ?> "><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></div></td>
+        <td><div align="left"><?php echo $cos_comment; ?></div></td>
+       	<td><div align="center"><a href="cos_update.php?id= <?php echo $cos_id; ?> "><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></div></td>
+   	 	<td><div align="center"><a href="cos_del.php?id= <?php echo $cos_id; ?> "><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></div></td>
       </tr>
-	  <? }
+	  <?php }
 	 	 }
 	 	  ?>
     </table>

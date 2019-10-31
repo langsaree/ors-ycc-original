@@ -64,19 +64,19 @@ input:focus, textarea:focus {
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><?php echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+            <? //} ?>
 
             <br>
           </div>
@@ -120,7 +120,7 @@ input:focus, textarea:focus {
 				$phone=$_POST['phone'];
 				
 				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysqli_query($con$sql);
+				$do=mysqli_query($con,$sql);
 				if($do){
 					echo "<script>location='lec_profile.php';</script>";
 				}

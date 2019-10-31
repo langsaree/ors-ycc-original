@@ -1,4 +1,4 @@
-<?//
+<?php
 //include('../config/db.php');
 //$todo=$_POST['todo'];
 //if(isset($todo) and $todo=="search"){
@@ -9,7 +9,7 @@
 //$search_text=rtrim($search_text);
 //?>
 <!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
-<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" >-->
 <!--<head>-->
 <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
 <!--<title>::Searchx::</title>-->
@@ -30,7 +30,7 @@
 <!--  <td width="16%">-->
 <!--       <input type=hidden name=todo value=search />-->
 <!--      <input type="text" name="search_text" id="search" />-->
-<!--      -->
+<!---->
 <!--      <input type="submit" name="button" id="button" value="ค้นหา" />-->
 <!--       <input name="type" type="radio" id="radio" value="any" checked="checked" />-->
 <!--      เหมือนในส่วนไหนก็ได้-->
@@ -38,8 +38,8 @@
 <!--      เหมือนเท่านั้น</td></tr>-->
 <!--    </p>-->
 <!--    </table>-->
-<!--    </form> -->
-<!--    -->
+<!--    </form>-->
+<!---->
 <!--  <table width="80%" border="0" align="center" cellpadding="0" cellspacing="2">-->
 <!--    <tr>-->
 <!--      <td width="17%" height="29" bgcolor="#CCCCCC"><div align="center">รหัสผู้ใช้</div></td>-->
@@ -47,7 +47,7 @@
 <!--      <td width="27%" bgcolor="#CCCCCC"><div align="center">ชื่อ-นามสกุล</div></td>-->
 <!--      <td width="12%" bgcolor="#CCCCCC"><div align="center" class="style46">Active</div></td>-->
 <!--      <td width="11%" bgcolor="#CCCCCC"><div align="center" class="style47">Non-Active</div></td>-->
-<!-- --><?//
+<!-- --><?php
 //// check for blank input
 //if($search_text==""){$search_text="";}
 //// end of check
@@ -89,7 +89,7 @@
 //	 }
 //	}
 //	?>
-<!--    -->
+<!---->
 <!--  </table>-->
 <!---->
 <!--</body>-->

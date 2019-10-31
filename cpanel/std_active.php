@@ -1,23 +1,30 @@
 <?php
-include('../config/db.php');
+// session_start();
+include("../public/class/db.class.php");
+$db = new Db;
+$con = $db->connect();
 include('auth.php');
 extract ($_GET);
-$msg='';
+$active = isset($_GET['active']) ? $_GET['active'] : "";
+$non_active = isset($_GET['non_active']) ? $_GET['non_active'] : "";
 if(!empty($active)){
     $sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
-    $result = mysqli_query($co,$sql);
+    $result = mysqli_query($con,$sql);
     if($result){
         $msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
     }
     else{
-        $msg = "Fail";
+        if(isset($msg)){
+            $msg = "Fail";
+        }
+
     }
 }
 else
 {
     if(!empty($non_active)){
         $sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
-        $result = mysqli_query($co,$sql);
+        $result = mysqli_query($con,$sql);
         if($result){
             $msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
         }
@@ -84,14 +91,14 @@ border-color:#8A9AA6;
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="../images/header-bg.png" width="1265" height="45" /></td>
+      <td><img src="image/header-bg.png" width="1265" height="45" /></td>
     </tr>
   </table>
   <table width="1260" height="723" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" align="center" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="../image/student add.png" width="100" height="100" /></td>
+        <td width="6%" align="center"><img src="image/student add.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36"><span class="style45">View</span>  <span class="style38"> Student Status</span></span></span>  &nbsp;&nbsp;&nbsp;&nbsp;<a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel  | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent</a><br />
             <span class="style34">แสดงสถานะนักศึกษา</span></td>
         </tr>
@@ -100,17 +107,17 @@ border-color:#8A9AA6;
   
   <tr>
     <td height="548" valign="top"><table width="1024" border="0" align="left" cellpadding="0" cellspacing="0">
-      <? if($msg){?>
+      <?php if($msg){?>
       <tr>
         <td width="171" height="61">&nbsp;</td>
         <td width="401"><p class="one"><br />
           &nbsp;&nbsp;
-          <?= $msg ?>          <br />
+          <?php $msg ?>          <br />
           <br />
         </p></td>
         <td width="432">&nbsp;</td>
         <td width="20">&nbsp;</td>
-      </tr><? }?>
+      </tr><?php }?>
     </table>
       <br />
       <br />
@@ -124,17 +131,17 @@ border-color:#8A9AA6;
           <td width="8%"><div align="center" class="style46">Active</div></td>
           <td width="7%"><div align="center" class="style25">Non-Active</div></td>
           </tr> 
-                       <?
+                       <?php
   $sql = "select * from student order by status DESC";
   $result = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result)){
 		$n = $row["f_name"] . $row["name"];
 		?>  
         <tr>
-          <td align="center" bgcolor="#FFFFB0"><? echo $row["std_id"];?></td>
-          <td align="left" bgcolor="#FFFFB0"><?= $n?> -  <?= $row["s_name"];?></td>
+          <td align="center" bgcolor="#FFFFB0"><?php echo $row["std_id"];?></td>
+          <td align="left" bgcolor="#FFFFB0"><?php $n?> -  <?php echo $row["s_name"];?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <? $status=$row["status"];
+            <?php $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -144,9 +151,9 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?=$row["std_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row["std_id"]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
-          </tr><? }?>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?php echo$row["std_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?php echo $row["std_id"]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          </tr><?php }?>
 </table>
       <p>&nbsp;</p>
       <p>&nbsp;</p>

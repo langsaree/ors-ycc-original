@@ -238,7 +238,7 @@ $username = $_SESSION["username"];
                                         <?php
 
                                         // profile database query here
-                                        include('db.php');
+                                        include('../config/db.php');
                                         $sql = "select * from student where username='$username' ";
                                         $result = mysqli_query($con, $sql);
                                         while ($row = mysqli_fetch_array($result)) {
@@ -273,7 +273,7 @@ $username = $_SESSION["username"];
                                             </tr>
                                             <tr>
                                                 <td>&nbsp;</td>
-                                                <td><p><img src="image/std_infor.png" width="111" height="126"
+                                                <td><p><img src="images/std_infor.png" width="111" height="126"
                                                             align="top"/><br>
                                                         <span class="style62">รูปประจำตัว</span></p></td>
                                                 <td>&nbsp;</td>

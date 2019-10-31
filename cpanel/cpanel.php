@@ -1,4 +1,4 @@
-<?
+<?php
 //session_start();
 //if(!session_is_registered(user_admin)){header("location:index.php");}
 //end of check session
@@ -123,21 +123,21 @@
       <tr>
         <td width="165" height="23" valign="top" ><table width="161" border="0" cellspacing="0" cellpadding="0">
     
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';" 
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';"
 >
             <td height="21" colspan="3"><a href="manage_course.php" class="right_side_bar"> &nbsp;&nbsp;&nbsp;&nbsp;การจัดการรายวิชา</a></td>
             </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td width="22">&nbsp;</td>
             <td width="119"><a href="cos_add.php" class="right_side_bar_list">เพิ่มรายวิชา </a></td>
             <td width="20">&nbsp;</td>
             </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="cos_view.php" class="right_side_bar_list">แสดงรายวิชา</a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="cos_active.php" class="right_side_bar_list" >สถานะรายวิชา</a></td>
             <td>&nbsp;</td>
@@ -146,21 +146,21 @@
         </tr>
       <tr>
         <td><table width="161" border="0" cellspacing="0" cellpadding="0">
-           <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';" 
+           <tr bgcolor="<?php echo $bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';"
 >
             <td height="21" colspan="3"><a href="manage_student.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการนักศึกษา</a></td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo $bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td width="22">&nbsp;</td>
             <td width="119"><a href="std_add.php" class="right_side_bar_list">เพิ่มนักศึกษาใหม่</a></td>
             <td width="20">&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="std_view.php" class="right_side_bar_list">แสดงข้อมูลนักศึกษา</a></a></span></a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="std_active.php" class="right_side_bar_list">แสดงสถานะนักศึกษา</a></td>
             <td>&nbsp;</td>
@@ -169,25 +169,25 @@
         </tr>
       <tr>
         <td><table width="163" border="0" cellspacing="0" cellpadding="0">
-           <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+           <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3" class="right_side_bar"><a href="manage_grade.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการเกรด</a></td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td width="21">&nbsp;</td>
             <td width="120"><a href="grade_add.php" class="right_side_bar_list">เพิ่มเกรด </a></td>
             <td width="22">&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="grade_delete.php" class="right_side_bar_list">ลบเกรด</a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="grade_update.php" class="right_side_bar_list">แก้ไขเกรด </a></td>
             <td>&nbsp;</td>
           </tr>
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-second';" onmouseout="this.className='bg-white';">
             <td>&nbsp;</td>
             <td><a href="grade_view.php" class="right_side_bar_list">แสดงเกรด</a></td>
             <td>&nbsp;</td>
@@ -196,7 +196,7 @@
         </tr>
       <tr>
         <td><table width="163" border="0" cellspacing="0" cellpadding="0">
-           <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+           <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_evaluation.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการการประเมิน</a></td>
           </tr>
           <tr>
@@ -218,7 +218,7 @@
         </tr>
       <tr>
         <td><table width="163" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_statis.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;สถิติการใช้งาน</a></td>
           </tr>
           <tr>
@@ -240,7 +240,7 @@
         </tr>
       <tr>
         <td><table width="167" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_std_status.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการสถานะนักศึกษา</a></td>
           </tr>
           <tr>
@@ -262,7 +262,7 @@
         </tr>
       <tr>
         <td><table width="165" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_register.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;การจัดการลงทะเบียน</a></td>
           </tr>
           <tr>
@@ -284,7 +284,7 @@
       </tr>
       <tr>
         <td><table width="165" border="0" cellspacing="0" cellpadding="0">
-          <tr bgcolor="<?=$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
+          <tr bgcolor="<?php echo$bgcolor?>" onmouseover="this.className='bg-text';"onmouseout="this.className='bg-white';">
             <td height="21" colspan="3"><a href="manage_admin.php" class="right_side_bar">&nbsp;&nbsp;&nbsp;&nbsp;ผู้ดูแลระบบ</a></td>
           </tr>
           <tr>

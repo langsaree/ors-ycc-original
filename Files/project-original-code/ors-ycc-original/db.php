@@ -1,5 +1,5 @@
 <?php
-//define connection elements
+//define con elements
 $dbHost = "localhost:8889";
 $dbDatabase = "ors_ycc";
 $dbUsername = "root";
@@ -8,7 +8,7 @@ $dbPassword = "root";
 //connect to Database
 $connection = mysql_connect($dbHost, $dbUsername, $dbPassword);
 
-//connection checking
+//con checking
 if ($connection) {
    $db_select = mysql_select_db($dbDatabase);
    

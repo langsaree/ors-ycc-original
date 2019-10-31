@@ -68,22 +68,22 @@ include('../config/db.php');
             <span class="BlockHeader"><span>Online Register</span></span>
            <table width="150" border="0" align="left" cellpadding="0" cellspacing="3">
               <tr>
-                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><? echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
+                <td width="197"><? echo '<br><span class="style7">ยินดีต้อนรับ ::</span>'; ?><?php echo '<span class="style26 "> '.$_SESSION[username].' </span><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile.php" style="color: #3987FB; text-decoration: none">ดูข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="lec_profile_update.php" style="color: #3987FB; text-decoration: none">แก้ไขข้อมูลส่วนตัว</a></span ><br>'; ?></td>
               </tr>
               <tr>
-                <td><? echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
+                <td><?php echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>'; ?></td>
               </tr>
               <tr>
                 <td></td>
               </tr>
             </table>
-            <? } ?>
+            <?php } ?>
 
             <br>
           </div>
@@ -136,7 +136,7 @@ include('../config/db.php');
                 <td width="388" bgcolor="#FF9933"  class="midle">ชื่อวิชา</td>
                 <td width="28" >&nbsp;</td>
               </tr>
-              <? 
+              <?php
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
@@ -146,12 +146,12 @@ include('../config/db.php');
               <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td><?=$row["cos_id"]?></td>
-                <td><?=$row["cos_group"]?></td>
-                <td><?=$row["cos_name"]?></td>
+                <td><?php echo$row["cos_id"]?></td>
+                <td><?php echo$row["cos_group"]?></td>
+                <td><?php echo$row["cos_name"]?></td>
                 <td>&nbsp;</td>
               </tr>
-              <? }?>
+                <?php }?>
             </table>
             <table width="654" border="0" cellspacing="2" cellpadding="0">
               <tr>
