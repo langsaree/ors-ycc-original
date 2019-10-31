@@ -1,21 +1,20 @@
 <?php
 session_start();
-//include('auth.php');
-include ('db.php');
+// include('auth.php');
+include ('../config/db.php');
 extract ($_GET);
 $user=$_GET['id'];
 $username=$_SESSION['username'];
 ?>
 <?php
-// $ok=$ok;
 if(isset($_POST["ok"])){	
    $login = $_POST['login'];
    $email=$_POST['email'];
    $pswd = $_POST['pswd'];
    $cpswd = $_POST['cpswd'];
-   $fname=$_POST['fname'];
+   $fname=$_POST['first_name'];
    $name=$_POST['name'];
-   $s_name=$_POST['s_name'];
+   $last_name=$_POST['last_name'];
    $b_day=$_POST['b_day'];
    $b_month=$_POST['b_month'];
    $b_year=$_POST['b_year'];
@@ -43,7 +42,7 @@ if(isset($_POST["ok"])){
     $eduyear=$_POST['eduyear'];
 	$job=$_POST['job']; 
 	
-	$query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
+	$query = "UPDATE student set username='$login',password='$pswd',first_name='$fname',name='$name',last_name='$last_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
 
        $do = mysqli_query($connection,$query);
        if ($do)
@@ -52,11 +51,11 @@ if(isset($_POST["ok"])){
 		 }	
 		 else{	 
 	   die("Could not select db".mysqli_error());
-	   //header("location:std_profile.php");
+	 
 	   }}
 
 ?>
-<!-- <script type="text/javascript">window.location="index.php";</script>-->
+
 
 <!DOCTYPE html>
 <html>
@@ -222,7 +221,7 @@ while($row=mysqli_fetch_array($result))
            </tr>
            <tr>
              <td>&nbsp;</td>
-             <td><p><img src="image/std_infor.png" width="111" height="126" align="top" /><br>
+             <td><p><img src="images/std_infor.png" width="111" height="126" align="top" /><br>
                <span class="style62">รูปประจำตัว</span></p></td>
              <td>&nbsp;</td>
            </tr>
@@ -258,31 +257,32 @@ while($row=mysqli_fetch_array($result))
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
                     <td colspan="4"><label for="fname"></label>  
-                      <select name="fname" size="1" id="fname">
-					  <?php
-                      $sql3="select * from mrmrs";
-			          $result3=mysqli_query($connection,$sql3);			 
-			          while($data3=mysqli_fetch_array($result3)){
-			 	          if($data3['id']==$data3[0]){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
+                    <select name="first_name" size="1" id="first_name">
+                      <option selected><?php echo $row['first_name'];?></option>
+                      <option>-- โปรดระบุ --</option>
+                      <option>นาย</option>
+                        <option>นาง</option>
+                        <option>นางสาว</option>
+                        <option>ด.ช.</option>
+                        <option>ด.ญ.</option>
+                        <option>Miss.</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        </select>
                       </select></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
                     <td colspan="4"><label for="name"></label>
-                      <input type="text" name="name" id="name" value="<?php echo$row['name'];?>"></td>
+                      <input type="text" name="name" id="name" value="<?php echo $row['name'];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
-                    <td><label for="s_name"></label>
-                      <input type="text" name="s_name" id="s_name" value="<?php echo$row['s_name'];?>"></td>
+                    <td><label for="last_name"></label>
+                      <input type="text" name="last_name" id="last_name" value="<?php echo $row['last_name'];?>"></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -459,17 +459,16 @@ while($row=mysqli_fetch_array($result))
                     <td>
                       <label for="select"></label>
                       <select name="job" id="job">
-                      <?php		
-			 $sql3="select * from joblist";
-			 $result3=mysqli_query($connection,$sql3);			 
-			 while($data3=mysqli_fetch_array($result3)){
-			 	if($data3['job_id']==$data3[0]){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
+                      <option selected><?php echo $row["job"];?></option>
+    
+                        <option>-- โปรดระบุ --</option>
+                        <option>ไม่ได้ประกอบอาชีพ</option>
+                        <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                        <option>รับราชการ</option>
+                        <option>พนักงานรัฐวิสาหกิจ</option>
+                        <option>ค้าขาย</option>
+                        <option>รับจ้างทั่วไป </option>
+                      
                       </select></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -525,11 +524,6 @@ while($row=mysqli_fetch_array($result))
 
 
 
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-        </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+<?php include('../config/footer.php');?>
 </body>
 </html>

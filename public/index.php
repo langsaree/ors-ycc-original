@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('login_check.php');
+include('../config/login_check.php');
 ?>
 
 
@@ -59,15 +59,14 @@ include('login_check.php');
 </table>
 
 <?php
-include('db.php');
+include('../config/db.php');
 $sql_view = "select * from course where status='1' ";
 $result_view = mysqli_query($connection,$sql_view);
-while($row=mysqli_fetch_array($result_view))
-{
+while($row=mysqli_fetch_array($result_view)) {
 
 ?>
 
-<br>
+            <br>
              <table width="570" border="0" align="center" cellpadding="0" cellspacing="2">
   
               <tr>
@@ -100,13 +99,6 @@ while($row=mysqli_fetch_array($result_view))
         </div>
         </div>
 
-
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-        </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
-    </body>
+<?php include('../config/footer.php');?>
+</body>
 </html>

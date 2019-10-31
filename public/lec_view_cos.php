@@ -3,7 +3,7 @@ session_start();
 $username = $_SESSION['username'];
 // include('auth.php');
 //end of check session
-include('db.php');
+include('../config/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +50,13 @@ include('db.php');
               <li></li> 
               <li></li> 
               <li></li> <li></li> 
-              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a><a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a><a href="course.php" class="MenuButton"><span>หลักสูตร</span></a><a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a><a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a><a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+              <a href="index.php" class="MenuButton"><span>หน้าหลัก</span></a>
+              <a href="college.php" class="MenuButton">  <span>วิทยาลัย</span></a>
+              <a href="course.php" class="MenuButton"><span>หลักสูตร</span></a>
+              <a href="ann.php" class="MenuButton"><span>ประชาสัมพันธ์</span> </a>
+              <a href="gallary.php" class="MenuButton"><span>ภาพกิจกรรม</span></a>
+              <a href="contact_us.php" class="MenuButton"><span> ติดต่อเรา</span></a>
+
                  <input name="text" type="text" style="width:120px" />
                  <span class="ButtonInput"><span>
                  <input type="button" value="Search" />
@@ -137,9 +143,9 @@ include('db.php');
                 <td width="28" >&nbsp;</td>
               </tr>
               <?php 
-			include('db.php');
+			include('../config/db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
+			$sql = "select * from lecturer,course where course.lec_id=lecturer.lec_id and username='$username'";
             $result=mysqli_query($connection,$sql);
             while ($row=mysqli_fetch_array($result)){
 		     ?>

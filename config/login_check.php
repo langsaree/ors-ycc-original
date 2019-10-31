@@ -35,7 +35,7 @@ if($count==1){
 }
 		
 //Lecturer can log in	
-$sql1 = "SELECT * FROM lecture WHERE username='$username' and password='$password'";
+$sql1 = "SELECT * FROM lecturer WHERE username='$username' and password='$password'";
         $result1 = mysqli_query($connection, $sql1);
         $count1 = mysqli_num_rows($result1);
           if ($count1 == 1) {

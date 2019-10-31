@@ -9,8 +9,8 @@ $username = $_SESSION["username"];
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ข้อมูลนักศึกษา </title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
@@ -128,7 +128,7 @@ a:active {
          </p>
        </div>
  <?php 
-include ('db.php');
+include ('../config/db.php');
 $sql = "select * from student where username='$username' ";
 $result = mysqli_query($connection, $sql); 
 while($row=mysqli_fetch_array($result))
@@ -157,7 +157,7 @@ while($row=mysqli_fetch_array($result))
            </tr>
            <tr>
              <td>&nbsp;</td>
-             <td><p><img src="image/std_infor.png" width="111" height="126" align="top" /><br>
+             <td><p><img src="images/std_infor.png" width="111" height="126" align="top" /><br>
                <span class="style62">รูปประจำตัว</span></p></td>
              <td>&nbsp;</td>
            </tr>
@@ -191,12 +191,12 @@ while($row=mysqli_fetch_array($result))
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ :</span></span></td>
-                    <td colspan="4"><?php  echo $row["f_name"];?>&nbsp;&nbsp;<?php  echo $row["name"]; ?></td>
+                    <td colspan="4"><?php  echo $row["first_name"];?>&nbsp;&nbsp;<?php  echo $row["name"]; ?></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
-                    <td><?php  echo $row["s_name"];?></td>
+                    <td><?php  echo $row["last_name"];?></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -387,13 +387,6 @@ while($row=mysqli_fetch_array($result))
           </div>
         </div>
 
-
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-        </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+<?php include('../config/footer.php');?>
 </body>
 </html>

@@ -1,10 +1,10 @@
   <?php
 session_start();
-include('db.php');
-
+include('../config/db.php');
 if (isset($_SESSION['username'])) {
   $username = $_SESSION['username'];
 }
+
 // username and password receive from register form
 if (isset($_POST['ok'])) {
   if (!empty($_POST['username'] && !empty($_POST['password']))) {
@@ -166,9 +166,6 @@ if (isset($_POST['ok'])) {
                                 <?php '; ?>
 
                           <?php } else { ?>
-
-                          <?php //  remove the HTML code of login ?>
-                          <?php // If user already logined, so display wellcome section below ?>
                           <?php echo ' '; ?>
 
                           <?php
@@ -223,8 +220,7 @@ if (isset($_POST['ok'])) {
 
  
 <?php
-//ob_start();
-// session_start();
+
 $errmsg= ""; $errmsg1 = ""; $errmsg2 = ""; $errmsg3 = ""; $errmsg4 = ""; $errmsg5 = "";
 $errmsg6 = ""; $errmsg7 = ""; $errmsg8 = ""; $errmsg9 = ""; $errmsg10 = ""; $errmsg11 = "";
 $errmsg12 = ""; $errmsg13 = ""; $errmsg14 = ""; $errmsg15 = ""; $errmsg16 = ""; $errmsg17 = "";
@@ -232,40 +228,23 @@ $errmsg18 = ""; $errmsg19 = ""; $errmsg20 = ""; $errmsg21 = ""; $errmsg22 = ""; 
 $errmsg24 = ""; $errmsg25 = ""; $errmsg26 = ""; $errmsg27 = ""; $errmsg28 = ""; $errmsg29 = "";
 $errmsg30 = ""; $errmsg31 = ""; $errmsg32 = ""; $errmsg33 = ""; $errmsg34 = ""; $errmsg35 = "";
 
-//$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
-//	foreach($_REQUEST as $key => $value)  {
-//		$$key = $value;
-//	}
-//	$errmsg = array();
-//	for($i = 0; $i < 20; $i++) {
-//		$errmsg[$i] = false;
-//	}
 
  if(isset($_POST['Submit'])) {	
 #=========================================
 # username check	
-//if(isset($ok)) { 
+
   $login = $_POST['login'];
 	if(empty($login)) {
 	    $errmsg1 = "<span style=color:red>กรุณากรอบชื่อล็อกอินด้วยค่ะ</span>";
   }	
 
-	//if(!ereg($pattern, $login)) {
-	  //  $errmsg2 .= "<span style=color:red>ชื่อล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
-	 //}
+
 if(!$errmsg1) {
-	if(strlen($login) < 4 ){
+	if(strlen($login) < 6 ){
       $errmsg3 .= "<span style=color:red>ชื่อล็อกอินต้องยาว 4-20 ตัว</span>"; 
   }
 }
 	 
-     /*if(!$errmsg[3]) {
-			# check username duplicate
-			$sql = "select * from account where username = '$login'";
-			$link->query($sql);
-			if($link->num_rows() > 0) {
-				$errmsg[4] = true; // "<li>ชื่อล็อกอินนี้มีผู้ใช้แล้ว"; 
-	 }}*/
 #============================================	
 #email check
     $email=$_POST['email'];
@@ -284,10 +263,7 @@ if(!$errmsg1) {
 	   $errmsg7 .= "<span style=color:red>กรุณากรอบยืนยันรหัสผ่านด้วยค่ะ</span>";
 	   }
 		   
-	//if(!ereg($pattern, $pswd)) {
-	//    $errmsg8 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
 	
-	//}
 	if(!$errmsg6)
 	if(strlen($pswd) < 6) {
 	    $errmsg9 .= "<span style=color:red>รหัสผ่านต้องยาว 6-20 ตัวค่ะ</span>"; 
@@ -300,21 +276,19 @@ if(!$errmsg1) {
 #end password check
 #===================================	
 # first name and last name
-   $f_name=$_POST['f_name'];
+   $first_name=$_POST["first_name"];
    $name=$_POST['name'];
-   $s_name=$_POST['s_name'];
-   if(empty($f_name)){
+   $last_name=$_POST["last_name"];
+   if(empty($first_name)){
 	   $errmsg11 .= "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
 	   }
     if(empty($name)){
 	   $errmsg12 .= "<span style=color:red>กรุณากรอบชื่อด้วยค่ะ</span>";
 	   }
-    if(empty($s_name)){
+    if(empty($last_name)){
 	   $errmsg13 .= "<span style=color:red>กรุณากรอบนามสกุลด้วยค่ะ</span>";
 	   }
-	 //if(!ereg($pattern, $pswd)) {
-	//    $errmsg14 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
-	  
+	
 #===================================
 #bithday check
    $b_day=$_POST['b_day'];
@@ -349,6 +323,14 @@ if(!$errmsg1) {
      if(empty($religion)){
 	   $errmsg20 .= "<span style=color:red>กรุณาเลือกศาสนาด้วยค่ะ</span>";
 	   }}
+#==================================
+#gender check
+$gender = $_POST['gender'];
+
+if (empty($gender)) {
+    $errmsg35 = "<span style=color:red>กรุณาเลือกเพศด้วยค่ะ</span>";
+}
+
 #==================================
 # thai id card check
    $std_id=$_POST['std_id'];
@@ -454,12 +436,11 @@ if(!$errmsg1) {
   
 #================================= 
 #=================================
-      if(!$errmsg3 && !$errmsg5 && !$errmsg10  && !$errmsg11 && !$errmsg12 && !$errmsg13 &&/* !$errmsg15 && !$errmsg16 &&
-	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 &&*/ !$errmsg22 /*&& !$errmsg23 && !$errmsg24 && 
-	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */&& !$errmsg30)
+      if(!$errmsg3 && !$errmsg5 && !$errmsg10  && !$errmsg11 && !$errmsg12 && !$errmsg13 && !$errmsg22 && !$errmsg30)
 	   {
-      $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
-      value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+
+      $query = "INSERT INTO student (username,password,first_name,name,last_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
+      value('$login','$pswd','$first_name','$name','$last_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
 $do = mysqli_query($connection, $query);
 if ($do) {
 echo "<script>location='register.php';</script>";
@@ -470,7 +451,6 @@ exit;
 	 }
 }
 
-//ob_end_clean();
 ?>  
 
         
@@ -636,7 +616,7 @@ exit;
                   <tr>
                     <td bgcolor="#FFFFFF"><div align="left" class="black_color">คำนำหน้าชื่อ </div></td>
                     <td height="1" bgcolor="#FFFFFF"><div align="left">
-                      <select name="f_name" id="f_name">
+                      <select name="first_name" id="first_name">
                         <option selected>นาย</option>
                         <option>นาง</option>
                         <option>นางสาว</option>
@@ -664,7 +644,7 @@ exit;
                   <?php } ?>
                   <tr>
                     <td height="1" bgcolor="#FFFFFF" class="black_color"><div align="left">นามสกุล</div></td>
-                    <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $s_name ?>" />
+                    <td height="1" bgcolor="#FFFFFF"><input type="text" name="last_name"  class="inputbox-normal" id="last_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $last_name ?>" />
                       <span class="style29">*</span></td>
                   </tr>
                   <?php if($errmsg15) { ?>
@@ -756,7 +736,24 @@ exit;
                         <option>อิสลาม</option>
                         <option>พุธ</option>
                         <option>คริสเตียน</option>
-                      </select>                  </td>
+                        </select>
+                        <span class="style29">*</span> &nbsp;</td>
+                  </tr>
+            <!--     add gender    -->
+                    <?php if($errmsg35) { ?>
+                        <tr>
+                            <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
+                            <td height="" bgcolor="#FFFFFF"><?php echo $errmsg35 ?></td>
+                        </tr>
+                    <?php } ?>
+                    <tr>
+                        <td>เพศ</td>
+                        <td>
+                            <select name="gender" size="1" id="gender" style="background:<?php if($errmsg35) echo "#EEFCE2"; ?>" value="<?php $gender ?>" />
+                            <option value="0">-- เพศ --</option>
+                            <option>ชาย</option>
+                            <option>หญิง</option>
+                            </select>                    
                   </tr>+
                   <?php if($errmsg21) { ?>
                   <tr>
@@ -799,7 +796,7 @@ exit;
                     <td></td>
                     <td><?php echo $errmsg24 ?></td>
                   </tr>
-                  <?php }} ?>
+                  <?php } ?>  <?php } ?>
                   <tr>
                     <td height="1" style="text-align: left" class="black_color">บ้านเลขที่</td>
                     <td><label>
@@ -930,7 +927,7 @@ exit;
                   <tr>
                     <td>&nbsp;</td>
                     <td><?php echo $errmsg32 ?></td>
-                    <td>&nbsp;</td>..,m
+                    <td>&nbsp;</td>
                   </tr>
                   <?php }?>
                   <tr>
@@ -1038,11 +1035,6 @@ exit;
             </p>
         </div>
         </div>
-         <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
-        </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
-</div>
+<?php include('../config/footer.php');?>
 </body>
 </html>

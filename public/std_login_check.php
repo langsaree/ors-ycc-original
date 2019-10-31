@@ -1,6 +1,7 @@
 <?php
 session_start();
-include ('db.php');
+include ('../config/db.php');
+
 $strSQL = "SELECT * FROM student WHERE username = '".mysqli_real_escape_string($connection, $_POST['username'])."' 
   and password = '".mysqli_real_escape_string($connection, $_POST['password'])."'";
 $objQuery = mysqli_query($connection, $strSQL);
@@ -17,6 +18,11 @@ else
     $_SESSION['password'] = $objResult['password'];
     $_SESSION['std_id'] = $objResult['std_id'];
     session_write_close();
-    header("location:std_profile.php");
- }
+    ?>
+    <script>
+      window.alert('เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ!');
+      window.location.href="index.php";
+    </script>
+    <!-- header("Location:std_profile.php"); -->
+ <?php }
 ?>
