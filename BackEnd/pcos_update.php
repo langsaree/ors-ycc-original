@@ -1,5 +1,5 @@
 <?php
-include ('../db.php');
+include ('../config/db.php');
 $cos_id = $_POST['cos_id'];
 $cos_group = $_POST['cos_group'];
 $cos_name = $_POST['cos_name'];
@@ -42,12 +42,12 @@ body {
 <body>
 <table width="1260" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="image/controlPanel.jpg" width="1261" height="112" /></td>
+    <td><img src="../public/images/controlPanel.jpg" width="1261" height="112" /></td>
   </tr>
 </table>
   <table width="700" height="422" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td align="center" background="images/b1.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
+      <td align="center" background="../public/images/b1.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
       <p>กดปุ่่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>Cpanel</strong></p>
     </tr>
   </table>
@@ -55,7 +55,7 @@ body {
   <p>&nbsp; </p>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td valign="baseline"><img src="image/footer.jpg" width="1260" height="76" /></td>
+      <td valign="baseline"><img src="../public/images/footer.jpg" width="1260" height="76" /></td>
     </tr>
   </table>
 </body>

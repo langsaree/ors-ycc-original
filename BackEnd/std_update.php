@@ -1,5 +1,5 @@
 <?php
-include('../db.php');
+include('../config/db.php');
 extract($_GET);
 $std_id=$id;
 ?>
@@ -9,9 +9,9 @@ if(isset($_POST['Update'])){
     $login = $_POST['login'];
     $pswd = $_POST['pswd'];
 
-    $f_name=$_POST['f_name'];
+    $first_name=$_POST['first_name'];
     $name=$_POST['name'];
-    $s_name=$_POST['s_name'];
+    $last_name=$_POST['last_name'];
     $nation=$_POST['nation'];
     $origin=$_POST['origin'];
     $religion=$_POST['religion'];
@@ -35,7 +35,7 @@ if(isset($_POST['Update'])){
 
     $job=$_POST['job'];
 
-    $query = "UPDATE student set username='$login',password='$pswd',f_name='$f_name',name='$name',s_name='$s_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$std_id'";
+    $query = "UPDATE student set username='$login',password='$pswd',first_name='$first_name',name='$name',last_name='$last_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$std_id'";
 
     $do = mysqli_query($connection, $query);
     if ($do)
@@ -49,6 +49,9 @@ if(isset($_POST['Update'])){
 
 
 ?>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -88,34 +91,35 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+      <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
-        <td width="6%" align="center"><img src="image/student update.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style47">Update</span><span class="style38"> Student</span></span></span><br />
-            <span class="style34">แก้ไขนักศึกษา</span></td>
+      <td width="6%" align="center"><img src="image/student add.png" width="127" height="111" /></td>
+      <td width="94%"><span class="style26"><span class="style36"><span class="style45">Update</span> <span class="style38">Student&nbsp;&nbsp;</span></span></span>
+      <a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel | </a><a href="manage_student.php" class="style6" style="text-decoration:none" >ManageStudent | </a><a href="std_view.php" class="style6" style="text-decoration:none" >ViewStudent</a><br />
+                <span class="style34">แก้ไขข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
       <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
-  
+
   <tr>
     <td height="563" valign="top"><p></p>
       <div align="center">
         <p class="style1">Student Information </p>
-       
           <?php
+          $sql = "select * from student where std_id= $std_id ";
+          $result = mysqli_query($connection, $sql);
+          while ($row = mysqli_fetch_array($result))
+          {
 
-	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysqli_query($connection, $sql);
-	while($row = mysqli_fetch_array($re))
-	{
-	?>
-         <table width="600" border="0" align="center" cellpadding="0" cellspacing="5">
+          ?>
+
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="5">
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -145,9 +149,9 @@ body {
                 <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
-                    <td colspan="4"><label for="f_name"></label>  
-                      <select name="f_name" size="1" id="f_name">
-                      <option selected><?php echo $row['f_name'];?></option>
+                    <td colspan="4"><label for="first_name"></label>  
+                      <select name="first_name" size="1" id="first_name">
+                      <option selected><?php echo $row['first_name'];?></option>
                       <option>-- โปรดระบุ --</option>
                       <option>นาย</option>
                         <option>นาง</option>
@@ -168,8 +172,8 @@ body {
                 <tr>
                     <td>&nbsp;</td>
                     <td style="text-align: right"><span class="style60" style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span></td>
-                    <td><label for="s_name"></label>
-                        <input type="text" name="s_name" id="s_name" value="<?php echo $row['s_name'];?>"></td>
+                    <td><label for="last_name"></label>
+                        <input type="text" name="last_name" id="last_name" value="<?php echo $row['last_name'];?>"></td>
 
                 </tr>
                 <tr>
@@ -335,7 +339,7 @@ body {
                 <tr>
 
                     <td>&nbsp;</td>
-                    </tr>
+                </tr>
             </table>
 
             <p>
@@ -353,7 +357,7 @@ body {
 </table>
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      
+
     </tr>
   </table>
 </form>

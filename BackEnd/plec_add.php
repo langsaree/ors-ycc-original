@@ -1,5 +1,5 @@
 <?php
-include ('../db.php');
+include ('../config/db.php');
 $lec_id= $_POST['lec_id'];
 $lec_name= $_POST['lec_name'];
 //$m_address= $_POST['address'];
@@ -9,7 +9,7 @@ $lec_comment= $_POST['lec_comment'];
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-$sql = "insert into lecture (lec_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
+$sql = "insert into lecturer (lec_id, lec_name, lec_tel, lec_email, lec_comment,username,password) values('$lec_id','$lec_name','$lec_tel','$lec_email','$lec_comment','$username','$password')";
 
 $result=mysqli_query($connection,$sql);
 

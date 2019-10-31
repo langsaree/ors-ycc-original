@@ -1,7 +1,6 @@
 <?php
 extract ($_GET);
 $lec_id=$id;
-
 ?>
 
 
@@ -52,8 +51,8 @@ body {
 <body>
 <form id="form1" name="form1" method="post" action="plec_update.php">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><img src="../images/header-bg.png" width="1260" height="45" /></td>
+  <tr>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
     </tr>
   </table>
   <table width="1280" height="527" border="0" align="left" cellpadding="0" cellspacing="0">
@@ -61,7 +60,8 @@ body {
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
         <td width="6%" align="center"><img src="image/student update.png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style47">Update</span><span class="style38"> Lecturer Information</span></span></span><br />
+        <td width="94%"><span class="style26"><span class="style36"><span class="style47">Update</span><span class="style38"> Lecturer Information</span></span></span>
+        <a href="cpanel.php" class="style6" style="text-decoration:none" > | ControlPanel | </a><a href="manage_lecturer.php" class="style6" style="text-decoration:none" >ManageLecturer | </a><a href="lec_view.php" class="style6" style="text-decoration:none" >ViewLecturer</a><br />
             <span class="style34">แก้ไข<span class="style48">ข้อมูลอาจารย์ผู้สอน</span></span></td>
         </tr>
     </table>
@@ -76,23 +76,27 @@ body {
         <table width="1058" height="159" border="0" cellpadding="2" cellspacing="4">
           
           <tr>
-            <td height="26" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo "$error"; ?></td>
+            <td height="26" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?"$error"; ?></td>
             </tr>
           <tr>
 <?php
-include ('../db.php');
-$sql = "select * from lecture where lec_id='$lec_id'";
-$result = mysqli_query($connection,$sql);
+include('../config/db.php');
+$sql = "select * from lecturer where lec_id='$lec_id'";
+$result = mysqli_query($connection, $sql);
 while($result_row = mysqli_fetch_array($result))
 {  
 ?>          
-          
-            <td width="406" height="26"><div align="right"><span class="style40">รหัส<span class="style49">อาจารย</span>์ผู้สอน :</span></div></td>
+
+         <td width="406" height="26"><div align="right"><span class="style40"><span class="style49">ลำดับ</span> :</span></div></td>
             <td width="632"><input name="lec_id" type="text" value="<?php echo $result_row['lec_id']; ?>" size="30" />
               <span class="style50">            *</span></td>
           </tr>
+            <td width="406" height="26"><div align="right"><span class="style40">รหัส<span class="style49">อาจารย์</span>ผู้สอน :</span></div></td>
+            <td width="632"><input name="lec_Teach_id" type="text" value="<?php echo $result_row['lec_Teach_id']; ?>" size="30" />
+              <span class="style50">            *</span></td>
+          </tr>
           <tr>
-            <td height="31"><div align="right"><span class="style40">ชื่อ<span class="style49">อาจารย</span>์ผู้สอน :</span></div></td>
+            <td height="31"><div align="right"><span class="style40">ชื่อ<span class="style49">อาจารย์</span>ผู้สอน :</span></div></td>
             <td><input name="lec_name" type="text" value="<?php echo $result_row['lec_name']; ?>" size="30" />
               <span class="style50">*</span></td>
           </tr>

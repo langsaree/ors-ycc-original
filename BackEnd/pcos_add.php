@@ -1,7 +1,8 @@
 <?php
-include ('../db.php');
+include ('../config/db.php');
 $cos_id = $_POST['cos_id'];
 $cos_name = $_POST['cos_name'];
+$cos_group = $_POST['cos_group'];
 $cos_period = $_POST['cos_period'];
 $cos_day =$_POST['cos_day'];
 $cos_after =$_POST['cos_after'];
@@ -11,7 +12,7 @@ $date = $cos_day."/". $cos_after ."/". $cos_time;
 $lec_id =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
 // mysqli_query ("SET NAMES 'utf8'");
-$sql = "insert into course(cos_id,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
+$sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
 $result = mysqli_query($connection,$sql);
 if (!$result)	
 { die("Error db".mysqli_error($connection)); }
@@ -44,7 +45,7 @@ body {
     <tr>
       <td align="center" background="images/b1.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
       <p>กดปุ่่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>Cpanel</strong></p>
-      <form id="form1" name="form1" method="post" action="manage_course.php">
+      <form id="form1" name="form1" method="post" action="cos_view.php">
         <input type="submit" name="Ok" id="Ok" value="สำเร็จ" />
       </form>      <p>&nbsp;</p></td>
     </tr>

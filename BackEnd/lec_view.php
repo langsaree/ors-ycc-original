@@ -1,9 +1,3 @@
-<?php
-/*session_start();
-#extract ($_GET);
-$lec_id=$id;
-*/
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -53,7 +47,7 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1263" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="1263"><img src="../images/header-bg.png" width="1258" height="45" /></td>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
     </tr>
   </table>
 
@@ -75,7 +69,7 @@ body {
          </tr>
        </table>
     </form>
-       <? echo "$success"; ?>
+       <? "$success"; ?>
        <table width="1261" border="0" cellspacing="2" cellpadding="5">
          <tr>
            <td width="1247" height="38" valign="top"><div align="center"><span class="style44">__________________________________________________________________________________________________________________________________________</span></div></td>
@@ -83,7 +77,8 @@ body {
          <tr>
            <td height="422" valign="top"><table width="88%" border="0" align="center" cellpadding="0" cellspacing="2">
              <tr bgcolor="#CCCCCC" class="style38">
-               <td width="74" height="40"><div align="center"><strong>รหัส</strong></div></td>
+               <td width="74" height="40"><div align="center"><strong>ลำดับ</strong></div></td>
+               <td width="170" height="50"><div align="center"><strong>รหัสอาจารย์ผู้สอน</strong></div></td>
                <td width="217"><div align="center"><strong>ชื่อ-นามสกุล</strong></div></td>
                <td width="211"><div align="center"><strong>เบอร์โทรติดต่อ</strong></div></td>
                <td width="214"><div align="center"><strong>อีเมล์</strong></div></td>
@@ -93,23 +88,23 @@ body {
                <td width="33"><div align="center"><strong>ลบ</strong></div></td>
              </tr>
              <tr>
-               <?php
-include ('../db.php');
-#$sql = "select* from lecturer where lec_id='$lec_id";
-$sql = "select* from lecture";
-$result = mysqli_query($connection,$sql);
-#while($result_row = mysqli_fetch_row($result))  
+               <?php 
+include('../config/db.php');
+$sql = "select* from lecturer";
+$result = mysqli_query($connection, $sql);
+
 while($row=mysqli_fetch_array($result))
 {
 ?>
                <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_id']; ?></td>
+               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_Teach_id']; ?></td>
                <td align="left">&nbsp;&nbsp;<?php echo $row['lec_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<?php echo $row['lec_tel']; ?></td>
                <td>&nbsp;&nbsp;<?php echo $row['lec_email']; ?></td>
                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['lec_comment']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-               <td><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
+               <td><a href="lec_profile.php?id=<?php echo $row['lec_id'];?>" ><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
                <td><a href="lec_update.php?id=<?php echo $row['lec_id'];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
-               <td><a href="lec_delete.php?id=<?php echo $row['lec_id'];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_delete.php?id=<?php echo $row['lec_id'];?>" ><img src="image/Delete.png" alt="1" width="20" height="20" border="0" /></a></td>
              </tr>
              <?php } ?>
            </table></td>

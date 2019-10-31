@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../db.php");
+include("../config/db.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,14 +67,7 @@ body {
 $errmsg= "";$errmsg1= "";$errmsg2= "";$errmsg3= "";$errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";$errmsg9= "";$errmsg10= "";$errmsg11= "";$errmsg12= "";$errmsg13= "";$errmsg14= "";$errmsg15= "";$errmsg16= "";$errmsg17= "";$errmsg18= "";$errmsg19= "";$errmsg20= "";$errmsg21= "";$errmsg22= "";$errmsg23= "";$errmsg24= "";$errmsg25= "";$errmsg26= "";$errmsg27= "";$errmsg28= "";$errmsg29= "";$errmsg30= "";
 $errmsg31= "";$errmsg32= "";$errmsg33= "";$errmsg34= "";
 
-//$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
-//	foreach($_REQUEST as $key => $value)  {
-//		$$key = $value;
-//	}
-//	$errmsg = array();
-//	for($i = 0; $i < 20; $i++) {
-//		$errmsg[$i] = false;
-//	}
+
 if(isset($_POST['ok'])) {	
 #=========================================
 # username check	
@@ -132,16 +125,16 @@ if(isset($_POST['ok'])) {
 #end password check
 #===================================	
 # first name and last name
-   $f_name=$_POST['f_name'];
+   $first_name=$_POST['first_name'];
    $name=$_POST['name'];
-   $s_name=$_POST['s_name'];
-   if(empty($f_name)){
+   $last_name=$_POST['last_name'];
+   if(empty($first_name)){
 	   $errmsg11 .= '<span style="color:red; font-size:12px">กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>';
 	   }
     if(empty($name)){
 	   $errmsg12 .='<span style="color:red; font-size:12px">กรุณากรอบชื่อด้วยค่ะ</span>';
 	   }
-    if(empty($s_name)){
+    if(empty($last_name)){
 	   $errmsg13 .= '<span style="color:red; font-size:12px">กรุณากรอบนามสกุลด้วยค่ะ</span>';
 	   }
 	 //if(!ereg($pattern, $pswd)) {
@@ -288,8 +281,8 @@ if(isset($_POST['ok'])) {
 	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 &&*/ !$errmsg22 /*&& !$errmsg23 && !$errmsg24 && 
 	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */&& !$errmsg30)
 	   {
-       $query = "insert into student(username,password,f_name,name,s_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) value(
-'$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$post','$tel','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+       $query = "insert into student(username,password,first_name,name,last_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) value(
+'$login','$pswd','$first_name','$name','$last_name','$birthday','$std_id','$address','$p_home','$c_home','$post','$tel','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
        $do = mysqli_query($connection,$query);
        if (!$do)
         { 
@@ -455,7 +448,7 @@ if(isset($_POST['ok'])) {
                <tr>
                 <td bgcolor="#FFFFFF"><div align="left">คำนำหน้าชื่อ </div></td>
                 <td height="1" bgcolor="#FFFFFF"><div align="left">
-                  <select name="f_name" id="f_name">
+                  <select name="first_name" id="first_name">
                     <option selected>&#3609;&#3634;&#3618;</option>
                     <option>&#3609;&#3634;&#3591;</option>
                     <option>&#3609;&#3634;&#3591;&#3626;&#3634;&#3623;</option>
@@ -483,7 +476,7 @@ if(isset($_POST['ok'])) {
               <?php } ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF"><div align="left">นามสกุล</div></td>
-                <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($s_name) ? $s_name :'')?>" />
+                <td height="1" bgcolor="#FFFFFF"><input type="text" name="last_name"  class="inputbox-normal" id="last_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php echo (isset($last_name) ? $last_name :'')?>" />
                   <span class="style29"style="color:#F00;">*</span></td>
               </tr>
               <?php if($errmsg15) { ?>
@@ -858,42 +851,19 @@ if(isset($_POST['ok'])) {
             <legend style="color:#033">5. กรอบข้อมูลเกี่ยวกับอาชีพ</legend>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
              <tr>
-                <td width="202">&nbsp;</td>
-                <td width="409">&nbsp;</td>
-              </tr>
-              <tr>
-                <td>ลักษณะอาชีพที่ท่านประกอบอยู่</td>
-                <td><div align="left">
-                  <input name="t_job" type="radio" id="radio5" value="ลูกจ้าง"  />
-                  ลูกจ้างบริษัท/ห้าง ร้าน </div></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><input type="radio" name="t_job" id="radio6" value="รับราชการ" />
-                  รับราชการ </td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><div align="left">
-                  <input type="radio" name="t_job" id="radio7" value="พนักงานรัฐวิสาหกิจ" />
-                  พนักงานรัฐวิสาหกิจ </div></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><input type="radio" name="t_job" id="radio8" value="ค้าขาย" />
-                  ค้าขาย</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><div align="left">
-                  <input type="radio" name="t_job" id="radio9" value="รับจ้างทั่วไป" />
-                  รับจ้างทั่วไป </div></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><div align="left">
-                  <input type="radio" name="t_job" id="radio9" value="ไม่ได้ประกอบอาชีพ" />
-                  ไม่ได้ประกอบอาชีพ </div></td>
+             <td>ลักษณะอาชีพที่ท่านประกอบอยู่</td>
+                  <td><div align="left">
+                  <label for=""></label>
+                  <select name="t_job">
+                 <option value="0"selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- โปรดระบุ --&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                 <option>ไม่ได้ประกอบอาชีพ</option>
+                 <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                 <option>รับราชการ</option>
+                 <option>พนักงานรัฐวิสาหกิจ</option>
+                 <option>ค้าขาย</option>
+                 <option>รับจ้างทั่วไป </option>
+                </select>
+              </div></td>  
               </tr>
             </table>
             </fieldset>

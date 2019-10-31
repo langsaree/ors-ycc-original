@@ -1,5 +1,4 @@
 <?php
-// session_start();
 include('auth.php');
 ?>
 
@@ -59,6 +58,9 @@ body {
 <body>
 <form id="form1" name="form1" method="post" action="plec_add.php">
   <table width="1280" height="578" border="0" align="left" cellpadding="0" cellspacing="0">
+  <tr>
+      <td width="1263"><img src="../public/images/header.png" width="1258" height="45" /></td>
+    </tr>
     <tr>
     <td width="1300" height="139" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
       <tr>
@@ -80,7 +82,7 @@ body {
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
       <table width="94%" border="0" cellspacing="5" cellpadding="0">
         <tr>
-          <td colspan="2" align="center"><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo isset($error) ? $error: ''; ?></div></td>
+          <td colspan="2" align="center"><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php "$error"; ?></div></td>
         </tr>
           <tr>
           <td width="32%" align="right" class="style46">Username :</td>
@@ -93,16 +95,23 @@ body {
           <tr>
           <td colspan="2" align="center" class="style44">-----------------------------------------------------------------------------------------------------------------------------------------------------------</td>
           </tr>
-        <tr>
-          <td width="32%" align="right"><span class="style40">รหัส<span class="style49">อาจารย์ห</span>ผู้สอน :</span> </td>
+          <tr>
+          <td width="32%" align="right"><span class="style40"><span class="style49"></span>ลำดับ :</span> </td>
           <td width="68%" class="red"><label>
             <span class="style50">
             <input name="lec_id" type="text" size="20" id="lec_id" />
             *            </span></label></td>
         </tr>
+        <tr>
+          <td width="32%" align="right"><span class="style40">รหัส<span class="style49"></span>อาจารย์ผู้สอน :</span> </td>
+          <td width="68%" class="red"><label>
+            <span class="style50">
+            <input name="lec_Teach_id" type="text" size="20" id="lec_Teach_id" />
+            *            </span></label></td>
+        </tr>
    
         <tr>
-          <td width="32%" align="right" class="style40"><span class="style40">ชื่อ<span class="style49">อาจารย์</span>ผู้สอน :</span></td>
+          <td width="32%" align="right" class="style40"><span class="style40">ชื่อ<span class="style49"></span>อาจารย์ผู้สอน :</span></td>
           <td width="68%"><label>
             <input name="lec_name" type="text" size="30" id="lec_name" />
             <span class="style50">          *</span></label></td>
