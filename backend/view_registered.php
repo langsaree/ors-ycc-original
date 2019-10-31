@@ -155,7 +155,7 @@ if (!empty($active)) {
                         $re = mysqli_query($connection, $sql);
                         while ($ro1 = mysqli_fetch_array($re)) {
                             $std1 = $ro1['std_id'];
-                            $name = $ro1['f_name'] . "<span>" . $ro1['name'] . "-" . $ro1['s_name'];
+                            $name = $ro1['titlename'] . "<span>" . $ro1['firstname'] . "-" . $ro1['lastname'];
 
                             //////////////////forth/////////////////////
                             $sql2 = "select * from lecturer where lec_id = '$lec' ";

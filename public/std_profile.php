@@ -212,14 +212,14 @@ include('db.php');
                                                 <td>&nbsp;</td>
                                                 <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ
                                                     :</span></span></td>
-                                                <td><? echo $row["f_name"]; ?><? echo $row["name"]; ?></td>
+                                                <td><? echo $row["titlename"]; ?><? echo $row["firstname"]; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>&nbsp;</td>
                                                 <td style="text-align: right"><span class="style60"
                                                                                     style="font-weight: bold">นามสกุล : </span>
                                                 </td>
-                                                <td><? echo $row["s_name"]; ?></td>
+                                                <td><? echo $row["lastname"]; ?></td>
                                                 <td>&nbsp;</td>
                                                 <td>&nbsp;</td>
                                                 <td>&nbsp;</td>

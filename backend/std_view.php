@@ -136,7 +136,7 @@
                 while ($row = mysqli_fetch_array($v)) {
                     $std = $row['std_id'];
                     $user = $row['username'];
-                    $name = $row['f_name'] . " <span> " . $row['name'] . " <span> " . $row['s_name'];
+                    $name = $row['titlename'] . " <span> " . $row['firstname'] . " <span> " . $row['lastname'];
                     //echo $name;
                     ?>
                     <tr>

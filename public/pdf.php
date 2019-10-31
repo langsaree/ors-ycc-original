@@ -93,7 +93,7 @@ $do3 = mysqli_query($connection, $sql3);
                             <tr>
                                 <td width="63"><span style="color: #000"><span class="style45">ข้าพเจ้า</span></span>
                                 </td>
-                                <td width="337"><?= $row['f_name'], ' ', $row['name'], ' ', ' ', $row['s_name']; ?></td>
+                                <td width="337"><?= $row['titlename'], ' ', $row['firstname'], ' ', ' ', $row['lastname']; ?></td>
                                 <td width="62">&nbsp;</td>
                                 <td width="62">&nbsp;</td>
                                 <td width="64">&nbsp;</td>

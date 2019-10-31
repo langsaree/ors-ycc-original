@@ -172,11 +172,11 @@ if (!empty($active)) {
                     $sql = "select * from student order by status DESC";
                     $result = mysqli_query($connection, $sql);
                     while ($row = mysqli_fetch_array($result)) {
-                        $n = $row['f_name'] . $row['name'];
+                        $n = $row['titlename'] . $row['firstname'];
                         ?>
                         <tr>
                         <td align="center" bgcolor="#FFFFB0"><? echo $row['std_id']; ?></td>
-                        <td align="left" bgcolor="#FFFFB0"><?= $n ?> - <?= $row['s_name']; ?></td>
+                        <td align="left" bgcolor="#FFFFB0"><?= $n ?> - <?= $row['lastname']; ?></td>
                         <td bgcolor="#FFDDFF">
                             <div align="center"><span class="hhhhh">
             <?php $status = $row['status'];

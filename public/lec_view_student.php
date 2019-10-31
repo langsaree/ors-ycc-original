@@ -175,8 +175,8 @@ include('db.php');
                                         <tr>
                                             <td>&nbsp;</td>
                                             <td><?= $row['std_id'] ?></td>
-                                            <td><?= $row2['name'] ?>
-                                                &nbsp;&nbsp;&nbsp; <?= $row2['s_name'] ?></td>
+                                            <td><?= $row2['firstname'] ?>
+                                                &nbsp;&nbsp;&nbsp; <?= $row2['lastname'] ?></td>
                                             <td><?= $row['cos_name'] ?></td>
                                             <td>&nbsp;</td>
                                             <td>&nbsp;</td>

@@ -123,7 +123,7 @@ $nt=mysqli_query($connection,$query);
 echo mysqli_error($connection);
 while($row=mysqli_fetch_array($nt))
 {
-	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
+	$name= $row['titlename']." <span> ". $row['firstname']." <span> ". $row['lastname'];
 ?>          
       <tr>
 		<td><div align="left"><?= $row['std_id']; ?> </div></td>
