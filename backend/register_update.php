@@ -70,6 +70,7 @@
           <input name="Update" type="submit" id="Update" value="Update" />
         </p>
         <p class="style1">&nbsp; </p>
+  <?php } ?>
       </div>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
