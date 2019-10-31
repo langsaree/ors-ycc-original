@@ -16,17 +16,17 @@ if (isset($_POST['Update'])) {
     $origin = $_POST['origin'];
     $religion = $_POST['religion'];
     $gender = $_POST['gender'];
-    //$b_day=$_POST['b_day'];
-    //$b_month=$_POST['b_month'];
-    //$b_year=$_POST['b_year'];
-    //$birthday=$b_day.'/'.$b_month.'/'.$b_year;
+    $b_day=$_POST['b_day'];
+    $b_month=$_POST['b_month'];
+    $b_year=$_POST['b_year'];
+    $birthday=$b_day.'/'.$b_month.'/'.$b_year;
     $birthday = $_POST['birthday'];
     $std_id = $_POST['std_id'];
-    //$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
+    $address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
     $address = $_POST['address'];
-    //$m_home=$_POST['m_home'];
-    //$r_home=$_POST['r_home'];
-    //$v_home=$_POST['v_home'];
+    $m_home=$_POST['m_home'];
+    $r_home=$_POST['r_home'];
+    $v_home=$_POST['v_home'];
     $city = $_POST['city'];
     $province = $_POST['province'];
     $postalcode = $_POST['postalcode'];
@@ -43,7 +43,7 @@ if (isset($_POST['Update'])) {
         header("location:std_view.php");
     } else {
         die("Could not select db" . mysqli_error());
-        //header("location:std_profile.php");
+        header("location:std_profile.php");
     }
 }
 ?>
@@ -123,10 +123,11 @@ if (isset($_POST['Update'])) {
                 <div align="center">
                     <p class="style1">Student Information </p>
                     <?php {
-                    $sql = "select * from student where std_id= $std_id ";
+                    $sql = "select * from student  ";
                     $result = mysqli_query($conn, $sql);
+
                     while ($row = mysqli_fetch_array($result));
-                    var_dump($result) ; 
+                  
                     
                     ?>
                   

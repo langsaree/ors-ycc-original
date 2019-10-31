@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include('../db.php');
 if(!session_is_registered('lec_user')){header("location:index.php");}
 if(session_is_registered('lec_user')){
 ?>

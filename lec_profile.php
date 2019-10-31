@@ -18,7 +18,7 @@ include('db.php');
     <style type="text/css">
 <!--
 .style25 {font-size: 11px;  }
-.style9 {font-size: 12px}
+.style9 {font-size: 12px}s
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
 	font-size: 14px;
