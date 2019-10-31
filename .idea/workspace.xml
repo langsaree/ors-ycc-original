@@ -1,153 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="last update before submit.dublicated folders">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ors-ycc-original.iml" beforeDir="false" />
+    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="last updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.php.core.projectOptions.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IndexHTML.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_notes/std_profile.php.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_notes/std_view.php.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bk_modify_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classic-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classic-map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/count1-100.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/Copy of std_add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_active.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_del.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_del.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cos_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/cpanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cpanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/grade_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/index2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/lec_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/lec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/lec_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/p_searchx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/p_searchx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos_addx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_addx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pcos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/plec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/psearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/psearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/pstd_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pstd_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/register_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/register_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/searchx.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_active.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view _status.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view _status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/std_view_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/view_registered.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/imga4838.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/imga4884.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/imga4900.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/pb0585791.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallary/pb058590.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/galleria.classic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/galleria.classic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButtonAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ArticleVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockHeader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockHeaderAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BlockVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderCorners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderHorizontal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/BorderVertical.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ButtonAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Footer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Header.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Big.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Small.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MenuBar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MenuButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/MenuButtonAnchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/_notes/2.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/_notes/dwsync.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/_notes/untitled.jpg.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cregister.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/p_Image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/register.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/register1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/untitled.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ycc_banner_real.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ตราโลโก้.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ยืนยันการสมัคร.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/galleria.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_profile_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_view_cos.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lec_view_student.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_check.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/p_register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/password_recovery.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_course_bk.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style_bk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testGit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,52 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/std_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1241">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/std_profile2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3689">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/std_update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/std_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/std_view _status.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-end-line="3" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="2" column="28" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -232,16 +45,149 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/view_registered.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
+            <state relative-caret-position="3094">
               <caret line="182" column="33" lean-forward="true" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/gallary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1157">
+              <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/college.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="27" column="14" selection-start-line="5" selection-end-line="27" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1904#1910#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#812#818#1" expanded="true" />
+                <element signature="e#1165#1171#1" expanded="true" />
+                <element signature="e#1197#1203#1" expanded="true" />
+                <element signature="e#1229#1235#1" expanded="true" />
+                <element signature="e#1455#1461#1" expanded="true" />
+                <element signature="e#1749#1755#1" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1755#1761#1" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#9756#9762#0#HTML" expanded="true" />
+                <element signature="e#9762#9768#0#HTML" expanded="true" />
+                <element signature="e#9768#9774#0#HTML" expanded="true" />
+                <element signature="e#9774#9780#0#HTML" expanded="true" />
+                <element signature="e#9780#9786#0#HTML" expanded="true" />
+                <element signature="e#9786#9792#0#HTML" expanded="true" />
+                <element signature="e#9792#9798#0#HTML" expanded="true" />
+                <element signature="e#9798#9804#0#HTML" expanded="true" />
+                <element signature="e#10680#10686#0#HTML" expanded="true" />
+                <element signature="e#10686#10692#0#HTML" expanded="true" />
+                <element signature="e#10692#10698#0#HTML" expanded="true" />
+                <element signature="e#10698#10704#0#HTML" expanded="true" />
+                <element signature="e#10704#10710#0#HTML" expanded="true" />
+                <element signature="e#10710#10716#0#HTML" expanded="true" />
+                <element signature="e#10716#10722#0#HTML" expanded="true" />
+                <element signature="e#10722#10728#0#HTML" expanded="true" />
+                <element signature="e#10728#10734#0#HTML" expanded="true" />
+                <element signature="e#11686#11692#0#HTML" expanded="true" />
+                <element signature="e#11692#11698#0#HTML" expanded="true" />
+                <element signature="e#11698#11704#0#HTML" expanded="true" />
+                <element signature="e#11704#11710#0#HTML" expanded="true" />
+                <element signature="e#11710#11716#0#HTML" expanded="true" />
+                <element signature="e#11716#11722#0#HTML" expanded="true" />
+                <element signature="e#11722#11728#0#HTML" expanded="true" />
+                <element signature="e#17722#17728#0#HTML" expanded="true" />
+                <element signature="e#17728#17734#0#HTML" expanded="true" />
+                <element signature="e#17734#17740#0#HTML" expanded="true" />
+                <element signature="e#17740#17746#0#HTML" expanded="true" />
+                <element signature="e#17746#17752#0#HTML" expanded="true" />
+                <element signature="e#17752#17758#0#HTML" expanded="true" />
+                <element signature="e#17758#17764#0#HTML" expanded="true" />
+                <element signature="e#19484#19490#0#HTML" expanded="true" />
+                <element signature="e#19616#19622#1#HTML" expanded="true" />
+                <element signature="e#19743#19749#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/contact_us.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="319" column="67" selection-start-line="319" selection-start-column="67" selection-end-line="319" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2491#2497#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#812#818#1" expanded="true" />
+                <element signature="e#1165#1171#1" expanded="true" />
+                <element signature="e#1197#1203#1" expanded="true" />
+                <element signature="e#1229#1235#1" expanded="true" />
+                <element signature="e#1455#1461#1" expanded="true" />
+                <element signature="e#1749#1755#1" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1826#1832#1" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#11647#11653#1#HTML" expanded="true" />
+                <element signature="e#11989#11995#1#HTML" expanded="true" />
+                <element signature="e#12056#12062#1#HTML" expanded="true" />
+                <element signature="e#12124#12130#1#HTML" expanded="true" />
+                <element signature="e#12192#12198#1#HTML" expanded="true" />
+                <element signature="e#12776#12782#1#HTML" expanded="true" />
+                <element signature="e#13064#13070#1#HTML" expanded="true" />
+                <element signature="e#13227#13233#1#HTML" expanded="true" />
+                <element signature="e#13508#13514#1#HTML" expanded="true" />
+                <element signature="e#13671#13677#1#HTML" expanded="true" />
+                <element signature="e#13957#13963#1#HTML" expanded="true" />
+                <element signature="e#14157#14163#1#HTML" expanded="true" />
+                <element signature="e#14644#14650#1#HTML" expanded="true" />
+                <element signature="e#14796#14802#1#HTML" expanded="true" />
+                <element signature="e#15449#15455#1#HTML" expanded="true" />
+                <element signature="e#15588#15594#1#HTML" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#16558#16564#1#HTML" expanded="true" />
+                <element signature="e#16614#16620#1#HTML" expanded="true" />
+                <element signature="e#17047#17053#1#HTML" expanded="true" />
+                <element signature="e#17186#17192#1#HTML" expanded="true" />
+                <element signature="e#17242#17248#1#HTML" expanded="true" />
+                <element signature="e#17298#17304#1#HTML" expanded="true" />
+                <element signature="e#17354#17360#1#HTML" expanded="true" />
+                <element signature="e#17484#17490#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/course.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -270,16 +216,13 @@
         <option value="$PROJECT_DIR$/public/lec_profile.php" />
         <option value="$PROJECT_DIR$/public/logout.php" />
         <option value="$PROJECT_DIR$/public/confirm_course.php" />
-        <option value="$PROJECT_DIR$/public/contact_us.php" />
         <option value="$PROJECT_DIR$/public/course.php" />
         <option value="$PROJECT_DIR$/public/course_detail.php" />
-        <option value="$PROJECT_DIR$/public/gallary.php" />
         <option value="$PROJECT_DIR$/public/profile_update.php" />
         <option value="$PROJECT_DIR$/public/register.php" />
         <option value="$PROJECT_DIR$/public/register_course.php" />
         <option value="$PROJECT_DIR$/public/std_profile.php" />
         <option value="$PROJECT_DIR$/public/std_login_check.php" />
-        <option value="$PROJECT_DIR$/public/college.php" />
         <option value="$PROJECT_DIR$/public/ann.php" />
         <option value="$PROJECT_DIR$/cpanel/auth.php" />
         <option value="$PROJECT_DIR$/cpanel/cos_active.php" />
@@ -318,10 +261,13 @@
         <option value="$PROJECT_DIR$/cpanel/std_view_search.php" />
         <option value="$PROJECT_DIR$/cpanel/test.php" />
         <option value="$PROJECT_DIR$/cpanel/view_registered.php" />
+        <option value="$PROJECT_DIR$/public/gallary.php" />
+        <option value="$PROJECT_DIR$/public/college.php" />
+        <option value="$PROJECT_DIR$/public/contact_us.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="825" />
     <option name="width" value="1050" />
     <option name="height" value="1090" />
@@ -341,7 +287,7 @@
             <path>
               <item name="ors-ycc" type="b2602c69:ProjectViewProjectNode" />
               <item name="ors-ycc" type="462c0819:PsiDirectoryNode" />
-              <item name="cpanel" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,7 +342,8 @@
       <workItem from="1572486018029" duration="55000" />
       <workItem from="1572505813967" duration="1696000" />
       <workItem from="1572507621527" duration="1816000" />
-      <workItem from="1572509460456" duration="1611000" />
+      <workItem from="1572509460456" duration="1771000" />
+      <workItem from="1572511267040" duration="702000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16.">
       <created>1568708916699</created>
@@ -426,16 +373,24 @@
       <option name="project" value="LOCAL" />
       <updated>1572506716208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="last updates">
+      <created>1572511113707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572511113707</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25610000" />
+    <option name="totallyTimeSpent" value="26472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19530201" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19798657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -503,38 +458,11 @@
     <MESSAGE value="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16." />
     <MESSAGE value="last update before submit" />
     <MESSAGE value="last update before submit.dublicated folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="last update before submit.dublicated folders" />
+    <MESSAGE value="last updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="last updates" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2185" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_delete.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/index2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/index2.php" />
     <entry file="file://$PROJECT_DIR$/cpanel/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -760,9 +688,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/searchx.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/searchx.php" />
     <entry file="file://$PROJECT_DIR$/cpanel/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165" />
@@ -834,16 +760,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view2.php" />
     <entry file="file://$PROJECT_DIR$/cpanel/std_profile2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3689">
+        <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/std_update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="1037">
           <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
@@ -855,10 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/std_view2.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view _status.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3196">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -871,19 +798,6 @@
     <entry file="file://$PROJECT_DIR$/cpanel/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/std_view _status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-end-line="3" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -893,13 +807,138 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/view_registered.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="3094">
           <caret line="182" column="33" lean-forward="true" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/gallary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1157">
+          <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/college.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="27" column="14" selection-start-line="5" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1904#1910#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#812#818#1" expanded="true" />
+            <element signature="e#1165#1171#1" expanded="true" />
+            <element signature="e#1197#1203#1" expanded="true" />
+            <element signature="e#1229#1235#1" expanded="true" />
+            <element signature="e#1455#1461#1" expanded="true" />
+            <element signature="e#1749#1755#1" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1755#1761#1" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9756#9762#0#HTML" expanded="true" />
+            <element signature="e#9762#9768#0#HTML" expanded="true" />
+            <element signature="e#9768#9774#0#HTML" expanded="true" />
+            <element signature="e#9774#9780#0#HTML" expanded="true" />
+            <element signature="e#9780#9786#0#HTML" expanded="true" />
+            <element signature="e#9786#9792#0#HTML" expanded="true" />
+            <element signature="e#9792#9798#0#HTML" expanded="true" />
+            <element signature="e#9798#9804#0#HTML" expanded="true" />
+            <element signature="e#10680#10686#0#HTML" expanded="true" />
+            <element signature="e#10686#10692#0#HTML" expanded="true" />
+            <element signature="e#10692#10698#0#HTML" expanded="true" />
+            <element signature="e#10698#10704#0#HTML" expanded="true" />
+            <element signature="e#10704#10710#0#HTML" expanded="true" />
+            <element signature="e#10710#10716#0#HTML" expanded="true" />
+            <element signature="e#10716#10722#0#HTML" expanded="true" />
+            <element signature="e#10722#10728#0#HTML" expanded="true" />
+            <element signature="e#10728#10734#0#HTML" expanded="true" />
+            <element signature="e#11686#11692#0#HTML" expanded="true" />
+            <element signature="e#11692#11698#0#HTML" expanded="true" />
+            <element signature="e#11698#11704#0#HTML" expanded="true" />
+            <element signature="e#11704#11710#0#HTML" expanded="true" />
+            <element signature="e#11710#11716#0#HTML" expanded="true" />
+            <element signature="e#11716#11722#0#HTML" expanded="true" />
+            <element signature="e#11722#11728#0#HTML" expanded="true" />
+            <element signature="e#17722#17728#0#HTML" expanded="true" />
+            <element signature="e#17728#17734#0#HTML" expanded="true" />
+            <element signature="e#17734#17740#0#HTML" expanded="true" />
+            <element signature="e#17740#17746#0#HTML" expanded="true" />
+            <element signature="e#17746#17752#0#HTML" expanded="true" />
+            <element signature="e#17752#17758#0#HTML" expanded="true" />
+            <element signature="e#17758#17764#0#HTML" expanded="true" />
+            <element signature="e#19484#19490#0#HTML" expanded="true" />
+            <element signature="e#19616#19622#1#HTML" expanded="true" />
+            <element signature="e#19743#19749#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contact_us.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="319" column="67" selection-start-line="319" selection-start-column="67" selection-end-line="319" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2491#2497#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#812#818#1" expanded="true" />
+            <element signature="e#1165#1171#1" expanded="true" />
+            <element signature="e#1197#1203#1" expanded="true" />
+            <element signature="e#1229#1235#1" expanded="true" />
+            <element signature="e#1455#1461#1" expanded="true" />
+            <element signature="e#1749#1755#1" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#ul#0;n#div#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1826#1832#1" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#11647#11653#1#HTML" expanded="true" />
+            <element signature="e#11989#11995#1#HTML" expanded="true" />
+            <element signature="e#12056#12062#1#HTML" expanded="true" />
+            <element signature="e#12124#12130#1#HTML" expanded="true" />
+            <element signature="e#12192#12198#1#HTML" expanded="true" />
+            <element signature="e#12776#12782#1#HTML" expanded="true" />
+            <element signature="e#13064#13070#1#HTML" expanded="true" />
+            <element signature="e#13227#13233#1#HTML" expanded="true" />
+            <element signature="e#13508#13514#1#HTML" expanded="true" />
+            <element signature="e#13671#13677#1#HTML" expanded="true" />
+            <element signature="e#13957#13963#1#HTML" expanded="true" />
+            <element signature="e#14157#14163#1#HTML" expanded="true" />
+            <element signature="e#14644#14650#1#HTML" expanded="true" />
+            <element signature="e#14796#14802#1#HTML" expanded="true" />
+            <element signature="e#15449#15455#1#HTML" expanded="true" />
+            <element signature="e#15588#15594#1#HTML" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#16558#16564#1#HTML" expanded="true" />
+            <element signature="e#16614#16620#1#HTML" expanded="true" />
+            <element signature="e#17047#17053#1#HTML" expanded="true" />
+            <element signature="e#17186#17192#1#HTML" expanded="true" />
+            <element signature="e#17242#17248#1#HTML" expanded="true" />
+            <element signature="e#17298#17304#1#HTML" expanded="true" />
+            <element signature="e#17354#17360#1#HTML" expanded="true" />
+            <element signature="e#17484#17490#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
