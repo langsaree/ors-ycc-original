@@ -1,19 +1,18 @@
 <?php
 session_start();
-include('login_check.php');
-include('db.php');   
+include('../config/login_check.php');
+include('../config/db.php');   
 ?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<title>ติดต่อผู้ดูแลระบบ</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
-    <link rel="stylesheet" href="style.css" />
-    <style type="text/css"></style>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>ติดต่อผู้ดูแลระบบ</title>
+      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+      <link rel="stylesheet" href="style.css" />
+      <style type="text/css"></style>
 </head>
 
 <body>
@@ -43,7 +42,7 @@ include('db.php');
         <div class="ArticleL">
         </div>
  <?php
-if(isset($_POST['action'])){
+if(isset($_POST['submit'])){
 if($_POST['verifycode'] !=$_SESSION['total'] ){
   $c_error='<span style="color:red">Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง</span>';
     //echo " Verify Code ไม่ถูกต้อง โปรดใสใหม่อีกครั้ง<br>";
@@ -67,14 +66,17 @@ if($_POST['verifycode'] !=$_SESSION['total'] ){
      $mailto = "anastodeng@gmail.com"; # อีเมล์ผู้รับ
      
      if (mail($mailto, $_POST['subj'], $msgs, $headers)) {
-      echo "<ส่งสำเร็จ";
-  } else {
-      echo "ผิดพลาด";
-     }
-	 
+      echo "<div class=\"Article\">
+                    <p align=\"center\">ส่งสำเร็จ</p>
+                   </div>";
+                } else {
+                    echo "<div class=\"Article\">
+                    <p align=\"center\">ผิดพลาด</p>
+                   </div>";
+                }
      exit();
- }
   }
+}
 ?>
 <?php
 $num1 = rand(0,10);
@@ -89,7 +91,7 @@ $_SESSION['total'] = ($num1 + $num2);
       <td colspan="4">&nbsp;</td>
     </tr>
     <tr>
-      <td colspan="4"><span class="style30">ติดต่อผู้ดูแลระบบ </span></td>
+      <td colspan="4"><span class="style31">ติดต่อผู้ดูแลระบบ </span></td>
       </tr>
     <tr>
       <td width="32">&nbsp;</td>
@@ -108,21 +110,21 @@ while($row=mysqli_fetch_array($result)) {
       <td>&nbsp;</td>
       <td><span class="style5">ชื่อผู้ใช้ : </span></td>
       <td><input type='text' name='name' 
-      value="<?php $row["username"];?>" /></td>
+      value="<?php echo $row["username"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">อีเมล์ :</span></td>
       <td><input type='text' name='email' 
-      value="<?php $row["email"];?>" /></td>
+      value="<?php echo $row["email"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><span class="style5">เบอร์โทรศัพท์ :</span></td>
       <td><input type='text' name='tel' 
-      value="<?php $row["phone"];?>" /></td>
+      value="<?php echo $row["phone"];?>" /></td>
       <td>&nbsp;</td>
     </tr>
     <?php }} ?>
@@ -165,12 +167,12 @@ while($row=mysqli_fetch_array($result)) {
             echo $c_error; }
           ?> 
 
-            </td>
+          </td>
       </tr>
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td><input type='submit' id="action" class="button" value='ส่งข้อความ' /></td>
+      <td><input type='submit' name="submit"  value='ส่งข้อความ' /></td>
       <?php
        if (isset($u_error)) {
        echo $u_error;
@@ -189,12 +191,8 @@ while($row=mysqli_fetch_array($result)) {
 </form>
           </div>
         </div>
-
-        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div>
         </div>
-        </div></div>
-        <div class="Footer"><span class="style25">&copy; Copyright Electronic Registration of Yala Community College Design by : Bukhoree | Kholed | Ihsan </span></div>                
-    </div>
 </div>
-    </body>
+<?php include('../config/footer.php');?>
+</body>
 </html>
