@@ -1,4 +1,4 @@
- <?
+ <?php
  include('../config/db.php');
    //mysql_query ("SET NAMES 'utf8'");
 
@@ -79,10 +79,10 @@ body {
           <td height="41" colspan="4" valign="top">* แสดงรายวิชาที่เปิดสอนเดือนนี้</td>
         </tr>
         <tr>
-          <td width="25%" height="25" valign="top"><div align="center"><? echo $cos_id; ?></div></td>
-          <td width="34%" valign="top"><div align="center"><? echo $cos_id; ?></div></td>
-          <td width="20%" valign="top"><div align="center"><? echo $cos_id; ?></div></td>
-          <td width="45%" valign="top"><div align="center"><? echo $cos_id; ?></div></td>
+          <td width="25%" height="25" valign="top"><div align="center"><?php echo $cos_id; ?></div></td>
+          <td width="34%" valign="top"><div align="center"><?php echo $cos_id; ?></div></td>
+          <td width="20%" valign="top"><div align="center"><?php echo $cos_id; ?></div></td>
+          <td width="45%" valign="top"><div align="center"><?php echo $cos_id; ?></div></td>
         </tr>
         <tr>
           <td colspan="4" valign="top">&nbsp;</td>
@@ -107,7 +107,7 @@ body {
               <div align="right">ชื่อล็อกอิน : </div>
           </div></td>
           <td colspan="3" bgcolor="#FFFFFF"><div align="left">
-              <input name="username" type="text" id="username" value="<? echo $result_row[0]; ?>" />
+              <input name="username" type="text" id="username" value="<?php echo $result_row[0]; ?>" />
           </div></td>
         </tr>
         <tr>
@@ -115,7 +115,7 @@ body {
               <div align="right">รหัสผ่าน :</div>
           </div></td>
           <td colspan="3" bgcolor="#FFFFFF"><div align="left">
-              <input name="password" type="text" id="password" value="<? echo $result_row[1]; ?>" />
+              <input name="password" type="text" id="password" value="<?php echo $result_row[1]; ?>" />
           </div></td>
         </tr>
         <tr>
@@ -125,28 +125,28 @@ body {
         <tr>
           <td height="31" bgcolor="#FFFFFF"><div align="right" class="style46">ชื่อ :</div></td>
           <td colspan="2" bgcolor="#FFFFFF"><div align="left">
-              <input type="text" name="name" id="name" value="<? echo $result_row[2]; ?><? echo $result_row[3]; ?>" />
+              <input type="text" name="name" id="name" value="<?php echo $result_row[2]; ?><?php echo $result_row[3]; ?>" />
           </div></td>
           <td bgcolor="#FFFFFF"><div align="left">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621;<span class="style46"> :</span>
-                  <input name="s_name" type="text" id="s_name" value="<? echo $result_row[4]; ?>" />
+                  <input name="s_name" type="text" id="s_name" value="<?php echo $result_row[4]; ?>" />
           </div></td>
         </tr>
         <tr>
           <td height="33" bgcolor="#FFFFFF"><div align="right" class="style46">&#3648;&#3614;&#3624; :</div></td>
           <td colspan="3" bgcolor="#FFFFFF"><div align="left">
-              <input name="gender" type="text" id="gender" value="<? echo $result_row[5]; ?>" size="15" />
+              <input name="gender" type="text" id="gender" value="<?php echo $result_row[5]; ?>" size="15" />
           </div></td>
         </tr>
         <tr>
           <td height="35" bgcolor="#FFFFFF"><div align="right" class="style46">วันเกิด : </div></td>
           <td colspan="3" bgcolor="#FFFFFF"><div align="left">
-              <input name="birth" type="text" id="birth" value="<? echo $result_row[6]; ?><? echo $result_row[7]; ?><? echo $result_row[8]; ?>" />
+              <input name="birth" type="text" id="birth" value="<?php echo $result_row[6]; ?><?php echo $result_row[7]; ?><?php echo $result_row[8]; ?>" />
           </div></td>
         </tr>
         <tr>
           <td height="35" bgcolor="#FFFFFF"><div align="right" class="style47">เลขบัตรประชาชน<span class="style46"> :</span></div></td>
           <td colspan="3" bgcolor="#FFFFFF"><div align="left">
-              <input name="std_id" type="text" id="std_id" value="<? echo $result_row[9]; ?>" maxlength="13" />
+              <input name="std_id" type="text" id="std_id" value="<?php echo $result_row[9]; ?>" maxlength="13" />
           </div></td>
         </tr>
         <tr>
@@ -173,55 +173,55 @@ body {
             <tr>
               <td height="22"><div align="right" class="style47">บ้านเลขที่<span class="style46"> :</span></div></td>
               <td><div align="left">
-                  <input name="home" type="text" id="home" value="<? echo $result_row[10]; ?>" size="10" />
+                  <input name="home" type="text" id="home" value="<?php echo $result_row[10]; ?>" size="10" />
               </div></td>
               <td><div align="right" class="style46">หมู่บ้าน/อาคาร :</div></td>
               <td><div align="left">
-                  <input name="m_home" type="text" id="m_home" value="<? echo $result_row[11]; ?>" size="10" />
+                  <input name="m_home" type="text" id="m_home" value="<?php echo $result_row[11]; ?>" size="10" />
               </div></td>
             </tr>
             <tr>
               <td height="32"><div align="right" class="style47">&#3595;&#3629;&#3618;/&#3606;&#3609;&#3609;<span class="style46"> :</span></div></td>
               <td><div align="left">
-                  <input name="r_home" type="text" id="r_home" value="<? echo $result_row[12]; ?>" size="10" />
+                  <input name="r_home" type="text" id="r_home" value="v $result_row[12]; ?>" size="10" />
               </div></td>
               <td><div align="right" class="style46">แขวง/ตำบล :</div></td>
               <td><div align="left">
-                  <input name="v_home" type="text" id="v_home" value="<? echo $result_row[13]; ?>" size="10" />
+                  <input name="v_home" type="text" id="v_home" value="<?php echo $result_row[13]; ?>" size="10" />
               </div></td>
             </tr>
             <tr>
               <td height="23"><div align="right" class="style47">เขต/อำเภอ<span class="style46"> :</span></div></td>
               <td><div align="left">
-                  <input name="p_home" type="text" id="p_home" value="<? echo $result_row[14]; ?>" size="10" />
+                  <input name="p_home" type="text" id="p_home" value="<?php echo $result_row[14]; ?>" size="10" />
               </div></td>
               <td><div align="right" class="style46">จังหวัด :</div></td>
               <td><div align="left">
-                  <input name="c_home" type="text" id="c_home" value="<? echo $result_row[15]; ?>" size="15" />
+                  <input name="c_home" type="text" id="c_home" value="<?php echo $result_row[15]; ?>" size="15" />
               </div></td>
             </tr>
             <tr>
               <td height="30"><div align="right"><span class="style46">รหัสไปรษณีย์ : </span></div></td>
               <td><div align="left">
-                  <input name="post" type="text" id="post" value="<? echo $result_row[16]; ?>" size="15" />
+                  <input name="post" type="text" id="post" value="<?php echo $result_row[16]; ?>" size="15" />
               </div></td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td height="27"><div align="right" class="style46">โทรศัพท์ :</div></td>
-              <td><input name="tel" type="text" id="tel" value="<? echo $result_row[17]; ?>" size="18" /></td>
+              <td><input name="tel" type="text" id="tel" value="<?php echo $result_row[17]; ?>" size="18" /></td>
               <td><div align="right" class="style46">โทรสาร :</div></td>
               <td><div align="left">
-                  <input name="d_tel" type="text" id="d_tel" value="<? echo $result_row[18]; ?>" size="18" />
+                  <input name="d_tel" type="text" id="d_tel" value="<?php echo $result_row[18]; ?>" size="18" />
               </div></td>
             </tr>
             <tr>
               <td><div align="right">E-mail<span class="style46"> :</span></div></td>
-              <td><input name="email" type="text" id="email" value="<? echo $result_row[19]; ?>" size="18" /></td>
+              <td><input name="email" type="text" id="email" value="<?php echo $result_row[19]; ?>" size="18" /></td>
               <td><div align="right" class="style46">มือถือ :</div></td>
               <td><div align="left">
-                  <input name="mobile" type="text" id="mobile" value="<? echo $result_row[20]; ?>" size="18" />
+                  <input name="mobile" type="text" id="mobile" value="<?php echo $result_row[20]; ?>" size="18" />
               </div></td>
             </tr>
             <tr>
@@ -249,7 +249,7 @@ body {
             <tr>
               <td><div align="right" class="style54">ขณะนี้ท่านประกอบอาชีพอยู่หรือ<span class="style45">ไม่<span class="style46"> :</span></span></div></td>
               <td><div align="left">
-                  <input name="job" type="text" id="job" value="<? echo $result_row[21]; ?>" />
+                  <input name="job" type="text" id="job" value="<?php echoo $result_row[21]; ?>" />
               </div></td>
             </tr>
             <tr>
@@ -259,7 +259,7 @@ body {
             <tr>
               <td><div align="right" class="style55">ลักษณะอาชีพที่ท่านประกอบอยู่ :</div></td>
               <td><div align="left">
-                  <input name="t_job" type="text" id="t_job" value="<? echo $result_row[22]; ?>" />
+                  <input name="t_job" type="text" id="t_job" value="<?php echo $result_row[22]; ?>" />
               </div></td>
             </tr>
             <tr>

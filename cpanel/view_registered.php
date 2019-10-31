@@ -1,7 +1,9 @@
 <?php
-session_start();
-include "db.php";
-//include('auth.php');
+include('../config/db.php');
+include('auth.php');
+extract ($_GET);
+$user_admin = $_SESSION["user_admin"];
+$msg = "";;
 extract($_GET);
 $user_admin = $_SESSION["user_admin"];
 $active = isset($_GET['active']) ? $_GET['active'] : "";

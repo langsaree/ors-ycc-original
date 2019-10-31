@@ -57,6 +57,6 @@ body {
     <tr>
       <td valign="baseline"><img src="image/footer.jpg" width="1260" height="76" /></td>
     </tr>
-  </table> <? } ?>
+  </table> <?php } ?>
 </body>
 </html>

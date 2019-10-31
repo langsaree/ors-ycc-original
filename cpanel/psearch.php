@@ -1,4 +1,4 @@
-<?
+<?php
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
@@ -96,7 +96,7 @@ body {
         <td width="7%" bgcolor="#CCCCCC"><div align="center">ลบออก</div></td>
         <td width="17%" bgcolor="#CCCCCC"><div align="center">แสดงข้อมูลรายละเอียด</div></td>
       </tr>
-  <?
+  <?php
 // check for blank input
 if($search_text==""){$search_text="blank";}
 // end of check
@@ -126,13 +126,13 @@ while($row=mysqli_fetch_array($nt))
 ?>          
             </tr>
             <tr>
-              <td align="center"><?PHP echo $row[std_id]; ?></td>
-      <td align="center" bordercolor="#FFFFFF"><? echo $row[username]; ?></td>
-      <td align="center"><?= $name ?></td>
+              <td align="center"><?php echo $row["std_id"]; ?></td>
+      <td align="center" bordercolor="#FFFFFF"><?php echo $row["username"]; ?></td>
+      <td align="center"><?php echo $name ?></td>
       <td align="center"></td>
       <td align="center"></td>
-      <td><div align="center"><a href="std_profile.php?id= <? echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
-            <?
+      <td><div align="center"><a href="std_profile.php?id= <?php echo $std_id; ?> ">แสดงรายละเอียด</a></div></td>
+            <?php
 	}
 	}
 	?>

@@ -92,21 +92,21 @@ border-color:#8A9AA6;
   <tr>
   
     <td height="548" valign="top"><table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
-      <? if($msg){?>
+      <?php if($msg){?>
       <tr>
         <td width="26" height="61">&nbsp;</td>
         <td width="465"><p class="one"><br />
           &nbsp;&nbsp;
-          <?= $msg ?>
+                <?php echo $msg ?>
           <br />
           <br />
         </p></td>
         <td width="505">&nbsp;</td>
         <td width="18">&nbsp;</td>
       </tr>
-      <? } ?>
+      <?php } ?>
     </table>
-    <?
+    <?php
   $sql = "select * from student order by status DESC";
   $re = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result))
@@ -122,10 +122,10 @@ border-color:#8A9AA6;
           <td width="11%" bgcolor="#CCCCCC"><div align="center" class="style36">Non-Active</div></td>
           </tr>           
         <tr>
-          <td><div align="center"><? echo $row["username"];?></div></td>
-          <td><div align="center"><? echo $n ?><span onclick="3"><?= $row["s_name"];?></div></td>
+          <td><div align="center"><?php echo $row["username"];?></div></td>
+          <td><div align="center"><?php echo $n ?><span onclick="3"><?php echo $row["s_name"];?></div></td>
           <td><div align="center"><span class="hhhhh">
-            <? $status=$row["status"];
+           <?php $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -135,9 +135,9 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td><div align="center"><a href="std_active.php?active=<?=$row["std_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td><div align="center"><a href="std_active.php?active=<?php echo$row["std_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
           <td><div align="center"><a href="std_active.php?non_active=<?=$row["std_id"]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
-          </tr><? }?>
+          </tr><?php }?>
     </table>
       <p>&nbsp;</p>
       <p>&nbsp;</p>

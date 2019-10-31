@@ -11,10 +11,7 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 $username = mysqli_real_escape_string($con, $username);
 $password = mysqli_real_escape_string($con, $password);
-//$code = stripslashes($code);
-//$code = mysql_real_escape_string($code);
-//$sql="SELECT * FROM $n WHERE user='$username' and pass='$password'";
-//$result=mysql_query($sql);
+
 $sql="SELECT * FROM student WHERE username='$username' and password='$password'";
 $result=mysqli_query($con, $sql);
 // Mysql_num_row is counting table row
