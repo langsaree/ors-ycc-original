@@ -2,7 +2,6 @@
 session_start();
 include('../config/login_check.php');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>

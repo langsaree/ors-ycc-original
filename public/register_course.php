@@ -41,12 +41,12 @@ if (isset($_POST['ok'])) {
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ลงทะเบียนเรียนใหม่</title>
      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
-<!--
 .style25 {font-size: 11px; font-family: Tahoma; }
 .style7 {color: #3987FB; font-size: 14px; }
 .style26 {
@@ -150,7 +150,6 @@ color:#FFFFFF;
 font-size:11px;
 font-weight:bold;
 }
--->
     </style>
 </head>
 <body>
@@ -309,7 +308,7 @@ font-weight:bold;
                             echo '<span class="style7"><a href="std_profile.php" style="color: #3987FB; text-decoration: none">ข้อมูลส่วนตัว</a></span><br>';
                             echo '<span class="style7"><a href="logout.php" style="color: #3987FB; text-decoration: none">ออกจากระบบ</a></span ><br>';
                         }
-                        }
+
                         ?>
             <br>
           </div>
@@ -538,7 +537,7 @@ font-weight:bold;
             {
             $query = "INSERT INTO student (username,password,first_name,name,last_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear)
                   value('$login','$pswd','$first_name','$name','$last_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
-            $do = mysqli_query($connection, $query);
+            $do = mysqli_query($con, $query);
             if ($do) {
             echo "<script>location='register.php';</script>";
             $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
