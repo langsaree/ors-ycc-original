@@ -1,13 +1,13 @@
 <?php
 session_start();
-include('../db.php');
+include('../config/db.php');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="../public/images/x-icon"/>
     <link rel="stylesheet" href="style.css"/>
     <style type="text/css">
         .style29 {
@@ -22,7 +22,7 @@ include('../db.php');
 <body>
 <td width="10">&nbsp;</td>
 <table> <td width="330" style="text-align:right" align="center"><a href="cpanel.php" class="style6" style="text-decoration:none" >
-     <img src="../image/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
+     <img src="../public/images/osa_user_blue_sysadmin.png" width="50" height="50" align="center" /><span class="style25"> ControlPanel </a></table>
 <p align="center"> _____________________________________________________________________________</p></td>
 <div class="BodyContent">
     <div class="BorderBorder">
@@ -86,15 +86,6 @@ include('../db.php');
                         $errmsg30 = ""; $errmsg31 = ""; $errmsg32 = ""; $errmsg33 = ""; $errmsg34 = ""; $errmsg35 = "";
 
 
-                        //$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
-                        //	foreach($_REQUEST as $key => $value)  {
-                        //		$$key = $value;
-                        //	}
-                        //	$errmsg = array();
-                        //	for($i = 0; $i < 20; $i++) {
-                        //		$errmsg[$i] = false;
-                        //	}
-
                         if(isset($_POST['Submit'])) {
 #=========================================
 # username check
@@ -154,16 +145,16 @@ include('../db.php');
 #end password check
 #===================================
 # first name and last name
-                            $f_name = $_POST['f_name'];
+                            $first_name = $_POST['first_name'];
                             $name = $_POST['name'];
-                            $s_name = $_POST['s_name'];
-                            if (empty($f_name)) {
+                            $last_name = $_POST['last_name'];
+                            if (empty($first_name)) {
                                 $errmsg11 = "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
                             }
                             if (empty($name)) {
                                 $errmsg12 = "<span style=color:red>กรุณากรอกชื่อด้วยค่ะ</span>";
                             }
-                            if (empty($s_name)) {
+                            if (empty($last_name)) {
                                 $errmsg13 = "<span style=color:red>กรุณากรอกนามสกุลด้วยค่ะ</span>";
                             }
                             //if(!ereg($pattern, $pswd)) {
@@ -340,8 +331,8 @@ include('../db.php');
                             {
 
 
-                                $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
-                  value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+                                $query = "INSERT INTO student (username,password,first_name,name,last_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
+                  value('$login','$pswd','$first_name','$name','$last_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
 
                                 $do = mysqli_query($connection, $query);
                                 if ($do) {
@@ -522,7 +513,7 @@ include('../db.php');
                                     <tr>
                                         <td bgcolor="#FFFFFF"><div align="left" class="black_color">คำนำหน้าชื่อ </div></td>
                                         <td height="1" bgcolor="#FFFFFF"><div align="left">
-                                                <select name="f_name" id="f_name">
+                                                <select name="first_name" id="first_name">
                                                     <option selected>นาย</option>
                                                     <option>นาง</option>
                                                     <option>นางสาว</option>
@@ -550,7 +541,7 @@ include('../db.php');
                                     <?php } ?>
                                     <tr>
                                         <td height="1" bgcolor="#FFFFFF" class="black_color"><div align="left">นามสกุล</div></td>
-                                        <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"  class="inputbox-normal" id="s_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $s_name ?>" />
+                                        <td height="1" bgcolor="#FFFFFF"><input type="text" name="last_name"  class="inputbox-normal" id="last_name" style="background: <?php if($errmsg13 ) echo "#EEFCE2"; ?>" value="<?php $last_name ?>" />
                                             <span class="style29">*</span></td>
                                     </tr>
                                     <?php if($errmsg15) { ?>
@@ -923,7 +914,7 @@ include('../db.php');
                                     </tr>
                                     <tr>
                                         <td width="213" height="16">&nbsp;</td>
-                                        <td width="224"><button type="submit" src="../images/register.png" name="Submit" value="Submit" alt="Submit"><img src="../images/register.png"/></td>
+                                        <td width="224"><button type="submit" src="../public/images/register.png" name="Submit" value="Submit" alt="Submit"><img src="../public/images/register.png"/></td>
                                         <td width="174">&nbsp;</td>
                                     </tr>
 
