@@ -128,7 +128,7 @@ include('../config/login_check.php');
                   </tr>
                 </table>
 				
-				<?php '; ?>
+				 '; ?>
 
                         <?php } else { ?>
                             <?php
