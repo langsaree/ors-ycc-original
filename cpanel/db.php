@@ -4,8 +4,8 @@ $db_database = "ors_ycc";
 $db_username = "root";
 $db_password = "";
 
-$connection = mysqli_connect($db_host, $db_username, $db_password, $db_database);
-if (!$connection) {
+$con = mysqli_connect($db_host, $db_username, $db_password, $db_database);
+if (!$con) {
     die("Could not connect with db" . mysqli_error());
 }
-mysqli_query($connection, "SET NAMES 'utf8'");
+mysqli_query($con, "SET NAMES 'utf8'");

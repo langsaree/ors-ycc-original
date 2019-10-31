@@ -90,12 +90,12 @@ body {
 		/////////////////////////take information from student table //////////////////////////
 	include('db.php');
 	$sql1 = "select * from student ";
-	$v=mysql_query ($sql1);
-	while ($row= mysql_fetch_array($v))
+	$v=mysqli_query ($con,$sql1);
+	while ($row= mysqli_fetch_array($v))
 	{
-	$std = $row[std_id];
-	$user= $row[username];
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$std = $row["std_id"];
+	$user= $row["username"];
+	$name= $row["f_name"]." <span> ". $row["name"]." <span> ". $row["s_name"];
 	//echo $name;
 	?>
       <tr>

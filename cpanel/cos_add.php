@@ -49,9 +49,9 @@ $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysql_query ("SET NAMES 'utf8'");
+mysqli_query ("SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysql_query($sql);
+    $result = mysqli_query($con,$sql);
 
 if ($result>0)	
 {?>
@@ -61,7 +61,7 @@ if ($result>0)
 
  <?  }
 else {
-	 die("Error db".mysql_error()); }
+	 die("Error db".mysqli_error()); }
 
 }}
 ?>

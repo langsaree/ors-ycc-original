@@ -149,9 +149,9 @@ $username = $_SESSION["lec_user"];
               <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td><?=$row['cos_id']?></td>
-                <td><?=$row['cos_group']?></td>
-                <td><?=$row['cos_name']?></td>
+                <td><?=$row["cos_id"]?></td>
+                <td><?=$row["cos_group"]?></td>
+                <td><?=$row["cos_name"]?></td>
                 <td>&nbsp;</td>
               </tr>
               <? }?>

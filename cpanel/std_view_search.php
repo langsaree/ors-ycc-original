@@ -2,12 +2,12 @@
 //session_start();
 #if(!session_is_registered(username)){header("location:index.php");}
 //end of check session
-include "db.php";
+$db = new Db;
+$connection = $db->connect();
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
 $type=$_POST['type'];
-
 $search_text=ltrim($search_text);
 $search_text=rtrim($search_text);
 ?>
@@ -105,8 +105,8 @@ if($type<>"any"){
 //$query="select * from $m where s_id='$search_text'";
 $query="select * from student where std_id='$search_text'";
 		}else{
-$kt=split(" ",$search_text);//Breaking the string to array of words
-// Now let us generate the sql 
+    $kt= split(" ",$search_text);//Breaking the string to array of words
+// Now let us generate the sql
 			while(list($key,$val)=each($kt)){
 if($val<>" " and strlen($val) > 0){$q .= " lec_id like '%$val%' or ";}
 			}// end of while
@@ -117,16 +117,16 @@ $query="select * from student where $q order by std_id limit 0, 20"; // start se
 //echo $query;
 
 echo "<br><br>";
-mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt))
+mysqli_query("SET NAMES utf-8"); //		for thai input
+$nt=mysqli_query($query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($nt))
 {
-	$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
+	$name= $row[f_name]." <span> ". $row["name"]." <span> ". $row["s_name"];
 ?>          
       <tr>
-		<td><div align="left"><?= $row[std_id]; ?> </div></td>
-		<td><div align="center"><?= $row[username]; ?></div></td>
+		<td><div align="left"><?= $row["std_id"]; ?> </div></td>
+		<td><div align="center"><?= $row["username"]; ?></div></td>
 		<td><div align="left"><?= $name?></div></td>
         <td><div align="center"><a href="std_update.php?id= <? echo $std; ?> "><img src="../image/list-edit.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_delete.php?id= <? echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>

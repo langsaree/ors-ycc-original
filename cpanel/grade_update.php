@@ -59,8 +59,8 @@ body {
           <?
 	include('db_connect.php');
 	$sql = "select * from $db_table2 where name ='$name'";
-	$show = mysql_query($sql);
-	while($shows = mysql_fetch_row($show))
+          $result = mysqli_query($con,$sql);
+	while($shows = mysqli_fetch_row($show))
 	{
 	?>
           <tr>

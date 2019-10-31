@@ -60,8 +60,8 @@ body {
           <?
 	include('db.php');
 	$sql = "select * from student where std_id ='$std_id'";
-	$re = mysql_query($sql);
-	while($ro = mysql_fetch_row($re))
+	$re = mysqli_query($con,$sql);
+	while($ro = mysqli_fetch_row($re))
 	{
 	?>
           <tr>

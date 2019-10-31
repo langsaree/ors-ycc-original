@@ -1,7 +1,4 @@
 <?
-session_start();
-if(!session_is_registered(username));//{header("location:index.php");}
-//end of check session
 include "db.php";
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
@@ -75,17 +72,17 @@ $query="select * from student where '$q' order by std_id limit 0, 20"; // start 
 
 echo "<br><br>";
 //mysql_query("SET NAMES utf-8"); //		for thai input	
-$nt=mysql_query($query);
-echo mysql_error();
-while($row=mysql_fetch_array($nt)){
+$nt=mysqli_query($query);
+echo mysqli_error();
+while($row=mysqli_fetch_array($nt)){
 		//$name= $row[f_name]." <span> ". $row[name]." <span> ". $row[s_name];
 ?>
     </tr>
     <tr>
-      <td><div align="center"><? echo  $row[std_id]; ?></div></td>
-      <td><div align="center"><? echo $row[username]; ?> </div></td>
+      <td><div align="center"><? echo  $row["std_id"]; ?></div></td>
+      <td><div align="center"><? echo $row["username"]; ?> </div></td>
       <td><div align="center"></div></td>
-      <td><div align="center"><? echo  $row[status];?></div></td>
+      <td><div align="center"><? echo  $row["status"];?></div></td>
       <td><div align="center"></div></td>
     </tr>
     <?

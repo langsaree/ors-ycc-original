@@ -140,9 +140,9 @@ non {
 </table>
 <?
   $sql = "select * from course order by status DESC";
-  $result = mysql_query($sql);
+$result = mysqli_query($con,$sql);
   $sql2 = "select * from number ";
-  $result2 = mysql_query($sql2);
+  $result2 = mysqli_query($con,$sql2);
   	
 ?>
 <table width="1024" border="0" cellpadding="0" cellspacing="2">  
@@ -158,15 +158,15 @@ non {
         <td width="51" bgcolor="#FF9933" class="hhhhh">ACTIVE</td>
         <td width="52" bgcolor="#FF9933" class="hhhhh">NON-ACTIVE</td>
         </tr>
-      <? while($row = mysql_fetch_array($result)){ ?>
+      <? while($row = mysqli_fetch_array($result)){ ?>
       <? // while($row2 = mysql_fetch_array($result2)){?>
       <tr>
         <td height="19" valign="top"><? //= $row2[number]; ?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
-          <?= $row[cos_id]?></td>
+          <?= $row["cos_id"]?></td>
         <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;
-          <?= $row[cos_name]?></td>
-        <td bgcolor="#FFDDFF" class="hhhhh"><? $status=$row[status];
+          <?= $row["cos_name"]?></td>
+        <td bgcolor="#FFDDFF" class="hhhhh"><? $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -175,8 +175,8 @@ non {
 			   echo '<span style="color:red">NON-ACTIVE</span>';
 		   }
 	    ?></td>
-        <td align="center" valign="top"><a href="cos_active.php?active=<?=$row[cos_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
-        <td align="center" valign="top"><a href="cos_active.php?non_active=<?=$row[cos_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?active=<?=$row["cos_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></td>
+        <td align="center" valign="top"><a href="cos_active.php?non_active=<?=$row["cos_id"]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></td>
       </tr>
       <? }//} ?>
     </table></td>

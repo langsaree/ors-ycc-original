@@ -42,8 +42,8 @@ body {
            <?
 	include('db.php');
 	$sql = "select * from course where cos_id = $cos_id";
-	$result= mysql_query($sql);
-	while ($row = mysql_fetch_array($result))
+           $result = mysqli_query($con,$sql);
+	while ($row = mysqli_fetch_array($result))
 {
 ?>
           <tr>

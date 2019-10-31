@@ -62,10 +62,10 @@ body {
 			extract ($_GET);
 			$std_id=$id;
 			$sql = "select * from student where std_id='$std_id'";
-			$result = mysql_query($sql);
+			$result = mysqli_query($con,$sql);
 			if (!$result)
-			{ die("error db".mysql_error()); }
-			while ($result_row = mysql_fetch_row($result))
+			{ die("error db".mysqli_error()); }
+			while ($result_row = mysqli_fetch_row($result))
 			{
 			?>       
           <td width="628" height="480" align="right" valign="top"><table width="728" height="537" border="0" align="center" cellpadding="0" cellspacing="5">           

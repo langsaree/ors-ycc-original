@@ -97,19 +97,19 @@ body {
 include ('db.php');
 #$sql = "select* from lecturer where lec_id='$lec_id";
 $sql = "select* from lecture";
-$result = mysql_query($sql);
+$result = mysqli_query($con,$sql);
 #while($result_row = mysql_fetch_row($result))  
-while($row=mysql_fetch_array($result))
+while($row=mysqli_fetch_array($result))
 {
 ?>
-               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_id]; ?></td>
-               <td align="left">&nbsp;&nbsp;<? echo $row[lec_name]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row[lec_tel]; ?></td>
-               <td>&nbsp;&nbsp;<? echo $row[lec_email]; ?></td>
-               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row[lec_comment]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td height="23">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row["lec_id"]; ?></td>
+               <td align="left">&nbsp;&nbsp;<? echo $row["lec_name"]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;<? echo $row["lec_tel"]; ?></td>
+               <td>&nbsp;&nbsp;<? echo $row["lec_email"]; ?></td>
+               <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<? echo $row["lec_comment"]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                <td><img src="image/v.png" alt="1" width="20" height="20" border="0" /></td>
-               <td><a href="lec_update.php?id=<? echo $row[lec_id];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
-               <td><a href="lec_delete.php?id=<? echo $row[lec_id];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_update.php?id=<? echo $row["lec_id"];?>" ><img src="image/list-edit.png" alt="1" width="20" height="20" border="0" /></a></td>
+               <td><a href="lec_delete.php?id=<? echo $row["lec_id"];?>" ><img src="image/1294650148_DeleteRed.png" alt="1" width="20" height="20" border="0" /></a></td>
              </tr>
              <? } ?>
            </table></td>

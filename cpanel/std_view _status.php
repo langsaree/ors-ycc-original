@@ -7,7 +7,7 @@ $active = $active;
 $non_active = $non_active;
 if(!empty($active)){
 	$sql = "UPDATE course SET status='1' WHERE cos_id='$active' ";
-	$result = mysql_query($sql);
+	$result = mysqli_query($con,$sql);
 	if($result){
 		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
 	}
@@ -19,7 +19,7 @@ if(!empty($active)){
 	{
 		if(!empty($non_active)){
 			$sql = "UPDATE course SET status='0' WHERE cos_id='$non_active' ";
-			$result = mysql_query($sql);
+			$result = mysqli_query($con,$sql);
 			if($result){
 				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
 			}
@@ -108,10 +108,10 @@ border-color:#8A9AA6;
     </table>
     <?
   $sql = "select * from student order by status DESC";
-  $re = mysql_query($sql);
-        while($row = mysql_fetch_array($result))
+  $re = mysqli_query($con,$sql);
+        while($row = mysqli_fetch_array($result))
 		{ 
-		$n = $row[f_name] . $row[name];
+		$n = $row["f_name"] . $row["name"];
 		?>
       <table width="90%" border="0" align="center" cellpadding="0" cellspacing="2">
         <tr>
@@ -122,10 +122,10 @@ border-color:#8A9AA6;
           <td width="11%" bgcolor="#CCCCCC"><div align="center" class="style36">Non-Active</div></td>
           </tr>           
         <tr>
-          <td><div align="center"><? echo $row[username];?></div></td>  
-          <td><div align="center"><? echo $n ?><span onclick="3"><?= $row[s_name];?></div></td>
+          <td><div align="center"><? echo $row["username"];?></div></td>
+          <td><div align="center"><? echo $n ?><span onclick="3"><?= $row["s_name"];?></div></td>
           <td><div align="center"><span class="hhhhh">
-            <? $status=$row[status];
+            <? $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -135,8 +135,8 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td><div align="center"><a href="std_active.php?active=<?=$row[std_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td><div align="center"><a href="std_active.php?non_active=<?=$row[std_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          <td><div align="center"><a href="std_active.php?active=<?=$row["std_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td><div align="center"><a href="std_active.php?non_active=<?=$row["std_id"]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
           </tr><? }?>
     </table>
       <p>&nbsp;</p>
