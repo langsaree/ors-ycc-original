@@ -2,7 +2,6 @@
 session_start();
 include('include/login.php');
 include('db.php');
-			if(empty($_REQUEST['username']) && empty($_REQUEST['password'])) {
 extract($_GET);
 $cos_id = $id;
 ?>
