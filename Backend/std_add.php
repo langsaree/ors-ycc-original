@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../db.php');
+include('../config/db.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,41 +62,27 @@ body {
       <tr>
         <td><p>
           <?php
-//ob_start();
-//session_start();
-$errmsg= ""; $errmsg1= ""; $errmsg2= ""; $errmsg3= ""; $errmsg6= ""; $errmsg8= ""; $errmsg9= ""; $errmsg10= ""; $errmsg7= ""; $errmsg12= ""; $errmsg11= ""; $errmsg13= ""; $errmsg15= ""; $errmsg16= ""; $errmsg17= ""; $errmsg18= ""; $errmsg19= ""; $errmsg20= ""; $errmsg21= ""; $errmsg22= ""; $errmsg23= ""; $errmsg25= ""; $errmsg27= ""; $errmsg29= ""; $errmsg30= ""; $errmsg5= ""; $errmsg31= ""; $errmsg32= ""; $errmsg33= ""; $errmsg34= "";
 
-//$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
-//	foreach($_REQUEST as $key => $value)  {
-//		$$key = $value;
-//	}
-//	$errmsg = array();
-//	for($i = 0; $i < 20; $i++) {
-//		$errmsg[$i] = false;
-//	}
-if(isset($ok)) {	
+$errmsg = ""; $errmsg1 = ""; $errmsg2 = ""; $errmsg3 = ""; $errmsg4 = ""; $errmsg5 = "";
+$errmsg6 = ""; $errmsg7 = ""; $errmsg8 = ""; $errmsg9 = ""; $errmsg10 = ""; $errmsg11 = "";
+$errmsg12 = ""; $errmsg13 = ""; $errmsg14 = ""; $errmsg15 = ""; $errmsg16 = ""; $errmsg17 = "";
+$errmsg18 = ""; $errmsg19 = ""; $errmsg20 = ""; $errmsg21 = ""; $errmsg22 = ""; $errmsg23 = "";
+$errmsg24 = ""; $errmsg25 = ""; $errmsg26 = ""; $errmsg27 = ""; $errmsg28 = ""; $errmsg29 = "";
+$errmsg30 = ""; $errmsg31 = ""; $errmsg32 = ""; $errmsg33 = ""; $errmsg34 = ""; $errmsg35 = "";
+
+if(isset($_POST['Submit'])) {
 #=========================================
 # username check	
-//if(isset($ok)) { 
     $login = $_POST['login'];
 	if(empty($login)) {
 	    $errmsg1 = '<span style="color:red; font-size:12px">กรุณากรอบชื่อล็อกอินด้วยค่ะ</span>';
 	  }	
-	//if(!ereg($pattern, $login)) {   
-	  //  $errmsg2 .= "<span style=color:red>ชื่อล็อกอินต้องประกอบด้วย a-z หรือ 0-9</span>";
-	 //}
+	
 	 if(!$errmsg1) {
-	 if(strlen($login) < 4) {
+	   if(strlen($login) < 4) {
 	    $errmsg3 .= '<span style="color:red; font-size:12px">ชื่อล็อกอินต้องยาว 4-20 ตัว</span>'; 
-       }}
-	 
-     /*if(!$errmsg[3]) {
-			# check username duplicate
-			$sql = "select * from account where username = '$login'";
-			$link->query($sql);
-			if($link->num_rows() > 0) {
-				$errmsg[4] = true; // "<li>ชื่ิิอล็อกอินนี้มีผู้ใช้แล้ว"; 
-	 }}*/
+       }
+      }
 #============================================	
 #email check
     $email=$_POST['email'];
@@ -115,23 +101,20 @@ if(isset($ok)) {
 	   $errmsg7 .= '<span style="color:red; font-size:12px">กรุณากรอบยืนยันรหัสผ่านด้วยค่ะ</span>';
 	   }
 		   
-	//if(!ereg($pattern, $pswd)) {
-	//    $errmsg8 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
-	
-	//}
 	if(!$errmsg6)
-	if(strlen($pswd) < 6) {
+	 if(strlen($pswd) < 6) {
 	    $errmsg9 .= '<span style="color:red; font-size:12px">รหัสผ่านต้องยาว 6-20 ตัวค่ะ</span>'; 
 	   }
     
 	if(!$errmsg6 && !$errmsg7 && !$errmsg9) {
 		if($pswd != $cpswd) {
 			$errmsg10 .='<span style="color:red; font-size:12px">รหัสผ่านทั้งสองไม่ตรงกันค่ัะ</span>'; 
-		}}
+    }
+  }
 #end password check
 #===================================	
 # first name and last name
-   //$f_name=$_POST['f_name'];
+   $f_name=$_POST['f_name'];
    $name=$_POST['name'];
    $s_name=$_POST['s_name'];
    if(empty($f_name)){
@@ -142,10 +125,7 @@ if(isset($ok)) {
 	   }
     if(empty($s_name)){
 	   $errmsg13 .= '<span style="color:red; font-size:12px">กรุณากรอบนามสกุลด้วยค่ะ</span>';
-	   }
-	 //if(!ereg($pattern, $pswd)) {
-	//    $errmsg14 .= "<span style=color:red>Password ต้องประกอบด้วย a-z หรือ 0-9 ระหว่าง 6-20 ตัว</span>";
-	  
+	   }	  
 #===================================
 #bithday check
    $b_day=$_POST['b_day'];
@@ -157,11 +137,13 @@ if(isset($ok)) {
 	   if(!$errmsg15){ 
             if(empty($b_month)){
 	         $errmsg16 .= '<span style="color:red; font-size:12px">กรุณาเลือกเดือนที่่เกิดด้วยค่ะ</span>';
-	   }}
+     }
+    }
 	   if(!$errmsg15 && !$errmsg16){
            if(empty($b_year)){
 	       $errmsg17 .= '<span style="color:red; font-size:12px">กรุณาเลือกปีที่เกิดด้วยค่ะ</span>';
-	   }}
+     }
+    }
 	   
    $birthday=$b_day.'/'.$b_month.'/'.$b_year;   	   
 #================================== 
@@ -172,12 +154,23 @@ if(isset($ok)) {
    if(empty($nation)){
 	   $errmsg18 .='<span style="color:red; font-size:12px">กรุณาเลือกสัญชาติด้วยค่ะ</span>';
 	   }
-   if(empty($origin)){
-	   $errmsg19 .='<span style="color:red; font-size:12px">กรุณาเลือกเชื้อชาติด้วยค่ะ</span>';
-	   }
-   if(empty($religion)){
-	   $errmsg20 .= '<span style="color:red; font-size:12px">กรุณาเลือกศาสนาด้วยค่ะ/span>';
-	   }  
+     if (!$errmsg18) {
+      if (empty($origin)) {
+          $errmsg19 = "<span style=color:red>กรุณาเลือกเชื้อชาติด้วยค่ะ</span>";
+      }
+  }
+  if (!$errmsg18 && !$errmsg19) {
+      if (empty($religion)) {
+          $errmsg20 = "<span style=color:red>กรุณาเลือกศาสนาด้วยค่ะ</span>";
+      }
+  } 
+  #==================================
+#gender check
+$gender = $_POST['gender'];
+
+if (empty($gender)) {
+    $errmsg35 = "<span style=color:red>กรุณาเลือกเพศด้วยค่ะ</span>";
+}
 #==================================
 # thai id card check
    $std_id=$_POST['std_id'];
@@ -185,7 +178,7 @@ if(isset($ok)) {
 	   $errmsg21 .= '<span style="color:red; font-size:12px">กรุณากรอบเลขบัตรประชาชนด้วยค่ะ</span>';
 	   }
    if(!$errmsg21) {
-      //if(strlen($std_id) > 13 ){
+    if(strlen($std_id) > 13 ){
 		  if($group_1=$std_id){ 
 		  
           $num1=substr("$group_1",0,1);
@@ -224,9 +217,11 @@ if(isset($ok)) {
           if ($group_1<>"") {
             if ($cal_2!=$num13) {
                  $errmsg22 .='<span style="color:red; font-size:12px">หมายเลขบัตรประชาชนนี้ไม่ถูกต้อง กรุณาลองใหม่ค่ะ</span>';
-	      }}}}
-                    
-
+           }
+        }
+      }
+    }
+  }
 #end check id card
 #==================================   
 #address checking
@@ -240,27 +235,32 @@ if(isset($ok)) {
     $postalcode=$_POST['post'];
     $phone=$_POST['tel'];
 
-       if(empty($home)){
-	      $errmsg23 .= '<span style="color:red; font-size:12px">กรุณากรอบบ้านเลขที่ด้วยค่ะ</span>';
-           }
-       if(empty($m_home)){
-	      $errmsg24 .= '<span style="color:red; font-size:12px">กรุณากรอบหมู่บ้านด้วยค่ะ</span>';
-           }
-       if(empty($r_home)){
-	      $errmsg25 .= '<span style="color:red; font-size:12px">กรุณากรอกซอย/ถนนด้วยค่ะ</span>';
-           }
-       if(empty($v_home)){
-	      $errmsg26 .= '<span style="color:red; font-size:12px">กรุณากรอกแขวง/ตำบลด้วยค่ะ</span>';}
-       if(empty($p_home)){
-	      $errmsg27 .= '<span style="color:red; font-size:12px">กรุณากรอกอำเภด้วยค่ะ</span>';}
-       if(empty($c_home)){
-	      $errmsg28 .= '<span style="color:red; font-size:12px">กรุณากรอกจังหวัดด้วยค่ะ</span>';}
+    if (empty($home)) {
+      $errmsg23 = "<span style=color:red>กรุณากรอกบ้านเลขที่ด้วยค่ะ</span>";
+  }
+  if (empty($m_home)) {
+      $errmsg24 = "<span style=color:red>กรุณากรอกหมู่บ้านด้วยค่ะ</span>";
+  }
+  if (empty($r_home)) {
+      $errmsg25 = "<span style=color:red>กรุณากรอกซอย/ถนนด้วยค่ะ</span>";
+  }
+  if (empty($v_home)) {
+      $errmsg26 = "<span style=color:red>กรุณากรอกแขวง/ตำบลด้วยค่ะ</span>";
+  }
+  if (empty($p_home)) {
+      $errmsg27 = "<span style=color:red>กรุณากรอกอำเภด้วยค่ะ</span>";
+  }
+  if (empty($c_home)) {
+      $errmsg28 = "<span style=color:red>กรุณากรอกจังหวัดด้วยค่ะ</span>";
+  }
 
-       if(empty($post)){
-	      $errmsg29 .= '<span style="color:red; font-size:12px">กรุณากรอบหรัสไปรษณีด้วยค่ะ</span>';}
+  if (empty($postalcode)) {
+      $errmsg29 = "<span style=color:red>กรุณากรอกรหัสไปรษณีด้วยค่ะ</span>";
+  }
 
-       if(empty($tel)){
-	      $errmsg30 .= '<span style="color:red; font-size:12px">กรุณากรอกเบอร์โทรศัพย์ด้วยค่ะ</span>';}
+  if (empty($phone)) {
+      $errmsg30 = "<span style=color:red>กรุณากรอกเบอร์โทรศัพย์ด้วยค่ะ</span>";
+  }
 		  
 	$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;	  
 #end address
@@ -270,42 +270,38 @@ if(isset($ok)) {
     $eduprovince=$_POST['eduprovince'];
     $eduyear=$_POST['eduyear'];
 	if(empty($edulevel)){
-	      $errmsg31 .= '<span style="color:red; font-size:12px">กรุณาเลือกระดับการศึกษาด้วยค่ะ</span>';}
+        $errmsg31 .= '<span style="color:red; font-size:12px">กรุณาเลือกระดับการศึกษาด้วยค่ะ</span>';
+      }
     if(empty($eduplace)){
-	      $errmsg32 .= '<span style="color:red; font-size:12px">กรุณากรอบสถานศึกษาด้วยค่ะ</span>';}
+        $errmsg32 .= '<span style="color:red; font-size:12px">กรุณากรอบสถานศึกษาด้วยค่ะ</span>';
+      }
     if(empty($eduprovince)){
-	      $errmsg33 .= '<span style="color:red; font-size:12px">กรุณากรอบจังหหวัดสถานศึกษาด้วยค่ะ</span>';}
+        $errmsg33 .= '<span style="color:red; font-size:12px">กรุณากรอบจังหหวัดสถานศึกษาด้วยค่ะ</span>';
+      }
 	if(empty($eduyear)){
-	      $errmsg34 .='<span style="color:red; font-size:12px">กรุณากรอบปีการศึกษาด้วยค่ะ</span>';}		  		  
+        $errmsg34 .='<span style="color:red; font-size:12px">กรุณากรอบปีการศึกษาด้วยค่ะ</span>';
+      }		  		  
 #================================= 
-  //$job=$_POST['job'];
     $job=$_POST['t_job'];
   
 #================================= 
 #=================================
-      if(!$errmsg3 && !$errmsg5 && !$errmsg10  && !$errmsg11 && !$errmsg12 && !$errmsg13 &&/* !$errmsg15 && !$errmsg16 &&
-	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 &&*/ !$errmsg22 /*&& !$errmsg23 && !$errmsg24 && 
-	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */&& !$errmsg30)
-	   {
-       $query = "insert into student(username,password,f_name,name,s_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) value(
-'$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+if (!$errmsg3 && !$errmsg5 && !$errmsg10 && !$errmsg11 && !$errmsg12 && !$errmsg13 && !$errmsg22 && !$errmsg30)
+{
 
-       $do = mysqli_query($query);
-       if ($do==0)
-         { 
-         
-		 die (mysqli_error());
-		// $text="การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที " ;
-		 //echo "$text";
-		//exit;
-           }
-		//header("Refresh: 3; location:index.php"); 
-	    }
-    else
-   {
+
+    $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
+              value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+
+    $do = mysqli_query($connection, $query);
+    if ($do) {
+        echo "<script>location='pstd_add.php';</script>";
+        $text = "การลงทะเบียน เสร็จเรียบร้อย จะย้ายไปยังเพจหลักใน 3 วินาที ";
+        echo "$text";
+        exit;
+    }
     } 
 }
-//ob_end_clean();
 ?>
         </p>
         <table><tr><td width="1150px" align="center">
@@ -454,15 +450,19 @@ if(isset($ok)) {
                 <td bgcolor="#FFFFFF"><div align="left">คำนำหน้าชื่อ </div></td>
                 <td height="1" bgcolor="#FFFFFF"><div align="left">
                   <select name="f_name" id="f_name">
-                    <option selected>&#3609;&#3634;&#3618;</option>
-                    <option>&#3609;&#3634;&#3591;</option>
-                    <option>&#3609;&#3634;&#3591;&#3626;&#3634;&#3623;</option>
-                    <option>&#3604;.&#3594;.</option>
-                    <option>&#3604;.&#3597;.</option>
+                  <option selected>นาย</option>
+                  <option>นาง</option>
+                  <option>นางสาว</option>
+                  <option>ด.ช.</option>
+                  <option>ด.ญ.</option>
+                  <option>Miss.</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Ms.</option>
                   </select>
                   <span class="style29" style="color:#F00;">*</span></div></td>
               </tr>
-			<?php if($errormsg12) {?>
+			<?php if($errmsg12) {?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
                 <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg12 ?></td>
@@ -625,6 +625,21 @@ if(isset($ok)) {
                     <option>คริสเตียน</option>
                   </select></td>
               </tr>
+              <?php if($errmsg35) { ?>
+                    <tr>
+                        <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
+                        <td height="1" bgcolor="#FFFFFF"><?php echo $errmsg35 ?></td>
+                    </tr>
+                <?php } ?>
+                <tr>
+                <<td height="1" bgcolor="#FFFFFF">เพศ</td>
+                    <td height="1" bgcolor="#FFFFFF"><select name="gender" size="1" id="gender" style="background: <?php if($errmsg18 ) echo "#EEFCE2"; ?>" value="<?php $gender ?>">
+                            <option selected value="0">-- เพศ --</option>
+                            <option>ชาย</option>
+                            <option>หญิง</option>
+                        </select>
+                        <span class="style29" style="color:#F00;">*</span></td>
+                </tr>
               <?php if($errmsg21) { ?>
               <tr>
                 <td height="1" bgcolor="#FFFFFF">&nbsp;</td>
@@ -855,43 +870,20 @@ if(isset($ok)) {
             <fieldset style="width:800px; height:200px; border-color:#9C3; color:#069; border-style: dotted">
             <legend style="color:#033">5. กรอบข้อมูลเกี่ยวกับอาชีพ</legend>
             <table width="611" border="0" align="center" cellpadding="0" cellspacing="0">
-             <tr>
-                <td width="202">&nbsp;</td>
-                <td width="409">&nbsp;</td>
-              </tr>
-              <tr>
-                <td>ลักษณะอาชีพที่ท่านประกอบอยู่</td>
-                <td><div align="left">
-                  <input name="t_job" type="radio" id="radio5" value="ลูกจ้าง"  />
-                  ลูกจ้างบริษัท/ห้าง ร้าน </div></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><input type="radio" name="t_job" id="radio6" value="รับราชการ" />
-                  รับราชการ </td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><div align="left">
-                  <input type="radio" name="t_job" id="radio7" value="พนักงานรัฐวิสาหกิจ" />
-                  พนักงานรัฐวิสาหกิจ </div></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><input type="radio" name="t_job" id="radio8" value="ค้าขาย" />
-                  ค้าขาย</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><div align="left">
-                  <input type="radio" name="t_job" id="radio9" value="รับจ้างทั่วไป" />
-                  รับจ้างทั่วไป </div></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td><div align="left">
-                  <input type="radio" name="t_job" id="radio9" value="ไม่ได้ประกอบอาชีพ" />
-                  ไม่ได้ประกอบอาชีพ </div></td>
+            <tr>
+            <td>ลักษณะอาชีพที่ท่านประกอบอยู่</td>
+                  <td><div align="left">
+                  <label for=""></label>
+                  <select name="t_job">
+                 <option value="0"selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- โปรดระบุ --&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                 <option>ไม่ได้ประกอบอาชีพ</option>
+                 <option>ลูกจ้างบริษัท/ห้างร้าน</option>
+                 <option>รับราชการ</option>
+                 <option>พนักงานรัฐวิสาหกิจ</option>
+                 <option>ค้าขาย</option>
+                 <option>รับจ้างทั่วไป </option>
+                </select>
+              </div></td>
               </tr>
             </table>
             </fieldset>
@@ -902,8 +894,8 @@ if(isset($ok)) {
                 <td width="212">&nbsp;</td>
               </tr>
               <tr>
-                <td>&nbsp;</td>
-                <td><input type="submit" name="ok" id="ok" value="ยืนยันการสมัคร" /></td>
+                <td width="213" height="16">&nbsp;</td>
+                <td width="224"><input type="submit" name="Submit" id="Submit" value="เพิ่มนักศึกษาใหม่" alt="Submit"/></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
