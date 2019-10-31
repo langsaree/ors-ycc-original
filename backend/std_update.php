@@ -111,17 +111,13 @@ body {
     <td height="563" valign="top"><p></p>
       <div align="center">
         <p class="style1">Student Information </p>
-        <?php
-   
-   //echo $cos_id;
-   $sql1 = "select * from student ";
-   $v=mysqli_query ($connection, $sql1);
-   while ($row= mysqli_fetch_array($v))
-   {
-   $std = $row['std_id'];
-   $user= $row['username'];
-   $name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
-   ?>
+          <?php
+          $sql = "select * from student where std_id= $std_id ";
+          $result = mysqli_query($connection, $sql);
+          while ($row = mysqli_fetch_array($result))
+          {
+
+          ?>
 
             <table width="600" border="0" align="center" cellpadding="0" cellspacing="5">
                 <tr>

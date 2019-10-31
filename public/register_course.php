@@ -1069,6 +1069,6 @@ if(isset($_POST['Submit'])) {
         </div>
         </div>
       </div>
-      <?php include('../config/footer.php');?>
+      <?php include('../config/style.php');?>
 </body>
 </html>
