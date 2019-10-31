@@ -8,7 +8,7 @@ $connection = $db->connect();
 include 'class/bootstrap.class.php';
 $bs = new BS;
 
-include './template/gallary.php';
+include '../template/gallary.php';
 
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
 {
@@ -20,11 +20,11 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
         echo '<span style="color:red">' . $message . '</span>';
     }
 
-    include "./template/login_form.php";
+    include "../template/login_form.php";
 
 } else {
 
-    include "./template/logined.php";
+    include "../template/logined.php";
 }
 
 ?>
@@ -91,7 +91,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
 </div>
         </div>
          </div>
-         <?php include "./template/footer.php";?>
+         <?php include "../template/footer.php";?>
 
     </body>
     <?php $bs->bootstrap();?>

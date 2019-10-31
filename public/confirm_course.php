@@ -8,7 +8,7 @@ $connection = $db->connect();
 extract ($_GET);
 $cos_id=$_GET['id'];
 
-include "./template/header.php";
+include "../template/header.php";
 echo "<title>ยืนยันการลงทะเบียน</title>";
 
 // if(!isset($_SESSION["username"])){header("location:register.php");}
@@ -22,11 +22,11 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
       echo '<span style="color:red">' . $message . '</span>';
     }
 
-    include "./template/login_form.php";
+    include "../template/login_form.php";
 
 } else {  
 
-    include "./template/logined.php";
+    include "../template/logined.php";
 }
 ?>
             <br>
@@ -343,7 +343,7 @@ $id = $rows["cos_id"];
         </div>
         </div>
 
-        <?php include "./template/footer.php"; ?>
+        <?php include "../template/footer.php"; ?>
         
 </body>
 </html>

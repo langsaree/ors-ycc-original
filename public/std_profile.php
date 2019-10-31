@@ -393,7 +393,7 @@ while($row=mysqli_fetch_array($result))
           </div>
         </div>
 
-        <?php include "./template/footer.php"; ?>
+        <?php include "../template/footer.php"; ?>
         
 </body>
 </html>

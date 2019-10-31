@@ -5,7 +5,7 @@ $auth = new Auth;
 $db = new Db;
 $connection = $db->connect();
 
-include "./template/header.php";
+include "../template/header.php";
 echo "<title>ประชาสัมพันธ์</title>";
 
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
@@ -18,11 +18,11 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
         echo '<span style="color:red">' . $message . '</span>';
     }
 
-    include "./template/login_form.php";
+    include "../template/login_form.php";
 
 } else {
 
-    include "./template/logined.php";
+    include "../template/logined.php";
 }
 ?>
             <br>
@@ -49,7 +49,7 @@ if (!isset($_SESSION["username"])) // To check login user if already login then 
         </div>
         </div>
 
-        <?php include "./template/footer.php"; ?>
+        <?php include "../template/footer.php"; ?>
         
     </body>
 </html>

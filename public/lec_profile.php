@@ -180,7 +180,7 @@ if(isset($_SESSION["lec_user"])){
           </div>
         </div>
         
-        <?php include "./template/footer.php"; ?>
+        <?php include "../template/footer.php"; ?>
         
     </body>
 </html>

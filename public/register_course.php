@@ -1177,7 +1177,7 @@ for ($i = 2554; $i >= 2520; $i--) {
         </div>
         </div>
          
-        <?php include "./template/footer.php"; ?>
+        <?php include "../template/footer.php"; ?>
         
 </body>
 </html>
