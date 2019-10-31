@@ -78,13 +78,13 @@ body {
        $result = mysqli_query($con,$sql);
    while ($row= mysqli_fetch_array($result))
 	{
-	$cos_id= $row[cos_id];
-	$cos_group=$row[cos_group];
-	$cos_name = $row[cos_name];
-	$cos_period = $row[cos_period];	
-	$cos_day = $row[cos_day];
-	$lec_id = $row[lec_id];
-	$cos_comment = $row[cos_comment];
+	$cos_id= $row["cos_id"];
+	$cos_group=$row["cos_group"];
+	$cos_name = $row["cos_name"];
+	$cos_period = $row["cos_period"];
+	$cos_day = $row["cos_day"];
+	$lec_id = $row["lec_id"];
+	$cos_comment = $row["cos_comment"];
 //	echo $cos_id;
 	//echo $cos_name;
     $sql2 = "select * from lecture where lec_id = '$lec_id' ";

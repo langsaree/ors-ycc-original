@@ -1,8 +1,7 @@
-<? 
-include ('db.php');
+<?php
+include('../config/db.php');
 session_start();
 //>--code insert using for process add data
-
 ?>
 <?
 

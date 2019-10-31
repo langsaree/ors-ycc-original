@@ -1,5 +1,5 @@
 <?php
-include ('db.php');
+include('../config/db.php');
 $cos_id = $_POST['cos_id'];
 $cos_group = $_POST['cos_group'];
 $cos_name = $_POST['cos_name'];

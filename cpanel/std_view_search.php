@@ -1,13 +1,9 @@
-<?
-//session_start();
-#if(!session_is_registered(username)){header("location:index.php");}
-//end of check session
-$db = new Db;
-$connection = $db->connect();
+<?php
+include('../config/db.php');
 $todo=$_POST['todo'];
 if(isset($todo) and $todo=="search"){
 $search_text=$_POST['search_text'];
-$type=$_POST['type'];
+$type="";
 $search_text=ltrim($search_text);
 $search_text=rtrim($search_text);
 ?>

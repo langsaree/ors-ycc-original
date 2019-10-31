@@ -1,33 +1,31 @@
-<?
-session_start();
-include('db.php');
+<?php
+include('../config/db.php');
 include('auth.php');
 extract ($_GET);
-$active = $active;
-$non_active = $non_active;
+$msg='';
 if(!empty($active)){
-	$sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
-	$result = mysqli_query($con,$sql);
-	if($result){
-		$msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
-	}
-	else{
-		$msg = "Fail";
-	}
+    $sql = "UPDATE student SET status='1' WHERE std_id='$active' ";
+    $result = mysqli_query($co,$sql);
+    if($result){
+        $msg = '<span style="color:green; font-weight:bold">'.$active.'</span>'. '  '.'สถานะได้เปิดใช้งานเสร็จสมบูณ์';
+    }
+    else{
+        $msg = "Fail";
+    }
 }
-	else
-	{
-		if(!empty($non_active)){
-			$sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
-			$result = mysqli_query($con,$sql);
-			if($result){
-				$msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
-			}
-			else{
-				$msg= "FAIL NON-active";	
-			}
-		}
-	}
+else
+{
+    if(!empty($non_active)){
+        $sql = "UPDATE student SET status='0' WHERE std_id='$non_active' ";
+        $result = mysqli_query($co,$sql);
+        if($result){
+            $msg = '<span style="color:red">'.$non_active.'</span>'. '  '.'สถานะได้ยกเลิกใช้งานเสร็จสมบูณ์';
+        }
+        else{
+            $msg= "FAIL NON-active";
+        }
+    }
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -130,13 +128,13 @@ border-color:#8A9AA6;
   $sql = "select * from student order by status DESC";
   $result = mysqli_query($con,$sql);
         while($row = mysqli_fetch_array($result)){
-		$n = $row[f_name] . $row[name];
+		$n = $row["f_name"] . $row["name"];
 		?>  
         <tr>
-          <td align="center" bgcolor="#FFFFB0"><? echo $row[std_id];?></td>  
-          <td align="left" bgcolor="#FFFFB0"><?= $n?> -  <?= $row[s_name];?></td>
+          <td align="center" bgcolor="#FFFFB0"><? echo $row["std_id"];?></td>
+          <td align="left" bgcolor="#FFFFB0"><?= $n?> -  <?= $row["s_name"];?></td>
           <td bgcolor="#FFDDFF"><div align="center"><span class="hhhhh">
-            <? $status=$row[status];
+            <? $status=$row["status"];
 	       if($status== 1){
 			   echo '<span style="color:green">ACTIVE</span>';
 		   }
@@ -146,8 +144,8 @@ border-color:#8A9AA6;
 		   }
 	    ?>
           </span></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?=$row[std_id]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
-          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row[std_id]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?active=<?=$row["std_id"]; ?> " ><img src="image/active.gif" width="20" height="18" border="0" align="middle" /></a></div></td>
+          <td bgcolor="#FFFFB0"><div align="center"><a href="std_active.php?non_active=<?=$row["std_id"]; ?>" ><img src="image/non-active.jpg" width="16" height="16" border="0" /></a></div></td>
           </tr><? }?>
 </table>
       <p>&nbsp;</p>

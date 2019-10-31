@@ -1,5 +1,5 @@
  <?
-   include('db.php');
+ include('../config/db.php');
    //mysql_query ("SET NAMES 'utf8'");
 
    $sql	 = "select * from register ";

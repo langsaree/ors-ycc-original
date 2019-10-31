@@ -1,12 +1,12 @@
-<?  
-include ('db.php');
+<?
+include('../config/db.php');
 $query = ("select * from student,course ");     
 //$query1 = ("select * from register "); 
 	//$result1 = mysql_query($query) or die (mysql_error());
 //$query = "select student.f_name.name.s_name,course.cos_id"."from student,course"."where student.f_name.name.s_name = course.cos_id";
  //  $result2 = mysql_query($query);
-   $result = mysql_query($query) or die(mysql_error());  
-   while ($row = mysql_fetch_array($result)) //or $row = mysql_fetch_array($result1))
+   $result = mysqli_query($query) or die(mysqli_error());
+   while ($row = mysqli_fetch_array($result)) //or $row = mysql_fetch_array($result1))
    {
    $id = $row['std_id'];
    $fn = $row['f_name'];

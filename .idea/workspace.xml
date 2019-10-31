@@ -1,138 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="last update before submit">
+    <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="last update before submit.dublicated folders">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ors-ycc-original.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650148_DeleteRed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650438_Shutdown_Box_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650538_Cute Ball - Shutdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1294650560_Circle_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1295339949_pen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1295340314_old-edit-find.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/4099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Horsligne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Live Messenger22322.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/MSN MESSENGER 15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/PhotoshopSZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/View.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_notes/update.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_notes/update.png.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_notes/v.png.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/_search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/about-us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/about-us_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add_grade .png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/add_lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/admin.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/admin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/advicer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/applyForm-page_04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/applyForm-page_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b-search.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b1b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b1f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b1r.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/back-button.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bbbb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bd1L.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/body.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/contect-us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/contect-us_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/controlPanel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/controlPanel_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/couse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/couse_C.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/cpanel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/default_avatar_big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete evaluation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/delete_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/display.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/evaluation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/f2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/footer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/gear2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/home_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/images4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/infor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/infor_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/invisible22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/l.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lec_view.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lecture Manager.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lecturer.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/lecturer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/list-edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/logout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/man form.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage student.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/manage_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/news.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/news_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/office22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/officer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/osa_user_blue_sysadmin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/p_Image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/picture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/picture_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/regi corse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/register change form.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/register course.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/register_form.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_course.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_lec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/search_student.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/std_infor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student course status.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student status.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student update.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/student view.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/update_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view evaluation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view lecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view register course.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view_course.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/view_lec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/web-background-008.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/web-background-008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ycc_bg_1_2 copy1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/p_Image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/p_Image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.php.core.projectOptions.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IndexHTML.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_notes/std_profile.php.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_notes/std_view.php.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ann.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bk_modify_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classic-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classic-map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/college.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/count1-100.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/course_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/Copy of std_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_active.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_del.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_del.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cos_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cos_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/cpanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/cpanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/grade_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/grade_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/index2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/lec_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/lec_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/p_searchx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/p_searchx.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_addx.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_addx.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pcos_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pcos_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/plec_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/plec_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/psearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/psearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/pstd_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/pstd_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/register_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/register_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/searchx.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_active.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_active.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_profile2.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_profile2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view _status.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view _status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/std_view_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/std_view_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/view_registered.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/view_registered.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/imga4838.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/imga4884.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/imga4900.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/pb0585791.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallary/pb058590.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleria.classic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleria.classic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ActiveMenuButtonAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ArticleVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockContentBorderVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockHeader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockHeaderAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BlockVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderCorners.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderHorizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BorderVertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ButtonAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Logo_Stamp_Small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuBar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuButtonAnchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/_notes/2.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/_notes/dwsync.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/_notes/untitled.jpg.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cregister.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p_Image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/untitled.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ycc_banner_real.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ตราโลโก้.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ยืนยันการสมัคร.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/galleria.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_profile_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_view_cos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lec_view_student.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p_register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/password_recovery.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_course.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_course_bk.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_login_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/std_profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_bk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,33 +158,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/cos_delete.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/cos_del.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="-1241">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/cos_add.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_profile2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+            <state relative-caret-position="-3689">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/cos_active.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="18" selection-start-line="3" selection-end-line="4" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_view _status.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-end-line="3" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -181,46 +209,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/Copy of std_add.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_view_cos_status.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/auth.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/std_view_search.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/admin.sql">
+        <entry file="file://$PROJECT_DIR$/cpanel/style.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/db.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="187">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/cpanel/view_registered.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="314">
+              <caret line="182" column="33" lean-forward="true" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="2" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -245,64 +267,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/auth.php" />
+        <option value="$PROJECT_DIR$/public/lec_profile.php" />
+        <option value="$PROJECT_DIR$/public/logout.php" />
+        <option value="$PROJECT_DIR$/public/confirm_course.php" />
+        <option value="$PROJECT_DIR$/public/contact_us.php" />
+        <option value="$PROJECT_DIR$/public/course.php" />
+        <option value="$PROJECT_DIR$/public/course_detail.php" />
+        <option value="$PROJECT_DIR$/public/gallary.php" />
+        <option value="$PROJECT_DIR$/public/profile_update.php" />
+        <option value="$PROJECT_DIR$/public/register.php" />
+        <option value="$PROJECT_DIR$/public/register_course.php" />
+        <option value="$PROJECT_DIR$/public/std_profile.php" />
+        <option value="$PROJECT_DIR$/public/std_login_check.php" />
+        <option value="$PROJECT_DIR$/public/college.php" />
+        <option value="$PROJECT_DIR$/public/ann.php" />
         <option value="$PROJECT_DIR$/cpanel/auth.php" />
-        <option value="$PROJECT_DIR$/password_recovery.php" />
-        <option value="$PROJECT_DIR$/p_register.php" />
-        <option value="$PROJECT_DIR$/lec_view_student.php" />
-        <option value="$PROJECT_DIR$/lec_profile2.php" />
-        <option value="$PROJECT_DIR$/lec_profile.php" />
-        <option value="$PROJECT_DIR$/IndexHTML.php" />
-        <option value="$PROJECT_DIR$/profile_update.php" />
-        <option value="$PROJECT_DIR$/gallary.php" />
-        <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/lec_profile_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/cos_active.php" />
+        <option value="$PROJECT_DIR$/cpanel/cos_add.php" />
+        <option value="$PROJECT_DIR$/cpanel/cos_del.php" />
+        <option value="$PROJECT_DIR$/cpanel/cos_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/cos_view.php" />
+        <option value="$PROJECT_DIR$/cpanel/cpanel.css" />
+        <option value="$PROJECT_DIR$/cpanel/grade_view.php" />
         <option value="$PROJECT_DIR$/cpanel/index.php" />
-        <option value="$PROJECT_DIR$/lec_view_cos.php" />
-        <option value="$PROJECT_DIR$/cpanel/index2.php" />
+        <option value="$PROJECT_DIR$/cpanel/lec_delete.php" />
+        <option value="$PROJECT_DIR$/cpanel/lec_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/lec_view.php" />
+        <option value="$PROJECT_DIR$/cpanel/logout.php" />
+        <option value="$PROJECT_DIR$/cpanel/p_searchx.php" />
+        <option value="$PROJECT_DIR$/cpanel/pcos.php" />
+        <option value="$PROJECT_DIR$/cpanel/pcos_addx.php" />
+        <option value="$PROJECT_DIR$/cpanel/pcos_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/plec_add.php" />
+        <option value="$PROJECT_DIR$/cpanel/plec_search.php" />
+        <option value="$PROJECT_DIR$/cpanel/plec_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/psearch.php" />
+        <option value="$PROJECT_DIR$/cpanel/pstd_add.php" />
+        <option value="$PROJECT_DIR$/cpanel/register_course.php" />
+        <option value="$PROJECT_DIR$/cpanel/register_update.php" />
+        <option value="$PROJECT_DIR$/cpanel/register_view.php" />
+        <option value="$PROJECT_DIR$/cpanel/std_active.php" />
+        <option value="$PROJECT_DIR$/cpanel/std_add.php" />
+        <option value="$PROJECT_DIR$/cpanel/std_delete.php" />
+        <option value="$PROJECT_DIR$/cpanel/std_profile.php" />
         <option value="$PROJECT_DIR$/cpanel/std_profile2.php" />
         <option value="$PROJECT_DIR$/cpanel/std_update.php" />
         <option value="$PROJECT_DIR$/cpanel/std_view.php" />
         <option value="$PROJECT_DIR$/cpanel/std_view _status.php" />
         <option value="$PROJECT_DIR$/cpanel/std_view2.php" />
         <option value="$PROJECT_DIR$/cpanel/std_view_search.php" />
-        <option value="$PROJECT_DIR$/cpanel/std_profile.php" />
-        <option value="$PROJECT_DIR$/cpanel/std_delete.php" />
-        <option value="$PROJECT_DIR$/cpanel/std_add.php" />
-        <option value="$PROJECT_DIR$/cpanel/std_active.php" />
-        <option value="$PROJECT_DIR$/cpanel/searchx.php" />
-        <option value="$PROJECT_DIR$/cpanel/register_view.php" />
-        <option value="$PROJECT_DIR$/cpanel/register_update.php" />
-        <option value="$PROJECT_DIR$/cpanel/register_course.php" />
-        <option value="$PROJECT_DIR$/cpanel/pstd_add.php" />
-        <option value="$PROJECT_DIR$/cpanel/psearch.php" />
-        <option value="$PROJECT_DIR$/cpanel/plec_update.php" />
-        <option value="$PROJECT_DIR$/cpanel/plec_search.php" />
-        <option value="$PROJECT_DIR$/cpanel/plec_add.php" />
-        <option value="$PROJECT_DIR$/cpanel/pcos_update.php" />
-        <option value="$PROJECT_DIR$/cpanel/pcos_addx.php" />
-        <option value="$PROJECT_DIR$/cpanel/pcos.php" />
-        <option value="$PROJECT_DIR$/cpanel/p_searchx.php" />
-        <option value="$PROJECT_DIR$/cpanel/logout.php" />
-        <option value="$PROJECT_DIR$/cpanel/lec_view.php" />
-        <option value="$PROJECT_DIR$/cpanel/lec_update.php" />
-        <option value="$PROJECT_DIR$/cpanel/lec_delete.php" />
-        <option value="$PROJECT_DIR$/cpanel/grade_view.php" />
-        <option value="$PROJECT_DIR$/cpanel/grade_update.php" />
-        <option value="$PROJECT_DIR$/cpanel/cos_view.php" />
-        <option value="$PROJECT_DIR$/cpanel/cos_update.php" />
-        <option value="$PROJECT_DIR$/cpanel/cos_del.php" />
-        <option value="$PROJECT_DIR$/cpanel/cos_add.php" />
-        <option value="$PROJECT_DIR$/cpanel/cos_active.php" />
-        <option value="$PROJECT_DIR$/cpanel/db.php" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/cpanel/test.php" />
+        <option value="$PROJECT_DIR$/cpanel/view_registered.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="826" />
-    <option name="width" value="1049" />
-    <option name="height" value="1089" />
+    <option name="x" value="825" />
+    <option name="width" value="1050" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -315,11 +337,6 @@
             <path>
               <item name="ors-ycc" type="b2602c69:ProjectViewProjectNode" />
               <item name="ors-ycc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ors-ycc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ors-ycc" type="462c0819:PsiDirectoryNode" />
-              <item name="_notes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ors-ycc" type="b2602c69:ProjectViewProjectNode" />
@@ -377,7 +394,9 @@
       <workItem from="1572483454129" duration="1789000" />
       <workItem from="1572485260289" duration="498000" />
       <workItem from="1572486018029" duration="55000" />
-      <workItem from="1572505813967" duration="796000" />
+      <workItem from="1572505813967" duration="1696000" />
+      <workItem from="1572507621527" duration="1816000" />
+      <workItem from="1572509460456" duration="1611000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16.">
       <created>1568708916699</created>
@@ -400,17 +419,23 @@
       <option name="project" value="LOCAL" />
       <updated>1572485749391</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="last update before submit.dublicated folders">
+      <created>1572506716208</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572506716208</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21283000" />
+    <option name="totallyTimeSpent" value="25610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12013423" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19530201" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -477,164 +502,65 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16." />
     <MESSAGE value="last update before submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="last update before submit" />
+    <MESSAGE value="last update before submit.dublicated folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="last update before submit.dublicated folders" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login_check.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/grade_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="-2185" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/grade_delete.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/grade_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/grade_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/std_login_check.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/index2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/register_course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state>
           <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/pstd_add.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/psearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="76" selection-start-line="124" selection-start-column="76" selection-end-line="124" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/plec_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/pcos_add.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/pcos_addx.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/pcos_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="34" selection-start-line="17" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/plec_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/plec_search.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/lec_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="-1950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/lec_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/p_searchx.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/pcos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_student.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_std_status.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_statis.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_lecture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-761" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_grade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-829" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1067" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_admin.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/lec_search.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/logout.php">
@@ -644,189 +570,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_evaluation.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/manage_lecturer.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/lecturer.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_admin.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/lec_view.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_course.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-end-line="100" />
-          <folding>
-            <element signature="e#4231#4237#0#HTML" expanded="true" />
-            <element signature="e#4237#4243#0#HTML" expanded="true" />
-            <element signature="e#4243#4249#0#HTML" expanded="true" />
-            <element signature="e#4249#4255#0#HTML" expanded="true" />
-            <element signature="e#4255#4261#0#HTML" expanded="true" />
-            <element signature="e#4261#4267#0#HTML" expanded="true" />
-            <element signature="e#4267#4273#0#HTML" expanded="true" />
-            <element signature="e#4273#4279#0#HTML" expanded="true" />
-            <element signature="e#4279#4285#0#HTML" expanded="true" />
-            <element signature="e#4285#4291#0#HTML" expanded="true" />
-            <element signature="e#4291#4297#0#HTML" expanded="true" />
-            <element signature="e#4297#4303#0#HTML" expanded="true" />
-            <element signature="e#4303#4309#0#HTML" expanded="true" />
-            <element signature="e#4569#4575#0#HTML" expanded="true" />
-            <element signature="e#4575#4581#0#HTML" expanded="true" />
-            <element signature="e#4581#4587#0#HTML" expanded="true" />
-            <element signature="e#4587#4593#0#HTML" expanded="true" />
-            <element signature="e#4593#4599#0#HTML" expanded="true" />
-            <element signature="e#4599#4605#0#HTML" expanded="true" />
-            <element signature="e#4605#4611#0#HTML" expanded="true" />
-            <element signature="e#4611#4617#0#HTML" expanded="true" />
-            <element signature="e#4618#4624#0#HTML" expanded="true" />
-            <element signature="e#4624#4630#0#HTML" expanded="true" />
-            <element signature="e#4630#4636#0#HTML" expanded="true" />
-            <element signature="e#4636#4642#0#HTML" expanded="true" />
-            <element signature="e#4642#4648#0#HTML" expanded="true" />
-            <element signature="e#4648#4654#0#HTML" expanded="true" />
-            <element signature="e#4654#4660#0#HTML" expanded="true" />
-            <element signature="e#4660#4666#0#HTML" expanded="true" />
-            <element signature="e#4666#4672#0#HTML" expanded="true" />
-            <element signature="e#4672#4678#0#HTML" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1284" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_evaluation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_grade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1046" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_lecture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_std_status.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_student.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_statis.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/manage_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/lec_update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="118" selection-start-line="113" selection-start-column="118" selection-end-line="113" selection-end-column="118" />
+        <state relative-caret-position="17">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/lec_search.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/lec_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1441" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/lec_delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="96" selection-start-line="96" selection-end-line="96" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/lec_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1951" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/index2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="4" column="14" selection-start-line="1" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="61" column="44" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_delete.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/grade_add.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4759">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cpanel.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_delete.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_del.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/Copy of std_add.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/auth.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/p_searchx.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="2" selection-end-line="17" />
+          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="e#2#4#0#PHP" expanded="true" />
+            <element signature="e#1979#1981#0#PHP" expanded="true" />
+            <element signature="e#3482#3484#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/admin.sql">
+    <entry file="file://$PROJECT_DIR$/cpanel/pcos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/pcos_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/pcos_addx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/pcos_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/plec_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/plec_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="118" column="23" lean-forward="true" selection-end-line="177" />
+          <folding>
+            <element signature="e#2#4#0#PHP" expanded="true" />
+            <element signature="e#6736#6738#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/plec_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/psearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/pstd_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/register_course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/register_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/register_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/searchx.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_active.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-end-line="4" />
+        <state relative-caret-position="-165" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_active.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-end-line="2" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -836,11 +781,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/std_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="-12189">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1241">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_profile2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3689">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3196">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view_cos_status.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view_search.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/std_view _status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/view_registered.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="182" column="33" lean-forward="true" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>

@@ -1,7 +1,7 @@
 <?
 session_start();
 include('auth.php');
-include('db.php');
+include('../config/db.php');
 extract($_GET);
 $id=$id;
 
@@ -134,7 +134,7 @@ a:active {
 <?
    
 //echo $cos_id;
-include('db.php');
+include('../config/db.php');
 $sql = "select * from student where std_id='$id' ";
 $result = mysqli_query($con,$sql);
 while($row = mysqli_fetch_array($result))
