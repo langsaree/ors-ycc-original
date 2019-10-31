@@ -168,6 +168,9 @@ if (isset($_POST['ok'])) {
                                 <li><span class="style7"><a href="manual.pdf"
                                                             style="color: #3987FB; text-decoration: none">คู่มือการลงทะเบียน</a></span>
                                 </li>
+                                <li><span class="style7"><a href="std_view_lec.php"
+                                                            style="color: #3987FB; text-decoration: none">ข้อมูลอาจารย์ผู้สอน</a></span>
+                                </li>
                             </ul>
                         </div>
                     </div>
