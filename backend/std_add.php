@@ -132,7 +132,7 @@ include('db.php');
                         $errmsg34 = "";
                         $errmsg35 = "";
 
-                        //$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
+                        //$login = $email = $pswd = $cpswd = $titlename = $firstname = $lastname = $filename = "";
                         //	foreach($_REQUEST as $key => $value)  {
                         //		$$key = $value;
                         //	}
@@ -199,16 +199,16 @@ include('db.php');
 #end password check
 #===================================	
 # first name and last name
-                            $f_name = $_POST['f_name'];
-                            $name = $_POST['name'];
-                            $s_name = $_POST['s_name'];
-                            if (empty($f_name)) {
+                            $titlename = $_POST['titlename'];
+                            $firstname = $_POST['firstname'];
+                            $lastname = $_POST['lastname'];
+                            if (empty($titlename)) {
                                 $errmsg11 .= '<span style="color:red; font-size:12px">กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>';
                             }
-                            if (empty($name)) {
+                            if (empty($firstname)) {
                                 $errmsg12 .= '<span style="color:red; font-size:12px">กรุณากรอบชื่อด้วยค่ะ</span>';
                             }
-                            if (empty($s_name)) {
+                            if (empty($lastname)) {
                                 $errmsg13 .= '<span style="color:red; font-size:12px">กรุณากรอบนามสกุลด้วยค่ะ</span>';
                             }
                             //if(!ereg($pattern, $pswd)) {
@@ -382,8 +382,8 @@ include('db.php');
 	  !$errmsg17 && !$errmsg18 && !$errmsg19 && !$errmsg20 &&*/
                                 !$errmsg22 /*&& !$errmsg23 && !$errmsg24 &&
 	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */ && !$errmsg30) {
-                                $query = "insert into student(username,password,f_name,name,s_name,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear,gender) value(
-'$login','$pswd','$f_name','$name','$s_name','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear','$gender')";
+                                $query = "insert into student(username,password,titlename,firstname,lastname,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear,gender) value(
+'$login','$pswd','$titlename','$firstname','$lastname','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear','$gender')";
 
                                 $do = mysqli_query($connection, $query);
                                 if ($do) {
@@ -578,7 +578,7 @@ include('db.php');
                                             </td>
                                             <td height="1" bgcolor="#FFFFFF">
                                                 <div align="left">
-                                                    <select name="f_name" id="f_name">
+                                                    <select name="titlename" id="titlename">
                                                         <option selected value="0">-- เลือก --</option>
                                                         <option>นาย</option>
                                                         <option>นาง</option>
@@ -598,8 +598,8 @@ include('db.php');
                                         <tr>
                                             <td height="" bgcolor="#FFFFFF">ชื่อ</td>
                                             <td height="1" bgcolor="#FFFFFF"><input type="text" class="inputbox-normal"
-                                                                                    name="name" value="<? $name ?>"
-                                                                                    id="name"
+                                                                                    name="firstname" value="<? $firstname ?>"
+                                                                                    id="firstname"
                                                                                     style="background: <? if ($errmsg12) echo "#EEFCE2"; ?>"/>
                                                 <span class="style29" style="color:#F00;"> *</span><span
                                                         class="style34"> &nbsp;</span></td>
@@ -614,10 +614,10 @@ include('db.php');
                                             <td height="1" bgcolor="#FFFFFF">
                                                 <div align="left">นามสกุล</div>
                                             </td>
-                                            <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"
-                                                                                    class="inputbox-normal" id="s_name"
+                                            <td height="1" bgcolor="#FFFFFF"><input type="text" name="lastname"
+                                                                                    class="inputbox-normal" id="lastname"
                                                                                     style="background: <? if ($errmsg13) echo "#EEFCE2"; ?>"
-                                                                                    value="<? $s_name ?>"/>
+                                                                                    value="<? $lastname ?>"/>
                                                 <span class="style29" style="color:#F00;">*</span></td>
                                         </tr>
                                         <? if ($errmsg15) { ?>
@@ -954,7 +954,7 @@ include('db.php');
                                                     <input name="post" type="text" class="inputbox-normal" id="post"
                                                            size="15" maxlength="5"
                                                            style="background: <? if ($errmsg29) echo "#EEFCE2"; ?>"
-                                                           value="<? $post ?>"/>
+                                                           value="<? $postalcode ?>"/>
                                                     <span class="style29" style="color:#F00;">*</span> &nbsp;
                                                 </div>
                                             </td>
@@ -974,7 +974,7 @@ include('db.php');
                                             <td><input name="tel" type="text" class="inputbox-normal" id="tel" size="18"
                                                        maxlength="20"
                                                        style="background: <? if ($errmsg30) echo "#EEFCE2"; ?>"
-                                                       value="<? $tel ?>"/>
+                                                       value="<? $phone ?>"/>
                                                 <span class="style29" style="color:#F00;">*</span> &nbsp;
                                             </td>
                                             <td>&nbsp;</td>

@@ -15,9 +15,9 @@ if (isset($_POST['ok'])) {
     $login = $_POST['login'];
     $pswd = $_POST['pswd'];
 
-    $f_name = $_POST['f_name'];
-    $name = $_POST['name'];
-    $s_name = $_POST['s_name'];
+    $titlename = $_POST['titlename'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
     $nation = $_POST['nation'];
     $origin = $_POST['origin'];
     $religion = $_POST['religion'];
@@ -48,7 +48,7 @@ if (isset($_POST['ok'])) {
 
     $job = $_POST['job'];
 
-    $query = "UPDATE student set username='$login',password='$pswd',f_name='$f_name',name='$name',s_name='$s_name',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$user'";
+    $query = "UPDATE student set username='$login',password='$pswd',titlename='$titlename',firstname='$firstname',lastname='$lastname',nation='$nation',origin='$origin',religion='$religion',gender='$gender',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear',job='$job' WHERE std_id='$user'";
 
     $do = mysqli_query($connection, $query);
     if ($do) {
@@ -308,26 +308,26 @@ if (isset($_POST['ok'])) {
                                                     <td>&nbsp;</td>
                                                     <td style="text-align: right; font-weight: bold; color: #333;">
                                                         คำนำหน้าชื่อ :</span></span></td>
-                                                    <td><label for="f_name"></label>
-                                                        <input type="text" name="f_name" id="f_nname"
-                                                               value="<?= $row['f_name']; ?>"></td>
+                                                    <td><label for="titlename"></label>
+                                                        <input type="text" name="titlename" id="titlename"
+                                                               value="<?= $row['titlename']; ?>"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>&nbsp;</td>
                                                     <td style="text-align: right; font-weight: bold; color: #333;">ชื่อ
                                                         :</span></span></td>
-                                                    <td colspan="4"><label for="name"></label>
-                                                        <input type="text" name="name" id="name"
-                                                               value="<?= $row['name']; ?>"></td>
+                                                    <td colspan="4"><label for="firstname"></label>
+                                                        <input type="text" name="firstname" id="firstname"
+                                                               value="<?= $row['firstname']; ?>"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>&nbsp;</td>
                                                     <td style="text-align: right"><span class="style60"
                                                                                         style="font-weight: bold">&#3609;&#3634;&#3617;&#3626;&#3585;&#3640;&#3621; : </span>
                                                     </td>
-                                                    <td><label for="s_name"></label>
-                                                        <input type="text" name="s_name" id="s_name"
-                                                               value="<?= $row['s_name']; ?>"></td>
+                                                    <td><label for="lastname"></label>
+                                                        <input type="text" name="lastname" id="lastname"
+                                                               value="<?= $row['lastname']; ?>"></td>
                                                     <td>&nbsp;</td>
                                                     <td>&nbsp;</td>
                                                     <td>&nbsp;</td>

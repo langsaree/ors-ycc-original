@@ -271,7 +271,7 @@ if (isset($_POST['ok'])) {
                         $errmsg35 = "";
 
 
-                        //$login = $email = $pswd = $cpswd = $f_name = $name = $s_name = $filename = "";
+                        //$login = $email = $pswd = $cpswd = $titlename = $firstname = $lastname = $filename = "";
                         //	foreach($_REQUEST as $key => $value)  {
                         //		$$key = $value;
                         //	}
@@ -339,16 +339,16 @@ if (isset($_POST['ok'])) {
 #end password check
 #===================================	
 # first name and last name
-                            $f_name = $_POST['f_name'];
-                            $name = $_POST['name'];
-                            $s_name = $_POST['s_name'];
-                            if (empty($f_name)) {
+                            $titlename = $_POST['titlename'];
+                            $firstname = $_POST['firstname'];
+                            $lastname = $_POST['lastname'];
+                            if (empty($titlename)) {
                                 $errmsg11 = "<span style=color:red>กรุณาเลือกคำนำหน้าชื่อด้วยค่ะ</span>";
                             }
-                            if (empty($name)) {
+                            if (empty($firstname)) {
                                 $errmsg12 = "<span style=color:red>กรุณากรอกชื่อด้วยค่ะ</span>";
                             }
-                            if (empty($s_name)) {
+                            if (empty($lastname)) {
                                 $errmsg13 = "<span style=color:red>กรุณากรอกนามสกุลด้วยค่ะ</span>";
                             }
                             //if(!ereg($pattern, $pswd)) {
@@ -525,8 +525,8 @@ if (isset($_POST['ok'])) {
 	  !$errmsg25 && !$errmsg26 && !$errmsg27 && !$errmsg28 && !$errmsg29 */ && !$errmsg30) {
 
 
-                                $query = "INSERT INTO student (username,password,f_name,name,s_name,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
-                  value('$login','$pswd','$f_name','$name','$s_name','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
+                                $query = "INSERT INTO student (username,password,titlename,firstname,lastname,gender,birthday,std_id,address,city,province,postalcode,phone,email,job,nation,origin,religion,edulevel,eduplace,eduprovince,eduyear) 
+                  value('$login','$pswd','$titlename','$firstname','$lastname','$gender','$birthday','$std_id','$address','$p_home','$c_home','$postalcode','$phone','$email','$job','$nation','$origin','$religion','$edulevel','$eduplace','$eduprovince','$eduyear')";
 
                                 $do = mysqli_query($connection, $query);
                                 if ($do) {
@@ -767,7 +767,7 @@ if (isset($_POST['ok'])) {
                                         </td>
                                         <td height="1" bgcolor="#FFFFFF">
                                             <div align="left">
-                                                <select name="f_name" id="f_name">
+                                                <select name="titlename" id="titlename">
                                                     <option selected>นาย</option>
                                                     <option>นาง</option>
                                                     <option>นางสาว</option>
@@ -786,8 +786,8 @@ if (isset($_POST['ok'])) {
                                     <tr>
                                         <td height="" bgcolor="#FFFFFF" style="color: black">ชื่อ</td>
                                         <td height="1" bgcolor="#FFFFFF"><input type="text" class="inputbox-normal"
-                                                                                name="name" value="<?php $name ?>"
-                                                                                id="name"
+                                                                                name="firstname" value="<?php $firstname ?>"
+                                                                                id="firstname"
                                                                                 style="background: <?php if ($errmsg12) echo "#EEFCE2"; ?>"/>
                                             <span class="style29">                      *</span><span class="style29"> &nbsp;</span>
                                         </td>
@@ -802,10 +802,10 @@ if (isset($_POST['ok'])) {
                                         <td height="1" bgcolor="#FFFFFF" style="color: black">
                                             <div align="left">นามสกุล</div>
                                         </td>
-                                        <td height="1" bgcolor="#FFFFFF"><input type="text" name="s_name"
-                                                                                class="inputbox-normal" id="s_name"
+                                        <td height="1" bgcolor="#FFFFFF"><input type="text" name="lastname"
+                                                                                class="inputbox-normal" id="lastname"
                                                                                 style="background: <?php if ($errmsg13) echo "#EEFCE2"; ?>"
-                                                                                value="<?php $s_name ?>"/>
+                                                                                value="<?php $lastname ?>"/>
                                             <span class="style29">*</span></td>
                                     </tr>
                                     <?php if ($errmsg15) { ?>
@@ -1089,7 +1089,7 @@ if (isset($_POST['ok'])) {
                                                 <input name="post" type="text" class="inputbox-normal" id="post"
                                                        size="15" maxlength="5"
                                                        style="background: <?php if ($errmsg29) echo "#EEFCE2"; ?>"
-                                                       value="<?php $post ?>"/>
+                                                       value="<?php $postalcode ?>"/>
                                                 <span class="style29">*</span> &nbsp;
                                             </div>
                                         </td>
@@ -1109,7 +1109,7 @@ if (isset($_POST['ok'])) {
                                         <td><input name="tel" type="text" class="inputbox-normal" id="tel" size="18"
                                                    maxlength="20"
                                                    style="background: <?php if ($errmsg30) echo "#EEFCE2"; ?>"
-                                                   value="<?php $tel ?>"/>
+                                                   value="<?php $phone ?>"/>
                                             <span class="style29">*</span> &nbsp;
                                         </td>
                                         <td>&nbsp;</td>
