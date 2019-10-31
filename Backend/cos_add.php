@@ -5,6 +5,7 @@ session_start();
 
 ?>
 <?php
+ 
 
 $errmsg= ""; $errmsg1= ""; $errmsg2= ""; $errmsg3= ""; $errmsg4= "";$errmsg5= "";$errmsg6= "";$errmsg7= "";$errmsg8= "";
 if(isset($_POST['ok'])) {
@@ -41,7 +42,7 @@ $date = $cos_day."-". $cos_after ."/". $cos_time;
 	   if(empty($cos_time)){
            $errmsg7 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์ period </span>'; }}
    #====================================
-$cos_lec =$_POST['lec_id'];
+$lec_id =$_POST['lec_id'];
    if(empty($lec_id)){
    $errmsg8 .='<span style="color:red; font-size:12px">คุณกรอบข้อมูลไม่สมบูรณ์</span>' ;}
    
@@ -49,9 +50,9 @@ $cos_comment =$_POST['cos_comment'];
 
 if(!$errmsg1 && !$errmsg2 && !$errmsg3 && !$errmsg4 && !$errmsg5 && !$errmsg6 && !$errmsg7 && !$errmsg8)
 {
-mysqli_query ("SET NAMES 'utf8'");
+mysqli_query ($connection, "SET NAMES 'utf8'");
 $sql = "insert into course(cos_id,cos_group,cos_name,cos_period,cos_day,lec_id,cos_comment) value('$cos_id','$cos_group','$cos_name','$cos_period','$date','$lec_id','$cos_comment')";
-$result = mysqli_query($connection, $sql);
+$result = mysqli_query($connection,$sql);
 
 ?>
 
@@ -63,7 +64,8 @@ if ($result) {
   echo "$text";
   exit;
 }else {
-	 die("Error db".mysqli_error()); }
+die("Error db".mysqli_error($connection)); }
+
 
 }}
 ?>
@@ -228,7 +230,7 @@ body {
             </tr>
             <?php }?>
             <tr>
-              <td height="28"><div align="right">อาจารย์ผู้สอน</div></td>
+            <td height="28"><div align="right">ลำดับอาจารย์ผู้สอน</div></td>
               <td>&nbsp;</td>
               <td><input name="lec_id" type="text" id="lec_id" style="background: <?php if($errmsg8) echo "#EEFCE2"; ?>" value="<?php $lec_id ?>" /></td>
             </tr>
