@@ -72,7 +72,7 @@ body {
         <td width="6%" bgcolor="#CCCCCC"><div align="center">ลบข้อมูล</div></td>
       </tr>
        <?php
-  include("../db.php");
+  include("../config/db.php");
 	///////////////////////////////////////
    $sql1 ="select * from course ";
    $result = mysqli_query($connection,$sql1);
@@ -87,7 +87,7 @@ body {
 	$cos_comment = $row['cos_comment'];
 //echo $cos_id;
 //echo $cos_name;
-    $sql2 = "select * from lecture where lec_id = '$lec_id' ";
+    $sql2 = "select * from lecturer where lec_id = '$lec_id' ";
 	  $a =mysqli_query ($connection,$sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{
