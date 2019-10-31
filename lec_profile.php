@@ -133,64 +133,64 @@ $username=$_SESSION["lec_user"];
             $result=mysqli_query($con, $sql);
             while ($row = mysqli_fetch_array($result)) {
 		    ?>
-                  <td width="26">&nbsp;</td>
-                  <td width="124" rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
-                  <td width="140" class="main" style="text-align: right">รหัสประจำตัว :</td>
-                  <td width="321" class="maintext"><?= $row['lec_id'];?></td>
-                  <td width="15">&nbsp;</td>
+                    <td width="26">&nbsp;</td>
+                    <td width="124" rowspan="6"><img src="image/lecturer.png" width="124" height="120"></td>
+                    <td width="140" class="main" style="text-align: right">รหัสประจำตัว :</td>
+                    <td width="321" class="maintext"><?php echo $row["lec_id"];?></td>
+                    <td width="15">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">ชื่อ :</td>
-                  <td class="maintext"><?= $row['lec_name'];?></td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">ชื่อ :</td>
+                    <td class="maintext"><?php echo $row["lec_name"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">แผนกวิชา :</td>
-                  <td class="maintext"><?= $row['cos_name'];?></td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">แผนกวิชา :</td>
+                    <td class="maintext"><?php echo $row["cos_name"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
-                                <tr>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">ภาควิชา :</td>
-                  <td class="maintext"><?= $row['cos_group'];?></td>
-                  <td>&nbsp;</td>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">ภาควิชา :</td>
+                    <td class="maintext"><?php echo $row["cos_group"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
 
                 <tr>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">Email :</td>
-                  <td class="maintext"><?= $row['lec_email'];?></td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">Email :</td>
+                    <td class="maintext"><?php echo $row["lec_email"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">Phone :</td>
-                  <td class="maintext"><?= $row['lec_tel'];?></td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">Phone :</td>
+                    <td class="maintext"><?php echo $row["lec_tel"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">Username :</td>
-                  <td class="maintext"><?= $row['username'];?></td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">Username :</td>
+                    <td class="maintext"><?php echo $row["username"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td class="main" style="text-align: right">Password :</td>
-                  <td class="maintext"><?= $row['password'];?></td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="main" style="text-align: right">Password :</td>
+                    <td class="maintext"><?php echo $row["password"];?></td>
+                    <td>&nbsp;</td>
                 </tr>
-             
+
                 <tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <?php
                 // end of profile query

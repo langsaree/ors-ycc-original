@@ -1,7 +1,12 @@
 <?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+include 'class/auth.class.php';
+$auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
+if(!isset($_SESSION["lec_user"])){header("location:index.php");}
+if(isset($_SESSION["lec_user"])){
+$username = $_SESSION["lec_user"];
 ?>
 
 <!DOCTYPE html>
@@ -138,15 +143,15 @@ if(session_is_registered(lec_user)){
 			include('db.php');
 	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
 			$sql = "select * from lecture,course where course.lec_id=lecture.lec_id and username='$username'";
-            $result=mysql_query($sql);
-            while ($row=mysql_fetch_array($result)){
+            $result=mysqli_query($con,$sql);
+            while ($row=mysqli_fetch_array($result)){
 		     ?>
               <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td><?=$row[cos_id]?></td>
-                <td><?=$row[cos_group]?></td>
-                <td><?=$row[cos_name]?></td>
+                <td><?=$row['cos_id']?></td>
+                <td><?=$row['cos_group']?></td>
+                <td><?=$row['cos_name']?></td>
                 <td>&nbsp;</td>
               </tr>
               <? }?>

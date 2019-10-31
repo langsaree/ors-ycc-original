@@ -23,36 +23,32 @@ $d_tel = $_POST['d_tel'];
 $mobile = $_POST['mobile'];
 $job = $_POST['job'];
 $t_job = $_POST['t_job'];
-mysqli_query("SET NAMES 'utf8'");
+mysqlه_query("SET NAMES 'utf8'");
 $sql = "insert into student(username,password,f_name,name,s_name,gender,b_day,b_month,b_years,std_id,home,m_home
 ,r_home,v_home,p_home,c_home,post,tel,email,d_tel,mobile,job,t_job)
  value 
  ('$username','".md5 ($_POST['password'] )."','$f_name','$name', 
 '$s_name','$gender','$b_day','$b_month','$b_years','$std_id','$home','$m_home','$r_home','$v_home','$p_home','$c_home','$post','$tel','$email','$d_tel',
 '$mobile','$job','$t_job')";
-
-
-$result = mysqli_query($con,$sql);
+$result = mysqlه_query($con,$sql);
 if (!$result)
 {
-die("could not connect db".mysqli_error());
+    die("could not connect db".mysqli_error());
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="refresh"content="3; url='home.php' charset=tis-620" />
-<title>Untitled Document</title>
-<style type="text/css">
-<!--
-.style1 {
-	font-size: 36px;
-	color: #DD0000;
-	font-weight: bold;
-}
-.style4 {color: #0000FF}
--->
-</style>
+    <meta http-equiv="refresh"content="3; url='home.php' charset=tis-620" />
+    <title>Untitled Document</title>
+    <style type="text/css">
+        .style1 {
+            font-size: 36px;
+            color: #DD0000;
+            font-weight: bold;
+        }
+        .style4 {color: #0000FF}
+    </style>
 </head>
 
 <body>

@@ -1,9 +1,13 @@
 <?php
 session_start();
-if(!session_is_registered(lec_user)){header("location:index.php");}
-if(session_is_registered(lec_user)){
+include 'class/auth.class.php';
+$auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
+if(!isset($_SESSION["lec_user"])){header("location:index.php");}
+if(isset($_SESSION["lec_user"])){
+$username=$_SESSION["lec_user"];
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,19 +124,19 @@ if(session_is_registered(lec_user)){
                 <td width="12">&nbsp;</td>
                 <td width="15">&nbsp;</td>
               </tr>
-              <? 
-			include('db.php');
-	        //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
-			//$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
-			$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
-			
-            $result=mysql_query($sql);
-            while($row=mysql_fetch_array($result)){
-				$std=$row[std_id];
-				$sql2 ="select * from student where std_id='$std'";
-				$result2=mysql_query($sql2);
-				while($row2=mysql_fetch_array($result2)){
-		    ?>
+                <?php
+                // include('db.php');
+                //$sql="select * from lecture,course where lecture.cos_id=course.cos_id and username='$lec_user' ";
+                //$sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and  username='$username' and course.cos_id=register.cos_id";
+                $sql = "select * from register,lecture,course where lecture.lec_id=register.lec_id and username='$username' and course.cos_id=register.cos_id";
+
+                $result=mysqli_query($connection,$sql);
+                while($row=mysqli_fetch_array($result)){
+                    $std=$row["std_id"];
+                    $sql2 ="select * from student where std_id='$std'";
+                    $result2=mysqli_query($connection,$sql2);
+                    while($row2=mysqli_fetch_array($result2)){
+                        ?>
               <tr>
                 <td>&nbsp;</td>
                 <td><?=$row[std_id] ?></td>

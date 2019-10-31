@@ -232,7 +232,7 @@ s
 
 <?php
 $sql_view    = "select * from course where status='1' ";
-$result_view = mysqli_query($sql_view);
+$result_view = mysqli_query($con,$sql_view);
 while ($row = mysqli_fetch_array($result_view)) {
 
 ?>

@@ -1,6 +1,10 @@
 <?php
+<?php
 session_start();
-include('db.php');
+include 'class/auth.class.php';
+$auth = new Auth;
+$db = new Db;
+$connection = $db->connect();
 
 if(!isset($_SESSION["username"])) // To check login user if already login then hide login form
 {

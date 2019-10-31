@@ -2,63 +2,52 @@
 session_start();
 include('auth.php');
 include ('db.php');
-extract ($_GET);
-$user=$id;
+extract($_GET);
+$username = $_SESSION['username'];
+$user = $_GET['id'];
 ?>
-<?
-$ok=$ok;
-if(isset($ok)){	
-   $login = $_POST['login'];
-   $email=$_POST['email'];
-   $pswd = $_POST['pswd'];
-   $cpswd = $_POST['cpswd'];
-   $fname=$_POST['fname'];
-   $name=$_POST['name'];
-   $s_name=$_POST['s_name'];
-   //$b_day=$_POST['b_day'];
-   //$b_month=$_POST['b_month'];
-   //$b_year=$_POST['b_year'];
-   //$birthday=$b_day.'/'.$b_month.'/'.$b_year; 
-   $birthday=$_POST['birthday'];
-   
-   $nation=$_POST['nation'];
-   $origin=$_POST['origin'];
-   $religion=$_POST['religion'];
-   
-    $std_id=$_POST['std_id'];
-    $home=$_POST['home'];
-    //$m_home=$_POST['m_home'];
-    //$r_home=$_POST['r_home'];
-    //$v_home=$_POST['v_home'];
-    $city=$_POST['city'];
-    $province=$_POST['province'];
-    $postalcode=$_POST['postalcode'];
-    $phone=$_POST['phone'];
-	//$address=$home.'หมู่ที่ '.' '.$m_home.' '.'ซอย/ถนน '.$r_home.'แขวง/ตำบล '.$v_home;
-	$address=$_POST['address'];
-	$edulevel=$_POST['edulevel'];
-    $eduplace=$_POST['eduplace'];
-    $eduprovince=$_POST['eduprovince'];
-    $eduyear=$_POST['eduyear'];
-	$job=$_POST['job']; 
-	
-	$query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
+<?php
+if (isset($_POST['ok'])) {
+    $login = $_POST['login'];
+    $email = $_POST['email'];
+    $pswd = $_POST['pswd'];
+    $cpswd = $_POST['cpswd'];
+    $fname = $_POST['fname'];
+    $name = $_POST['name'];
+    $s_name = $_POST['s_name'];
+    $b_day = $_POST['b_day'];
+    $b_month = $_POST['b_month'];
+    $b_year = $_POST['b_year'];
+    $birthday = $b_day . '/' . $b_month . '/' . $b_year;
+    $birthday = $_POST['birthday'];
+    $nation = $_POST['nation'];
+    $origin = $_POST['origin'];
+    $religion = $_POST['religion'];
+    $std_id = $_POST['std_id'];
+    $home = $_POST['home'];
+    $m_home = $_POST['m_home'];
+    $r_home = $_POST['r_home'];
+    $v_home = $_POST['v_home'];
+    $city = $_POST['city'];
+    $province = $_POST['province'];
+    $postalcode = $_POST['postalcode'];
+    $phone = $_POST['phone'];
+    $address = $home . 'หมู่ที่ ' . ' ' . $m_home . ' ' . 'ซอย/ถนน ' . $r_home . 'แขวง/ตำบล ' . $v_home;
+    $address = $_POST['address'];
+    $edulevel = $_POST['edulevel'];
+    $eduplace = $_POST['eduplace'];
+    $eduprovince = $_POST['eduprovince'];
+    $eduyear = $_POST['eduyear'];
+    $job = $_POST['job'];
+    $query = "UPDATE student set username='$login',password='$pswd',f_name='$fname',name='$name',s_name='$s_name',birthday='$birthday',std_id='$std_id',address='$address',city='$city',province='$province',postalcode='$postalcode',phone='$phone',email='$email',job='$job',nation='$nation',origin='$origin',religion='$religion',edulevel='$edulevel',eduplace='$eduplace',eduprovince='$eduprovince',eduyear='$eduyear' WHERE std_id='$user'";
+    $do = mysqli_query($connection, $query);
+    if ($do) {
+        header("location:std_profile.php");
+    } else {
+        die("Could not select db" . mysqli_error());
+        //  header("location:std_profile.php");
+    }}
 
-       $do = mysql_query($query);
-       if ($do)
-         { 
-          header("location:std_profile.php");
-		 }	
-		 else{	 
-	   die("Could not select db".mysql_error());
-	   //header("location:std_profile.php");
-	   }}
-    else
-   { 
-       
-   } 
-
-?>
 <!-- <script type="text/javascript">window.location="index.php";</script>-->
 
 <!DOCTYPE html>
@@ -212,13 +201,11 @@ input, textarea {
        </table>
          <table width="600" border="0" align="center" cellpadding="0" cellspacing="2">
            <tr>
-<? 
-$sql = "select * from student where std_id='$user' ";
-$result = mysql_query($sql); 
-while($row=mysql_fetch_array($result))
-{
-
-?>
+               <?php
+               $sql = "select * from student where std_id='$user' ";
+               $result = mysqli_query($connection, $sql);
+               while ($row = mysqli_fetch_array($result)) {
+               ?>
              <td width="229">&nbsp;</td>
              <td width="158">&nbsp;</td>
              <td width="221">&nbsp;</td>
@@ -262,17 +249,17 @@ while($row=mysql_fetch_array($result))
                     <td style="text-align: right; font-weight: bold; color: #333;">คำนำหน้าชื่อ</td>
                     <td colspan="4"><label for="fname"></label>  
                       <select name="fname" size="1" id="fname">
-					  <? 
-                      $sql3="select * from mrmrs";
-			          $result3=mysql_query($sql3);			 
-			          while($data3=mysql_fetch_array($result3)){
-			 	          if($data[id]==$data3[0]){
-					           echo "<option value='$data3[name]' selected>$data3[name]";
-				         }else{
-					         echo "<option value='$data3[name]'>$data3[name]";
-				           }
-			            }
-			         ?>
+                          <?php
+                          $sql3 = "select * from mrmrs";
+                          $result3 = mysqli_query($connection, $sql3);
+                          while ($data3 = mysqli_fetch_array($result3)) {
+                              if ($data3['id'] == $data3[0]) {
+                                  echo "<option value='$data3[name]' selected>$data3[name]";
+                              } else {
+                                  echo "<option value='$data3[name]'>$data3[name]";
+                              }
+                          }
+                          ?>
                       </select></td>
                   </tr>
                   <tr>
@@ -462,17 +449,17 @@ while($row=mysql_fetch_array($result))
                     <td>
                       <label for="select"></label>
                       <select name="job" id="job">
-                      <?		
-			 $sql3="select * from joblist";
-			 $result3=mysql_query($sql3);			 
-			 while($data3=mysql_fetch_array($result3)){
-			 	if($data[job_id]==$data3[0]){
-					echo "<option value='$data3[job_name]' selected>$data3[job_name]";
-				}else{
-					echo "<option value='$data3[job_name]'>$data3[job_name]";
-				}
-			 }
-			  ?>
+                          <?php
+                          $sql3 = "select * from joblist";
+                          $result3 = mysqli_query($connection, $sql3);
+                          while ($data3 = mysqli_fetch_array($result3)) {
+                              if ($data3["job_id"] == $data3[0]) {
+                                  echo "<option value='$data3[job_name]' selected>$data3[job_name]";
+                              } else {
+                                  echo "<option value='$data3[job_name]'>$data3[job_name]";
+                              }
+                          }
+                          ?>
                       </select></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
