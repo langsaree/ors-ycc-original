@@ -1,6 +1,3 @@
-<?php
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,9 +65,11 @@ s
 
             </table>
 
-    <?php
-    echo $message;
-?>
+              <?php
+              if (isset($message)) {
+                  echo $message;
+              }
+              ?>
    <?php
     ######################################   To show login form if user do not login ###################################
 

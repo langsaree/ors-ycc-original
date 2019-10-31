@@ -123,12 +123,12 @@ input:focus, textarea:focus {
 				$phone=$_POST['phone'];
 				
 				$sql="UPDATE lecture SET username='$login',password='$pswd',lec_name='$name',lec_email='$email',lec_tel='$phone' where username='$username'";
-				$do=mysql_query($sql);
+				$do=mysqli_query($con$sql);
 				if($do){
 					echo "<script>location='lec_profile.php';</script>";
 				}
 				else{
-					 mysql_error();
+					 mysqli_error();
 				}
 			}
 			?>
@@ -137,8 +137,8 @@ input:focus, textarea:focus {
              <? 
 			
 			$sql = "select * from lecture where username='$username'";
-            $result=mysql_query($sql);
-            ($row=mysql_fetch_array($result));
+            $result=mysqli_query($con,$sql);
+            ($row=mysqli_fetch_array($result));
 		    ?>
                 <tr>
                   <td width="29">&nbsp;</td>
@@ -163,7 +163,7 @@ input:focus, textarea:focus {
                   <td class="main">Username :</td>
                   <td>
                     <label for="login"></label>
-                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?=$row[username];?>">
+                    <input type="text" name="login" id="login" class="inputbox-normal" value="<?=$row["username"];?>">
                  </td>
                   <td>&nbsp;</td>
                 </tr>
@@ -171,7 +171,7 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">Password :</td>
                   <td><label for="pswd"></label>
-                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?=$row[password];?>" ></td>
+                  <input type="password" name="pswd" id="pswd" class="inputbox-normal" value="<?=$row["password"];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -184,21 +184,21 @@ input:focus, textarea:focus {
                   <td>&nbsp;</td>
                   <td class="main">ชื่อ :</td>
                   <td><label for="name"></label>
-                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?=$row[lec_name];?>" ></td>
+                  <input type="text" name="name" id="name" class="inputbox-normal" value="<?=$row["lec_name"];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Email :</td>
                   <td><label for="email"></label>
-                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?=$row[lec_email];?>" ></td>
+                  <input type="text" name="email" id="email" class="inputbox-normal" value="<?=$row["lec_email"];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                   <td class="main">Phone :</td>
                   <td><label for="phone"></label>
-                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?=$row[lec_tel];?>" ></td>
+                  <input type="text" name="phone" id="phone" class="inputbox-normal" value="<?=$row["lec_tel"];?>" ></td>
                   <td>&nbsp;</td>
                 </tr>
             </table>

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include('auth.php');
 include ('db.php');
@@ -203,7 +203,7 @@ input, textarea {
            <tr>
                <?php
                $sql = "select * from student where std_id='$user' ";
-               $result = mysqli_query($connection, $sql);
+               $result = mysqli_query($con, $sql);
                while ($row = mysqli_fetch_array($result)) {
                ?>
              <td width="229">&nbsp;</td>
@@ -229,12 +229,12 @@ input, textarea {
                     <td width="27" height="18">&nbsp;</td>
                     <td width="135" style="text-align: right; font-weight: bold; color: #333;" >ชื่อล็อกอิน :</span></td>
                     <td colspan="4"><label for="login"></label>
-                      <input type="text" name="login" id="login" value="<?=$row[username];?>">                    </tr>
+                      <input type="text" name="login" id="login" value="<?=$row["username"];?>">                    </tr>
                   <tr>
                     <td height="18" style="text-align: right">&nbsp;</td>
                     <td style="text-align: right; color: #333; font-weight: bold;">รหัสผ่าน : </td>
                     <td colspan="4"><label for="pswd"></label>
-                      <input type="password" name="pswd" id="pswd" value="<?=$row[password];?>"></td>
+                      <input type="password" name="pswd" id="pswd" value="<?=$row["password"];?>"></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
@@ -251,7 +251,7 @@ input, textarea {
                       <select name="fname" size="1" id="fname">
                           <?php
                           $sql3 = "select * from mrmrs";
-                          $result3 = mysqli_query($connection, $sql3);
+                          $result3 = mysqli_query($con, $sql3);
                           while ($data3 = mysqli_fetch_array($result3)) {
                               if ($data3['id'] == $data3[0]) {
                                   echo "<option value='$data3[name]' selected>$data3[name]";
