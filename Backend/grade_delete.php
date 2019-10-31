@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>delete grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -28,7 +28,7 @@ body {
 	font-size: 13px;
 }
 .style44 {color: #CCCCCC}
--->
+
 </style>
 </head>
 
@@ -45,6 +45,7 @@ body {
       <tr>
         <td width="6%" align="center"><img src="image/delete_grade.png" width="100" height="100" /></td>
         <td width="94%"><span class="style26"><span class="style36">Delete<span class="style38"> Course</span></span></span><br />
+        <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a><a href="manage_grade.php" class="style6" style="text-decoration:none" > | Manage Grade</a></td>  
           <span class="style34">ลบเกรด</span></td>
         </tr>
     </table>

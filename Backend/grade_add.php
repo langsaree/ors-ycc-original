@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>add new grade</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -22,14 +22,13 @@ body {
 .style36 {color: #FF6600}
 .style38 {color: #55443E; font-family: Verdana, Arial, Helvetica, sans-serif;}
 .style25 {font-size: 13px; font-family: Tahoma; }
-.style40 {
-	color: #333333;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-}
 .style44 {color: #CCCCCC}
-.style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
--->
+.style46 {color: #333333; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; }
+.style1 {color: #FF0000;
+	font-weight: bold;
+	font-size: 24px;
+}
+
 </style>
 </head>
 
@@ -37,111 +36,68 @@ body {
 <form id="form1" name="form1" method="post" action="">
   <table width="1260" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td><img src="images/header-bg.png" width="1280" height="45" /></td>
+    <td><img src="../public/images/header.png" width="1280" height="45" /></td>
     </tr>
   </table>
-  <table width="1280" height="879" border="0" align="left" cellpadding="0" cellspacing="0">
+  <table width="1280" height="723" border="0" align="left" cellpadding="0" cellspacing="0">
   <tr>
     <td height="74" valign="top"><table width="95%"  align="center" border="0" cellspacing="10" cellpadding="0"  class="header">
-      <tr>
-        <td width="6%" align="center"><img src="image/add_grade .png" width="100" height="100" /></td>
-        <td width="94%"><span class="style26"><span class="style36"><span class="style45">Add</span>  <span class="style38">New Grade </span></span></span><br />
-            <span class="style34">เพิ่มเกรดใหม่</span></td>
+      <tr>  
+        <td width="6%" align="center"><img src="image/update_grade.png" width="100" height="100" /></td>
+        <td width="94%"><span class="style26"><span class="style36">Update<span class="style38"> Course</span></span></span><br />
+            <span class="style34">แก้ไขเกรด</span>
+            <a href="cpanel.php" class="style6" style="text-decoration:none" >| ControlPanel </a><a href="manage_grade.php" class="style6" style="text-decoration:none" > | Manage Grade</a></td>  
         </tr>
     </table>
       <p><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
   
-  <tr>
-    <td height="702" valign="top"><p></p>
-      <table width="100%" border="0" cellspacing="5" cellpadding="0">
-        <tr>
-          <td colspan="2" align="center">&nbsp;</td>
-        </tr>
-        <? if($error[0]) { ?>
-        <tr>
-          <td width="32%" align="right"><span class="style40">รหัสวิชา :</span> </td>
-          <td width="68%" class="red"><label>
-            <input name="textfield" type="text" size="20" />
-          </label></td>
-        </tr>
-        <? } ?>
-        <tr>
-          <td width="32%" align="right"><span class="style40">ชื่อวิชา :</span></td>
-          <td width="68%"><label>
-            <input name="textfield2" type="text" size="30" />
-          </label></td>
-        </tr>
-        <? if($error[1]) { ?>
-        <tr>
-          <td align="right"><span class="style40">จำนวนชั่วโมง/หน่วยกิต :</span></td>
-          <td class="red"><input name="textfield3" type="text" size="20" /></td>
-        </tr>
-        <? } ?>
-        <tr>
-          <td align="right"><span class="style40">วัน :</span></td>
-          <td><label>
-            <input name="textfield4" type="text" size="30" />
-          </label></td>
-        </tr>
-        <? if($error[2]) { ?>
-        <tr>
-          <td align="right"><span class="style40">เวลา :</span></td>
-          <td class="red"><input name="textfield5" type="text" size="30" /></td>
-        </tr>
-        <? } ?>
-        <tr>
-          <td align="right"><span class="style40">อาจารย์ผู้สอน :</span></td>
-          <td><input name="textfield6" type="text" size="25" /></td>
-        </tr>
-        <? if($error[3]) { ?>
-        <tr>
-          <td align="right"><span class="style40">หมายเหตุ :</span></td>
-          <td class="red"><label>
-            <textarea name="textarea" cols="50"></textarea>
-          </label></td>
-        </tr>
-        <? } ?>
-        <? if($error[4]) { ?>
-
-        <? } ?>
-
-        <? if($error[5]) { ?>
-
-        <? } ?>
-        <? if($error[6]) { ?>
-
-        <? } ?>
-
-        <? if($error[7]) { ?>
-
-        <? } ?>
-        <? if($error[8]) { ?>
-
-        <? } ?>
-        <? if($error[9]) { ?>
-
-        <? } ?>
-
-        <tr>
-          <td align="right">&nbsp;</td>
-          <td><label>
-            <input type="submit" name="button" id="button" class="button" value="บันทึก" />
-            <input type="button" name="button2" id="button2" class="button" value="ยกเลิก" onclick="window.location='index2.php?option=manage_user&amp;group=<?= $_REQUEST['group'] ?>'" />
-          </label></td>
-        </tr>
-        <tr>
-          <td align="right">&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+    <tr>
+    <td height="563" valign="top"><p></p>
+      <div align="center">
+        <p class="style1">Course Information </p>
+        <table width="333" height="278" border="1">
+          <?
+  include('../config/db.php');
+	$sql = "select * from $db_table2 where name ='$name'";
+	$show = mysql_query($sql);
+	if (($show))
+	{
+	?>
+          <tr>
+            <td width="173"><span class="style46">รหัสวิชา :</span></td>
+            <td width="144"><input type="text" name="name" /></td>
+          </tr>
+          <tr>
+            <td><span class="style46">ชื่อวิชา :</span></td>
+            <td><input type="text" name="lastname" /></td>
+          </tr>
+          <tr>
+            <td><span class="style46">จำนวนชั่วโมง/หน่วยกิต :</span></td>
+            <td colspan="2"><input type="text" name="gender" /></td>
+          </tr>
+          <tr>
+            <td><span class="style46">วัน :</span></td>
+            <td><input type="text" name="address" /></td>
+          </tr>
+          <tr>
+            <td><span class="style46">เวลา :</span></td>
+            <td><input type="text" name="city" /></td>
+          </tr>
+          <tr>
+            <td><span class="style46">อาจารย์ผู้สอน :</span></td>
+            <td><input type="text" name="province" /></td>
+          </tr>
+          <tr>
+            <td><span class="style46">หมายเหตุ :</span></td>
+            <td><input type="text" name="postcode" /></td>
+          </tr>
+        </table>
+        <p>
+          <input name="Update" type="submit" id="Update" value="Update" />
+        </p>
+        <p class="style1">&nbsp; </p>
+      </div>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p align="left"><span class="style44">________________________________________________________________________________________________________________________________________________________________</span></p></td>
