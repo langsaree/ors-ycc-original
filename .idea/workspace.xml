@@ -3,7 +3,136 @@
   <component name="ChangeListManager">
     <list default="true" id="fd95a9d6-3d8a-4644-a521-30a77261750a" name="Default" comment="last update before submit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpanel/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650148_DeleteRed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650438_Shutdown_Box_Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650538_Cute Ball - Shutdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1294650560_Circle_Blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1295339949_pen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/1295340314_old-edit-find.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/4099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Horsligne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Live Messenger22322.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/MSN MESSENGER 15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/PhotoshopSZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/View.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_notes/update.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_notes/update.png.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_notes/v.png.mno" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about-us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about-us_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add_grade .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/add_lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/advicer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/applyForm-page_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/applyForm-page_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b-search.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b1b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b1f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/b1r.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/back-button.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/bbbb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/bd1L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/contect-us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/contect-us_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/controlPanel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/controlPanel_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/couse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/couse_C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cpanel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/default_avatar_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delete_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/display.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/f2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/footer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/gear2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/header-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/home_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/images3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/images4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/infor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/infor_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/invisible22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/l.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lec_view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lecture Manager.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lecturer.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/lecturer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/list-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/man form.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manage_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/news.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/news_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/office22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/officer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/osa_user_blue_sysadmin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/p_Image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/picture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/picture_c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/regi corse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/register change form.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/register course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/register_form.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_lec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/search_student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/std_infor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student course status.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student status.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/student view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/update_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view evaluation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view lecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view register course.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view_course.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view_grade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/view_lec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/web-background-008.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/web-background-008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ycc_bg_1_2 copy1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p_Image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/p_Image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,15 +142,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cpanel/cos_update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/cos_delete.php">
           <provider selected="true" editor-type-id="text-editor" />
@@ -48,8 +168,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/cos_active.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
-              <caret line="178" column="91" selection-start-line="178" selection-start-column="91" selection-end-line="178" selection-end-column="91" />
+            <state relative-caret-position="51">
+              <caret line="3" column="18" selection-start-line="3" selection-end-line="4" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,11 +195,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cpanel/db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +220,7 @@
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="2" lean-forward="true" selection-end-line="17" />
+              <caret line="16" column="2" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -122,7 +260,6 @@
         <option value="$PROJECT_DIR$/cpanel/index.php" />
         <option value="$PROJECT_DIR$/lec_view_cos.php" />
         <option value="$PROJECT_DIR$/cpanel/index2.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/cpanel/std_profile2.php" />
         <option value="$PROJECT_DIR$/cpanel/std_update.php" />
         <option value="$PROJECT_DIR$/cpanel/std_view.php" />
@@ -158,20 +295,20 @@
         <option value="$PROJECT_DIR$/cpanel/cos_add.php" />
         <option value="$PROJECT_DIR$/cpanel/cos_active.php" />
         <option value="$PROJECT_DIR$/cpanel/db.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="827" />
-    <option name="width" value="1048" />
-    <option name="height" value="1088" />
+    <option name="x" value="826" />
+    <option name="width" value="1049" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +330,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,6 +377,7 @@
       <workItem from="1572483454129" duration="1789000" />
       <workItem from="1572485260289" duration="498000" />
       <workItem from="1572486018029" duration="55000" />
+      <workItem from="1572505813967" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Merge branch 'shikamaru-kun' of https://github.com/langsaree/ors-ycc-original_refactoring-testing-debugging-addingfeatures into shikamaru-kun&quot;&#10;&#10;This reverts commit 01979d07f83105599a4112eea727fbae1054eec2, reversing&#10;changes made to 76be0696795ed6bb0c9fb3e4ed3ab7f75d42ea16.">
       <created>1568708916699</created>
@@ -265,13 +404,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20487000" />
+    <option name="totallyTimeSpent" value="21283000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12013423" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -341,13 +480,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="last update before submit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cpanel/register_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login_check.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -668,33 +800,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/cos_active.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" column="91" selection-start-line="178" selection-start-column="91" selection-end-line="178" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/Copy of std_add.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cpanel/auth.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/admin.sql">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/cpanel/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="2" lean-forward="true" selection-end-line="17" />
+          <caret line="16" column="2" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cpanel/db.php">
+    <entry file="file://$PROJECT_DIR$/cpanel/admin.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel/cos_active.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-end-line="4" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
