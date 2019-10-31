@@ -1,11 +1,17 @@
 <?php
-$db_host = "localhost";
-$db_database = "ors_ycc";
-$db_username = "root";
-$db_password = "";
+//define connection elements
+$dbHost = "localhost:3306";
+$dbDatabase = "ors_ycc";
+$dbUsername = "root";
+$dbPassword = "";
 
-$con = mysqli_connect($db_host, $db_username, $db_password, $db_database);
-if (!$con) {
+//connect to Database
+$con = mysqli_connect($dbHost, $dbUsername, $dbPassword,$dbDatabase);
+
+//connection checking
+if ($con) {
+    mysqli_query($con,"SET NAMES 'utf8'") or die(mysqli_error());
+} else {
     die("Could not connect with db" . mysqli_error());
 }
-mysqli_query($con, "SET NAMES 'utf8'");
+?>
