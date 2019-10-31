@@ -1,5 +1,4 @@
 <?php
-//session_start();
 include('auth.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -58,22 +57,7 @@ body {
           <span class="style34">แสดงข้อมูลนักศึกษา</span></td>
         </tr>
     </table>
-              <form id="form1" name="form1" method="post" action="std_view_search.php">
-      <table width="1151" height="50" border="0" align="left" cellpadding="0" cellspacing="5">
-           <tr>
-                <td width="83">&nbsp;</td>
-                <td width="146"><label>
-                <input type=hidden name=todo value=search>
-                <input name="search_text" type="text" id="search" size="20" />
-                </label></td>
-                <td width="48"><label>
-                <input type="submit" name="button" id="button" value="ค้นหา" />
-                </label></td>
-                <td width="849">&nbsp;</td>
-              </tr>
-      </table>
-      </form>
-              <p>&nbsp;</p>
+    <p>&nbsp;</p>
       <p><span class="style44">________________________________________________________________________________________________________________________________________</span></p></td>
     </tr>
   <tr>
@@ -88,15 +72,14 @@ body {
       </tr>
      <?php 
 		/////////////////////////take information from student table //////////////////////////
-	include('../db.php');
+	include('../config/db.php');
 	$sql1 = "select * from student ";
 	$v=mysqli_query ($connection, $sql1);
 	while ($row= mysqli_fetch_array($v))
 	{
 	$std = $row['std_id'];
 	$user= $row['username'];
-	$name= $row['f_name']." <span> ". $row['name']." <span> ". $row['s_name'];
-	//echo $name;
+	$name= $row['first_name']." <span> ". $row['name']." <span> ". $row['last_name'];
 	?>
       <tr>
 		<td><div align="left"><?php echo  $std?> </div></td>
@@ -106,10 +89,7 @@ body {
         <td><div align="center"><a href="std_delete.php?id= <?php echo $std; ?> "><img src="../image/1294650148_DeleteRed.png" alt="1" width="25" height="25" border="0" /></a></div></td>
         <td><div align="center"><a href="std_profile.php?id=<?php echo $std;?>">แสดงรายละเอียด</a></div></td>
       </tr>
-     <?php } ////// close first while //////////////////////////////////////////////
-		//} //////// close of second while ////////////////////
-		//} /////// close 3rd while ///////////////////////
-		?>
+     <?php } ?>
     </table>
       <p></p>
       <p>&nbsp;</p>

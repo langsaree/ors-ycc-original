@@ -139,10 +139,10 @@ body {
 	while ($ro1= mysqli_fetch_array($re))
 	{
 		$std1= $ro1["std_id"];
-		$name= $ro1["f_name"]."<span>".$ro1["name"]."-".$ro1["s_name"];
+		$name= $ro1["first_name"]."<span>".$ro1["name"]."-".$ro1["last_name"];
 	
 	//////////////////forth/////////////////////
-    $sql2 = "select * from lecture where lec_id = '$lec' ";
+    $sql2 = "select * from lecturer where lec_id = '$lec' ";
 	$a =mysqli_query ($connection,$sql2);
 	while ($row1= mysqli_fetch_array($a))
 	{

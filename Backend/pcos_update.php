@@ -11,6 +11,7 @@ $lec_id =$_POST['lec_id'];
 $cos_comment =$_POST['cos_comment'];
 
 
+
 $sql = "UPDATE course SET cos_id='$cos_id',cos_group='$cos_group',cos_name='$cos_name',cos_period='$cos_period',cos_day='$date',lec_id='$lec_id',cos_comment='$cos_comment' where cos_id='$cos_id'";
 $sql1 = "UPDATE lecture SET lec_id='$lec_id' WHERE lec_id='$lec_id'";
 $re = mysqli_query($connection, $sql1);
@@ -47,7 +48,7 @@ body {
   <table width="700" height="422" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
       <td align="center" background="images/b1.jpg"><p>ระบบทำการเพิ่มข้อมูลสำเร็จแล้วครับ</p>
-      <p>กดปุ่่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>Cpanel</strong></p>
+      <p>กดปุ่่ม<strong> สำเร็จ</strong> เพื่อกลับไปยัง <strong>backend</strong></p>
     </tr>
   </table>
   <p>&nbsp;</p>

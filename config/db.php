@@ -1,6 +1,6 @@
 <?php
 //define connection elements
-$dbHost = "localhost:3306";
+$dbHost = "localhost";
 $dbDatabase = "ors_ycc";
 $dbUsername = "root";
 $dbPassword = "";
@@ -13,5 +13,8 @@ if ($connection) {
    //set universal encoding
    mysqli_query( $connection ,"SET NAMES 'utf8'") or die(mysqli_error());
    
+} else {
+   
+   die("Could not connect with db" . mysqli_error());
 }
 ?>
