@@ -24,7 +24,7 @@ $do3=mysqli_query($connection,$sql3);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ใบสมัคร</title>
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
 <style type="text/css">
 .style45 {font-family: Verdana, Arial, Helvetica, sans-serif}
 .style60 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #333333; }
@@ -38,7 +38,7 @@ $do3=mysqli_query($connection,$sql3);
     <td width="47" align="right" valign="top">&nbsp;</td>
     <td width="716" align="center" valign="top">  <table width="693" height="148" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="693" height="110" align="center" valign="top"><p><img src="images/Logo_Stamp_Small.jpg" width="116" height="104" /></p></td>
+        <td width="693" height="110" align="center" valign="top"><p><img src="images/Logo_Stamp_Big.jpg" width="116" height="104" /></p></td>
       </tr>
       <tr>
         <td><div align="center"><strong>ใบสมัครและลงทะเบียนหลักสูตรระยะสั้นในวิทยาลัยชุมชนยะลา จังหวัดยะลา </strong></div></td>

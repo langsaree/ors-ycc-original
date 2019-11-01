@@ -1,21 +1,15 @@
 <?php
 session_start();
-include('../maintain/db.php');
+include ('../maintain/db.php');
 extract ($_GET);
 $cos_id=$_GET['id'];
 if (!isset($_SESSION["username"])) // To check login user if already login then hide login form
-{
+
 ?>
 
 
-<?php if (isset($message)) { echo $message; }?>
-<?php
-    include("not_logined.php");
-} 
-else {
-    include("../maintain/login_check.php");
-}
-?>
+
+
   <?php
 $sql_view = "select * from course where cos_id='$cos_id' ";
 $result_view = mysqli_query($connection, $sql_view);
