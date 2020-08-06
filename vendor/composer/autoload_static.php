@@ -20,8 +20,7 @@ class ComposerStaticInitc9a1e7dc8ac743ac74ed0178675c86fa
     public static $prefixDirsPsr4 = array (
         'Pds\\Skeleton\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/../..' . '/tests',
+            0 => __DIR__ . '/..' . '/pds/skeleton/src',
         ),
         'Composer\\Installers\\' => 
         array (
