@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Pds\\Skeleton\\' => array($baseDir . '/src', $baseDir . '/tests'),
+    'Pds\\Skeleton\\' => array($vendorDir . '/pds/skeleton/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );

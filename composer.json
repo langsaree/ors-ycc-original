@@ -1,25 +1,11 @@
 {
-  "name": "pds/skeleton",
-  "type": "standard",
-  "description": "Standard for PHP package skeletons.",
-  "homepage": "https://github.com/php-pds/skeleton",
-  "license": "CC-BY-SA-4.0",
-  "autoload": {
-    "psr-4": {
-      "Pds\\Skeleton\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Pds\\Skeleton\\": "tests/"
-    }
-  },
-  "bin": ["bin/pds-skeleton"],
-
   "require": {
     "twbs/bootstrap": "4.0.0",
     "almasaeed2010/adminlte": "~2.4",
     "components/jquery": "^3.3"
-  }
+  },
 
+  "require-dev": {
+    "pds/skeleton": "^1.0"
+  }
 }
