@@ -1,7 +1,12 @@
-# ors-ycc_refactoring-fixingbug-addingfeatures
+# ors-ycc project 
+## refactoring, fixing bug and features
 
-Online Registration System For Yala Community College(YCC),
+Online Registration System For Yala Community College(YCC).
 
-my crashing bachelor degree project at Yala Islamic University(Now, Fatoni University).
+My crashing bachelor degree project at Yala Islamic University(Now, Fatoni University).
 
-let's Refactoring, Testing, Fixing bugs and adding new Features
+Project feature include:  Login, Manage courses, View course, Manage student, View student information, Register courses, Manage student status, View student status, Manage Lecturer, View lecturer information, Manage Registration Form. 
+
+More comprehensive feature can be found in docs/project-book.
+
+Let learn Refactoring, Testing, and Fixing Bugs and Features through this project.
