@@ -13,7 +13,7 @@ $dbUsername = "root";
 $dbPassword = "root";
 
 //connect to Database
-$connection = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase)
+$connection2 = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase)
     or die("Fail to connect database"
     . mysqli_error($connection));
 

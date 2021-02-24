@@ -231,7 +231,7 @@ if (!isset($_SESSION['username'])) {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>ภาพกิจกรรม</title>
-    <script src="js/jquery.min.js"></script>
+    <script src="../vendor/components/jquery/jquery.min.js"></script>
         <script src="js/galleria.js"></script>
         <style>
             html,body{background:#333}

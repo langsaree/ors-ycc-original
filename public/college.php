@@ -8,13 +8,14 @@
 
 session_start();
 
+include('../config/function.php');
+connection();
+
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
 }
 
 if (!isset($_SESSION['username'])) {
-
-    include('db.php');
 
     $username = "";
     $password = "";
